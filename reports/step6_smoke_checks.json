@@ -1,0 +1,10 @@
+{
+  "run": "outputs\\20261118T051118Z_7433ac_smoke",
+  "status": "passed",
+  "candidates": 6,
+  "oof_rows": 20000,
+  "test_rows": 1000,
+  "folds": 2,
+  "learning_curve_points": 4,
+  "full_run_completed": false
+}

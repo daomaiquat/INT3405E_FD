@@ -1,0 +1,139 @@
+{
+  "verified_run": "Step5",
+  "recomputed_baselines": [
+    {
+      "model": "B00",
+      "oof_auc_recomputed": 0.49996519862653765,
+      "logloss_recomputed": 0.08490002682195742,
+      "trees_by_fold": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "bundle_files": 5,
+      "test_mean_max_diff": 0.0
+    },
+    {
+      "model": "B01",
+      "oof_auc_recomputed": 0.4974042869997768,
+      "logloss_recomputed": 1.0001342413530887,
+      "trees_by_fold": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "bundle_files": 5,
+      "test_mean_max_diff": 0.0
+    },
+    {
+      "model": "B02",
+      "oof_auc_recomputed": 0.941878865990648,
+      "logloss_recomputed": 0.04704509752203971,
+      "trees_by_fold": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "bundle_files": 5,
+      "test_mean_max_diff": 0.0
+    },
+    {
+      "model": "B03",
+      "oof_auc_recomputed": 0.7983271607703888,
+      "logloss_recomputed": 0.06551139197339843,
+      "trees_by_fold": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      },
+      "bundle_files": 5,
+      "test_mean_max_diff": 0.0
+    },
+    {
+      "model": "B04",
+      "oof_auc_recomputed": 0.9172452350154019,
+      "logloss_recomputed": 0.05389128176545159,
+      "trees_by_fold": {
+        "0": 300,
+        "1": 300,
+        "2": 300,
+        "3": 300,
+        "4": 300
+      },
+      "bundle_files": 5,
+      "test_mean_max_diff": 0.0
+    },
+    {
+      "model": "B05",
+      "oof_auc_recomputed": 0.9463490662661074,
+      "logloss_recomputed": 0.045780351005659144,
+      "trees_by_fold": {
+        "0": 1003,
+        "1": 751,
+        "2": 484,
+        "3": 1362,
+        "4": 1528
+      },
+      "bundle_files": 5,
+      "test_mean_max_diff": 0.0
+    },
+    {
+      "model": "B06",
+      "oof_auc_recomputed": 0.9469651329484914,
+      "logloss_recomputed": 0.04548980020719184,
+      "trees_by_fold": {
+        "0": 1373,
+        "1": 1619,
+        "2": 1401,
+        "3": 2217,
+        "4": 2519
+      },
+      "bundle_files": 5,
+      "test_mean_max_diff": 0.0
+    },
+    {
+      "model": "B07",
+      "oof_auc_recomputed": 0.945807862299509,
+      "logloss_recomputed": 0.04580375353326384,
+      "trees_by_fold": {
+        "0": 3642,
+        "1": 3285,
+        "2": 3037,
+        "3": 3976,
+        "4": 3351
+      },
+      "bundle_files": 5,
+      "test_mean_max_diff": 0.0
+    }
+  ],
+  "normalized_cv_hashes": {
+    "fold_assignments.csv": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+    "early_stop_assignments.csv": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c"
+  },
+  "raw_data_checksums_match": true,
+  "actual_unseen_validation_fold0": {
+    "amount_usd": 923,
+    "hours_since_last_txn": 97,
+    "account_balance_usd": 3654
+  },
+  "missing_source_snapshot": true,
+  "lightgbm_metrics_observed_on_current_code": [
+    "auc",
+    "binary_logloss"
+  ],
+  "unit_tests_review": {
+    "run": 35,
+    "passed": 28,
+    "errors": 7,
+    "error_type": "PermissionError in tempfile directories; reproduced with workspace TMP/TEMP",
+    "log": "reports/review_steps_0_5_tests.txt"
+  }
+}

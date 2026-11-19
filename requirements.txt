@@ -1,0 +1,10 @@
+# Project environment; exact versions used by each run are in environment.json.
+numpy>=2.0,<3
+pandas>=2.2,<4
+scipy>=1.14,<2
+scikit-learn>=1.6,<2
+joblib>=1.4,<2
+lightgbm>=4.6,<5
+xgboost>=3.0,<4
+catboost>=1.2,<2
+matplotlib>=3.8,<4

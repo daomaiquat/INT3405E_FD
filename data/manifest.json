@@ -1,0 +1,19 @@
+﻿{
+    "source":  "S6E11 competition CSV files verified against the original full Optuna run",
+    "train_rows":  699960,
+    "test_rows":  299984,
+    "input_files":  {
+                        "train.csv":  {
+                                          "bytes":  98533176,
+                                          "sha256":  "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5"
+                                      },
+                        "test.csv":  {
+                                         "bytes":  41068069,
+                                         "sha256":  "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0"
+                                     },
+                        "sample_submission.csv":  {
+                                                      "bytes":  8399564,
+                                                      "sha256":  "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+                                                  }
+                    }
+}

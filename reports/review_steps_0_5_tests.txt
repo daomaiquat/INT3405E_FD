@@ -1,0 +1,458 @@
+python : test_boosters_select_trees_on_e_and_refit_inside_limits 
+(test_baselines.BaselineTests.test_boosters_select_trees_on_e_and_refit_inside_limits) ... ok
+At line:6 char:1
++ python -m unittest discover -s tests -v 2>&1 | Tee-Object -FilePath r ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_boosters_s..._limits) ... ok:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_constant_and_random_baselines_are_reproducible 
+(test_baselines.BaselineTests.test_constant_and_random_baselines_are_reproducible) ... ok
+test_feature_modes_are_stable_and_do_not_mutate_input 
+(test_baselines.BaselineTests.test_feature_modes_are_stable_and_do_not_mutate_input) ... ok
+test_registry_has_eight_models_and_distinct_flags 
+(test_baselines.BaselineTests.test_registry_has_eight_models_and_distinct_flags) ... ok
+test_run_baseline_writes_contract_artifacts_without_submission 
+(test_baselines.BaselineTests.test_run_baseline_writes_contract_artifacts_without_submission) ... ERROR
+test_sklearn_baselines_predict_finite_with_unseen_category 
+(test_baselines.BaselineTests.test_sklearn_baselines_predict_finite_with_unseen_category) ... ok
+test_constant_prediction_auc_is_half (test_cv_contract.CvContractTests.test_constant_prediction_auc_is_half) ... ok
+test_early_stop_rows_never_come_from_validation_or_test 
+(test_cv_contract.CvContractTests.test_early_stop_rows_never_come_from_validation_or_test) ... ok
+test_early_stop_split_is_reproducible_and_seed_sensitive 
+(test_cv_contract.CvContractTests.test_early_stop_split_is_reproducible_and_seed_sensitive) ... ok
+test_oof_summary_matches_sklearn_and_rejects_bad_ids 
+(test_cv_contract.CvContractTests.test_oof_summary_matches_sklearn_and_rejects_bad_ids) ... ok
+test_partitions_are_disjoint_complete_and_stratified 
+(test_cv_contract.CvContractTests.test_partitions_are_disjoint_complete_and_stratified) ... ok
+test_three_seeds_are_separate_config_fields 
+(test_cv_contract.CvContractTests.test_three_seeds_are_separate_config_fields) ... ok
+test_clean_fixture_passes_all_quality_rows (test_data_audit.DataAuditTests.test_clean_fixture_passes_all_quality_rows) 
+... ok
+test_decimal_precision_flags_non_cent_values 
+(test_data_audit.DataAuditTests.test_decimal_precision_flags_non_cent_values) ... ok
+test_duplicate_and_conflicting_label_groups 
+(test_data_audit.DataAuditTests.test_duplicate_and_conflicting_label_groups) ... ok
+test_label_cast_to_int8_and_binary_guard (test_data_audit.DataAuditTests.test_label_cast_to_int8_and_binary_guard) ... 
+ok
+test_locked_requirements_contains_pinned_versions 
+(test_data_audit.DataAuditTests.test_locked_requirements_contains_pinned_versions) ... ok
+test_out_of_range_row_fails_quality_table (test_data_audit.DataAuditTests.test_out_of_range_row_fails_quality_table) 
+... ok
+test_smoke_never_writes_official_submission_name 
+(test_data_audit.DataAuditTests.test_smoke_never_writes_official_submission_name) ... ERROR
+test_digit_keys_match_the_documented_example (test_eda.EdaTests.test_digit_keys_match_the_documented_example) ... ok
+test_discovery_and_confirmation_are_disjoint_and_stratified 
+(test_eda.EdaTests.test_discovery_and_confirmation_are_disjoint_and_stratified) ... ok
+test_every_rate_table_has_denominators (test_eda.EdaTests.test_every_rate_table_has_denominators) ... ERROR
+test_report_keeps_shift_caveat_and_adversarial_folds 
+(test_eda.EdaTests.test_report_keeps_shift_caveat_and_adversarial_folds) ... ERROR
+test_run_eda_writes_tables_and_eight_findings (test_eda.EdaTests.test_run_eda_writes_tables_and_eight_findings) ... 
+ERROR
+test_duplicate_id_rejected (test_foundation.FoundationTests.test_duplicate_id_rejected) ... ok
+test_folds_cover_rows_and_repeat (test_foundation.FoundationTests.test_folds_cover_rows_and_repeat) ... ok
+test_overlapping_ids_rejected (test_foundation.FoundationTests.test_overlapping_ids_rejected) ... ok
+test_submission_order_rejected (test_foundation.FoundationTests.test_submission_order_rejected) ... ok
+test_too_few_positives_rejected (test_foundation.FoundationTests.test_too_few_positives_rejected) ... ok
+test_valid_fixture (test_foundation.FoundationTests.test_valid_fixture) ... ok
+test_bundle_roundtrip_reproduces_prediction 
+(test_prediction_contract.PredictionContractTests.test_bundle_roundtrip_reproduces_prediction) ... ERROR
+test_fold_status_resume_helpers (test_prediction_contract.PredictionContractTests.test_fold_status_resume_helpers) ... 
+ERROR
+test_oof_is_one_to_one_and_fold_aligned 
+(test_prediction_contract.PredictionContractTests.test_oof_is_one_to_one_and_fold_aligned) ... ok
+test_shuffled_inputs_join_identically_by_id 
+(test_prediction_contract.PredictionContractTests.test_shuffled_inputs_join_identically_by_id) ... ok
+test_test_prediction_is_fold_average_in_sample_order 
+(test_prediction_contract.PredictionContractTests.test_test_prediction_is_fold_average_in_sample_order) ... ok
+
+======================================================================
+ERROR: test_run_baseline_writes_contract_artifacts_without_submission 
+(test_baselines.BaselineTests.test_run_baseline_writes_contract_artifacts_without_submission)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 
+'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpvvghykvp\\baselines\\B00\\model_bundle'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 
+'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpvvghykvp\\baselines\\B00'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_baselines.py", line 136, in 
+test_run_baseline_writes_contract_artifacts_without_submission
+    summary = run_baseline(model_id, run_dir, self.train, self.test, self.sample,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\2026\INT2403E\src\training.py", line 86, in run_baseline
+    bundle_dir.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1315, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpvvghykvp\\baselines'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpvvghykvp'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_baselines.py", line 132, in 
+test_run_baseline_writes_contract_artifacts_without_submission
+    with tempfile.TemporaryDirectory() as tmp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 946, in __exit__
+    self.cleanup()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 950, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 930, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 902, in onexc
+    _resetperms(path)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpvvghykvp'
+
+======================================================================
+ERROR: test_smoke_never_writes_official_submission_name 
+(test_data_audit.DataAuditTests.test_smoke_never_writes_official_submission_name)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_data_audit.py", line 84, in test_smoke_never_writes_official_submission_name
+    (run_dir / "submission.csv").write_text("stale", encoding="utf-8")
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmp1nrm_fel\\submission.csv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmp1nrm_fel'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_data_audit.py", line 81, in test_smoke_never_writes_official_submission_name
+    with tempfile.TemporaryDirectory() as tmp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 946, in __exit__
+    self.cleanup()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 950, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 930, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 902, in onexc
+    _resetperms(path)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmp1nrm_fel'
+
+======================================================================
+ERROR: test_every_rate_table_has_denominators (test_eda.EdaTests.test_every_rate_table_has_denominators)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_eda.py", line 101, in test_every_rate_table_has_denominators
+    run_eda(output, self.train, self.test, self.folds, self.config)
+  File "D:\2026\INT2403E\src\eda.py", line 454, in run_eda
+    write_json(output_dir / "imbalance.json", imbalance)
+  File "D:\2026\INT2403E\src\artifacts.py", line 22, in write_json
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpj44oio7b\\imbalance.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpj44oio7b'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_eda.py", line 99, in test_every_rate_table_has_denominators
+    with tempfile.TemporaryDirectory() as tmp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 946, in __exit__
+    self.cleanup()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 950, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 930, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 902, in onexc
+    _resetperms(path)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpj44oio7b'
+
+======================================================================
+ERROR: test_report_keeps_shift_caveat_and_adversarial_folds 
+(test_eda.EdaTests.test_report_keeps_shift_caveat_and_adversarial_folds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_eda.py", line 116, in test_report_keeps_shift_caveat_and_adversarial_folds
+    run_eda(output, self.train, self.test, self.folds, self.config)
+  File "D:\2026\INT2403E\src\eda.py", line 454, in run_eda
+    write_json(output_dir / "imbalance.json", imbalance)
+  File "D:\2026\INT2403E\src\artifacts.py", line 22, in write_json
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpk3k_9pa7\\imbalance.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpk3k_9pa7'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_eda.py", line 114, in test_report_keeps_shift_caveat_and_adversarial_folds
+    with tempfile.TemporaryDirectory() as tmp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 946, in __exit__
+    self.cleanup()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 950, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 930, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 902, in onexc
+    _resetperms(path)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpk3k_9pa7'
+
+======================================================================
+ERROR: test_run_eda_writes_tables_and_eight_findings (test_eda.EdaTests.test_run_eda_writes_tables_and_eight_findings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_eda.py", line 80, in test_run_eda_writes_tables_and_eight_findings
+    summary = run_eda(output, self.train, self.test, self.folds, self.config)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\2026\INT2403E\src\eda.py", line 454, in run_eda
+    write_json(output_dir / "imbalance.json", imbalance)
+  File "D:\2026\INT2403E\src\artifacts.py", line 22, in write_json
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmptynqjhtc\\imbalance.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmptynqjhtc'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_eda.py", line 78, in test_run_eda_writes_tables_and_eight_findings
+    with tempfile.TemporaryDirectory() as tmp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 946, in __exit__
+    self.cleanup()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 950, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 930, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 902, in onexc
+    _resetperms(path)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmptynqjhtc'
+
+======================================================================
+ERROR: test_bundle_roundtrip_reproduces_prediction 
+(test_prediction_contract.PredictionContractTests.test_bundle_roundtrip_reproduces_prediction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_prediction_contract.py", line 90, in test_bundle_roundtrip_reproduces_prediction
+    save_bundle(bundle, path)
+  File "D:\2026\INT2403E\src\artifacts.py", line 81, in save_bundle
+    joblib.dump(bundle, path)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\site-packages\joblib\numpy_pickle.py", line 599, in 
+dump
+    with open(filename, "wb") as f:
+         ^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpy63duyp5\\model.joblib'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpy63duyp5'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_prediction_contract.py", line 87, in test_bundle_roundtrip_reproduces_prediction
+    with tempfile.TemporaryDirectory() as tmp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 946, in __exit__
+    self.cleanup()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 950, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 930, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 902, in onexc
+    _resetperms(path)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpy63duyp5'
+
+======================================================================
+ERROR: test_fold_status_resume_helpers 
+(test_prediction_contract.PredictionContractTests.test_fold_status_resume_helpers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_prediction_contract.py", line 99, in test_fold_status_resume_helpers
+    write_fold_status(path, {"0": "failed", "1": "completed"})
+  File "D:\2026\INT2403E\src\artifacts.py", line 56, in write_fold_status
+    write_json(path, status)
+  File "D:\2026\INT2403E\src\artifacts.py", line 22, in write_json
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpj7ox8y0f\\fold_status.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen os>", line 366, in walk
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpj7ox8y0f'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\2026\INT2403E\tests\test_prediction_contract.py", line 97, in test_fold_status_resume_helpers
+    with tempfile.TemporaryDirectory() as tmp:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 946, in __exit__
+    self.cleanup()
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 950, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 930, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 781, in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 623, in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+  File "<frozen os>", line 369, in walk
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\shutil.py", line 621, in onerror
+    onexc(os.scandir, err.filename, err)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 902, in onexc
+    _resetperms(path)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 286, in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python312\Lib\tempfile.py", line 277, in _dont_follow_symlinks
+    func(path, *args)
+PermissionError: [WinError 5] Access is denied: 'D:\\2026\\INT2403E\\.cache\\review_tmp\\tmpj7ox8y0f'
+
+----------------------------------------------------------------------
+Ran 35 tests in 8.932s
+
+FAILED (errors=7)

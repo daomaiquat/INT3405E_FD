@@ -1,0 +1,132 @@
+{
+  "archive": "s6e11_kaggle_ready.rar",
+  "all_entries_verified": true,
+  "entries": [
+    {
+      "archive_entry": "s6e11_kaggle_ready/baseline_summary.csv",
+      "bytes": 793,
+      "sha256": "e4a48e8aa51792780f6bf8f14bbc713cc18077956c716b9f22f90cce325533a7",
+      "duplicate_of": "s6e11_kaggle_ready\\baseline_summary.csv"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/fold_assignments.csv",
+      "bytes": 7588467,
+      "sha256": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+      "duplicate_of": "s6e11_kaggle_ready\\fold_assignments.csv"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/metrics_catboost.json",
+      "bytes": 561,
+      "sha256": "8c6036467acdf4823d9a5e20222bb6f9ddcf32f4563fb563a79400013b2f9872",
+      "duplicate_of": "s6e11_kaggle_ready\\metrics_catboost.json"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/metrics_lightgbm.json",
+      "bytes": 631,
+      "sha256": "27cf0925736990f5e56c6065e4b81d7e3c9253e7c3e812a0ae91432228595c5d",
+      "duplicate_of": "s6e11_kaggle_ready\\metrics_lightgbm.json"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/metrics_xgboost.json",
+      "bytes": 647,
+      "sha256": "60af553f416cc2d68ecae55a421a555ffe666580496db75c4c747ed010c02eb8",
+      "duplicate_of": "s6e11_kaggle_ready\\metrics_xgboost.json"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/oof_catboost.csv",
+      "bytes": 22682810,
+      "sha256": "19e5f1139487c1975f56b826a7e73374deba19b406cc997398bd2ad5db4b4275",
+      "duplicate_of": "s6e11_kaggle_ready\\oof_catboost.csv"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/oof_lightgbm.csv",
+      "bytes": 22650310,
+      "sha256": "e1f1aed3e9b5b4691d3b41ace259a65bb8824fb34b23eee03f34374f0d00bc3d",
+      "duplicate_of": "s6e11_kaggle_ready\\oof_lightgbm.csv"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/oof_logistic.npy",
+      "bytes": 5599808,
+      "sha256": "cafd9087d98344f41e69fbaeba228e077d31d59b4a2618e8201074dacd7f928a",
+      "duplicate_of": "s6e11_kaggle_ready\\oof_logistic.npy"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/oof_random_forest.npy",
+      "bytes": 5599808,
+      "sha256": "65b676505fa14a73b48892faaee95037e2cc9ff8d2a4a0e828631e6b90a9fc4b",
+      "duplicate_of": "s6e11_kaggle_ready\\oof_random_forest.npy"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/oof_xgboost.csv",
+      "bytes": 22657442,
+      "sha256": "d4f85af5ffbf1389ed85adb43f5e414886c10a87c25badfcc80ff5a935b320f8",
+      "duplicate_of": "s6e11_kaggle_ready\\oof_xgboost.csv"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/README_KAGGLE.md",
+      "bytes": 563,
+      "sha256": "7fbe8e1eefbfe58f9e67e1797bc9a79572ec2775ac26f2151c466bb029f94c10",
+      "preserved_at": "legacy\\package_snapshots\\rar_snapshot\\README_KAGGLE.md"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/run_config.json",
+      "bytes": 1200,
+      "sha256": "3190b4dfd28f1d8cc162a7035aa3c20c8775a6f34b8f6add8b2ab60851bd612a",
+      "duplicate_of": "s6e11_kaggle_ready\\run_config.json"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/s6e11_blend_run.py",
+      "bytes": 10347,
+      "sha256": "faf32e21d495ce26d90d93d8adc80ebf7e271e1d11415d036ad5557d6907c189",
+      "preserved_at": "legacy\\package_snapshots\\rar_snapshot\\s6e11_blend_run.py"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/sample_submission.csv",
+      "bytes": 8399564,
+      "sha256": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa",
+      "duplicate_of": "s6e11_kaggle_ready\\sample_submission.csv"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/test.csv",
+      "bytes": 41068069,
+      "sha256": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+      "duplicate_of": "s6e11_kaggle_ready\\test.csv"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/test_by_fold_catboost.csv",
+      "bytes": 27825594,
+      "sha256": "f26bf85c8d216f769ea53a1688d359497762c767d161b04c6eaf8854f307bd1b",
+      "duplicate_of": "s6e11_kaggle_ready\\test_by_fold_catboost.csv"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/test_by_fold_lightgbm.csv",
+      "bytes": 27741588,
+      "sha256": "5e893dd4cc4f7bff3d6905d28fc74cc1b846285f32617b7f0a4ca6a13a8544d2",
+      "duplicate_of": "s6e11_kaggle_ready\\test_by_fold_lightgbm.csv"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/test_by_fold_xgboost.csv",
+      "bytes": 27758948,
+      "sha256": "aba3be88933a18b48a4868823ac2b0bcbcbd8666b3f03bad5aa9cb86074087bc",
+      "duplicate_of": "s6e11_kaggle_ready\\test_by_fold_xgboost.csv"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/test_logistic.npy",
+      "bytes": 2400000,
+      "sha256": "289ee338a784f37bb1ed76c68d5a6bd69ed5ad4dbf026cbd0c6a314d76d64549",
+      "duplicate_of": "s6e11_kaggle_ready\\test_logistic.npy"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/test_random_forest.npy",
+      "bytes": 2400000,
+      "sha256": "dab952d9eff7cd2a237d10967707c92993b7db2a7f21ca5485c7922b28902061",
+      "duplicate_of": "s6e11_kaggle_ready\\test_random_forest.npy"
+    },
+    {
+      "archive_entry": "s6e11_kaggle_ready/train.csv",
+      "bytes": 98533176,
+      "sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+      "duplicate_of": "s6e11_kaggle_ready\\train.csv"
+    }
+  ]
+}

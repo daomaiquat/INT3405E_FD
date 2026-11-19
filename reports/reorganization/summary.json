@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "moves": 22,
+  "removed_files": 3045,
+  "removed_bytes": 594121780,
+  "raw_csv_copies": {
+    "train.csv": 1,
+    "test.csv": 1,
+    "sample_submission.csv": 1
+  },
+  "foundation_tests_passed": 6,
+  "folds_match_original": true,
+  "setup_runs": [
+    {
+      "path": "outputs\\20261117T163050Z_e087d8",
+      "status": "completed",
+      "smoke": false,
+      "n_folds": 5,
+      "train_rows": 699960,
+      "test_rows": 299984
+    },
+    {
+      "path": "outputs\\20261117T163326Z_9f6d96_smoke",
+      "status": "completed",
+      "smoke": true,
+      "n_folds": 2,
+      "train_rows": 20000,
+      "test_rows": 1000
+    }
+  ]
+}

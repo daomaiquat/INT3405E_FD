@@ -1,0 +1,178 @@
+{
+  "T01": {
+    "source": "Step5\\baselines\\B02",
+    "metrics": {
+      "oof_auc": 0.941878865990648,
+      "fold_auc": {
+        "0": 0.941386150038327,
+        "1": 0.9435111747865176,
+        "2": 0.9468975274949232,
+        "3": 0.9415477714963131,
+        "4": 0.9361972480238107
+      },
+      "mean_auc": 0.9419079743679782,
+      "std_auc": 0.0038884551593901685,
+      "logloss": 0.04704509752203969,
+      "rows": 699960,
+      "train_auc": 0.9422150654440532,
+      "eval_auc_mean": 0.9429246292511874,
+      "n_trees_representative": 0,
+      "n_trees_by_fold": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      },
+      "convergence_warnings": [
+        "scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0."
+      ],
+      "model": "B02",
+      "smoke": false
+    },
+    "params": {
+      "C": 1.0,
+      "max_iter": 2000,
+      "tol": 0.0001,
+      "solver": "lbfgs"
+    },
+    "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+    "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+    "input_files": {
+      "train.csv": {
+        "bytes": 98533176,
+        "sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+        "checksum_verified": true
+      },
+      "test.csv": {
+        "bytes": 41068069,
+        "sha256": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+        "checksum_verified": true
+      },
+      "sample_submission.csv": {
+        "bytes": 8399564,
+        "sha256": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa",
+        "checksum_verified": true
+      }
+    }
+  },
+  "T02": {
+    "source": "Step6\\20261118T091556Z_367a2c\\complexity\\S6-L04\\baselines\\B05",
+    "metrics": {
+      "oof_auc": 0.9473652569494403,
+      "fold_auc": {
+        "0": 0.9458183482805791,
+        "1": 0.9490568572375392,
+        "2": 0.9518333602767419,
+        "3": 0.9475703007017396,
+        "4": 0.9427975701043277
+      },
+      "mean_auc": 0.9474152873201855,
+      "std_auc": 0.003395278934540019,
+      "logloss": 0.045368439833058494,
+      "rows": 699960,
+      "train_auc": 0.9528106095685989,
+      "eval_auc_mean": 0.9484188460766736,
+      "n_trees_representative": 2734,
+      "n_trees_by_fold": {
+        "0": 3407,
+        "1": 2559,
+        "2": 2177,
+        "3": 3343,
+        "4": 2734
+      },
+      "convergence_warnings": [],
+      "model": "B05",
+      "smoke": false
+    },
+    "params": {
+      "learning_rate": 0.03,
+      "max_iterations": 6000,
+      "num_leaves": 4,
+      "min_child_samples": 50,
+      "subsample": 0.9,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "metric": "auc"
+    },
+    "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+    "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+    "input_files": {
+      "train.csv": {
+        "bytes": 98533176,
+        "sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+        "checksum_verified": true
+      },
+      "test.csv": {
+        "bytes": 41068069,
+        "sha256": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+        "checksum_verified": true
+      },
+      "sample_submission.csv": {
+        "bytes": 8399564,
+        "sha256": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa",
+        "checksum_verified": true
+      }
+    }
+  },
+  "T03": {
+    "source": "Step6\\20261118T091556Z_367a2c\\complexity\\S6-X02\\baselines\\B06",
+    "metrics": {
+      "oof_auc": 0.9473167053890511,
+      "fold_auc": {
+        "0": 0.9459313977986336,
+        "1": 0.9491604133908945,
+        "2": 0.9514921777383032,
+        "3": 0.9474036563301378,
+        "4": 0.9430036321836068
+      },
+      "mean_auc": 0.947398255488315,
+      "std_auc": 0.003214413418639781,
+      "logloss": 0.045363755553628426,
+      "rows": 699960,
+      "train_auc": 0.951849783245553,
+      "eval_auc_mean": 0.948504484104161,
+      "n_trees_representative": 3137,
+      "n_trees_by_fold": {
+        "0": 3494,
+        "1": 2661,
+        "2": 2044,
+        "3": 4129,
+        "4": 3137
+      },
+      "convergence_warnings": [],
+      "model": "B06",
+      "smoke": false
+    },
+    "params": {
+      "learning_rate": 0.03,
+      "max_iterations": 6000,
+      "max_depth": 2,
+      "min_child_weight": 5,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "tree_method": "hist"
+    },
+    "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+    "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+    "input_files": {
+      "train.csv": {
+        "bytes": 98533176,
+        "sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+        "checksum_verified": true
+      },
+      "test.csv": {
+        "bytes": 41068069,
+        "sha256": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+        "checksum_verified": true
+      },
+      "sample_submission.csv": {
+        "bytes": 8399564,
+        "sha256": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa",
+        "checksum_verified": true
+      }
+    }
+  }
+}

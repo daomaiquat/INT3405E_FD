@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "full_cache_check": "outputs\\20261118T140038Z_008346\\te_models\\cache_check.json",
+  "all_models_smoke_run": "outputs\\20261118T140143Z_f551e8_smoke",
+  "glm_final_smoke_run": "outputs\\20261118T175223Z_096599_smoke",
+  "model_checks": [
+    {
+      "model": "T01",
+      "rows": 20000,
+      "test_rows": 1000,
+      "raw_inference_max_diff": 0.0
+    },
+    {
+      "model": "T02",
+      "rows": 20000,
+      "test_rows": 1000,
+      "raw_inference_max_diff": 0.0
+    },
+    {
+      "model": "T03",
+      "rows": 20000,
+      "test_rows": 1000,
+      "raw_inference_max_diff": 0.0
+    }
+  ],
+  "unit_tests_passed": 4,
+  "phase8_full_training_run": false
+}

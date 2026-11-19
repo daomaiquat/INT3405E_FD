@@ -1,0 +1,9 @@
+# Exact versions recorded from a completed run; do not upgrade between ablation branches.
+numpy==2.5.4
+pandas==3.1.1
+scipy==1.18.1
+scikit-learn==1.7.2
+joblib==1.5.2
+lightgbm==4.7.0
+xgboost==3.4.1
+catboost==1.2.10

@@ -1,0 +1,24 @@
+# Canonical raw data stays local / in the private Kaggle dataset.
+/data/*.csv
+
+# Reproducible run outputs and historical binary artifacts.
+/outputs/
+/legacy/runs/
+/.cache/
+*.joblib
+*.npy
+*.rar
+*.zip
+
+# Python environment and caches.
+**/__pycache__/
+**/.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+venv/
+*.pyc
+/catboost_info/
+/legacy/
+/Step5/
+/Step6/
+/Step7/

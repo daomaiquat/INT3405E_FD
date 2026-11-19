@@ -1,0 +1,85 @@
+{
+  "project": "s6e11",
+  "data_dir": "data",
+  "seed": 42,
+  "model_seed": 42,
+  "encoder_seed": 2026,
+  "early_stop_seed": 7,
+  "n_folds": 5,
+  "eda": {
+    "seed": 2026,
+    "discovery_fraction": 0.5,
+    "min_digit_group": 200,
+    "min_pair_group": 300,
+    "adversarial_rows_per_side": 100000,
+    "ks_rows_per_side": 50000
+  },
+  "target": "is_fraud",
+  "primary_metric": "roc_auc_oof",
+  "verify_checksums": true,
+  "smoke": {"train_rows": 20000, "test_rows": 1000, "n_folds": 2},
+  "categorical_columns": ["merchant_category", "card_type", "auth_method", "channel", "device_type"],
+  "flag_columns": ["is_foreign_transaction", "is_new_merchant", "used_vpn", "ip_country_mismatch", "billing_shipping_mismatch", "is_ai_generated_scam_attempt"],
+  "numeric_columns": ["amount_usd", "hours_since_last_txn", "txn_count_last_24h", "distance_from_home_km", "card_age_months", "customer_age", "account_balance_usd", "cvv_retry_count", "velocity_score", "time_of_day_hour", "day_of_week", "merchant_risk_score", "prior_disputes"],
+  "numeric_expected_ranges": {
+    "amount_usd": [0, 100000],
+    "hours_since_last_txn": [0, 8760],
+    "txn_count_last_24h": [0, 1000],
+    "distance_from_home_km": [0, 40000],
+    "card_age_months": [0, 1200],
+    "customer_age": [0, 120],
+    "account_balance_usd": [0, 10000000],
+    "cvv_retry_count": [0, 10],
+    "velocity_score": [0, 1000],
+    "time_of_day_hour": [0, 23],
+    "day_of_week": [0, 6],
+    "merchant_risk_score": [0, 100],
+    "prior_disputes": [0, 100]
+  },
+  "training_plan": {
+    "status": "baselines_ready_not_run",
+    "target_encoding": {
+      "column_group": "numeric13",
+      "smooth": 20.0,
+      "inner_folds": 5,
+      "key_scale": 100,
+      "missing_key": "__MISSING__"
+    },
+    "early_stopping": {"fraction_of_outer_train": 0.1, "patience": 200},
+    "optional_gpu_models": false
+  },
+  "baselines": {
+    "logistic": {"C": 1.0, "max_iter": 2000, "tol": 0.0001, "solver": "lbfgs"},
+    "decision_tree": {"max_depth": 4, "min_samples_leaf": 50},
+    "random_forest": {"n_estimators": 300, "min_samples_leaf": 5, "max_features": "sqrt"},
+    "lightgbm": {
+      "learning_rate": 0.03,
+      "max_iterations": 6000,
+      "num_leaves": 15,
+      "min_child_samples": 50,
+      "subsample": 0.9,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0
+    },
+    "xgboost": {
+      "learning_rate": 0.03,
+      "max_iterations": 6000,
+      "max_depth": 3,
+      "min_child_weight": 5,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "tree_method": "hist"
+    },
+    "catboost": {
+      "learning_rate": 0.03,
+      "max_iterations": 6000,
+      "depth": 4,
+      "l2_leaf_reg": 3.0,
+      "subsample": 0.8,
+      "bootstrap_type": "Bernoulli"
+    },
+    "early_stopping": {"patience": 200}
+  }
+}
