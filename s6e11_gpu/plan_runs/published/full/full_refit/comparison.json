@@ -1,0 +1,11 @@
+{
+  "model": "XGB-D03",
+  "selected": "XGB-D03",
+  "rounds": 2131,
+  "base_oof_auc": 0.9501823034854605,
+  "r125_oof_auc": 0.9501462524226989,
+  "test_mean_abs_delta": 0.0012583554600857137,
+  "test_spearman": 0.9971859033436513,
+  "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+  "mode": "alternate full-data fit; final path keeps fold average"
+}

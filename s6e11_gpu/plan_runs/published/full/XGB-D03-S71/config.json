@@ -1,0 +1,26 @@
+{
+  "name": "XGB-D03-S71",
+  "family": "xgb",
+  "groups": [
+    "raw",
+    "te13",
+    "cents",
+    "digits"
+  ],
+  "parent": "XGB-D03",
+  "smoothing": 20.0,
+  "model_seed": 71,
+  "encoder_seed": 2026,
+  "params": {
+    "learning_rate": 0.03,
+    "max_iterations": 6000,
+    "max_depth": 2,
+    "min_child_weight": 5,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 1.0,
+    "tree_method": "hist"
+  },
+  "boost": false,
+  "rounds_factor": 1.0
+}

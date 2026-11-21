@@ -1,0 +1,65 @@
+{
+  "name": "ALL3-MEAN",
+  "status": "completed",
+  "config": {
+    "members": [
+      "GLM-NEWTON",
+      "D03",
+      "XGB-D03"
+    ],
+    "weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "parent": "XGB-D03",
+    "rank": false
+  },
+  "smoke": false,
+  "rows": 699960,
+  "test_rows": 299984,
+  "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+  "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+  "inputs": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "models_use_llm": false,
+  "oof_auc": 0.9502776453075147,
+  "average_precision": 0.5290631549058864,
+  "log_loss": 0.04439979469574521,
+  "fold_mean": 0.9503236123159511,
+  "fold_std": 0.0034007157257621833,
+  "folds": [
+    {
+      "fold": 1,
+      "auc": 0.9496362811738095
+    },
+    {
+      "fold": 2,
+      "auc": 0.9511526388990099
+    },
+    {
+      "fold": 3,
+      "auc": 0.9551914593814971
+    },
+    {
+      "fold": 4,
+      "auc": 0.9510142232736041
+    },
+    {
+      "fold": 5,
+      "auc": 0.9446234588518345
+    }
+  ],
+  "seconds": 0.0,
+  "delta_oof_auc": 9.534182205417352e-05,
+  "delta_by_fold": [
+    -0.00021540894337390704,
+    0.00026845739599579144,
+    0.00023471961655685547,
+    2.3762172431052164e-05,
+    2.019668137331898e-05
+  ]
+}

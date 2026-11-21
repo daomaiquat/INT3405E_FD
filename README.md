@@ -7,7 +7,7 @@ Kết quả GPU local mới nhất đạt **OOF ROC AUC 0.950345** với GLM-NEW
 ## Cấu trúc hiện tại
 
 ```text
-INT2403E/
+INT3405E_FD/
   plan.md                     # kế hoạch project từ đầu đến cuối
   s6e11_project_run.py         # runner: audit, fold, EDA và contract smoke
   configs/default.json        # cấu hình dùng chung
@@ -17,10 +17,13 @@ INT2403E/
   docs/references/            # guide và bài học tham khảo
   legacy/                     # code, notebook và kết quả lịch sử hữu ích
   reports/reorganization/     # nhật ký chuyển/xóa file
+  s6e11_gpu/plan_runs/        # pipeline RTX 4060, notebook và bảng kết quả
   outputs/                    # các run mới, không đưa vào Git
 ```
 
 ## Chạy tại máy local
+
+Các thí nghiệm GPU T01–T04, đặc trưng nâng cao và tổ hợp có hướng dẫn riêng. [Pipeline và 7 notebook GPU](s6e11_gpu/plan_runs/README.md)
 
 Môi trường Python hiện tại đã có các thư viện cần thiết. Nếu tạo môi trường mới:
 
@@ -175,8 +178,8 @@ Upload cùng một folder chứa `s6e11_project_run.py`, `src/`, `configs/` và 
 - Bước 5: B00–B07 đã chạy full-data trên Kaggle, `run_id=20261117T184301Z_75acd6`; artifacts copy tại `Step5/`. Best baseline là B06 XGBoost với OOF AUC 0,946965.
 - Bước 6: ablation cây đã chạy full, `run_id=20261118T091556Z_367a2c`; artifacts copy tại `Step6/`. Winner: S6-L04 (LGBM 4 lá, OOF 0,947365) và S6-X02 (XGB depth 2, OOF 0,947317). Chi tiết: [reports/steps_progress.md](reports/steps_progress.md).
 - Bước 7: encoder cross-fit đã chạy full local, `run_id=20261118T134537Z_0364fc`; artifacts tại `Step7/`. Gate rò rỉ đạt, shuffle-label AUC 0,500843; chưa tạo submission hay OOF mô hình T01–T04.
-- Phase 8: code T01–T03 đã sẵn, dùng lại Step7; kiểm tra cache full và smoke đã qua. Chờ chạy full-model để đánh giá lợi ích TE.
-- Chưa triển khai trong runner mới: feature engineering nâng cao, tuning và stacking. Thực hiện tiếp theo `plan.md`; baseline/complexity/encoding chỉ là development CV và không tạo submission mới.
+- Runner chính có T01–T03 dùng cache Step7 và đã qua kiểm tra smoke.
+- Pipeline GPU riêng đã hoàn tất T01–T04, các nhóm đặc trưng nâng cao, tinh chỉnh, gộp dự đoán và xác nhận lồng nhau 5×5. [Bảng kết quả GPU](s6e11_gpu/plan_runs/published/full/comparison.md)
 - Linear stack cũ và submission cũ được giữ tại [legacy/runs/blend](legacy/runs/blend). Đây là kết quả lịch sử, không phải kết quả huấn luyện của runner mới.
 
 Chi tiết dữ liệu: [data/README.md](data/README.md). Lịch sử còn giữ: [legacy/README.md](legacy/README.md). Nhật ký dọn dẹp: [reports/reorganization/README.md](reports/reorganization/README.md).

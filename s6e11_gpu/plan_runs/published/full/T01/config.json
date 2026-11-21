@@ -1,0 +1,20 @@
+{
+  "name": "T01",
+  "family": "glm",
+  "groups": [
+    "glm_raw",
+    "te13"
+  ],
+  "parent": "GPU-B02",
+  "smoothing": 20.0,
+  "model_seed": 42,
+  "encoder_seed": 2026,
+  "params": {
+    "C": 1.0,
+    "max_iter": 2000,
+    "tol": 0.0001,
+    "solver": "lbfgs"
+  },
+  "boost": false,
+  "rounds_factor": 1.0
+}
