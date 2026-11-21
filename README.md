@@ -1,6 +1,8 @@
 # S6E11 — Credit Card Fraud
 
-Dự án hiện được tổ chức lại ngay tại `D:\2026\INT2403E`. Dữ liệu gốc có **một bản duy nhất** trong `data/`. Kế hoạch đầy đủ ở [plan.md](plan.md).
+Dự án phát hiện gian lận thẻ tín dụng trên Kaggle Playground Series S6E11. Đặt dữ liệu gốc trong `data/`. Kế hoạch đầy đủ ở [plan.md](plan.md).
+
+Kết quả GPU local mới nhất đạt **OOF ROC AUC 0.950345** với GLM-NEWTON và XGBoost D03 qua xác nhận lồng nhau 5×5. [Báo cáo kết quả GPU](s6e11_gpu/plan_runs/published/full/comparison.md)
 
 ## Cấu trúc hiện tại
 

@@ -1,0 +1,32 @@
+{
+  "members": [
+    "GLM-NEWTON",
+    "XGB-D03"
+  ],
+  "stack": {
+    "candidate": "leave_out_D03",
+    "c": 0.1,
+    "method": "logistic_stack",
+    "meta_seed": 8
+  },
+  "base_prediction_hashes": [
+    "b50ec29a522ce54f690028f559a9497c9550fb9380916c486c402077b1adedb2",
+    "de92fc460b9638f3b04c86224251de964f526a00c26db5e995f25d1ecd3225f7"
+  ],
+  "outer_folds": 5,
+  "inner_folds": 5,
+  "inner_seed": 2026,
+  "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+  "smoke": false,
+  "oof_auc": 0.9503452077073289,
+  "average_precision": 0.529376204636088,
+  "log_loss": 0.04434664759038209,
+  "fold_auc": [
+    0.9498784262287316,
+    0.9511628925987837,
+    0.9551742704520575,
+    0.951022432447787,
+    0.9447693161775306
+  ],
+  "selection_context": "candidate families and meta hyperparameters chosen in development CV"
+}
