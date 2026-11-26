@@ -1,0 +1,47 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "candidates": {
+    "without_density": {
+      "roc_auc": 0.9512244493667037,
+      "average_precision": 0.5382352787073892,
+      "log_loss": 0.04383598792839346,
+      "delta_auc": -8.77879914260582e-05,
+      "ci95_low": -0.0002078758356670109,
+      "ci95_high": 3.2299852814894506e-05,
+      "brier": 0.010631731932020941
+    },
+    "current_density": {
+      "roc_auc": 0.9513122373581301,
+      "average_precision": 0.538283726318933,
+      "log_loss": 0.04382591983292169,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "brier": 0.010629833861823066
+    },
+    "conservative_only": {
+      "roc_auc": 0.9512054308453992,
+      "average_precision": 0.538191491503874,
+      "log_loss": 0.043845571369099647,
+      "delta_auc": -0.00010680651273065056,
+      "ci95_low": -0.00021801131994188467,
+      "ci95_high": 4.398294480583548e-06,
+      "brier": 0.010631848163915521
+    },
+    "regularized_blend": {
+      "roc_auc": 0.9512652270213315,
+      "average_precision": 0.5382804768871313,
+      "log_loss": 0.04383366163371547,
+      "delta_auc": -4.701033679832545e-05,
+      "ci95_low": -0.00010297447089774675,
+      "ci95_high": 8.953797301095853e-06,
+      "brier": 0.010630417664093481
+    }
+  },
+  "seconds": 90.56363109999984,
+  "mode": "4242_reused"
+}

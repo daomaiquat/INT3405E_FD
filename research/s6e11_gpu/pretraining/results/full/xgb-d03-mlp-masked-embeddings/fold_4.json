@@ -1,0 +1,9 @@
+{
+  "fold": 4,
+  "auc": 0.9500908931448524,
+  "rounds": 2306,
+  "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+  "extra_columns": 64,
+  "pretrain_seconds": 0.0,
+  "finetune_seconds": 21.23885280000104
+}

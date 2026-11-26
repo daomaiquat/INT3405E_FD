@@ -1,0 +1,25 @@
+{
+  "name": "TUNE-ETA005",
+  "family": "lgb",
+  "groups": [
+    "raw",
+    "te13"
+  ],
+  "parent": "T02",
+  "smoothing": 20.0,
+  "model_seed": 42,
+  "encoder_seed": 2026,
+  "params": {
+    "learning_rate": 0.05,
+    "max_iterations": 6000,
+    "num_leaves": 4,
+    "min_child_samples": 50,
+    "subsample": 0.9,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 1.0,
+    "metric": "auc"
+  },
+  "boost": false,
+  "rounds_factor": 1.0
+}

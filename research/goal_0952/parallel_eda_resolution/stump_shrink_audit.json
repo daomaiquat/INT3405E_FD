@@ -1,0 +1,305 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "replacement_weight": 0.15,
+  "holdout": {
+    "grandmaster_eda": {
+      "roc_auc": 0.9512244493667037,
+      "average_precision": 0.5382352787073892,
+      "log_loss": 0.04383598792839346,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "brier": 0.010631731932020941
+    },
+    "additive_stumps": {
+      "roc_auc": 0.951225576553905,
+      "average_precision": 0.5382306577659365,
+      "log_loss": 0.043835782741487,
+      "delta_auc": 1.1271872011331396e-06,
+      "ci95_low": -1.5801468521380438e-05,
+      "ci95_high": 1.8055842923646717e-05,
+      "brier": 0.010631261994265296
+    },
+    "shrink_toward_grandmaster": {
+      "roc_auc": 0.9512151113943027,
+      "average_precision": 0.538313066071556,
+      "log_loss": 0.04383393729630922,
+      "delta_auc": -9.337972401102235e-06,
+      "ci95_low": -4.029413100076501e-05,
+      "ci95_high": 2.161818619856054e-05,
+      "brier": 0.01063016091438457
+    }
+  },
+  "reverse": {
+    "grandmaster_eda": {
+      "roc_auc": 0.950189701345676,
+      "average_precision": 0.5307983000384707,
+      "log_loss": 0.04433165226010671,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "brier": 0.010735547123782002,
+      "fold_weighted_delta_auc": 0.0,
+      "fold_auc_wins": 0,
+      "fold_logloss_wins": 0
+    },
+    "additive_stumps": {
+      "roc_auc": 0.9502476296479615,
+      "average_precision": 0.5310408241224269,
+      "log_loss": 0.04431307462982082,
+      "delta_auc": 5.792830228534829e-05,
+      "ci95_low": 3.9922430668792635e-05,
+      "ci95_high": 7.593417390190394e-05,
+      "brier": 0.010732197182505827,
+      "fold_weighted_delta_auc": 5.626750137343737e-05,
+      "fold_auc_wins": 10,
+      "fold_logloss_wins": 10
+    },
+    "shrink_toward_grandmaster": {
+      "roc_auc": 0.9503236683184254,
+      "average_precision": 0.5313438040582883,
+      "log_loss": 0.04428680552747202,
+      "delta_auc": 0.00013396697274947744,
+      "ci95_low": 9.858124075124144e-05,
+      "ci95_high": 0.00016935270474771345,
+      "brier": 0.010727753537337001,
+      "fold_weighted_delta_auc": 0.00013460074015770609,
+      "fold_auc_wins": 10,
+      "fold_logloss_wins": 10
+    }
+  },
+  "holdout_stumps_vs_shrink": {
+    "roc_auc": 0.951225576553905,
+    "average_precision": 0.5382306577659365,
+    "log_loss": 0.043835782741487,
+    "delta_auc": 1.0465159602235374e-05,
+    "ci95_low": -1.220308527783892e-05,
+    "ci95_high": 3.313340448230967e-05
+  },
+  "reverse_stumps_vs_shrink": {
+    "roc_auc": 0.9502476296479615,
+    "average_precision": 0.5310408241224269,
+    "log_loss": 0.04431307462982082,
+    "delta_auc": -7.603867046412915e-05,
+    "ci95_low": -0.00010150264663150604,
+    "ci95_high": -5.057469429675227e-05,
+    "fold_weighted_delta_auc": -7.83332387842687e-05,
+    "fold_auc_wins": 0
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9443713801534744,
+          "average_precision": 0.5156902818636666,
+          "log_loss": 0.04603205935094858
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9444855207170755,
+          "average_precision": 0.5159607575156412,
+          "log_loss": 0.046005331220668896
+        },
+        "shrink_toward_grandmaster": {
+          "roc_auc": 0.9446500722881637,
+          "average_precision": 0.5162222034719901,
+          "log_loss": 0.04596941114129482
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9497723052672564,
+          "average_precision": 0.5379006809877409,
+          "log_loss": 0.043983700265901156
+        },
+        "additive_stumps": {
+          "roc_auc": 0.94982912190336,
+          "average_precision": 0.5380412488676573,
+          "log_loss": 0.04396660099416598
+        },
+        "shrink_toward_grandmaster": {
+          "roc_auc": 0.9498422598906431,
+          "average_precision": 0.5381263165427174,
+          "log_loss": 0.04396068587652985
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9504687561638054,
+          "average_precision": 0.5292315163412377,
+          "log_loss": 0.04430462449344466
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9504802948934742,
+          "average_precision": 0.529374006831335,
+          "log_loss": 0.04429645504995239
+        },
+        "shrink_toward_grandmaster": {
+          "roc_auc": 0.950565175921261,
+          "average_precision": 0.5297642485174048,
+          "log_loss": 0.044265622600680926
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9521110991539378,
+          "average_precision": 0.5183252119764241,
+          "log_loss": 0.04455076719781293
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9521505561065831,
+          "average_precision": 0.5186170758689054,
+          "log_loss": 0.04453010172691927
+        },
+        "shrink_toward_grandmaster": {
+          "roc_auc": 0.952222952607187,
+          "average_precision": 0.5187735484551886,
+          "log_loss": 0.044506211970987065
+        }
+      }
+    },
+    {
+      "fold": 5,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9526174705446842,
+          "average_precision": 0.5462043525965866,
+          "log_loss": 0.04333030585723898
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9526486990589589,
+          "average_precision": 0.5465000399882546,
+          "log_loss": 0.04331362127071944
+        },
+        "shrink_toward_grandmaster": {
+          "roc_auc": 0.9526842782417975,
+          "average_precision": 0.5469829841084549,
+          "log_loss": 0.043290857313258595
+        }
+      }
+    },
+    {
+      "fold": 6,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9486294809349749,
+          "average_precision": 0.5318260728091496,
+          "log_loss": 0.044515674563196626
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9486658253539836,
+          "average_precision": 0.5320812201067038,
+          "log_loss": 0.04449827402481725
+        },
+        "shrink_toward_grandmaster": {
+          "roc_auc": 0.9486949903100464,
+          "average_precision": 0.5325482722985788,
+          "log_loss": 0.04447624697559339
+        }
+      }
+    },
+    {
+      "fold": 7,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9464526474649589,
+          "average_precision": 0.5242310441615937,
+          "log_loss": 0.0450665414595981
+        },
+        "additive_stumps": {
+          "roc_auc": 0.946539180413003,
+          "average_precision": 0.5244304894867378,
+          "log_loss": 0.04504210043090659
+        },
+        "shrink_toward_grandmaster": {
+          "roc_auc": 0.9467292878087057,
+          "average_precision": 0.5247970636369764,
+          "log_loss": 0.04500123157162385
+        }
+      }
+    },
+    {
+      "fold": 8,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9546102411941967,
+          "average_precision": 0.5462203321610949,
+          "log_loss": 0.04289526161123182
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9546480939797046,
+          "average_precision": 0.5465159931201163,
+          "log_loss": 0.04287612345021635
+        },
+        "shrink_toward_grandmaster": {
+          "roc_auc": 0.9546772366654096,
+          "average_precision": 0.5469333953180027,
+          "log_loss": 0.04285108707103626
+        }
+      }
+    },
+    {
+      "fold": 9,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9507844073170416,
+          "average_precision": 0.5284280675997103,
+          "log_loss": 0.044497281451550644
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9508488551701304,
+          "average_precision": 0.5285663356101223,
+          "log_loss": 0.04448373635428195
+        },
+        "shrink_toward_grandmaster": {
+          "roc_auc": 0.9509140259959298,
+          "average_precision": 0.5287078859325325,
+          "log_loss": 0.044463288505787464
+        }
+      }
+    },
+    {
+      "fold": 10,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9521835144354154,
+          "average_precision": 0.5324248300953549,
+          "log_loss": 0.04414029412716783
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9522678784653267,
+          "average_precision": 0.532644257448543,
+          "log_loss": 0.04411838947327916
+        },
+        "shrink_toward_grandmaster": {
+          "roc_auc": 0.9523671495039917,
+          "average_precision": 0.5329690024746715,
+          "log_loss": 0.04408339967224709
+        }
+      }
+    }
+  ]
+}

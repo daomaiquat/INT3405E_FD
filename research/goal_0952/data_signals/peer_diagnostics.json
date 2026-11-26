@@ -1,0 +1,293 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "threshold_fit_rows": 594966,
+  "held_rows": 104994,
+  "tails": [
+    {
+      "variable": "velocity_score",
+      "context": [
+        "txn_count_last_24h",
+        "elapsed_group",
+        "auth_method"
+      ],
+      "tail": "lower",
+      "quantile_cut": 0.12306486815214157,
+      "held_rows": 10528,
+      "held_share": 0.10027239651789627,
+      "test_share": 0.10003533521787829,
+      "observed_fraud": 38,
+      "expected_current": 45.40586086154915,
+      "expected_candidate": 45.50476885338019,
+      "delta_logloss": -1.9600645914646248e-06
+    },
+    {
+      "variable": "velocity_score",
+      "context": [
+        "txn_count_last_24h",
+        "elapsed_group",
+        "auth_method"
+      ],
+      "tail": "upper",
+      "quantile_cut": 0.8846132755279541,
+      "held_rows": 10650,
+      "held_share": 0.10143436767815303,
+      "test_share": 0.10073537255320283,
+      "observed_fraud": 428,
+      "expected_current": 424.42792020952453,
+      "expected_candidate": 425.01363737621693,
+      "delta_logloss": -4.333201942793852e-05
+    },
+    {
+      "variable": "hours_since_last_txn",
+      "context": [
+        "txn_count_last_24h",
+        "velocity_score",
+        "channel"
+      ],
+      "tail": "lower",
+      "quantile_cut": 0.1070709303021431,
+      "held_rows": 10697,
+      "held_share": 0.10188201230546508,
+      "test_share": 0.10134873859939197,
+      "observed_fraud": 131,
+      "expected_current": 120.13900010626492,
+      "expected_candidate": 120.321321031743,
+      "delta_logloss": 9.135347651456627e-06
+    },
+    {
+      "variable": "hours_since_last_txn",
+      "context": [
+        "txn_count_last_24h",
+        "velocity_score",
+        "channel"
+      ],
+      "tail": "upper",
+      "quantile_cut": 0.8912867903709412,
+      "held_rows": 10487,
+      "held_share": 0.0998818980132198,
+      "test_share": 0.10052202784148488,
+      "observed_fraud": 221,
+      "expected_current": 218.60633651338986,
+      "expected_candidate": 218.80171997656623,
+      "delta_logloss": -2.373582004467495e-05
+    },
+    {
+      "variable": "amount_usd",
+      "context": [
+        "merchant_category",
+        "channel",
+        "account_balance_usd"
+      ],
+      "tail": "lower",
+      "quantile_cut": 0.1185280904173851,
+      "held_rows": 10419,
+      "held_share": 0.09923424195668323,
+      "test_share": 0.1001720091738226,
+      "observed_fraud": 161,
+      "expected_current": 155.84705202256734,
+      "expected_candidate": 155.3087345225583,
+      "delta_logloss": 3.3139519142875995e-05
+    },
+    {
+      "variable": "amount_usd",
+      "context": [
+        "merchant_category",
+        "channel",
+        "account_balance_usd"
+      ],
+      "tail": "upper",
+      "quantile_cut": 0.9201005697250366,
+      "held_rows": 10556,
+      "held_share": 0.10053907842352897,
+      "test_share": 0.10191876900101339,
+      "observed_fraud": 189,
+      "expected_current": 187.80493946426168,
+      "expected_candidate": 188.88953149682,
+      "delta_logloss": -1.249018999655016e-05
+    },
+    {
+      "variable": "distance_from_home_km",
+      "context": [
+        "channel",
+        "is_foreign_transaction",
+        "used_vpn"
+      ],
+      "tail": "lower",
+      "quantile_cut": 0.07780823856592178,
+      "held_rows": 10482,
+      "held_share": 0.09983427624435683,
+      "test_share": 0.10015534161821964,
+      "observed_fraud": 189,
+      "expected_current": 171.19439562649222,
+      "expected_candidate": 171.22355695759197,
+      "delta_logloss": -2.164807096092375e-05
+    },
+    {
+      "variable": "distance_from_home_km",
+      "context": [
+        "channel",
+        "is_foreign_transaction",
+        "used_vpn"
+      ],
+      "tail": "upper",
+      "quantile_cut": 0.8553136587142944,
+      "held_rows": 10899,
+      "held_share": 0.10380593176752957,
+      "test_share": 0.10421222465198143,
+      "observed_fraud": 168,
+      "expected_current": 174.433287952767,
+      "expected_candidate": 174.31800479355599,
+      "delta_logloss": -1.5016747121787688e-05
+    },
+    {
+      "variable": "merchant_risk_score",
+      "context": [
+        "merchant_category",
+        "auth_method",
+        "billing_shipping_mismatch"
+      ],
+      "tail": "lower",
+      "quantile_cut": 0.09253823012113571,
+      "held_rows": 10599,
+      "held_share": 0.10094862563575062,
+      "test_share": 0.10153874873326578,
+      "observed_fraud": 23,
+      "expected_current": 21.95106374922102,
+      "expected_candidate": 22.165991335948583,
+      "delta_logloss": -2.8869584856467886e-05
+    },
+    {
+      "variable": "merchant_risk_score",
+      "context": [
+        "merchant_category",
+        "auth_method",
+        "billing_shipping_mismatch"
+      ],
+      "tail": "upper",
+      "quantile_cut": 0.9181069731712341,
+      "held_rows": 10702,
+      "held_share": 0.10192963407432806,
+      "test_share": 0.10154874926662755,
+      "observed_fraud": 380,
+      "expected_current": 378.97705972241863,
+      "expected_candidate": 379.7863551954233,
+      "delta_logloss": -6.569584668796036e-05
+    },
+    {
+      "variable": "cvv_retry_count",
+      "context": [
+        "auth_method",
+        "device_type",
+        "channel"
+      ],
+      "tail": "lower",
+      "quantile_cut": 0.45522940158843994,
+      "held_rows": 10609,
+      "held_share": 0.10104386917347657,
+      "test_share": 0.10111205930982986,
+      "observed_fraud": 328,
+      "expected_current": 311.6636532472695,
+      "expected_candidate": 310.7679229914601,
+      "delta_logloss": 4.403558555565734e-05
+    },
+    {
+      "variable": "cvv_retry_count",
+      "context": [
+        "auth_method",
+        "device_type",
+        "channel"
+      ],
+      "tail": "upper",
+      "quantile_cut": 0.4653109908103943,
+      "held_rows": 11059,
+      "held_share": 0.10532982837114502,
+      "test_share": 0.10513894074350633,
+      "observed_fraud": 832,
+      "expected_current": 831.517467217791,
+      "expected_candidate": 831.4639579751195,
+      "delta_logloss": -8.12570001757218e-05
+    },
+    {
+      "variable": "prior_disputes",
+      "context": [
+        "card_age_months",
+        "customer_age",
+        "card_type"
+      ],
+      "tail": "lower",
+      "quantile_cut": 0.4226219654083252,
+      "held_rows": 11015,
+      "held_share": 0.10491075680515077,
+      "test_share": 0.10509560509893862,
+      "observed_fraud": 160,
+      "expected_current": 166.00157043265085,
+      "expected_candidate": 166.10242803140736,
+      "delta_logloss": 1.749607747222881e-07
+    },
+    {
+      "variable": "prior_disputes",
+      "context": [
+        "card_age_months",
+        "customer_age",
+        "card_type"
+      ],
+      "tail": "upper",
+      "quantile_cut": 0.9222038984298706,
+      "held_rows": 10912,
+      "held_share": 0.10392974836657333,
+      "test_share": 0.1039422102512134,
+      "observed_fraud": 249,
+      "expected_current": 242.0445041107672,
+      "expected_candidate": 242.6925695086166,
+      "delta_logloss": -4.6141039983675636e-05
+    }
+  ],
+  "review_budgets": {
+    "0.01": {
+      "current": {
+        "review_rows": 1050,
+        "fraud": 706,
+        "precision": 0.6723809523809524,
+        "recall": 0.4027381631488876
+      },
+      "peer_profiles": {
+        "review_rows": 1050,
+        "fraud": 706,
+        "precision": 0.6723809523809524,
+        "recall": 0.4027381631488876
+      }
+    },
+    "0.05": {
+      "current": {
+        "review_rows": 5250,
+        "fraud": 1281,
+        "precision": 0.244,
+        "recall": 0.7307472903593839
+      },
+      "peer_profiles": {
+        "review_rows": 5250,
+        "fraud": 1280,
+        "precision": 0.2438095238095238,
+        "recall": 0.7301768397033657
+      }
+    },
+    "0.1": {
+      "current": {
+        "review_rows": 10500,
+        "fraud": 1470,
+        "precision": 0.14,
+        "recall": 0.838562464346834
+      },
+      "peer_profiles": {
+        "review_rows": 10500,
+        "fraud": 1470,
+        "precision": 0.14,
+        "recall": 0.838562464346834
+      }
+    }
+  }
+}

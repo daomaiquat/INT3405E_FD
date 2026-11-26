@@ -1,0 +1,196 @@
+{
+  "name": "FINAL",
+  "status": "verified",
+  "smoke": false,
+  "rows": 699960,
+  "test_rows": 299984,
+  "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+  "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+  "inputs": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "models_use_llm": false,
+  "oof_auc": 0.9503452077073289,
+  "average_precision": 0.529376204636088,
+  "log_loss": 0.04434664759038209,
+  "folds": [
+    {
+      "fold": 1,
+      "auc": 0.9498784262287316
+    },
+    {
+      "fold": 2,
+      "auc": 0.9511628925987837
+    },
+    {
+      "fold": 3,
+      "auc": 0.9551742704520575
+    },
+    {
+      "fold": 4,
+      "auc": 0.951022432447787
+    },
+    {
+      "fold": 5,
+      "auc": 0.9447693161775306
+    }
+  ],
+  "archive_oof_auc": 0.9503452077073289,
+  "max_abs_probability_difference": 0.0,
+  "auc_difference": 0.0,
+  "nested_config": {
+    "members": [
+      "GLM-NEWTON",
+      "XGB-D03"
+    ],
+    "stack": {
+      "candidate": "leave_out_D03",
+      "c": 0.1,
+      "method": "logistic_stack",
+      "meta_seed": 8
+    },
+    "base_prediction_hashes": [
+      "b50ec29a522ce54f690028f559a9497c9550fb9380916c486c402077b1adedb2",
+      "de92fc460b9638f3b04c86224251de964f526a00c26db5e995f25d1ecd3225f7"
+    ],
+    "outer_folds": 5,
+    "inner_folds": 5,
+    "inner_seed": 2026,
+    "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+    "smoke": false
+  },
+  "meta_folds": [
+    {
+      "fold": 1,
+      "train_rows": 559968,
+      "validation_rows": 139992,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "iterations": 5,
+      "model_state": {
+        "coefficients": [
+          0.5202127645354402,
+          1.6196113414598465
+        ],
+        "intercept": -6.390846768525178,
+        "standardize_cols": [
+          0,
+          1
+        ],
+        "center": [
+          -6.395672572123355,
+          -6.203966198297751
+        ],
+        "scale": [
+          2.179478750765916,
+          2.026557990928079
+        ]
+      }
+    },
+    {
+      "fold": 2,
+      "train_rows": 559968,
+      "validation_rows": 139992,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "iterations": 5,
+      "model_state": {
+        "coefficients": [
+          0.5328845061705775,
+          1.5986315231795234
+        ],
+        "intercept": -6.373335288600173,
+        "standardize_cols": [
+          0,
+          1
+        ],
+        "center": [
+          -6.377728942404595,
+          -6.181556034512238
+        ],
+        "scale": [
+          2.172233057220128,
+          2.0060873881485755
+        ]
+      }
+    },
+    {
+      "fold": 3,
+      "train_rows": 559968,
+      "validation_rows": 139992,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "iterations": 5,
+      "model_state": {
+        "coefficients": [
+          0.5311134523857899,
+          1.5960822421777665
+        ],
+        "intercept": -6.350502907278957,
+        "standardize_cols": [
+          0,
+          1
+        ],
+        "center": [
+          -6.342680925731278,
+          -6.155223537465248
+        ],
+        "scale": [
+          2.150325436747129,
+          2.006507360108506
+        ]
+      }
+    },
+    {
+      "fold": 4,
+      "train_rows": 559968,
+      "validation_rows": 139992,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "iterations": 5,
+      "model_state": {
+        "coefficients": [
+          0.5411115105193992,
+          1.5851757645207085
+        ],
+        "intercept": -6.368463532703959,
+        "standardize_cols": [
+          0,
+          1
+        ],
+        "center": [
+          -6.3560806005910875,
+          -6.197610299609858
+        ],
+        "scale": [
+          2.1485833822503575,
+          2.0153013249256366
+        ]
+      }
+    },
+    {
+      "fold": 5,
+      "train_rows": 559968,
+      "validation_rows": 139992,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "iterations": 5,
+      "model_state": {
+        "coefficients": [
+          0.5664073977106868,
+          1.5802971582422423
+        ],
+        "intercept": -6.399298596432829,
+        "standardize_cols": [
+          0,
+          1
+        ],
+        "center": [
+          -6.392131959805947,
+          -6.219442806565559
+        ],
+        "scale": [
+          2.1725001684873515,
+          2.0308969961598877
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "metrics": {
+    "incumbent": {
+      "roc_auc": 0.9512244493667037,
+      "average_precision": 0.5382352787073892,
+      "log_loss": 0.04383598792839346,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "half_delta_auc": [
+        0.0,
+        0.0
+      ]
+    },
+    "shared_half": {
+      "roc_auc": 0.951195910533892,
+      "average_precision": 0.5376557219105891,
+      "log_loss": 0.043863357750593496,
+      "delta_auc": -2.8538832811841885e-05,
+      "ci95_low": -0.00017700702166387766,
+      "ci95_high": 0.00011992935604019389,
+      "half_delta_auc": [
+        3.0030962408722495e-05,
+        -8.67447715677816e-05
+      ]
+    },
+    "gated_half": {
+      "roc_auc": 0.9510150853949563,
+      "average_precision": 0.5375589903256817,
+      "log_loss": 0.04388939676816518,
+      "delta_auc": -0.00020936397174753374,
+      "ci95_low": -0.0004467516672652369,
+      "ci95_high": 2.8023723770169434e-05,
+      "half_delta_auc": [
+        -0.00019341001268557978,
+        -0.0002099369261470141
+      ]
+    },
+    "gated_full": {
+      "roc_auc": 0.9506179231948234,
+      "average_precision": 0.5360243785688724,
+      "log_loss": 0.044000713381519556,
+      "delta_auc": -0.000606526171880506,
+      "ci95_low": -0.0010768878526413222,
+      "ci95_high": -0.00013616449111968965,
+      "half_delta_auc": [
+        -0.0005808713472685856,
+        -0.0006102396382298148
+      ]
+    }
+  },
+  "fit": {
+    "shared": {
+      "iterations": 37,
+      "converged": true,
+      "penalty": 95.0,
+      "active_columns": 539,
+      "reason": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    },
+    "gated": {
+      "iterations": 51,
+      "converged": true,
+      "penalty": 95.0,
+      "active_columns": 1078,
+      "reason": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+    }
+  }
+}

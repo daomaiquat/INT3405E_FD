@@ -1,0 +1,85 @@
+{
+  "protocol": {
+    "fit_protocol": "full_train_once_using_cv_median_rounds",
+    "input_manifest": {
+      "smoke": false,
+      "rows": 699960,
+      "test_rows": 299984,
+      "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+      "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+      "inputs": {
+        "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+        "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+        "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+      },
+      "models_use_llm": false
+    },
+    "name": "XGB-D03",
+    "spec": {
+      "name": "XGB-D03",
+      "family": "xgb",
+      "groups": [
+        "raw",
+        "te13",
+        "cents",
+        "digits"
+      ],
+      "parent": "T03",
+      "smoothing": 20.0,
+      "model_seed": 42,
+      "encoder_seed": 2026,
+      "params": {
+        "learning_rate": 0.03,
+        "max_iterations": 6000,
+        "max_depth": 2,
+        "min_child_weight": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 1.0,
+        "tree_method": "hist"
+      },
+      "boost": false,
+      "rounds_factor": 1.0
+    },
+    "reference_metrics_sha256": "35159c8d9aebcc617788986f74524bbcf00d6e6f733de4fabbc3141de08b6870",
+    "reference_predictions_sha256": "4ae9d89fd64dfb05eafb788039f321aa6db573adad65f69b0875ceec71f6e6e2",
+    "reference_oof_auc": 0.9501823034854605,
+    "rounds_from_folds": [
+      2194,
+      1536,
+      1771,
+      2306,
+      2131
+    ],
+    "rounds": 2131,
+    "weighting": null
+  },
+  "fit": {
+    "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+    "fit_seconds": 10.837404300000344,
+    "rounds": 2131,
+    "early_auc": null,
+    "settings": {
+      "max_bin": 256,
+      "nthread": 4,
+      "learning_rate": 0.03,
+      "max_depth": 2,
+      "min_child_weight": 5,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "tree_method": "hist",
+      "objective": "binary:logistic",
+      "eval_metric": "auc",
+      "device": "cuda:0",
+      "seed": 42
+    },
+    "version": "3.4.1"
+  },
+  "total_seconds": 16.400788899998588,
+  "model_sha256": "e337f3aa7a01b64418cf5ea47a78fe929eefde844e12f194e9d78b7e3e075f70",
+  "predictions_sha256": "955d94e941a793afc63a8b4e00751fbf734bfec10dabc4623795d593a0ef9825",
+  "replay_max_abs_delta": 3.9637088775634766e-06,
+  "test_spearman_vs_fold_mean": 0.9971859033436513,
+  "test_mean_abs_delta_vs_fold_mean": 0.0012583554600857137
+}

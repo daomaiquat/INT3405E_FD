@@ -1,0 +1,137 @@
+{
+  "variant": "mlp-scarf",
+  "status": "completed",
+  "smoke": false,
+  "rows": 699960,
+  "test_rows": 299984,
+  "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+  "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+  "inputs": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "models_use_llm": false,
+  "oof_auc": 0.9412067638441681,
+  "average_precision": 0.48746208680936143,
+  "log_loss": 0.04732169583439827,
+  "folds": [
+    {
+      "fold": 1,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "pretrain_seconds": 11.019436999995378,
+      "finetune_seconds": 1.9447259000007762,
+      "pretrain_loss_by_epoch": [
+        5.058486461639404,
+        4.392921447753906,
+        4.128045558929443
+      ],
+      "finetune_loss_by_epoch": [
+        0.1389930546283722,
+        0.054328445345163345,
+        0.049749087542295456,
+        0.048590514808893204,
+        0.048039164394140244,
+        0.0477028414607048
+      ],
+      "auc": 0.9413760583296717
+    },
+    {
+      "fold": 2,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "pretrain_seconds": 10.634320400000433,
+      "finetune_seconds": 1.928358400000434,
+      "pretrain_loss_by_epoch": [
+        5.029550075531006,
+        4.40059757232666,
+        4.134510517120361
+      ],
+      "finetune_loss_by_epoch": [
+        0.15743987262248993,
+        0.053379666060209274,
+        0.049620117992162704,
+        0.04860891029238701,
+        0.04809815064072609,
+        0.04781457409262657
+      ],
+      "auc": 0.9426410986457745
+    },
+    {
+      "fold": 3,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "pretrain_seconds": 10.929727199996705,
+      "finetune_seconds": 1.89363400000002,
+      "pretrain_loss_by_epoch": [
+        5.042380332946777,
+        4.47146463394165,
+        4.164383888244629
+      ],
+      "finetune_loss_by_epoch": [
+        0.1618337631225586,
+        0.053765371441841125,
+        0.04989606514573097,
+        0.048832446336746216,
+        0.04832795262336731,
+        0.04787776991724968
+      ],
+      "auc": 0.9459163229989007
+    },
+    {
+      "fold": 4,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "pretrain_seconds": 11.52017230000638,
+      "finetune_seconds": 2.6125835999991978,
+      "pretrain_loss_by_epoch": [
+        5.054042339324951,
+        4.465123176574707,
+        4.205085277557373
+      ],
+      "finetune_loss_by_epoch": [
+        0.168705016374588,
+        0.05519705265760422,
+        0.04962943494319916,
+        0.04851442947983742,
+        0.048059530556201935,
+        0.04777636379003525
+      ],
+      "auc": 0.9414190021166494
+    },
+    {
+      "fold": 5,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "pretrain_seconds": 33.44932749999862,
+      "finetune_seconds": 5.6982588000028045,
+      "pretrain_loss_by_epoch": [
+        5.044757843017578,
+        4.386477470397949,
+        4.132706165313721
+      ],
+      "finetune_loss_by_epoch": [
+        0.15666741132736206,
+        0.05549026280641556,
+        0.050015971064567566,
+        0.04862082749605179,
+        0.048071395605802536,
+        0.04767415672540665
+      ],
+      "auc": 0.9354578723761885
+    }
+  ],
+  "config": {
+    "architecture": "mlp",
+    "objective": "scarf",
+    "batch": 4096,
+    "pretrain_batch": 512,
+    "finetune_epochs": 6,
+    "pretrain_epochs": 3,
+    "schema": 1,
+    "seed": 42,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "architecture_source_sha256": "48ee2cdc89fbdf8c7176314f218790cf458dda4742d8c26f66a20ae0d202aa75",
+    "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+    "torch_version": "2.11.0+cu128",
+    "amp": true,
+    "smoke": false
+  }
+}

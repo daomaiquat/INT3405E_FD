@@ -1,0 +1,54 @@
+{
+  "architecture": "xgb",
+  "objective": "binary:logistic",
+  "parent": "XGB-D03",
+  "original_groups": [
+    "raw",
+    "te13",
+    "cents",
+    "digits"
+  ],
+  "embedding_source": "mlp-masked",
+  "encoder_before_supervised_finetune": true,
+  "encoder_config_sha256": "3df7637ebc24f87e11ded53158ecf851dcbf4ef95d4df05d5d54d7a171ad0074",
+  "encoder_states_sha256": [
+    "88466f29e2caf281e60347dc38531f123a0c605226870de9542eda7686996fde",
+    "d54a39b37d00a58d9a5749033a85d65c477d08bb93901f1801cac809683228c5",
+    "ddf71d33df766ef522025a6656c377579361d09fa27fe4f69463ad8c03b41888",
+    "63a2308e49edd216a81da9207b81d53753f0317974fc9e72a9b0cbeba41df8be",
+    "7be232e370c9a8d1a68e36d14897649fc889a7cb4857a69318cb51ba95b2f6d4"
+  ],
+  "rounds_by_fold": [
+    2194,
+    1536,
+    1771,
+    2306,
+    2131
+  ],
+  "base_config": {
+    "name": "XGB-D03",
+    "family": "xgb",
+    "groups": [
+      "raw",
+      "te13",
+      "cents",
+      "digits"
+    ],
+    "parent": "T03",
+    "smoothing": 20.0,
+    "model_seed": 42,
+    "encoder_seed": 2026,
+    "params": {
+      "learning_rate": 0.03,
+      "max_iterations": 6000,
+      "max_depth": 2,
+      "min_child_weight": 5,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "tree_method": "hist"
+    },
+    "boost": false,
+    "rounds_factor": 1.0
+  }
+}

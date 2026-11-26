@@ -1,0 +1,31 @@
+{
+  "train_sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+  "notebook_sha256": "5b408b5f21688211083b3212e5c31ee86a060ac106011ae7cf3e06fa02170aad",
+  "holdout_ids_sha256": "ec98b2b0fb55468cc608ea97140cabb6b83752b7197226d076b35a2c18d2ad6d",
+  "holdout_rows": 104994,
+  "development_rows": 594966,
+  "selected_l2": 100.0,
+  "development_baseline_roc_auc": 0.9506068338417099,
+  "development_l2_roc_auc": {
+    "5.0": 0.9502669925841368,
+    "25.0": 0.9503967488915539,
+    "100.0": 0.950498647818355
+  },
+  "holdout_baseline_roc_auc": 0.9509489294520218,
+  "holdout_roc_auc": 0.9508773309630427,
+  "holdout_baseline_average_precision": 0.538185085635301,
+  "holdout_average_precision": 0.5379527255219403,
+  "holdout_baseline_log_loss": 0.04387376063920314,
+  "holdout_log_loss": 0.04389504657979975,
+  "delta_roc_auc": -7.15984889790855e-05,
+  "ci95_low": -0.0002125260799587653,
+  "ci95_high": 6.93291020005943e-05,
+  "p_value": 0.31935649173173986,
+  "otp_group": {
+    "rows": 1625,
+    "fraud": 25,
+    "baseline_predicted_fraud": 21.558043174228207,
+    "corrected_predicted_fraud": 22.106624263242225
+  },
+  "elapsed_seconds": 37.96835009999995
+}

@@ -1,0 +1,437 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "rows": 594966,
+  "fit_rows": 104994,
+  "pairs": [
+    [
+      "hours_since_last_txn",
+      "ip_country_mismatch"
+    ],
+    [
+      "merchant_risk_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "velocity_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "customer_age",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "account_balance_usd",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "account_balance_usd",
+      "is_foreign_transaction"
+    ]
+  ],
+  "variants": {
+    "grandmaster_eda": {
+      "roc_auc": 0.950189701345676,
+      "average_precision": 0.5307983000384707,
+      "log_loss": 0.04433165226010671,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "brier": 0.010735547123782002,
+      "fold_weighted_delta_auc": 0.0,
+      "fold_auc_wins": 0,
+      "fold_logloss_wins": 0
+    },
+    "resolution_tree": {
+      "roc_auc": 0.9501767595193036,
+      "average_precision": 0.5307228211500684,
+      "log_loss": 0.0443355709748231,
+      "delta_auc": -1.294182637257002e-05,
+      "ci95_low": -5.0722652542220955e-05,
+      "ci95_high": 2.4838999797080915e-05,
+      "brier": 0.010736466425394112,
+      "fold_weighted_delta_auc": -1.3711843451718458e-05,
+      "fold_auc_wins": 4,
+      "fold_logloss_wins": 4
+    },
+    "resolution_half": {
+      "roc_auc": 0.9501874940838053,
+      "average_precision": 0.5307874937993136,
+      "log_loss": 0.04433193250668457,
+      "delta_auc": -2.2072618707236202e-06,
+      "ci95_low": -2.110127243243322e-05,
+      "ci95_high": 1.668674869098598e-05,
+      "brier": 0.010735660007625528,
+      "fold_weighted_delta_auc": -3.1980825514741142e-06,
+      "fold_auc_wins": 5,
+      "fold_logloss_wins": 5
+    },
+    "resolution_linear": {
+      "roc_auc": 0.9501896199743449,
+      "average_precision": 0.5307974226166094,
+      "log_loss": 0.04433167119360897,
+      "delta_auc": -8.137133111763006e-08,
+      "ci95_low": -2.578407857667583e-07,
+      "ci95_high": 9.509812353149818e-08,
+      "brier": 0.010735549684322956,
+      "fold_weighted_delta_auc": -1.6429095412233706e-07,
+      "fold_auc_wins": 3,
+      "fold_logloss_wins": 4
+    }
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9443713801534744,
+          "average_precision": 0.5156902818636666,
+          "log_loss": 0.04603205935094858
+        },
+        "resolution_tree": {
+          "roc_auc": 0.9444214214401153,
+          "average_precision": 0.5159712912452503,
+          "log_loss": 0.04600221981641269
+        },
+        "resolution_half": {
+          "roc_auc": 0.944401602683121,
+          "average_precision": 0.5158399737499642,
+          "log_loss": 0.046014801475281086
+        },
+        "resolution_linear": {
+          "roc_auc": 0.9443709588436728,
+          "average_precision": 0.5156921470561331,
+          "log_loss": 0.046032081190552916
+        }
+      },
+      "linear_coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.03432360067954837,
+        0.008744880724757143,
+        0.0
+      ]
+    },
+    {
+      "fold": 2,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9497723052672564,
+          "average_precision": 0.5379006809877409,
+          "log_loss": 0.043983700265901156
+        },
+        "resolution_tree": {
+          "roc_auc": 0.9497424696547746,
+          "average_precision": 0.538004182537479,
+          "log_loss": 0.043979412975620615
+        },
+        "resolution_half": {
+          "roc_auc": 0.9497586169977835,
+          "average_precision": 0.5379346058938431,
+          "log_loss": 0.043979764687403625
+        },
+        "resolution_linear": {
+          "roc_auc": 0.9497716861997929,
+          "average_precision": 0.5379033849446796,
+          "log_loss": 0.04398376840767602
+        }
+      },
+      "linear_coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.03776943742514528,
+        0.007312254566030069,
+        0.0
+      ]
+    },
+    {
+      "fold": 3,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9504687561638054,
+          "average_precision": 0.5292315163412377,
+          "log_loss": 0.04430462449344466
+        },
+        "resolution_tree": {
+          "roc_auc": 0.9504113032639198,
+          "average_precision": 0.5289141185395361,
+          "log_loss": 0.0443291530467012
+        },
+        "resolution_half": {
+          "roc_auc": 0.9504434001922756,
+          "average_precision": 0.5290898381066699,
+          "log_loss": 0.0443156638503456
+        },
+        "resolution_linear": {
+          "roc_auc": 0.9504684638263919,
+          "average_precision": 0.5292325980693425,
+          "log_loss": 0.04430467344327124
+        }
+      },
+      "linear_coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.027918773393232003,
+        0.017410409392177327,
+        0.0
+      ]
+    },
+    {
+      "fold": 4,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9521110991539378,
+          "average_precision": 0.5183252119764241,
+          "log_loss": 0.04455076719781293
+        },
+        "resolution_tree": {
+          "roc_auc": 0.9521626107258048,
+          "average_precision": 0.5182788075858925,
+          "log_loss": 0.044541578453997525
+        },
+        "resolution_half": {
+          "roc_auc": 0.9521358446561633,
+          "average_precision": 0.5182051049126323,
+          "log_loss": 0.04454528421772942
+        },
+        "resolution_linear": {
+          "roc_auc": 0.9521113141079182,
+          "average_precision": 0.5183198408293298,
+          "log_loss": 0.04455074015378713
+        }
+      },
+      "linear_coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.036069821383720044,
+        0.013754081236305836,
+        0.0
+      ]
+    },
+    {
+      "fold": 5,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9526174705446842,
+          "average_precision": 0.5462043525965866,
+          "log_loss": 0.04333030585723898
+        },
+        "resolution_tree": {
+          "roc_auc": 0.952547146200451,
+          "average_precision": 0.5457760973619202,
+          "log_loss": 0.04335628143648859
+        },
+        "resolution_half": {
+          "roc_auc": 0.9525901112020567,
+          "average_precision": 0.5460029556624556,
+          "log_loss": 0.04334125731398044
+        },
+        "resolution_linear": {
+          "roc_auc": 0.9526166451213993,
+          "average_precision": 0.5461965830022278,
+          "log_loss": 0.0433303147431263
+        }
+      },
+      "linear_coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.03226529767818795,
+        0.010014019372121138,
+        0.0
+      ]
+    },
+    {
+      "fold": 6,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9486294809349749,
+          "average_precision": 0.5318260728091496,
+          "log_loss": 0.044515674563196626
+        },
+        "resolution_tree": {
+          "roc_auc": 0.9486135657422649,
+          "average_precision": 0.5312218782495958,
+          "log_loss": 0.044543268856492464
+        },
+        "resolution_half": {
+          "roc_auc": 0.9486263598031792,
+          "average_precision": 0.5315286392179013,
+          "log_loss": 0.04452819575466883
+        },
+        "resolution_linear": {
+          "roc_auc": 0.9486296786926368,
+          "average_precision": 0.5318266006927007,
+          "log_loss": 0.044515674552804675
+        }
+      },
+      "linear_coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.03216761624808294,
+        0.015389324987638446,
+        0.0
+      ]
+    },
+    {
+      "fold": 7,
+      "rows": 59496,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9464526474649589,
+          "average_precision": 0.5242310441615937,
+          "log_loss": 0.0450665414595981
+        },
+        "resolution_tree": {
+          "roc_auc": 0.9465413751515898,
+          "average_precision": 0.5237117222082921,
+          "log_loss": 0.045069236516891806
+        },
+        "resolution_half": {
+          "roc_auc": 0.9464997956138934,
+          "average_precision": 0.5240467814171712,
+          "log_loss": 0.04506590123364007
+        },
+        "resolution_linear": {
+          "roc_auc": 0.9464524581149633,
+          "average_precision": 0.5242244726640946,
+          "log_loss": 0.04506658616769597
+        }
+      },
+      "linear_coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.03532272692232444,
+        0.007681160453703271,
+        0.0
+      ]
+    },
+    {
+      "fold": 8,
+      "rows": 59496,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9546102411941967,
+          "average_precision": 0.5462203321610949,
+          "log_loss": 0.04289526161123182
+        },
+        "resolution_tree": {
+          "roc_auc": 0.9546084423692374,
+          "average_precision": 0.5460029738646336,
+          "log_loss": 0.04290830120984346
+        },
+        "resolution_half": {
+          "roc_auc": 0.9546116871396185,
+          "average_precision": 0.5461336011630756,
+          "log_loss": 0.042900442972463725
+        },
+        "resolution_linear": {
+          "roc_auc": 0.9546101206987448,
+          "average_precision": 0.5462170071833204,
+          "log_loss": 0.04289524147129071
+        }
+      },
+      "linear_coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.03126346462831562,
+        0.014411633475918837,
+        0.0
+      ]
+    },
+    {
+      "fold": 9,
+      "rows": 59496,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9507844073170416,
+          "average_precision": 0.5284280675997103,
+          "log_loss": 0.044497281451550644
+        },
+        "resolution_tree": {
+          "roc_auc": 0.950790268560091,
+          "average_precision": 0.5288245190183654,
+          "log_loss": 0.04447646741867162
+        },
+        "resolution_half": {
+          "roc_auc": 0.9507903546282708,
+          "average_precision": 0.5286342037175213,
+          "log_loss": 0.04448459037775582
+        },
+        "resolution_linear": {
+          "roc_auc": 0.9507843901034057,
+          "average_precision": 0.5284295056353362,
+          "log_loss": 0.04449733389091575
+        }
+      },
+      "linear_coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.029727545109249794,
+        0.007707958124759907,
+        0.0
+      ]
+    },
+    {
+      "fold": 10,
+      "rows": 59496,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9521835144354154,
+          "average_precision": 0.5324248300953549,
+          "log_loss": 0.04414029412716783
+        },
+        "resolution_tree": {
+          "roc_auc": 0.9520255707185311,
+          "average_precision": 0.5326682311789094,
+          "log_loss": 0.04414977760470124
+        },
+        "resolution_half": {
+          "roc_auc": 0.9521115442234059,
+          "average_precision": 0.5325586198708571,
+          "log_loss": 0.044143410857164195
+        },
+        "resolution_linear": {
+          "roc_auc": 0.9521839447763146,
+          "average_precision": 0.5324258251091211,
+          "log_loss": 0.044140285691872824
+        }
+      },
+      "linear_coefficients": [
+        0.0,
+        0.0,
+        0.0,
+        0.027552980795238522,
+        0.01580386748617309,
+        0.0
+      ]
+    }
+  ]
+}

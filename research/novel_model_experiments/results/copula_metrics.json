@@ -1,0 +1,49 @@
+{
+  "model": "copula",
+  "complete_5_fold_oof": true,
+  "outer_seed": 42,
+  "inner_seed": 2026,
+  "rounds": 1650,
+  "device": "cuda",
+  "elapsed_seconds": 377.5923724999957,
+  "folds_ran": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "fold_metrics": [
+    {
+      "roc_auc": 0.9493881709290186,
+      "average_precision": 0.5184985168653153,
+      "log_loss": 0.045027153311764344
+    },
+    {
+      "roc_auc": 0.9510461122799017,
+      "average_precision": 0.5330470297829192,
+      "log_loss": 0.04430976300107142
+    },
+    {
+      "roc_auc": 0.9549346694529719,
+      "average_precision": 0.5499085592942604,
+      "log_loss": 0.04285205743276057
+    },
+    {
+      "roc_auc": 0.9510074635997077,
+      "average_precision": 0.5332247534223798,
+      "log_loss": 0.04410937589257592
+    },
+    {
+      "roc_auc": 0.9448803870499476,
+      "average_precision": 0.5102257404523695,
+      "log_loss": 0.04580279664943207
+    }
+  ],
+  "oof": {
+    "roc_auc": 0.9502220454447863,
+    "average_precision": 0.5286537625423714,
+    "log_loss": 0.044420229257520864
+  },
+  "oof_rows": 699960
+}

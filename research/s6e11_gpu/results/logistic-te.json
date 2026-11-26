@@ -1,0 +1,62 @@
+{
+  "model": "logistic-te",
+  "status": "completed",
+  "smoke": false,
+  "models_use_llm": false,
+  "rows": 699960,
+  "positives": 11689,
+  "train_sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+  "split_sha256": "e3629fd42119a82d148901274763f3b2291e4fe1ab53755f81de2dcfc9614f43",
+  "roc_auc": 0.9472996967994848,
+  "average_precision": 0.5137888365540608,
+  "fit_seconds": 1.4106059000041569,
+  "wall_seconds": 9.4885065999988,
+  "folds": [
+    {
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 0.3652631000004476,
+      "max_lbfgs_iterations": 75,
+      "fold": 1,
+      "validation_rows": 139992,
+      "roc_auc": 0.9464384420459656
+    },
+    {
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 0.24673579999944195,
+      "max_lbfgs_iterations": 75,
+      "fold": 2,
+      "validation_rows": 139992,
+      "roc_auc": 0.9487204442230861
+    },
+    {
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 0.22964379999757512,
+      "max_lbfgs_iterations": 75,
+      "fold": 3,
+      "validation_rows": 139992,
+      "roc_auc": 0.9526509576713229
+    },
+    {
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 0.2923910000026808,
+      "max_lbfgs_iterations": 75,
+      "fold": 4,
+      "validation_rows": 139992,
+      "roc_auc": 0.947456580956881
+    },
+    {
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 0.2765722000040114,
+      "max_lbfgs_iterations": 75,
+      "fold": 5,
+      "validation_rows": 139992,
+      "roc_auc": 0.9413826014824513
+    }
+  ],
+  "versions": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1",
+    "torch": "2.11.0+cu128"
+  }
+}

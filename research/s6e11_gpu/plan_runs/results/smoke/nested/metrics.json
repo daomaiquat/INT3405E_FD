@@ -1,0 +1,30 @@
+{
+  "members": [
+    "GPU-B02",
+    "GLM-BOOST-LGB",
+    "GLM-BOOST-XGB"
+  ],
+  "stack": {
+    "candidate": "rank_logit_stack_seed8_c0.01",
+    "c": 0.01,
+    "method": "rank_logit_stack",
+    "meta_seed": 8
+  },
+  "base_prediction_hashes": [
+    "a7b0cf10a0a90bf82d617135f43cd6ac1e5377d2402d24697571cbd2095e8842",
+    "f732e2e5a2e84041785003cc11e9ccd596b60cc948050422029602b7b8ca4548",
+    "d163a2458cecdd3d03c20dfac9ded1db1ab315cc6e039c642dfb418d5ca31281"
+  ],
+  "outer_folds": 2,
+  "inner_folds": 2,
+  "fold_hash": "cd67af60425b68fa336439a7dc862b3c43b938d889e1668fd43d126a63e39684",
+  "smoke": true,
+  "oof_auc": 0.9407804953501925,
+  "average_precision": 0.4903133256738723,
+  "log_loss": 0.04937609955538767,
+  "fold_auc": [
+    0.9375773014126328,
+    0.9444020532107756
+  ],
+  "selection_context": "candidate families and meta hyperparameters chosen in development CV"
+}

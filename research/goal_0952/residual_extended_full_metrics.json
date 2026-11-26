@@ -1,0 +1,74 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "selected_residual_pairs": [
+    [
+      "txn_count_last_24h",
+      "card_type"
+    ],
+    [
+      "hours_since_last_txn",
+      "ip_country_mismatch"
+    ],
+    [
+      "cvv_retry_count",
+      "card_type"
+    ],
+    [
+      "device_type",
+      "is_new_merchant"
+    ],
+    [
+      "merchant_risk_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "velocity_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "customer_age",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "channel",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "account_balance_usd",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "device_type",
+      "used_vpn"
+    ],
+    [
+      "prior_disputes",
+      "is_new_merchant"
+    ],
+    [
+      "account_balance_usd",
+      "is_foreign_transaction"
+    ]
+  ],
+  "boosting_rounds": [
+    448,
+    672
+  ],
+  "meta_weights": [
+    0.282884459315451,
+    0.3024914654571015,
+    0.45850302454773145,
+    0.42623763384378444,
+    0.6294345754886721,
+    0.20280601470927304,
+    0.2225415488108003
+  ],
+  "n_fit": 699960,
+  "n_scoring": 299984,
+  "grandmaster_reference_oof_auc": 0.9512809152426213,
+  "elapsed_seconds": 131.45060420000027
+}

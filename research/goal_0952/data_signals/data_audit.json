@@ -1,0 +1,331 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "rows": 594966,
+  "fraud": 9936,
+  "discovery_seed": 26011,
+  "examples": {
+    "spend_exceeds_balance": {
+      "rows": 6349,
+      "fraud": 159,
+      "grandmaster_expected_fraud": 166.40475000774688
+    },
+    "short_interval_empty_count": {
+      "rows": 15169,
+      "fraud": 35,
+      "grandmaster_expected_fraud": 36.79666157577387
+    },
+    "long_interval_positive_count": {
+      "rows": 13574,
+      "fraud": 199,
+      "grandmaster_expected_fraud": 205.8839248206816
+    },
+    "card_predates_adulthood": {
+      "rows": 35910,
+      "fraud": 146,
+      "grandmaster_expected_fraud": 138.45559361621062
+    },
+    "ip_flag_disagreement": {
+      "rows": 13881,
+      "fraud": 1300,
+      "grandmaster_expected_fraud": 1289.506568050493
+    }
+  },
+  "screen": [
+    {
+      "feature": "short_interval_empty_count",
+      "halves_logloss_gain_x1m": [
+        -1.0035399444149884,
+        -1.0113242027917635
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "card_predates_adulthood",
+      "halves_logloss_gain_x1m": [
+        -0.8570206060376506,
+        -1.2775516572763324
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "spend_exceeds_balance",
+      "halves_logloss_gain_x1m": [
+        -1.3492568893685997,
+        -0.8688064934078699
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "long_interval_positive_count",
+      "halves_logloss_gain_x1m": [
+        -1.3835882624393947,
+        -0.9570949701526166
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "previous_day_crossed",
+      "halves_logloss_gain_x1m": [
+        -4.301389771213526,
+        -3.8700671950372967
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "ip_flag_disagreement",
+      "halves_logloss_gain_x1m": [
+        -4.432112052206449,
+        -6.659110217951958
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "velocity_per_transaction",
+      "halves_logloss_gain_x1m": [
+        -2.8020042145485147,
+        -8.374316678536054
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "prior_events_per_available_hour",
+      "halves_logloss_gain_x1m": [
+        -10.28663143254338,
+        -8.064563217918819
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:distance_from_home_km\u00d7merchant_risk_score",
+      "halves_logloss_gain_x1m": [
+        -11.744316207130955,
+        -7.118234402338219
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "count_times_relative_gap",
+      "halves_logloss_gain_x1m": [
+        -8.361848996010778,
+        -14.058247657017242
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "balance_net_scaled",
+      "halves_logloss_gain_x1m": [
+        -13.382215783584728,
+        -9.738383938945328
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "log_amount_balance_ratio",
+      "halves_logloss_gain_x1m": [
+        -13.638515087732728,
+        -11.79406486812029
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "previous_week_phase",
+      "halves_logloss_gain_x1m": [
+        -16.257829384282164,
+        -9.923263601933908
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:hours_since_last_txn\u00d7velocity_score",
+      "halves_logloss_gain_x1m": [
+        -17.678906209905865,
+        -13.127439526888773
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:account_balance_usd\u00d7merchant_risk_score",
+      "halves_logloss_gain_x1m": [
+        -15.210340919405429,
+        -17.75043092154538
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:amount_usd\u00d7distance_from_home_km",
+      "halves_logloss_gain_x1m": [
+        -28.087990151415276,
+        -6.386307944888925
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "previous_hour_sin",
+      "halves_logloss_gain_x1m": [
+        -14.988299421557494,
+        -19.796556811821354
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:amount_usd\u00d7account_balance_usd",
+      "halves_logloss_gain_x1m": [
+        -20.20847099658274,
+        -22.155515421735938
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:distance_from_home_km\u00d7account_balance_usd",
+      "halves_logloss_gain_x1m": [
+        -29.622993766992288,
+        -22.186413962052566
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "previous_hour_cos",
+      "halves_logloss_gain_x1m": [
+        -27.70993163314639,
+        -24.447293889749698
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:hours_since_last_txn\u00d7distance_from_home_km",
+      "halves_logloss_gain_x1m": [
+        -23.197487873487244,
+        -29.352468877343053
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:amount_usd\u00d7velocity_score",
+      "halves_logloss_gain_x1m": [
+        -25.61177858499686,
+        -27.570688471895146
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "velocity_times_gap",
+      "halves_logloss_gain_x1m": [
+        -19.626492035303144,
+        -41.14689702801322
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:hours_since_last_txn\u00d7merchant_risk_score",
+      "halves_logloss_gain_x1m": [
+        -30.274305902709685,
+        -35.01756381387583
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:amount_usd\u00d7merchant_risk_score",
+      "halves_logloss_gain_x1m": [
+        -34.07438164988036,
+        -39.32951566684717
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:velocity_score\u00d7merchant_risk_score",
+      "halves_logloss_gain_x1m": [
+        -32.344250108874704,
+        -42.360055373689974
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:distance_from_home_km\u00d7velocity_score",
+      "halves_logloss_gain_x1m": [
+        -39.90992535539417,
+        -40.606785213767594
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "implied_age_when_card_started",
+      "halves_logloss_gain_x1m": [
+        -36.207120847182864,
+        -47.45433053784942
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:hours_since_last_txn\u00d7account_balance_usd",
+      "halves_logloss_gain_x1m": [
+        -47.457622987301384,
+        -42.819018592356315
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:amount_usd\u00d7hours_since_last_txn",
+      "halves_logloss_gain_x1m": [
+        -49.84217823900822,
+        -51.60971856169733
+      ],
+      "both_positive": false
+    },
+    {
+      "feature": "terminal_digits:account_balance_usd\u00d7velocity_score",
+      "halves_logloss_gain_x1m": [
+        -60.72354701030375,
+        -54.142163684281485
+      ],
+      "both_positive": false
+    }
+  ],
+  "context_profile_relationships": [
+    [
+      "velocity_score",
+      "txn_count_last_24h",
+      "elapsed_group",
+      "auth_method"
+    ],
+    [
+      "hours_since_last_txn",
+      "txn_count_last_24h",
+      "velocity_score",
+      "channel"
+    ],
+    [
+      "amount_usd",
+      "merchant_category",
+      "channel",
+      "account_balance_usd"
+    ],
+    [
+      "distance_from_home_km",
+      "channel",
+      "is_foreign_transaction",
+      "used_vpn"
+    ],
+    [
+      "merchant_risk_score",
+      "merchant_category",
+      "auth_method",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "cvv_retry_count",
+      "auth_method",
+      "device_type",
+      "channel"
+    ],
+    [
+      "prior_disputes",
+      "card_age_months",
+      "customer_age",
+      "card_type"
+    ]
+  ]
+}

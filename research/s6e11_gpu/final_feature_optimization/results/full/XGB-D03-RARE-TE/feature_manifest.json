@@ -1,0 +1,17 @@
+{
+  "reference": "XGB-D03",
+  "expected_input_width": 111,
+  "added_pair_groups": [],
+  "added_rare_columns": [
+    "amount_usd",
+    "account_balance_usd"
+  ],
+  "baseline_config_sha256": "a5f5f143c41e298e52918df8cb5b9a0ed5b8107f37bab7f2a9815de8f18bfb12",
+  "source_sha256": {
+    "run_optimization.py": "1c46691547cb2b21e906d65d0762023f6bce87e72c75afa2af063569073ab0b2",
+    "run_plan.py": "b24eb0694e745132806cb8e22979782e2bff5b753e2a38b0e35f7c686d386500",
+    "features.py": "49cd5636cb783c4f3a03b6bbfc50549b021b5d9db8b64f01f0dbb9c30dcd799f",
+    "models.py": "82fcff225625b66bcf447d37bb2cbee9a2e5fddb5bf3cd7c5433d4dc9cb42b16",
+    "rare_key_te.py": "16c678fb4a6facd7082a387038c30ae37742bae04e46363b7a549b65e2758f00"
+  }
+}

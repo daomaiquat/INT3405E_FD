@@ -1,0 +1,41 @@
+{
+  "baseline": "XGB-D03",
+  "baseline_columns": 109,
+  "baseline_config_sha256": "a5f5f143c41e298e52918df8cb5b9a0ed5b8107f37bab7f2a9815de8f18bfb12",
+  "training": "early stopping on A/E and fit on all outer T with the selected number of trees",
+  "runner_sha256": "25dc5bdf35ec0805009c2e99ea5f5acafb085577b413a8ee4600cc30fd089b72",
+  "pipeline_hashes": {
+    "run_plan.py": "b24eb0694e745132806cb8e22979782e2bff5b753e2a38b0e35f7c686d386500",
+    "features.py": "49cd5636cb783c4f3a03b6bbfc50549b021b5d9db8b64f01f0dbb9c30dcd799f",
+    "models.py": "82fcff225625b66bcf447d37bb2cbee9a2e5fddb5bf3cd7c5433d4dc9cb42b16"
+  },
+  "variants": {
+    "XGB-D03-CHANNEL-6H": {
+      "feature": "channel × hour_block_6h",
+      "representation": "one_hot",
+      "hour_block_size": 6,
+      "fit_vocab_on_reference_only": true,
+      "unknown_channel": "all zeros",
+      "expected_columns": 20
+    },
+    "XGB-D03-VELOCITY-RESIDUAL": {
+      "feature": "velocity_score minus cohort train median",
+      "representation": "continuous",
+      "count_edges": [
+        3,
+        6,
+        10
+      ],
+      "recency_edges_hours": [
+        0.25,
+        1,
+        6,
+        24
+      ],
+      "minimum_cohort_rows": 250,
+      "small_cohort_fallback": "global median of the active reference rows",
+      "expected_columns": 1
+    }
+  },
+  "baseline_predictions_sha256": "4ae9d89fd64dfb05eafb788039f321aa6db573adad65f69b0875ceec71f6e6e2"
+}

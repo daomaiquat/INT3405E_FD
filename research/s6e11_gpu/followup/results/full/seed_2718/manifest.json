@@ -1,0 +1,36 @@
+{
+  "inputs": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "models_use_llm": false,
+  "configs": {
+    "GLM-NEWTON": "5e3235dae2ffb7db1e29c85597fa608f5d6010002974879b28ae1545f978fcc5",
+    "XGB-D03": "a5f5f143c41e298e52918df8cb5b9a0ed5b8107f37bab7f2a9815de8f18bfb12",
+    "D03": "4d0d6aac3032eb77f83a7bea7266fa1b341352bb7e12f9b237290151b8f32e10"
+  },
+  "runner": "d7cbddc8791c43ab6150ab3bc90c8212e980033e89c84417ab1645197d6af24c",
+  "specialist": "143bc0a5dfc1cf15ffc57d3e0027b04f85de8b1c34f9cefd4105f6f88de38135",
+  "torch_version": "2.11.0+cu128",
+  "mlp_epochs": 12,
+  "blends": {
+    "FINAL_PLUS_LGBM20": [
+      0.8,
+      0.2
+    ],
+    "FINAL_PLUS_MLP10": [
+      0.9,
+      0.1
+    ]
+  },
+  "gpu": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+  "seed": 2718,
+  "fold_hash": "9d09fe32a4163d12921b2ff420b5e6d526700e0d6a69e242f8781f5a88793b94",
+  "smoke": false,
+  "rows": 699960,
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "inner_seed": 2026,
+  "meta_c": 0.1
+}

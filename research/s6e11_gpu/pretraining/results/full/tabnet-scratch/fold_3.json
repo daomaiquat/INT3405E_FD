@@ -1,0 +1,14 @@
+{
+  "fold": 3,
+  "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+  "pretrain_seconds": 0.0,
+  "finetune_seconds": 13.757423000002746,
+  "pretrain_loss_by_epoch": [],
+  "finetune_loss_by_epoch": [
+    0.4482968747615814,
+    0.1314462274312973,
+    0.08594830334186554,
+    0.0777178704738617
+  ],
+  "auc": 0.7633252064166087
+}

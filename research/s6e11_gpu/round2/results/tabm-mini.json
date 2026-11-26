@@ -1,0 +1,132 @@
+{
+  "model": "tabm-mini",
+  "status": "completed",
+  "smoke": false,
+  "models_use_llm": false,
+  "rows": 699960,
+  "positives": 11689,
+  "train_sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+  "split_sha256": "e3629fd42119a82d148901274763f3b2291e4fe1ab53755f81de2dcfc9614f43",
+  "roc_auc": 0.942349682643099,
+  "average_precision": 0.4892143900606774,
+  "fit_seconds": 67.27608869999972,
+  "wall_seconds": 73.89533080000001,
+  "folds": [
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 15.736019799999895,
+      "settings": {
+        "arch_type": "tabm-mini",
+        "n_blocks": 2,
+        "d_block": 128,
+        "dropout": 0.1,
+        "k": 8,
+        "epochs": 5,
+        "batch_size": 1024,
+        "optimizer": "AdamW",
+        "lr": 0.002,
+        "weight_decay": 0.0003,
+        "fused": true,
+        "precision": "bfloat16 AMP",
+        "tabm_version": "0.0.3"
+      },
+      "fold": 1,
+      "validation_rows": 139992,
+      "roc_auc": 0.9415939089909415
+    },
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 12.912650199999916,
+      "settings": {
+        "arch_type": "tabm-mini",
+        "n_blocks": 2,
+        "d_block": 128,
+        "dropout": 0.1,
+        "k": 8,
+        "epochs": 5,
+        "batch_size": 1024,
+        "optimizer": "AdamW",
+        "lr": 0.002,
+        "weight_decay": 0.0003,
+        "fused": true,
+        "precision": "bfloat16 AMP",
+        "tabm_version": "0.0.3"
+      },
+      "fold": 2,
+      "validation_rows": 139992,
+      "roc_auc": 0.943664393025779
+    },
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 12.891325099999904,
+      "settings": {
+        "arch_type": "tabm-mini",
+        "n_blocks": 2,
+        "d_block": 128,
+        "dropout": 0.1,
+        "k": 8,
+        "epochs": 5,
+        "batch_size": 1024,
+        "optimizer": "AdamW",
+        "lr": 0.002,
+        "weight_decay": 0.0003,
+        "fused": true,
+        "precision": "bfloat16 AMP",
+        "tabm_version": "0.0.3"
+      },
+      "fold": 3,
+      "validation_rows": 139992,
+      "roc_auc": 0.9477237628547682
+    },
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 13.093111299999919,
+      "settings": {
+        "arch_type": "tabm-mini",
+        "n_blocks": 2,
+        "d_block": 128,
+        "dropout": 0.1,
+        "k": 8,
+        "epochs": 5,
+        "batch_size": 1024,
+        "optimizer": "AdamW",
+        "lr": 0.002,
+        "weight_decay": 0.0003,
+        "fused": true,
+        "precision": "bfloat16 AMP",
+        "tabm_version": "0.0.3"
+      },
+      "fold": 4,
+      "validation_rows": 139992,
+      "roc_auc": 0.9424984261813718
+    },
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 12.642982300000085,
+      "settings": {
+        "arch_type": "tabm-mini",
+        "n_blocks": 2,
+        "d_block": 128,
+        "dropout": 0.1,
+        "k": 8,
+        "epochs": 5,
+        "batch_size": 1024,
+        "optimizer": "AdamW",
+        "lr": 0.002,
+        "weight_decay": 0.0003,
+        "fused": true,
+        "precision": "bfloat16 AMP",
+        "tabm_version": "0.0.3"
+      },
+      "fold": 5,
+      "validation_rows": 139992,
+      "roc_auc": 0.9375764234655211
+    }
+  ],
+  "versions": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1",
+    "torch": "2.11.0+cu128"
+  }
+}

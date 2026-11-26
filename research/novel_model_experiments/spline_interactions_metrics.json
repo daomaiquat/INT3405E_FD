@@ -1,0 +1,463 @@
+{
+  "name": "spline_interactions",
+  "source_and_inputs_digest": "217e167fc193594791d9e0e75daca859c4aec597a904e060d86f066b0c1ef55c",
+  "cv_seed": 42,
+  "n_folds": 5,
+  "fit_iterations_limit": 220,
+  "ridge_C": 0.7,
+  "pair_scale": 0.36,
+  "train_rows": 699960,
+  "test_rows": 299984,
+  "baseline": {
+    "roc_auc": 0.9459177089199617,
+    "average_precision": 0.5110912034609062,
+    "log_loss": 0.04578481628969849
+  },
+  "spline_interactions": {
+    "roc_auc": 0.9457656604261113,
+    "average_precision": 0.5095374242012644,
+    "log_loss": 0.04590273747510106
+  },
+  "folds": [
+    {
+      "baseline": {
+        "roc_auc": 0.9447312973384949,
+        "average_precision": 0.4986705541324822,
+        "log_loss": 0.04655337333679199
+      },
+      "spline_interactions": {
+        "roc_auc": 0.9446607626207713,
+        "average_precision": 0.49780182010755986,
+        "log_loss": 0.04666401445865631
+      },
+      "interaction_scores": [
+        {
+          "left": "is_foreign_transaction",
+          "right": "ip_country_mismatch",
+          "score": 22.847134347997795
+        },
+        {
+          "left": "is_new_merchant",
+          "right": "ip_country_mismatch",
+          "score": 4.753021656611276
+        },
+        {
+          "left": "hours_since_last_txn",
+          "right": "time_of_day_hour",
+          "score": 3.403588870697911
+        },
+        {
+          "left": "distance_from_home_km",
+          "right": "channel",
+          "score": 2.6585919191255374
+        },
+        {
+          "left": "prior_disputes",
+          "right": "ip_country_mismatch",
+          "score": 2.3797505005880883
+        },
+        {
+          "left": "customer_age",
+          "right": "merchant_risk_score",
+          "score": 2.146707829239282
+        },
+        {
+          "left": "customer_age",
+          "right": "device_type",
+          "score": 1.7403098717384937
+        },
+        {
+          "left": "amount_usd",
+          "right": "merchant_risk_score",
+          "score": 1.5544046905942253
+        },
+        {
+          "left": "channel",
+          "right": "billing_shipping_mismatch",
+          "score": 1.549620080941699
+        },
+        {
+          "left": "amount_usd",
+          "right": "merchant_category",
+          "score": 1.4846972189147591
+        },
+        {
+          "left": "customer_age",
+          "right": "channel",
+          "score": 1.3671831905167595
+        },
+        {
+          "left": "time_of_day_hour",
+          "right": "auth_method",
+          "score": 1.300904689057925
+        },
+        {
+          "left": "velocity_score",
+          "right": "billing_shipping_mismatch",
+          "score": 1.2785160777400868
+        },
+        {
+          "left": "merchant_risk_score",
+          "right": "auth_method",
+          "score": 1.165809239515611
+        }
+      ],
+      "baseline_iterations": 220,
+      "model_iterations": 152,
+      "seconds": 85.69604170000093,
+      "fold": 1
+    },
+    {
+      "baseline": {
+        "roc_auc": 0.9463968874962694,
+        "average_precision": 0.5145831278231243,
+        "log_loss": 0.04577580839395523
+      },
+      "spline_interactions": {
+        "roc_auc": 0.9461352503642145,
+        "average_precision": 0.5125383958920412,
+        "log_loss": 0.0459243580698967
+      },
+      "interaction_scores": [
+        {
+          "left": "is_foreign_transaction",
+          "right": "ip_country_mismatch",
+          "score": 18.21965598177791
+        },
+        {
+          "left": "customer_age",
+          "right": "billing_shipping_mismatch",
+          "score": 3.6100802751562386
+        },
+        {
+          "left": "card_type",
+          "right": "is_foreign_transaction",
+          "score": 3.2729317414526222
+        },
+        {
+          "left": "customer_age",
+          "right": "merchant_risk_score",
+          "score": 2.5347329360307373
+        },
+        {
+          "left": "txn_count_last_24h",
+          "right": "card_type",
+          "score": 1.9928543869129418
+        },
+        {
+          "left": "amount_usd",
+          "right": "merchant_risk_score",
+          "score": 1.7025367748433011
+        },
+        {
+          "left": "customer_age",
+          "right": "channel",
+          "score": 1.622257782914416
+        },
+        {
+          "left": "amount_usd",
+          "right": "is_ai_generated_scam_attempt",
+          "score": 1.618689082686243
+        },
+        {
+          "left": "merchant_category",
+          "right": "is_foreign_transaction",
+          "score": 1.5804288956064885
+        },
+        {
+          "left": "amount_usd",
+          "right": "merchant_category",
+          "score": 1.5698793249362746
+        },
+        {
+          "left": "is_new_merchant",
+          "right": "ip_country_mismatch",
+          "score": 1.5388867811811289
+        },
+        {
+          "left": "account_balance_usd",
+          "right": "merchant_risk_score",
+          "score": 1.485536686636857
+        },
+        {
+          "left": "merchant_risk_score",
+          "right": "merchant_category",
+          "score": 1.2681620389766013
+        },
+        {
+          "left": "time_of_day_hour",
+          "right": "is_foreign_transaction",
+          "score": 1.251656357402805
+        }
+      ],
+      "baseline_iterations": 220,
+      "model_iterations": 175,
+      "seconds": 95.42944590000116,
+      "fold": 2
+    },
+    {
+      "baseline": {
+        "roc_auc": 0.9510213387198111,
+        "average_precision": 0.5274272473109409,
+        "log_loss": 0.04428119957447052
+      },
+      "spline_interactions": {
+        "roc_auc": 0.9509209814100672,
+        "average_precision": 0.5245616760540895,
+        "log_loss": 0.044434260576963425
+      },
+      "interaction_scores": [
+        {
+          "left": "is_foreign_transaction",
+          "right": "ip_country_mismatch",
+          "score": 27.44973006673282
+        },
+        {
+          "left": "is_new_merchant",
+          "right": "ip_country_mismatch",
+          "score": 4.336866587277606
+        },
+        {
+          "left": "customer_age",
+          "right": "merchant_risk_score",
+          "score": 3.230243733662066
+        },
+        {
+          "left": "merchant_risk_score",
+          "right": "card_type",
+          "score": 2.744456777853673
+        },
+        {
+          "left": "customer_age",
+          "right": "card_type",
+          "score": 2.5425653432400805
+        },
+        {
+          "left": "channel",
+          "right": "used_vpn",
+          "score": 2.4295381489497068
+        },
+        {
+          "left": "card_type",
+          "right": "is_foreign_transaction",
+          "score": 2.118647653386456
+        },
+        {
+          "left": "merchant_category",
+          "right": "ip_country_mismatch",
+          "score": 2.042723727807602
+        },
+        {
+          "left": "prior_disputes",
+          "right": "is_ai_generated_scam_attempt",
+          "score": 2.0416248051844437
+        },
+        {
+          "left": "auth_method",
+          "right": "used_vpn",
+          "score": 2.0068800894995062
+        },
+        {
+          "left": "amount_usd",
+          "right": "is_ai_generated_scam_attempt",
+          "score": 1.778791723128996
+        },
+        {
+          "left": "distance_from_home_km",
+          "right": "channel",
+          "score": 1.6023885734772558
+        },
+        {
+          "left": "merchant_risk_score",
+          "right": "merchant_category",
+          "score": 1.5504554072930152
+        },
+        {
+          "left": "channel",
+          "right": "billing_shipping_mismatch",
+          "score": 1.4978217585480251
+        }
+      ],
+      "baseline_iterations": 220,
+      "model_iterations": 145,
+      "seconds": 86.65961180000158,
+      "fold": 3
+    },
+    {
+      "baseline": {
+        "roc_auc": 0.9471863105203344,
+        "average_precision": 0.516204855438565,
+        "log_loss": 0.04536004737019539
+      },
+      "spline_interactions": {
+        "roc_auc": 0.9469422398403017,
+        "average_precision": 0.5163438687807556,
+        "log_loss": 0.04541347548365593
+      },
+      "interaction_scores": [
+        {
+          "left": "is_foreign_transaction",
+          "right": "ip_country_mismatch",
+          "score": 16.412205352164847
+        },
+        {
+          "left": "amount_usd",
+          "right": "is_ai_generated_scam_attempt",
+          "score": 3.4427125189332752
+        },
+        {
+          "left": "distance_from_home_km",
+          "right": "channel",
+          "score": 2.684547600482149
+        },
+        {
+          "left": "customer_age",
+          "right": "merchant_risk_score",
+          "score": 2.5853278054320423
+        },
+        {
+          "left": "card_age_months",
+          "right": "used_vpn",
+          "score": 2.5258840248943017
+        },
+        {
+          "left": "amount_usd",
+          "right": "merchant_risk_score",
+          "score": 2.5050189418445816
+        },
+        {
+          "left": "is_new_merchant",
+          "right": "ip_country_mismatch",
+          "score": 2.0817627849941203
+        },
+        {
+          "left": "channel",
+          "right": "billing_shipping_mismatch",
+          "score": 2.012965911359428
+        },
+        {
+          "left": "amount_usd",
+          "right": "billing_shipping_mismatch",
+          "score": 1.7755988076551799
+        },
+        {
+          "left": "card_type",
+          "right": "is_foreign_transaction",
+          "score": 1.639291700760656
+        },
+        {
+          "left": "customer_age",
+          "right": "card_type",
+          "score": 1.6083131991887907
+        },
+        {
+          "left": "day_of_week",
+          "right": "merchant_category",
+          "score": 1.552833894112565
+        },
+        {
+          "left": "used_vpn",
+          "right": "is_ai_generated_scam_attempt",
+          "score": 1.5156566147748547
+        },
+        {
+          "left": "customer_age",
+          "right": "device_type",
+          "score": 1.324330221373843
+        }
+      ],
+      "baseline_iterations": 220,
+      "model_iterations": 173,
+      "seconds": 95.252542299997,
+      "fold": 4
+    },
+    {
+      "baseline": {
+        "roc_auc": 0.9404339198578033,
+        "average_precision": 0.4999322214709088,
+        "log_loss": 0.046953652054071426
+      },
+      "spline_interactions": {
+        "roc_auc": 0.9403409654085781,
+        "average_precision": 0.4978635707463058,
+        "log_loss": 0.04707757383584976
+      },
+      "interaction_scores": [
+        {
+          "left": "is_foreign_transaction",
+          "right": "ip_country_mismatch",
+          "score": 27.027828209725655
+        },
+        {
+          "left": "customer_age",
+          "right": "merchant_risk_score",
+          "score": 3.4387253730630585
+        },
+        {
+          "left": "is_new_merchant",
+          "right": "ip_country_mismatch",
+          "score": 3.4324651540722426
+        },
+        {
+          "left": "amount_usd",
+          "right": "is_ai_generated_scam_attempt",
+          "score": 3.4061267534732864
+        },
+        {
+          "left": "time_of_day_hour",
+          "right": "is_foreign_transaction",
+          "score": 2.901973348830716
+        },
+        {
+          "left": "hours_since_last_txn",
+          "right": "account_balance_usd",
+          "score": 2.7064059943086467
+        },
+        {
+          "left": "customer_age",
+          "right": "card_type",
+          "score": 2.4944713646781245
+        },
+        {
+          "left": "amount_usd",
+          "right": "merchant_category",
+          "score": 2.4045515199840892
+        },
+        {
+          "left": "cvv_retry_count",
+          "right": "billing_shipping_mismatch",
+          "score": 2.387301380760011
+        },
+        {
+          "left": "txn_count_last_24h",
+          "right": "used_vpn",
+          "score": 2.317528502800667
+        },
+        {
+          "left": "is_foreign_transaction",
+          "right": "is_new_merchant",
+          "score": 2.273948514404304
+        },
+        {
+          "left": "customer_age",
+          "right": "billing_shipping_mismatch",
+          "score": 2.039731925247781
+        },
+        {
+          "left": "channel",
+          "right": "billing_shipping_mismatch",
+          "score": 1.733779006662254
+        },
+        {
+          "left": "distance_from_home_km",
+          "right": "channel",
+          "score": 1.6770579121908908
+        }
+      ],
+      "baseline_iterations": 220,
+      "model_iterations": 149,
+      "seconds": 77.74920920000295,
+      "fold": 5
+    }
+  ]
+}

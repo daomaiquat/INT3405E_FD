@@ -1,0 +1,98 @@
+{
+  "train_sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+  "notebook_sha256": "5b408b5f21688211083b3212e5c31ee86a060ac106011ae7cf3e06fa02170aad",
+  "holdout_ids_sha256": "ec98b2b0fb55468cc608ea97140cabb6b83752b7197226d076b35a2c18d2ad6d",
+  "development_rows": 594966,
+  "development_target_rows": 429865,
+  "development_target_fraud": 1690,
+  "holdout_rows": 104994,
+  "holdout_target_rows": 76080,
+  "development_baseline_auc": 0.9506068338417099,
+  "development_auc_by_scale": {
+    "pointwise": {
+      "0.0": 0.9506068338417099,
+      "0.25": 0.9505808825802264,
+      "0.5": 0.9505467344903765,
+      "1.0": 0.9504533680271787
+    },
+    "uniform": {
+      "0.0": 0.9506068338417099,
+      "0.25": 0.9505589035471516,
+      "0.5": 0.9504867347458105,
+      "1.0": 0.950264345521403
+    },
+    "matched": {
+      "0.0": 0.9506068338417099,
+      "0.25": 0.9505584265012711,
+      "0.5": 0.9504801376468492,
+      "1.0": 0.9502320959812597
+    }
+  },
+  "chosen_scales": {
+    "pointwise": 0.25,
+    "uniform": 0.25,
+    "matched": 0.25
+  },
+  "development_preferred_scale_including_zero": {
+    "pointwise": 0.0,
+    "uniform": 0.0,
+    "matched": 0.0
+  },
+  "rank_weight": 0.005,
+  "l2": 0.0005,
+  "holdout": {
+    "current_hierarchy": {
+      "roc_auc": 0.9509489294520218,
+      "average_precision": 0.538185085635301,
+      "log_loss": 0.04387376063920314,
+      "within_group_auc": 0.9016950029857171,
+      "target_fraud_vs_other_normal_auc": 0.6740228536253146,
+      "other_fraud_vs_target_normal_auc": 0.9894255430651817,
+      "target_fraud_count": 308,
+      "target_expected_fraud": 293.4314136285524
+    },
+    "pointwise": {
+      "roc_auc": 0.9509395583270558,
+      "average_precision": 0.538242234384333,
+      "log_loss": 0.043871783105224195,
+      "within_group_auc": 0.9016202743569053,
+      "target_fraud_vs_other_normal_auc": 0.674068714059249,
+      "other_fraud_vs_target_normal_auc": 0.9894224377740762,
+      "target_fraud_count": 308,
+      "target_expected_fraud": 294.1278638981738,
+      "delta_roc_auc": -9.371124966017774e-06,
+      "ci95_low": -4.0970670598011646e-05,
+      "ci95_high": 2.2228420665976097e-05,
+      "p_value": 0.5610683689358035
+    },
+    "uniform": {
+      "roc_auc": 0.9509364696131078,
+      "average_precision": 0.5383360451882984,
+      "log_loss": 0.04387061070126874,
+      "within_group_auc": 0.9016473977640371,
+      "target_fraud_vs_other_normal_auc": 0.6807813577808846,
+      "other_fraud_vs_target_normal_auc": 0.988892857775658,
+      "target_fraud_count": 308,
+      "target_expected_fraud": 307.74996702620354,
+      "delta_roc_auc": -1.2459838914069543e-05,
+      "ci95_low": -8.496173411474035e-05,
+      "ci95_high": 6.004205628660127e-05,
+      "p_value": 0.736240159901385
+    },
+    "matched": {
+      "roc_auc": 0.9509384421907097,
+      "average_precision": 0.5383961208553221,
+      "log_loss": 0.04386775069312287,
+      "within_group_auc": 0.9016294868885535,
+      "target_fraud_vs_other_normal_auc": 0.6818880362420352,
+      "other_fraud_vs_target_normal_auc": 0.9888144217756164,
+      "target_fraud_count": 308,
+      "target_expected_fraud": 310.615947805978,
+      "delta_roc_auc": -1.048726131214206e-05,
+      "ci95_low": -8.695035578743363e-05,
+      "ci95_high": 6.59758331631495e-05,
+      "p_value": 0.7880659563420712
+    }
+  },
+  "elapsed_seconds": 61.77673240000013
+}

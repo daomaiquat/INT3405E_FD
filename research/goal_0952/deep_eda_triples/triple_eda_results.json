@@ -1,0 +1,906 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "holdout_previously_used": true,
+  "strength": 0.5,
+  "seed": 27481,
+  "fold_roles": {
+    "a": {
+      "rows": 237986,
+      "fraud": 3974
+    },
+    "b": {
+      "rows": 178490,
+      "fraud": 2981
+    },
+    "c": {
+      "rows": 178490,
+      "fraud": 2981
+    }
+  },
+  "holdout_rows": 104994,
+  "holdout_fraud": 1753,
+  "discovery_gate": {
+    "min_rows_cell": 100,
+    "min_information_cell": 6.0,
+    "min_affected_rows_each_direction": 3500,
+    "max_locked": 3
+  },
+  "triple_results": [
+    {
+      "fields": [
+        "txn_count_last_24h",
+        "hours_since_last_txn",
+        "channel"
+      ],
+      "cells": 120,
+      "support_a": 42,
+      "support_b": 41,
+      "pure_rank_a": 11,
+      "pure_rank_b": 10,
+      "common_support": 41,
+      "a_to_b": {
+        "gain_logloss_x1m": 2.6300825958375693,
+        "ci95_x1m": [
+          -3.3704366493999456,
+          8.630601841075084
+        ],
+        "conditional_p_one_sided": 0.1951465439920187,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 170277
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 2.3126055936046814,
+        "ci95_x1m": [
+          -1.5205112025106702,
+          6.145722389720033
+        ],
+        "conditional_p_one_sided": 0.11850128511173053,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 226938
+      },
+      "effect_spearman": 0.6611498257839722,
+      "screen_score": 2.3126055936046814,
+      "dev_test_total_variation": 0.006252793589288859,
+      "confirm_c": {
+        "gain_logloss_x1m": -7.960340530483362,
+        "ci95_x1m": [
+          -14.453836294784356,
+          -1.466844766182368
+        ],
+        "conditional_p_one_sided": 0.9918639163793611,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 172906,
+        "holm_p_one_sided": 1.0
+      },
+      "confirm_ab_pure_rank": 16,
+      "test_supported_ab_fraction": 0.9691316870233079,
+      "strongest_ab_cells_scored_on_c": [
+        {
+          "levels": [
+            "[0.5, 2.5)",
+            "[6, 24)",
+            "In-App"
+          ],
+          "delta_logodds": -0.04674246456344347,
+          "rows_c": 3224,
+          "fraud_c": 32,
+          "expected_fraud_c": 28.19353880672346
+        },
+        {
+          "levels": [
+            "[0.5, 2.5)",
+            "[1, 6)",
+            "In-App"
+          ],
+          "delta_logodds": 0.046563925453106704,
+          "rows_c": 3802,
+          "fraud_c": 36,
+          "expected_fraud_c": 34.21558793442766
+        },
+        {
+          "levels": [
+            "[0.5, 2.5)",
+            "[-inf, 1)",
+            "In-App"
+          ],
+          "delta_logodds": -0.03925546248384153,
+          "rows_c": 855,
+          "fraud_c": 20,
+          "expected_fraud_c": 22.991759443634905
+        },
+        {
+          "levels": [
+            "[0.5, 2.5)",
+            "[-inf, 1)",
+            "Contactless"
+          ],
+          "delta_logodds": 0.03429790613359199,
+          "rows_c": 1062,
+          "fraud_c": 23,
+          "expected_fraud_c": 27.437820947734224
+        },
+        {
+          "levels": [
+            "[0.5, 2.5)",
+            "[-inf, 1)",
+            "POS"
+          ],
+          "delta_logodds": 0.02281989529192401,
+          "rows_c": 2131,
+          "fraud_c": 43,
+          "expected_fraud_c": 48.529942194459295
+        }
+      ],
+      "frozen_ensemble_holdout": {
+        "roc_auc": 0.9512287813018298,
+        "average_precision": 0.5381440522266921,
+        "log_loss": 0.043838532254213754,
+        "delta_auc": 4.331935125834185e-06,
+        "ci95_low": -2.4901884966910294e-05,
+        "ci95_high": 3.356575521857867e-05,
+        "gain_logloss_x1m": -2.5443258203003296,
+        "ci95_x1m": [
+          -9.273735748475685,
+          4.185084107875026
+        ],
+        "conditional_p_one_sided": 0.7706706623354719,
+        "rows": 104994,
+        "fraud": 1753,
+        "affected": 101794
+      }
+    },
+    {
+      "fields": [
+        "card_type",
+        "auth_method",
+        "cvv_retry_count"
+      ],
+      "cells": 144,
+      "support_a": 40,
+      "support_b": 36,
+      "pure_rank_a": 10,
+      "pure_rank_b": 8,
+      "common_support": 36,
+      "a_to_b": {
+        "gain_logloss_x1m": 0.8443167435714779,
+        "ci95_x1m": [
+          -7.18027401676883,
+          8.868907503911785
+        ],
+        "conditional_p_one_sided": 0.41830808693250277,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 173386
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 1.5850883414848354,
+        "ci95_x1m": [
+          -2.978726824285707,
+          6.148903507255377
+        ],
+        "conditional_p_one_sided": 0.2480178987948275,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 229448
+      },
+      "effect_spearman": 0.37451737451737455,
+      "screen_score": 0.8443167435714779,
+      "dev_test_total_variation": 0.005624152892075591,
+      "confirm_c": {
+        "gain_logloss_x1m": -2.347649187847447,
+        "ci95_x1m": [
+          -9.564688108696455,
+          4.869389733001561
+        ],
+        "conditional_p_one_sided": 0.7381243086525382,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 177490,
+        "holm_p_one_sided": 1.0
+      },
+      "confirm_ab_pure_rank": 13,
+      "test_supported_ab_fraction": 0.994413035361886,
+      "strongest_ab_cells_scored_on_c": [
+        {
+          "levels": [
+            "Amex",
+            "Biometric",
+            "[0.5, 1.5)"
+          ],
+          "delta_logodds": -0.0578857588211564,
+          "rows_c": 138,
+          "fraud_c": 2,
+          "expected_fraud_c": 2.944858587065281
+        },
+        {
+          "levels": [
+            "RuPay",
+            "No Authentication",
+            "[0.5, 1.5)"
+          ],
+          "delta_logodds": -0.04634256463885156,
+          "rows_c": 87,
+          "fraud_c": 21,
+          "expected_fraud_c": 21.202160926785645
+        },
+        {
+          "levels": [
+            "Mastercard",
+            "PIN",
+            "[0.5, 1.5)"
+          ],
+          "delta_logodds": -0.04631057294006129,
+          "rows_c": 1121,
+          "fraud_c": 57,
+          "expected_fraud_c": 51.743869845067664
+        },
+        {
+          "levels": [
+            "RuPay",
+            "PIN",
+            "[0.5, 1.5)"
+          ],
+          "delta_logodds": 0.04274411881783571,
+          "rows_c": 163,
+          "fraud_c": 4,
+          "expected_fraud_c": 5.313146771251923
+        },
+        {
+          "levels": [
+            "Amex",
+            "No Authentication",
+            "[0.5, 1.5)"
+          ],
+          "delta_logodds": 0.0416421013180312,
+          "rows_c": 115,
+          "fraud_c": 38,
+          "expected_fraud_c": 35.40384906446907
+        }
+      ],
+      "frozen_ensemble_holdout": {
+        "roc_auc": 0.9512065580326002,
+        "average_precision": 0.5381219956532164,
+        "log_loss": 0.043841506585878286,
+        "delta_auc": -1.7891334103570244e-05,
+        "ci95_low": -4.428467535912035e-05,
+        "ci95_high": 8.502007151979859e-06,
+        "gain_logloss_x1m": -5.518657484832066,
+        "ci95_x1m": [
+          -12.909515880681358,
+          1.8722009110172262
+        ],
+        "conditional_p_one_sided": 0.9283355701293589,
+        "rows": 104994,
+        "fraud": 1753,
+        "affected": 104577
+      }
+    },
+    {
+      "fields": [
+        "cvv_retry_count",
+        "prior_disputes",
+        "auth_method"
+      ],
+      "cells": 72,
+      "support_a": 24,
+      "support_b": 21,
+      "pure_rank_a": 4,
+      "pure_rank_b": 4,
+      "common_support": 21,
+      "a_to_b": {
+        "gain_logloss_x1m": 0.1719451640653874,
+        "ci95_x1m": [
+          -2.3118040043977155,
+          2.6556943325284905
+        ],
+        "conditional_p_one_sided": 0.446034354920244,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 177047
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 0.14414745208114726,
+        "ci95_x1m": [
+          -2.4366998176867587,
+          2.724994721849053
+        ],
+        "conditional_p_one_sided": 0.45641429595846084,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 235710
+      },
+      "effect_spearman": 0.22337662337662337,
+      "screen_score": 0.14414745208114726,
+      "dev_test_total_variation": 0.0035703343028021814,
+      "confirm_c": {
+        "gain_logloss_x1m": -0.987884482940637,
+        "ci95_x1m": [
+          -3.615006684519471,
+          1.6392377186381972
+        ],
+        "conditional_p_one_sided": 0.769446293234316,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 177855,
+        "holm_p_one_sided": 1.0
+      },
+      "confirm_ab_pure_rank": 4,
+      "test_supported_ab_fraction": 0.9960364552776148,
+      "strongest_ab_cells_scored_on_c": [
+        {
+          "levels": [
+            "[0.5, 1.5)",
+            "[0.5, 1.5)",
+            "PIN"
+          ],
+          "delta_logodds": -0.03426259674164933,
+          "rows_c": 401,
+          "fraud_c": 27,
+          "expected_fraud_c": 25.471502118721013
+        },
+        {
+          "levels": [
+            "[0.5, 1.5)",
+            "[0.5, 1.5)",
+            "Biometric"
+          ],
+          "delta_logodds": -0.022825610777359687,
+          "rows_c": 246,
+          "fraud_c": 10,
+          "expected_fraud_c": 9.461109349188266
+        },
+        {
+          "levels": [
+            "[-inf, 0.5)",
+            "[0.5, 1.5)",
+            "PIN"
+          ],
+          "delta_logodds": 0.019140002116619807,
+          "rows_c": 4729,
+          "fraud_c": 27,
+          "expected_fraud_c": 32.718644494855425
+        },
+        {
+          "levels": [
+            "[-inf, 0.5)",
+            "[0.5, 1.5)",
+            "Biometric"
+          ],
+          "delta_logodds": 0.016089785070054572,
+          "rows_c": 3040,
+          "fraud_c": 13,
+          "expected_fraud_c": 14.133887118465559
+        },
+        {
+          "levels": [
+            "[0.5, 1.5)",
+            "[0.5, 1.5)",
+            "No Authentication"
+          ],
+          "delta_logodds": 0.014158354846399077,
+          "rows_c": 257,
+          "fraud_c": 92,
+          "expected_fraud_c": 88.10073176750784
+        }
+      ],
+      "frozen_ensemble_holdout": {
+        "roc_auc": 0.951239064122326,
+        "average_precision": 0.5381680383803046,
+        "log_loss": 0.04383393736885809,
+        "delta_auc": 1.4614755622033293e-05,
+        "ci95_low": 3.2803737156833002e-06,
+        "ci95_high": 2.5949137528383286e-05,
+        "gain_logloss_x1m": 2.0505595353588535,
+        "ci95_x1m": [
+          -1.2620515410244368,
+          5.363170611742144
+        ],
+        "conditional_p_one_sided": 0.11251301314774637,
+        "rows": 104994,
+        "fraud": 1753,
+        "affected": 104636
+      }
+    },
+    {
+      "fields": [
+        "device_type",
+        "used_vpn",
+        "ip_country_mismatch"
+      ],
+      "cells": 81,
+      "support_a": 22,
+      "support_b": 21,
+      "pure_rank_a": 0,
+      "pure_rank_b": 0,
+      "common_support": 20,
+      "a_to_b": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 0
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 0
+      },
+      "effect_spearman": null,
+      "screen_score": 0.0,
+      "dev_test_total_variation": 0.0018594017164724505
+    },
+    {
+      "fields": [
+        "channel",
+        "used_vpn",
+        "ip_country_mismatch"
+      ],
+      "cells": 54,
+      "support_a": 15,
+      "support_b": 15,
+      "pure_rank_a": 0,
+      "pure_rank_b": 0,
+      "common_support": 15,
+      "a_to_b": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 0
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 0
+      },
+      "effect_spearman": null,
+      "screen_score": 0.0,
+      "dev_test_total_variation": 0.0027186015425406072
+    },
+    {
+      "fields": [
+        "is_foreign_transaction",
+        "ip_country_mismatch",
+        "used_vpn"
+      ],
+      "cells": 27,
+      "support_a": 7,
+      "support_b": 5,
+      "pure_rank_a": 0,
+      "pure_rank_b": 0,
+      "common_support": 5,
+      "a_to_b": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 0
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 0
+      },
+      "effect_spearman": null,
+      "screen_score": 0.0,
+      "dev_test_total_variation": 0.001303071192465253
+    },
+    {
+      "fields": [
+        "is_foreign_transaction",
+        "ip_country_mismatch",
+        "billing_shipping_mismatch"
+      ],
+      "cells": 27,
+      "support_a": 5,
+      "support_b": 5,
+      "pure_rank_a": 0,
+      "pure_rank_b": 0,
+      "common_support": 5,
+      "a_to_b": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 0
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 0
+      },
+      "effect_spearman": null,
+      "screen_score": 0.0,
+      "dev_test_total_variation": 0.0007094833760572601
+    },
+    {
+      "fields": [
+        "is_ai_generated_scam_attempt",
+        "auth_method",
+        "channel"
+      ],
+      "cells": 108,
+      "support_a": 26,
+      "support_b": 25,
+      "pure_rank_a": 0,
+      "pure_rank_b": 0,
+      "common_support": 25,
+      "a_to_b": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 0
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 0
+      },
+      "effect_spearman": null,
+      "screen_score": 0.0,
+      "dev_test_total_variation": 0.004716839414606695
+    },
+    {
+      "fields": [
+        "is_ai_generated_scam_attempt",
+        "cvv_retry_count",
+        "is_new_merchant"
+      ],
+      "cells": 36,
+      "support_a": 8,
+      "support_b": 7,
+      "pure_rank_a": 0,
+      "pure_rank_b": 0,
+      "common_support": 7,
+      "a_to_b": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 0
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 0
+      },
+      "effect_spearman": null,
+      "screen_score": 0.0,
+      "dev_test_total_variation": 0.000315762054094918
+    },
+    {
+      "fields": [
+        "merchant_category",
+        "billing_shipping_mismatch",
+        "is_new_merchant"
+      ],
+      "cells": 117,
+      "support_a": 32,
+      "support_b": 29,
+      "pure_rank_a": 0,
+      "pure_rank_b": 0,
+      "common_support": 29,
+      "a_to_b": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 0
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 0
+      },
+      "effect_spearman": null,
+      "screen_score": 0.0,
+      "dev_test_total_variation": 0.003927353721450453
+    },
+    {
+      "fields": [
+        "is_ai_generated_scam_attempt",
+        "is_foreign_transaction",
+        "used_vpn"
+      ],
+      "cells": 27,
+      "support_a": 5,
+      "support_b": 5,
+      "pure_rank_a": 0,
+      "pure_rank_b": 0,
+      "common_support": 5,
+      "a_to_b": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 0
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 0
+      },
+      "effect_spearman": null,
+      "screen_score": 0.0,
+      "dev_test_total_variation": 0.0010635445631384719
+    },
+    {
+      "fields": [
+        "day_of_week",
+        "channel",
+        "is_ai_generated_scam_attempt"
+      ],
+      "cells": 144,
+      "support_a": 35,
+      "support_b": 35,
+      "pure_rank_a": 0,
+      "pure_rank_b": 0,
+      "common_support": 35,
+      "a_to_b": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 0
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 0
+      },
+      "effect_spearman": null,
+      "screen_score": 0.0,
+      "dev_test_total_variation": 0.005753853472607184
+    },
+    {
+      "fields": [
+        "customer_age",
+        "card_age_months",
+        "auth_method"
+      ],
+      "cells": 150,
+      "support_a": 88,
+      "support_b": 78,
+      "pure_rank_a": 34,
+      "pure_rank_b": 28,
+      "common_support": 78,
+      "a_to_b": {
+        "gain_logloss_x1m": -0.25381867745273184,
+        "ci95_x1m": [
+          -10.241947079803364,
+          9.7343097248979
+        ],
+        "conditional_p_one_sided": 0.5198621410152113,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 156878
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 1.5785711445334243,
+        "ci95_x1m": [
+          -5.98637796212365,
+          9.143520251190498
+        ],
+        "conditional_p_one_sided": 0.3412729708071284,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 192443
+      },
+      "effect_spearman": 0.13868410070941714,
+      "screen_score": -0.25381867745273184,
+      "dev_test_total_variation": 0.010833278500609115
+    },
+    {
+      "fields": [
+        "velocity_score",
+        "hours_since_last_txn",
+        "ip_country_mismatch"
+      ],
+      "cells": 60,
+      "support_a": 24,
+      "support_b": 23,
+      "pure_rank_a": 3,
+      "pure_rank_b": 3,
+      "common_support": 23,
+      "a_to_b": {
+        "gain_logloss_x1m": -0.593778364664836,
+        "ci95_x1m": [
+          -3.532793778290793,
+          2.345237048961121
+        ],
+        "conditional_p_one_sided": 0.6539418998275505,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 170920
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": -0.5961585100155995,
+        "ci95_x1m": [
+          -4.062744888811072,
+          2.870427868779873
+        ],
+        "conditional_p_one_sided": 0.6319666737576635,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 226732
+      },
+      "effect_spearman": -0.24901185770750991,
+      "screen_score": -0.5961585100155995,
+      "dev_test_total_variation": 0.0029714433459177374
+    },
+    {
+      "fields": [
+        "is_new_merchant",
+        "merchant_risk_score",
+        "billing_shipping_mismatch"
+      ],
+      "cells": 45,
+      "support_a": 16,
+      "support_b": 15,
+      "pure_rank_a": 1,
+      "pure_rank_b": 0,
+      "common_support": 15,
+      "a_to_b": {
+        "gain_logloss_x1m": -0.7956752911256848,
+        "ci95_x1m": [
+          -2.645359962046416,
+          1.0540093797950467
+        ],
+        "conditional_p_one_sided": 0.8004219677784674,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 178186
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": 0.0,
+        "ci95_x1m": [
+          0.0,
+          0.0
+        ],
+        "conditional_p_one_sided": 1.0,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 0
+      },
+      "effect_spearman": null,
+      "screen_score": -0.7956752911256848,
+      "dev_test_total_variation": 0.0021716168353088667
+    },
+    {
+      "fields": [
+        "channel",
+        "auth_method",
+        "cvv_retry_count"
+      ],
+      "cells": 144,
+      "support_a": 46,
+      "support_b": 44,
+      "pure_rank_a": 13,
+      "pure_rank_b": 11,
+      "common_support": 44,
+      "a_to_b": {
+        "gain_logloss_x1m": -2.419763848677261,
+        "ci95_x1m": [
+          -8.131074902092422,
+          3.2915472047378995
+        ],
+        "conditional_p_one_sided": 0.7968468559551672,
+        "rows": 178490,
+        "fraud": 2981,
+        "affected": 176695
+      },
+      "b_to_a": {
+        "gain_logloss_x1m": -2.4130056880500477,
+        "ci95_x1m": [
+          -8.527973259204154,
+          3.701961883104058
+        ],
+        "conditional_p_one_sided": 0.7803656317955502,
+        "rows": 237986,
+        "fraud": 3974,
+        "affected": 234997
+      },
+      "effect_spearman": -0.2107117688513037,
+      "screen_score": -2.419763848677261,
+      "dev_test_total_variation": 0.0054076992094488656
+    }
+  ]
+}

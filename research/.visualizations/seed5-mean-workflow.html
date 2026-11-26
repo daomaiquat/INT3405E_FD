@@ -1,0 +1,199 @@
+<section id="seed5-workflow" aria-labelledby="seed5-title">
+  <style>
+    #seed5-workflow {
+      --step: var(--font-size-base, 14px);
+      --use-fill: color-mix(in srgb, var(--viz-series-1, var(--blue)) 20%, transparent);
+      display: grid;
+      gap: calc(var(--step) * 1.05);
+      color: var(--foreground);
+    }
+    #seed5-workflow .group {
+      display: grid;
+      gap: calc(var(--step) * .5);
+      min-width: 0;
+    }
+    #seed5-workflow .folds {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: calc(var(--step) * .3);
+    }
+    #seed5-workflow .fold-label { display: block; white-space: normal; }
+    #seed5-workflow .values {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: calc(var(--step) * .25);
+    }
+    #seed5-workflow .matrix { width: 100%; table-layout: fixed; }
+    #seed5-workflow .matrix col:first-child { width: 54%; }
+    #seed5-workflow .matrix th { text-align: start; font-weight: 500; }
+    #seed5-workflow .matrix th, #seed5-workflow .matrix td {
+      padding-inline: calc(var(--step) * .28);
+      vertical-align: middle;
+    }
+    #seed5-workflow .branch-name { overflow-wrap: anywhere; }
+    #seed5-workflow .branch-seeds { display: block; }
+    #seed5-workflow .mark {
+      display: grid;
+      place-items: center;
+      min-height: calc(var(--step) * 1.42);
+      background: var(--muted);
+      color: var(--muted-foreground);
+    }
+    #seed5-workflow .mark[data-used="true"] {
+      background: var(--use-fill);
+      color: var(--foreground);
+    }
+    #seed5-workflow .flow {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      align-items: center;
+      gap: calc(var(--step) * .6);
+    }
+    #seed5-workflow .flow b { font-weight: 500; }
+    #seed5-workflow .arrow { color: var(--muted-foreground); text-align: center; }
+    #seed5-workflow .down { display: none; }
+    #seed5-workflow .divider { margin: 0; }
+    @media (max-width: 580px) {
+      #seed5-workflow .fold-word, #seed5-workflow .fold-label { display: none; }
+    }
+    @media (max-width: 460px) {
+      #seed5-workflow .flow { grid-template-columns: 1fr; justify-items: start; gap: calc(var(--step) * .33); }
+      #seed5-workflow .across { display: none; }
+      #seed5-workflow .down { display: inline; }
+    }
+  </style>
+
+  <h2 id="seed5-title">SEED5-MEAN</h2>
+  <div class="viz-row" role="group" aria-label="Luồng dự đoán">
+    <button class="btn" type="button" data-mode="test" aria-pressed="true">Tạo submission</button>
+    <button class="btn" type="button" data-mode="oof" aria-pressed="false">Đánh giá OOF</button>
+  </div>
+
+  <div class="group">
+    <h3><code>train.csv</code> <span class="text-small text-muted tabular-nums">699.960 dòng</span></h3>
+    <div class="folds" role="group" aria-label="Chọn fold giữ lại">
+      <button class="btn viz-tile" type="button" data-fold="1" aria-pressed="false"><span><span class="fold-word">Fold </span>1</span><span class="fold-label text-small">Huấn luyện</span></button>
+      <button class="btn viz-tile" type="button" data-fold="2" aria-pressed="false"><span><span class="fold-word">Fold </span>2</span><span class="fold-label text-small">Huấn luyện</span></button>
+      <button class="btn viz-tile" type="button" data-fold="3" aria-pressed="true"><span><span class="fold-word">Fold </span>3</span><span class="fold-label text-small">Giữ lại</span></button>
+      <button class="btn viz-tile" type="button" data-fold="4" aria-pressed="false"><span><span class="fold-word">Fold </span>4</span><span class="fold-label text-small">Huấn luyện</span></button>
+      <button class="btn viz-tile" type="button" data-fold="5" aria-pressed="false"><span><span class="fold-word">Fold </span>5</span><span class="fold-label text-small">Huấn luyện</span></button>
+    </div>
+    <p class="text-small text-muted tabular-nums" id="seed5-split">559.968 dòng huấn luyện · 139.992 dòng giữ lại ở fold 3</p>
+  </div>
+
+  <div class="group">
+    <table class="table table-sm matrix">
+      <caption class="sr-only">Năm cấu hình XGBoost và các lượt dự đoán được gộp</caption>
+      <colgroup><col><col></colgroup>
+      <thead>
+        <tr><th scope="col">Nhánh XGBoost<span class="branch-seeds text-small text-muted">Seed cây / mã hóa</span></th><th scope="col">Lượt theo fold<span class="branch-seeds text-small text-muted">Ô tô màu góp dự đoán</span></th></tr>
+      </thead>
+      <tbody id="seed5-matrix"></tbody>
+    </table>
+  </div>
+
+  <hr class="divider">
+  <div class="flow" aria-live="polite" aria-atomic="true">
+    <div>
+      <b id="seed5-count" class="tabular-nums">25 dự đoán</b>
+      <div class="text-small text-muted" id="seed5-input">Cùng một giao dịch test</div>
+    </div>
+    <span class="arrow" aria-hidden="true"><span class="across">→</span><span class="down">↓</span></span>
+    <div><b>Lấy trung bình</b><div class="text-small text-muted">1 xác suất cho mỗi giao dịch</div></div>
+    <span class="arrow" aria-hidden="true"><span class="across">→</span><span class="down">↓</span></span>
+    <div>
+      <b id="seed5-output">1 file submission</b>
+      <div class="text-small text-muted tabular-nums" id="seed5-rows">299.984 dòng · id, is_fraud</div>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.getElementById("seed5-workflow");
+      const foldButtons = [...root.querySelectorAll("[data-fold]")];
+      const modeButtons = [...root.querySelectorAll("[data-mode]")];
+      const configs = [
+        ["XGB-D03", 42, 2026],
+        ["XGB-D03-S71", 71, 2026],
+        ["XGB-D03-S93", 42, 2028],
+        ["XGB-D03-S71-E2028", 71, 2028],
+        ["XGB-D03-S103-E2032", 103, 2032]
+      ];
+      const matrix = root.querySelector("#seed5-matrix");
+      let fold = 3;
+      let mode = "test";
+
+      const marks = configs.flatMap(([branch, tree, encoder]) => {
+        const row = matrix.insertRow();
+        const name = document.createElement("th");
+        name.scope = "row";
+        const code = document.createElement("code");
+        code.className = "branch-name";
+        code.textContent = branch;
+        const seeds = document.createElement("span");
+        seeds.className = "branch-seeds text-small text-muted tabular-nums";
+        seeds.textContent = tree + " / " + encoder;
+        name.append(code, seeds);
+        row.append(name);
+        const values = document.createElement("div");
+        values.className = "values";
+        row.insertCell().append(values);
+        return foldButtons.map((button) => {
+          const mark = document.createElement("span");
+          mark.className = "mark text-small tabular-nums";
+          mark.textContent = button.dataset.fold;
+          values.append(mark);
+          return mark;
+        });
+      });
+
+      function update() {
+        const isTest = mode === "test";
+        modeButtons.forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.mode === mode));
+        });
+        foldButtons.forEach((button) => {
+          const held = Number(button.dataset.fold) === fold;
+          const label = held ? "Giữ lại" : "Huấn luyện";
+          button.setAttribute("aria-pressed", String(held));
+          button.setAttribute("aria-label", "Fold " + button.dataset.fold + " · " + label);
+          button.querySelector(".fold-label").textContent = label;
+        });
+        marks.forEach((mark) => {
+          const used = isTest || Number(mark.textContent) === fold;
+          mark.dataset.used = String(used);
+          mark.setAttribute("aria-label", "Fold " + mark.textContent + (used ? " góp dự đoán" : " bỏ qua"));
+        });
+        root.querySelector("#seed5-split").textContent = "559.968 dòng huấn luyện · 139.992 dòng giữ lại ở fold " + fold;
+        root.querySelector("#seed5-count").textContent = isTest ? "25 dự đoán" : "5 dự đoán";
+        root.querySelector("#seed5-input").textContent = isTest ? "Cùng một giao dịch test" : "Cùng một giao dịch train ở fold " + fold;
+        root.querySelector("#seed5-output").textContent = isTest ? "1 file submission" : "Điểm OOF ROC AUC";
+        root.querySelector("#seed5-rows").textContent = isTest ? "299.984 dòng · id, is_fraud" : "Ghép đủ 699.960 dòng OOF rồi chấm";
+      }
+
+      function restore(state) {
+        const saved = state?.modelContent ?? state;
+        if (Number.isInteger(saved?.fold) && saved.fold >= 1 && saved.fold <= 5) fold = saved.fold;
+        if (saved?.mode === "test" || saved?.mode === "oof") mode = saved.mode;
+        update();
+      }
+
+      function save() {
+        window.openai?.setWidgetState?.({ modelContent: { fold, mode }, privateContent: null })?.catch(() => {});
+      }
+
+      foldButtons.forEach((button) => button.addEventListener("click", () => {
+        fold = Number(button.dataset.fold);
+        update();
+        save();
+      }));
+      modeButtons.forEach((button) => button.addEventListener("click", () => {
+        mode = button.dataset.mode;
+        update();
+        save();
+      }));
+      window.addEventListener("openai:set_globals", (event) => restore(event.detail?.globals?.widgetState));
+      restore(window.openai?.widgetState);
+    })();
+  </script>
+</section>

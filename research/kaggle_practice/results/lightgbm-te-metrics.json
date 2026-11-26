@@ -1,0 +1,14 @@
+{
+  "model": "lightgbm-te",
+  "seed": 2026,
+  "train_rows": 14000,
+  "validation_rows": 3000,
+  "test_rows": 3000,
+  "test_positive_count": 131,
+  "test_positive_rate": 0.043666666666666666,
+  "test_split_hash": "94efc544e1e83429",
+  "validation_roc_auc": 0.7411817294107317,
+  "test_roc_auc": 0.7686895186502731,
+  "test_average_precision": 0.16990801813750986,
+  "fit_seconds": 0.06308540000100038
+}

@@ -1,0 +1,68 @@
+{
+  "train_sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+  "test_sha256": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+  "notebook_sha256": "5b408b5f21688211083b3212e5c31ee86a060ac106011ae7cf3e06fa02170aad",
+  "run_mode": "smoke",
+  "train_rows": 25000,
+  "test_rows": 5000,
+  "folds": 2,
+  "seed": 2026,
+  "environment": {
+    "python": "3.12.0",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "catboost": "1.2.10",
+    "interpret": "unavailable"
+  },
+  "interpret_core": "0.7.8",
+  "xgb_device": "cuda",
+  "catboost_task_type": "GPU",
+  "full_base_train_rows": 25000,
+  "full_meta_oof_rows": 25000,
+  "baseline_oof": {
+    "oof_auc": 0.93119048267061,
+    "delong_se": 0.00632445017365077,
+    "ci95_low": 0.9187947881082364,
+    "ci95_high": 0.9435861772329835,
+    "fold_aucs": [
+      0.9241838030989513,
+      0.9432953431129246
+    ],
+    "fold_mean": 0.9337395731059379,
+    "fold_std": 0.01351389954279857,
+    "pr_auc": 0.4490505603677557,
+    "logloss": 0.049953327226977325,
+    "brier": 0.011853110878213984
+  },
+  "baseline_test_mean_probability": 0.015204319483602794,
+  "refit_base_only": {
+    "mean_probability": 0.016114859962474047,
+    "median_probability": 0.0015578138608753128,
+    "spearman_vs_fold_ensemble": 0.984360350606414,
+    "mean_absolute_probability_change": 0.003232349749442868,
+    "top_1_percent_overlap_fraction": 0.92
+  },
+  "refit_base_and_meta": {
+    "mean_probability": 0.016337143896964248,
+    "median_probability": 0.0015884231454889892,
+    "spearman_vs_fold_ensemble": 0.984496931539877,
+    "mean_absolute_probability_change": 0.0032754202021287654,
+    "top_1_percent_overlap_fraction": 0.92
+  },
+  "full_meta_l2": 0.001,
+  "full_meta_intercept": 0.570479629412748,
+  "full_meta_weights": {
+    "02e_SpGLM": 0.21872510927099678,
+    "02f_DeGLM": 0.2758216657491896,
+    "delta_03a_OffLGB": 0.061989695810791855,
+    "delta_03b_OffXGB": 0.07898763917164894,
+    "delta_03c_OffCAT": 0.0,
+    "03d_StXGB": 0.2723139845879342,
+    "04_EBM": 0.37336009809137577
+  },
+  "elapsed_seconds": 51.30835769999976
+}

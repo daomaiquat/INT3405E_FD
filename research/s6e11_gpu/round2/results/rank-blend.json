@@ -1,0 +1,58 @@
+{
+  "model": "rank-blend",
+  "status": "completed",
+  "smoke": false,
+  "models_use_llm": false,
+  "rows": 699960,
+  "positives": 11689,
+  "train_sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+  "split_sha256": "e3629fd42119a82d148901274763f3b2291e4fe1ab53755f81de2dcfc9614f43",
+  "roc_auc": 0.9484739880327637,
+  "average_precision": 0.5186059020032314,
+  "fit_seconds": 0.0,
+  "rank_seconds": 0.02902900000003683,
+  "wall_seconds": 0.02902900000003683,
+  "reference_fit_seconds": 107.3567813000002,
+  "reference_wall_seconds": 142.58346589999996,
+  "reference_auc": {
+    "lightgbm-te": 0.9483225014267666,
+    "xgboost-te": 0.9483114726763193
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "roc_auc": 0.9471968309206098,
+      "validation_rows": 139992,
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU (CUDA rank averaging)",
+      "fit_seconds": 0.0
+    },
+    {
+      "fold": 2,
+      "roc_auc": 0.949820237417769,
+      "validation_rows": 139992,
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU (CUDA rank averaging)",
+      "fit_seconds": 0.0
+    },
+    {
+      "fold": 3,
+      "roc_auc": 0.9535421673087368,
+      "validation_rows": 139992,
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU (CUDA rank averaging)",
+      "fit_seconds": 0.0
+    },
+    {
+      "fold": 4,
+      "roc_auc": 0.9489557977047198,
+      "validation_rows": 139992,
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU (CUDA rank averaging)",
+      "fit_seconds": 0.0
+    },
+    {
+      "fold": 5,
+      "roc_auc": 0.9430253715807189,
+      "validation_rows": 139992,
+      "device": "NVIDIA GeForce RTX 4060 Laptop GPU (CUDA rank averaging)",
+      "fit_seconds": 0.0
+    }
+  ]
+}

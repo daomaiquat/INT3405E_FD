@@ -1,0 +1,163 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "development": {
+    "rows_fit": 594966,
+    "iterations": 155,
+    "control_iterations": 220,
+    "seconds": 74.97331599999961,
+    "interactions": [
+      [
+        20.518305113368612,
+        "is_foreign_transaction",
+        "ip_country_mismatch"
+      ],
+      [
+        4.356181187982084,
+        "is_new_merchant",
+        "ip_country_mismatch"
+      ],
+      [
+        3.1352651674946554,
+        "amount_usd",
+        "is_ai_generated_scam_attempt"
+      ],
+      [
+        2.926613684322327,
+        "customer_age",
+        "merchant_risk_score"
+      ],
+      [
+        2.0195109665764797,
+        "customer_age",
+        "billing_shipping_mismatch"
+      ],
+      [
+        1.935796531456396,
+        "hours_since_last_txn",
+        "account_balance_usd"
+      ],
+      [
+        1.9032900898673155,
+        "customer_age",
+        "merchant_category"
+      ],
+      [
+        1.8920748174177255,
+        "merchant_risk_score",
+        "merchant_category"
+      ],
+      [
+        1.8343803009940671,
+        "card_type",
+        "is_foreign_transaction"
+      ],
+      [
+        1.810475932643488,
+        "customer_age",
+        "channel"
+      ],
+      [
+        1.766869307536657,
+        "distance_from_home_km",
+        "customer_age"
+      ],
+      [
+        1.729474967999804,
+        "channel",
+        "billing_shipping_mismatch"
+      ],
+      [
+        1.70632566365617,
+        "hours_since_last_txn",
+        "time_of_day_hour"
+      ],
+      [
+        1.6897593445455805,
+        "velocity_score",
+        "time_of_day_hour"
+      ]
+    ]
+  },
+  "full": {
+    "rows_fit": 699960,
+    "iterations": 167,
+    "control_iterations": 220,
+    "seconds": 98.23699209999995,
+    "interactions": [
+      [
+        28.491432505717487,
+        "is_foreign_transaction",
+        "ip_country_mismatch"
+      ],
+      [
+        3.89403847459579,
+        "is_new_merchant",
+        "ip_country_mismatch"
+      ],
+      [
+        3.862650301036731,
+        "customer_age",
+        "merchant_risk_score"
+      ],
+      [
+        3.0317821758104846,
+        "amount_usd",
+        "is_ai_generated_scam_attempt"
+      ],
+      [
+        2.5252200622994785,
+        "distance_from_home_km",
+        "channel"
+      ],
+      [
+        2.5187349501305034,
+        "card_type",
+        "is_foreign_transaction"
+      ],
+      [
+        2.2311206721782,
+        "amount_usd",
+        "merchant_category"
+      ],
+      [
+        2.2178846710961624,
+        "channel",
+        "billing_shipping_mismatch"
+      ],
+      [
+        2.0178621666387366,
+        "amount_usd",
+        "merchant_risk_score"
+      ],
+      [
+        1.9207942260524782,
+        "customer_age",
+        "card_type"
+      ],
+      [
+        1.8495680977470514,
+        "hours_since_last_txn",
+        "time_of_day_hour"
+      ],
+      [
+        1.7457747375190933,
+        "time_of_day_hour",
+        "is_foreign_transaction"
+      ],
+      [
+        1.6989678044619863,
+        "customer_age",
+        "billing_shipping_mismatch"
+      ],
+      [
+        1.5690528388982254,
+        "time_of_day_hour",
+        "auth_method"
+      ]
+    ]
+  }
+}

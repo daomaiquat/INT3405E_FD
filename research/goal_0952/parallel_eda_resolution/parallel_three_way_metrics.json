@@ -1,0 +1,188 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "weight_per_candidate_on_logit_delta": 0.3333333333333333,
+  "phases": {
+    "holdout": {
+      "rows": 104994,
+      "sources": [
+        {
+          "file": "parallel_eda_resolution\\development_predictions.npz",
+          "column": "resolution_linear",
+          "sha256": "166152f0b15d8b01693a525cd4aa708107e23baf30d8110911c05606b005c3a9"
+        },
+        {
+          "file": "parallel_peer_context\\holdout_predictions.npz",
+          "column": "joint_context_half",
+          "sha256": "c07df91683aaeb77498e03bbfcd5ca4e53fbf90d38cbda0c35630af0fba411c9"
+        },
+        {
+          "file": "parallel_tree_calibration\\holdout_predictions.npz",
+          "column": "additive_stumps",
+          "sha256": "a3e3cc3e7c99db40506691b4c1eb8e3180659c8a0d2eb40f1f752ac845403d86"
+        }
+      ],
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9512244493667037,
+          "average_precision": 0.5382352787073892,
+          "log_loss": 0.04383598792839346,
+          "delta_auc": 0.0,
+          "ci95_low": -1.9600000000000003e-09,
+          "ci95_high": 1.9600000000000003e-09,
+          "brier": 0.010631731932020941
+        },
+        "parallel_three_way": {
+          "roc_auc": 0.9512142549530472,
+          "average_precision": 0.5383851674902589,
+          "log_loss": 0.043828593765180585,
+          "delta_auc": -1.0194413656905432e-05,
+          "ci95_low": -3.288486545579728e-05,
+          "ci95_high": 1.2496038141986413e-05,
+          "brier": 0.010628474250186598
+        }
+      }
+    },
+    "reverse": {
+      "rows": 594966,
+      "sources": [
+        {
+          "file": "parallel_eda_resolution\\reverse_predictions.npz",
+          "column": "resolution_linear",
+          "sha256": "610eb53f69ad40862d5af64ef201e2ea092ccbf3569a1fef6994d037f95c013e"
+        },
+        {
+          "file": "parallel_peer_context\\reverse_predictions.npz",
+          "column": "joint_context_half",
+          "sha256": "069ef1c92f17ad8cfefd90022dda61a816575d24519e2f778d716f27787654dd"
+        },
+        {
+          "file": "parallel_tree_calibration\\reverse_predictions.npz",
+          "column": "additive_stumps",
+          "sha256": "1c7aece22a01c1989f0d80b8a0ad903ebbd4a1f9abae84786397350abcd1667f"
+        }
+      ],
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.950189701345676,
+          "average_precision": 0.5307983000384707,
+          "log_loss": 0.04433165226010671,
+          "delta_auc": 0.0,
+          "ci95_low": -1.9600000000000003e-09,
+          "ci95_high": 1.9600000000000003e-09,
+          "brier": 0.010735547123782002
+        },
+        "parallel_three_way": {
+          "roc_auc": 0.9502132207569739,
+          "average_precision": 0.5309065103494787,
+          "log_loss": 0.04432373393728354,
+          "delta_auc": 2.351941129796753e-05,
+          "ci95_low": 1.4496882687283593e-05,
+          "ci95_high": 3.2541939908651464e-05,
+          "brier": 0.010734014398953495,
+          "fold_weighted_delta_auc": 2.270913863426631e-05,
+          "fold_auc_wins": 9,
+          "fold_logloss_wins": 10
+        }
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "rows": 59497,
+          "pairs": 58151982,
+          "delta_auc": 4.05575170249195e-05,
+          "delta_logloss": -9.283509051091765e-06
+        },
+        {
+          "fold": 2,
+          "rows": 59497,
+          "pairs": 58151982,
+          "delta_auc": 2.6293170884317263e-05,
+          "delta_logloss": -9.07556632118861e-06
+        },
+        {
+          "fold": 3,
+          "rows": 59497,
+          "pairs": 58151982,
+          "delta_auc": -1.5115563902878826e-05,
+          "delta_logloss": -2.681801015272378e-06
+        },
+        {
+          "fold": 4,
+          "rows": 59497,
+          "pairs": 58151982,
+          "delta_auc": 2.9809818004156163e-05,
+          "delta_logloss": -8.724623796432796e-06
+        },
+        {
+          "fold": 5,
+          "rows": 59497,
+          "pairs": 58151982,
+          "delta_auc": 1.2708079322076848e-05,
+          "delta_logloss": -8.344422320553935e-06
+        },
+        {
+          "fold": 6,
+          "rows": 59497,
+          "pairs": 58151982,
+          "delta_auc": 2.7505511334235955e-05,
+          "delta_logloss": -9.849715877106868e-06
+        },
+        {
+          "fold": 7,
+          "rows": 59496,
+          "pairs": 58093479,
+          "delta_auc": 2.8850053893525462e-05,
+          "delta_logloss": -1.1312661507723032e-05
+        },
+        {
+          "fold": 8,
+          "rows": 59496,
+          "pairs": 58093479,
+          "delta_auc": 1.4717658758378604e-05,
+          "delta_logloss": -4.736468620238077e-06
+        },
+        {
+          "fold": 9,
+          "rows": 59496,
+          "pairs": 58093479,
+          "delta_auc": 3.3428881062391724e-05,
+          "delta_logloss": -6.959904654817162e-06
+        },
+        {
+          "fold": 10,
+          "rows": 59496,
+          "pairs": 58093479,
+          "delta_auc": 2.8350858450099103e-05,
+          "delta_logloss": -8.214547508801628e-06
+        }
+      ]
+    },
+    "test": {
+      "rows": 299984,
+      "sources": [
+        {
+          "file": "parallel_eda_resolution\\full_predictions.npz",
+          "column": "resolution_linear",
+          "sha256": "4847f285bcb9b9487bafcbef9285cf57703a1ffff2e0800620dd0806488e3391"
+        },
+        {
+          "file": "parallel_peer_context\\test_predictions.npz",
+          "column": "joint_context_half",
+          "sha256": "18f37e34d4ee2c2326af484a7a80de9d99c5472cf8e593872edcb865b75f4c2c"
+        },
+        {
+          "file": "parallel_tree_calibration\\test_predictions.npz",
+          "column": "additive_stumps",
+          "sha256": "95d387760292bb4b8caf1f40bea114b197f8831be50571d48ec74c0477112493"
+        }
+      ],
+      "filename": "submission_grandmaster_eda_parallel_three_way.csv",
+      "sha256": "b04c6c38a736ffea0d072e246c7e9ef11855a9a86b290df7bac741cb6e1531f4",
+      "parent_sha256": "9aa21cdd324a0913c8f029dc4ebe1efcd3f51a8323c77ce93f13f283eba6f3d0"
+    }
+  }
+}

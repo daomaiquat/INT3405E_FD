@@ -1,0 +1,12 @@
+{
+  "filename": "submission_grandmaster_eda_shrink_toward_grandmaster.csv",
+  "rows": 299984,
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "sha256": "71493cb7d73b2c767309c37ef38a4f9437d165101cd9d31efcba8dda7b0226e8",
+  "parent_sha256": "9aa21cdd324a0913c8f029dc4ebe1efcd3f51a8323c77ce93f13f283eba6f3d0",
+  "replacement_weight": 0.15
+}

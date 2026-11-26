@@ -1,0 +1,119 @@
+{
+  "variant": "xgb-d03-mlp-masked-embeddings",
+  "status": "completed",
+  "smoke": false,
+  "rows": 699960,
+  "test_rows": 299984,
+  "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+  "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+  "inputs": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "models_use_llm": false,
+  "oof_auc": 0.9496604614372035,
+  "average_precision": 0.5253468015693359,
+  "log_loss": 0.044632766395807266,
+  "folds": [
+    {
+      "fold": 1,
+      "auc": 0.9487255172902147,
+      "rounds": 2194,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "extra_columns": 64,
+      "pretrain_seconds": 0.0,
+      "finetune_seconds": 23.018718699997407
+    },
+    {
+      "fold": 2,
+      "auc": 0.9507198053740896,
+      "rounds": 1536,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "extra_columns": 64,
+      "pretrain_seconds": 0.0,
+      "finetune_seconds": 19.357722900000226
+    },
+    {
+      "fold": 3,
+      "auc": 0.9546296995642352,
+      "rounds": 1771,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "extra_columns": 64,
+      "pretrain_seconds": 0.0,
+      "finetune_seconds": 19.979021099999954
+    },
+    {
+      "fold": 4,
+      "auc": 0.9500908931448524,
+      "rounds": 2306,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "extra_columns": 64,
+      "pretrain_seconds": 0.0,
+      "finetune_seconds": 21.23885280000104
+    },
+    {
+      "fold": 5,
+      "auc": 0.9444270399111157,
+      "rounds": 2131,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "extra_columns": 64,
+      "pretrain_seconds": 0.0,
+      "finetune_seconds": 20.018913299994892
+    }
+  ],
+  "config": {
+    "architecture": "xgb",
+    "objective": "binary:logistic",
+    "parent": "XGB-D03",
+    "original_groups": [
+      "raw",
+      "te13",
+      "cents",
+      "digits"
+    ],
+    "embedding_source": "mlp-masked",
+    "encoder_before_supervised_finetune": true,
+    "encoder_config_sha256": "3df7637ebc24f87e11ded53158ecf851dcbf4ef95d4df05d5d54d7a171ad0074",
+    "encoder_states_sha256": [
+      "88466f29e2caf281e60347dc38531f123a0c605226870de9542eda7686996fde",
+      "d54a39b37d00a58d9a5749033a85d65c477d08bb93901f1801cac809683228c5",
+      "ddf71d33df766ef522025a6656c377579361d09fa27fe4f69463ad8c03b41888",
+      "63a2308e49edd216a81da9207b81d53753f0317974fc9e72a9b0cbeba41df8be",
+      "7be232e370c9a8d1a68e36d14897649fc889a7cb4857a69318cb51ba95b2f6d4"
+    ],
+    "rounds_by_fold": [
+      2194,
+      1536,
+      1771,
+      2306,
+      2131
+    ],
+    "base_config": {
+      "name": "XGB-D03",
+      "family": "xgb",
+      "groups": [
+        "raw",
+        "te13",
+        "cents",
+        "digits"
+      ],
+      "parent": "T03",
+      "smoothing": 20.0,
+      "model_seed": 42,
+      "encoder_seed": 2026,
+      "params": {
+        "learning_rate": 0.03,
+        "max_iterations": 6000,
+        "max_depth": 2,
+        "min_child_weight": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 1.0,
+        "tree_method": "hist"
+      },
+      "boost": false,
+      "rounds_factor": 1.0
+    }
+  }
+}

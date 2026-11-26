@@ -1,0 +1,6714 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "train_rows": 699960,
+  "test_rows": 299984,
+  "development_rows": 594966,
+  "development_fraud": 9936,
+  "development_roc_auc": 0.9506068338417099,
+  "development_base": "Grandmaster hierarchical meta-OOF, frozen development banks",
+  "half_rows": [
+    297485,
+    297481
+  ],
+  "half_fraud": [
+    4970,
+    4966
+  ],
+  "eligible_group_count": 45,
+  "two_sided_p_cutoff": 0.0011111111111111111,
+  "group_count": 82,
+  "finalists": [
+    "amount_usd_hole"
+  ],
+  "groups": {
+    "any_off_nominal_grid": {
+      "rule": {},
+      "family": "precision",
+      "train_rows": 1,
+      "test_rows": 2,
+      "train_share": 1.4286530658894793e-06,
+      "test_share": 6.667022241186197e-06,
+      "dev_share": 1.6807683128111523e-06,
+      "test_over_dev_share": 3.9666515547495864,
+      "dev": {
+        "rows": 1,
+        "actual_fraud": 0,
+        "expected_fraud": 0.003004296685941768,
+        "bernoulli_variance": 0.002995270887364607,
+        "actual_rate": 0.0,
+        "expected_rate": 0.003004296685941768,
+        "rate_difference_ci95": [
+          null,
+          null
+        ],
+        "z": -0.05489398584914566,
+        "log_loss": 0.003008818644371265
+      },
+      "halves": [
+        {
+          "rows": 1,
+          "actual_fraud": 0,
+          "expected_fraud": 0.003004296685941768,
+          "bernoulli_variance": 0.002995270887364607,
+          "actual_rate": 0.0,
+          "expected_rate": 0.003004296685941768,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": -0.05489398584914566,
+          "log_loss": 0.003008818644371265
+        },
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        }
+      ],
+      "half_shifts": [
+        -0.00012015747213021651,
+        0.0
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.0,
+          "ci95": [
+            null,
+            null
+          ]
+        },
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.956222923253405,
+      "eligible": false
+    },
+    "amount_usd_off_nominal_grid": {
+      "rule": {},
+      "family": "precision",
+      "train_rows": 0,
+      "test_rows": 1,
+      "train_share": 0.0,
+      "test_share": 3.3335111205930984e-06,
+      "dev_share": 0.0,
+      "test_over_dev_share": null,
+      "dev": {
+        "rows": 0,
+        "actual_fraud": 0,
+        "expected_fraud": 0.0,
+        "bernoulli_variance": 0.0,
+        "actual_rate": null,
+        "expected_rate": null,
+        "rate_difference_ci95": [
+          null,
+          null
+        ],
+        "z": null,
+        "log_loss": null
+      },
+      "halves": [
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        },
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        }
+      ],
+      "half_shifts": [
+        0.0,
+        0.0
+      ],
+      "cross_log_loss": [
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        },
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        }
+      ],
+      "pooled_two_sided_p": null,
+      "eligible": false
+    },
+    "amount_usd_intermediate_grid": {
+      "rule": [
+        0.25,
+        1.0
+      ],
+      "family": "grid",
+      "train_rows": 17857,
+      "test_rows": 7609,
+      "train_share": 0.025511457797588434,
+      "test_share": 0.025364686116592886,
+      "dev_share": 0.02545691686583771,
+      "test_over_dev_share": 0.9963769866661035,
+      "dev": {
+        "rows": 15146,
+        "actual_fraud": 235,
+        "expected_fraud": 242.50147664087177,
+        "bernoulli_variance": 158.98029122214447,
+        "actual_rate": 0.015515647695761256,
+        "expected_rate": 0.016010925435155934,
+        "rate_difference_ci95": [
+          -0.002082127860221214,
+          0.0010915723814318625
+        ],
+        "z": -0.5949426686034341,
+        "log_loss": 0.04066953623262931
+      },
+      "halves": [
+        {
+          "rows": 7610,
+          "actual_fraud": 127,
+          "expected_fraud": 123.1483842051752,
+          "bernoulli_variance": 78.54132026599814,
+          "actual_rate": 0.01668856767411301,
+          "expected_rate": 0.016182442076895558,
+          "rate_difference_ci95": [
+            -0.0017737946582738317,
+            0.0027860458527087326
+          ],
+          "z": 0.4346041412466465,
+          "log_loss": 0.04267933448365896
+        },
+        {
+          "rows": 7536,
+          "actual_fraud": 108,
+          "expected_fraud": 119.35309243569657,
+          "bernoulli_variance": 80.43897095614633,
+          "actual_rate": 0.014331210191082803,
+          "expected_rate": 0.015837724580108355,
+          "rate_difference_ci95": [
+            -0.003713442940626078,
+            0.0007004141625749749
+          ],
+          "z": -1.265846137586596,
+          "log_loss": 0.03864000270153383
+        }
+      ],
+      "half_shifts": [
+        0.036867073429693656,
+        -0.11056574047642574
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.00011758580187566418,
+          "ci95": [
+            -0.00013464397828148272,
+            0.0003698155820328111
+          ]
+        },
+        {
+          "delta": 6.28515139584334e-05,
+          "ci95": [
+            -1.8518005859118e-05,
+            0.00014422103377598482
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.5518817944204395,
+      "eligible": true
+    },
+    "amount_usd_whole_grid": {
+      "rule": [
+        1.0
+      ],
+      "family": "grid",
+      "train_rows": 6559,
+      "test_rows": 2821,
+      "train_share": 0.009370535459169096,
+      "test_share": 0.00940383487119313,
+      "dev_share": 0.009412302551742453,
+      "test_over_dev_share": 0.999100360352552,
+      "dev": {
+        "rows": 5600,
+        "actual_fraud": 114,
+        "expected_fraud": 111.63996069999688,
+        "bernoulli_variance": 76.55681468335314,
+        "actual_rate": 0.02035714285714286,
+        "expected_rate": 0.019935707267856585,
+        "rate_difference_ci95": [
+          -0.0027142814847753967,
+          0.0035571526633479417
+        ],
+        "z": 0.26972879198116007,
+        "log_loss": 0.05667610854835971
+      },
+      "halves": [
+        {
+          "rows": 2765,
+          "actual_fraud": 60,
+          "expected_fraud": 61.6461387568858,
+          "bernoulli_variance": 40.12840641664475,
+          "actual_rate": 0.0216998191681736,
+          "expected_rate": 0.02229516772400933,
+          "rate_difference_ci95": [
+            -0.005148572766647335,
+            0.003957875654975872
+          ],
+          "z": -0.2598606278721998,
+          "log_loss": 0.05878553604513435
+        },
+        {
+          "rows": 2835,
+          "actual_fraud": 54,
+          "expected_fraud": 49.99382194311108,
+          "bernoulli_variance": 36.4284082667084,
+          "actual_rate": 0.01904761904761905,
+          "expected_rate": 0.01763450509457181,
+          "rate_difference_ci95": [
+            -0.0029053595458563685,
+            0.005731587451950845
+          ],
+          "z": 0.6637585834466598,
+          "log_loss": 0.05461876568113506
+        }
+      ],
+      "half_shifts": [
+        -0.025393499284612438,
+        0.06437672462875925
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 6.878918743105944e-05,
+          "ci95": [
+            -0.0002244190159952815,
+            0.00036199739085740034
+          ]
+        },
+        {
+          "delta": 4.0003198430289835e-05,
+          "ci95": [
+            -6.966369041059232e-05,
+            0.00014967008727117197
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.7873689084373516,
+      "eligible": true
+    },
+    "amount_usd_peak": {
+      "rule": {
+        "selected_values": 734,
+        "examples": [
+          14.68,
+          26.52,
+          27.21,
+          10.07,
+          17.23,
+          38.61
+        ],
+        "neighborhood_tick_widths": [
+          5,
+          25
+        ]
+      },
+      "family": "local_mass",
+      "train_rows": 157184,
+      "test_rows": 67118,
+      "train_share": 0.22456140350877193,
+      "test_share": 0.22373859939196758,
+      "dev_share": 0.22512546935455136,
+      "test_over_dev_share": 0.9938395688121827,
+      "dev": {
+        "rows": 133942,
+        "actual_fraud": 2315,
+        "expected_fraud": 2353.330852421384,
+        "bernoulli_variance": 1499.31597067231,
+        "actual_rate": 0.017283600364336803,
+        "expected_rate": 0.017569775368602707,
+        "rate_difference_ci95": [
+          -0.0008519455174417184,
+          0.00027959550890991046
+        ],
+        "z": -0.989924091934901,
+        "log_loss": 0.04564111991380016
+      },
+      "halves": [
+        {
+          "rows": 66993,
+          "actual_fraud": 1169,
+          "expected_fraud": 1176.7250056517087,
+          "bernoulli_variance": 747.8628282632687,
+          "actual_rate": 0.017449584284925292,
+          "expected_rate": 0.017564894924122054,
+          "rate_difference_ci95": [
+            -0.0009210984066967453,
+            0.0006904771283032208
+          ],
+          "z": -0.28248008291268917,
+          "log_loss": 0.04616265108961693
+        },
+        {
+          "rows": 66949,
+          "actual_fraud": 1146,
+          "expected_fraud": 1176.605846769675,
+          "bernoulli_variance": 751.4531424090412,
+          "actual_rate": 0.017117507356345874,
+          "expected_rate": 0.017574659020592916,
+          "rate_difference_ci95": [
+            -0.0012515604220750887,
+            0.0003372570935810107
+          ],
+          "z": -1.1164864253744164,
+          "log_loss": 0.04511924597899169
+        }
+      ],
+      "half_shifts": [
+        -0.010026083382071591,
+        -0.03990438677793481
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 4.212098549020112e-06,
+          "ci95": [
+            -2.7941381945841168e-05,
+            3.6365579043881394e-05
+          ]
+        },
+        {
+          "delta": -4.020495437731634e-06,
+          "ci95": [
+            -1.1985148458877124e-05,
+            3.9441575834138555e-06
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.3222112228130972,
+      "eligible": true
+    },
+    "amount_usd_hole": {
+      "rule": {
+        "selected_values": 404,
+        "examples": [
+          9.84,
+          10.06,
+          31.32,
+          22.15,
+          11.19,
+          12.32
+        ],
+        "neighborhood_tick_widths": [
+          5,
+          25
+        ]
+      },
+      "family": "local_mass",
+      "train_rows": 10325,
+      "test_rows": 4448,
+      "train_share": 0.014750842905308875,
+      "test_share": 0.014827457464398102,
+      "dev_share": 0.014590749723513612,
+      "test_over_dev_share": 1.0162231376296604,
+      "dev": {
+        "rows": 8681,
+        "actual_fraud": 191,
+        "expected_fraud": 155.53743606802672,
+        "bernoulli_variance": 96.96034610831424,
+        "actual_rate": 0.022002073493837114,
+        "expected_rate": 0.01791699528487809,
+        "rate_difference_ci95": [
+          0.0015534413144834415,
+          0.006616715103434603
+        ],
+        "z": 3.601414039106807,
+        "log_loss": 0.05784625893744505
+      },
+      "halves": [
+        {
+          "rows": 4313,
+          "actual_fraud": 85,
+          "expected_fraud": 74.1962072694221,
+          "bernoulli_variance": 46.31873733141928,
+          "actual_rate": 0.019707859958265708,
+          "expected_rate": 0.017202923085885023,
+          "rate_difference_ci95": [
+            -0.0009363167330368495,
+            0.005946190477798223
+          ],
+          "z": 1.5874420777052158,
+          "log_loss": 0.05449737436972868
+        },
+        {
+          "rows": 4368,
+          "actual_fraud": 106,
+          "expected_fraud": 81.34122879860462,
+          "bernoulli_variance": 50.64160877689494,
+          "actual_rate": 0.024267399267399268,
+          "expected_rate": 0.018622076190156735,
+          "rate_difference_ci95": [
+            0.001934841327562786,
+            0.009355804826922276
+          ],
+          "z": 3.465115251669825,
+          "log_loss": 0.061152975773654014
+        }
+      ],
+      "half_shifts": [
+        0.1470041878013389,
+        0.3
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.00023683573523080372,
+          "ci95": [
+            -0.0012713939876584505,
+            0.0007977225171968431
+          ]
+        },
+        {
+          "delta": -0.0007009085373620899,
+          "ci95": [
+            -0.0012449219194591008,
+            -0.0001568951552650789
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.00031649107151470064,
+      "eligible": true,
+      "locked_dev_shift": 0.27198693761597204
+    },
+    "amount_usd_upper_shoulder": {
+      "rule": [
+        936.95,
+        1694.19
+      ],
+      "family": "tail",
+      "train_rows": 6228,
+      "test_rows": 2768,
+      "train_share": 0.008897651294359678,
+      "test_share": 0.009227158781801695,
+      "dev_share": 0.008891264374770995,
+      "test_over_dev_share": 1.0377780249099107,
+      "dev": {
+        "rows": 5290,
+        "actual_fraud": 129,
+        "expected_fraud": 132.25038401088784,
+        "bernoulli_variance": 80.10681113917767,
+        "actual_rate": 0.02438563327032136,
+        "expected_rate": 0.025000072591850254,
+        "rate_difference_ci95": [
+          -0.003835886099185029,
+          0.0026070074561272403
+        ],
+        "z": -0.36316162526542306,
+        "log_loss": 0.05753537136999442
+      },
+      "halves": [
+        {
+          "rows": 2656,
+          "actual_fraud": 63,
+          "expected_fraud": 69.0790244411883,
+          "bernoulli_variance": 41.822160580332906,
+          "actual_rate": 0.02371987951807229,
+          "expected_rate": 0.026008668840808845,
+          "rate_difference_ci95": [
+            -0.006770164622994628,
+            0.0021925859775215216
+          ],
+          "z": -0.9400060675640922,
+          "log_loss": 0.05785090111953988
+        },
+        {
+          "rows": 2634,
+          "actual_fraud": 66,
+          "expected_fraud": 63.17135956969957,
+          "bernoulli_variance": 38.28465055884476,
+          "actual_rate": 0.025056947608200455,
+          "expected_rate": 0.023983052228435674,
+          "rate_difference_ci95": [
+            -0.0035562609296191294,
+            0.0057040516891486955
+          ],
+          "z": 0.4571570281366805,
+          "log_loss": 0.057217206216314556
+        }
+      ],
+      "half_shifts": [
+        -0.0926319208732682,
+        0.044325091634136594
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.000117064085474139,
+          "ci95": [
+            -8.167649436704422e-05,
+            0.0003158046653153222
+          ]
+        },
+        {
+          "delta": 0.00016065794147126366,
+          "ci95": [
+            -0.00026869330879924016,
+            0.0005900091917417675
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.716484152078152,
+      "eligible": true
+    },
+    "amount_usd_upper_extreme": {
+      "rule": [
+        1694.19
+      ],
+      "family": "tail",
+      "train_rows": 684,
+      "test_rows": 245,
+      "train_share": 0.000977198697068404,
+      "test_share": 0.0008167102245453091,
+      "dev_share": 0.0009462725601126787,
+      "test_over_dev_share": 0.863081377365585,
+      "dev": {
+        "rows": 563,
+        "actual_fraud": 20,
+        "expected_fraud": 18.7750137840201,
+        "bernoulli_variance": 11.007231924054112,
+        "actual_rate": 0.035523978685612786,
+        "expected_rate": 0.03334815947428082,
+        "rate_difference_ci95": [
+          -0.010348855279971753,
+          0.014700493702635693
+        ],
+        "z": 0.36922588766745235,
+        "log_loss": 0.09523891452930726
+      },
+      "halves": [
+        {
+          "rows": 274,
+          "actual_fraud": 11,
+          "expected_fraud": 8.182369898560484,
+          "bernoulli_variance": 5.036190387120294,
+          "actual_rate": 0.040145985401459854,
+          "expected_rate": 0.02986266386335943,
+          "rate_difference_ci95": [
+            -0.009767458731350919,
+            0.03033410180755177
+          ],
+          "z": 1.2555468085513963,
+          "log_loss": 0.12257574803378149
+        },
+        {
+          "rows": 289,
+          "actual_fraud": 9,
+          "expected_fraud": 10.592643885459616,
+          "bernoulli_variance": 5.971041536933818,
+          "actual_rate": 0.031141868512110725,
+          "expected_rate": 0.03665274700851078,
+          "rate_difference_ci95": [
+            -0.020788211359238848,
+            0.009766454366438727
+          ],
+          "z": -0.6517688980880343,
+          "log_loss": 0.0693209478157227
+        }
+      ],
+      "half_shifts": [
+        0.09340188435902909,
+        -0.05156957261504283
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.0005545175102741734,
+          "ci95": [
+            -0.00047978823928017476,
+            0.0015888232598285216
+          ]
+        },
+        {
+          "delta": 0.0006064802488123751,
+          "ci95": [
+            -0.0008245458975185707,
+            0.002037506395143321
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.7119593614484601,
+      "eligible": false
+    },
+    "amount_usd_lower_extreme": {
+      "rule": [
+        4.08
+      ],
+      "family": "tail",
+      "train_rows": 3547,
+      "test_rows": 1466,
+      "train_share": 0.0050674324247099835,
+      "test_share": 0.004886927302789482,
+      "dev_share": 0.005126343354074014,
+      "test_over_dev_share": 0.9532969146332613,
+      "dev": {
+        "rows": 3050,
+        "actual_fraud": 46,
+        "expected_fraud": 49.69732618284392,
+        "bernoulli_variance": 33.87107751203796,
+        "actual_rate": 0.015081967213114755,
+        "expected_rate": 0.016294205305850466,
+        "rate_difference_ci95": [
+          -0.004757650495682776,
+          0.0023331743102113526
+        ],
+        "z": -0.6352918149036048,
+        "log_loss": 0.042580176070732334
+      },
+      "halves": [
+        {
+          "rows": 1537,
+          "actual_fraud": 30,
+          "expected_fraud": 25.73208493807836,
+          "bernoulli_variance": 16.558468628112337,
+          "actual_rate": 0.01951854261548471,
+          "expected_rate": 0.01674175988163849,
+          "rate_difference_ci95": [
+            -0.002614071866398583,
+            0.008167637334091024
+          ],
+          "z": 1.0488314050708303,
+          "log_loss": 0.05050497038438701
+        },
+        {
+          "rows": 1513,
+          "actual_fraud": 16,
+          "expected_fraud": 23.965241244765565,
+          "bernoulli_variance": 17.31260888392562,
+          "actual_rate": 0.010575016523463317,
+          "expected_rate": 0.015839551384511277,
+          "rate_difference_ci95": [
+            -0.009849711988278186,
+            -0.0006793577338177334
+          ],
+          "z": -1.9143338332987734,
+          "log_loss": 0.03452967451085972
+        }
+      ],
+      "half_shifts": [
+        0.10136230343859086,
+        -0.19328234082912912
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.000729861918755481,
+          "ci95": [
+            -0.0003162357610631062,
+            0.0017759595985740683
+          ]
+        },
+        {
+          "delta": 0.0005937835649024439,
+          "ci95": [
+            0.00012782641110460705,
+            0.0010597407187002807
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.5252381109222044,
+      "eligible": true
+    },
+    "amount_usd_below_largest_gap": {
+      "rule": {
+        "quantiles": [
+          936.95,
+          1694.19
+        ],
+        "gap": [
+          1296.49,
+          1320.56
+        ],
+        "relative_step": 0.018565511496424936
+      },
+      "family": "tail_gap",
+      "train_rows": 5396,
+      "test_rows": 2372,
+      "train_share": 0.007709011943539631,
+      "test_share": 0.00790708837804683,
+      "dev_share": 0.0076710265796700984,
+      "test_over_dev_share": 1.0307731691351907,
+      "dev": {
+        "rows": 4564,
+        "actual_fraud": 118,
+        "expected_fraud": 120.09889821145565,
+        "bernoulli_variance": 71.69476285440399,
+        "actual_rate": 0.025854513584574933,
+        "expected_rate": 0.026314394875428495,
+        "rate_difference_ci95": [
+          -0.003998145715421559,
+          0.003078383133714439
+        ],
+        "z": -0.24788352376137696,
+        "log_loss": 0.0597336948460533
+      },
+      "halves": [
+        {
+          "rows": 2296,
+          "actual_fraud": 57,
+          "expected_fraud": 63.05475841486064,
+          "bernoulli_variance": 37.47318346974437,
+          "actual_rate": 0.024825783972125436,
+          "expected_rate": 0.027462873874068223,
+          "rate_difference_ci95": [
+            -0.00748210014965052,
+            0.0022079203457649344
+          ],
+          "z": -0.9890916254697504,
+          "log_loss": 0.05857689097745533
+        },
+        {
+          "rows": 2268,
+          "actual_fraud": 61,
+          "expected_fraud": 57.044139796595,
+          "bernoulli_variance": 34.22157938465961,
+          "actual_rate": 0.026895943562610228,
+          "expected_rate": 0.025151737123719136,
+          "rate_difference_ci95": [
+            -0.0034166900951599025,
+            0.006905102972942095
+          ],
+          "z": 0.6762245149636547,
+          "log_loss": 0.06090478024389324
+        }
+      ],
+      "half_shifts": [
+        -0.09868736373460006,
+        0.06602389719179515
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.00021017257723179828,
+          "ci95": [
+            -0.00010996648198528444,
+            0.000530311636448881
+          ]
+        },
+        {
+          "delta": 0.0002441628084108096,
+          "ci95": [
+            -0.000265859248055716,
+            0.0007541848648773353
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.8042245282682015,
+      "eligible": true
+    },
+    "amount_usd_above_largest_gap": {
+      "rule": {
+        "quantiles": [
+          936.95,
+          1694.19
+        ],
+        "gap": [
+          1296.49,
+          1320.56
+        ],
+        "relative_step": 0.018565511496424936
+      },
+      "family": "tail_gap",
+      "train_rows": 832,
+      "test_rows": 395,
+      "train_share": 0.0011886393508200469,
+      "test_share": 0.0013167368926342738,
+      "dev_share": 0.0012202377951008965,
+      "test_over_dev_share": 1.079082206698407,
+      "dev": {
+        "rows": 726,
+        "actual_fraud": 11,
+        "expected_fraud": 12.151485799432201,
+        "bernoulli_variance": 8.412048284773693,
+        "actual_rate": 0.015151515151515152,
+        "expected_rate": 0.016737583745774384,
+        "rate_difference_ci95": [
+          -0.00908918378623265,
+          0.005917046597714191
+        ],
+        "z": -0.3970157244323405,
+        "log_loss": 0.043715607809756446
+      },
+      "halves": [
+        {
+          "rows": 360,
+          "actual_fraud": 6,
+          "expected_fraud": 6.024266026327635,
+          "bernoulli_variance": 4.348977110588541,
+          "actual_rate": 0.016666666666666666,
+          "expected_rate": 0.016734072295354542,
+          "rate_difference_ci95": [
+            -0.011841476911463245,
+            0.011706665654087494
+          ],
+          "z": -0.011636037266990227,
+          "log_loss": 0.053220699136834734
+        },
+        {
+          "rows": 366,
+          "actual_fraud": 5,
+          "expected_fraud": 6.127219773104566,
+          "bernoulli_variance": 4.063071174185152,
+          "actual_rate": 0.01366120218579235,
+          "expected_rate": 0.016741037631433243,
+          "rate_difference_ci95": [
+            -0.012441960197661608,
+            0.006282289306379824
+          ],
+          "z": -0.5592183107737946,
+          "log_loss": 0.034366337651974506
+        }
+      ],
+      "half_shifts": [
+        -0.0008268468199864997,
+        -0.03886247693835558
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 6.4174880594164894e-06,
+          "ci95": [
+            -0.00045095167029467296,
+            0.00046378664641350594
+          ]
+        },
+        {
+          "delta": -2.5427580761150148e-06,
+          "ci95": [
+            -1.0283660243791073e-05,
+            5.1981440915610435e-06
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.6913558651109433,
+      "eligible": false
+    },
+    "hours_since_last_txn_off_nominal_grid": {
+      "rule": {},
+      "family": "precision",
+      "train_rows": 0,
+      "test_rows": 0,
+      "train_share": 0.0,
+      "test_share": 0.0,
+      "dev_share": 0.0,
+      "test_over_dev_share": null,
+      "dev": {
+        "rows": 0,
+        "actual_fraud": 0,
+        "expected_fraud": 0.0,
+        "bernoulli_variance": 0.0,
+        "actual_rate": null,
+        "expected_rate": null,
+        "rate_difference_ci95": [
+          null,
+          null
+        ],
+        "z": null,
+        "log_loss": null
+      },
+      "halves": [
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        },
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        }
+      ],
+      "half_shifts": [
+        0.0,
+        0.0
+      ],
+      "cross_log_loss": [
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        },
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        }
+      ],
+      "pooled_two_sided_p": null,
+      "eligible": false
+    },
+    "hours_since_last_txn_intermediate_grid": {
+      "rule": [
+        0.25,
+        1.0
+      ],
+      "family": "grid",
+      "train_rows": 16777,
+      "test_rows": 7199,
+      "train_share": 0.023968512486427795,
+      "test_share": 0.023997946557149714,
+      "dev_share": 0.024031625336573853,
+      "test_over_dev_share": 0.9985985642272442,
+      "dev": {
+        "rows": 14298,
+        "actual_fraud": 192,
+        "expected_fraud": 199.16042811246012,
+        "bernoulli_variance": 137.14416324940845,
+        "actual_rate": 0.013428451531682753,
+        "expected_rate": 0.013929250812173739,
+        "rate_difference_ci95": [
+          -0.0021122414830631476,
+          0.0011106429220811723
+        ],
+        "z": -0.611435041210036,
+        "log_loss": 0.04061840571136481
+      },
+      "halves": [
+        {
+          "rows": 7152,
+          "actual_fraud": 102,
+          "expected_fraud": 106.03998758727496,
+          "bernoulli_variance": 70.56296612366921,
+          "actual_rate": 0.014261744966442953,
+          "expected_rate": 0.014826620188377371,
+          "rate_difference_ci95": [
+            -0.002874276041072095,
+            0.0017445255972032545
+          ],
+          "z": -0.4809407947231866,
+          "log_loss": 0.04007443650803508
+        },
+        {
+          "rows": 7146,
+          "actual_fraud": 90,
+          "expected_fraud": 93.12044052518517,
+          "bernoulli_variance": 66.58119712573924,
+          "actual_rate": 0.012594458438287154,
+          "expected_rate": 0.013031127977215949,
+          "rate_difference_ci95": [
+            -0.0026848104879681044,
+            0.0018114714101105153
+          ],
+          "z": -0.3824195707791305,
+          "log_loss": 0.041162831647862747
+        }
+      ],
+      "half_shifts": [
+        -0.042711231248781054,
+        -0.034373716566022124
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -1.3631494915538356e-05,
+          "ci95": [
+            -9.299182659329599e-05,
+            6.572883676221928e-05
+          ]
+        },
+        {
+          "delta": -1.0236957882053454e-05,
+          "ci95": [
+            -0.00010622846527398213,
+            8.575454950987523e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.5409116104114859,
+      "eligible": true
+    },
+    "hours_since_last_txn_whole_grid": {
+      "rule": [
+        1.0
+      ],
+      "family": "grid",
+      "train_rows": 2902,
+      "test_rows": 1315,
+      "train_share": 0.004145951197211269,
+      "test_share": 0.004383567123579925,
+      "dev_share": 0.00417166695239728,
+      "test_over_dev_share": 1.050795083500344,
+      "dev": {
+        "rows": 2482,
+        "actual_fraud": 52,
+        "expected_fraud": 53.70719932207745,
+        "bernoulli_variance": 33.152197710744254,
+        "actual_rate": 0.020950846091861403,
+        "expected_rate": 0.02163867821195707,
+        "rate_difference_ci95": [
+          -0.005348759490590127,
+          0.003973095250398786
+        ],
+        "z": -0.29650230079592926,
+        "log_loss": 0.05545460353706591
+      },
+      "halves": [
+        {
+          "rows": 1240,
+          "actual_fraud": 27,
+          "expected_fraud": 26.454068524653145,
+          "bernoulli_variance": 16.95785582379656,
+          "actual_rate": 0.021774193548387097,
+          "expected_rate": 0.02133392622955899,
+          "rate_difference_ci95": [
+            -0.006381002711760734,
+            0.007261537349416949
+          ],
+          "z": 0.13257226147608778,
+          "log_loss": 0.05354929930150366
+        },
+        {
+          "rows": 1242,
+          "actual_fraud": 25,
+          "expected_fraud": 27.253130797424305,
+          "bernoulli_variance": 16.19434188694769,
+          "actual_rate": 0.020128824476650563,
+          "expected_rate": 0.021942939450422146,
+          "rate_difference_ci95": [
+            -0.008170547690531256,
+            0.004542317742988089
+          ],
+          "z": -0.559892631584223,
+          "log_loss": 0.05735683964986559
+        }
+      ],
+      "half_shifts": [
+        0.012989835152254773,
+        -0.05504748917298917
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 4.471743946422028e-05,
+          "ci95": [
+            -0.00033085785184568757,
+            0.0004202927307741281
+          ]
+        },
+        {
+          "delta": 2.4667975821481497e-05,
+          "ci95": [
+            -5.7923258770589925e-05,
+            0.00010725921041355291
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.7668465101428622,
+      "eligible": true
+    },
+    "hours_since_last_txn_peak": {
+      "rule": {
+        "selected_values": 73,
+        "examples": [
+          0.63,
+          1.07,
+          2.82,
+          3.44,
+          5.94,
+          6.52
+        ],
+        "neighborhood_tick_widths": [
+          5,
+          25
+        ]
+      },
+      "family": "local_mass",
+      "train_rows": 26053,
+      "test_rows": 11033,
+      "train_share": 0.037220698325618605,
+      "test_share": 0.03677862819350365,
+      "dev_share": 0.037150022018064895,
+      "test_over_dev_share": 0.9900028639449892,
+      "dev": {
+        "rows": 22103,
+        "actual_fraud": 326,
+        "expected_fraud": 348.4558315099671,
+        "bernoulli_variance": 219.62672917998253,
+        "actual_rate": 0.014749129077500792,
+        "expected_rate": 0.015765092137264944,
+        "rate_difference_ci95": [
+          -0.0022675969342900956,
+          0.00023567081476179308
+        ],
+        "z": -1.5152578553197706,
+        "log_loss": 0.038234924255888536
+      },
+      "halves": [
+        {
+          "rows": 11063,
+          "actual_fraud": 160,
+          "expected_fraud": 175.64905248741843,
+          "bernoulli_variance": 110.20652599850365,
+          "actual_rate": 0.014462623158275333,
+          "expected_rate": 0.015877162838960356,
+          "rate_difference_ci95": [
+            -0.0031492909590114075,
+            0.0003202115976413584
+          ],
+          "z": -1.4906798841049858,
+          "log_loss": 0.037006778007114015
+        },
+        {
+          "rows": 11040,
+          "actual_fraud": 166,
+          "expected_fraud": 172.8067790225486,
+          "bernoulli_variance": 109.42020318147888,
+          "actual_rate": 0.015036231884057972,
+          "expected_rate": 0.015652787954940996,
+          "rate_difference_ci95": [
+            -0.002421457808049043,
+            0.001188345666282991
+          ],
+          "z": -0.6507181094864448,
+          "log_loss": 0.03946562914268135
+        }
+      ],
+      "half_shifts": [
+        -0.11943567875618846,
+        -0.05134466354043571
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -5.964341449271671e-05,
+          "ci95": [
+            -0.0001486975142723412,
+            2.941068528690777e-05
+          ]
+        },
+        {
+          "delta": -4.785326766172494e-06,
+          "ci95": [
+            -0.00022035180212033863,
+            0.00021078114858799366
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.12970711668980076,
+      "eligible": true
+    },
+    "hours_since_last_txn_hole": {
+      "rule": {
+        "selected_values": 382,
+        "examples": [
+          1.87,
+          1.7,
+          2.37,
+          1.8,
+          0.68,
+          0.62
+        ],
+        "neighborhood_tick_widths": [
+          5,
+          25
+        ]
+      },
+      "family": "local_mass",
+      "train_rows": 27706,
+      "test_rows": 11905,
+      "train_share": 0.03958226184353392,
+      "test_share": 0.039685449890660834,
+      "dev_share": 0.039457716911554606,
+      "test_over_dev_share": 1.005771570099119,
+      "dev": {
+        "rows": 23476,
+        "actual_fraud": 432,
+        "expected_fraud": 421.91318837079274,
+        "bernoulli_variance": 265.16334418711193,
+        "actual_rate": 0.018401772022491054,
+        "expected_rate": 0.017972107189077897,
+        "rate_difference_ci95": [
+          -0.0009340482738064584,
+          0.0017933779406327716
+        ],
+        "z": 0.6194370338591599,
+        "log_loss": 0.0474390847320177
+      },
+      "halves": [
+        {
+          "rows": 11813,
+          "actual_fraud": 217,
+          "expected_fraud": 212.21230669284628,
+          "bernoulli_variance": 134.3042700193448,
+          "actual_rate": 0.018369592821467873,
+          "expected_rate": 0.017964302606691466,
+          "rate_difference_ci95": [
+            -0.0015138047997873669,
+            0.002324385229340184
+          ],
+          "z": 0.41312493832552033,
+          "log_loss": 0.04639482281895278
+        },
+        {
+          "rows": 11663,
+          "actual_fraud": 215,
+          "expected_fraud": 209.70088167794646,
+          "bernoulli_variance": 130.85907416776712,
+          "actual_rate": 0.01843436508616994,
+          "expected_rate": 0.017980012147641812,
+          "rate_difference_ci95": [
+            -0.0014839158771864742,
+            0.0023926217542427305
+          ],
+          "z": 0.4632353517986508,
+          "log_loss": 0.048496777090676374
+        }
+      ],
+      "half_shifts": [
+        0.029815080392339037,
+        0.033694155857012055
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -7.156083063947208e-06,
+          "ci95": [
+            -7.181789557034954e-05,
+            5.7505729442455114e-05
+          ]
+        },
+        {
+          "delta": -8.527942428001921e-06,
+          "ci95": [
+            -6.631380794000116e-05,
+            4.925792308399731e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.5356284904576605,
+      "eligible": true
+    },
+    "hours_since_last_txn_upper_shoulder": {
+      "rule": [
+        29.38,
+        40.911750000001625
+      ],
+      "family": "tail",
+      "train_rows": 6284,
+      "test_rows": 2728,
+      "train_share": 0.008977655866049488,
+      "test_share": 0.009093818336977972,
+      "dev_share": 0.008992110473539665,
+      "test_over_dev_share": 1.011310788911857,
+      "dev": {
+        "rows": 5350,
+        "actual_fraud": 71,
+        "expected_fraud": 79.3020177392061,
+        "bernoulli_variance": 48.207460588000586,
+        "actual_rate": 0.013271028037383177,
+        "expected_rate": 0.014822807054057214,
+        "rate_difference_ci95": [
+          -0.0041382903822593815,
+          0.00103473234891131
+        ],
+        "z": -1.195711839752023,
+        "log_loss": 0.03776140801131863
+      },
+      "halves": [
+        {
+          "rows": 2649,
+          "actual_fraud": 38,
+          "expected_fraud": 41.322585493748505,
+          "bernoulli_variance": 24.59288317879679,
+          "actual_rate": 0.014345035862589657,
+          "expected_rate": 0.015599315022177616,
+          "rate_difference_ci95": [
+            -0.005178764019275899,
+            0.002670205700099978
+          ],
+          "z": -0.6699948141666617,
+          "log_loss": 0.04255588011403741
+        },
+        {
+          "rows": 2701,
+          "actual_fraud": 33,
+          "expected_fraud": 37.97943224545758,
+          "bernoulli_variance": 23.6145774092038,
+          "actual_rate": 0.012217697149203998,
+          "expected_rate": 0.014061248517385258,
+          "rate_difference_ci95": [
+            -0.005225542894208118,
+            0.0015384401578455986
+          ],
+          "z": -1.0246834888256933,
+          "log_loss": 0.033059239703246784
+        }
+      ],
+      "half_shifts": [
+        -0.06763426334671539,
+        -0.10400652082865247
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -8.121568205290436e-05,
+          "ci95": [
+            -0.0004888137735408172,
+            0.0003263824094350084
+          ]
+        },
+        {
+          "delta": -0.00010496474888281959,
+          "ci95": [
+            -0.0003337088778466318,
+            0.00012377938008099263
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.2318090294282824,
+      "eligible": true
+    },
+    "hours_since_last_txn_upper_extreme": {
+      "rule": [
+        40.911750000001625
+      ],
+      "family": "tail",
+      "train_rows": 707,
+      "test_rows": 305,
+      "train_share": 0.0010100577175838619,
+      "test_share": 0.001016720891780895,
+      "dev_share": 0.0010000571461226356,
+      "test_over_dev_share": 1.0166627934442218,
+      "dev": {
+        "rows": 595,
+        "actual_fraud": 11,
+        "expected_fraud": 8.020537282457285,
+        "bernoulli_variance": 6.460285167399725,
+        "actual_rate": 0.018487394957983194,
+        "expected_rate": 0.013479894592365186,
+        "rate_difference_ci95": [
+          -0.004924899494589666,
+          0.014939900225825682
+        ],
+        "z": 1.1722280544634427,
+        "log_loss": 0.05539459490578578
+      },
+      "halves": [
+        {
+          "rows": 304,
+          "actual_fraud": 6,
+          "expected_fraud": 4.414041060632596,
+          "bernoulli_variance": 3.489575876637094,
+          "actual_rate": 0.019736842105263157,
+          "expected_rate": 0.014519871909975645,
+          "rate_difference_ci95": [
+            -0.008121434439006751,
+            0.018555374829581774
+          ],
+          "z": 0.8489959454956656,
+          "log_loss": 0.047288108276076705
+        },
+        {
+          "rows": 291,
+          "actual_fraud": 5,
+          "expected_fraud": 3.606496221824689,
+          "bernoulli_variance": 2.970709290762631,
+          "actual_rate": 0.01718213058419244,
+          "expected_rate": 0.012393457806957695,
+          "rate_difference_ci95": [
+            -0.010008909277470187,
+            0.019586254831939674
+          ],
+          "z": 0.8084963680770815,
+          "log_loss": 0.0638632269863066
+        }
+      ],
+      "half_shifts": [
+        0.05553664663747232,
+        0.0497242441573164
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.0002450560846404795,
+          "ci95": [
+            -0.0009073357877765437,
+            0.00041722361849558465
+          ]
+        },
+        {
+          "delta": -0.0002499910459736482,
+          "ci95": [
+            -0.0010721810051631702,
+            0.0005721989132158739
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.24110550778106754,
+      "eligible": false
+    },
+    "hours_since_last_txn_lower_extreme": {
+      "rule": [
+        0.04
+      ],
+      "family": "tail",
+      "train_rows": 3838,
+      "test_rows": 1633,
+      "train_share": 0.005483170466883822,
+      "test_share": 0.005443623659928529,
+      "dev_share": 0.005472581626513112,
+      "test_over_dev_share": 0.9947085363799254,
+      "dev": {
+        "rows": 3256,
+        "actual_fraud": 156,
+        "expected_fraud": 161.3874967546342,
+        "bernoulli_variance": 85.75533934383921,
+        "actual_rate": 0.04791154791154791,
+        "expected_rate": 0.04956618450695154,
+        "rate_difference_ci95": [
+          -0.0073460602468545695,
+          0.004036787056047316
+        ],
+        "z": -0.5817768510508196,
+        "log_loss": 0.10046569873775059
+      },
+      "halves": [
+        {
+          "rows": 1619,
+          "actual_fraud": 74,
+          "expected_fraud": 78.69176753196479,
+          "bernoulli_variance": 41.394568216604526,
+          "actual_rate": 0.04570722668313774,
+          "expected_rate": 0.04860516833351747,
+          "rate_difference_ci95": [
+            -0.010841709753145735,
+            0.005045826452386267
+          ],
+          "z": -0.7292304704492044,
+          "log_loss": 0.09950471497548868
+        },
+        {
+          "rows": 1637,
+          "actual_fraud": 82,
+          "expected_fraud": 82.69572922266943,
+          "bernoulli_variance": 44.360771127234685,
+          "actual_rate": 0.0500916310323763,
+          "expected_rate": 0.05051663361189336,
+          "rate_difference_ci95": [
+            -0.00857713755442009,
+            0.007727132395385983
+          ],
+          "z": -0.10445775840412547,
+          "log_loss": 0.1014161157879045
+        }
+      ],
+      "half_shifts": [
+        -0.07150433021940586,
+        -0.01004706829425315
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -2.7827658657481312e-05,
+          "ci95": [
+            -0.00010762871167134373,
+            5.19733943563811e-05
+          ]
+        },
+        {
+          "delta": 3.804994212312143e-05,
+          "ci95": [
+            -0.000544993316292366,
+            0.0006210932005386089
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.5607169985758653,
+      "eligible": true
+    },
+    "distance_from_home_km_off_nominal_grid": {
+      "rule": {},
+      "family": "precision",
+      "train_rows": 0,
+      "test_rows": 0,
+      "train_share": 0.0,
+      "test_share": 0.0,
+      "dev_share": 0.0,
+      "test_over_dev_share": null,
+      "dev": {
+        "rows": 0,
+        "actual_fraud": 0,
+        "expected_fraud": 0.0,
+        "bernoulli_variance": 0.0,
+        "actual_rate": null,
+        "expected_rate": null,
+        "rate_difference_ci95": [
+          null,
+          null
+        ],
+        "z": null,
+        "log_loss": null
+      },
+      "halves": [
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        },
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        }
+      ],
+      "half_shifts": [
+        0.0,
+        0.0
+      ],
+      "cross_log_loss": [
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        },
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        }
+      ],
+      "pooled_two_sided_p": null,
+      "eligible": false
+    },
+    "distance_from_home_km_intermediate_grid": {
+      "rule": [
+        0.25,
+        1.0
+      ],
+      "family": "grid",
+      "train_rows": 16376,
+      "test_rows": 6887,
+      "train_share": 0.023395622607006113,
+      "test_share": 0.02295789108752467,
+      "dev_share": 0.023434952585525897,
+      "test_over_dev_share": 0.9796431635071506,
+      "dev": {
+        "rows": 13943,
+        "actual_fraud": 218,
+        "expected_fraud": 229.11602016975837,
+        "bernoulli_variance": 145.4641158059085,
+        "actual_rate": 0.015635085706089076,
+        "expected_rate": 0.016432333082533054,
+        "rate_difference_ci95": [
+          -0.0024295616956768796,
+          0.0008350669427889245
+        ],
+        "z": -0.9216613812340716,
+        "log_loss": 0.03990005934251124
+      },
+      "halves": [
+        {
+          "rows": 6878,
+          "actual_fraud": 119,
+          "expected_fraud": 118.4852264955739,
+          "bernoulli_variance": 73.21096869269445,
+          "actual_rate": 0.017301541145681883,
+          "expected_rate": 0.01722669765855974,
+          "rate_difference_ci95": [
+            -0.00229062222778256,
+            0.0024403092020268517
+          ],
+          "z": 0.060162809502529474,
+          "log_loss": 0.04105987386946545
+        },
+        {
+          "rows": 7065,
+          "actual_fraud": 99,
+          "expected_fraud": 110.63079367418449,
+          "bernoulli_variance": 72.25314711321406,
+          "actual_rate": 0.014012738853503185,
+          "expected_rate": 0.01565899415062767,
+          "rate_difference_ci95": [
+            -0.0038988933831748465,
+            0.0006063827889258749
+          ],
+          "z": -1.368298867242785,
+          "log_loss": 0.0387709433741615
+        }
+      ],
+      "half_shifts": [
+        0.005235261347393017,
+        -0.12319782265792874
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 8.800858382108112e-05,
+          "ci95": [
+            -0.00020350711563103002,
+            0.00037952428327319224
+          ]
+        },
+        {
+          "delta": 8.758886756863981e-06,
+          "ci95": [
+            -3.035025835281792e-06,
+            2.0552799349009756e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.35670523047780334,
+      "eligible": true
+    },
+    "distance_from_home_km_whole_grid": {
+      "rule": [
+        1.0
+      ],
+      "family": "grid",
+      "train_rows": 5073,
+      "test_rows": 2060,
+      "train_share": 0.007247557003257329,
+      "test_share": 0.006867032908421783,
+      "dev_share": 0.007265961416282611,
+      "test_over_dev_share": 0.9450962529243753,
+      "dev": {
+        "rows": 4323,
+        "actual_fraud": 88,
+        "expected_fraud": 87.3052657564103,
+        "bernoulli_variance": 52.23957790868773,
+        "actual_rate": 0.020356234096692113,
+        "expected_rate": 0.020195527586493244,
+        "rate_difference_ci95": [
+          -0.0030526874048563512,
+          0.003374100425254088
+        ],
+        "z": 0.09612113188713618,
+        "log_loss": 0.0448000227035724
+      },
+      "halves": [
+        {
+          "rows": 2106,
+          "actual_fraud": 37,
+          "expected_fraud": 41.92340398629494,
+          "bernoulli_variance": 26.31309970816484,
+          "actual_rate": 0.017568850902184234,
+          "expected_rate": 0.019906649566141948,
+          "rate_difference_ci95": [
+            -0.006512808355925491,
+            0.0018372110280100648
+          ],
+          "z": -0.9597971748276236,
+          "log_loss": 0.03665499482395023
+        },
+        {
+          "rows": 2217,
+          "actual_fraud": 51,
+          "expected_fraud": 45.38186177011535,
+          "bernoulli_variance": 25.926478200522887,
+          "actual_rate": 0.023004059539918808,
+          "expected_rate": 0.020469942160629386,
+          "rate_difference_ci95": [
+            -0.002315779554853221,
+            0.007384014313432068
+          ],
+          "z": 1.1033686924931554,
+          "log_loss": 0.05253724810478317
+        }
+      ],
+      "half_shifts": [
+        -0.09756896721234934,
+        0.10843425079217305
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.00032878014278594955,
+          "ci95": [
+            -0.00012342375160848227,
+            0.0007809840371803814
+          ]
+        },
+        {
+          "delta": 0.00030181610003384785,
+          "ci95": [
+            -0.00017175942680933316,
+            0.0007753916268770289
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.9234243681959848,
+      "eligible": true
+    },
+    "distance_from_home_km_peak": {
+      "rule": {
+        "selected_values": 141,
+        "examples": [
+          0.89,
+          0.54,
+          3.79,
+          4.1,
+          4.13,
+          10.64
+        ],
+        "neighborhood_tick_widths": [
+          5,
+          25
+        ]
+      },
+      "family": "local_mass",
+      "train_rows": 48539,
+      "test_rows": 20502,
+      "train_share": 0.06934539116520944,
+      "test_share": 0.0683436449943997,
+      "dev_share": 0.06946615436848493,
+      "test_over_dev_share": 0.9838409167127512,
+      "dev": {
+        "rows": 41330,
+        "actual_fraud": 673,
+        "expected_fraud": 695.7141576110142,
+        "bernoulli_variance": 444.5011422168061,
+        "actual_rate": 0.01628357125574643,
+        "expected_rate": 0.01683315164798002,
+        "rate_difference_ci95": [
+          -0.0015283117832868274,
+          0.0004291509988196509
+        ],
+        "z": -1.0773583806365536,
+        "log_loss": 0.042376807577228184
+      },
+      "halves": [
+        {
+          "rows": 20747,
+          "actual_fraud": 341,
+          "expected_fraud": 359.33323675374197,
+          "bernoulli_variance": 224.5921800117659,
+          "actual_rate": 0.016436111244999278,
+          "expected_rate": 0.017319768484780545,
+          "rate_difference_ci95": [
+            -0.0022600469459641667,
+            0.0004927324664016291
+          ],
+          "z": -1.22332494499691,
+          "log_loss": 0.04146608521081607
+        },
+        {
+          "rows": 20583,
+          "actual_fraud": 332,
+          "expected_fraud": 336.38092085727226,
+          "bernoulli_variance": 219.9089622050402,
+          "actual_rate": 0.01612981586746344,
+          "expected_rate": 0.01634265757456504,
+          "rate_difference_ci95": [
+            -0.0016047987783655191,
+            0.00117911536416232
+          ],
+          "z": -0.29542275444131705,
+          "log_loss": 0.043294786343003426
+        }
+      ],
+      "half_shifts": [
+        -0.07500699549502557,
+        -0.017980853593120853
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -1.4145466107872764e-05,
+          "ci95": [
+            -3.889577201041438e-05,
+            1.0604839794668854e-05
+          ]
+        },
+        {
+          "delta": 1.361252642623942e-05,
+          "ci95": [
+            -9.078908051533022e-05,
+            0.00011801413336780906
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.28132018999764496,
+      "eligible": true
+    },
+    "distance_from_home_km_hole": {
+      "rule": {
+        "selected_values": 457,
+        "examples": [
+          1.97,
+          1.2,
+          3.11,
+          2.37,
+          2.1,
+          2.69
+        ],
+        "neighborhood_tick_widths": [
+          5,
+          25
+        ]
+      },
+      "family": "local_mass",
+      "train_rows": 17891,
+      "test_rows": 7706,
+      "train_share": 0.025560032001828676,
+      "test_share": 0.025688036695290416,
+      "dev_share": 0.02539640920657651,
+      "test_over_dev_share": 1.0114830205460064,
+      "dev": {
+        "rows": 15110,
+        "actual_fraud": 295,
+        "expected_fraud": 260.38755143253945,
+        "bernoulli_variance": 164.12583163212807,
+        "actual_rate": 0.019523494374586368,
+        "expected_rate": 0.017232796256289838,
+        "rate_difference_ci95": [
+          0.0005131379550386182,
+          0.004068258281554433
+        ],
+        "z": 2.7017418718088915,
+        "log_loss": 0.05061332075716655
+      },
+      "halves": [
+        {
+          "rows": 7527,
+          "actual_fraud": 158,
+          "expected_fraud": 136.06165174829624,
+          "bernoulli_variance": 83.6469060084262,
+          "actual_rate": 0.020991098711305965,
+          "expected_rate": 0.01807647824475837,
+          "rate_difference_ci95": [
+            0.0003491029957971648,
+            0.0054801379372980295
+          ],
+          "z": 2.3987168475423877,
+          "log_loss": 0.05175453325493675
+        },
+        {
+          "rows": 7583,
+          "actual_fraud": 137,
+          "expected_fraud": 124.32589968424327,
+          "bernoulli_variance": 80.47892562370185,
+          "actual_rate": 0.01806672820783331,
+          "expected_rate": 0.016395344808683012,
+          "rate_difference_ci95": [
+            -0.0007905529782433523,
+            0.004133319776543955
+          ],
+          "z": 1.412784935050491,
+          "log_loss": 0.04948053604521663
+        }
+      ],
+      "half_shifts": [
+        0.19262207435856632,
+        0.11675003740939686
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.0002626646873793141,
+          "ci95": [
+            -0.0005617813227118009,
+            3.6451947953172726e-05
+          ]
+        },
+        {
+          "delta": -0.00011672340428905497,
+          "ci95": [
+            -0.000590885116998732,
+            0.00035743830842062207
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.00689772899506571,
+      "eligible": true
+    },
+    "distance_from_home_km_upper_shoulder": {
+      "rule": [
+        47.14349999999977,
+        50.96
+      ],
+      "family": "tail",
+      "train_rows": 6378,
+      "test_rows": 2702,
+      "train_share": 0.0091119492542431,
+      "test_share": 0.009007147047842551,
+      "dev_share": 0.009062702742677732,
+      "test_over_dev_share": 0.9938698535731995,
+      "dev": {
+        "rows": 5392,
+        "actual_fraud": 125,
+        "expected_fraud": 106.45476174389226,
+        "bernoulli_variance": 66.14463568271296,
+        "actual_rate": 0.023182492581602373,
+        "expected_rate": 0.019743093795232244,
+        "rate_difference_ci95": [
+          0.000194394557537544,
+          0.006684403015202714
+        ],
+        "z": 2.2802638530588575,
+        "log_loss": 0.06023753167729156
+      },
+      "halves": [
+        {
+          "rows": 2699,
+          "actual_fraud": 68,
+          "expected_fraud": 56.29714120527301,
+          "bernoulli_variance": 33.4209797865115,
+          "actual_rate": 0.025194516487587994,
+          "expected_rate": 0.02085851841618118,
+          "rate_difference_ci95": [
+            -0.0003492357960245638,
+            0.00902123193883819
+          ],
+          "z": 2.024334963095791,
+          "log_loss": 0.06214828361424797
+        },
+        {
+          "rows": 2693,
+          "actual_fraud": 57,
+          "expected_fraud": 50.157620538619256,
+          "bernoulli_variance": 32.72365589620146,
+          "actual_rate": 0.02116598588934274,
+          "expected_rate": 0.01862518400988461,
+          "rate_difference_ci95": [
+            -0.0019503331820490246,
+            0.0070319369409652865
+          ],
+          "z": 1.1961241164978988,
+          "log_loss": 0.058322522587857716
+        }
+      ],
+      "half_shifts": [
+        0.1938166516912498,
+        0.11611653411878177
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.00041808851996073934,
+          "ci95": [
+            -0.000961555860871109,
+            0.00012537882094963032
+          ]
+        },
+        {
+          "delta": -0.00025482364470497717,
+          "ci95": [
+            -0.0011245595986958063,
+            0.000614912309285852
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.02259204427757438,
+      "eligible": true
+    },
+    "distance_from_home_km_upper_extreme": {
+      "rule": [
+        50.96
+      ],
+      "family": "tail",
+      "train_rows": 689,
+      "test_rows": 236,
+      "train_share": 0.0009843419623978512,
+      "test_share": 0.0007867086244599711,
+      "dev_share": 0.000937868718548623,
+      "test_over_dev_share": 0.8388259560223139,
+      "dev": {
+        "rows": 558,
+        "actual_fraud": 1,
+        "expected_fraud": 4.986217316519328,
+        "bernoulli_variance": 4.294246047116477,
+        "actual_rate": 0.0017921146953405018,
+        "expected_rate": 0.00893587332709557,
+        "rate_difference_ci95": [
+          -0.010508590066199353,
+          -0.003778927197310786
+        ],
+        "z": -1.9236121395288033,
+        "log_loss": 0.010628411142442548
+      },
+      "halves": [
+        {
+          "rows": 276,
+          "actual_fraud": 0,
+          "expected_fraud": 1.784320673022898,
+          "bernoulli_variance": 1.635841139870991,
+          "actual_rate": 0.0,
+          "expected_rate": 0.006464929974720645,
+          "rate_difference_ci95": [
+            -0.009097662431245048,
+            -0.0038321975181962423
+          ],
+          "z": -1.3950903805626291,
+          "log_loss": 0.006765959148125204
+        },
+        {
+          "rows": 282,
+          "actual_fraud": 1,
+          "expected_fraud": 3.2018966434964296,
+          "bernoulli_variance": 2.658404907245486,
+          "actual_rate": 0.0035460992907801418,
+          "expected_rate": 0.011354243416654005,
+          "rate_difference_ci95": [
+            -0.013952798693618852,
+            -0.0016634895581288762
+          ],
+          "z": -1.35047442635298,
+          "log_loss": 0.014408683307093566
+        }
+      ],
+      "half_shifts": [
+        -0.06710464703416485,
+        -0.07982561826969985
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.0004976026372569846,
+          "ci95": [
+            -0.000700848243941306,
+            -0.0002943570305726632
+          ]
+        },
+        {
+          "delta": -0.0005030731991264012,
+          "ci95": [
+            -0.0009132587169568577,
+            -9.288768129594468e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.05440321827329139,
+      "eligible": false
+    },
+    "distance_from_home_km_lower_extreme": {
+      "rule": [
+        0.05
+      ],
+      "family": "tail",
+      "train_rows": 4050,
+      "test_rows": 1802,
+      "train_share": 0.0057860449168523915,
+      "test_share": 0.006006987039308763,
+      "dev_share": 0.005637296921168605,
+      "test_over_dev_share": 1.0655793234434636,
+      "dev": {
+        "rows": 3354,
+        "actual_fraud": 52,
+        "expected_fraud": 55.89682987632507,
+        "bernoulli_variance": 36.607081590430894,
+        "actual_rate": 0.015503875968992248,
+        "expected_rate": 0.016665721489661618,
+        "rate_difference_ci95": [
+          -0.00458154993646826,
+          0.002257858895129517
+        ],
+        "z": -0.6440638038290725,
+        "log_loss": 0.042402724853185435
+      },
+      "halves": [
+        {
+          "rows": 1752,
+          "actual_fraud": 24,
+          "expected_fraud": 30.25805504788461,
+          "bernoulli_variance": 19.40224078385814,
+          "actual_rate": 0.0136986301369863,
+          "expected_rate": 0.01727057936523094,
+          "rate_difference_ci95": [
+            -0.0077505494479403825,
+            0.0006066509914511012
+          ],
+          "z": -1.420736159908253,
+          "log_loss": 0.031066750175514923
+        },
+        {
+          "rows": 1602,
+          "actual_fraud": 28,
+          "expected_fraud": 25.63877482844046,
+          "bernoulli_variance": 17.20484080657275,
+          "actual_rate": 0.017478152309612985,
+          "expected_rate": 0.016004228981548352,
+          "rate_difference_ci95": [
+            -0.004036074621258221,
+            0.006983921277387482
+          ],
+          "z": 0.5692618437269729,
+          "log_loss": 0.05480012038082509
+        }
+      ],
+      "half_shifts": [
+        -0.14375935534923234,
+        0.055531765602471306
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.00021563652315254074,
+          "ci95": [
+            -1.65594764371598e-05,
+            0.0004478325227422413
+          ]
+        },
+        {
+          "delta": 0.00031946922366585695,
+          "ci95": [
+            -0.00047298514745787066,
+            0.0011119235947895847
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.5195340607942249,
+      "eligible": true
+    },
+    "account_balance_usd_off_nominal_grid": {
+      "rule": {},
+      "family": "precision",
+      "train_rows": 0,
+      "test_rows": 0,
+      "train_share": 0.0,
+      "test_share": 0.0,
+      "dev_share": 0.0,
+      "test_over_dev_share": null,
+      "dev": {
+        "rows": 0,
+        "actual_fraud": 0,
+        "expected_fraud": 0.0,
+        "bernoulli_variance": 0.0,
+        "actual_rate": null,
+        "expected_rate": null,
+        "rate_difference_ci95": [
+          null,
+          null
+        ],
+        "z": null,
+        "log_loss": null
+      },
+      "halves": [
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        },
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        }
+      ],
+      "half_shifts": [
+        0.0,
+        0.0
+      ],
+      "cross_log_loss": [
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        },
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        }
+      ],
+      "pooled_two_sided_p": null,
+      "eligible": false
+    },
+    "account_balance_usd_intermediate_grid": {
+      "rule": [
+        0.25,
+        1.0
+      ],
+      "family": "grid",
+      "train_rows": 27146,
+      "test_rows": 11708,
+      "train_share": 0.03878221612663581,
+      "test_share": 0.039028748199904,
+      "dev_share": 0.03879885573293264,
+      "test_over_dev_share": 1.0059252383254238,
+      "dev": {
+        "rows": 23084,
+        "actual_fraud": 368,
+        "expected_fraud": 370.60994882210036,
+        "bernoulli_variance": 235.83658210240054,
+        "actual_rate": 0.015941777854791197,
+        "expected_rate": 0.01605484096439527,
+        "rate_difference_ci95": [
+          -0.0014187037375625005,
+          0.0011925775183543575
+        ],
+        "z": -0.16995204916151677,
+        "log_loss": 0.042701035397499795
+      },
+      "halves": [
+        {
+          "rows": 11529,
+          "actual_fraud": 184,
+          "expected_fraud": 186.57842034611784,
+          "bernoulli_variance": 117.12696935575727,
+          "actual_rate": 0.015959753664671696,
+          "expected_rate": 0.016183400151454405,
+          "rate_difference_ci95": [
+            -0.0021588694480324582,
+            0.0017115764744670425
+          ],
+          "z": -0.23824580722873176,
+          "log_loss": 0.04704851473747066
+        },
+        {
+          "rows": 11555,
+          "actual_fraud": 184,
+          "expected_fraud": 184.03152847598255,
+          "bernoulli_variance": 118.7096127466433,
+          "actual_rate": 0.01592384249242752,
+          "expected_rate": 0.015926571049414327,
+          "rate_difference_ci95": [
+            -0.0017564357617519762,
+            0.0017509786477783644
+          ],
+          "z": -0.0028937435096841307,
+          "log_loss": 0.0383633383563467
+        }
+      ],
+      "half_shifts": [
+        -0.018232007810278738,
+        -0.00021940305529955778
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -4.882421084471021e-08,
+          "ci95": [
+            -4.7341774001498133e-07,
+            3.7576931832556087e-07
+          ]
+        },
+        {
+          "delta": 1.651022452629103e-06,
+          "ci95": [
+            -3.0327660779200426e-05,
+            3.3629705684458635e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.8650478471665279,
+      "eligible": true
+    },
+    "account_balance_usd_whole_grid": {
+      "rule": [
+        1.0
+      ],
+      "family": "grid",
+      "train_rows": 11930,
+      "test_rows": 5043,
+      "train_share": 0.01704383107606149,
+      "test_share": 0.016810896581150994,
+      "dev_share": 0.01706988298491006,
+      "test_over_dev_share": 0.984827874685022,
+      "dev": {
+        "rows": 10156,
+        "actual_fraud": 189,
+        "expected_fraud": 185.96720733991287,
+        "bernoulli_variance": 117.3955298253018,
+        "actual_rate": 0.01860968885387948,
+        "expected_rate": 0.018311068072067043,
+        "rate_difference_ci95": [
+          -0.0017734000945146982,
+          0.0023706416581395742
+        ],
+        "z": 0.2799090499819746,
+        "log_loss": 0.045758672038511486
+      },
+      "halves": [
+        {
+          "rows": 5066,
+          "actual_fraud": 98,
+          "expected_fraud": 89.86013020415098,
+          "bernoulli_variance": 56.51424152749178,
+          "actual_rate": 0.01934465061192262,
+          "expected_rate": 0.017737885946338527,
+          "rate_difference_ci95": [
+            -0.0013943490429005724,
+            0.004607878374068763
+          ],
+          "z": 1.0827757142819818,
+          "log_loss": 0.046461482930219324
+        },
+        {
+          "rows": 5090,
+          "actual_fraud": 91,
+          "expected_fraud": 96.1070771357619,
+          "bernoulli_variance": 60.88128829781002,
+          "actual_rate": 0.01787819253438114,
+          "expected_rate": 0.0188815475708766,
+          "rate_difference_ci95": [
+            -0.003861566741984219,
+            0.0018548566689932935
+          ],
+          "z": -0.6545314218689621,
+          "log_loss": 0.04505917498990797
+        }
+      ],
+      "half_shifts": [
+        0.09770927809666939,
+        -0.06025177656500899
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.0001168025784311374,
+          "ci95": [
+            -6.413926482792899e-05,
+            0.00029774442169020377
+          ]
+        },
+        {
+          "delta": 0.00015629860391570575,
+          "ci95": [
+            -0.00012314353000218218,
+            0.0004357407378335937
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.7795472837751724,
+      "eligible": true
+    },
+    "account_balance_usd_peak": {
+      "rule": {
+        "selected_values": 4728,
+        "examples": [
+          511.73,
+          844.48,
+          686.23,
+          454.85,
+          519.05,
+          607.9
+        ],
+        "neighborhood_tick_widths": [
+          5,
+          25
+        ]
+      },
+      "family": "local_mass",
+      "train_rows": 468535,
+      "test_rows": 199138,
+      "train_share": 0.6693739642265273,
+      "test_share": 0.6638287375326684,
+      "dev_share": 0.670419822309174,
+      "test_over_dev_share": 0.9901687203194508,
+      "dev": {
+        "rows": 398877,
+        "actual_fraud": 6438,
+        "expected_fraud": 6503.419765794687,
+        "bernoulli_variance": 4193.174029507259,
+        "actual_rate": 0.0161403139313623,
+        "expected_rate": 0.016304323803565227,
+        "rate_difference_ci95": [
+          -0.00048102777142043824,
+          0.0001530080270145853
+        ],
+        "z": -1.0102701966760523,
+        "log_loss": 0.04316531702572056
+      },
+      "halves": [
+        {
+          "rows": 199475,
+          "actual_fraud": 3204,
+          "expected_fraud": 3242.7658870580544,
+          "bernoulli_variance": 2100.2118021924994,
+          "actual_rate": 0.01606216317834315,
+          "expected_rate": 0.016256502755022207,
+          "rate_difference_ci95": [
+            -0.0006438948647829155,
+            0.00025521571142480377
+          ],
+          "z": -0.8458983518820469,
+          "log_loss": 0.04332152446279783
+        },
+        {
+          "rows": 199402,
+          "actual_fraud": 3234,
+          "expected_fraud": 3260.653878736632,
+          "bernoulli_variance": 2092.9622273147593,
+          "actual_rate": 0.016218493294951907,
+          "expected_rate": 0.01635216235913698,
+          "rate_difference_ci95": [
+            -0.0005807726214202599,
+            0.0003134344930501125
+          ],
+          "z": -0.5826123981513115,
+          "log_loss": 0.04300905240194052
+        }
+      ],
+      "half_shifts": [
+        -0.018347980080217815,
+        -0.012635217088189397
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -1.6173579584793871e-06,
+          "ci95": [
+            -7.297525389800877e-06,
+            4.062809472842103e-06
+          ]
+        },
+        {
+          "delta": -6.927148703485355e-07,
+          "ci95": [
+            -8.896107558778372e-06,
+            7.5106778180813005e-06
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.3123658558853888,
+      "eligible": true
+    },
+    "account_balance_usd_hole": {
+      "rule": {
+        "selected_values": 0,
+        "examples": [],
+        "neighborhood_tick_widths": [
+          5,
+          25
+        ]
+      },
+      "family": "local_mass",
+      "train_rows": 0,
+      "test_rows": 0,
+      "train_share": 0.0,
+      "test_share": 0.0,
+      "dev_share": 0.0,
+      "test_over_dev_share": null,
+      "dev": {
+        "rows": 0,
+        "actual_fraud": 0,
+        "expected_fraud": 0.0,
+        "bernoulli_variance": 0.0,
+        "actual_rate": null,
+        "expected_rate": null,
+        "rate_difference_ci95": [
+          null,
+          null
+        ],
+        "z": null,
+        "log_loss": null
+      },
+      "halves": [
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        },
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        }
+      ],
+      "half_shifts": [
+        0.0,
+        0.0
+      ],
+      "cross_log_loss": [
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        },
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        }
+      ],
+      "pooled_two_sided_p": null,
+      "eligible": false
+    },
+    "account_balance_usd_upper_shoulder": {
+      "rule": [
+        9082.81,
+        57720.99
+      ],
+      "family": "tail",
+      "train_rows": 6203,
+      "test_rows": 2693,
+      "train_share": 0.008861934967712442,
+      "test_share": 0.008977145447757214,
+      "dev_share": 0.008788737507689515,
+      "test_over_dev_share": 1.0214374294263375,
+      "dev": {
+        "rows": 5229,
+        "actual_fraud": 91,
+        "expected_fraud": 88.86062088163517,
+        "bernoulli_variance": 61.03944557791914,
+        "actual_rate": 0.01740294511378849,
+        "expected_rate": 0.016993807780002902,
+        "rate_difference_ci95": [
+          -0.002517764135374552,
+          0.0033360388029457237
+        ],
+        "z": 0.27383090540165406,
+        "log_loss": 0.04813474484988879
+      },
+      "halves": [
+        {
+          "rows": 2637,
+          "actual_fraud": 46,
+          "expected_fraud": 45.48614640480194,
+          "bernoulli_variance": 30.8932391535023,
+          "actual_rate": 0.017444065225635193,
+          "expected_rate": 0.017249202277133842,
+          "rate_difference_ci95": [
+            -0.004104883893288335,
+            0.00449460979029103
+          ],
+          "z": 0.09245016193858184,
+          "log_loss": 0.05206925075554916
+        },
+        {
+          "rows": 2592,
+          "actual_fraud": 45,
+          "expected_fraud": 43.37447447683323,
+          "bernoulli_variance": 30.146206424416846,
+          "actual_rate": 0.017361111111111112,
+          "expected_rate": 0.016733979350630104,
+          "rate_difference_ci95": [
+            -0.003339692013691375,
+            0.004593955534653395
+          ],
+          "z": 0.29605844833614986,
+          "log_loss": 0.04413193155003293
+        }
+      ],
+      "half_shifts": [
+        0.00917758414853823,
+        0.02931157133406552
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -6.453557637885026e-07,
+          "ci95": [
+            -0.0001267091352268026,
+            0.00012541842369922558
+          ]
+        },
+        {
+          "delta": -5.264699849524308e-06,
+          "ci95": [
+            -4.1665669713680815e-05,
+            3.1136270014632196e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.7842145719642389,
+      "eligible": true
+    },
+    "account_balance_usd_upper_extreme": {
+      "rule": [
+        57720.99
+      ],
+      "family": "tail",
+      "train_rows": 687,
+      "test_rows": 306,
+      "train_share": 0.0009814846562660724,
+      "test_share": 0.001020054402901488,
+      "dev_share": 0.0009866109996201464,
+      "test_over_dev_share": 1.0338972536229756,
+      "dev": {
+        "rows": 587,
+        "actual_fraud": 6,
+        "expected_fraud": 8.142926623163369,
+        "bernoulli_variance": 5.025109912996073,
+        "actual_rate": 0.010221465076660987,
+        "expected_rate": 0.013872106683412894,
+        "rate_difference_ci95": [
+          -0.010738017098652065,
+          0.0034367338851482468
+        ],
+        "z": -0.9559485476725256,
+        "log_loss": 0.03644965103584817
+      },
+      "halves": [
+        {
+          "rows": 290,
+          "actual_fraud": 3,
+          "expected_fraud": 4.782399563638295,
+          "bernoulli_variance": 2.1796644535643708,
+          "actual_rate": 0.010344827586206896,
+          "expected_rate": 0.016491032978063085,
+          "rate_difference_ci95": [
+            -0.015350473903183545,
+            0.003058063119471162
+          ],
+          "z": -1.2072862275530456,
+          "log_loss": 0.03589716679431072
+        },
+        {
+          "rows": 297,
+          "actual_fraud": 3,
+          "expected_fraud": 3.360527059525076,
+          "bernoulli_variance": 2.845445459431702,
+          "actual_rate": 0.010101010101010102,
+          "expected_rate": 0.011314905924326855,
+          "rate_difference_ci95": [
+            -0.01196665545040972,
+            0.009538863803776217
+          ],
+          "z": -0.2137286456037823,
+          "log_loss": 0.036989113763275315
+        }
+      ],
+      "half_shifts": [
+        -0.06569075644673115,
+        -0.012953773012080783
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -7.898774669763692e-05,
+          "ci95": [
+            -0.0001981211110870971,
+            4.014561769182326e-05
+          ]
+        },
+        {
+          "delta": -5.940255659975916e-05,
+          "ci95": [
+            -0.0007652081011815675,
+            0.0006464029879820492
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.33909822992279215,
+      "eligible": false
+    },
+    "account_balance_usd_lower_extreme": {
+      "rule": [
+        434.90475000000004
+      ],
+      "family": "tail",
+      "train_rows": 3493,
+      "test_rows": 1499,
+      "train_share": 0.004990285159151952,
+      "test_share": 0.004996933169769054,
+      "dev_share": 0.005000285730613178,
+      "test_over_dev_share": 0.9993295261461563,
+      "dev": {
+        "rows": 2975,
+        "actual_fraud": 59,
+        "expected_fraud": 55.64386160901583,
+        "bernoulli_variance": 34.36504988550596,
+        "actual_rate": 0.019831932773109243,
+        "expected_rate": 0.018703819028240615,
+        "rate_difference_ci95": [
+          -0.0028686148450495106,
+          0.005124842334786768
+        ],
+        "z": 0.5725077517529501,
+        "log_loss": 0.04990351447901185
+      },
+      "halves": [
+        {
+          "rows": 1487,
+          "actual_fraud": 26,
+          "expected_fraud": 27.288929336207772,
+          "bernoulli_variance": 17.84662768370636,
+          "actual_rate": 0.017484868863483525,
+          "expected_rate": 0.01835166734109467,
+          "rate_difference_ci95": [
+            -0.006281354728330724,
+            0.004547757773108439
+          ],
+          "z": -0.30510619558719276,
+          "log_loss": 0.04103340121394285
+        },
+        {
+          "rows": 1488,
+          "actual_fraud": 33,
+          "expected_fraud": 28.354932272808057,
+          "bernoulli_variance": 16.518422201799602,
+          "actual_rate": 0.02217741935483871,
+          "expected_rate": 0.01905573405430649,
+          "rate_difference_ci95": [
+            -0.0027583938913225436,
+            0.009001764492386983
+          ],
+          "z": 1.1428987808929372,
+          "log_loss": 0.05876766664645648
+        }
+      ],
+      "half_shifts": [
+        -0.03020291261277464,
+        0.11040306830578914
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.0001705884671131271,
+          "ci95": [
+            -0.0004262898738701729,
+            0.0007674668080964271
+          ]
+        },
+        {
+          "delta": 9.931715602688755e-05,
+          "ci95": [
+            -7.83057523864818e-05,
+            0.0002769400644402569
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.5669780357467523,
+      "eligible": true
+    },
+    "account_balance_usd_below_largest_gap": {
+      "rule": {
+        "quantiles": [
+          9082.81,
+          57720.99
+        ],
+        "gap": [
+          30449.08,
+          34197.07
+        ],
+        "relative_step": 0.1230904184954027
+      },
+      "family": "tail_gap",
+      "train_rows": 5063,
+      "test_rows": 2198,
+      "train_share": 0.007233270472598434,
+      "test_share": 0.00732705744306363,
+      "dev_share": 0.007186965305580487,
+      "test_over_dev_share": 1.0194925300911588,
+      "dev": {
+        "rows": 4276,
+        "actual_fraud": 68,
+        "expected_fraud": 71.60895436220616,
+        "bernoulli_variance": 49.59785736612312,
+        "actual_rate": 0.015902712815715623,
+        "expected_rate": 0.016746715239056634,
+        "rate_difference_ci95": [
+          -0.003934040829779867,
+          0.0022460359830978466
+        ],
+        "z": -0.5124481533728937,
+        "log_loss": 0.043217750040176
+      },
+      "halves": [
+        {
+          "rows": 2149,
+          "actual_fraud": 32,
+          "expected_fraud": 34.635706551608564,
+          "bernoulli_variance": 24.571597437131445,
+          "actual_rate": 0.014890646812470917,
+          "expected_rate": 0.016117127292512128,
+          "rate_difference_ci95": [
+            -0.005800929222213031,
+            0.0033479682621306104
+          ],
+          "z": -0.5317167729865655,
+          "log_loss": 0.04873677690044091
+        },
+        {
+          "rows": 2127,
+          "actual_fraud": 36,
+          "expected_fraud": 36.9732478105976,
+          "bernoulli_variance": 25.026259928991678,
+          "actual_rate": 0.01692524682651622,
+          "expected_rate": 0.01738281514367541,
+          "rate_difference_ci95": [
+            -0.004609339018865493,
+            0.0036942023845471105
+          ],
+          "z": -0.19454741291181718,
+          "log_loss": 0.037641638746001446
+        }
+      ],
+      "half_shifts": [
+        -0.053657655123675776,
+        -0.019519951760220554
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -2.1772277761326276e-05,
+          "ci95": [
+            -0.00011103675175616189,
+            6.749219623350934e-05
+          ]
+        },
+        {
+          "delta": -7.820451774207328e-06,
+          "ci95": [
+            -0.0002308433893803229,
+            0.00021520248583190824
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.608337397296965,
+      "eligible": true
+    },
+    "account_balance_usd_above_largest_gap": {
+      "rule": {
+        "quantiles": [
+          9082.81,
+          57720.99
+        ],
+        "gap": [
+          30449.08,
+          34197.07
+        ],
+        "relative_step": 0.1230904184954027
+      },
+      "family": "tail_gap",
+      "train_rows": 1140,
+      "test_rows": 495,
+      "train_share": 0.0016286644951140066,
+      "test_share": 0.0016500880046935837,
+      "dev_share": 0.001601772202109028,
+      "test_over_dev_share": 1.0301639662125108,
+      "dev": {
+        "rows": 953,
+        "actual_fraud": 23,
+        "expected_fraud": 17.251666519429012,
+        "bernoulli_variance": 11.441588211796018,
+        "actual_rate": 0.024134312696747113,
+        "expected_rate": 0.018102483231300117,
+        "rate_difference_ci95": [
+          -0.0020669365390258215,
+          0.014130595469919818
+        ],
+        "z": 1.6994124613011352,
+        "log_loss": 0.07019672785758227
+      },
+      "halves": [
+        {
+          "rows": 488,
+          "actual_fraud": 14,
+          "expected_fraud": 10.850439853193388,
+          "bernoulli_variance": 6.321641716370856,
+          "actual_rate": 0.028688524590163935,
+          "expected_rate": 0.02223450789588809,
+          "rate_difference_ci95": [
+            -0.005118493519859755,
+            0.018026526908411448
+          ],
+          "z": 1.2526650695087658,
+          "log_loss": 0.0667444276297861
+        },
+        {
+          "rows": 465,
+          "actual_fraud": 9,
+          "expected_fraud": 6.401226666235622,
+          "bernoulli_variance": 5.119946495425165,
+          "actual_rate": 0.01935483870967742,
+          "expected_rate": 0.013766078852119617,
+          "rate_difference_ci95": [
+            -0.005737510719441197,
+            0.016915030434556805
+          ],
+          "z": 1.1485124054771965,
+          "log_loss": 0.07381978702137694
+        }
+      ],
+      "half_shifts": [
+        0.09989350949618746,
+        0.08579885287709196
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.0005051768430177053,
+          "ci95": [
+            -0.001496688941198582,
+            0.0004863352551631715
+          ]
+        },
+        {
+          "delta": -0.0005019393384973431,
+          "ci95": [
+            -0.0016335143891706607,
+            0.0006296357121759746
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.08924149566624202,
+      "eligible": false
+    },
+    "velocity_score_off_nominal_grid": {
+      "rule": {},
+      "family": "precision",
+      "train_rows": 0,
+      "test_rows": 1,
+      "train_share": 0.0,
+      "test_share": 3.3335111205930984e-06,
+      "dev_share": 0.0,
+      "test_over_dev_share": null,
+      "dev": {
+        "rows": 0,
+        "actual_fraud": 0,
+        "expected_fraud": 0.0,
+        "bernoulli_variance": 0.0,
+        "actual_rate": null,
+        "expected_rate": null,
+        "rate_difference_ci95": [
+          null,
+          null
+        ],
+        "z": null,
+        "log_loss": null
+      },
+      "halves": [
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        },
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        }
+      ],
+      "half_shifts": [
+        0.0,
+        0.0
+      ],
+      "cross_log_loss": [
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        },
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        }
+      ],
+      "pooled_two_sided_p": null,
+      "eligible": false
+    },
+    "velocity_score_intermediate_grid": {
+      "rule": [
+        2.0,
+        5.0
+      ],
+      "family": "grid",
+      "train_rows": 25185,
+      "test_rows": 10820,
+      "train_share": 0.03598062746442654,
+      "test_share": 0.03606859032481732,
+      "dev_share": 0.03607769183449138,
+      "test_over_dev_share": 0.9997477247237486,
+      "dev": {
+        "rows": 21465,
+        "actual_fraud": 401,
+        "expected_fraud": 392.08394264110456,
+        "bernoulli_variance": 254.27754299128244,
+        "actual_rate": 0.018681574656417423,
+        "expected_rate": 0.018266198119781252,
+        "rate_difference_ci95": [
+          -0.0010531707909875497,
+          0.0018839238642598933
+        ],
+        "z": 0.5591377964383446,
+        "log_loss": 0.04954900564568959
+      },
+      "halves": [
+        {
+          "rows": 10739,
+          "actual_fraud": 201,
+          "expected_fraud": 197.73870404992095,
+          "bernoulli_variance": 127.52540744103628,
+          "actual_rate": 0.018716826520160164,
+          "expected_rate": 0.0184131394031028,
+          "rate_difference_ci95": [
+            -0.0017675551601568536,
+            0.0023749293942715846
+          ],
+          "z": 0.2887964505687572,
+          "log_loss": 0.048914358035475634
+        },
+        {
+          "rows": 10726,
+          "actual_fraud": 200,
+          "expected_fraud": 194.34523859118363,
+          "bernoulli_variance": 126.75213555024618,
+          "actual_rate": 0.018646280067126608,
+          "expected_rate": 0.018119078742418762,
+          "rate_difference_ci95": [
+            -0.0015553276791663523,
+            0.002609730328582049
+          ],
+          "z": 0.5022693105519309,
+          "log_loss": 0.050184422454014006
+        }
+      ],
+      "half_shifts": [
+        0.021260137894920043,
+        0.03689062285827685
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -3.0586128028160852e-06,
+          "ci95": [
+            -7.947672953434545e-05,
+            7.335950392871328e-05
+          ]
+        },
+        {
+          "delta": -8.525355455855095e-06,
+          "ci95": [
+            -5.2797948458274955e-05,
+            3.5747237546564764e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.5760676814130725,
+      "eligible": true
+    },
+    "velocity_score_whole_grid": {
+      "rule": [
+        5.0
+      ],
+      "family": "grid",
+      "train_rows": 12313,
+      "test_rows": 5256,
+      "train_share": 0.01759100520029716,
+      "test_share": 0.017520934449837326,
+      "dev_share": 0.017616132686573686,
+      "test_over_dev_share": 0.9945959627785435,
+      "dev": {
+        "rows": 10481,
+        "actual_fraud": 192,
+        "expected_fraud": 187.67628408481903,
+        "bernoulli_variance": 117.06978608700425,
+        "actual_rate": 0.018318862703940463,
+        "expected_rate": 0.017906333754872533,
+        "rate_difference_ci95": [
+          -0.0016461263633976372,
+          0.0024711842615334997
+        ],
+        "z": 0.39960851982298934,
+        "log_loss": 0.04632378108740456
+      },
+      "halves": [
+        {
+          "rows": 5267,
+          "actual_fraud": 91,
+          "expected_fraud": 96.12759432878637,
+          "bernoulli_variance": 58.492201531721264,
+          "actual_rate": 0.017277387507119803,
+          "expected_rate": 0.018250919751051142,
+          "rate_difference_ci95": [
+            -0.0037461919270569415,
+            0.0017991274391942597
+          ],
+          "z": -0.6704473440804537,
+          "log_loss": 0.04429134861082323
+        },
+        {
+          "rows": 5214,
+          "actual_fraud": 101,
+          "expected_fraud": 91.54868975603264,
+          "bernoulli_variance": 58.57758455528299,
+          "actual_rate": 0.019370924434215574,
+          "expected_rate": 0.017558245062530235,
+          "rate_difference_ci95": [
+            -0.0012334721718099799,
+            0.0048588309151806576
+          ],
+          "z": 1.2348843579498205,
+          "log_loss": 0.04837687311927143
+        }
+      ],
+      "half_shifts": [
+        -0.06225454226885851,
+        0.11033220441765919
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.00017659300051182638,
+          "ci95": [
+            -0.00012946533237842187,
+            0.0004826513334020746
+          ]
+        },
+        {
+          "delta": 0.00013433620232780098,
+          "ci95": [
+            -5.5446922856522196e-05,
+            0.0003241193275121242
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.6894448802685424,
+      "eligible": true
+    },
+    "velocity_score_peak": {
+      "rule": {
+        "selected_values": 0,
+        "examples": [],
+        "neighborhood_tick_widths": [
+          5,
+          25
+        ]
+      },
+      "family": "local_mass",
+      "train_rows": 0,
+      "test_rows": 0,
+      "train_share": 0.0,
+      "test_share": 0.0,
+      "dev_share": 0.0,
+      "test_over_dev_share": null,
+      "dev": {
+        "rows": 0,
+        "actual_fraud": 0,
+        "expected_fraud": 0.0,
+        "bernoulli_variance": 0.0,
+        "actual_rate": null,
+        "expected_rate": null,
+        "rate_difference_ci95": [
+          null,
+          null
+        ],
+        "z": null,
+        "log_loss": null
+      },
+      "halves": [
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        },
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        }
+      ],
+      "half_shifts": [
+        0.0,
+        0.0
+      ],
+      "cross_log_loss": [
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        },
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        }
+      ],
+      "pooled_two_sided_p": null,
+      "eligible": false
+    },
+    "velocity_score_hole": {
+      "rule": {
+        "selected_values": 3,
+        "examples": [
+          41.7,
+          45.0,
+          50.0
+        ],
+        "neighborhood_tick_widths": [
+          5,
+          25
+        ]
+      },
+      "family": "local_mass",
+      "train_rows": 187,
+      "test_rows": 72,
+      "train_share": 0.00026715812332133267,
+      "test_share": 0.0002400128006827031,
+      "dev_share": 0.00026556139342416205,
+      "test_over_dev_share": 0.9037940251328173,
+      "dev": {
+        "rows": 158,
+        "actual_fraud": 6,
+        "expected_fraud": 9.455469605131427,
+        "bernoulli_variance": 4.77225132952222,
+        "actual_rate": 0.0379746835443038,
+        "expected_rate": 0.059844744336274854,
+        "rate_difference_ci95": [
+          -0.04115802190343154,
+          -0.0025820996805105863
+        ],
+        "z": -1.581777608398146,
+        "log_loss": 0.06886010337888088
+      },
+      "halves": [
+        {
+          "rows": 85,
+          "actual_fraud": 5,
+          "expected_fraud": 6.346659520301734,
+          "bernoulli_variance": 2.9647807531222288,
+          "actual_rate": 0.058823529411764705,
+          "expected_rate": 0.0746665825917851,
+          "rate_difference_ci95": [
+            -0.043859449527309,
+            0.012173343167268195
+          ],
+          "z": -0.782098610673343,
+          "log_loss": 0.07954523794500162
+        },
+        {
+          "rows": 73,
+          "actual_fraud": 1,
+          "expected_fraud": 3.1088100848296936,
+          "bernoulli_variance": 1.8074705763999912,
+          "actual_rate": 0.0136986301369863,
+          "expected_rate": 0.04258643951821498,
+          "rate_difference_ci95": [
+            -0.05505345367890534,
+            -0.002722165083552018
+          ],
+          "z": -1.5685625856145398,
+          "log_loss": 0.056418508336137534
+        }
+      ],
+      "half_shifts": [
+        -0.048223293111820595,
+        -0.07879005192103582
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.001141569728144219,
+          "ci95": [
+            -0.003342397183862267,
+            0.0010592577275738287
+          ]
+        },
+        {
+          "delta": -0.0013645554791477186,
+          "ci95": [
+            -0.0026240031435325493,
+            -0.0001051078147628877
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.11370034844543549,
+      "eligible": false
+    },
+    "velocity_score_upper_shoulder": {
+      "rule": [
+        46.1,
+        55.50350000000326
+      ],
+      "family": "tail",
+      "train_rows": 6082,
+      "test_rows": 2527,
+      "train_share": 0.008689067946739813,
+      "test_share": 0.008423782601738759,
+      "dev_share": 0.008699656787110524,
+      "test_over_dev_share": 0.9682890725320908,
+      "dev": {
+        "rows": 5176,
+        "actual_fraud": 467,
+        "expected_fraud": 456.62220082601505,
+        "bernoulli_variance": 217.77357287627342,
+        "actual_rate": 0.0902241112828439,
+        "expected_rate": 0.08821912689838003,
+        "rate_difference_ci95": [
+          -0.003727107077881738,
+          0.007737075846809447
+        ],
+        "z": 0.7032385568099998,
+        "log_loss": 0.15717459678456155
+      },
+      "halves": [
+        {
+          "rows": 2689,
+          "actual_fraud": 230,
+          "expected_fraud": 229.48308182930828,
+          "bernoulli_variance": 109.16454079945662,
+          "actual_rate": 0.0855336556340647,
+          "expected_rate": 0.08534142128274759,
+          "rate_difference_ci95": [
+            -0.007434819658945398,
+            0.00781928836157962
+          ],
+          "z": 0.04947445315526386,
+          "log_loss": 0.14818913587744859
+        },
+        {
+          "rows": 2487,
+          "actual_fraud": 237,
+          "expected_fraud": 227.1391189967068,
+          "bernoulli_variance": 108.6090320768168,
+          "actual_rate": 0.09529553679131483,
+          "expected_rate": 0.09133056654471523,
+          "rate_difference_ci95": [
+            -0.0046565096550204,
+            0.012586450148219597
+          ],
+          "z": 0.9461995699395607,
+          "log_loss": 0.1668898779985651
+        }
+      ],
+      "half_shifts": [
+        0.0038499173673217078,
+        0.07283180991144433
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 9.495987384463348e-05,
+          "ci95": [
+            -0.00046069445197989583,
+            0.0006506141996691628
+          ]
+        },
+        {
+          "delta": -1.4940981667915865e-05,
+          "ci95": [
+            -4.8132911427034166e-05,
+            1.825094809120244e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.4819070945376409,
+      "eligible": true
+    },
+    "velocity_score_upper_extreme": {
+      "rule": [
+        55.50350000000326
+      ],
+      "family": "tail",
+      "train_rows": 698,
+      "test_rows": 306,
+      "train_share": 0.0009971998399908566,
+      "test_share": 0.001020054402901488,
+      "dev_share": 0.0010000571461226356,
+      "test_over_dev_share": 1.019996114078465,
+      "dev": {
+        "rows": 595,
+        "actual_fraud": 39,
+        "expected_fraud": 40.07840942080086,
+        "bernoulli_variance": 20.521285462837927,
+        "actual_rate": 0.06554621848739496,
+        "expected_rate": 0.06735867129546363,
+        "rate_difference_ci95": [
+          -0.015385709290786118,
+          0.011760803674648778
+        ],
+        "z": -0.2380572389775247,
+        "log_loss": 0.1027521222176552
+      },
+      "halves": [
+        {
+          "rows": 310,
+          "actual_fraud": 15,
+          "expected_fraud": 19.96140603879291,
+          "bernoulli_variance": 10.358193154427818,
+          "actual_rate": 0.04838709677419355,
+          "expected_rate": 0.06439163238320293,
+          "rate_difference_ci95": [
+            -0.03141204201474385,
+            -0.0005970292032749357
+          ],
+          "z": -1.5415682898785237,
+          "log_loss": 0.07848035145355653
+        },
+        {
+          "rows": 285,
+          "actual_fraud": 24,
+          "expected_fraud": 20.117003382007944,
+          "bernoulli_variance": 10.163092308410107,
+          "actual_rate": 0.08421052631578947,
+          "expected_rate": 0.07058597677897524,
+          "rate_difference_ci95": [
+            -0.009120449708992688,
+            0.03636954878262114
+          ],
+          "z": 1.21801903996185,
+          "log_loss": 0.129152995680359
+        }
+      ],
+      "half_shifts": [
+        -0.14185003959613757,
+        0.10960796272593105
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.0019588777201786276,
+          "ci95": [
+            0.0002659923390629661,
+            0.003651763101294289
+          ]
+        },
+        {
+          "delta": 0.0022837056610986567,
+          "ci95": [
+            -0.000955194047919993,
+            0.0055226053701173065
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.8118366997317299,
+      "eligible": false
+    },
+    "velocity_score_lower_extreme": {
+      "rule": [
+        0.0
+      ],
+      "family": "tail",
+      "train_rows": 48499,
+      "test_rows": 20927,
+      "train_share": 0.06928824504257386,
+      "test_share": 0.06976038722065177,
+      "dev_share": 0.06960565813844825,
+      "test_over_dev_share": 1.0022229382832033,
+      "dev": {
+        "rows": 41413,
+        "actual_fraud": 16,
+        "expected_fraud": 17.40658759105152,
+        "bernoulli_variance": 16.84418231017292,
+        "actual_rate": 0.0003863521116557603,
+        "expected_rate": 0.00042031699203273174,
+        "rate_difference_ci95": [
+          -0.00022013684816649584,
+          0.00015220708741255282
+        ],
+        "z": -0.3427218670700188,
+        "log_loss": 0.002515858721548515
+      },
+      "halves": [
+        {
+          "rows": 20621,
+          "actual_fraud": 6,
+          "expected_fraud": 8.488652197553408,
+          "bernoulli_variance": 8.290305892514635,
+          "actual_rate": 0.0002909655205858106,
+          "expected_rate": 0.0004116508509555021,
+          "rate_difference_ci95": [
+            -0.00035595513049461146,
+            0.0001145844697552284
+          ],
+          "z": -0.8643286885873768,
+          "log_loss": 0.002162617879515771
+        },
+        {
+          "rows": 20792,
+          "actual_fraud": 10,
+          "expected_fraud": 8.91793539349811,
+          "bernoulli_variance": 8.553876417658287,
+          "actual_rate": 0.00048095421315890726,
+          "expected_rate": 0.0004289118600181854,
+          "rate_difference_ci95": [
+            -0.00023615469966569764,
+            0.0003402394059471414
+          ],
+          "z": 0.36997442687376825,
+          "log_loss": 0.002866194398903133
+        }
+      ],
+      "half_shifts": [
+        -0.07541854235948556,
+        0.03212484038359153
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 4.086589054617439e-06,
+          "ci95": [
+            -3.4742562435506567e-06,
+            1.1647434352785536e-05
+          ]
+        },
+        {
+          "delta": 5.068030393232229e-06,
+          "ci95": [
+            -1.6676936761401072e-05,
+            2.681299754786553e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.7318077104251971,
+      "eligible": false
+    },
+    "merchant_risk_score_off_nominal_grid": {
+      "rule": {},
+      "family": "precision",
+      "train_rows": 1,
+      "test_rows": 0,
+      "train_share": 1.4286530658894793e-06,
+      "test_share": 0.0,
+      "dev_share": 1.6807683128111523e-06,
+      "test_over_dev_share": 0.0,
+      "dev": {
+        "rows": 1,
+        "actual_fraud": 0,
+        "expected_fraud": 0.003004296685941768,
+        "bernoulli_variance": 0.002995270887364607,
+        "actual_rate": 0.0,
+        "expected_rate": 0.003004296685941768,
+        "rate_difference_ci95": [
+          null,
+          null
+        ],
+        "z": -0.05489398584914566,
+        "log_loss": 0.003008818644371265
+      },
+      "halves": [
+        {
+          "rows": 1,
+          "actual_fraud": 0,
+          "expected_fraud": 0.003004296685941768,
+          "bernoulli_variance": 0.002995270887364607,
+          "actual_rate": 0.0,
+          "expected_rate": 0.003004296685941768,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": -0.05489398584914566,
+          "log_loss": 0.003008818644371265
+        },
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        }
+      ],
+      "half_shifts": [
+        -0.00012015747213021651,
+        0.0
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.0,
+          "ci95": [
+            null,
+            null
+          ]
+        },
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.956222923253405,
+      "eligible": false
+    },
+    "merchant_risk_score_intermediate_grid": {
+      "rule": [
+        2.0,
+        5.0
+      ],
+      "family": "grid",
+      "train_rows": 29117,
+      "test_rows": 12309,
+      "train_share": 0.04159809131950397,
+      "test_share": 0.04103218838338045,
+      "dev_share": 0.04174188104866496,
+      "test_over_dev_share": 0.9829980669903899,
+      "dev": {
+        "rows": 24835,
+        "actual_fraud": 460,
+        "expected_fraud": 442.32161801298315,
+        "bernoulli_variance": 282.71214363343415,
+        "actual_rate": 0.018522246829071873,
+        "expected_rate": 0.017810413449284603,
+        "rate_difference_ci95": [
+          -0.0006309572883560985,
+          0.0020546240479306374
+        ],
+        "z": 1.0514055905269017,
+        "log_loss": 0.048031583035876034
+      },
+      "halves": [
+        {
+          "rows": 12533,
+          "actual_fraud": 235,
+          "expected_fraud": 224.5914513521792,
+          "bernoulli_variance": 145.29154984920737,
+          "actual_rate": 0.018750498683475624,
+          "expected_rate": 0.017920007288931557,
+          "rate_difference_ci95": [
+            -0.0011270126757165141,
+            0.002787995464804652
+          ],
+          "z": 0.8635152228720913,
+          "log_loss": 0.052094700212457774
+        },
+        {
+          "rows": 12302,
+          "actual_fraud": 225,
+          "expected_fraud": 217.730166660804,
+          "bernoulli_variance": 137.42059378422678,
+          "actual_rate": 0.018289708990408063,
+          "expected_rate": 0.017698761718485126,
+          "rate_difference_ci95": [
+            -0.0012452503959283728,
+            0.002427144939774255
+          ],
+          "z": 0.6201525651175274,
+          "log_loss": 0.043892170942387246
+        }
+      ],
+      "half_shifts": [
+        0.060145869675528846,
+        0.044230075111912646
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -2.528808697051255e-05,
+          "ci95": [
+            -0.00011186917239803512,
+            6.129299845701003e-05
+          ]
+        },
+        {
+          "delta": -1.5078998444989726e-05,
+          "ci95": [
+            -0.00012546219608577122,
+            9.530419919579177e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.2930723492946987,
+      "eligible": true
+    },
+    "merchant_risk_score_whole_grid": {
+      "rule": [
+        5.0
+      ],
+      "family": "grid",
+      "train_rows": 14071,
+      "test_rows": 5954,
+      "train_share": 0.020102577290130864,
+      "test_share": 0.019847725212011308,
+      "dev_share": 0.0200599698134011,
+      "test_over_dev_share": 0.9894194954746143,
+      "dev": {
+        "rows": 11935,
+        "actual_fraud": 193,
+        "expected_fraud": 199.1350958597457,
+        "bernoulli_variance": 127.70083116326335,
+        "actual_rate": 0.016170925848345202,
+        "expected_rate": 0.016684968232907053,
+        "rate_difference_ci95": [
+          -0.0023932507982085648,
+          0.0013651660290848638
+        ],
+        "z": -0.5429058119408687,
+        "log_loss": 0.04422040191266993
+      },
+      "halves": [
+        {
+          "rows": 5996,
+          "actual_fraud": 92,
+          "expected_fraud": 100.61392146740934,
+          "bernoulli_variance": 62.301424084394206,
+          "actual_rate": 0.015343562374916611,
+          "expected_rate": 0.016780173693697355,
+          "rate_difference_ci95": [
+            -0.0038584270844166987,
+            0.0009852044468552097
+          ],
+          "z": -1.0913195143464696,
+          "log_loss": 0.03833823481322925
+        },
+        {
+          "rows": 5939,
+          "actual_fraud": 101,
+          "expected_fraud": 98.52117439233635,
+          "bernoulli_variance": 65.39940707886913,
+          "actual_rate": 0.017006230005051356,
+          "expected_rate": 0.016588849030533145,
+          "rate_difference_ci95": [
+            -0.002460701638688598,
+            0.0032954635877250203
+          ],
+          "z": 0.306520177606036,
+          "log_loss": 0.05015902355406519
+        }
+      ],
+      "half_shifts": [
+        -0.10097206029179383,
+        0.02724921847979594
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 4.30268594275375e-05,
+          "ci95": [
+            -2.2981987017384662e-05,
+            0.00010903570587245966
+          ]
+        },
+        {
+          "delta": 9.709646387262717e-05,
+          "ci95": [
+            -0.00019335173962245673,
+            0.0003875446673677111
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.587194654133653,
+      "eligible": true
+    },
+    "merchant_risk_score_peak": {
+      "rule": {
+        "selected_values": 2,
+        "examples": [
+          89.8,
+          92.0
+        ],
+        "neighborhood_tick_widths": [
+          5,
+          25
+        ]
+      },
+      "family": "local_mass",
+      "train_rows": 87,
+      "test_rows": 39,
+      "train_share": 0.0001242928167323847,
+      "test_share": 0.00013000693370313085,
+      "dev_share": 0.0001294191600864587,
+      "test_over_dev_share": 1.0045416275015189,
+      "dev": {
+        "rows": 77,
+        "actual_fraud": 2,
+        "expected_fraud": 1.8855315075692323,
+        "bernoulli_variance": 1.4666533219460098,
+        "actual_rate": 0.025974025974025976,
+        "expected_rate": 0.024487422176223794,
+        "rate_difference_ci95": [
+          -0.033081969902911235,
+          0.036055177498515584
+        ],
+        "z": 0.09451967681398936,
+        "log_loss": 0.0838882989558663
+      },
+      "halves": [
+        {
+          "rows": 32,
+          "actual_fraud": 1,
+          "expected_fraud": 0.4026686821361103,
+          "bernoulli_variance": 0.3873414318753916,
+          "actual_rate": 0.03125,
+          "expected_rate": 0.012583396316753447,
+          "rate_difference_ci95": [
+            -0.041265542970958406,
+            0.0785987503374515
+          ],
+          "z": 0.9597725139535763,
+          "log_loss": 0.1135310154851078
+        },
+        {
+          "rows": 45,
+          "actual_fraud": 1,
+          "expected_fraud": 1.4828628254331222,
+          "bernoulli_variance": 1.0793118900706182,
+          "actual_rate": 0.022222222222222223,
+          "expected_rate": 0.03295250723184716,
+          "rate_difference_ci95": [
+            -0.05197265471323555,
+            0.03051208469398567
+          ],
+          "z": -0.46478305966714956,
+          "log_loss": 0.0628090338684057
+        }
+      ],
+      "half_shifts": [
+        0.023524774386984602,
+        -0.01851931422759497
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.0003477565857468432,
+          "ci95": [
+            -0.0007623131575976603,
+            0.0014578263290913468
+          ]
+        },
+        {
+          "delta": 0.0002590948516058441,
+          "ci95": [
+            -0.0007113739079625399,
+            0.001229563611174228
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.9246963525803661,
+      "eligible": false
+    },
+    "merchant_risk_score_hole": {
+      "rule": {
+        "selected_values": 5,
+        "examples": [
+          59.6,
+          60.8,
+          63.8,
+          73.0,
+          77.0
+        ],
+        "neighborhood_tick_widths": [
+          5,
+          25
+        ]
+      },
+      "family": "local_mass",
+      "train_rows": 289,
+      "test_rows": 136,
+      "train_share": 0.00041288073604205957,
+      "test_share": 0.0004533575124006614,
+      "dev_share": 0.0004218728465155992,
+      "test_over_dev_share": 1.0746307000915216,
+      "dev": {
+        "rows": 251,
+        "actual_fraud": 12,
+        "expected_fraud": 14.26667948417313,
+        "bernoulli_variance": 7.358117113515325,
+        "actual_rate": 0.04780876494023904,
+        "expected_rate": 0.056839360494713664,
+        "rate_difference_ci95": [
+          -0.030502101983462884,
+          0.012440910874513643
+        ],
+        "z": -0.8356160362021272,
+        "log_loss": 0.1175851744817999
+      },
+      "halves": [
+        {
+          "rows": 126,
+          "actual_fraud": 5,
+          "expected_fraud": 7.686295574465414,
+          "bernoulli_variance": 3.585457150064173,
+          "actual_rate": 0.03968253968253968,
+          "expected_rate": 0.06100234582909059,
+          "rate_difference_ci95": [
+            -0.051169787194796854,
+            0.008530174901695026
+          ],
+          "z": -1.4186704681371267,
+          "log_loss": 0.10876806844630772
+        },
+        {
+          "rows": 125,
+          "actual_fraud": 7,
+          "expected_fraud": 6.580383909707714,
+          "bernoulli_variance": 3.772659963451154,
+          "actual_rate": 0.056,
+          "expected_rate": 0.05264307127766171,
+          "rate_difference_ci95": [
+            -0.02749022812134571,
+            0.03420408556602228
+          ],
+          "z": 0.21603708135595068,
+          "log_loss": 0.12647281736557606
+        }
+      ],
+      "half_shifts": [
+        -0.09424481666337871,
+        0.014577070564010459
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.00031381094080373253,
+          "ci95": [
+            -0.00012156168066634865,
+            0.0007491835622738137
+          ]
+        },
+        {
+          "delta": 0.00044838577713507855,
+          "ci95": [
+            -0.0024573475372791803,
+            0.003354119091549337
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.40337094431354925,
+      "eligible": false
+    },
+    "merchant_risk_score_upper_shoulder": {
+      "rule": [
+        71.9,
+        89.4
+      ],
+      "family": "tail",
+      "train_rows": 6378,
+      "test_rows": 2715,
+      "train_share": 0.0091119492542431,
+      "test_share": 0.009050482692410261,
+      "dev_share": 0.008966898948847498,
+      "test_over_dev_share": 1.0093213656181,
+      "dev": {
+        "rows": 5335,
+        "actual_fraud": 658,
+        "expected_fraud": 645.0513838831909,
+        "bernoulli_variance": 293.01535071950167,
+        "actual_rate": 0.12333645735707591,
+        "expected_rate": 0.12090935030612762,
+        "rate_difference_ci95": [
+          -0.004120533839774463,
+          0.008974747941671062
+        ],
+        "z": 0.7564464152450875,
+        "log_loss": 0.2048566448550376
+      },
+      "halves": [
+        {
+          "rows": 2634,
+          "actual_fraud": 303,
+          "expected_fraud": 299.9674721152875,
+          "bernoulli_variance": 140.30372756130157,
+          "actual_rate": 0.11503416856492027,
+          "expected_rate": 0.1138828671660165,
+          "rate_difference_ci95": [
+            -0.007999829236505036,
+            0.010302432034312614
+          ],
+          "z": 0.25601782179266663,
+          "log_loss": 0.19798727759727341
+        },
+        {
+          "rows": 2701,
+          "actual_fraud": 355,
+          "expected_fraud": 345.08391176790343,
+          "bernoulli_variance": 152.71162315820007,
+          "actual_rate": 0.1314328026656794,
+          "expected_rate": 0.12776153712251145,
+          "rate_difference_ci95": [
+            -0.005690663491135126,
+            0.013033194577470998
+          ],
+          "z": 0.8024247872844235,
+          "log_loss": 0.21155561314713342
+        }
+      ],
+      "half_shifts": [
+        0.018284793344328976,
+        0.05526900700880962
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 1.836378323329675e-05,
+          "ci95": [
+            -0.0004875515503692454,
+            0.000524279116835839
+          ]
+        },
+        {
+          "delta": -5.765375340052015e-05,
+          "ci95": [
+            -0.00022884158693658907,
+            0.00011353408013554876
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.4493815881832933,
+      "eligible": true
+    },
+    "merchant_risk_score_upper_extreme": {
+      "rule": [
+        89.4
+      ],
+      "family": "tail",
+      "train_rows": 669,
+      "test_rows": 270,
+      "train_share": 0.0009557689010800618,
+      "test_share": 0.0009000480025601365,
+      "dev_share": 0.0009664417798664125,
+      "test_over_dev_share": 0.9313007998107725,
+      "dev": {
+        "rows": 575,
+        "actual_fraud": 36,
+        "expected_fraud": 34.27454766822244,
+        "bernoulli_variance": 19.022257894629554,
+        "actual_rate": 0.06260869565217392,
+        "expected_rate": 0.059607908988212936,
+        "rate_difference_ci95": [
+          -0.012686982771018008,
+          0.018688556098939962
+        ],
+        "z": 0.39561425603022177,
+        "log_loss": 0.13049727045354984
+      },
+      "halves": [
+        {
+          "rows": 276,
+          "actual_fraud": 14,
+          "expected_fraud": 18.115393575049975,
+          "bernoulli_variance": 9.681236650956865,
+          "actual_rate": 0.050724637681159424,
+          "expected_rate": 0.06563548396757238,
+          "rate_difference_ci95": [
+            -0.03440370909747898,
+            0.0045820165246530774
+          ],
+          "z": -1.3226531089201818,
+          "log_loss": 0.11006228011777378
+        },
+        {
+          "rows": 299,
+          "actual_fraud": 22,
+          "expected_fraud": 16.15915409317246,
+          "bernoulli_variance": 9.341021243672685,
+          "actual_rate": 0.07357859531772576,
+          "expected_rate": 0.054043993622650374,
+          "rate_difference_ci95": [
+            -0.004561199861499176,
+            0.04363040325164992
+          ],
+          "z": 1.9110786862581548,
+          "log_loss": 0.14936033845580468
+        }
+      ],
+      "half_shifts": [
+        -0.11962810528619551,
+        0.16824164833047683
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.003019046140701055,
+          "ci95": [
+            -0.0002847847218157623,
+            0.006322877003217872
+          ]
+        },
+        {
+          "delta": 0.002556279803975555,
+          "ci95": [
+            -0.0003323892771567587,
+            0.005444948885107869
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.6923896185956002,
+      "eligible": false
+    },
+    "merchant_risk_score_lower_extreme": {
+      "rule": [
+        9.4
+      ],
+      "family": "tail",
+      "train_rows": 3641,
+      "test_rows": 1515,
+      "train_share": 0.005201725812903594,
+      "test_share": 0.005050269347698544,
+      "dev_share": 0.0052473586725964175,
+      "test_over_dev_share": 0.9624402795396578,
+      "dev": {
+        "rows": 3122,
+        "actual_fraud": 0,
+        "expected_fraud": 0.31754101483674246,
+        "bernoulli_variance": 0.31607956675335147,
+        "actual_rate": 0.0,
+        "expected_rate": 0.00010171076708415839,
+        "rate_difference_ci95": [
+          -0.00012544809106863555,
+          -7.797344309968122e-05
+        ],
+        "z": -0.5648090121235497,
+        "log_loss": 0.00010194727621560339
+      },
+      "halves": [
+        {
+          "rows": 1577,
+          "actual_fraud": 0,
+          "expected_fraud": 0.15330160038537194,
+          "bernoulli_variance": 0.15270979460816175,
+          "actual_rate": 0.0,
+          "expected_rate": 9.721090702940516e-05,
+          "rate_difference_ci95": [
+            -0.00012707254240088359,
+            -6.734927165792673e-05
+          ],
+          "z": -0.39229542391463845,
+          "log_loss": 9.740038561058593e-05
+        },
+        {
+          "rows": 1545,
+          "actual_fraud": 0,
+          "expected_fraud": 0.16423941445137052,
+          "bernoulli_variance": 0.16336977214518966,
+          "actual_rate": 0.0,
+          "expected_rate": 0.00010630382812386442,
+          "rate_difference_ci95": [
+            -0.00014334925654793516,
+            -6.925839969979368e-05
+          ],
+          "z": -0.40634183392394413,
+          "log_loss": 0.00010658834190111315
+        }
+      ],
+      "half_shifts": [
+        -0.0060949460637610255,
+        -0.006527061047258019
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -6.324432497480644e-07,
+          "ci95": [
+            -8.267266100437638e-07,
+            -4.38159889452365e-07
+          ]
+        },
+        {
+          "delta": -6.459559894799786e-07,
+          "ci95": [
+            -8.710703846670966e-07,
+            -4.2084159429286054e-07
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.5722036765371667,
+      "eligible": false
+    },
+    "at_least_two_intermediate_grids": {
+      "rule": {},
+      "family": "co_grid",
+      "train_rows": 10029,
+      "test_rows": 4313,
+      "train_share": 0.014327961597805588,
+      "test_share": 0.014377433463118034,
+      "dev_share": 0.014394099830914707,
+      "test_over_dev_share": 0.998842138932448,
+      "dev": {
+        "rows": 8564,
+        "actual_fraud": 157,
+        "expected_fraud": 149.02629215719918,
+        "bernoulli_variance": 94.59836692920544,
+        "actual_rate": 0.018332554880896777,
+        "expected_rate": 0.01740148203610453,
+        "rate_difference_ci95": [
+          -0.001318598823566785,
+          0.003180744513151282
+        ],
+        "z": 0.8198199820258322,
+        "log_loss": 0.046160752681756484
+      },
+      "halves": [
+        {
+          "rows": 4277,
+          "actual_fraud": 88,
+          "expected_fraud": 75.86322106378796,
+          "bernoulli_variance": 46.4272837729119,
+          "actual_rate": 0.020575169511339725,
+          "expected_rate": 0.017737484466632678,
+          "rate_difference_ci95": [
+            -0.0005648923385339387,
+            0.006240262427948032
+          ],
+          "z": 1.7812168859811708,
+          "log_loss": 0.053416463284585075
+        },
+        {
+          "rows": 4287,
+          "actual_fraud": 69,
+          "expected_fraud": 73.16307109341122,
+          "bernoulli_variance": 48.17108315629354,
+          "actual_rate": 0.01609517144856543,
+          "expected_rate": 0.01706626337611645,
+          "rate_difference_ci95": [
+            -0.003915438774448411,
+            0.0019732549193463727
+          ],
+          "z": -0.5998195567543622,
+          "log_loss": 0.0389219669928603
+        }
+      ],
+      "half_shifts": [
+        0.16421900109015627,
+        -0.057596229288676165
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.00018122937099683968,
+          "ci95": [
+            -1.479663815732009e-05,
+            0.00037725538015099944
+          ]
+        },
+        {
+          "delta": 0.0003165107674213277,
+          "ci95": [
+            -0.00016642880328986457,
+            0.00079945033813252
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.4123187380814417,
+      "eligible": true
+    },
+    "at_least_two_upper_one_percent": {
+      "rule": {},
+      "family": "tail",
+      "train_rows": 1158,
+      "test_rows": 512,
+      "train_share": 0.001654380250300017,
+      "test_share": 0.0017067576937436664,
+      "dev_share": 0.001621941421862762,
+      "test_over_dev_share": 1.0522930549387504,
+      "dev": {
+        "rows": 965,
+        "actual_fraud": 86,
+        "expected_fraud": 86.85201512665226,
+        "bernoulli_variance": 36.930722663664014,
+        "actual_rate": 0.08911917098445596,
+        "expected_rate": 0.09000208821414742,
+        "rate_difference_ci95": [
+          -0.013765722233146847,
+          0.011999887773763922
+        ],
+        "z": -0.14020173958231938,
+        "log_loss": 0.14454762651114125
+      },
+      "halves": [
+        {
+          "rows": 489,
+          "actual_fraud": 34,
+          "expected_fraud": 37.414366414200536,
+          "bernoulli_variance": 17.463232321943668,
+          "actual_rate": 0.06952965235173825,
+          "expected_rate": 0.0765119967570563,
+          "rate_difference_ci95": [
+            -0.023532501222669002,
+            0.009567812412032858
+          ],
+          "z": -0.8170484490585196,
+          "log_loss": 0.1238687401595417
+        },
+        {
+          "rows": 476,
+          "actual_fraud": 52,
+          "expected_fraud": 49.43764871245172,
+          "bernoulli_variance": 19.467490341720342,
+          "actual_rate": 0.1092436974789916,
+          "expected_rate": 0.10386060653876411,
+          "rate_difference_ci95": [
+            -0.014444485801332486,
+            0.02521066768178743
+          ],
+          "z": 0.5807426011828295,
+          "log_loss": 0.16579127236393992
+        }
+      ],
+      "half_shifts": [
+        -0.08104561593392372,
+        0.057350719218137974
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.00045971189334299655,
+          "ci95": [
+            -0.0004904781646014849,
+            0.0014099019512874781
+          ]
+        },
+        {
+          "delta": 0.0005692403341322484,
+          "ci95": [
+            -0.0010363802510862962,
+            0.002174860919350793
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.8885005974938078,
+      "eligible": true
+    },
+    "amount_usd_and_account_balance_usd": {
+      "rule": {},
+      "family": "co_grid",
+      "train_rows": 737,
+      "test_rows": 328,
+      "train_share": 0.0010529173095605463,
+      "test_share": 0.0010933916475545362,
+      "dev_share": 0.0010319917440660474,
+      "test_over_dev_share": 1.0594965064803457,
+      "dev": {
+        "rows": 614,
+        "actual_fraud": 5,
+        "expected_fraud": 7.098407656269313,
+        "bernoulli_variance": 5.484354119177039,
+        "actual_rate": 0.008143322475570033,
+        "expected_rate": 0.011560924521611258,
+        "rate_difference_ci95": [
+          -0.011019355026089483,
+          0.0041841509340070325
+        ],
+        "z": -0.8960394229039466,
+        "log_loss": 0.0411433292177635
+      },
+      "halves": [
+        {
+          "rows": 312,
+          "actual_fraud": 2,
+          "expected_fraud": 2.9531819486429196,
+          "bernoulli_variance": 2.26984218108425,
+          "actual_rate": 0.00641025641025641,
+          "expected_rate": 0.009465326758470897,
+          "rate_difference_ci95": [
+            -0.013181700830301887,
+            0.007071560133872914
+          ],
+          "z": -0.6326710727260615,
+          "log_loss": 0.035609746338698664
+        },
+        {
+          "rows": 302,
+          "actual_fraud": 3,
+          "expected_fraud": 4.145225707626393,
+          "bernoulli_variance": 3.2145119380927882,
+          "actual_rate": 0.009933774834437087,
+          "expected_rate": 0.013725912939160242,
+          "rate_difference_ci95": [
+            -0.015185096335987048,
+            0.007600820126540736
+          ],
+          "z": -0.6387539030294463,
+          "log_loss": 0.04686014331798942
+        }
+      ],
+      "half_shifts": [
+        -0.034990656950797075,
+        -0.040651385857767466
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.00011824077419003376,
+          "ci95": [
+            -0.0005290869723709739,
+            0.00029260542399090633
+          ]
+        },
+        {
+          "delta": -0.000126223106057268,
+          "ci95": [
+            -0.0005243581102245277,
+            0.00027191189810999176
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.3702317084013388,
+      "eligible": false
+    },
+    "hours_since_last_txn_and_distance_from_home_km": {
+      "rule": {},
+      "family": "co_grid",
+      "train_rows": 417,
+      "test_rows": 194,
+      "train_share": 0.0005957483284759129,
+      "test_share": 0.000646701157395061,
+      "dev_share": 0.0006050765926120148,
+      "test_over_dev_share": 1.068792224474194,
+      "dev": {
+        "rows": 360,
+        "actual_fraud": 2,
+        "expected_fraud": 4.609718040215781,
+        "bernoulli_variance": 3.3259704869059323,
+        "actual_rate": 0.005555555555555556,
+        "expected_rate": 0.012804772333932724,
+        "rate_difference_ci95": [
+          -0.011734851530390038,
+          -0.002763582026364296
+        ],
+        "z": -1.4309827289575634,
+        "log_loss": 0.012381607383025758
+      },
+      "halves": [
+        {
+          "rows": 172,
+          "actual_fraud": 2,
+          "expected_fraud": 3.4090921022210137,
+          "bernoulli_variance": 2.2573468434708523,
+          "actual_rate": 0.011627906976744186,
+          "expected_rate": 0.019820302919889614,
+          "rate_difference_ci95": [
+            -0.01668567479321631,
+            0.000300882906925452
+          ],
+          "z": -0.9378647947453359,
+          "log_loss": 0.018456470166814752
+        },
+        {
+          "rows": 188,
+          "actual_fraud": 0,
+          "expected_fraud": 1.2006259379947664,
+          "bernoulli_variance": 1.06862364343508,
+          "actual_rate": 0.0,
+          "expected_rate": 0.006386308180823226,
+          "rate_difference_ci95": [
+            -0.01007228471915166,
+            -0.002700331642494792
+          ],
+          "z": -1.1614361304183907,
+          "log_loss": 0.006823754197857106
+        }
+      ],
+      "half_shifts": [
+        -0.051753681141045255,
+        -0.04609173553344456
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.0003637729336554728,
+          "ci95": [
+            -0.0007543428154111729,
+            2.679694810022728e-05
+          ]
+        },
+        {
+          "delta": -0.00032300947206166376,
+          "ci95": [
+            -0.0005102872637040365,
+            -0.00013573168041929102
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.15243516505559623,
+      "eligible": false
+    },
+    "velocity_score_and_merchant_risk_score": {
+      "rule": {},
+      "family": "co_grid",
+      "train_rows": 1281,
+      "test_rows": 532,
+      "train_share": 0.001830104577404423,
+      "test_share": 0.0017734279161555283,
+      "dev_share": 0.001810187472897611,
+      "test_over_dev_share": 0.9796929559548654,
+      "dev": {
+        "rows": 1077,
+        "actual_fraud": 25,
+        "expected_fraud": 25.382676613082076,
+        "bernoulli_variance": 15.177163068216617,
+        "actual_rate": 0.02321262766945218,
+        "expected_rate": 0.02356794485894343,
+        "rate_difference_ci95": [
+          -0.007607256992205229,
+          0.006896622613222728
+        ],
+        "z": -0.09822829851263375,
+        "log_loss": 0.06002147488429189
+      },
+      "halves": [
+        {
+          "rows": 563,
+          "actual_fraud": 12,
+          "expected_fraud": 11.236537681931267,
+          "bernoulli_variance": 7.635135392606377,
+          "actual_rate": 0.021314387211367674,
+          "expected_rate": 0.019958326255650565,
+          "rate_difference_ci95": [
+            -0.00910749729773462,
+            0.011819619209168835
+          ],
+          "z": 0.2762989504708733,
+          "log_loss": 0.06796440898889045
+        },
+        {
+          "rows": 514,
+          "actual_fraud": 13,
+          "expected_fraud": 14.14613893115081,
+          "bernoulli_variance": 7.542027675610242,
+          "actual_rate": 0.02529182879377432,
+          "expected_rate": 0.02752167107227784,
+          "rate_difference_ci95": [
+            -0.012214896713607952,
+            0.0077552121566009085
+          ],
+          "z": -0.4173430673816027,
+          "log_loss": 0.051321334999293824
+        }
+      ],
+      "half_shifts": [
+        0.023351134790572818,
+        -0.0353074419143957
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 5.626600377413285e-05,
+          "ci95": [
+            -0.0003130114528862989,
+            0.00042554346043456457
+          ]
+        },
+        {
+          "delta": 5.608881974510963e-05,
+          "ci95": [
+            -0.00017709533299959393,
+            0.0002892729724898132
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.9217510121553851,
+      "eligible": false
+    },
+    "amount_intermediate_grid_lower_half": {
+      "rule": [
+        27.24
+      ],
+      "family": "conditional_grid",
+      "train_rows": 6384,
+      "test_rows": 2708,
+      "train_share": 0.009120521172638436,
+      "test_share": 0.00902714811456611,
+      "dev_share": 0.009128252706877367,
+      "test_over_dev_share": 0.9889239928431119,
+      "dev": {
+        "rows": 5431,
+        "actual_fraud": 56,
+        "expected_fraud": 68.40343626457872,
+        "bernoulli_variance": 48.55648548580804,
+        "actual_rate": 0.010311176578898913,
+        "expected_rate": 0.01259499839156301,
+        "rate_difference_ci95": [
+          -0.004604224261632078,
+          3.6580636303881146e-05
+        ],
+        "z": -1.7799934198848266,
+        "log_loss": 0.03359458901807334
+      },
+      "halves": [
+        {
+          "rows": 2727,
+          "actual_fraud": 29,
+          "expected_fraud": 35.32046589047272,
+          "bernoulli_variance": 24.08149809995367,
+          "actual_rate": 0.010634396773010634,
+          "expected_rate": 0.012952132706443974,
+          "rate_difference_ci95": [
+            -0.00549721347291773,
+            0.0008617416060510493
+          ],
+          "z": -1.2879747279198552,
+          "log_loss": 0.03082978780253472
+        },
+        {
+          "rows": 2704,
+          "actual_fraud": 27,
+          "expected_fraud": 33.082970374106,
+          "bernoulli_variance": 24.474987385854376,
+          "actual_rate": 0.009985207100591717,
+          "expected_rate": 0.012234826321784763,
+          "rate_difference_ci95": [
+            -0.0056323502064056594,
+            0.0011331117640195668
+          ],
+          "z": -1.2295734105488727,
+          "log_loss": 0.036382907403714554
+        }
+      ],
+      "half_shifts": [
+        -0.13161925790178727,
+        -0.1255827395182274
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.00022339931507477185,
+          "ci95": [
+            -0.0006218360597211808,
+            0.0001750374295716371
+          ]
+        },
+        {
+          "delta": -0.00022002545665199597,
+          "ci95": [
+            -0.0006642443408598702,
+            0.00022419342755587823
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.07507703757572089,
+      "eligible": true
+    },
+    "amount_intermediate_grid_upper_half": {
+      "rule": [
+        27.24
+      ],
+      "family": "conditional_grid",
+      "train_rows": 11473,
+      "test_rows": 4901,
+      "train_share": 0.016390936624949996,
+      "test_share": 0.016337538002026773,
+      "dev_share": 0.016328664158960345,
+      "test_over_dev_share": 1.0005434518696716,
+      "dev": {
+        "rows": 9715,
+        "actual_fraud": 179,
+        "expected_fraud": 174.09804037629306,
+        "bernoulli_variance": 110.42380573633642,
+        "actual_rate": 0.0184251158003088,
+        "expected_rate": 0.017920539410838193,
+        "rate_difference_ci95": [
+          -0.0016018461757296245,
+          0.00261099895467084
+        ],
+        "z": 0.4664857420816043,
+        "log_loss": 0.044624661124266315
+      },
+      "halves": [
+        {
+          "rows": 4883,
+          "actual_fraud": 98,
+          "expected_fraud": 87.82791831470249,
+          "bernoulli_variance": 54.45982216604446,
+          "actual_rate": 0.020069629326233872,
+          "expected_rate": 0.017986466990518632,
+          "rate_difference_ci95": [
+            -0.0009938816378744883,
+            0.005160206309304968
+          ],
+          "z": 1.3783887809519135,
+          "log_loss": 0.04929692895415369
+        },
+        {
+          "rows": 4832,
+          "actual_fraud": 81,
+          "expected_fraud": 86.27012206159056,
+          "bernoulli_variance": 55.96398357029196,
+          "actual_rate": 0.01676324503311258,
+          "expected_rate": 0.017853915989567582,
+          "rate_difference_ci95": [
+            -0.003965489316882439,
+            0.0017841474039724393
+          ],
+          "z": -0.704476262183146,
+          "log_loss": 0.03990307920925388
+        }
+      ],
+      "half_shifts": [
+        0.12464706910825014,
+        -0.06599595016118324
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.00016144237334531487,
+          "ci95": [
+            -4.179361622002746e-05,
+            0.0003646783629106572
+          ]
+        },
+        {
+          "delta": 0.0002282394266481734,
+          "ci95": [
+            -0.00012990779601761146,
+            0.0005863866493139582
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.6408678509043197,
+      "eligible": true
+    },
+    "amount_intermediate_grid_channel_ATM": {
+      "rule": [
+        "ATM"
+      ],
+      "family": "conditional_grid",
+      "train_rows": 802,
+      "test_rows": 298,
+      "train_share": 0.0011457797588433625,
+      "test_share": 0.0009933863139367433,
+      "dev_share": 0.00113788014777315,
+      "test_over_dev_share": 0.8730148916657141,
+      "dev": {
+        "rows": 677,
+        "actual_fraud": 11,
+        "expected_fraud": 12.180078661578328,
+        "bernoulli_variance": 7.869866906806528,
+        "actual_rate": 0.01624815361890694,
+        "expected_rate": 0.017991253562154103,
+        "rate_difference_ci95": [
+          -0.009342818565031812,
+          0.005856618678537492
+        ],
+        "z": -0.42065617021627166,
+        "log_loss": 0.042766729513031794
+      },
+      "halves": [
+        {
+          "rows": 331,
+          "actual_fraud": 7,
+          "expected_fraud": 5.943833471728713,
+          "bernoulli_variance": 3.4211619647634013,
+          "actual_rate": 0.021148036253776436,
+          "expected_rate": 0.017957200820932665,
+          "rate_difference_ci95": [
+            -0.009276328009077859,
+            0.0156579988747654
+          ],
+          "z": 0.5710124564033474,
+          "log_loss": 0.05551065034593432
+        },
+        {
+          "rows": 346,
+          "actual_fraud": 4,
+          "expected_fraud": 6.236245189849614,
+          "bernoulli_variance": 4.448704942043127,
+          "actual_rate": 0.011560693641618497,
+          "expected_rate": 0.01802383002846709,
+          "rate_difference_ci95": [
+            -0.01533415459604303,
+            0.0024078818223458353
+          ],
+          "z": -1.0602361751671803,
+          "log_loss": 0.030575290797162626
+        }
+      ],
+      "half_shifts": [
+        0.03711507066303412,
+        -0.07620385293212124
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.0002727476170760576,
+          "ci95": [
+            -0.0006780623265540298,
+            0.001223557560706145
+          ]
+        },
+        {
+          "delta": 0.0002488034997591986,
+          "ci95": [
+            -8.090441182543386e-05,
+            0.000578511411343831
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.6740061708032907,
+      "eligible": false
+    },
+    "amount_intermediate_grid_channel_Contactless": {
+      "rule": [
+        "Contactless"
+      ],
+      "family": "conditional_grid",
+      "train_rows": 2708,
+      "test_rows": 1163,
+      "train_share": 0.0038687925024287104,
+      "test_share": 0.003876873433249773,
+      "dev_share": 0.0039010632540346845,
+      "test_over_dev_share": 0.9937991723769429,
+      "dev": {
+        "rows": 2321,
+        "actual_fraud": 35,
+        "expected_fraud": 33.4096509024893,
+        "bernoulli_variance": 23.347346795890545,
+        "actual_rate": 0.015079707022834985,
+        "expected_rate": 0.014394507066992373,
+        "rate_difference_ci95": [
+          -0.0033191781885297455,
+          0.004689578100214971
+        ],
+        "z": 0.3291347213258152,
+        "log_loss": 0.04193315065258684
+      },
+      "halves": [
+        {
+          "rows": 1174,
+          "actual_fraud": 18,
+          "expected_fraud": 17.664438022809676,
+          "bernoulli_variance": 11.240337800093457,
+          "actual_rate": 0.015332197614991482,
+          "expected_rate": 0.015046369695749299,
+          "rate_difference_ci95": [
+            -0.0049706003051659085,
+            0.00554225614365028
+          ],
+          "z": 0.10008824245898101,
+          "log_loss": 0.0403888894180688
+        },
+        {
+          "rows": 1147,
+          "actual_fraud": 17,
+          "expected_fraud": 15.745212879679624,
+          "bernoulli_variance": 12.107008995797088,
+          "actual_rate": 0.014821272885789015,
+          "expected_rate": 0.013727299807915976,
+          "rate_difference_ci95": [
+            -0.0049673833092109135,
+            0.007155329464956996
+          ],
+          "z": 0.36062150350438504,
+          "log_loss": 0.04351376328495318
+        }
+      ],
+      "half_shifts": [
+        0.009249654470570266,
+        0.03369125155858168
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -4.151198918452193e-06,
+          "ci95": [
+            -0.0001811780849763975,
+            0.0001728756871394931
+          ]
+        },
+        {
+          "delta": -9.666406213601703e-06,
+          "ci95": [
+            -6.572435540420652e-05,
+            4.639154297700312e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.742053861127452,
+      "eligible": true
+    },
+    "amount_intermediate_grid_channel_In-App": {
+      "rule": [
+        "In-App"
+      ],
+      "family": "conditional_grid",
+      "train_rows": 2133,
+      "test_rows": 916,
+      "train_share": 0.0030473169895422598,
+      "test_share": 0.003053496186463278,
+      "dev_share": 0.0030489137194394302,
+      "test_over_dev_share": 1.001502983503479,
+      "dev": {
+        "rows": 1814,
+        "actual_fraud": 30,
+        "expected_fraud": 24.879150477126068,
+        "bernoulli_variance": 18.931332952380462,
+        "actual_rate": 0.016538037486218304,
+        "expected_rate": 0.013715077440532563,
+        "rate_difference_ci95": [
+          -0.0023584038298034215,
+          0.008004323921174901
+        ],
+        "z": 1.1769321251547646,
+        "log_loss": 0.05107874202158645
+      },
+      "halves": [
+        {
+          "rows": 975,
+          "actual_fraud": 17,
+          "expected_fraud": 13.243501558717714,
+          "bernoulli_variance": 10.266092411082099,
+          "actual_rate": 0.017435897435897435,
+          "expected_rate": 0.013583078521761757,
+          "rate_difference_ci95": [
+            -0.003421809565201711,
+            0.011127447393473069
+          ],
+          "z": 1.1724130080292932,
+          "log_loss": 0.055338600728657567
+        },
+        {
+          "rows": 839,
+          "actual_fraud": 13,
+          "expected_fraud": 11.635648918408357,
+          "bernoulli_variance": 8.665240541298363,
+          "actual_rate": 0.015494636471990465,
+          "expected_rate": 0.013868473085111271,
+          "rate_difference_ci95": [
+            -0.005728273171078403,
+            0.008980599944836793
+          ],
+          "z": 0.4634851543472685,
+          "log_loss": 0.04612836986497816
+        }
+      ],
+      "half_shifts": [
+        0.10539846902883296,
+        0.04037734518460881
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.00014690460658562914,
+          "ci95": [
+            -0.0004405482207803839,
+            0.00014673900760912566
+          ]
+        },
+        {
+          "delta": -0.00011257960432285629,
+          "ci95": [
+            -0.0008879306737288109,
+            0.0006627714650830983
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.23922259855374728,
+      "eligible": false
+    },
+    "amount_intermediate_grid_channel_Online": {
+      "rule": [
+        "Online"
+      ],
+      "family": "conditional_grid",
+      "train_rows": 6991,
+      "test_rows": 2968,
+      "train_share": 0.00998771358363335,
+      "test_share": 0.009893861005920315,
+      "dev_share": 0.009923256118837043,
+      "test_over_dev_share": 0.9970377552927483,
+      "dev": {
+        "rows": 5904,
+        "actual_fraud": 83,
+        "expected_fraud": 100.76942841698119,
+        "bernoulli_variance": 62.35876211099934,
+        "actual_rate": 0.014058265582655827,
+        "expected_rate": 0.01706799261805237,
+        "rate_difference_ci95": [
+          -0.005348606498792402,
+          -0.0006708475720006821
+        ],
+        "z": -2.250218627740434,
+        "log_loss": 0.035348688902386044
+      },
+      "halves": [
+        {
+          "rows": 2965,
+          "actual_fraud": 46,
+          "expected_fraud": 51.552480710016766,
+          "bernoulli_variance": 31.628751885954202,
+          "actual_rate": 0.01551433389544688,
+          "expected_rate": 0.01738700867116923,
+          "rate_difference_ci95": [
+            -0.005320718531026708,
+            0.0015753689795820131
+          ],
+          "z": -0.987292939523991,
+          "log_loss": 0.037961993697686325
+        },
+        {
+          "rows": 2939,
+          "actual_fraud": 37,
+          "expected_fraud": 49.216947706964426,
+          "bernoulli_variance": 30.73001022504514,
+          "actual_rate": 0.012589316093909493,
+          "expected_rate": 0.016746154374605113,
+          "rate_difference_ci95": [
+            -0.007315232423688464,
+            -0.0009984441377027743
+          ],
+          "z": -2.2038466032617974,
+          "log_loss": 0.03271226538484085
+        }
+      ],
+      "half_shifts": [
+        -0.09968230159146384,
+        -0.22723608194575537
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.0001622119939184398,
+          "ci95": [
+            -0.000944355591919039,
+            0.0006199316040821593
+          ]
+        },
+        {
+          "delta": -0.00036341668930331785,
+          "ci95": [
+            -0.0006777640711057437,
+            -4.90693075008921e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.024435070386377343,
+      "eligible": true
+    },
+    "amount_intermediate_grid_channel_POS": {
+      "rule": [
+        "POS"
+      ],
+      "family": "conditional_grid",
+      "train_rows": 5223,
+      "test_rows": 2264,
+      "train_share": 0.007461854963140751,
+      "test_share": 0.007547069177022775,
+      "dev_share": 0.007445803625753405,
+      "test_over_dev_share": 1.013600352139172,
+      "dev": {
+        "rows": 4430,
+        "actual_fraud": 76,
+        "expected_fraud": 71.26316818269689,
+        "bernoulli_variance": 46.472982456067584,
+        "actual_rate": 0.017155756207674944,
+        "expected_rate": 0.016086493946432707,
+        "rate_difference_ci95": [
+          -0.0020065328303625245,
+          0.004145057352847001
+        ],
+        "z": 0.6948446098375417,
+        "log_loss": 0.04251588711683565
+      },
+      "halves": [
+        {
+          "rows": 2165,
+          "actual_fraud": 39,
+          "expected_fraud": 34.74413044190234,
+          "bernoulli_variance": 21.98497620410497,
+          "actual_rate": 0.018013856812933025,
+          "expected_rate": 0.016048097201802468,
+          "rate_difference_ci95": [
+            -0.00244361702265286,
+            0.006375136244913975
+          ],
+          "z": 0.9076644133611989,
+          "log_loss": 0.0427190332356797
+        },
+        {
+          "rows": 2265,
+          "actual_fraud": 37,
+          "expected_fraud": 36.519037740794545,
+          "bernoulli_variance": 24.48800625196261,
+          "actual_rate": 0.016335540838852098,
+          "expected_rate": 0.016123195470549467,
+          "rate_difference_ci95": [
+            -0.004080868097054395,
+            0.004505558833659657
+          ],
+          "z": 0.09719284283415987,
+          "log_loss": 0.04232170992156087
+        }
+      ],
+      "half_shifts": [
+        0.08935912634966682,
+        0.009703559135776396
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -1.8595791818869337e-05,
+          "ci95": [
+            -6.137620913751068e-05,
+            2.418462549977201e-05
+          ]
+        },
+        {
+          "delta": 2.5039540093590333e-05,
+          "ci95": [
+            -0.00035835851651885766,
+            0.0004084375967060383
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.48715268822288615,
+      "eligible": true
+    },
+    "velocity_intermediate_grid_txn_count_le_3": {
+      "rule": [
+        3
+      ],
+      "family": "conditional_grid",
+      "train_rows": 16498,
+      "test_rows": 7039,
+      "train_share": 0.02356991828104463,
+      "test_share": 0.02346458477785482,
+      "dev_share": 0.023609752490058256,
+      "test_over_dev_share": 0.9938513666221378,
+      "dev": {
+        "rows": 14047,
+        "actual_fraud": 206,
+        "expected_fraud": 203.585981613488,
+        "bernoulli_variance": 135.93375124608698,
+        "actual_rate": 0.014665053036235495,
+        "expected_rate": 0.014493200086387699,
+        "rate_difference_ci95": [
+          -0.0014662580134136838,
+          0.0018099639131092767
+        ],
+        "z": 0.20705080466454667,
+        "log_loss": 0.04120338825970786
+      },
+      "halves": [
+        {
+          "rows": 7037,
+          "actual_fraud": 105,
+          "expected_fraud": 108.92028215675116,
+          "bernoulli_variance": 69.71961326950137,
+          "actual_rate": 0.01492113116384823,
+          "expected_rate": 0.015478226823468971,
+          "rate_difference_ci95": [
+            -0.0028035017576233754,
+            0.0016893104383818953
+          ],
+          "z": -0.4695045886549441,
+          "log_loss": 0.038229116661400386
+        },
+        {
+          "rows": 7010,
+          "actual_fraud": 101,
+          "expected_fraud": 94.66569945673686,
+          "bernoulli_variance": 66.21413797658562,
+          "actual_rate": 0.014407988587731811,
+          "expected_rate": 0.013504379380418954,
+          "rate_difference_ci95": [
+            -0.0014817429486508578,
+            0.003288961363276577
+          ],
+          "z": 0.7784366961469753,
+          "log_loss": 0.04418911568300169
+        }
+      ],
+      "half_shifts": [
+        -0.04180009954471129,
+        0.06822939723967125
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 6.14138133708697e-05,
+          "ci95": [
+            -9.192420905279258e-05,
+            0.00021475183579453198
+          ]
+        },
+        {
+          "delta": 4.594207046046877e-05,
+          "ci95": [
+            -5.37692046086945e-05,
+            0.00014565334552963204
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.8359701816818298,
+      "eligible": true
+    },
+    "velocity_intermediate_grid_txn_count_gt_3": {
+      "rule": [
+        3
+      ],
+      "family": "conditional_grid",
+      "train_rows": 8687,
+      "test_rows": 3781,
+      "train_share": 0.012410709183381908,
+      "test_share": 0.012604005546962505,
+      "dev_share": 0.012467939344433127,
+      "test_over_dev_share": 1.0109132871736444,
+      "dev": {
+        "rows": 7418,
+        "actual_fraud": 195,
+        "expected_fraud": 188.49796102761655,
+        "bernoulli_variance": 118.34379174519546,
+        "actual_rate": 0.026287409005122674,
+        "expected_rate": 0.025410887170075027,
+        "rate_difference_ci95": [
+          -0.0020280006967028385,
+          0.0037810443667981287
+        ],
+        "z": 0.597691154104905,
+        "log_loss": 0.06535257634141421
+      },
+      "halves": [
+        {
+          "rows": 3702,
+          "actual_fraud": 96,
+          "expected_fraud": 88.8184218931698,
+          "bernoulli_variance": 57.80579417153492,
+          "actual_rate": 0.02593192868719611,
+          "expected_rate": 0.023992010235864343,
+          "rate_difference_ci95": [
+            -0.0022869875032799462,
+            0.006166824405943478
+          ],
+          "z": 0.9445701176256235,
+          "log_loss": 0.06922555294346254
+        },
+        {
+          "rows": 3716,
+          "actual_fraud": 99,
+          "expected_fraud": 99.67953913444677,
+          "bernoulli_variance": 60.53799757366056,
+          "actual_rate": 0.026641550053821312,
+          "expected_rate": 0.02682441849689095,
+          "rate_difference_ci95": [
+            -0.004168823398611279,
+            0.0038030865124720073
+          ],
+          "z": -0.08733743777899879,
+          "log_loss": 0.06149419114744681
+        }
+      ],
+      "half_shifts": [
+        0.08509040749728164,
+        -0.00795743634183733
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 1.5930311675747008e-05,
+          "ci95": [
+            -1.7705043037976405e-05,
+            4.9565666389470424e-05
+          ]
+        },
+        {
+          "delta": 7.553173921326328e-05,
+          "ci95": [
+            -0.0002635061886634398,
+            0.0004145696670899664
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.5500460289431188,
+      "eligible": true
+    },
+    "amount_positive_ends_99_cents": {
+      "rule": [
+        0.99
+      ],
+      "family": "grid",
+      "train_rows": 6634,
+      "test_rows": 2926,
+      "train_share": 0.009477684439110807,
+      "test_share": 0.009753853538855406,
+      "dev_share": 0.009461044832813976,
+      "test_over_dev_share": 1.030948876283291,
+      "dev": {
+        "rows": 5629,
+        "actual_fraud": 81,
+        "expected_fraud": 92.70686245094508,
+        "bernoulli_variance": 55.19824134047229,
+        "actual_rate": 0.014389767276603304,
+        "expected_rate": 0.016469508340903372,
+        "rate_difference_ci95": [
+          -0.004471355014355246,
+          0.00031187288575511155
+        ],
+        "z": -1.5757158195432046,
+        "log_loss": 0.03356727371529439
+      },
+      "halves": [
+        {
+          "rows": 2844,
+          "actual_fraud": 46,
+          "expected_fraud": 48.93952147629595,
+          "bernoulli_variance": 28.498827971261825,
+          "actual_rate": 0.01617440225035162,
+          "expected_rate": 0.017207989267333315,
+          "rate_difference_ci95": [
+            -0.004606522832203616,
+            0.0025393487982402155
+          ],
+          "z": -0.5506341437125293,
+          "log_loss": 0.03585626328589987
+        },
+        {
+          "rows": 2785,
+          "actual_fraud": 35,
+          "expected_fraud": 43.76734097464912,
+          "bernoulli_variance": 26.69941336921046,
+          "actual_rate": 0.012567324955116697,
+          "expected_rate": 0.015715382755708843,
+          "rate_difference_ci95": [
+            -0.0063190305914562666,
+            2.2914990271977013e-05
+          ],
+          "z": -1.6967467952310813,
+          "log_loss": 0.03122979208556297
+        }
+      ],
+      "half_shifts": [
+        -0.055440583708610484,
+        -0.17443894493147685
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -3.311807265614457e-05,
+          "ci95": [
+            -0.0006568423069542405,
+            0.0005906061616419513
+          ]
+        },
+        {
+          "delta": -0.00015997012200320452,
+          "ci95": [
+            -0.0003355722188166093,
+            1.5631974810200225e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.11509131001692548,
+      "eligible": true
+    },
+    "amount_usd_floor": {
+      "rule": [
+        1.0
+      ],
+      "family": "boundary",
+      "train_rows": 59,
+      "test_rows": 30,
+      "train_share": 8.429053088747929e-05,
+      "test_share": 0.00010000533361779295,
+      "dev_share": 8.571918395336877e-05,
+      "test_over_dev_share": 1.1666622219851726,
+      "dev": {
+        "rows": 51,
+        "actual_fraud": 0,
+        "expected_fraud": 1.0042325815730067,
+        "bernoulli_variance": 0.7509655946421661,
+        "actual_rate": 0.0,
+        "expected_rate": 0.019690834932804054,
+        "rate_difference_ci95": [
+          -0.038446079687343086,
+          -0.0009355901782650208
+        ],
+        "z": -1.1588421613629585,
+        "log_loss": 0.023225414552480995
+      },
+      "halves": [
+        {
+          "rows": 17,
+          "actual_fraud": 0,
+          "expected_fraud": 0.6861685529324517,
+          "bernoulli_variance": 0.46153661430756177,
+          "actual_rate": 0.0,
+          "expected_rate": 0.0403628560548501,
+          "rate_difference_ci95": [
+            -0.09310216246134709,
+            0.012376450351646896
+          ],
+          "z": -1.0100147834590218,
+          "log_loss": 0.050031884006738116
+        },
+        {
+          "rows": 34,
+          "actual_fraud": 0,
+          "expected_fraud": 0.318064028640555,
+          "bernoulli_variance": 0.2894289803346044,
+          "actual_rate": 0.0,
+          "expected_rate": 0.009354824371781029,
+          "rate_difference_ci95": [
+            -0.01872795592281005,
+            1.8307179247993577e-05
+          ],
+          "z": -0.5912124188878439,
+          "log_loss": 0.009822179825352443
+        }
+      ],
+      "half_shifts": [
+        -0.026952251245158144,
+        -0.012577705719856393
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.000505528790265068,
+          "ci95": [
+            -0.0011666296253259015,
+            0.0001555720447957656
+          ]
+        },
+        {
+          "delta": -0.000249064666247842,
+          "ci95": [
+            -0.0004988212245821311,
+            6.918920864470144e-07
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.24652052834731086,
+      "eligible": false
+    },
+    "amount_usd_floor_near": {
+      "rule": [
+        1,
+        2
+      ],
+      "family": "boundary",
+      "train_rows": 267,
+      "test_rows": 133,
+      "train_share": 0.000381450368592491,
+      "test_share": 0.0004433569790388821,
+      "dev_share": 0.0003882574802593762,
+      "test_over_dev_share": 1.1419148415188203,
+      "dev": {
+        "rows": 231,
+        "actual_fraud": 1,
+        "expected_fraud": 1.6009376664306623,
+        "bernoulli_variance": 1.4396187066230262,
+        "actual_rate": 0.004329004329004329,
+        "expected_rate": 0.006930466088444425,
+        "rate_difference_ci95": [
+          -0.011243110535026236,
+          0.006040187016146045
+        ],
+        "z": -0.5008477020793505,
+        "log_loss": 0.01897641734323204
+      },
+      "halves": [
+        {
+          "rows": 114,
+          "actual_fraud": 0,
+          "expected_fraud": 0.9613452719773928,
+          "bernoulli_variance": 0.854672451318189,
+          "actual_rate": 0.0,
+          "expected_rate": 0.008432853262959587,
+          "rate_difference_ci95": [
+            -0.013854457992041373,
+            -0.0030112485338778
+          ],
+          "z": -1.039871180082906,
+          "log_loss": 0.00897042514685062
+        },
+        {
+          "rows": 117,
+          "actual_fraud": 1,
+          "expected_fraud": 0.6395923944532692,
+          "bernoulli_variance": 0.5849462553048372,
+          "actual_rate": 0.008547008547008548,
+          "expected_rate": 0.005466601661993754,
+          "rate_difference_ci95": [
+            -0.013114493322350235,
+            0.019275307092379824
+          ],
+          "z": 0.47123329139343784,
+          "log_loss": 0.028725845637142134
+        }
+      ],
+      "half_shifts": [
+        -0.03720074259618433,
+        0.014084804382591158
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.00011952152427979232,
+          "ci95": [
+            4.27243303547157e-05,
+            0.00019631871820486894
+          ]
+        },
+        {
+          "delta": 0.00011801721989787895,
+          "ci95": [
+            -0.0004845633183296305,
+            0.0007205977581253884
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.6164783109833015,
+      "eligible": false
+    },
+    "hours_since_last_txn_floor": {
+      "rule": [
+        0.01
+      ],
+      "family": "boundary",
+      "train_rows": 1678,
+      "test_rows": 677,
+      "train_share": 0.0023972798445625466,
+      "test_share": 0.0022567870286415276,
+      "dev_share": 0.002393414077443081,
+      "test_over_dev_share": 0.9429154152266398,
+      "dev": {
+        "rows": 1424,
+        "actual_fraud": 67,
+        "expected_fraud": 67.42496975802052,
+        "bernoulli_variance": 34.73747125477656,
+        "actual_rate": 0.047050561797752806,
+        "expected_rate": 0.047348995616587446,
+        "rate_difference_ci95": [
+          -0.009146876631261177,
+          0.008550008993591915
+        ],
+        "z": -0.072103928166768,
+        "log_loss": 0.10647849217933791
+      },
+      "halves": [
+        {
+          "rows": 687,
+          "actual_fraud": 26,
+          "expected_fraud": 31.85366773639567,
+          "bernoulli_variance": 15.915628798575046,
+          "actual_rate": 0.03784570596797671,
+          "expected_rate": 0.04636632858281757,
+          "rate_difference_ci95": [
+            -0.020385592475354875,
+            0.0033443472456731616
+          ],
+          "z": -1.4672907063848972,
+          "log_loss": 0.09639490213122674
+        },
+        {
+          "rows": 737,
+          "actual_fraud": 41,
+          "expected_fraud": 35.571302021624845,
+          "bernoulli_variance": 18.821842456201516,
+          "actual_rate": 0.05563093622795115,
+          "expected_rate": 0.04826499595878541,
+          "rate_difference_ci95": [
+            -0.005654709415822974,
+            0.020386589954154457
+          ],
+          "z": 1.2513091310357387,
+          "log_loss": 0.11587798520925972
+        }
+      ],
+      "half_shifts": [
+        -0.14514451920639843,
+        0.12222415115311928
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.0012181961373543713,
+          "ci95": [
+            -0.000238061459745283,
+            0.0026744537344540256
+          ]
+        },
+        {
+          "delta": 0.001331662801944774,
+          "ci95": [
+            -0.0005606977308168029,
+            0.0032240233347063506
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.9425192001399029,
+      "eligible": true
+    },
+    "hours_since_last_txn_floor_near": {
+      "rule": [
+        0.01,
+        0.1
+      ],
+      "family": "boundary",
+      "train_rows": 4872,
+      "test_rows": 2102,
+      "train_share": 0.006960397737013544,
+      "test_share": 0.007007040375486693,
+      "dev_share": 0.006944934668535681,
+      "test_over_dev_share": 1.0089425905231888,
+      "dev": {
+        "rows": 4132,
+        "actual_fraud": 194,
+        "expected_fraud": 205.92919180590224,
+        "bernoulli_variance": 112.60442021157559,
+        "actual_rate": 0.04695062923523717,
+        "expected_rate": 0.04983765532572658,
+        "rate_difference_ci95": [
+          -0.007679218637048215,
+          0.0019051664560694034
+        ],
+        "z": -1.124173392904924,
+        "log_loss": 0.09176465512085157
+      },
+      "halves": [
+        {
+          "rows": 2076,
+          "actual_fraud": 97,
+          "expected_fraud": 102.7171934327017,
+          "bernoulli_variance": 55.677892549061866,
+          "actual_rate": 0.04672447013487476,
+          "expected_rate": 0.04947841687509716,
+          "rate_difference_ci95": [
+            -0.009456608136229413,
+            0.003948714655784603
+          ],
+          "z": -0.7661988431067905,
+          "log_loss": 0.09171910797866102
+        },
+        {
+          "rows": 2056,
+          "actual_fraud": 97,
+          "expected_fraud": 103.21199837320052,
+          "bernoulli_variance": 56.926527662513706,
+          "actual_rate": 0.04717898832684825,
+          "expected_rate": 0.05020038831381348,
+          "rate_difference_ci95": [
+            -0.009875203986457913,
+            0.0038324040125274524
+          ],
+          "z": -0.8233300872951478,
+          "log_loss": 0.09181064532862762
+        }
+      ],
+      "half_shifts": [
+        -0.07180310623596489,
+        -0.07690171167577504
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -0.00013355413709031016,
+          "ci95": [
+            -0.0006488078756889706,
+            0.0003816996015083503
+          ]
+        },
+        {
+          "delta": -0.00014647015098203525,
+          "ci95": [
+            -0.0006386476838127498,
+            0.0003457073818486793
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.26093947462884504,
+      "eligible": true
+    },
+    "distance_from_home_km_floor": {
+      "rule": [
+        0.0
+      ],
+      "family": "boundary",
+      "train_rows": 12,
+      "test_rows": 4,
+      "train_share": 1.7143836790673752e-05,
+      "test_share": 1.3334044482372394e-05,
+      "dev_share": 1.3446146502489219e-05,
+      "test_over_dev_share": 0.9916628886873966,
+      "dev": {
+        "rows": 8,
+        "actual_fraud": 0,
+        "expected_fraud": 0.0038145234525378924,
+        "bernoulli_variance": 0.003806973788273877,
+        "actual_rate": 0.0,
+        "expected_rate": 0.00047681543156723655,
+        "rate_difference_ci95": [
+          -0.0011038207476364332,
+          0.00015018988450196013
+        ],
+        "z": -0.06182303849415101,
+        "log_loss": 0.0004772880934314375
+      },
+      "halves": [
+        {
+          "rows": 4,
+          "actual_fraud": 0,
+          "expected_fraud": 0.00291541129018956,
+          "bernoulli_variance": 0.002908215727109014,
+          "actual_rate": 0.0,
+          "expected_rate": 0.00072885282254739,
+          "rate_difference_ci95": [
+            -0.002002935407838423,
+            0.0005452297627436433
+          ],
+          "z": -0.05406130461494769,
+          "log_loss": 0.0007297538707381592
+        },
+        {
+          "rows": 4,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0008991121623483325,
+          "bernoulli_variance": 0.0008987580611648628,
+          "actual_rate": 0.0,
+          "expected_rate": 0.00022477804058708311,
+          "rate_difference_ci95": [
+            -0.00044536913516418685,
+            -4.186946009979408e-06
+          ],
+          "z": -0.029991105398833307,
+          "log_loss": 0.00022482231612471577
+        }
+      ],
+      "half_shifts": [
+        -0.00011660288814034021,
+        -3.596319362875576e-05
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -2.621140502146279e-08,
+          "ci95": [
+            -7.203066209336434e-08,
+            1.9607852050438752e-08
+          ]
+        },
+        {
+          "delta": -2.6208241316680624e-08,
+          "ci95": [
+            -5.1928301236813015e-08,
+            -4.881813965482372e-10
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.9507037565128156,
+      "eligible": false
+    },
+    "distance_from_home_km_floor_near": {
+      "rule": [
+        0,
+        0.1
+      ],
+      "family": "boundary",
+      "train_rows": 8527,
+      "test_rows": 3692,
+      "train_share": 0.01218212469283959,
+      "test_share": 0.01230732305722972,
+      "dev_share": 0.012074639559235318,
+      "test_over_dev_share": 1.0192704301319233,
+      "dev": {
+        "rows": 7184,
+        "actual_fraud": 118,
+        "expected_fraud": 125.20901035651357,
+        "bernoulli_variance": 79.76294721286166,
+        "actual_rate": 0.016425389755011136,
+        "expected_rate": 0.017428871152075944,
+        "rate_difference_ci95": [
+          -0.003423814761553479,
+          0.0014168519674238663
+        ],
+        "z": -0.8071886621328372,
+        "log_loss": 0.04506916524688006
+      },
+      "halves": [
+        {
+          "rows": 3648,
+          "actual_fraud": 52,
+          "expected_fraud": 63.967815867770575,
+          "bernoulli_variance": 40.948124066067486,
+          "actual_rate": 0.01425438596491228,
+          "expected_rate": 0.017535037244454654,
+          "rate_difference_ci95": [
+            -0.0063621326485080315,
+            -0.0001991699105767142
+          ],
+          "z": -1.8702423778389639,
+          "log_loss": 0.03551745793854964
+        },
+        {
+          "rows": 3536,
+          "actual_fraud": 66,
+          "expected_fraud": 61.24119448874299,
+          "bernoulli_variance": 38.81482314679417,
+          "actual_rate": 0.018665158371040724,
+          "expected_rate": 0.017319342332789308,
+          "rate_difference_ci95": [
+            -0.002404532845082288,
+            0.005096164921585121
+          ],
+          "z": 0.7638342886385057,
+          "log_loss": 0.05492341532063269
+        }
+      ],
+      "half_shifts": [
+        -0.18821054569458312,
+        0.07352639099885899
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.0002720332528361699,
+          "ci95": [
+            4.5116626696444135e-05,
+            0.0004989498789758956
+          ]
+        },
+        {
+          "delta": 0.0004402843783053695,
+          "ci95": [
+            -0.0002655605533303308,
+            0.0011461293099410698
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.4195577968486621,
+      "eligible": true
+    },
+    "velocity_score_floor": {
+      "rule": [
+        0.0
+      ],
+      "family": "boundary",
+      "train_rows": 48499,
+      "test_rows": 20927,
+      "train_share": 0.06928824504257386,
+      "test_share": 0.06976038722065177,
+      "dev_share": 0.06960565813844825,
+      "test_over_dev_share": 1.0022229382832033,
+      "dev": {
+        "rows": 41413,
+        "actual_fraud": 16,
+        "expected_fraud": 17.40658759105152,
+        "bernoulli_variance": 16.84418231017292,
+        "actual_rate": 0.0003863521116557603,
+        "expected_rate": 0.00042031699203273174,
+        "rate_difference_ci95": [
+          -0.00022013684816649584,
+          0.00015220708741255282
+        ],
+        "z": -0.3427218670700188,
+        "log_loss": 0.002515858721548515
+      },
+      "halves": [
+        {
+          "rows": 20621,
+          "actual_fraud": 6,
+          "expected_fraud": 8.488652197553408,
+          "bernoulli_variance": 8.290305892514635,
+          "actual_rate": 0.0002909655205858106,
+          "expected_rate": 0.0004116508509555021,
+          "rate_difference_ci95": [
+            -0.00035595513049461146,
+            0.0001145844697552284
+          ],
+          "z": -0.8643286885873768,
+          "log_loss": 0.002162617879515771
+        },
+        {
+          "rows": 20792,
+          "actual_fraud": 10,
+          "expected_fraud": 8.91793539349811,
+          "bernoulli_variance": 8.553876417658287,
+          "actual_rate": 0.00048095421315890726,
+          "expected_rate": 0.0004289118600181854,
+          "rate_difference_ci95": [
+            -0.00023615469966569764,
+            0.0003402394059471414
+          ],
+          "z": 0.36997442687376825,
+          "log_loss": 0.002866194398903133
+        }
+      ],
+      "half_shifts": [
+        -0.07541854235948556,
+        0.03212484038359153
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 4.086589054617439e-06,
+          "ci95": [
+            -3.4742562435506567e-06,
+            1.1647434352785536e-05
+          ]
+        },
+        {
+          "delta": 5.068030393232229e-06,
+          "ci95": [
+            -1.6676936761401072e-05,
+            2.681299754786553e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.7318077104251971,
+      "eligible": false
+    },
+    "velocity_score_floor_near": {
+      "rule": [
+        0,
+        1
+      ],
+      "family": "boundary",
+      "train_rows": 1640,
+      "test_rows": 696,
+      "train_share": 0.0023429910280587463,
+      "test_share": 0.0023201237399327963,
+      "dev_share": 0.002339629491433124,
+      "test_over_dev_share": 0.9916628886873966,
+      "dev": {
+        "rows": 1392,
+        "actual_fraud": 3,
+        "expected_fraud": 2.2379958053550943,
+        "bernoulli_variance": 1.7160268289006577,
+        "actual_rate": 0.0021551724137931034,
+        "expected_rate": 0.0016077556072953264,
+        "rate_difference_ci95": [
+          -0.0012320552050729965,
+          0.0023268888180685504
+        ],
+        "z": 0.5816949926243977,
+        "log_loss": 0.0040055967761051916
+      },
+      "halves": [
+        {
+          "rows": 726,
+          "actual_fraud": 2,
+          "expected_fraud": 1.558978768026368,
+          "bernoulli_variance": 1.077345705857625,
+          "actual_rate": 0.0027548209366391185,
+          "expected_rate": 0.002147353674967449,
+          "rate_difference_ci95": [
+            -0.001989206806486891,
+            0.00320414132983023
+          ],
+          "z": 0.42489532785541184,
+          "log_loss": 0.004662116186410094
+        },
+        {
+          "rows": 666,
+          "actual_fraud": 1,
+          "expected_fraud": 0.6790170373287266,
+          "bernoulli_variance": 0.6386811230430327,
+          "actual_rate": 0.0015015015015015015,
+          "expected_rate": 0.0010195451010941842,
+          "rate_difference_ci95": [
+            -0.0019326515544297153,
+            0.0028965643552443495
+          ],
+          "z": 0.4016427584670387,
+          "log_loss": 0.0032899314729800265
+        }
+      ],
+      "half_shifts": [
+        0.016908120896483164,
+        0.012517729894873693
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -7.487526969832171e-06,
+          "ci95": [
+            -3.9961392760002045e-05,
+            2.4986338820337707e-05
+          ]
+        },
+        {
+          "delta": -8.011205278441054e-06,
+          "ci95": [
+            -4.8777972672886676e-05,
+            3.275556211600456e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.5607721449806534,
+      "eligible": false
+    },
+    "merchant_risk_score_floor": {
+      "rule": [
+        0.0
+      ],
+      "family": "boundary",
+      "train_rows": 1631,
+      "test_rows": 671,
+      "train_share": 0.002330133150465741,
+      "test_share": 0.002236785961917969,
+      "dev_share": 0.0023480333329971795,
+      "test_over_dev_share": 0.9526210426760819,
+      "dev": {
+        "rows": 1397,
+        "actual_fraud": 0,
+        "expected_fraud": 0.029452146097969478,
+        "bernoulli_variance": 0.029433175810344228,
+        "actual_rate": 0.0,
+        "expected_rate": 2.108242383533964e-05,
+        "rate_difference_ci95": [
+          -2.7094516682366022e-05,
+          -1.5070330988313256e-05
+        ],
+        "z": -0.17167157193995622,
+        "log_loss": 2.1089221414826697e-05
+      },
+      "halves": [
+        {
+          "rows": 695,
+          "actual_fraud": 0,
+          "expected_fraud": 0.013804294240582396,
+          "bernoulli_variance": 0.013793761265815472,
+          "actual_rate": 0.0,
+          "expected_rate": 1.986229387134158e-05,
+          "rate_difference_ci95": [
+            -2.8901535586796928e-05,
+            -1.082305215588623e-05
+          ],
+          "z": -0.11753652733671201,
+          "log_loss": 1.9869881449852777e-05
+        },
+        {
+          "rows": 702,
+          "actual_fraud": 0,
+          "expected_fraud": 0.015647851857387086,
+          "bernoulli_variance": 0.015639414544528756,
+          "actual_rate": 0.0,
+          "expected_rate": 2.2290387261235166e-05,
+          "rate_difference_ci95": [
+            -3.0236650273567367e-05,
+            -1.4344124248902965e-05
+          ],
+          "z": -0.12512511227604986,
+          "log_loss": 2.2296402719181223e-05
+        }
+      ],
+      "half_shifts": [
+        -0.0005518673604349299,
+        -0.0006255228840580109
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -1.2420437271602747e-08,
+          "ci95": [
+            -1.8072925269286758e-08,
+            -6.767949273918737e-09
+          ]
+        },
+        {
+          "delta": -1.2297945281250035e-08,
+          "ci95": [
+            -1.6682020501522672e-08,
+            -7.913870060977398e-09
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.8636957362834459,
+      "eligible": false
+    },
+    "merchant_risk_score_floor_near": {
+      "rule": [
+        0,
+        1
+      ],
+      "family": "boundary",
+      "train_rows": 52,
+      "test_rows": 29,
+      "train_share": 7.428995942625293e-05,
+      "test_share": 9.667182249719985e-05,
+      "dev_share": 7.7315342389313e-05,
+      "test_over_dev_share": 1.2503575553015,
+      "dev": {
+        "rows": 46,
+        "actual_fraud": 0,
+        "expected_fraud": 0.0008809316944947505,
+        "bernoulli_variance": 0.000880833445035759,
+        "actual_rate": 0.0,
+        "expected_rate": 1.9150689010755444e-05,
+        "rate_difference_ci95": [
+          -3.143998770355054e-05,
+          -6.861390317960347e-06
+        ],
+        "z": -0.02968214875834685,
+        "log_loss": 1.915175707681155e-05
+      },
+      "halves": [
+        {
+          "rows": 24,
+          "actual_fraud": 0,
+          "expected_fraud": 0.000459755480554215,
+          "bernoulli_variance": 0.0004596904316939792,
+          "actual_rate": 0.0,
+          "expected_rate": 1.9156478356425625e-05,
+          "rate_difference_ci95": [
+            -3.89405296069985e-05,
+            6.275728941472481e-07
+          ],
+          "z": -0.021443426466384554,
+          "log_loss": 1.915783375156382e-05
+        },
+        {
+          "rows": 22,
+          "actual_fraud": 0,
+          "expected_fraud": 0.00042117621394053526,
+          "bernoulli_variance": 0.0004211430133417797,
+          "actual_rate": 0.0,
+          "expected_rate": 1.914437336093342e-05,
+          "rate_difference_ci95": [
+            -3.360195462840602e-05,
+            -4.6867920934608145e-06
+          ],
+          "z": -0.020523387078078593,
+          "log_loss": 1.9145127977081796e-05
+        }
+      ],
+      "half_shifts": [
+        -1.838988107918205e-05,
+        -1.6846764764120437e-05
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -3.2272196653335076e-10,
+          "ci95": [
+            -6.560164172364015e-10,
+            1.057248416970004e-11
+          ]
+        },
+        {
+          "delta": -3.520595125231886e-10,
+          "ci95": [
+            -6.179302683567967e-10,
+            -8.618875668958038e-11
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.9763205488762651,
+      "eligible": false
+    },
+    "merchant_risk_score_cap": {
+      "rule": [
+        100.0
+      ],
+      "family": "boundary",
+      "train_rows": 216,
+      "test_rows": 77,
+      "train_share": 0.00030858906223212756,
+      "test_share": 0.00025668035628566857,
+      "dev_share": 0.0003126229061828743,
+      "test_over_dev_share": 0.8210542196659091,
+      "dev": {
+        "rows": 186,
+        "actual_fraud": 19,
+        "expected_fraud": 17.491880441227238,
+        "bernoulli_variance": 8.563600334902954,
+        "actual_rate": 0.10215053763440861,
+        "expected_rate": 0.0940423679635873,
+        "rate_difference_ci95": [
+          -0.023431882747129477,
+          0.03964822208877208
+        ],
+        "z": 0.5153562853237664,
+        "log_loss": 0.16453871814841017
+      },
+      "halves": [
+        {
+          "rows": 92,
+          "actual_fraud": 5,
+          "expected_fraud": 8.546893592599535,
+          "bernoulli_variance": 4.134668451086333,
+          "actual_rate": 0.05434782608695652,
+          "expected_rate": 0.0929010173108645,
+          "rate_difference_ci95": [
+            -0.06430573343570983,
+            -0.012800649012106119
+          ],
+          "z": -1.7443266443159082,
+          "log_loss": 0.07528937157998092
+        },
+        {
+          "rows": 94,
+          "actual_fraud": 14,
+          "expected_fraud": 8.944986848627705,
+          "bernoulli_variance": 4.42893188381662,
+          "actual_rate": 0.14893617021276595,
+          "expected_rate": 0.09515943455986921,
+          "rate_difference_ci95": [
+            -0.001957480914828523,
+            0.10951095222062207
+          ],
+          "z": 2.4019988178530167,
+          "log_loss": 0.251889142449426
+        }
+      ],
+      "half_shifts": [
+        -0.12223657581318521,
+        0.170918633931775
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 0.007264026986270394,
+          "ci95": [
+            0.002781125116066923,
+            0.011746928856473864
+          ]
+        },
+        {
+          "delta": 0.006919993140838081,
+          "ci95": [
+            8.454857705544015e-05,
+            0.013755437704620722
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.606304073939614,
+      "eligible": false
+    },
+    "merchant_risk_score_cap_near": {
+      "rule": [
+        99,
+        100
+      ],
+      "family": "boundary",
+      "train_rows": 0,
+      "test_rows": 0,
+      "train_share": 0.0,
+      "test_share": 0.0,
+      "dev_share": 0.0,
+      "test_over_dev_share": null,
+      "dev": {
+        "rows": 0,
+        "actual_fraud": 0,
+        "expected_fraud": 0.0,
+        "bernoulli_variance": 0.0,
+        "actual_rate": null,
+        "expected_rate": null,
+        "rate_difference_ci95": [
+          null,
+          null
+        ],
+        "z": null,
+        "log_loss": null
+      },
+      "halves": [
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        },
+        {
+          "rows": 0,
+          "actual_fraud": 0,
+          "expected_fraud": 0.0,
+          "bernoulli_variance": 0.0,
+          "actual_rate": null,
+          "expected_rate": null,
+          "rate_difference_ci95": [
+            null,
+            null
+          ],
+          "z": null,
+          "log_loss": null
+        }
+      ],
+      "half_shifts": [
+        0.0,
+        0.0
+      ],
+      "cross_log_loss": [
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        },
+        {
+          "delta": null,
+          "ci95": [
+            null,
+            null
+          ]
+        }
+      ],
+      "pooled_two_sided_p": null,
+      "eligible": false
+    },
+    "customer_age_floor": {
+      "rule": [
+        18.0
+      ],
+      "family": "boundary",
+      "train_rows": 5381,
+      "test_rows": 2272,
+      "train_share": 0.007687582147551289,
+      "test_share": 0.007573737265987519,
+      "dev_share": 0.007708003482551944,
+      "test_over_dev_share": 0.9825809346261514,
+      "dev": {
+        "rows": 4586,
+        "actual_fraud": 8,
+        "expected_fraud": 10.994009388411293,
+        "bernoulli_variance": 8.071512225529947,
+        "actual_rate": 0.0017444395987788923,
+        "expected_rate": 0.002397298165811446,
+        "rate_difference_ci95": [
+          -0.001574696184845987,
+          0.0002689790507808789
+        ],
+        "z": -1.053842486180991,
+        "log_loss": 0.004626764029960768
+      },
+      "halves": [
+        {
+          "rows": 2284,
+          "actual_fraud": 4,
+          "expected_fraud": 3.8548490432692053,
+          "bernoulli_variance": 3.2687633260167974,
+          "actual_rate": 0.0017513134851138354,
+          "expected_rate": 0.0016877622781388815,
+          "rate_difference_ci95": [
+            -0.0013383118367063123,
+            0.0014654142506562201
+          ],
+          "z": 0.08028384510570936,
+          "log_loss": 0.005388468245455891
+        },
+        {
+          "rows": 2302,
+          "actual_fraud": 4,
+          "expected_fraud": 7.139160345142089,
+          "bernoulli_variance": 4.80274889951315,
+          "actual_rate": 0.0017376194613379669,
+          "expected_rate": 0.003101285988332793,
+          "rate_difference_ci95": [
+            -0.0025624356805331754,
+            -0.00016489737345647473
+          ],
+          "z": -1.4324140065314275,
+          "log_loss": 0.0038710157987744674
+        }
+      ],
+      "half_shifts": [
+        0.005133416687008187,
+        -0.10595909049878742
+      ],
+      "cross_log_loss": [
+        {
+          "delta": 1.453863924969906e-05,
+          "ci95": [
+            -0.00013454749605163661,
+            0.0001636247745510347
+          ]
+        },
+        {
+          "delta": 7.027791596493468e-06,
+          "ci95": [
+            8.733487289104337e-07,
+            1.3182234464076503e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.2919550382481052,
+      "eligible": false
+    },
+    "customer_age_cap": {
+      "rule": [
+        81.0
+      ],
+      "family": "boundary",
+      "train_rows": 11485,
+      "test_rows": 4888,
+      "train_share": 0.016408080461740672,
+      "test_share": 0.016294202357459063,
+      "dev_share": 0.016422787184477768,
+      "test_over_dev_share": 0.9921703407847702,
+      "dev": {
+        "rows": 9771,
+        "actual_fraud": 234,
+        "expected_fraud": 231.45532391439517,
+        "bernoulli_variance": 141.97198722744076,
+        "actual_rate": 0.02394841879029782,
+        "expected_rate": 0.0236879873006238,
+        "rate_difference_ci95": [
+          -0.0021965147092521367,
+          0.0027173776886001704
+        ],
+        "z": 0.21356553979560475,
+        "log_loss": 0.06240278464083887
+      },
+      "halves": [
+        {
+          "rows": 4925,
+          "actual_fraud": 123,
+          "expected_fraud": 121.74270531516032,
+          "bernoulli_variance": 72.58093553400629,
+          "actual_rate": 0.0249746192893401,
+          "expected_rate": 0.024719331028458948,
+          "rate_difference_ci95": [
+            -0.0031933180142986093,
+            0.003703894536060921
+          ],
+          "z": 0.14757941983788173,
+          "log_loss": 0.06166900662726751
+        },
+        {
+          "rows": 4846,
+          "actual_fraud": 111,
+          "expected_fraud": 109.71261859923487,
+          "bernoulli_variance": 69.39105169343448,
+          "actual_rate": 0.022905489063144862,
+          "expected_rate": 0.022639830499223045,
+          "rate_difference_ci95": [
+            -0.0032358107487694934,
+            0.00376712787661313
+          ],
+          "z": 0.15454519098481254,
+          "log_loss": 0.06314852478050849
+        }
+      ],
+      "half_shifts": [
+        0.012848028149373808,
+        0.013596413883969137
+      ],
+      "cross_log_loss": [
+        {
+          "delta": -2.1051437327692662e-06,
+          "ci95": [
+            -4.899496156036754e-05,
+            4.478467409482901e-05
+          ]
+        },
+        {
+          "delta": -2.2281816042218696e-06,
+          "ci95": [
+            -4.7218744239118705e-05,
+            4.276238103067497e-05
+          ]
+        }
+      ],
+      "pooled_two_sided_p": 0.8308858746259711,
+      "eligible": true
+    }
+  },
+  "written_digits": {
+    "train.csv": {
+      "amount_usd": {
+        "decimal_place_counts": {
+          "1": 56838,
+          "2": 643122
+        },
+        "off_grid_values": []
+      },
+      "hours_since_last_txn": {
+        "decimal_place_counts": {
+          "1": 55559,
+          "2": 644401
+        },
+        "off_grid_values": []
+      },
+      "distance_from_home_km": {
+        "decimal_place_counts": {
+          "1": 57825,
+          "2": 642135
+        },
+        "off_grid_values": []
+      },
+      "account_balance_usd": {
+        "decimal_place_counts": {
+          "1": 79127,
+          "2": 620833
+        },
+        "off_grid_values": []
+      },
+      "velocity_score": {
+        "decimal_place_counts": {
+          "1": 699960
+        },
+        "off_grid_values": []
+      },
+      "merchant_risk_score": {
+        "decimal_place_counts": {
+          "1": 699959,
+          "2": 1
+        },
+        "off_grid_values": [
+          "19.12"
+        ]
+      }
+    },
+    "test.csv": {
+      "amount_usd": {
+        "decimal_place_counts": {
+          "1": 24329,
+          "2": 275654,
+          "3": 1
+        },
+        "off_grid_values": [
+          "9.982"
+        ]
+      },
+      "hours_since_last_txn": {
+        "decimal_place_counts": {
+          "1": 23876,
+          "2": 276108
+        },
+        "off_grid_values": []
+      },
+      "distance_from_home_km": {
+        "decimal_place_counts": {
+          "1": 24439,
+          "2": 275545
+        },
+        "off_grid_values": []
+      },
+      "account_balance_usd": {
+        "decimal_place_counts": {
+          "1": 33843,
+          "2": 266141
+        },
+        "off_grid_values": []
+      },
+      "velocity_score": {
+        "decimal_place_counts": {
+          "1": 299983,
+          "2": 1
+        },
+        "off_grid_values": [
+          "29.11"
+        ]
+      },
+      "merchant_risk_score": {
+        "decimal_place_counts": {
+          "1": 299984
+        },
+        "off_grid_values": []
+      }
+    }
+  },
+  "holdout": {
+    "anchor_file": "selected_predictions.npz",
+    "anchor_sha256": "4731946e959806e0aedc85552f0bfbc03b00e556896e18f8fd1b73fc2cb07a6d",
+    "anchor_roc_auc": 0.9512244493667037,
+    "reused_holdout": true,
+    "rows": 104994,
+    "fraud": 1753,
+    "groups": {
+      "amount_usd_hole": {
+        "anchor_group": {
+          "rows": 1644,
+          "actual_fraud": 46,
+          "expected_fraud": 31.85728851653129,
+          "bernoulli_variance": 17.899266249693703,
+          "actual_rate": 0.027980535279805353,
+          "expected_rate": 0.019377912722950908,
+          "rate_difference_ci95": [
+            0.0022096016500239013,
+            0.01499564346368499
+          ],
+          "z": 3.3428359772382747,
+          "log_loss": 0.06904162358764789
+        },
+        "delta_log_loss": -2.996624202765706e-05,
+        "delta_log_loss_ci95": [
+          -5.708233107284123e-05,
+          -2.850152982472896e-06
+        ],
+        "delta_log_loss_group": -0.0019137929534378498,
+        "delta_log_loss_group_ci95": [
+          -0.003643644859668772,
+          -0.00018394104720692757
+        ],
+        "dev_shift": 0.27198693761597204,
+        "exact_anchor_comparison": {
+          "roc_auc": 0.9513158454622589,
+          "average_precision": 0.5385228223609757,
+          "log_loss": 0.0438060216863658,
+          "delta_auc": 9.139609555508521e-05,
+          "ci95_low": -2.2291235765631756e-05,
+          "ci95_high": 0.00020508342687580218
+        }
+      }
+    }
+  }
+}

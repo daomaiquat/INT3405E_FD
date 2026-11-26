@@ -1,0 +1,1070 @@
+{
+  "source": "train.csv",
+  "train_sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+  "rows": 699960,
+  "fraud_rows": 11689,
+  "prevalence": 0.016699525687182123,
+  "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+  "folds": 5,
+  "smoothing": 20,
+  "numeric_discrete_level_limit": 25,
+  "method": "Single-feature rates fitted on each outer train; decile boundaries also fitted on outer train; unseen levels use its prevalence.",
+  "features": [
+    {
+      "feature": "merchant_risk_score",
+      "kind": "numeric",
+      "oof_auc": 0.7412004175505044,
+      "average_precision": 0.04119979032866109,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.7405022388346076,
+          "average_precision": 0.0404756789556822
+        },
+        {
+          "fold": 2,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.7404865179197448,
+          "average_precision": 0.039749411866584594
+        },
+        {
+          "fold": 3,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.7433904651255948,
+          "average_precision": 0.040129029717464515
+        },
+        {
+          "fold": 4,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.7490972549503403,
+          "average_precision": 0.040737369150333116
+        },
+        {
+          "fold": 5,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.7386646063648779,
+          "average_precision": 0.03926372828646546
+        }
+      ],
+      "auc_rank": 1
+    },
+    {
+      "feature": "velocity_score",
+      "kind": "numeric",
+      "oof_auc": 0.7065357797862768,
+      "average_precision": 0.03688165497333079,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.7069302637131485,
+          "average_precision": 0.03534039713647877
+        },
+        {
+          "fold": 2,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.7056105560559016,
+          "average_precision": 0.03568712863355596
+        },
+        {
+          "fold": 3,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.7127874234780367,
+          "average_precision": 0.03735188014525122
+        },
+        {
+          "fold": 4,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.7024643449962062,
+          "average_precision": 0.03498974067526729
+        },
+        {
+          "fold": 5,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.7095674743346476,
+          "average_precision": 0.0370192585835267
+        }
+      ],
+      "auc_rank": 2
+    },
+    {
+      "feature": "cvv_retry_count",
+      "kind": "numeric",
+      "oof_auc": 0.7056631412259909,
+      "average_precision": 0.08570365094686144,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 4,
+          "auc": 0.7055260754255828,
+          "average_precision": 0.07879488442293589
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 4,
+          "auc": 0.7118884956011566,
+          "average_precision": 0.08107459377639602
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 4,
+          "auc": 0.7134637528543659,
+          "average_precision": 0.0814073770718734
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 4,
+          "auc": 0.7079723590828758,
+          "average_precision": 0.07460519390153601
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 4,
+          "auc": 0.7015661364319011,
+          "average_precision": 0.07703731806784224
+        }
+      ],
+      "auc_rank": 3
+    },
+    {
+      "feature": "auth_method",
+      "kind": "categorical",
+      "oof_auc": 0.6849981517531548,
+      "average_precision": 0.04029278345510435,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.685301554569201,
+          "average_precision": 0.0381820038352995
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.6829847747597113,
+          "average_precision": 0.03803673979876052
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.6958755163809814,
+          "average_precision": 0.03973829869167568
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.6917581401294971,
+          "average_precision": 0.0389613862128685
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.6769528572046278,
+          "average_precision": 0.036740389179439975
+        }
+      ],
+      "auc_rank": 4
+    },
+    {
+      "feature": "is_new_merchant",
+      "kind": "flag",
+      "oof_auc": 0.6400886942356838,
+      "average_precision": 0.032060961971413005,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.6389845238759677,
+          "average_precision": 0.029415684538358598
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.649716951899944,
+          "average_precision": 0.03111029073689538
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.639669705709992,
+          "average_precision": 0.029591053381642883
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.644061756828153,
+          "average_precision": 0.030196392043072836
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.6387811356234746,
+          "average_precision": 0.029431557631177562
+        }
+      ],
+      "auc_rank": 5
+    },
+    {
+      "feature": "merchant_category",
+      "kind": "categorical",
+      "oof_auc": 0.6359878924964698,
+      "average_precision": 0.035990736259119936,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 12,
+          "auc": 0.6319299175052164,
+          "average_precision": 0.03470067357821875
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 12,
+          "auc": 0.6402350061608578,
+          "average_precision": 0.034393054102691584
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 12,
+          "auc": 0.6402150720363424,
+          "average_precision": 0.034864706355888814
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 12,
+          "auc": 0.6417747809520761,
+          "average_precision": 0.03597205067601413
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 12,
+          "auc": 0.6310940316718516,
+          "average_precision": 0.033728269632415535
+        }
+      ],
+      "auc_rank": 6
+    },
+    {
+      "feature": "customer_age",
+      "kind": "numeric",
+      "oof_auc": 0.6241386248797984,
+      "average_precision": 0.024279933344023973,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.6297151985530854,
+          "average_precision": 0.024462294619206792
+        },
+        {
+          "fold": 2,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.6302163662396848,
+          "average_precision": 0.024691280435452934
+        },
+        {
+          "fold": 3,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.6261756534835118,
+          "average_precision": 0.02446356581898943
+        },
+        {
+          "fold": 4,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.6250297543724355,
+          "average_precision": 0.02394917267528577
+        },
+        {
+          "fold": 5,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.616148965961607,
+          "average_precision": 0.023146590473880353
+        }
+      ],
+      "auc_rank": 7
+    },
+    {
+      "feature": "txn_count_last_24h",
+      "kind": "numeric",
+      "oof_auc": 0.6185154819398959,
+      "average_precision": 0.025939974679585958,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 12,
+          "auc": 0.6220222220574724,
+          "average_precision": 0.025703671923693706
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 12,
+          "auc": 0.6250364192772886,
+          "average_precision": 0.02547557374851399
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 12,
+          "auc": 0.620133050330391,
+          "average_precision": 0.025302759510686633
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 12,
+          "auc": 0.6183669515277037,
+          "average_precision": 0.024414151286532914
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 12,
+          "auc": 0.616065531917263,
+          "average_precision": 0.02459878889199465
+        }
+      ],
+      "auc_rank": 8
+    },
+    {
+      "feature": "ip_country_mismatch",
+      "kind": "flag",
+      "oof_auc": 0.5711332400671756,
+      "average_precision": 0.04221636452189667,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5713831237691259,
+          "average_precision": 0.040438879967914024
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5700039752040433,
+          "average_precision": 0.03840970871938854
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5782972172962688,
+          "average_precision": 0.04301259634371606
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5696566171418767,
+          "average_precision": 0.0389402474752543
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5754407851137358,
+          "average_precision": 0.04114295935465461
+        }
+      ],
+      "auc_rank": 9
+    },
+    {
+      "feature": "amount_usd",
+      "kind": "numeric",
+      "oof_auc": 0.5640997441346427,
+      "average_precision": 0.021608678402963023,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.569225001071263,
+          "average_precision": 0.021342671719805608
+        },
+        {
+          "fold": 2,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5735079968853112,
+          "average_precision": 0.022109318569784008
+        },
+        {
+          "fold": 3,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.56179238829461,
+          "average_precision": 0.02139417058720988
+        },
+        {
+          "fold": 4,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.567231600055795,
+          "average_precision": 0.021489766663634582
+        },
+        {
+          "fold": 5,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5556618115046088,
+          "average_precision": 0.020614703810992487
+        }
+      ],
+      "auc_rank": 10
+    },
+    {
+      "feature": "hours_since_last_txn",
+      "kind": "numeric",
+      "oof_auc": 0.5633573378291916,
+      "average_precision": 0.02183308054958429,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5542464947942838,
+          "average_precision": 0.02075330371356348
+        },
+        {
+          "fold": 2,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5669265664698324,
+          "average_precision": 0.022042963541775734
+        },
+        {
+          "fold": 3,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5654913234870389,
+          "average_precision": 0.021576264958952523
+        },
+        {
+          "fold": 4,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5789035139031408,
+          "average_precision": 0.02264793711475927
+        },
+        {
+          "fold": 5,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5599435840816991,
+          "average_precision": 0.021360979831265472
+        }
+      ],
+      "auc_rank": 11
+    },
+    {
+      "feature": "is_foreign_transaction",
+      "kind": "flag",
+      "oof_auc": 0.5555973682596904,
+      "average_precision": 0.03236061686157454,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5525864856556378,
+          "average_precision": 0.02903361686729347
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5580620130836464,
+          "average_precision": 0.03071885463008365
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5623945523497546,
+          "average_precision": 0.03340559108964113
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5554167014722808,
+          "average_precision": 0.03005774782012756
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5584252426301906,
+          "average_precision": 0.03139014835274127
+        }
+      ],
+      "auc_rank": 12
+    },
+    {
+      "feature": "used_vpn",
+      "kind": "flag",
+      "oof_auc": 0.5479392560123963,
+      "average_precision": 0.0244020373647131,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5440106983613151,
+          "average_precision": 0.02185095856168892
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5502198871737564,
+          "average_precision": 0.023227378909755438
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5473593752615858,
+          "average_precision": 0.022530595336595564
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5547213545900526,
+          "average_precision": 0.024193704803771827
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5548661989744983,
+          "average_precision": 0.02420466633106491
+        }
+      ],
+      "auc_rank": 13
+    },
+    {
+      "feature": "billing_shipping_mismatch",
+      "kind": "flag",
+      "oof_auc": 0.5437389141091129,
+      "average_precision": 0.029381531625276933,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5434367112549844,
+          "average_precision": 0.027494982059880546
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5474498657156834,
+          "average_precision": 0.029287838967608594
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5453662175989457,
+          "average_precision": 0.028758690758097137
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5435427524532038,
+          "average_precision": 0.027740837517945177
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5431073244315228,
+          "average_precision": 0.02722884212023903
+        }
+      ],
+      "auc_rank": 14
+    },
+    {
+      "feature": "prior_disputes",
+      "kind": "numeric",
+      "oof_auc": 0.5295315769400851,
+      "average_precision": 0.018864357583028134,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.5252970522341276,
+          "average_precision": 0.017771864753813156
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.527499723678327,
+          "average_precision": 0.01809947928744619
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.5353328915832326,
+          "average_precision": 0.01851788094180487
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.5386753786532861,
+          "average_precision": 0.018772696825763022
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.5339498228427896,
+          "average_precision": 0.018352470194931237
+        }
+      ],
+      "auc_rank": 15
+    },
+    {
+      "feature": "is_ai_generated_scam_attempt",
+      "kind": "flag",
+      "oof_auc": 0.5124361247693718,
+      "average_precision": 0.020907182998231112,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5163630178308974,
+          "average_precision": 0.022413117740087203
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5127266435851121,
+          "average_precision": 0.020001916800655085
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5153696652035279,
+          "average_precision": 0.02207139723722129
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5112082912584673,
+          "average_precision": 0.019610328048425753
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 2,
+          "auc": 0.5121109430926746,
+          "average_precision": 0.020126738648280868
+        }
+      ],
+      "auc_rank": 16
+    },
+    {
+      "feature": "card_age_months",
+      "kind": "numeric",
+      "oof_auc": 0.5112429267960102,
+      "average_precision": 0.01725288389424732,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5035009540806741,
+          "average_precision": 0.01705167985200002
+        },
+        {
+          "fold": 2,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5182264360688718,
+          "average_precision": 0.01746742212947652
+        },
+        {
+          "fold": 3,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5140938890024943,
+          "average_precision": 0.01760155868836943
+        },
+        {
+          "fold": 4,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.515840863101512,
+          "average_precision": 0.017534961189270865
+        },
+        {
+          "fold": 5,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5108429177565158,
+          "average_precision": 0.017063535567902483
+        }
+      ],
+      "auc_rank": 17
+    },
+    {
+      "feature": "account_balance_usd",
+      "kind": "numeric",
+      "oof_auc": 0.5111957614659683,
+      "average_precision": 0.017355043159849908,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5110173932844552,
+          "average_precision": 0.017350730666187898
+        },
+        {
+          "fold": 2,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5055374996878836,
+          "average_precision": 0.017087806722466452
+        },
+        {
+          "fold": 3,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.521936142306836,
+          "average_precision": 0.017790592121406077
+        },
+        {
+          "fold": 4,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5019171777473138,
+          "average_precision": 0.016870365551711144
+        },
+        {
+          "fold": 5,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5204952054134862,
+          "average_precision": 0.017839920342839446
+        }
+      ],
+      "auc_rank": 18
+    },
+    {
+      "feature": "card_type",
+      "kind": "categorical",
+      "oof_auc": 0.5090781896722234,
+      "average_precision": 0.01713577320464805,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.5107432121447039,
+          "average_precision": 0.017137383152577193
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.508391195996886,
+          "average_precision": 0.017004835706183326
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.5082076236991115,
+          "average_precision": 0.016968123723741055
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.5118933782265581,
+          "average_precision": 0.017406531431234745
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.5142890355522866,
+          "average_precision": 0.017325205588238784
+        }
+      ],
+      "auc_rank": 19
+    },
+    {
+      "feature": "channel",
+      "kind": "categorical",
+      "oof_auc": 0.5071961633050915,
+      "average_precision": 0.016965008091766258,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.5019951788272378,
+          "average_precision": 0.01672782179173081
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.5098190532086604,
+          "average_precision": 0.01712352668628407
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.5104180215273755,
+          "average_precision": 0.017136716070813258
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.5085552505324995,
+          "average_precision": 0.017034812572416295
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 5,
+          "auc": 0.5225454715230956,
+          "average_precision": 0.017680794259731746
+        }
+      ],
+      "auc_rank": 20
+    },
+    {
+      "feature": "day_of_week",
+      "kind": "numeric",
+      "oof_auc": 0.5046733795074355,
+      "average_precision": 0.01698842679418211,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 7,
+          "auc": 0.5070450726358229,
+          "average_precision": 0.017161666867982407
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 7,
+          "auc": 0.5078764773577242,
+          "average_precision": 0.017060656513327797
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 7,
+          "auc": 0.5072047357352487,
+          "average_precision": 0.01706251225970952
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 7,
+          "auc": 0.4977309323659376,
+          "average_precision": 0.016705509154651473
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 7,
+          "auc": 0.5057712545245071,
+          "average_precision": 0.016991122380310367
+        }
+      ],
+      "auc_rank": 21
+    },
+    {
+      "feature": "device_type",
+      "kind": "categorical",
+      "oof_auc": 0.5033758644842412,
+      "average_precision": 0.016696796533567954,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 8,
+          "auc": 0.501500209504369,
+          "average_precision": 0.016675538749380263
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 8,
+          "auc": 0.5012759175778031,
+          "average_precision": 0.016600256371034
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 8,
+          "auc": 0.5056484835592115,
+          "average_precision": 0.01686857873461766
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 8,
+          "auc": 0.504155843161546,
+          "average_precision": 0.016787952097367186
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 8,
+          "auc": 0.5104913898564412,
+          "average_precision": 0.01701686235829688
+        }
+      ],
+      "auc_rank": 22
+    },
+    {
+      "feature": "distance_from_home_km",
+      "kind": "numeric",
+      "oof_auc": 0.502021234222638,
+      "average_precision": 0.016658659891611825,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.502374728409397,
+          "average_precision": 0.01664842345383622
+        },
+        {
+          "fold": 2,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5050359632672952,
+          "average_precision": 0.0168627584869626
+        },
+        {
+          "fold": 3,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5037197502029704,
+          "average_precision": 0.016802177457097296
+        },
+        {
+          "fold": 4,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5001398169643747,
+          "average_precision": 0.01666191436030677
+        },
+        {
+          "fold": 5,
+          "encoding": "train_deciles",
+          "train_key_count": 10,
+          "auc": 0.5031355472119302,
+          "average_precision": 0.01663291276086144
+        }
+      ],
+      "auc_rank": 23
+    },
+    {
+      "feature": "time_of_day_hour",
+      "kind": "numeric",
+      "oof_auc": 0.5017814823125089,
+      "average_precision": 0.016773090492636977,
+      "folds": [
+        {
+          "fold": 1,
+          "encoding": "raw_levels",
+          "train_key_count": 24,
+          "auc": 0.49665715298149066,
+          "average_precision": 0.0165204236593727
+        },
+        {
+          "fold": 2,
+          "encoding": "raw_levels",
+          "train_key_count": 24,
+          "auc": 0.5012331441138362,
+          "average_precision": 0.016937635033315586
+        },
+        {
+          "fold": 3,
+          "encoding": "raw_levels",
+          "train_key_count": 24,
+          "auc": 0.4963349501781428,
+          "average_precision": 0.01649156651053443
+        },
+        {
+          "fold": 4,
+          "encoding": "raw_levels",
+          "train_key_count": 24,
+          "auc": 0.5144809925800127,
+          "average_precision": 0.017350700569899596
+        },
+        {
+          "fold": 5,
+          "encoding": "raw_levels",
+          "train_key_count": 24,
+          "auc": 0.5013247174207737,
+          "average_precision": 0.016870659114219866
+        }
+      ],
+      "auc_rank": 24
+    }
+  ]
+}

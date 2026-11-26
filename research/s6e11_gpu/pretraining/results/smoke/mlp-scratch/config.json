@@ -1,0 +1,17 @@
+{
+  "architecture": "mlp",
+  "objective": null,
+  "batch": 256,
+  "pretrain_batch": 256,
+  "finetune_epochs": 1,
+  "pretrain_epochs": 0,
+  "schema": 1,
+  "seed": 42,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "architecture_source_sha256": "48ee2cdc89fbdf8c7176314f218790cf458dda4742d8c26f66a20ae0d202aa75",
+  "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch_version": "2.11.0+cu128",
+  "amp": true,
+  "smoke": true
+}

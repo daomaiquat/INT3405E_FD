@@ -1,0 +1,102 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "selected_residual_pairs": [
+    [
+      "txn_count_last_24h",
+      "card_type"
+    ],
+    [
+      "hours_since_last_txn",
+      "ip_country_mismatch"
+    ],
+    [
+      "cvv_retry_count",
+      "card_type"
+    ],
+    [
+      "device_type",
+      "is_new_merchant"
+    ],
+    [
+      "merchant_risk_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "velocity_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "customer_age",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "channel",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "account_balance_usd",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "device_type",
+      "used_vpn"
+    ],
+    [
+      "prior_disputes",
+      "is_new_merchant"
+    ],
+    [
+      "account_balance_usd",
+      "is_foreign_transaction"
+    ]
+  ],
+  "boosting_rounds": [
+    224
+  ],
+  "meta_weights": [
+    0.2471733553129948,
+    0.3456692910700449,
+    0.4062334149195076,
+    0.321520277335792,
+    0.5802595025398385,
+    0.167965202328557,
+    0.24849107947143284
+  ],
+  "n_fit": 594966,
+  "n_scoring": 104994,
+  "grandmaster_reference_oof_auc": 0.9506068338417099,
+  "elapsed_seconds": 89.32505729999957,
+  "seeds": [
+    8337,
+    42,
+    101,
+    202,
+    2032
+  ],
+  "holdout_scores": {
+    "grandmaster_original": {
+      "roc_auc": 0.9509466585013374,
+      "average_precision": 0.5381488606933845,
+      "log_loss": 0.04387461343908033
+    },
+    "grandmaster_hierarchical": {
+      "roc_auc": 0.9509489294520218,
+      "average_precision": 0.538185085635301,
+      "log_loss": 0.04387376063920453
+    },
+    "screened_residual": {
+      "roc_auc": 0.9509252364190891,
+      "average_precision": 0.5376862056948462,
+      "log_loss": 0.04389378850211636
+    },
+    "bagged_offset_224": {
+      "roc_auc": 0.9510672150402931,
+      "average_precision": 0.5380384518590863,
+      "log_loss": 0.04386546669086132
+    }
+  }
+}

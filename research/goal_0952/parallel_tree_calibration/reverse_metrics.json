@@ -1,0 +1,349 @@
+{
+  "replacement_of_xgb_log_odds": 0.15,
+  "xgb_weight_in_full_control": 0.85,
+  "lightgbm_weight_in_full_variant": 0.1275,
+  "lightgbm_version": "4.7.0",
+  "methods": {
+    "additive_stumps": {
+      "rounds": 600,
+      "settings": {
+        "objective": "binary",
+        "learning_rate": 0.025,
+        "num_leaves": 2,
+        "min_data_in_leaf": 180,
+        "extra_trees": true,
+        "max_bin": 255,
+        "lambda_l2": 30,
+        "lambda_l1": 1.5,
+        "bagging_fraction": 0.9,
+        "bagging_freq": 1,
+        "feature_fraction": 0.85,
+        "seed": 8337,
+        "num_threads": 4,
+        "force_col_wise": true,
+        "deterministic": true,
+        "verbosity": -1
+      }
+    },
+    "five_leaf_trees": {
+      "rounds": 224,
+      "implementation": "followup/run_followup.py::fit_lightgbm"
+    }
+  },
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "fit_rows": 104994,
+  "rows": 594966,
+  "variants": {
+    "grandmaster_eda": {
+      "roc_auc": 0.950189701345676,
+      "average_precision": 0.5307983000384707,
+      "log_loss": 0.04433165226010671,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "brier": 0.010735547123782002,
+      "fold_weighted_delta_auc": 0.0,
+      "fold_auc_wins": 0,
+      "fold_logloss_wins": 0,
+      "fold_deltas_auc": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "additive_stumps": {
+      "roc_auc": 0.9502476296479615,
+      "average_precision": 0.5310408241224269,
+      "log_loss": 0.04431307462982082,
+      "delta_auc": 5.792830228534829e-05,
+      "ci95_low": 3.9922430668792635e-05,
+      "ci95_high": 7.593417390190394e-05,
+      "brier": 0.010732197182505827,
+      "fold_weighted_delta_auc": 5.626750137343737e-05,
+      "fold_auc_wins": 10,
+      "fold_logloss_wins": 10,
+      "fold_deltas_auc": [
+        0.00011414056360103952,
+        5.681663610357379e-05,
+        1.1538729668747472e-05,
+        3.9456952645289256e-05,
+        3.122851427472817e-05,
+        3.634441900868257e-05,
+        8.65329480440602e-05,
+        3.7852785507941356e-05,
+        6.444785308878931e-05,
+        8.43640299112991e-05
+      ]
+    },
+    "five_leaf_trees": {
+      "roc_auc": 0.9502343833242184,
+      "average_precision": 0.531046687366752,
+      "log_loss": 0.04431400061755509,
+      "delta_auc": 4.468197854234912e-05,
+      "ci95_low": 2.700796056382339e-05,
+      "ci95_high": 6.235599652087485e-05,
+      "brier": 0.010731956464636124,
+      "fold_weighted_delta_auc": 4.212471672798387e-05,
+      "fold_auc_wins": 10,
+      "fold_logloss_wins": 10,
+      "fold_deltas_auc": [
+        5.331718530243723e-05,
+        6.254301014196884e-05,
+        2.6826256755985156e-06,
+        1.6775008631619848e-05,
+        3.427226263763572e-05,
+        1.5330517883271888e-05,
+        9.913332957744991e-05,
+        2.9091044796980547e-05,
+        5.0315457953420406e-05,
+        5.7855030510367556e-05
+      ]
+    }
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 59497,
+      "fraud": 994,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9443713801534744,
+          "average_precision": 0.5156902818636666,
+          "log_loss": 0.04603205935094858
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9444855207170755,
+          "average_precision": 0.5159607575156412,
+          "log_loss": 0.046005331220668896
+        },
+        "five_leaf_trees": {
+          "roc_auc": 0.9444246973387769,
+          "average_precision": 0.5158897961214781,
+          "log_loss": 0.04601060664761646
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "rows": 59497,
+      "fraud": 994,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9497723052672564,
+          "average_precision": 0.5379006809877409,
+          "log_loss": 0.043983700265901156
+        },
+        "additive_stumps": {
+          "roc_auc": 0.94982912190336,
+          "average_precision": 0.5380412488676573,
+          "log_loss": 0.04396660099416598
+        },
+        "five_leaf_trees": {
+          "roc_auc": 0.9498348482773984,
+          "average_precision": 0.53817814534397,
+          "log_loss": 0.04396244622661051
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "rows": 59497,
+      "fraud": 994,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9504687561638054,
+          "average_precision": 0.5292315163412377,
+          "log_loss": 0.04430462449344466
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9504802948934742,
+          "average_precision": 0.529374006831335,
+          "log_loss": 0.04429645504995239
+        },
+        "five_leaf_trees": {
+          "roc_auc": 0.950471438789481,
+          "average_precision": 0.5293599209968077,
+          "log_loss": 0.04430149571807406
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "rows": 59497,
+      "fraud": 994,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9521110991539378,
+          "average_precision": 0.5183252119764241,
+          "log_loss": 0.04455076719781293
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9521505561065831,
+          "average_precision": 0.5186170758689054,
+          "log_loss": 0.04453010172691927
+        },
+        "five_leaf_trees": {
+          "roc_auc": 0.9521278741625694,
+          "average_precision": 0.5186715662052851,
+          "log_loss": 0.04452940660463652
+        }
+      }
+    },
+    {
+      "fold": 5,
+      "rows": 59497,
+      "fraud": 994,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9526174705446842,
+          "average_precision": 0.5462043525965866,
+          "log_loss": 0.04333030585723898
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9526486990589589,
+          "average_precision": 0.5465000399882546,
+          "log_loss": 0.04331362127071944
+        },
+        "five_leaf_trees": {
+          "roc_auc": 0.9526517428073218,
+          "average_precision": 0.5464709442622051,
+          "log_loss": 0.043310521450555375
+        }
+      }
+    },
+    {
+      "fold": 6,
+      "rows": 59497,
+      "fraud": 994,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9486294809349749,
+          "average_precision": 0.5318260728091496,
+          "log_loss": 0.044515674563196626
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9486658253539836,
+          "average_precision": 0.5320812201067038,
+          "log_loss": 0.04449827402481725
+        },
+        "five_leaf_trees": {
+          "roc_auc": 0.9486448114528582,
+          "average_precision": 0.5321570887323198,
+          "log_loss": 0.04449610594170213
+        }
+      }
+    },
+    {
+      "fold": 7,
+      "rows": 59496,
+      "fraud": 993,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9464526474649589,
+          "average_precision": 0.5242310441615937,
+          "log_loss": 0.0450665414595981
+        },
+        "additive_stumps": {
+          "roc_auc": 0.946539180413003,
+          "average_precision": 0.5244304894867378,
+          "log_loss": 0.04504210043090659
+        },
+        "five_leaf_trees": {
+          "roc_auc": 0.9465517807945364,
+          "average_precision": 0.5244610188429599,
+          "log_loss": 0.045039573547846413
+        }
+      }
+    },
+    {
+      "fold": 8,
+      "rows": 59496,
+      "fraud": 993,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9546102411941967,
+          "average_precision": 0.5462203321610949,
+          "log_loss": 0.04289526161123182
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9546480939797046,
+          "average_precision": 0.5465159931201163,
+          "log_loss": 0.04287612345021635
+        },
+        "five_leaf_trees": {
+          "roc_auc": 0.9546393322389937,
+          "average_precision": 0.5464766866218902,
+          "log_loss": 0.04288048233532422
+        }
+      }
+    },
+    {
+      "fold": 9,
+      "rows": 59496,
+      "fraud": 993,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9507844073170416,
+          "average_precision": 0.5284280675997103,
+          "log_loss": 0.044497281451550644
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9508488551701304,
+          "average_precision": 0.5285663356101223,
+          "log_loss": 0.04448373635428195
+        },
+        "five_leaf_trees": {
+          "roc_auc": 0.950834722774995,
+          "average_precision": 0.5286474979199778,
+          "log_loss": 0.04448271711710452
+        }
+      }
+    },
+    {
+      "fold": 10,
+      "rows": 59496,
+      "fraud": 993,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9521835144354154,
+          "average_precision": 0.5324248300953549,
+          "log_loss": 0.04414029412716783
+        },
+        "additive_stumps": {
+          "roc_auc": 0.9522678784653267,
+          "average_precision": 0.532644257448543,
+          "log_loss": 0.04411838947327916
+        },
+        "five_leaf_trees": {
+          "roc_auc": 0.9522413694659257,
+          "average_precision": 0.5325311222761466,
+          "log_loss": 0.04412663837384985
+        }
+      }
+    }
+  ],
+  "reverse_control_sha256": "9741e0066c80841d8f536b01e7fd60c6991426f880fb39de58cad7c0ed396a0b",
+  "scope": "isolated XGBoost-plus-Grandmaster branch, same 15% replacement in each fold",
+  "seconds": 135.6129234
+}

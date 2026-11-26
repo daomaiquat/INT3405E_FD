@@ -1,0 +1,335 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "reference_rows": 104994,
+  "rows": 594966,
+  "variants": {
+    "grandmaster_eda": {
+      "roc_auc": 0.950189701345676,
+      "average_precision": 0.5307983000384707,
+      "log_loss": 0.04433165226010671,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "brier": 0.010735547123782002,
+      "fold_weighted_delta_auc": 0.0,
+      "fold_auc_wins": 0,
+      "fold_mean_delta_logloss": 0.0,
+      "fold_logloss_wins": 0
+    },
+    "extra_pairs_tree": {
+      "roc_auc": 0.9501788498851498,
+      "average_precision": 0.5307091572863395,
+      "log_loss": 0.04433638897921845,
+      "delta_auc": -1.085146052626218e-05,
+      "ci95_low": -3.628030903139036e-05,
+      "ci95_high": 1.4577387978866004e-05,
+      "brier": 0.010737165131552817,
+      "fold_weighted_delta_auc": -9.884982431948231e-06,
+      "fold_auc_wins": 4,
+      "fold_mean_delta_logloss": 4.736719111730488e-06,
+      "fold_logloss_wins": 3
+    },
+    "extra_pairs_half": {
+      "roc_auc": 0.950186139930669,
+      "average_precision": 0.5307661134774555,
+      "log_loss": 0.04433333304590208,
+      "delta_auc": -3.5614150070140127e-06,
+      "ci95_low": -1.628159273554742e-05,
+      "ci95_high": 9.158762721519394e-06,
+      "brier": 0.010736209045330044,
+      "fold_weighted_delta_auc": -1.9370849666464928e-06,
+      "fold_auc_wins": 4,
+      "fold_mean_delta_logloss": 1.6807857953696332e-06,
+      "fold_logloss_wins": 3
+    },
+    "extra_pairs_linear": {
+      "roc_auc": 0.9501897868457851,
+      "average_precision": 0.5307987913210898,
+      "log_loss": 0.04433163239618889,
+      "delta_auc": 8.550010910379768e-08,
+      "ci95_low": -3.6615625944487666e-08,
+      "ci95_high": 2.0761584415208303e-07,
+      "brier": 0.01073554281134213,
+      "fold_weighted_delta_auc": 1.350454439192108e-07,
+      "fold_auc_wins": 3,
+      "fold_mean_delta_logloss": -1.98639178249105e-08,
+      "fold_logloss_wins": 2
+    }
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9443713801534744,
+          "average_precision": 0.5156902818636666,
+          "log_loss": 0.04603205935094858
+        },
+        "extra_pairs_tree": {
+          "roc_auc": 0.944427517535,
+          "average_precision": 0.5158251461142987,
+          "log_loss": 0.04602160517426302
+        },
+        "extra_pairs_half": {
+          "roc_auc": 0.9444055148455645,
+          "average_precision": 0.5157339326211227,
+          "log_loss": 0.046026236691577335
+        },
+        "extra_pairs_linear": {
+          "roc_auc": 0.9443713801534744,
+          "average_precision": 0.5156902818636666,
+          "log_loss": 0.04603205935094858
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9497723052672564,
+          "average_precision": 0.5379006809877409,
+          "log_loss": 0.043983700265901156
+        },
+        "extra_pairs_tree": {
+          "roc_auc": 0.9497142161035887,
+          "average_precision": 0.5378389267401408,
+          "log_loss": 0.04399178245793144
+        },
+        "extra_pairs_half": {
+          "roc_auc": 0.9497485571515002,
+          "average_precision": 0.5378702959944432,
+          "log_loss": 0.04398685394959645
+        },
+        "extra_pairs_linear": {
+          "roc_auc": 0.9497723052672564,
+          "average_precision": 0.5379006809877409,
+          "log_loss": 0.043983700265901156
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9504687561638054,
+          "average_precision": 0.5292315163412377,
+          "log_loss": 0.04430462449344466
+        },
+        "extra_pairs_tree": {
+          "roc_auc": 0.9503806938171083,
+          "average_precision": 0.529026684741813,
+          "log_loss": 0.04432463804555608
+        },
+        "extra_pairs_half": {
+          "roc_auc": 0.9504287919197664,
+          "average_precision": 0.5291765702817485,
+          "log_loss": 0.04431377185409461
+        },
+        "extra_pairs_linear": {
+          "roc_auc": 0.9504687905564423,
+          "average_precision": 0.5292311334369815,
+          "log_loss": 0.04430463024864301
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9521110991539378,
+          "average_precision": 0.5183252119764241,
+          "log_loss": 0.04455076719781293
+        },
+        "extra_pairs_tree": {
+          "roc_auc": 0.9520946164827193,
+          "average_precision": 0.5182932844784426,
+          "log_loss": 0.044552356901480045
+        },
+        "extra_pairs_half": {
+          "roc_auc": 0.9521045129639777,
+          "average_precision": 0.518329460843781,
+          "log_loss": 0.04455111137440241
+        },
+        "extra_pairs_linear": {
+          "roc_auc": 0.9521110991539378,
+          "average_precision": 0.5183252119764241,
+          "log_loss": 0.04455076719781293
+        }
+      }
+    },
+    {
+      "fold": 5,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9526174705446842,
+          "average_precision": 0.5462043525965866,
+          "log_loss": 0.04333030585723898
+        },
+        "extra_pairs_tree": {
+          "roc_auc": 0.9526014435759041,
+          "average_precision": 0.5462084389250067,
+          "log_loss": 0.043335200974323036
+        },
+        "extra_pairs_half": {
+          "roc_auc": 0.9526097837903443,
+          "average_precision": 0.5462214858471456,
+          "log_loss": 0.043332530700490424
+        },
+        "extra_pairs_linear": {
+          "roc_auc": 0.9526183303606057,
+          "average_precision": 0.5462075466014346,
+          "log_loss": 0.043330118569429234
+        }
+      }
+    },
+    {
+      "fold": 6,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9486294809349749,
+          "average_precision": 0.5318260728091496,
+          "log_loss": 0.044515674563196626
+        },
+        "extra_pairs_tree": {
+          "roc_auc": 0.9486114849877344,
+          "average_precision": 0.5313605742510669,
+          "log_loss": 0.04454324452572889
+        },
+        "extra_pairs_half": {
+          "roc_auc": 0.948623178484269,
+          "average_precision": 0.531627516341414,
+          "log_loss": 0.044528544155093594
+        },
+        "extra_pairs_linear": {
+          "roc_auc": 0.9486299366374132,
+          "average_precision": 0.531835833131241,
+          "log_loss": 0.044515657457965235
+        }
+      }
+    },
+    {
+      "fold": 7,
+      "rows": 59496,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9464526474649589,
+          "average_precision": 0.5242310441615937,
+          "log_loss": 0.0450665414595981
+        },
+        "extra_pairs_tree": {
+          "roc_auc": 0.9464577427012074,
+          "average_precision": 0.5239513907381615,
+          "log_loss": 0.045074977430970234
+        },
+        "extra_pairs_half": {
+          "roc_auc": 0.9464565893875972,
+          "average_precision": 0.5240953792138252,
+          "log_loss": 0.04506966912414041
+        },
+        "extra_pairs_linear": {
+          "roc_auc": 0.9464526474649589,
+          "average_precision": 0.5242310441615937,
+          "log_loss": 0.0450665414595981
+        }
+      }
+    },
+    {
+      "fold": 8,
+      "rows": 59496,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9546102411941967,
+          "average_precision": 0.5462203321610949,
+          "log_loss": 0.04289526161123182
+        },
+        "extra_pairs_tree": {
+          "roc_auc": 0.9546470095206384,
+          "average_precision": 0.5461538754502026,
+          "log_loss": 0.04289989631443874
+        },
+        "extra_pairs_half": {
+          "roc_auc": 0.9546316033164411,
+          "average_precision": 0.5462725852744122,
+          "log_loss": 0.04289692744565784
+        },
+        "extra_pairs_linear": {
+          "roc_auc": 0.9546102411941967,
+          "average_precision": 0.5462203321610949,
+          "log_loss": 0.04289526161123182
+        }
+      }
+    },
+    {
+      "fold": 9,
+      "rows": 59496,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9507844073170416,
+          "average_precision": 0.5284280675997103,
+          "log_loss": 0.044497281451550644
+        },
+        "extra_pairs_tree": {
+          "roc_auc": 0.9508345076045454,
+          "average_precision": 0.5285570916639306,
+          "log_loss": 0.0444851612388231
+        },
+        "extra_pairs_half": {
+          "roc_auc": 0.950812577432314,
+          "average_precision": 0.5285804979213566,
+          "log_loss": 0.04449076079180701
+        },
+        "extra_pairs_linear": {
+          "roc_auc": 0.9507844073170416,
+          "average_precision": 0.5284280675997103,
+          "log_loss": 0.044497281451550644
+        }
+      }
+    },
+    {
+      "fold": 10,
+      "rows": 59496,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9521835144354154,
+          "average_precision": 0.5324248300953549,
+          "log_loss": 0.04414029412716783
+        },
+        "extra_pairs_tree": {
+          "roc_auc": 0.9521333022592777,
+          "average_precision": 0.5327264584424345,
+          "log_loss": 0.04413501411447386
+        },
+        "extra_pairs_half": {
+          "roc_auc": 0.952160861290473,
+          "average_precision": 0.5325830894477556,
+          "log_loss": 0.044136911950309686
+        },
+        "extra_pairs_linear": {
+          "roc_auc": 0.9521835144354154,
+          "average_precision": 0.5324248300953549,
+          "log_loss": 0.04414029412716783
+        }
+      }
+    }
+  ]
+}

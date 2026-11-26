@@ -1,0 +1,55 @@
+{
+  "replacement_of_xgb_log_odds": 0.15,
+  "xgb_weight_in_full_control": 0.85,
+  "lightgbm_weight_in_full_variant": 0.1275,
+  "lightgbm_version": "4.7.0",
+  "methods": {
+    "additive_stumps": {
+      "rounds": 600,
+      "settings": {
+        "objective": "binary",
+        "learning_rate": 0.025,
+        "num_leaves": 2,
+        "min_data_in_leaf": 180,
+        "extra_trees": true,
+        "max_bin": 255,
+        "lambda_l2": 30,
+        "lambda_l1": 1.5,
+        "bagging_fraction": 0.9,
+        "bagging_freq": 1,
+        "feature_fraction": 0.85,
+        "seed": 8337,
+        "num_threads": 4,
+        "force_col_wise": true,
+        "deterministic": true,
+        "verbosity": -1
+      }
+    },
+    "five_leaf_trees": {
+      "rounds": 224,
+      "implementation": "followup/run_followup.py::fit_lightgbm"
+    }
+  },
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "fit_rows": 699960,
+  "rows": 299984,
+  "feature_count": 122,
+  "control_sha256": "9aa21cdd324a0913c8f029dc4ebe1efcd3f51a8323c77ce93f13f283eba6f3d0",
+  "seconds": 104.6582825000005,
+  "outputs": {
+    "additive_stumps": {
+      "filename": "submission_grandmaster_eda_additive_stumps.csv",
+      "sha256": "307bd1ec5e061650d08a60c3f51fa2e3792625552df270e7e6cd5a59de7efaa0",
+      "rows": 299984
+    },
+    "five_leaf_trees": {
+      "filename": "submission_grandmaster_eda_five_leaf_trees.csv",
+      "sha256": "8fb61f2c223c5adafd5470e7c21b9af4488713081c0aa06fb0122da965afbc1c",
+      "rows": 299984
+    }
+  }
+}

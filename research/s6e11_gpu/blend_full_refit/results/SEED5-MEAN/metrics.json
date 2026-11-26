@@ -1,0 +1,72 @@
+{
+  "name": "SEED5-MEAN",
+  "input_manifest": {
+    "smoke": false,
+    "rows": 699960,
+    "test_rows": 299984,
+    "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+    "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+    "inputs": {
+      "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+      "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+      "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+    },
+    "models_use_llm": false
+  },
+  "members": [
+    {
+      "predictions": "single_full_refit\\results\\XGB-D03\\predictions.npz",
+      "predictions_sha256": "955d94e941a793afc63a8b4e00751fbf734bfec10dabc4623795d593a0ef9825",
+      "model_sha256": "e337f3aa7a01b64418cf5ea47a78fe929eefde844e12f194e9d78b7e3e075f70",
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "rounds": 2131,
+      "name": "XGB-D03"
+    },
+    {
+      "predictions": "blend_full_refit\\results\\base_models\\XGB-D03-S71\\predictions.npz",
+      "predictions_sha256": "6fde022dce0425dafc40b33a3fdf5ea8948eb00d326f8ad4fea7f6830c4a9767",
+      "model_sha256": "592b63c0056efbeb1142d40ed552b6eb90557f627d2b1c6d2333ddda4cf6f282",
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "rounds": 1852,
+      "name": "XGB-D03-S71"
+    },
+    {
+      "predictions": "blend_full_refit\\results\\base_models\\XGB-D03-S93\\predictions.npz",
+      "predictions_sha256": "855c20441c0fe3534221b648f91166eaaba16dd78459dd2f5c5117702c6d6afb",
+      "model_sha256": "450aec2aa19396b6837de039d87e22b613ed83d46322383a87ccda953d094d1c",
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "rounds": 2104,
+      "name": "XGB-D03-S93"
+    },
+    {
+      "predictions": "single_full_refit\\results\\XGB-D03-S71-E2028\\predictions.npz",
+      "predictions_sha256": "b0fa896b8ba1a58b97dae69875230dc91ac3d21d17494128ea2097f845299d8c",
+      "model_sha256": "39c1fe2ff5734614d7777020b17d437fba13577450007c12a16da07e39f0c9c6",
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "rounds": 1983,
+      "name": "XGB-D03-S71-E2028"
+    },
+    {
+      "predictions": "blend_full_refit\\results\\base_models\\XGB-D03-S103-E2032\\predictions.npz",
+      "predictions_sha256": "420d14692b2bf79ecdbab4464951738450ea772b1967de67eb9dcb8f5afee920",
+      "model_sha256": "5576ca0cf2db7c530ead33545740441396020f98961c23e6f42025d33072f846",
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "rounds": 1911,
+      "name": "XGB-D03-S103-E2032"
+    }
+  ],
+  "blend": {
+    "member_weights": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ]
+  },
+  "reference_oof_auc": 0.9503311398775728,
+  "test_spearman_vs_fold_mean": 0.9984610454011218,
+  "test_mean_abs_delta_vs_fold_mean": 0.0008924074773264476,
+  "submission": "results\\SEED5-MEAN\\SEED5-MEAN_FULLREFIT_submission.csv",
+  "submission_sha256": "c30a310f24ba0376996a11c6572c1fcb361ff32af1b830a485e3d0c55deb1655"
+}

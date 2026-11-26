@@ -1,0 +1,112 @@
+{
+  "roc_auc": 0.949860821223946,
+  "average_precision": 0.5252823054971936,
+  "log_loss": 0.04457110106569278,
+  "fold_metrics": [
+    {
+      "fold": 0,
+      "roc_auc": 0.9494946832952784,
+      "average_precision": 0.5163663614039108,
+      "log_loss": 0.045101962656591124,
+      "seconds": 159.1747955999963
+    },
+    {
+      "fold": 1,
+      "roc_auc": 0.9502881712213249,
+      "average_precision": 0.5288367473370702,
+      "log_loss": 0.04454693266311271,
+      "seconds": 93.74141619999864
+    },
+    {
+      "fold": 2,
+      "roc_auc": 0.9547918385223,
+      "average_precision": 0.5448886336908099,
+      "log_loss": 0.043021425906431335,
+      "seconds": 92.90140979999705
+    },
+    {
+      "fold": 3,
+      "roc_auc": 0.9506817392904735,
+      "average_precision": 0.5310232052179683,
+      "log_loss": 0.04417589564704262,
+      "seconds": 82.76119480000489
+    },
+    {
+      "fold": 4,
+      "roc_auc": 0.9442906548289838,
+      "average_precision": 0.5068789659948528,
+      "log_loss": 0.046009288455286096,
+      "seconds": 81.23530709999613
+    }
+  ],
+  "fold_0_matched_control": {
+    "roc_auc": 0.9495945807975253,
+    "average_precision": 0.5184566989123771,
+    "log_loss": 0.04500499602439359
+  },
+  "settings": {
+    "objective": "binary",
+    "metric": "auc",
+    "learning_rate": 0.07,
+    "num_leaves": 4,
+    "min_data_in_leaf": 75,
+    "max_bin": 255,
+    "feature_fraction": 0.9,
+    "bagging_fraction": 0.9,
+    "bagging_freq": 1,
+    "lambda_l2": 1.0,
+    "seed": 42,
+    "num_threads": 4,
+    "force_col_wise": true,
+    "deterministic": true,
+    "verbosity": -1
+  },
+  "rounds": 1400,
+  "fold_seed": 42,
+  "feature_groups": [
+    "raw",
+    "te13",
+    "cents",
+    "digits"
+  ],
+  "pair_widths_in_ticks": {
+    "amount_usd": 500,
+    "hours_since_last_txn": 50,
+    "distance_from_home_km": 100,
+    "velocity_score": 30,
+    "merchant_risk_score": 30,
+    "customer_age": 5,
+    "card_age_months": 6
+  },
+  "pair_feature_gain_share": {
+    "velocity_score__merchant_risk_score": {
+      "log_count": 0.0023832746104283393,
+      "log_excess": 0.0008860814722734444
+    },
+    "customer_age__merchant_risk_score": {
+      "log_count": 0.00099195400311132,
+      "log_excess": 0.0012371476876247424
+    },
+    "customer_age__velocity_score": {
+      "log_count": 0.0014318360324378065,
+      "log_excess": 0.0010138048947581138
+    },
+    "amount_usd__velocity_score": {
+      "log_count": 0.00015508200661174692,
+      "log_excess": 0.001194126155281265
+    },
+    "distance_from_home_km__velocity_score": {
+      "log_count": 0.0002811995289730593,
+      "log_excess": 0.0011156698023686686
+    },
+    "hours_since_last_txn__velocity_score": {
+      "log_count": 0.002557566572525306,
+      "log_excess": 0.0013543126894251603
+    },
+    "customer_age__card_age_months": {
+      "log_count": 0.0012316670863278143,
+      "log_excess": 0.0013931784720157842
+    }
+  },
+  "elapsed_seconds": 514.8368106000053
+}

@@ -1,0 +1,49 @@
+{
+  "model": "neighborhood",
+  "complete_5_fold_oof": true,
+  "outer_seed": 42,
+  "inner_seed": 2026,
+  "rounds": 1650,
+  "device": "cuda",
+  "elapsed_seconds": 371.89818259999447,
+  "folds_ran": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "fold_metrics": [
+    {
+      "roc_auc": 0.9494763105726524,
+      "average_precision": 0.5177500053796733,
+      "log_loss": 0.04508976502540405
+    },
+    {
+      "roc_auc": 0.9509980830180051,
+      "average_precision": 0.5345984047452083,
+      "log_loss": 0.044248100384112886
+    },
+    {
+      "roc_auc": 0.9554393689845816,
+      "average_precision": 0.5503260635453018,
+      "log_loss": 0.04276897744857322
+    },
+    {
+      "roc_auc": 0.9509399958087847,
+      "average_precision": 0.5348072681293154,
+      "log_loss": 0.044049941515235
+    },
+    {
+      "roc_auc": 0.9448171559013404,
+      "average_precision": 0.5096622282723089,
+      "log_loss": 0.04584551442302665
+    }
+  ],
+  "oof": {
+    "roc_auc": 0.9502922208313174,
+    "average_precision": 0.5290973920822915,
+    "log_loss": 0.04440045975927036
+  },
+  "oof_rows": 699960
+}

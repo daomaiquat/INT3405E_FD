@@ -1,0 +1,332 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "rows": 594966,
+  "fit_reference_rows": 104994,
+  "variants": {
+    "grandmaster_eda": {
+      "roc_auc": 0.950189701345676,
+      "average_precision": 0.5307983000384707,
+      "log_loss": 0.04433165226010671,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "brier": 0.010735547123782002,
+      "fold_weighted_delta_auc": 0.0,
+      "fold_auc_wins": 0,
+      "fold_logloss_wins": 0
+    },
+    "matched_encoding_size": {
+      "roc_auc": 0.950249516241415,
+      "average_precision": 0.5309285646170318,
+      "log_loss": 0.04431591588732369,
+      "delta_auc": 5.981489573891885e-05,
+      "ci95_low": 1.5286633615401082e-05,
+      "ci95_high": 0.00010434315786243662,
+      "brier": 0.010732270384310317,
+      "fold_weighted_delta_auc": 5.4043982439692e-05,
+      "fold_auc_wins": 7,
+      "fold_logloss_wins": 8
+    },
+    "smoothed_pairs": {
+      "roc_auc": 0.9501202155618429,
+      "average_precision": 0.530572683364331,
+      "log_loss": 0.044346592724766105,
+      "delta_auc": -6.94857838331453e-05,
+      "ci95_low": -0.00013012632538990295,
+      "ci95_high": -8.845242276387646e-06,
+      "brier": 0.01073690044010415,
+      "fold_weighted_delta_auc": -6.778249091539088e-05,
+      "fold_auc_wins": 1,
+      "fold_logloss_wins": 2
+    },
+    "smoothed_pairs_half": {
+      "roc_auc": 0.9501663310004637,
+      "average_precision": 0.5307415330512588,
+      "log_loss": 0.04433515641287486,
+      "delta_auc": -2.3370345212270216e-05,
+      "ci95_low": -5.364170255283579e-05,
+      "ci95_high": 6.9010121282953575e-06,
+      "brier": 0.010735380109905478,
+      "fold_weighted_delta_auc": -2.3921106981528647e-05,
+      "fold_auc_wins": 1,
+      "fold_logloss_wins": 2
+    }
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 59497,
+      "pairs": 58151982,
+      "metrics": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9443713801534744,
+          "average_precision": 0.5156902818636666,
+          "log_loss": 0.04603205935094858
+        },
+        "matched_encoding_size": {
+          "roc_auc": 0.9445974859463947,
+          "average_precision": 0.5155022784675368,
+          "log_loss": 0.04600140840053029
+        },
+        "smoothed_pairs": {
+          "roc_auc": 0.9442973242081414,
+          "average_precision": 0.5146165265541763,
+          "log_loss": 0.04607951325839499
+        },
+        "smoothed_pairs_half": {
+          "roc_auc": 0.9443454910960731,
+          "average_precision": 0.5152244601648472,
+          "log_loss": 0.04605196048392
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "rows": 59497,
+      "pairs": 58151982,
+      "metrics": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9497723052672564,
+          "average_precision": 0.5379006809877409,
+          "log_loss": 0.043983700265901156
+        },
+        "matched_encoding_size": {
+          "roc_auc": 0.9497586857830573,
+          "average_precision": 0.5381077825021654,
+          "log_loss": 0.043984050116071795
+        },
+        "smoothed_pairs": {
+          "roc_auc": 0.9496947584692814,
+          "average_precision": 0.5376943517412321,
+          "log_loss": 0.04399078212215328
+        },
+        "smoothed_pairs_half": {
+          "roc_auc": 0.9497467171454278,
+          "average_precision": 0.5379731630795531,
+          "log_loss": 0.04398426921832637
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "rows": 59497,
+      "pairs": 58151982,
+      "metrics": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9504687561638054,
+          "average_precision": 0.5292315163412377,
+          "log_loss": 0.04430462449344466
+        },
+        "matched_encoding_size": {
+          "roc_auc": 0.9505368191921643,
+          "average_precision": 0.5297968249509072,
+          "log_loss": 0.0442655728661681
+        },
+        "smoothed_pairs": {
+          "roc_auc": 0.9505173013707428,
+          "average_precision": 0.5293698948225117,
+          "log_loss": 0.04428825001991131
+        },
+        "smoothed_pairs_half": {
+          "roc_auc": 0.9505033809509708,
+          "average_precision": 0.5294194018597135,
+          "log_loss": 0.04429320553392803
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "rows": 59497,
+      "pairs": 58151982,
+      "metrics": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9521110991539378,
+          "average_precision": 0.5183252119764241,
+          "log_loss": 0.04455076719781293
+        },
+        "matched_encoding_size": {
+          "roc_auc": 0.9522022654361121,
+          "average_precision": 0.5183587671741648,
+          "log_loss": 0.04452507574664769
+        },
+        "smoothed_pairs": {
+          "roc_auc": 0.9520658384438213,
+          "average_precision": 0.5179733107420644,
+          "log_loss": 0.044567584829248885
+        },
+        "smoothed_pairs_half": {
+          "roc_auc": 0.9520954075133673,
+          "average_precision": 0.5182149881962089,
+          "log_loss": 0.04455490549483913
+        }
+      }
+    },
+    {
+      "fold": 5,
+      "rows": 59497,
+      "pairs": 58151982,
+      "metrics": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9526174705446842,
+          "average_precision": 0.5462043525965866,
+          "log_loss": 0.04333030585723898
+        },
+        "matched_encoding_size": {
+          "roc_auc": 0.95253991514855,
+          "average_precision": 0.5460013305539221,
+          "log_loss": 0.043346288425966266
+        },
+        "smoothed_pairs": {
+          "roc_auc": 0.9525282560446521,
+          "average_precision": 0.5460555430250227,
+          "log_loss": 0.043346693629614706
+        },
+        "smoothed_pairs_half": {
+          "roc_auc": 0.9525794322883097,
+          "average_precision": 0.5461186753490475,
+          "log_loss": 0.04333496511287507
+        }
+      }
+    },
+    {
+      "fold": 6,
+      "rows": 59497,
+      "pairs": 58151982,
+      "metrics": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9486294809349749,
+          "average_precision": 0.5318260728091496,
+          "log_loss": 0.044515674563196626
+        },
+        "matched_encoding_size": {
+          "roc_auc": 0.9485406963429036,
+          "average_precision": 0.5318803461259372,
+          "log_loss": 0.044515409819268256
+        },
+        "smoothed_pairs": {
+          "roc_auc": 0.9485747880441977,
+          "average_precision": 0.531038381751462,
+          "log_loss": 0.04454602242235846
+        },
+        "smoothed_pairs_half": {
+          "roc_auc": 0.9486112442392762,
+          "average_precision": 0.5315298511644483,
+          "log_loss": 0.04452679529203501
+        }
+      }
+    },
+    {
+      "fold": 7,
+      "rows": 59496,
+      "pairs": 58093479,
+      "metrics": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9464526474649589,
+          "average_precision": 0.5242310441615937,
+          "log_loss": 0.0450665414595981
+        },
+        "matched_encoding_size": {
+          "roc_auc": 0.946610952668199,
+          "average_precision": 0.5240932540814481,
+          "log_loss": 0.045049362438387516
+        },
+        "smoothed_pairs": {
+          "roc_auc": 0.9462561452034918,
+          "average_precision": 0.524352100008433,
+          "log_loss": 0.04507541260069746
+        },
+        "smoothed_pairs_half": {
+          "roc_auc": 0.9463646771783111,
+          "average_precision": 0.5242909484556165,
+          "log_loss": 0.045067039838320444
+        }
+      }
+    },
+    {
+      "fold": 8,
+      "rows": 59496,
+      "pairs": 58093479,
+      "metrics": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9546102411941967,
+          "average_precision": 0.5462203321610949,
+          "log_loss": 0.04289526161123182
+        },
+        "matched_encoding_size": {
+          "roc_auc": 0.9546614517612209,
+          "average_precision": 0.5466793069265938,
+          "log_loss": 0.042870146652053215
+        },
+        "smoothed_pairs": {
+          "roc_auc": 0.9544984214149062,
+          "average_precision": 0.546154928253195,
+          "log_loss": 0.04291883225830213
+        },
+        "smoothed_pairs_half": {
+          "roc_auc": 0.9545616126725687,
+          "average_precision": 0.5462276547326348,
+          "log_loss": 0.04290322835239306
+        }
+      }
+    },
+    {
+      "fold": 9,
+      "rows": 59496,
+      "pairs": 58093479,
+      "metrics": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9507844073170416,
+          "average_precision": 0.5284280675997103,
+          "log_loss": 0.044497281451550644
+        },
+        "matched_encoding_size": {
+          "roc_auc": 0.9508540881154665,
+          "average_precision": 0.5287830210124346,
+          "log_loss": 0.04447292447377049
+        },
+        "smoothed_pairs": {
+          "roc_auc": 0.9507520456814094,
+          "average_precision": 0.527958462924418,
+          "log_loss": 0.04451539989931546
+        },
+        "smoothed_pairs_half": {
+          "roc_auc": 0.950783460567063,
+          "average_precision": 0.5283739242785366,
+          "log_loss": 0.04450251041457628
+        }
+      }
+    },
+    {
+      "fold": 10,
+      "rows": 59496,
+      "pairs": 58093479,
+      "metrics": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9521835144354154,
+          "average_precision": 0.5324248300953549,
+          "log_loss": 0.04414029412716783
+        },
+        "matched_encoding_size": {
+          "roc_auc": 0.9522395017864225,
+          "average_precision": 0.532411966366331,
+          "log_loss": 0.044128907457735365
+        },
+        "smoothed_pairs": {
+          "roc_auc": 0.952138483563706,
+          "average_precision": 0.5328807377484187,
+          "log_loss": 0.044137423781788115
+        },
+        "smoothed_pairs_half": {
+          "roc_auc": 0.9521706128152525,
+          "average_precision": 0.5326565227425455,
+          "log_loss": 0.044132672031029635
+        }
+      }
+    }
+  ],
+  "seconds": 78.02218509999875
+}

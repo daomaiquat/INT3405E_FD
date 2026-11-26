@@ -1,0 +1,49 @@
+{
+  "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+  "fit_seconds": 27.116849699999875,
+  "rounds": 2096,
+  "early_auc": null,
+  "settings": {
+    "max_bin": 256,
+    "nthread": 4,
+    "learning_rate": 0.03,
+    "max_depth": 2,
+    "min_child_weight": 5,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 1.0,
+    "tree_method": "hist",
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "device": "cuda:0",
+    "seed": 42
+  },
+  "version": "3.4.1",
+  "early": {
+    "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+    "fit_seconds": 31.61978839999938,
+    "rounds": 2096,
+    "early_auc": 0.9556148372947404,
+    "settings": {
+      "max_bin": 256,
+      "nthread": 4,
+      "learning_rate": 0.03,
+      "max_depth": 2,
+      "min_child_weight": 5,
+      "subsample": 1.0,
+      "colsample_bytree": 1.0,
+      "reg_lambda": 1.0,
+      "tree_method": "hist",
+      "objective": "binary:logistic",
+      "eval_metric": "auc",
+      "device": "cuda:0",
+      "seed": 42
+    },
+    "version": "3.4.1"
+  },
+  "seconds": 81.65637630000128,
+  "fold": 5,
+  "auc": 0.9444427606971786,
+  "train_rows": 559968,
+  "valid_rows": 139992
+}

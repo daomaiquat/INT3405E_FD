@@ -1,0 +1,2 @@
+name,oof_auc,delta_oof_auc,average_precision,fold_mean,fold_std,log_loss,seconds,parent,fold_1,fold_2,fold_3,fold_4,fold_5
+GLM-BOOST-LGB,0.9486232205,,0.5221131604,0.9486672836,0.0034943477,0.0448719476,396.8160440000,T02,0.9476833887,0.9501644495,0.9538004363,0.9486326617,0.9430554817

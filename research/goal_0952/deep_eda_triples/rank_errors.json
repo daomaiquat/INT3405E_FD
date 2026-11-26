@@ -1,0 +1,137 @@
+{
+  "auc": 0.9512244493667037,
+  "target_auc": 0.952,
+  "positive_negative_pairs": 180981473,
+  "lost_pairs": 8827471.0,
+  "net_pairs_to_correct_for_target_on_this_holdout": 140360.29600004043,
+  "score_edges": [
+    0.00141531200163946,
+    0.005728520333870847,
+    0.02270796119722023,
+    0.05586059334980577,
+    0.35973982613689703
+  ],
+  "groups": [
+    {
+      "percentile": "0\u201350",
+      "rows": 52497,
+      "fraud": 21,
+      "legitimate": 52476,
+      "expected_fraud": 24.153500334294186,
+      "test_rows": 151193,
+      "test_share": 0.5040035468558323,
+      "lost_pair_share_for_fraud_in_band": 0.14880751236679227,
+      "lost_pair_share_for_legitimate_in_band": 0.028040760485081175
+    },
+    {
+      "percentile": "50\u201375",
+      "rows": 26248,
+      "fraud": 78,
+      "legitimate": 26170,
+      "expected_fraud": 78.0341369854464,
+      "test_rows": 74926,
+      "test_share": 0.24976665422155847,
+      "lost_pair_share_for_fraud_in_band": 0.3154027920340945,
+      "lost_pair_share_for_legitimate_in_band": 0.16033686205256295
+    },
+    {
+      "percentile": "75\u201390",
+      "rows": 15749,
+      "fraud": 183,
+      "legitimate": 15566,
+      "expected_fraud": 178.93839306831876,
+      "test_rows": 44359,
+      "test_share": 0.14787121979838924,
+      "lost_pair_share_for_fraud_in_band": 0.303743053927903,
+      "lost_pair_share_for_legitimate_in_band": 0.29113774488752214
+    },
+    {
+      "percentile": "90\u201395",
+      "rows": 5250,
+      "fraud": 190,
+      "legitimate": 5060,
+      "expected_fraud": 185.90211231790687,
+      "test_rows": 14675,
+      "test_share": 0.048919275694703716,
+      "lost_pair_share_for_fraud_in_band": 0.1317620867856717,
+      "lost_pair_share_for_legitimate_in_band": 0.2079798392993871
+    },
+    {
+      "percentile": "95\u201399",
+      "rows": 4200,
+      "fraud": 577,
+      "legitimate": 3623,
+      "expected_fraud": 557.8041186101364,
+      "test_rows": 11676,
+      "test_share": 0.038922075844045015,
+      "lost_pair_share_for_fraud_in_band": 0.09368685549915712,
+      "lost_pair_share_for_legitimate_in_band": 0.26479067447516963
+    },
+    {
+      "percentile": "99\u2013100",
+      "rows": 1050,
+      "fraud": 704,
+      "legitimate": 346,
+      "expected_fraud": 693.1871759571467,
+      "test_rows": 3155,
+      "test_share": 0.010517227585471226,
+      "lost_pair_share_for_fraud_in_band": 0.006597699386381445,
+      "lost_pair_share_for_legitimate_in_band": 0.047714118800277
+    }
+  ],
+  "lost_pairs_matrix": [
+    [
+      247529.0,
+      549570.0,
+      326886.0,
+      106260.0,
+      76083.0,
+      7266.0
+    ],
+    [
+      0.0,
+      865799.0,
+      1214148.0,
+      394680.0,
+      282594.0,
+      26988.0
+    ],
+    [
+      0.0,
+      0.0,
+      1028976.0,
+      925980.0,
+      663009.0,
+      63318.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      409016.0,
+      688370.0,
+      65740.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      627376.0,
+      199642.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      58241.0
+    ]
+  ],
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  }
+}

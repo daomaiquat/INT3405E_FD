@@ -1,0 +1,335 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "reference_rows": 104994,
+  "rows": 594966,
+  "variants": {
+    "grandmaster_eda": {
+      "roc_auc": 0.950189701345676,
+      "average_precision": 0.5307983000384707,
+      "log_loss": 0.04433165226010671,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "brier": 0.010735547123782002,
+      "fold_weighted_delta_auc": 0.0,
+      "fold_auc_wins": 0,
+      "fold_mean_delta_logloss": 0.0,
+      "fold_logloss_wins": 0
+    },
+    "risk_conditioned_tree": {
+      "roc_auc": 0.9501489797253057,
+      "average_precision": 0.5308685006290932,
+      "log_loss": 0.044332867336134646,
+      "delta_auc": -4.072162037027649e-05,
+      "ci95_low": -0.00012390574549595962,
+      "ci95_high": 4.246250475540662e-05,
+      "brier": 0.01073425158064409,
+      "fold_weighted_delta_auc": -4.6791095921602055e-05,
+      "fold_auc_wins": 3,
+      "fold_mean_delta_logloss": 1.2150760279318095e-06,
+      "fold_logloss_wins": 4
+    },
+    "risk_conditioned_half": {
+      "roc_auc": 0.9501878275686373,
+      "average_precision": 0.5309173990435533,
+      "log_loss": 0.04432661897506309,
+      "delta_auc": -1.8737770387522446e-06,
+      "ci95_low": -4.3460786663836286e-05,
+      "ci95_high": 3.97132325863318e-05,
+      "brier": 0.01073370729377481,
+      "fold_weighted_delta_auc": -5.8869491615306274e-06,
+      "fold_auc_wins": 4,
+      "fold_mean_delta_logloss": -5.0332850436207e-06,
+      "fold_logloss_wins": 7
+    },
+    "risk_conditioned_linear": {
+      "roc_auc": 0.9501891000923938,
+      "average_precision": 0.5307989891059736,
+      "log_loss": 0.04433174731764139,
+      "delta_auc": -6.012532822730066e-07,
+      "ci95_low": -1.890757294519944e-06,
+      "ci95_high": 6.882507299739309e-07,
+      "brier": 0.010735542675220134,
+      "fold_weighted_delta_auc": -8.300563911174488e-07,
+      "fold_auc_wins": 4,
+      "fold_mean_delta_logloss": 9.505753468380274e-08,
+      "fold_logloss_wins": 4
+    }
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9443713801534744,
+          "average_precision": 0.5156902818636666,
+          "log_loss": 0.04603205935094858
+        },
+        "risk_conditioned_tree": {
+          "roc_auc": 0.9446787557473106,
+          "average_precision": 0.5157207059173009,
+          "log_loss": 0.04598336911593786
+        },
+        "risk_conditioned_half": {
+          "roc_auc": 0.9445421997826315,
+          "average_precision": 0.515793580166007,
+          "log_loss": 0.046002001877193464
+        },
+        "risk_conditioned_linear": {
+          "roc_auc": 0.9443676227578969,
+          "average_precision": 0.5156975713261931,
+          "log_loss": 0.04603262879710437
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9497723052672564,
+          "average_precision": 0.5379006809877409,
+          "log_loss": 0.043983700265901156
+        },
+        "risk_conditioned_tree": {
+          "roc_auc": 0.9496472536396094,
+          "average_precision": 0.5385675972047198,
+          "log_loss": 0.04396216908045886
+        },
+        "risk_conditioned_half": {
+          "roc_auc": 0.9497312318606785,
+          "average_precision": 0.5383114343128801,
+          "log_loss": 0.04396645867741345
+        },
+        "risk_conditioned_linear": {
+          "roc_auc": 0.9497725116230776,
+          "average_precision": 0.5378933428149427,
+          "log_loss": 0.043983632843807484
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9504687561638054,
+          "average_precision": 0.5292315163412377,
+          "log_loss": 0.04430462449344466
+        },
+        "risk_conditioned_tree": {
+          "roc_auc": 0.95023864362869,
+          "average_precision": 0.529030557204419,
+          "log_loss": 0.04434431811731083
+        },
+        "risk_conditioned_half": {
+          "roc_auc": 0.9503647184372839,
+          "average_precision": 0.5291051059171188,
+          "log_loss": 0.04432061892877472
+        },
+        "risk_conditioned_linear": {
+          "roc_auc": 0.9504666926055934,
+          "average_precision": 0.5292270099246733,
+          "log_loss": 0.04430507206326319
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9521110991539378,
+          "average_precision": 0.5183252119764241,
+          "log_loss": 0.04455076719781293
+        },
+        "risk_conditioned_tree": {
+          "roc_auc": 0.9521183130095205,
+          "average_precision": 0.5180936230552767,
+          "log_loss": 0.04455646981008704
+        },
+        "risk_conditioned_half": {
+          "roc_auc": 0.9521257762117205,
+          "average_precision": 0.5181637700705523,
+          "log_loss": 0.044549694230920533
+        },
+        "risk_conditioned_linear": {
+          "roc_auc": 0.952113171310309,
+          "average_precision": 0.5183049052600773,
+          "log_loss": 0.044550851256502606
+        }
+      }
+    },
+    {
+      "fold": 5,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9526174705446842,
+          "average_precision": 0.5462043525965866,
+          "log_loss": 0.04333030585723898
+        },
+        "risk_conditioned_tree": {
+          "roc_auc": 0.9524394026673074,
+          "average_precision": 0.5462320464616995,
+          "log_loss": 0.04335819363510885
+        },
+        "risk_conditioned_half": {
+          "roc_auc": 0.9525429417005942,
+          "average_precision": 0.5463503314895161,
+          "log_loss": 0.04333910166925474
+        },
+        "risk_conditioned_linear": {
+          "roc_auc": 0.9526163527839859,
+          "average_precision": 0.5462135719669898,
+          "log_loss": 0.043330265896200086
+        }
+      }
+    },
+    {
+      "fold": 6,
+      "rows": 59497,
+      "pairs": 58151982,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9486294809349749,
+          "average_precision": 0.5318260728091496,
+          "log_loss": 0.044515674563196626
+        },
+        "risk_conditioned_tree": {
+          "roc_auc": 0.9484629431891074,
+          "average_precision": 0.5320282543564044,
+          "log_loss": 0.04452058899779757
+        },
+        "risk_conditioned_half": {
+          "roc_auc": 0.9485552444282983,
+          "average_precision": 0.5318994450030262,
+          "log_loss": 0.04451434737762503
+        },
+        "risk_conditioned_linear": {
+          "roc_auc": 0.9486315702876645,
+          "average_precision": 0.5318284820224451,
+          "log_loss": 0.04451525921840059
+        }
+      }
+    },
+    {
+      "fold": 7,
+      "rows": 59496,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9464526474649589,
+          "average_precision": 0.5242310441615937,
+          "log_loss": 0.0450665414595981
+        },
+        "risk_conditioned_tree": {
+          "roc_auc": 0.946357352776204,
+          "average_precision": 0.5242730355798593,
+          "log_loss": 0.04505760021876263
+        },
+        "risk_conditioned_half": {
+          "roc_auc": 0.9464201050861492,
+          "average_precision": 0.5243132815365951,
+          "log_loss": 0.04505584460786146
+        },
+        "risk_conditioned_linear": {
+          "roc_auc": 0.9464498416422952,
+          "average_precision": 0.5242327265346493,
+          "log_loss": 0.0450667303595569
+        }
+      }
+    },
+    {
+      "fold": 8,
+      "rows": 59496,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9546102411941967,
+          "average_precision": 0.5462203321610949,
+          "log_loss": 0.04289526161123182
+        },
+        "risk_conditioned_tree": {
+          "roc_auc": 0.9545003063080454,
+          "average_precision": 0.5465255803810252,
+          "log_loss": 0.04289854647760074
+        },
+        "risk_conditioned_half": {
+          "roc_auc": 0.9545904971537338,
+          "average_precision": 0.5466129030087293,
+          "log_loss": 0.04288782977109242
+        },
+        "risk_conditioned_linear": {
+          "roc_auc": 0.9546091911624023,
+          "average_precision": 0.5462007558656778,
+          "log_loss": 0.04289544266744631
+        }
+      }
+    },
+    {
+      "fold": 9,
+      "rows": 59496,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9507844073170416,
+          "average_precision": 0.5284280675997103,
+          "log_loss": 0.044497281451550644
+        },
+        "risk_conditioned_tree": {
+          "roc_auc": 0.9507580618471826,
+          "average_precision": 0.5278843458189675,
+          "log_loss": 0.044528277191029815
+        },
+        "risk_conditioned_half": {
+          "roc_auc": 0.950792876425941,
+          "average_precision": 0.5283103937411426,
+          "log_loss": 0.04450639259372456
+        },
+        "risk_conditioned_linear": {
+          "roc_auc": 0.9507815154261978,
+          "average_precision": 0.5284462816010107,
+          "log_loss": 0.04449752537000589
+        }
+      }
+    },
+    {
+      "fold": 10,
+      "rows": 59496,
+      "pairs": 58093479,
+      "variants": {
+        "grandmaster_eda": {
+          "roc_auc": 0.9521835144354154,
+          "average_precision": 0.5324248300953549,
+          "log_loss": 0.04414029412716783
+        },
+        "risk_conditioned_tree": {
+          "roc_auc": 0.9523324640275029,
+          "average_precision": 0.5327394069942657,
+          "log_loss": 0.04411912848273666
+        },
+        "risk_conditioned_half": {
+          "roc_auc": 0.9522769156242133,
+          "average_precision": 0.5326722396060511,
+          "log_loss": 0.044123887704868706
+        },
+        "risk_conditioned_linear": {
+          "roc_auc": 0.9521845300399379,
+          "average_precision": 0.5324344050560087,
+          "log_loss": 0.044140052481016254
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "variant": "mlp-scratch",
+  "status": "completed",
+  "smoke": false,
+  "rows": 699960,
+  "test_rows": 299984,
+  "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+  "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+  "inputs": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "models_use_llm": false,
+  "oof_auc": 0.9412401343022521,
+  "average_precision": 0.48846846990254833,
+  "log_loss": 0.04723191633820534,
+  "folds": [
+    {
+      "fold": 1,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "pretrain_seconds": 0.0,
+      "finetune_seconds": 2.251507400003902,
+      "pretrain_loss_by_epoch": [],
+      "finetune_loss_by_epoch": [
+        0.0952053815126419,
+        0.05109914019703865,
+        0.04870084673166275,
+        0.048112232238054276,
+        0.0477648489177227,
+        0.0475393682718277
+      ],
+      "auc": 0.9409256693978938
+    },
+    {
+      "fold": 2,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "pretrain_seconds": 0.0,
+      "finetune_seconds": 2.0355423000000883,
+      "pretrain_loss_by_epoch": [],
+      "finetune_loss_by_epoch": [
+        0.10041143000125885,
+        0.051170267164707184,
+        0.04900796338915825,
+        0.04826647788286209,
+        0.04792165011167526,
+        0.04766121134161949
+      ],
+      "auc": 0.9428509483796066
+    },
+    {
+      "fold": 3,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "pretrain_seconds": 0.0,
+      "finetune_seconds": 2.057058499995037,
+      "pretrain_loss_by_epoch": [],
+      "finetune_loss_by_epoch": [
+        0.0940525233745575,
+        0.05135827884078026,
+        0.04940304160118103,
+        0.048751816153526306,
+        0.04831130802631378,
+        0.04790688306093216
+      ],
+      "auc": 0.9460394342005979
+    },
+    {
+      "fold": 4,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "pretrain_seconds": 0.0,
+      "finetune_seconds": 1.978696599995601,
+      "pretrain_loss_by_epoch": [],
+      "finetune_loss_by_epoch": [
+        0.10471800714731216,
+        0.051827386021614075,
+        0.04945111647248268,
+        0.04864049330353737,
+        0.04817737638950348,
+        0.04775797575712204
+      ],
+      "auc": 0.9417669862759386
+    },
+    {
+      "fold": 5,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "pretrain_seconds": 0.0,
+      "finetune_seconds": 6.038167799997609,
+      "pretrain_loss_by_epoch": [],
+      "finetune_loss_by_epoch": [
+        0.09375907480716705,
+        0.050674114376306534,
+        0.04880877956748009,
+        0.047999341040849686,
+        0.04763488844037056,
+        0.04745711013674736
+      ],
+      "auc": 0.9364637680919852
+    }
+  ],
+  "config": {
+    "architecture": "mlp",
+    "objective": null,
+    "batch": 4096,
+    "pretrain_batch": 4096,
+    "finetune_epochs": 6,
+    "pretrain_epochs": 0,
+    "schema": 1,
+    "seed": 42,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "architecture_source_sha256": "48ee2cdc89fbdf8c7176314f218790cf458dda4742d8c26f66a20ae0d202aa75",
+    "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+    "torch_version": "2.11.0+cu128",
+    "amp": true,
+    "smoke": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "fold": 1,
+  "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+  "fit_seconds": 3.8651011000038125,
+  "seconds": 3.8909178000030806,
+  "epochs": 12,
+  "feature_count": 109,
+  "epoch_loss": [
+    0.1905744789290602,
+    0.1421799485700844,
+    0.13388054562311102,
+    0.12719901982885207,
+    0.12240078501457716,
+    0.11663482833082658,
+    0.1110367461712691,
+    0.108063725659447,
+    0.10283813337339973,
+    0.10044930451107721,
+    0.09777316211783973,
+    0.09395066142952355
+  ],
+  "seed": 42,
+  "initialization_sha256": "83a6752ba4620da5b9b17ca42e177016c7ab4bb03f49e14e58161efe49de7fb0",
+  "batch_order_sha256": "0473fdc480537622e1510835c61d5284fb194891f3f0f950c7620e73ace8ee46",
+  "skipped_batches": 0,
+  "pair_count": 3591168,
+  "auc": 0.9414113148088232,
+  "train_rows": 559968,
+  "valid_rows": 139992,
+  "train_positives": 9352,
+  "valid_positives": 2337
+}

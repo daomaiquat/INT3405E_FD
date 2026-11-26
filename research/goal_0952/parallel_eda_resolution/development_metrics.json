@@ -1,0 +1,91 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "rows": 104994,
+  "fit_rows": 594966,
+  "pairs": [
+    [
+      "hours_since_last_txn",
+      "ip_country_mismatch"
+    ],
+    [
+      "merchant_risk_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "velocity_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "customer_age",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "account_balance_usd",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "account_balance_usd",
+      "is_foreign_transaction"
+    ]
+  ],
+  "control_replay_max_abs_logit": 1.9073486328125e-06,
+  "linear_coefficients": [
+    0.10714534692808077,
+    0.0,
+    0.09041411880793905,
+    0.04599122475582352,
+    0.0,
+    0.0
+  ],
+  "rms_oof_features": [
+    0.012958292849361897,
+    0.009486230090260506,
+    0.012843210250139236,
+    0.009272758848965168,
+    0.007161869201809168,
+    0.009995842352509499
+  ],
+  "variants": {
+    "grandmaster_eda": {
+      "roc_auc": 0.9512244493667037,
+      "average_precision": 0.5382352787073892,
+      "log_loss": 0.04383598792839346,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "brier": 0.010631731932020941
+    },
+    "resolution_tree": {
+      "roc_auc": 0.9512050772180421,
+      "average_precision": 0.5382209488741382,
+      "log_loss": 0.0438382762767784,
+      "delta_auc": -1.9372148661878086e-05,
+      "ci95_low": -4.478459257991959e-05,
+      "ci95_high": 6.040295256163421e-06,
+      "brier": 0.010631603315467506
+    },
+    "resolution_half": {
+      "roc_auc": 0.9512155202759345,
+      "average_precision": 0.538261130605025,
+      "log_loss": 0.04383701847871375,
+      "delta_auc": -8.929090769327352e-06,
+      "ci95_low": -2.174361959152932e-05,
+      "ci95_high": 3.8854380528746145e-06,
+      "brier": 0.010631643840415688
+    },
+    "resolution_linear": {
+      "roc_auc": 0.9512240294342172,
+      "average_precision": 0.5382235455319114,
+      "log_loss": 0.04383642118038591,
+      "delta_auc": -4.199324866727139e-07,
+      "ci95_low": -2.966143477775849e-06,
+      "ci95_high": 2.1262785044304213e-06,
+      "brier": 0.01063188480693414
+    }
+  },
+  "seconds": 77.12267600000268
+}

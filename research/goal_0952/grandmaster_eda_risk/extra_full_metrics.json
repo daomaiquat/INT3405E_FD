@@ -1,0 +1,62 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "fit_rows": 699960,
+  "rows": 299984,
+  "pairs": [
+    [
+      "prior_disputes",
+      "ip_country_mismatch"
+    ],
+    [
+      "channel",
+      "used_vpn"
+    ],
+    [
+      "card_type",
+      "is_foreign_transaction"
+    ],
+    [
+      "customer_age",
+      "used_vpn"
+    ],
+    [
+      "velocity_score",
+      "is_foreign_transaction"
+    ],
+    [
+      "day_of_week",
+      "is_ai_generated_scam_attempt"
+    ],
+    [
+      "distance_from_home_km",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "cvv_retry_count",
+      "ip_country_mismatch"
+    ],
+    [
+      "merchant_category",
+      "is_ai_generated_scam_attempt"
+    ],
+    [
+      "cvv_retry_count",
+      "is_ai_generated_scam_attempt"
+    ]
+  ],
+  "maximum_control_logit_replay_error": 1.9073486328125e-06,
+  "slope_diagnostics": [
+    {
+      "pair": "sum_of_additional_pairs",
+      "coefficient": 0.20352790224546435,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.04171956703066826
+    }
+  ],
+  "seconds": 76.64476469999863
+}

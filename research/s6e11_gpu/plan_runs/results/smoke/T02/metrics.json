@@ -1,0 +1,163 @@
+{
+  "name": "T02",
+  "status": "completed",
+  "config": {
+    "name": "T02",
+    "family": "lgb",
+    "groups": [
+      "raw",
+      "te13"
+    ],
+    "parent": "GPU-S6-L04",
+    "smoothing": 20.0,
+    "model_seed": 42,
+    "encoder_seed": 2026,
+    "params": {
+      "learning_rate": 0.03,
+      "max_iterations": 6000,
+      "num_leaves": 4,
+      "min_child_samples": 50,
+      "subsample": 0.9,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "metric": "auc"
+    },
+    "boost": false,
+    "rounds_factor": 1.0
+  },
+  "smoke": true,
+  "rows": 20000,
+  "test_rows": 1000,
+  "fold_hash": "cd67af60425b68fa336439a7dc862b3c43b938d889e1668fd43d126a63e39684",
+  "early_stop_hash": "c2128f0d58f689f0ef296e99c82853080e25e9c67cdebcad6313ab4c3d974eec",
+  "inputs": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "models_use_llm": false,
+  "oof_auc": 0.8827686587569296,
+  "average_precision": 0.311287057604702,
+  "log_loss": 0.06954942912272741,
+  "fold_mean": 0.8941769161767992,
+  "fold_std": 0.006703718567137085,
+  "folds": [
+    {
+      "device": "OpenCL 0:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 3.7625170000028447,
+      "rounds": 14,
+      "early_auc": null,
+      "settings": {
+        "max_bin": 255,
+        "num_threads": 4,
+        "learning_rate": 0.03,
+        "num_leaves": 4,
+        "min_child_samples": 50,
+        "subsample": 0.9,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 1.0,
+        "metric": "auc",
+        "objective": "binary",
+        "device_type": "gpu",
+        "gpu_platform_id": 0,
+        "gpu_device_id": 0,
+        "verbosity": 1,
+        "seed": 42
+      },
+      "version": "4.6.0",
+      "early": {
+        "device": "OpenCL 0:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+        "fit_seconds": 3.7365583999999217,
+        "rounds": 14,
+        "early_auc": 0.8964753755011668,
+        "settings": {
+          "max_bin": 255,
+          "num_threads": 4,
+          "learning_rate": 0.03,
+          "num_leaves": 4,
+          "min_child_samples": 50,
+          "subsample": 0.9,
+          "subsample_freq": 1,
+          "colsample_bytree": 0.9,
+          "reg_lambda": 1.0,
+          "metric": "auc",
+          "objective": "binary",
+          "device_type": "gpu",
+          "gpu_platform_id": 0,
+          "gpu_device_id": 0,
+          "verbosity": 1,
+          "seed": 42
+        },
+        "version": "4.6.0"
+      },
+      "seconds": 7.579386999997951,
+      "fold": 1,
+      "auc": 0.8874731976096621,
+      "train_rows": 10000,
+      "valid_rows": 10000
+    },
+    {
+      "device": "OpenCL 0:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 4.059554100000241,
+      "rounds": 24,
+      "early_auc": null,
+      "settings": {
+        "max_bin": 255,
+        "num_threads": 4,
+        "learning_rate": 0.03,
+        "num_leaves": 4,
+        "min_child_samples": 50,
+        "subsample": 0.9,
+        "subsample_freq": 1,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 1.0,
+        "metric": "auc",
+        "objective": "binary",
+        "device_type": "gpu",
+        "gpu_platform_id": 0,
+        "gpu_device_id": 0,
+        "verbosity": 1,
+        "seed": 42
+      },
+      "version": "4.6.0",
+      "early": {
+        "device": "OpenCL 0:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+        "fit_seconds": 3.884868400000414,
+        "rounds": 24,
+        "early_auc": 0.8463886063072228,
+        "settings": {
+          "max_bin": 255,
+          "num_threads": 4,
+          "learning_rate": 0.03,
+          "num_leaves": 4,
+          "min_child_samples": 50,
+          "subsample": 0.9,
+          "subsample_freq": 1,
+          "colsample_bytree": 0.9,
+          "reg_lambda": 1.0,
+          "metric": "auc",
+          "objective": "binary",
+          "device_type": "gpu",
+          "gpu_platform_id": 0,
+          "gpu_device_id": 0,
+          "verbosity": 1,
+          "seed": 42
+        },
+        "version": "4.6.0"
+      },
+      "seconds": 8.011770799999795,
+      "fold": 2,
+      "auc": 0.9008806347439363,
+      "train_rows": 10000,
+      "valid_rows": 10000
+    }
+  ],
+  "seconds": 15.591157799997745,
+  "delta_oof_auc": 0.013414135828820561,
+  "delta_by_fold": [
+    0.02704049848030976,
+    -0.0018229583749210798
+  ]
+}

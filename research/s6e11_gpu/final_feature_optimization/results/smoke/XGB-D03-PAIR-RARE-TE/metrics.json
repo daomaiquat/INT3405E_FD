@@ -1,0 +1,149 @@
+{
+  "name": "XGB-D03-PAIR-RARE-TE",
+  "status": "completed",
+  "config": {
+    "name": "XGB-D03-PAIR-RARE-TE",
+    "family": "xgb",
+    "groups": [
+      "raw",
+      "te13",
+      "cents",
+      "digits",
+      "p1",
+      "p2"
+    ],
+    "parent": "XGB-D03",
+    "smoothing": 20.0,
+    "model_seed": 42,
+    "encoder_seed": 2026,
+    "params": {
+      "learning_rate": 0.03,
+      "max_iterations": 6000,
+      "max_depth": 2,
+      "min_child_weight": 5,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "tree_method": "hist"
+    },
+    "boost": false,
+    "rounds_factor": 1.0
+  },
+  "smoke": true,
+  "rows": 20000,
+  "test_rows": 1000,
+  "fold_hash": "cd67af60425b68fa336439a7dc862b3c43b938d889e1668fd43d126a63e39684",
+  "early_stop_hash": "c2128f0d58f689f0ef296e99c82853080e25e9c67cdebcad6313ab4c3d974eec",
+  "inputs": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "models_use_llm": false,
+  "oof_auc": 0.8947042100077278,
+  "average_precision": 0.31134397488152943,
+  "log_loss": 0.0690843641411564,
+  "fold_mean": 0.8950714963848363,
+  "fold_std": 0.0034789061153599476,
+  "folds": [
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 0.07160440000006929,
+      "rounds": 21,
+      "early_auc": null,
+      "settings": {
+        "max_bin": 256,
+        "nthread": 4,
+        "learning_rate": 0.03,
+        "max_depth": 2,
+        "min_child_weight": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 1.0,
+        "tree_method": "hist",
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "device": "cuda:0",
+        "seed": 42
+      },
+      "version": "3.4.1",
+      "early": {
+        "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+        "fit_seconds": 0.0985545999999431,
+        "rounds": 21,
+        "early_auc": 0.9301358386691401,
+        "settings": {
+          "max_bin": 256,
+          "nthread": 4,
+          "learning_rate": 0.03,
+          "max_depth": 2,
+          "min_child_weight": 5,
+          "subsample": 0.9,
+          "colsample_bytree": 0.9,
+          "reg_lambda": 1.0,
+          "tree_method": "hist",
+          "objective": "binary:logistic",
+          "eval_metric": "auc",
+          "device": "cuda:0",
+          "seed": 42
+        },
+        "version": "3.4.1"
+      },
+      "seconds": 0.33642839999993157,
+      "fold": 1,
+      "auc": 0.8915925902694763,
+      "train_rows": 10000,
+      "valid_rows": 10000
+    },
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 0.07233659999997144,
+      "rounds": 23,
+      "early_auc": null,
+      "settings": {
+        "max_bin": 256,
+        "nthread": 4,
+        "learning_rate": 0.03,
+        "max_depth": 2,
+        "min_child_weight": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 1.0,
+        "tree_method": "hist",
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "device": "cuda:0",
+        "seed": 42
+      },
+      "version": "3.4.1",
+      "early": {
+        "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+        "fit_seconds": 0.11358850000010534,
+        "rounds": 23,
+        "early_auc": 0.8501585781820358,
+        "settings": {
+          "max_bin": 256,
+          "nthread": 4,
+          "learning_rate": 0.03,
+          "max_depth": 2,
+          "min_child_weight": 5,
+          "subsample": 0.9,
+          "colsample_bytree": 0.9,
+          "reg_lambda": 1.0,
+          "tree_method": "hist",
+          "objective": "binary:logistic",
+          "eval_metric": "auc",
+          "device": "cuda:0",
+          "seed": 42
+        },
+        "version": "3.4.1"
+      },
+      "seconds": 0.35364049999998315,
+      "fold": 2,
+      "auc": 0.8985504025001962,
+      "train_rows": 10000,
+      "valid_rows": 10000
+    }
+  ],
+  "seconds": 0.6900688999999147
+}

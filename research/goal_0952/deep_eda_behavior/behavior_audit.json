@@ -1,0 +1,5406 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "dev_rows": 594966,
+  "dev_fraud": 9936,
+  "dev_halves_original_fold_numbers": [
+    [
+      1,
+      3,
+      5,
+      7,
+      9
+    ],
+    [
+      2,
+      4,
+      6,
+      8,
+      10
+    ]
+  ],
+  "dev_half_rows": [
+    297483,
+    297483
+  ],
+  "dev_half_fraud": [
+    4968,
+    4968
+  ],
+  "development_raw_baseline": {
+    "base_auc": 0.9506068338417099,
+    "new_auc": 0.9505623976974853,
+    "delta_auc": -4.443614422455777e-05,
+    "delta_ap": -6.810397208356633e-05,
+    "logloss_gain_x1m": -7.309696332667221,
+    "descriptive_logloss_gain_ci95_x1m": [
+      -14.738460695866404,
+      0.11906803053196265
+    ]
+  },
+  "risk_probability_band_edges": [
+    0.0009999999999999996,
+    0.005000000000000001,
+    0.020000000000000004,
+    0.10000000000000002,
+    0.3
+  ],
+  "gate": "Test low support <0.5% and TV <2%; AUC gain >=1e-5 pooled, positive in each half and pooled log-loss gain >=0, or pooled log-loss gain >=1e-6 and positive in each half.",
+  "test_rows": 299984,
+  "reused_holdout_rows": 104994,
+  "reused_holdout_fraud": 1753,
+  "holdout_candidates_frozen_after_development": [
+    "encoded_week_transition_channel",
+    "remaining_balance_card_type"
+  ],
+  "hypotheses": {
+    "clock_block_pair": {
+      "distribution": {
+        "dev_groups": 42,
+        "test_groups": 42,
+        "test_rows_unseen_share": 0.0,
+        "test_rows_low_support_share": 0.0,
+        "total_variation": 0.0033339818616729723,
+        "max_group_share_diff": 0.0005608000149648178
+      },
+      "dev_halves": [
+        {
+          "base_auc": 0.9495904403707718,
+          "new_auc": 0.9494219036567291,
+          "delta_auc": -0.00016853671404271076,
+          "delta_ap": -0.0006358097908355509,
+          "logloss_gain_x1m": -55.43318479838448,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -81.60079348897497,
+            -29.265576107793997
+          ]
+        },
+        {
+          "base_auc": 0.9516441213372957,
+          "new_auc": 0.9515625848549876,
+          "delta_auc": -8.153648230813104e-05,
+          "delta_ap": -0.0012037989665002469,
+          "logloss_gain_x1m": -64.3710849819782,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -92.9460388773195,
+            -35.7961310866369
+          ]
+        }
+      ],
+      "dev_pooled": {
+        "base_auc": 0.9505623976974853,
+        "new_auc": 0.9504392878623317,
+        "delta_auc": -0.00012310983515362306,
+        "delta_ap": -0.0009136275918064651,
+        "logloss_gain_x1m": -59.902134890181344,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -79.27524594147407,
+          -40.52902383888862
+        ]
+      },
+      "calibration_gate_passes": false,
+      "auc_gate_passes": false,
+      "supported_cells": [
+        {
+          "group": "08h-12h \u00d7 12h-16h",
+          "dev_half_rows": [
+            1123,
+            1084
+          ],
+          "dev_half_fraud": [
+            7,
+            9
+          ],
+          "dev_half_expected": [
+            13.881210013172133,
+            16.21417011304381
+          ],
+          "dev_half_nominal_z": [
+            -2.1749535710979164,
+            -2.173315164427675
+          ],
+          "same_direction": true,
+          "dev_share": 0.003709455666374213,
+          "test_share": 0.003683529788255374
+        },
+        {
+          "group": "04h-08h \u00d7 12h-16h",
+          "dev_half_rows": [
+            2006,
+            1995
+          ],
+          "dev_half_fraud": [
+            33,
+            27
+          ],
+          "dev_half_expected": [
+            27.760509204860014,
+            24.301775212557327
+          ],
+          "dev_half_nominal_z": [
+            1.224904880779371,
+            0.6527317421974665
+          ],
+          "same_direction": true,
+          "dev_share": 0.00672475401955742,
+          "test_share": 0.006763694063683397
+        },
+        {
+          "group": "16h-20h \u00d7 08h-12h",
+          "dev_half_rows": [
+            7409,
+            7347
+          ],
+          "dev_half_fraud": [
+            80,
+            97
+          ],
+          "dev_half_expected": [
+            85.1022401230463,
+            103.77428351911108
+          ],
+          "dev_half_nominal_z": [
+            -0.6508510712749207,
+            -0.8268601595200066
+          ],
+          "same_direction": true,
+          "dev_share": 0.02480141722384136,
+          "test_share": 0.025094671715824843
+        },
+        {
+          "group": "16h-20h \u00d7 ambiguous previous block",
+          "dev_half_rows": [
+            12620,
+            12673
+          ],
+          "dev_half_fraud": [
+            186,
+            207
+          ],
+          "dev_half_expected": [
+            192.07400877975593,
+            218.37233012820914
+          ],
+          "dev_half_nominal_z": [
+            -0.5493662905727728,
+            -0.9648885127814708
+          ],
+          "same_direction": true,
+          "dev_share": 0.04251167293593247,
+          "test_share": 0.042495599765320816
+        },
+        {
+          "group": "20h-24h \u00d7 20h-24h",
+          "dev_half_rows": [
+            9320,
+            9381
+          ],
+          "dev_half_fraud": [
+            200,
+            225
+          ],
+          "dev_half_expected": [
+            211.3429128201322,
+            231.41473422964455
+          ],
+          "dev_half_nominal_z": [
+            -0.9830458175757695,
+            -0.5363315265292636
+          ],
+          "same_direction": true,
+          "dev_share": 0.031432048217881356,
+          "test_share": 0.03114832791082191
+        },
+        {
+          "group": "08h-12h \u00d7 08h-12h",
+          "dev_half_rows": [
+            9015,
+            8945
+          ],
+          "dev_half_fraud": [
+            218,
+            216
+          ],
+          "dev_half_expected": [
+            212.4821892981524,
+            206.83341602357729
+          ],
+          "dev_half_nominal_z": [
+            0.4878567673664132,
+            0.8087698483745197
+          ],
+          "same_direction": true,
+          "dev_share": 0.030186598898088293,
+          "test_share": 0.029858259107152382
+        },
+        {
+          "group": "12h-16h \u00d7 00h-04h",
+          "dev_half_rows": [
+            4043,
+            4180
+          ],
+          "dev_half_fraud": [
+            60,
+            57
+          ],
+          "dev_half_expected": [
+            63.97087971151235,
+            59.31677553338728
+          ],
+          "dev_half_nominal_z": [
+            -0.6570583579493089,
+            -0.36350837161382243
+          ],
+          "same_direction": true,
+          "dev_share": 0.013820957836246105,
+          "test_share": 0.013770734439170089
+        },
+        {
+          "group": "04h-08h \u00d7 08h-12h",
+          "dev_half_rows": [
+            1130,
+            1091
+          ],
+          "dev_half_fraud": [
+            15,
+            13
+          ],
+          "dev_half_expected": [
+            15.902231779653773,
+            13.834197999213547
+          ],
+          "dev_half_nominal_z": [
+            -0.28575371820637924,
+            -0.2746714566322395
+          ],
+          "same_direction": true,
+          "dev_share": 0.003732986422753569,
+          "test_share": 0.003730198943943677
+        },
+        {
+          "group": "20h-24h \u00d7 08h-12h",
+          "dev_half_rows": [
+            4099,
+            3904
+          ],
+          "dev_half_fraud": [
+            67,
+            62
+          ],
+          "dev_half_expected": [
+            54.79148013562506,
+            60.39961773832534
+          ],
+          "dev_half_nominal_z": [
+            2.0348874133544945,
+            0.2612680859555442
+          ],
+          "same_direction": true,
+          "dev_share": 0.013451188807427652,
+          "test_share": 0.013204037548669263
+        },
+        {
+          "group": "12h-16h \u00d7 12h-16h",
+          "dev_half_rows": [
+            10036,
+            9906
+          ],
+          "dev_half_fraud": [
+            222,
+            252
+          ],
+          "dev_half_expected": [
+            219.12801737002744,
+            247.63420548806323
+          ],
+          "dev_half_nominal_z": [
+            0.24658695176889525,
+            0.36161208840927744
+          ],
+          "same_direction": true,
+          "dev_share": 0.03351788169408,
+          "test_share": 0.03359179156221665
+        },
+        {
+          "group": "20h-24h \u00d7 ambiguous previous block",
+          "dev_half_rows": [
+            12987,
+            12750
+          ],
+          "dev_half_fraud": [
+            224,
+            220
+          ],
+          "dev_half_expected": [
+            221.3883772688847,
+            217.00480957765313
+          ],
+          "dev_half_nominal_z": [
+            0.22230790736899703,
+            0.25738346591986355
+          ],
+          "same_direction": true,
+          "dev_share": 0.04325793406682062,
+          "test_share": 0.04349898661261934
+        },
+        {
+          "group": "16h-20h \u00d7 20h-24h",
+          "dev_half_rows": [
+            1112,
+            1105
+          ],
+          "dev_half_fraud": [
+            12,
+            14
+          ],
+          "dev_half_expected": [
+            14.473752896471591,
+            14.190590658301124
+          ],
+          "dev_half_nominal_z": [
+            -0.8571027504461094,
+            -0.06070321463659119
+          ],
+          "same_direction": true,
+          "dev_share": 0.0037262633495023247,
+          "test_share": 0.003946877166782228
+        },
+        {
+          "group": "16h-20h \u00d7 04h-08h",
+          "dev_half_rows": [
+            3794,
+            3886
+          ],
+          "dev_half_fraud": [
+            52,
+            49
+          ],
+          "dev_half_expected": [
+            47.82340228964941,
+            48.91588303376255
+          ],
+          "dev_half_nominal_z": [
+            0.7318781121651866,
+            0.014363335675777675
+          ],
+          "same_direction": true,
+          "dev_share": 0.01290830064238965,
+          "test_share": 0.013227372126513414
+        },
+        {
+          "group": "04h-08h \u00d7 00h-04h",
+          "dev_half_rows": [
+            12906,
+            12899
+          ],
+          "dev_half_fraud": [
+            196,
+            211
+          ],
+          "dev_half_expected": [
+            196.1593365981505,
+            214.95115738629613
+          ],
+          "dev_half_nominal_z": [
+            -0.01420465241743778,
+            -0.3417370477664635
+          ],
+          "same_direction": true,
+          "dev_share": 0.04337222631209178,
+          "test_share": 0.04312229985599232
+        },
+        {
+          "group": "00h-04h \u00d7 00h-04h",
+          "dev_half_rows": [
+            8681,
+            8592
+          ],
+          "dev_half_fraud": [
+            191,
+            202
+          ],
+          "dev_half_expected": [
+            195.80452406094926,
+            193.23299767271322
+          ],
+          "dev_half_nominal_z": [
+            -0.4343575167760672,
+            0.791739594083974
+          ],
+          "same_direction": false,
+          "dev_share": 0.029031911067187034,
+          "test_share": 0.02952157448397248
+        },
+        {
+          "group": "00h-04h \u00d7 04h-08h",
+          "dev_half_rows": [
+            1029,
+            1072
+          ],
+          "dev_half_fraud": [
+            11,
+            13
+          ],
+          "dev_half_expected": [
+            10.06737240392467,
+            13.028450595981532
+          ],
+          "dev_half_nominal_z": [
+            0.34614793947402406,
+            -0.009558220337781968
+          ],
+          "same_direction": false,
+          "dev_share": 0.003531294225216231,
+          "test_share": 0.0034835191210197875
+        },
+        {
+          "group": "00h-04h \u00d7 08h-12h",
+          "dev_half_rows": [
+            1922,
+            1972
+          ],
+          "dev_half_fraud": [
+            24,
+            25
+          ],
+          "dev_half_expected": [
+            26.83299596586078,
+            22.846928762995045
+          ],
+          "dev_half_nominal_z": [
+            -0.6736365501246188,
+            0.5197334177137558
+          ],
+          "same_direction": false,
+          "dev_share": 0.006544911810086627,
+          "test_share": 0.006767027574803989
+        },
+        {
+          "group": "00h-04h \u00d7 12h-16h",
+          "dev_half_rows": [
+            3627,
+            3634
+          ],
+          "dev_half_fraud": [
+            64,
+            43
+          ],
+          "dev_half_expected": [
+            50.37385895660869,
+            46.45197962641624
+          ],
+          "dev_half_nominal_z": [
+            2.3785009971502813,
+            -0.5973676706574502
+          ],
+          "same_direction": false,
+          "dev_share": 0.012204058719321776,
+          "test_share": 0.012580670969118354
+        },
+        {
+          "group": "00h-04h \u00d7 16h-20h",
+          "dev_half_rows": [
+            6753,
+            6899
+          ],
+          "dev_half_fraud": [
+            97,
+            89
+          ],
+          "dev_half_expected": [
+            90.4824548951841,
+            100.71036047585181
+          ],
+          "dev_half_nominal_z": [
+            0.8421134127528805,
+            -1.4517930805518602
+          ],
+          "same_direction": false,
+          "dev_share": 0.02294584900649785,
+          "test_share": 0.02292788948743933
+        },
+        {
+          "group": "00h-04h \u00d7 20h-24h",
+          "dev_half_rows": [
+            12648,
+            12734
+          ],
+          "dev_half_fraud": [
+            200,
+            188
+          ],
+          "dev_half_expected": [
+            198.3107980937225,
+            195.00915843889854
+          ],
+          "dev_half_nominal_z": [
+            0.15215679881243424,
+            -0.6121608035292714
+          ],
+          "same_direction": false,
+          "dev_share": 0.042661261315772664,
+          "test_share": 0.04282561736625953
+        },
+        {
+          "group": "00h-04h \u00d7 ambiguous previous block",
+          "dev_half_rows": [
+            11817,
+            11636
+          ],
+          "dev_half_fraud": [
+            199,
+            186
+          ],
+          "dev_half_expected": [
+            191.45136266591211,
+            197.3116707736433
+          ],
+          "dev_half_nominal_z": [
+            0.6835676733420843,
+            -0.9979090958158218
+          ],
+          "same_direction": false,
+          "dev_share": 0.039419059240359954,
+          "test_share": 0.03941543548989279
+        },
+        {
+          "group": "04h-08h \u00d7 04h-08h",
+          "dev_half_rows": [
+            9017,
+            9051
+          ],
+          "dev_half_fraud": [
+            212,
+            202
+          ],
+          "dev_half_expected": [
+            211.54301605906355,
+            219.83811896582145
+          ],
+          "dev_half_nominal_z": [
+            0.04127006397615829,
+            -1.5296415533928378
+          ],
+          "same_direction": false,
+          "dev_share": 0.030368121875871897,
+          "test_share": 0.030321617152914822
+        },
+        {
+          "group": "04h-08h \u00d7 16h-20h",
+          "dev_half_rows": [
+            3710,
+            3863
+          ],
+          "dev_half_fraud": [
+            41,
+            47
+          ],
+          "dev_half_expected": [
+            43.13545749050916,
+            44.00221737989108
+          ],
+          "dev_half_nominal_z": [
+            -0.37844800619230085,
+            0.5207829269381659
+          ],
+          "same_direction": false,
+          "dev_share": 0.012728458432918855,
+          "test_share": 0.01249066616886234
+        },
+        {
+          "group": "04h-08h \u00d7 20h-24h",
+          "dev_half_rows": [
+            6878,
+            6888
+          ],
+          "dev_half_fraud": [
+            100,
+            87
+          ],
+          "dev_half_expected": [
+            89.49464245199601,
+            97.06268634874347
+          ],
+          "dev_half_nominal_z": [
+            1.3581768942406187,
+            -1.2415392894472042
+          ],
+          "same_direction": false,
+          "dev_share": 0.02313745659415832,
+          "test_share": 0.023344578377513466
+        },
+        {
+          "group": "04h-08h \u00d7 ambiguous previous block",
+          "dev_half_rows": [
+            11938,
+            11767
+          ],
+          "dev_half_fraud": [
+            226,
+            208
+          ],
+          "dev_half_expected": [
+            201.48972960295222,
+            216.0190801430932
+          ],
+          "dev_half_nominal_z": [
+            2.188315498817633,
+            -0.6876257604365115
+          ],
+          "same_direction": false,
+          "dev_share": 0.039842612855188364,
+          "test_share": 0.03975878713531388
+        },
+        {
+          "group": "08h-12h \u00d7 00h-04h",
+          "dev_half_rows": [
+            7108,
+            7104
+          ],
+          "dev_half_fraud": [
+            100,
+            101
+          ],
+          "dev_half_expected": [
+            99.07981487554186,
+            105.82893147229466
+          ],
+          "dev_half_nominal_z": [
+            0.11651390724038516,
+            -0.5881999890762735
+          ],
+          "same_direction": false,
+          "dev_share": 0.023887079261672096,
+          "test_share": 0.023911275268014294
+        },
+        {
+          "group": "08h-12h \u00d7 04h-08h",
+          "dev_half_rows": [
+            13072,
+            13047
+          ],
+          "dev_half_fraud": [
+            179,
+            222
+          ],
+          "dev_half_expected": [
+            191.3550600932156,
+            216.55432581113212
+          ],
+          "dev_half_nominal_z": [
+            -1.1010066994855412,
+            0.4661156646731321
+          ],
+          "same_direction": false,
+          "dev_share": 0.04389998756231449,
+          "test_share": 0.04388900741372873
+        },
+        {
+          "group": "08h-12h \u00d7 16h-20h",
+          "dev_half_rows": [
+            2053,
+            2029
+          ],
+          "dev_half_fraud": [
+            26,
+            27
+          ],
+          "dev_half_expected": [
+            24.926961815557632,
+            30.624543278856944
+          ],
+          "dev_half_nominal_z": [
+            0.2666806746870696,
+            -0.8224263077187949
+          ],
+          "same_direction": false,
+          "dev_share": 0.006860896252895123,
+          "test_share": 0.006873699930662969
+        },
+        {
+          "group": "08h-12h \u00d7 20h-24h",
+          "dev_half_rows": [
+            3834,
+            3851
+          ],
+          "dev_half_fraud": [
+            69,
+            43
+          ],
+          "dev_half_expected": [
+            61.54670694405826,
+            48.684983413380074
+          ],
+          "dev_half_nominal_z": [
+            1.2275510871002047,
+            -0.9700632129464446
+          ],
+          "same_direction": false,
+          "dev_share": 0.012916704483953705,
+          "test_share": 0.012630673635927249
+        },
+        {
+          "group": "08h-12h \u00d7 ambiguous previous block",
+          "dev_half_rows": [
+            12130,
+            12008
+          ],
+          "dev_half_fraud": [
+            204,
+            203
+          ],
+          "dev_half_expected": [
+            193.66894387316898,
+            212.75834641741395
+          ],
+          "dev_half_nominal_z": [
+            0.9146853740196669,
+            -0.8501181656131652
+          ],
+          "same_direction": false,
+          "dev_share": 0.04057038553463559,
+          "test_share": 0.040632167048909276
+        },
+        {
+          "group": "12h-16h \u00d7 04h-08h",
+          "dev_half_rows": [
+            7730,
+            7899
+          ],
+          "dev_half_fraud": [
+            115,
+            105
+          ],
+          "dev_half_expected": [
+            104.70827129921422,
+            122.11309586084319
+          ],
+          "dev_half_nominal_z": [
+            1.2177136983361898,
+            -1.943010101011061
+          ],
+          "same_direction": false,
+          "dev_share": 0.026268727960925498,
+          "test_share": 0.026324737319323697
+        },
+        {
+          "group": "12h-16h \u00d7 08h-12h",
+          "dev_half_rows": [
+            14595,
+            14622
+          ],
+          "dev_half_fraud": [
+            213,
+            244
+          ],
+          "dev_half_expected": [
+            215.3616448305919,
+            232.1244283328948
+          ],
+          "dev_half_nominal_z": [
+            -0.19603681396180142,
+            0.9715713591546804
+          ],
+          "same_direction": false,
+          "dev_share": 0.04910700779540343,
+          "test_share": 0.048745933116432875
+        },
+        {
+          "group": "12h-16h \u00d7 16h-20h",
+          "dev_half_rows": [
+            1178,
+            1178
+          ],
+          "dev_half_fraud": [
+            12,
+            15
+          ],
+          "dev_half_expected": [
+            13.115110889333945,
+            14.707107884275972
+          ],
+          "dev_half_nominal_z": [
+            -0.3666827254540441,
+            0.09070724670684752
+          ],
+          "same_direction": false,
+          "dev_share": 0.003959890144983075,
+          "test_share": 0.004183556456344339
+        },
+        {
+          "group": "12h-16h \u00d7 20h-24h",
+          "dev_half_rows": [
+            2260,
+            2240
+          ],
+          "dev_half_fraud": [
+            39,
+            26
+          ],
+          "dev_half_expected": [
+            32.67995101938056,
+            32.38523489272992
+          ],
+          "dev_half_nominal_z": [
+            1.3564111062810233,
+            -1.3883954203716435
+          ],
+          "same_direction": false,
+          "dev_share": 0.007563457407650185,
+          "test_share": 0.007823750600032002
+        },
+        {
+          "group": "12h-16h \u00d7 ambiguous previous block",
+          "dev_half_rows": [
+            13554,
+            13618
+          ],
+          "dev_half_fraud": [
+            245,
+            220
+          ],
+          "dev_half_expected": [
+            228.50004978684916,
+            220.39006019100117
+          ],
+          "dev_half_nominal_z": [
+            1.3643993726908563,
+            -0.032333179777795755
+          ],
+          "same_direction": false,
+          "dev_share": 0.04566983659570463,
+          "test_share": 0.045645767774281296
+        },
+        {
+          "group": "16h-20h \u00d7 00h-04h",
+          "dev_half_rows": [
+            2154,
+            2133
+          ],
+          "dev_half_fraud": [
+            29,
+            30
+          ],
+          "dev_half_expected": [
+            38.298172228493044,
+            23.495126740785736
+          ],
+          "dev_half_nominal_z": [
+            -1.9463270891142574,
+            1.5586807525691864
+          ],
+          "same_direction": false,
+          "dev_share": 0.00720545375702141,
+          "test_share": 0.007157048375913382
+        },
+        {
+          "group": "16h-20h \u00d7 12h-16h",
+          "dev_half_rows": [
+            13709,
+            13601
+          ],
+          "dev_half_fraud": [
+            225,
+            198
+          ],
+          "dev_half_expected": [
+            189.35200826499576,
+            213.10291682190183
+          ],
+          "dev_half_nominal_z": [
+            3.1247929218301613,
+            -1.2718581755640204
+          ],
+          "same_direction": false,
+          "dev_share": 0.04590178262287257,
+          "test_share": 0.04567243586324604
+        },
+        {
+          "group": "16h-20h \u00d7 16h-20h",
+          "dev_half_rows": [
+            9561,
+            9642
+          ],
+          "dev_half_fraud": [
+            225,
+            207
+          ],
+          "dev_half_expected": [
+            210.9446832586679,
+            220.32045855734452
+          ],
+          "dev_half_nominal_z": [
+            1.2447110110246884,
+            -1.158028732192901
+          ],
+          "same_direction": false,
+          "dev_share": 0.03227579391091256,
+          "test_share": 0.032285055202944155
+        },
+        {
+          "group": "20h-24h \u00d7 00h-04h",
+          "dev_half_rows": [
+            1180,
+            1133
+          ],
+          "dev_half_fraud": [
+            14,
+            12
+          ],
+          "dev_half_expected": [
+            12.268472518135153,
+            13.423188342607066
+          ],
+          "dev_half_nominal_z": [
+            0.5614785509083873,
+            -0.4477194015581978
+          ],
+          "same_direction": false,
+          "dev_share": 0.0038876171075321953,
+          "test_share": 0.00392687610005867
+        },
+        {
+          "group": "20h-24h \u00d7 04h-08h",
+          "dev_half_rows": [
+            2128,
+            2118
+          ],
+          "dev_half_fraud": [
+            21,
+            33
+          ],
+          "dev_half_expected": [
+            23.73052024645479,
+            30.983996764081656
+          ],
+          "dev_half_nominal_z": [
+            -0.6621365829635242,
+            0.45122581722647565
+          ],
+          "same_direction": false,
+          "dev_share": 0.007136542256196152,
+          "test_share": 0.007103712197983892
+        },
+        {
+          "group": "20h-24h \u00d7 12h-16h",
+          "dev_half_rows": [
+            7620,
+            7660
+          ],
+          "dev_half_fraud": [
+            112,
+            102
+          ],
+          "dev_half_expected": [
+            106.58973644870541,
+            112.82144856946016
+          ],
+          "dev_half_nominal_z": [
+            0.6447504063528676,
+            -1.2409328256290828
+          ],
+          "same_direction": false,
+          "dev_share": 0.025682139819754406,
+          "test_share": 0.02512133980478959
+        },
+        {
+          "group": "20h-24h \u00d7 16h-20h",
+          "dev_half_rows": [
+            13997,
+            14346
+          ],
+          "dev_half_fraud": [
+            203,
+            231
+          ],
+          "dev_half_expected": [
+            213.44316523124027,
+            225.64573620542674
+          ],
+          "dev_half_nominal_z": [
+            -0.8819961618830044,
+            0.4371932195171573
+          ],
+          "same_direction": false,
+          "dev_share": 0.04763801629000649,
+          "test_share": 0.04749919995733106
+        }
+      ]
+    },
+    "encoded_week_transition_channel": {
+      "distribution": {
+        "dev_groups": 20,
+        "test_groups": 20,
+        "test_rows_unseen_share": 0.0,
+        "test_rows_low_support_share": 0.0,
+        "total_variation": 0.002997981549385159,
+        "max_group_share_diff": 0.0009648913228682728
+      },
+      "dev_halves": [
+        {
+          "base_auc": 0.9495904403707718,
+          "new_auc": 0.9496554706871496,
+          "delta_auc": 6.50303163778343e-05,
+          "delta_ap": -0.0001883523739613091,
+          "logloss_gain_x1m": 1.6915694758199942,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -20.003776802455874,
+            23.38691575409586
+          ]
+        },
+        {
+          "base_auc": 0.9516441213372957,
+          "new_auc": 0.9516508457402421,
+          "delta_auc": 6.724402946356456e-06,
+          "delta_ap": 3.923169894626266e-05,
+          "logloss_gain_x1m": 0.35254897923573936,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -21.807515646678215,
+            22.512613605149696
+          ]
+        }
+      ],
+      "dev_pooled": {
+        "base_auc": 0.9505623976974853,
+        "new_auc": 0.9505958309926604,
+        "delta_auc": 3.3433295175133715e-05,
+        "delta_ap": -4.060810134332016e-05,
+        "logloss_gain_x1m": 1.0220592275278628,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -14.484027556726952,
+          16.528146011782678
+        ]
+      },
+      "calibration_gate_passes": true,
+      "auc_gate_passes": true,
+      "supported_cells": [
+        {
+          "group": "wrapped encoded week \u00d7 Contactless",
+          "dev_half_rows": [
+            1675,
+            1601
+          ],
+          "dev_half_fraud": [
+            17,
+            15
+          ],
+          "dev_half_expected": [
+            20.79135187621785,
+            19.069043653100895
+          ],
+          "dev_half_nominal_z": [
+            -1.0475247004270831,
+            -1.064386964506147
+          ],
+          "same_direction": true,
+          "dev_share": 0.005506196992769335,
+          "test_share": 0.005156941703557523
+        },
+        {
+          "group": "ambiguous phase \u00d7 POS",
+          "dev_half_rows": [
+            3519,
+            3387
+          ],
+          "dev_half_fraud": [
+            65,
+            62
+          ],
+          "dev_half_expected": [
+            57.21172904715485,
+            56.62197172545887
+          ],
+          "dev_half_nominal_z": [
+            1.2543315737313716,
+            0.8930915239119654
+          ],
+          "same_direction": true,
+          "dev_share": 0.011607385968273817,
+          "test_share": 0.011443943676996107
+        },
+        {
+          "group": "wrapped encoded week \u00d7 Online",
+          "dev_half_rows": [
+            4009,
+            4079
+          ],
+          "dev_half_fraud": [
+            45,
+            59
+          ],
+          "dev_half_expected": [
+            51.50871873229349,
+            63.84327805619069
+          ],
+          "dev_half_nominal_z": [
+            -1.1588109551769368,
+            -0.7743140900185482
+          ],
+          "same_direction": true,
+          "dev_share": 0.0135940541140166,
+          "test_share": 0.013777401461411275
+        },
+        {
+          "group": "prior day within encoded week \u00d7 ATM",
+          "dev_half_rows": [
+            2608,
+            2715
+          ],
+          "dev_half_fraud": [
+            37,
+            26
+          ],
+          "dev_half_expected": [
+            40.049082823825685,
+            34.30683078707617
+          ],
+          "dev_half_nominal_z": [
+            -0.5836823060897328,
+            -1.638390345816547
+          ],
+          "same_direction": true,
+          "dev_share": 0.008946729729093763,
+          "test_share": 0.008863806069657048
+        },
+        {
+          "group": "prior day within encoded week \u00d7 POS",
+          "dev_half_rows": [
+            17924,
+            18038
+          ],
+          "dev_half_fraud": [
+            269,
+            257
+          ],
+          "dev_half_expected": [
+            244.0773605260153,
+            249.8836350601048
+          ],
+          "dev_half_nominal_z": [
+            1.959665031542312,
+            0.5470761142879216
+          ],
+          "same_direction": true,
+          "dev_share": 0.060443790065314654,
+          "test_share": 0.061333271107792416
+        },
+        {
+          "group": "same day \u00d7 ATM",
+          "dev_half_rows": [
+            9194,
+            9289
+          ],
+          "dev_half_fraud": [
+            150,
+            169
+          ],
+          "dev_half_expected": [
+            144.94180383788284,
+            163.32105211223535
+          ],
+          "dev_half_nominal_z": [
+            0.5147899224481962,
+            0.5455890990123132
+          ],
+          "same_direction": true,
+          "dev_share": 0.031065640725688525,
+          "test_share": 0.031044989066083526
+        },
+        {
+          "group": "ambiguous phase \u00d7 ATM",
+          "dev_half_rows": [
+            499,
+            443
+          ],
+          "dev_half_fraud": [
+            6,
+            7
+          ],
+          "dev_half_expected": [
+            6.989588566620357,
+            8.099490172898138
+          ],
+          "dev_half_nominal_z": [
+            -0.46707837076118497,
+            -0.46112775775895226
+          ],
+          "same_direction": true,
+          "dev_share": 0.0015832837506681054,
+          "test_share": 0.0017100912048642594
+        },
+        {
+          "group": "wrapped encoded week \u00d7 In-App",
+          "dev_half_rows": [
+            1226,
+            1238
+          ],
+          "dev_half_fraud": [
+            11,
+            17
+          ],
+          "dev_half_expected": [
+            14.627200585273725,
+            17.969375832306483
+          ],
+          "dev_half_nominal_z": [
+            -1.1145196459201319,
+            -0.28173331819798764
+          ],
+          "same_direction": true,
+          "dev_share": 0.004141413122766679,
+          "test_share": 0.0038835404554909596
+        },
+        {
+          "group": "wrapped encoded week \u00d7 POS",
+          "dev_half_rows": [
+            3128,
+            3015
+          ],
+          "dev_half_fraud": [
+            51,
+            39
+          ],
+          "dev_half_expected": [
+            39.248224157734654,
+            37.63306339108935
+          ],
+          "dev_half_nominal_z": [
+            2.254752213098695,
+            0.26915450299674054
+          ],
+          "same_direction": true,
+          "dev_share": 0.010324959745598909,
+          "test_share": 0.010357219051682756
+        },
+        {
+          "group": "ambiguous phase \u00d7 In-App",
+          "dev_half_rows": [
+            1392,
+            1323
+          ],
+          "dev_half_fraud": [
+            25,
+            22
+          ],
+          "dev_half_expected": [
+            25.736266385348607,
+            23.002996705522058
+          ],
+          "dev_half_nominal_z": [
+            -0.18314594119283656,
+            -0.25907846003509355
+          ],
+          "same_direction": true,
+          "dev_share": 0.004563285969282278,
+          "test_share": 0.004536908635127207
+        },
+        {
+          "group": "ambiguous phase \u00d7 Online",
+          "dev_half_rows": [
+            4613,
+            4707
+          ],
+          "dev_half_fraud": [
+            79,
+            100
+          ],
+          "dev_half_expected": [
+            78.10579565924235,
+            98.51618631444505
+          ],
+          "dev_half_nominal_z": [
+            0.12672910074676144,
+            0.19734940864671216
+          ],
+          "same_direction": true,
+          "dev_share": 0.015664760675399937,
+          "test_share": 0.015437489999466638
+        },
+        {
+          "group": "same day \u00d7 Contactless",
+          "dev_half_rows": [
+            32466,
+            32184
+          ],
+          "dev_half_fraud": [
+            530,
+            527
+          ],
+          "dev_half_expected": [
+            527.5640519844252,
+            567.1241990511136
+          ],
+          "dev_half_nominal_z": [
+            0.13033806329030334,
+            -2.0729127123815654
+          ],
+          "same_direction": false,
+          "dev_share": 0.10866167142324099,
+          "test_share": 0.10910248546589152
+        },
+        {
+          "group": "same day \u00d7 In-App",
+          "dev_half_rows": [
+            25694,
+            25530
+          ],
+          "dev_half_fraud": [
+            440,
+            442
+          ],
+          "dev_half_expected": [
+            434.83324596264174,
+            458.38369478486663
+          ],
+          "dev_half_nominal_z": [
+            0.3054074616825271,
+            -0.9543108348159959
+          ],
+          "same_direction": false,
+          "dev_share": 0.08609567605543846,
+          "test_share": 0.08526454744253027
+        },
+        {
+          "group": "same day \u00d7 Online",
+          "dev_half_rows": [
+            83508,
+            83619
+          ],
+          "dev_half_fraud": [
+            1549,
+            1559
+          ],
+          "dev_half_expected": [
+            1524.8490522729444,
+            1566.5087324312512
+          ],
+          "dev_half_nominal_z": [
+            0.7942597400443301,
+            -0.24246732303595991
+          ],
+          "same_direction": false,
+          "dev_share": 0.28090176581518944,
+          "test_share": 0.2807083044429036
+        },
+        {
+          "group": "same day \u00d7 POS",
+          "dev_half_rows": [
+            63111,
+            63374
+          ],
+          "dev_half_fraud": [
+            1071,
+            1107
+          ],
+          "dev_half_expected": [
+            1032.9749379400087,
+            1123.2896295015207
+          ],
+          "dev_half_nominal_z": [
+            1.4598266481567561,
+            -0.6050989405695709
+          ],
+          "same_direction": false,
+          "dev_share": 0.2125919800459186,
+          "test_share": 0.21264800789375432
+        },
+        {
+          "group": "prior day within encoded week \u00d7 Contactless",
+          "dev_half_rows": [
+            9311,
+            9137
+          ],
+          "dev_half_fraud": [
+            143,
+            109
+          ],
+          "dev_half_expected": [
+            121.64562202572189,
+            116.39174004142548
+          ],
+          "dev_half_nominal_z": [
+            2.33716939992668,
+            -0.8058296992932726
+          ],
+          "same_direction": false,
+          "dev_share": 0.031006813834740136,
+          "test_share": 0.03197170515760841
+        },
+        {
+          "group": "prior day within encoded week \u00d7 In-App",
+          "dev_half_rows": [
+            7345,
+            7455
+          ],
+          "dev_half_fraud": [
+            100,
+            109
+          ],
+          "dev_half_expected": [
+            104.56607476642775,
+            106.91355301494887
+          ],
+          "dev_half_nominal_z": [
+            -0.5579319405428135,
+            0.24448147098204823
+          ],
+          "same_direction": false,
+          "dev_share": 0.02487537102960505,
+          "test_share": 0.02498133233772468
+        },
+        {
+          "group": "prior day within encoded week \u00d7 Online",
+          "dev_half_rows": [
+            24045,
+            24185
+          ],
+          "dev_half_fraud": [
+            348,
+            309
+          ],
+          "dev_half_expected": [
+            344.2888693330788,
+            347.4372340491156
+          ],
+          "dev_half_nominal_z": [
+            0.2534857086987353,
+            -2.5533585311918667
+          ],
+          "same_direction": false,
+          "dev_share": 0.08106345572688187,
+          "test_share": 0.08031761693957011
+        },
+        {
+          "group": "ambiguous phase \u00d7 Contactless",
+          "dev_half_rows": [
+            1750,
+            1696
+          ],
+          "dev_half_fraud": [
+            27,
+            28
+          ],
+          "dev_half_expected": [
+            26.67210704672987,
+            34.80279388251406
+          ],
+          "dev_half_nominal_z": [
+            0.07843104586685991,
+            -1.499771203456465
+          ],
+          "same_direction": false,
+          "dev_share": 0.00579192760594723,
+          "test_share": 0.005990319483705798
+        }
+      ]
+    },
+    "night_continuity_count": {
+      "distribution": {
+        "dev_groups": 10,
+        "test_groups": 10,
+        "test_rows_unseen_share": 0.0,
+        "test_rows_low_support_share": 0.0,
+        "total_variation": 0.001423214448261571,
+        "max_group_share_diff": 0.0010028005528368578
+      },
+      "dev_halves": [
+        {
+          "base_auc": 0.9495904403707718,
+          "new_auc": 0.9495915496357689,
+          "delta_auc": 1.1092649970789736e-06,
+          "delta_ap": -0.00012172396404319663,
+          "logloss_gain_x1m": -11.245924439940326,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -26.853031761184248,
+            4.361182881303594
+          ]
+        },
+        {
+          "base_auc": 0.9516441213372957,
+          "new_auc": 0.9516061358924489,
+          "delta_auc": -3.7985444846788674e-05,
+          "delta_ap": -1.5750042541062825e-05,
+          "logloss_gain_x1m": -10.525032566813053,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -25.67922912553085,
+            4.629163991904742
+          ]
+        }
+      ],
+      "dev_pooled": {
+        "base_auc": 0.9505623976974853,
+        "new_auc": 0.9505258599053911,
+        "delta_auc": -3.6537792094226695e-05,
+        "delta_ap": -5.9500133017698076e-05,
+        "logloss_gain_x1m": -10.885478503376689,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -21.76241143778895,
+          -0.008545568964427609
+        ]
+      },
+      "calibration_gate_passes": false,
+      "auc_gate_passes": false,
+      "supported_cells": [
+        {
+          "group": "ambiguous midnight \u00d7 count [2,4)",
+          "dev_half_rows": [
+            3460,
+            3452
+          ],
+          "dev_half_fraud": [
+            48,
+            48
+          ],
+          "dev_half_expected": [
+            51.831703500100346,
+            57.18641623877113
+          ],
+          "dev_half_nominal_z": [
+            -0.6341633181695292,
+            -1.4941622124675835
+          ],
+          "same_direction": true,
+          "dev_share": 0.011617470578150685,
+          "test_share": 0.011700624033281775
+        },
+        {
+          "group": "ambiguous midnight \u00d7 count [-inf,2)",
+          "dev_half_rows": [
+            1056,
+            968
+          ],
+          "dev_half_fraud": [
+            9,
+            14
+          ],
+          "dev_half_expected": [
+            8.51561313018315,
+            12.61724093503035
+          ],
+          "dev_half_nominal_z": [
+            0.19964090595099854,
+            0.5256937417514161
+          ],
+          "same_direction": true,
+          "dev_share": 0.003401875065129772,
+          "test_share": 0.0034035148541255535
+        },
+        {
+          "group": "previous day \u00d7 count [2,4)",
+          "dev_half_rows": [
+            21316,
+            21823
+          ],
+          "dev_half_fraud": [
+            258,
+            247
+          ],
+          "dev_half_expected": [
+            260.1016362415204,
+            263.11202762811655
+          ],
+          "dev_half_nominal_z": [
+            -0.1594916367459974,
+            -1.1794081474161568
+          ],
+          "same_direction": true,
+          "dev_share": 0.07250666424636029,
+          "test_share": 0.0724505306949704
+        },
+        {
+          "group": "current hour outside [00h,06h)",
+          "dev_half_rows": [
+            227686,
+            227596
+          ],
+          "dev_half_fraud": [
+            3777,
+            3839
+          ],
+          "dev_half_expected": [
+            3690.761886775038,
+            3939.9918805652947
+          ],
+          "dev_half_nominal_z": [
+            1.7709241740388513,
+            -2.0171233022689425
+          ],
+          "same_direction": false,
+          "dev_share": 0.765223558993287,
+          "test_share": 0.7642207584404501
+        },
+        {
+          "group": "same day \u00d7 count [-inf,2)",
+          "dev_half_rows": [
+            2769,
+            2632
+          ],
+          "dev_half_fraud": [
+            20,
+            26
+          ],
+          "dev_half_expected": [
+            22.38418761822924,
+            25.679675258198742
+          ],
+          "dev_half_nominal_z": [
+            -0.5898021432369348,
+            0.0746010227897408
+          ],
+          "same_direction": false,
+          "dev_share": 0.009077829657493033,
+          "test_share": 0.009170489092751614
+        },
+        {
+          "group": "same day \u00d7 count [2,4)",
+          "dev_half_rows": [
+            9803,
+            9766
+          ],
+          "dev_half_fraud": [
+            188,
+            174
+          ],
+          "dev_half_expected": [
+            183.14957469206362,
+            186.63487686682944
+          ],
+          "dev_half_nominal_z": [
+            0.44707863214345017,
+            -1.1567549133477044
+          ],
+          "same_direction": false,
+          "dev_share": 0.03289095511340144,
+          "test_share": 0.033221771827830815
+        },
+        {
+          "group": "same day \u00d7 count [4,inf)",
+          "dev_half_rows": [
+            6816,
+            6810
+          ],
+          "dev_half_fraud": [
+            214,
+            220
+          ],
+          "dev_half_expected": [
+            216.49968813750385,
+            203.02653759617394
+          ],
+          "dev_half_nominal_z": [
+            -0.226398681712444,
+            1.5171107615310595
+          ],
+          "same_direction": false,
+          "dev_share": 0.02290214903036476,
+          "test_share": 0.022537868686329936
+        },
+        {
+          "group": "previous day \u00d7 count [-inf,2)",
+          "dev_half_rows": [
+            7673,
+            7464
+          ],
+          "dev_half_fraud": [
+            37,
+            32
+          ],
+          "dev_half_expected": [
+            34.8258722981325,
+            36.38363966886193
+          ],
+          "dev_half_nominal_z": [
+            0.43180156970413486,
+            -0.8549596890801662
+          ],
+          "same_direction": false,
+          "dev_share": 0.025441789951022413,
+          "test_share": 0.025974718651661424
+        },
+        {
+          "group": "previous day \u00d7 count [4,inf)",
+          "dev_half_rows": [
+            14491,
+            14661
+          ],
+          "dev_half_fraud": [
+            346,
+            300
+          ],
+          "dev_half_expected": [
+            306.4524535625333,
+            305.6880193723637
+          ],
+          "dev_half_nominal_z": [
+            2.8544820169605565,
+            -0.3988532062024254
+          ],
+          "same_direction": false,
+          "dev_share": 0.04899775785507071,
+          "test_share": 0.0493626326737426
+        },
+        {
+          "group": "ambiguous midnight \u00d7 count [4,inf)",
+          "dev_half_rows": [
+            2413,
+            2311
+          ],
+          "dev_half_fraud": [
+            71,
+            68
+          ],
+          "dev_half_expected": [
+            70.31341860405183,
+            68.3152112519968
+          ],
+          "dev_half_nominal_z": [
+            0.1078577932872284,
+            -0.050328514276526126
+          ],
+          "same_direction": false,
+          "dev_share": 0.007939949509719883,
+          "test_share": 0.007957091044855726
+        }
+      ]
+    },
+    "rapid_amount_new_merchant": {
+      "distribution": {
+        "dev_groups": 24,
+        "test_groups": 24,
+        "test_rows_unseen_share": 0.0,
+        "test_rows_low_support_share": 0.0,
+        "total_variation": 0.003433342261297781,
+        "max_group_share_diff": 0.0010589468003072144
+      },
+      "dev_halves": [
+        {
+          "base_auc": 0.9495904403707718,
+          "new_auc": 0.949511988085558,
+          "delta_auc": -7.845228521374814e-05,
+          "delta_ap": -0.0009280128241541119,
+          "logloss_gain_x1m": -41.937313179667235,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -68.28910371954485,
+            -15.585522639789602
+          ]
+        },
+        {
+          "base_auc": 0.9516441213372957,
+          "new_auc": 0.9515873960576722,
+          "delta_auc": -5.672527962352625e-05,
+          "delta_ap": -0.0009844148057496227,
+          "logloss_gain_x1m": -42.875396682905404,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -69.61271000010504,
+            -16.138083365705764
+          ]
+        }
+      ],
+      "dev_pooled": {
+        "base_auc": 0.9505623976974853,
+        "new_auc": 0.9505035173678281,
+        "delta_auc": -5.8880329657173824e-05,
+        "delta_ap": -0.0009602452351251678,
+        "logloss_gain_x1m": -42.40635493128632,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -61.17666676307024,
+          -23.636043099502405
+        ]
+      },
+      "calibration_gate_passes": false,
+      "auc_gate_passes": false,
+      "supported_cells": [
+        {
+          "group": "[-inf,1.0) \u00d7 [-inf,20.0) \u00d7 new merchant",
+          "dev_half_rows": [
+            1817,
+            1766
+          ],
+          "dev_half_fraud": [
+            123,
+            120
+          ],
+          "dev_half_expected": [
+            131.75462803955037,
+            133.02961948518094
+          ],
+          "dev_half_nominal_z": [
+            -1.055023687430601,
+            -1.5956583028251083
+          ],
+          "same_direction": true,
+          "dev_share": 0.006022192864802358,
+          "test_share": 0.006307003040162142
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [-inf,20.0) \u00d7 new merchant",
+          "dev_half_rows": [
+            7488,
+            7453
+          ],
+          "dev_half_fraud": [
+            342,
+            324
+          ],
+          "dev_half_expected": [
+            324.0970358835833,
+            312.44252840772265
+          ],
+          "dev_half_nominal_z": [
+            1.3421631857069791,
+            0.8601325561869065
+          ],
+          "same_direction": true,
+          "dev_share": 0.025112359361711425,
+          "test_share": 0.02454130886980639
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [-inf,20.0) \u00d7 new merchant",
+          "dev_half_rows": [
+            6430,
+            6491
+          ],
+          "dev_half_fraud": [
+            209,
+            230
+          ],
+          "dev_half_expected": [
+            216.257744741197,
+            245.6066137717114
+          ],
+          "dev_half_nominal_z": [
+            -0.6416454844787434,
+            -1.3202130064292035
+          ],
+          "same_direction": true,
+          "dev_share": 0.0217172073698329,
+          "test_share": 0.021341138194037015
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [20.0,100.0) \u00d7 new merchant",
+          "dev_half_rows": [
+            3043,
+            2971
+          ],
+          "dev_half_fraud": [
+            244,
+            227
+          ],
+          "dev_half_expected": [
+            233.73324423708075,
+            222.54203324088897
+          ],
+          "dev_half_nominal_z": [
+            0.9659115202950042,
+            0.4208019034275451
+          ],
+          "same_direction": true,
+          "dev_share": 0.01010814063324627,
+          "test_share": 0.01026388074030615
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [100.0,400.0) \u00d7 known merchant",
+          "dev_half_rows": [
+            755,
+            765
+          ],
+          "dev_half_fraud": [
+            26,
+            33
+          ],
+          "dev_half_expected": [
+            27.606700114360617,
+            35.82063110459696
+          ],
+          "dev_half_nominal_z": [
+            -0.38126275377074464,
+            -0.6276044925116301
+          ],
+          "same_direction": true,
+          "dev_share": 0.0025547678354729516,
+          "test_share": 0.0025934716518214306
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [400.0,inf) \u00d7 known merchant",
+          "dev_half_rows": [
+            7635,
+            7558
+          ],
+          "dev_half_fraud": [
+            112,
+            114
+          ],
+          "dev_half_expected": [
+            108.50425391513967,
+            110.85190569619641
+          ],
+          "dev_half_nominal_z": [
+            0.4067030767808323,
+            0.354181529326701
+          ],
+          "same_direction": true,
+          "dev_share": 0.025535912976539836,
+          "test_share": 0.025828044162355325
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [400.0,inf) \u00d7 new merchant",
+          "dev_half_rows": [
+            1463,
+            1494
+          ],
+          "dev_half_fraud": [
+            95,
+            116
+          ],
+          "dev_half_expected": [
+            92.89566637274382,
+            112.58605267556581
+          ],
+          "dev_half_nominal_z": [
+            0.2898959187807782,
+            0.45005291486558513
+          ],
+          "same_direction": true,
+          "dev_share": 0.004970031900982577,
+          "test_share": 0.005086937970025068
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [20.0,100.0) \u00d7 new merchant",
+          "dev_half_rows": [
+            10171,
+            10325
+          ],
+          "dev_half_fraud": [
+            364,
+            365
+          ],
+          "dev_half_expected": [
+            373.23703814668323,
+            367.7711450146643
+          ],
+          "dev_half_nominal_z": [
+            -0.6333628705936003,
+            -0.18677905635890837
+          ],
+          "same_direction": true,
+          "dev_share": 0.034449027339377374,
+          "test_share": 0.03465184809856526
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [100.0,400.0) \u00d7 new merchant",
+          "dev_half_rows": [
+            611,
+            597
+          ],
+          "dev_half_fraud": [
+            53,
+            52
+          ],
+          "dev_half_expected": [
+            53.760103952097175,
+            55.59085359835017
+          ],
+          "dev_half_nominal_z": [
+            -0.14606002263240284,
+            -0.6969421274956505
+          ],
+          "same_direction": true,
+          "dev_share": 0.002030368121875872,
+          "test_share": 0.0019834391167528934
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [20.0,100.0) \u00d7 known merchant",
+          "dev_half_rows": [
+            67947,
+            67326
+          ],
+          "dev_half_fraud": [
+            646,
+            685
+          ],
+          "dev_half_expected": [
+            648.5043158360073,
+            711.8440151954138
+          ],
+          "dev_half_nominal_z": [
+            -0.11487325182372858,
+            -1.182703855589374
+          ],
+          "same_direction": true,
+          "dev_share": 0.227362571978903,
+          "test_share": 0.22644541042188918
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [100.0,400.0) \u00d7 new merchant",
+          "dev_half_rows": [
+            496,
+            501
+          ],
+          "dev_half_fraud": [
+            35,
+            44
+          ],
+          "dev_half_expected": [
+            35.227606476242634,
+            49.54631286686582
+          ],
+          "dev_half_nominal_z": [
+            -0.05169250357596075,
+            -1.217312601419842
+          ],
+          "same_direction": true,
+          "dev_share": 0.0016757260078727187,
+          "test_share": 0.0016834231158995147
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [-inf,20.0) \u00d7 known merchant",
+          "dev_half_rows": [
+            9791,
+            9737
+          ],
+          "dev_half_fraud": [
+            177,
+            170
+          ],
+          "dev_half_expected": [
+            175.25915518409022,
+            170.63049999766025
+          ],
+          "dev_half_nominal_z": [
+            0.1640964916232371,
+            -0.05760129865834241
+          ],
+          "same_direction": false,
+          "dev_share": 0.03282204361257618,
+          "test_share": 0.03329844258360446
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [20.0,100.0) \u00d7 known merchant",
+          "dev_half_rows": [
+            16138,
+            16051
+          ],
+          "dev_half_fraud": [
+            291,
+            296
+          ],
+          "dev_half_expected": [
+            284.4897244381443,
+            311.05345282658
+          ],
+          "dev_half_nominal_z": [
+            0.4625432108142616,
+            -1.040991976464914
+          ],
+          "same_direction": false,
+          "dev_share": 0.05410225122107818,
+          "test_share": 0.05421955837644674
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [400.0,inf) \u00d7 known merchant",
+          "dev_half_rows": [
+            2065,
+            2021
+          ],
+          "dev_half_fraud": [
+            70,
+            61
+          ],
+          "dev_half_expected": [
+            63.22418746540173,
+            63.44939240409099
+          ],
+          "dev_half_nominal_z": [
+            1.066510379297059,
+            -0.3888599629140836
+          ],
+          "same_direction": false,
+          "dev_share": 0.006867619326146368,
+          "test_share": 0.006880366952904155
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [400.0,inf) \u00d7 new merchant",
+          "dev_half_rows": [
+            364,
+            390
+          ],
+          "dev_half_fraud": [
+            45,
+            53
+          ],
+          "dev_half_expected": [
+            41.42230571206403,
+            56.319744541407495
+          ],
+          "dev_half_nominal_z": [
+            0.7923305943010714,
+            -0.678363444478486
+          ],
+          "same_direction": false,
+          "dev_share": 0.0012672993078596088,
+          "test_share": 0.0013167368926342738
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [-inf,20.0) \u00d7 known merchant",
+          "dev_half_rows": [
+            40525,
+            40913
+          ],
+          "dev_half_fraud": [
+            393,
+            421
+          ],
+          "dev_half_expected": [
+            393.17491227163487,
+            408.7587323683361
+          ],
+          "dev_half_nominal_z": [
+            -0.010379711841528218,
+            0.7133837914468397
+          ],
+          "same_direction": false,
+          "dev_share": 0.1368784098587146,
+          "test_share": 0.13793735665902182
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [20.0,100.0) \u00d7 new merchant",
+          "dev_half_rows": [
+            12023,
+            12188
+          ],
+          "dev_half_fraud": [
+            531,
+            520
+          ],
+          "dev_half_expected": [
+            503.711241100434,
+            556.4343225954707
+          ],
+          "dev_half_nominal_z": [
+            1.6136802307982807,
+            -2.0578528240279166
+          ],
+          "same_direction": false,
+          "dev_share": 0.040693081621470804,
+          "test_share": 0.04060549895994453
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [100.0,400.0) \u00d7 known merchant",
+          "dev_half_rows": [
+            3068,
+            3160
+          ],
+          "dev_half_fraud": [
+            85,
+            62
+          ],
+          "dev_half_expected": [
+            72.78236518416622,
+            77.37613436327739
+          ],
+          "dev_half_nominal_z": [
+            1.8010114916243745,
+            -2.162181758511139
+          ],
+          "same_direction": false,
+          "dev_share": 0.010467825052187857,
+          "test_share": 0.010807243052962824
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [400.0,inf) \u00d7 known merchant",
+          "dev_half_rows": [
+            8441,
+            8278
+          ],
+          "dev_half_fraud": [
+            140,
+            137
+          ],
+          "dev_half_expected": [
+            147.21758099229322,
+            128.7960231285241
+          ],
+          "dev_half_nominal_z": [
+            -0.7297342639657857,
+            0.8544983810122189
+          ],
+          "same_direction": false,
+          "dev_share": 0.028100765421889655,
+          "test_share": 0.027631473678596193
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [-inf,20.0) \u00d7 known merchant",
+          "dev_half_rows": [
+            35325,
+            35601
+          ],
+          "dev_half_fraud": [
+            286,
+            283
+          ],
+          "dev_half_expected": [
+            280.9280330769636,
+            291.7076894142992
+          ],
+          "dev_half_nominal_z": [
+            0.3529834456700757,
+            -0.5902911483792976
+          ],
+          "same_direction": false,
+          "dev_share": 0.11921017335444378,
+          "test_share": 0.1192063576724092
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [20.0,100.0) \u00d7 known merchant",
+          "dev_half_rows": [
+            57708,
+            57717
+          ],
+          "dev_half_fraud": [
+            534,
+            502
+          ],
+          "dev_half_expected": [
+            478.0097137703306,
+            508.9296152786428
+          ],
+          "dev_half_nominal_z": [
+            2.9805421654763626,
+            -0.35540299615499116
+          ],
+          "same_direction": false,
+          "dev_share": 0.19400268250622724,
+          "test_share": 0.19337698010560564
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [100.0,400.0) \u00d7 known merchant",
+          "dev_half_rows": [
+            2748,
+            2775
+          ],
+          "dev_half_fraud": [
+            60,
+            49
+          ],
+          "dev_half_expected": [
+            53.805415990856524,
+            54.078265437116315
+          ],
+          "dev_half_nominal_z": [
+            1.0122142911508567,
+            -0.8487772384376764
+          ],
+          "same_direction": false,
+          "dev_share": 0.009282883391655995,
+          "test_share": 0.008947143847671877
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [400.0,inf) \u00d7 new merchant",
+          "dev_half_rows": [
+            1277,
+            1258
+          ],
+          "dev_half_fraud": [
+            84,
+            70
+          ],
+          "dev_half_expected": [
+            79.46523438971597,
+            84.15626694709985
+          ],
+          "dev_half_nominal_z": [
+            0.7038190025558841,
+            -2.1089050007217773
+          ],
+          "same_direction": false,
+          "dev_share": 0.004260747672976271,
+          "test_share": 0.0045302416128860205
+        }
+      ]
+    },
+    "amount_count_relative_to_balance": {
+      "distribution": {
+        "dev_groups": 6,
+        "test_groups": 6,
+        "test_rows_unseen_share": 0.0,
+        "test_rows_low_support_share": 0.0,
+        "total_variation": 0.000876989959467311,
+        "max_group_share_diff": 0.0006459622746479154
+      },
+      "dev_halves": [
+        {
+          "base_auc": 0.9495904403707718,
+          "new_auc": 0.9494914281478553,
+          "delta_auc": -9.9012222916528e-05,
+          "delta_ap": -0.0009607785308238803,
+          "logloss_gain_x1m": -48.99245458900228,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -71.82131574741517,
+            -26.163593430589394
+          ]
+        },
+        {
+          "base_auc": 0.9516441213372957,
+          "new_auc": 0.9515432270797843,
+          "delta_auc": -0.0001008942575113636,
+          "delta_ap": -0.0010755135324854725,
+          "logloss_gain_x1m": -50.014452500323046,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -72.16472644983682,
+            -27.864178550809267
+          ]
+        }
+      ],
+      "dev_pooled": {
+        "base_auc": 0.9505623976974853,
+        "new_auc": 0.9504514548547175,
+        "delta_auc": -0.00011094284276780275,
+        "delta_ap": -0.0010346328932043791,
+        "logloss_gain_x1m": -49.50345354466267,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -65.40777563004747,
+          -33.59913145927786
+        ]
+      },
+      "calibration_gate_passes": false,
+      "auc_gate_passes": false,
+      "supported_cells": [
+        {
+          "group": "[-inf,0.01)",
+          "dev_half_rows": [
+            35683,
+            35400
+          ],
+          "dev_half_fraud": [
+            336,
+            356
+          ],
+          "dev_half_expected": [
+            349.25002590064474,
+            357.86956315588293
+          ],
+          "dev_half_nominal_z": [
+            -0.8691159536934269,
+            -0.11998276603619835
+          ],
+          "same_direction": true,
+          "dev_share": 0.11947405397955513,
+          "test_share": 0.11924302629473572
+        },
+        {
+          "group": "[0.01,0.05)",
+          "dev_half_rows": [
+            115477,
+            115444
+          ],
+          "dev_half_fraud": [
+            1621,
+            1609
+          ],
+          "dev_half_expected": [
+            1608.1865077067907,
+            1644.1354097744272
+          ],
+          "dev_half_nominal_z": [
+            0.3971767451998169,
+            -1.0680164951583315
+          ],
+          "same_direction": false,
+          "dev_share": 0.3881246995626641,
+          "test_share": 0.38853738866072857
+        },
+        {
+          "group": "[0.05,0.2)",
+          "dev_half_rows": [
+            103987,
+            104353
+          ],
+          "dev_half_fraud": [
+            1808,
+            1846
+          ],
+          "dev_half_expected": [
+            1747.112439425144,
+            1860.5797778971253
+          ],
+          "dev_half_nominal_z": [
+            1.8056213933013303,
+            -0.4176422546047362
+          ],
+          "same_direction": false,
+          "dev_share": 0.3501712702910755,
+          "test_share": 0.34952530801642756
+        },
+        {
+          "group": "[0.2,0.5)",
+          "dev_half_rows": [
+            22511,
+            22475
+          ],
+          "dev_half_fraud": [
+            607,
+            555
+          ],
+          "dev_half_expected": [
+            556.2974026389777,
+            617.7391151568946
+          ],
+          "dev_half_nominal_z": [
+            2.7202246395942993,
+            -3.280055977521659
+          ],
+          "same_direction": false,
+          "dev_share": 0.0756110433201225,
+          "test_share": 0.0758340444823724
+        },
+        {
+          "group": "[0.5,1.0)",
+          "dev_half_rows": [
+            7065,
+            7078
+          ],
+          "dev_half_fraud": [
+            201,
+            215
+          ],
+          "dev_half_expected": [
+            200.27516244658406,
+            217.54768559011228
+          ],
+          "dev_half_nominal_z": [
+            0.06681304633903234,
+            -0.22877011149296445
+          ],
+          "same_direction": false,
+          "dev_share": 0.023771106248088127,
+          "test_share": 0.023974611979305564
+        },
+        {
+          "group": "[1.0,inf)",
+          "dev_half_rows": [
+            12760,
+            12733
+          ],
+          "dev_half_fraud": [
+            395,
+            387
+          ],
+          "dev_half_expected": [
+            383.7144964412513,
+            400.763973807172
+          ],
+          "dev_half_nominal_z": [
+            0.751167449100422,
+            -0.8954849201516301
+          ],
+          "same_direction": false,
+          "dev_share": 0.042847826598494704,
+          "test_share": 0.04288562056643021
+        }
+      ]
+    },
+    "remaining_balance_card_type": {
+      "distribution": {
+        "dev_groups": 25,
+        "test_groups": 25,
+        "test_rows_unseen_share": 0.0,
+        "test_rows_low_support_share": 0.0003600192010240546,
+        "total_variation": 0.002579827757982978,
+        "max_group_share_diff": 0.0016624488884465494
+      },
+      "dev_halves": [
+        {
+          "base_auc": 0.9495904403707718,
+          "new_auc": 0.9495961931346516,
+          "delta_auc": 5.752763879818268e-06,
+          "delta_ap": -1.7488392023645716e-05,
+          "logloss_gain_x1m": 0.7919544860550679,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -17.222609447853447,
+            18.80651841996358
+          ]
+        },
+        {
+          "base_auc": 0.9516441213372957,
+          "new_auc": 0.9516540668751369,
+          "delta_auc": 9.945537841171692e-06,
+          "delta_ap": -4.4341159043947975e-05,
+          "logloss_gain_x1m": 2.3736381877705504,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -16.087728316209528,
+            20.835004691750626
+          ]
+        }
+      ],
+      "dev_pooled": {
+        "base_auc": 0.9505623976974853,
+        "new_auc": 0.9505650956818129,
+        "delta_auc": 2.697984327615366e-06,
+        "delta_ap": -2.406892315354181e-05,
+        "logloss_gain_x1m": 1.5827963369128115,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -11.314349323863272,
+          14.479941997688895
+        ]
+      },
+      "calibration_gate_passes": true,
+      "auc_gate_passes": false,
+      "supported_cells": [
+        {
+          "group": "[0.0,100.0) \u00d7 Visa",
+          "dev_half_rows": [
+            672,
+            666
+          ],
+          "dev_half_fraud": [
+            26,
+            21
+          ],
+          "dev_half_expected": [
+            17.815345803622293,
+            16.896434710165565
+          ],
+          "dev_half_nominal_z": [
+            2.455668919438272,
+            1.3141295539877555
+          ],
+          "same_direction": true,
+          "dev_share": 0.0022488680025413215,
+          "test_share": 0.0022534535175209344
+        },
+        {
+          "group": "[100.0,500.0) \u00d7 Amex",
+          "dev_half_rows": [
+            1271,
+            1183
+          ],
+          "dev_half_fraud": [
+            28,
+            31
+          ],
+          "dev_half_expected": [
+            23.523305988595013,
+            27.768530205577434
+          ],
+          "dev_half_nominal_z": [
+            1.1872221558068676,
+            0.8031918667016885
+          ],
+          "same_direction": true,
+          "dev_share": 0.004124605439638568,
+          "test_share": 0.004000213344711718
+        },
+        {
+          "group": "[-inf,0.0) \u00d7 Visa",
+          "dev_half_rows": [
+            1578,
+            1627
+          ],
+          "dev_half_fraud": [
+            34,
+            41
+          ],
+          "dev_half_expected": [
+            36.97045046718157,
+            44.281716646932736
+          ],
+          "dev_half_nominal_z": [
+            -0.6221731786421688,
+            -0.6397440894400689
+          ],
+          "same_direction": true,
+          "dev_share": 0.005386862442559743,
+          "test_share": 0.005193610325884047
+        },
+        {
+          "group": "[2000.0,inf) \u00d7 Amex",
+          "dev_half_rows": [
+            6093,
+            6379
+          ],
+          "dev_half_fraud": [
+            134,
+            125
+          ],
+          "dev_half_expected": [
+            118.8398185316975,
+            120.03905524019598
+          ],
+          "dev_half_nominal_z": [
+            1.7669806093643095,
+            0.5606953731587732
+          ],
+          "same_direction": true,
+          "dev_share": 0.02096254239738069,
+          "test_share": 0.0211544615712838
+        },
+        {
+          "group": "[100.0,500.0) \u00d7 RuPay",
+          "dev_half_rows": [
+            1000,
+            995
+          ],
+          "dev_half_fraud": [
+            14,
+            15
+          ],
+          "dev_half_expected": [
+            14.94368546758455,
+            20.181355591711633
+          ],
+          "dev_half_nominal_z": [
+            -0.3089017976221385,
+            -1.4134633966349708
+          ],
+          "same_direction": true,
+          "dev_share": 0.003353132784058249,
+          "test_share": 0.003293508987145981
+        },
+        {
+          "group": "[100.0,500.0) \u00d7 Mastercard",
+          "dev_half_rows": [
+            6477,
+            6666
+          ],
+          "dev_half_fraud": [
+            109,
+            131
+          ],
+          "dev_half_expected": [
+            110.48534286877783,
+            137.88238345563153
+          ],
+          "dev_half_nominal_z": [
+            -0.17274037587275937,
+            -0.7479567429161753
+          ],
+          "same_direction": true,
+          "dev_share": 0.022090337935276975,
+          "test_share": 0.021904501573417248
+        },
+        {
+          "group": "[500.0,2000.0) \u00d7 Amex",
+          "dev_half_rows": [
+            11747,
+            11611
+          ],
+          "dev_half_fraud": [
+            206,
+            197
+          ],
+          "dev_half_expected": [
+            207.29941100774707,
+            209.80961479447285
+          ],
+          "dev_half_nominal_z": [
+            -0.1135326050745179,
+            -1.1051921856385853
+          ],
+          "same_direction": true,
+          "dev_share": 0.039259386250642896,
+          "test_share": 0.038882073710597896
+        },
+        {
+          "group": "[-inf,0.0) \u00d7 Mastercard",
+          "dev_half_rows": [
+            1069,
+            1112
+          ],
+          "dev_half_fraud": [
+            33,
+            29
+          ],
+          "dev_half_expected": [
+            33.26755520050681,
+            29.344694286003936
+          ],
+          "dev_half_nominal_z": [
+            -0.06371846778578542,
+            -0.07931018569913209
+          ],
+          "same_direction": true,
+          "dev_share": 0.003665755690241123,
+          "test_share": 0.003946877166782228
+        },
+        {
+          "group": "[500.0,2000.0) \u00d7 Discover",
+          "dev_half_rows": [
+            4343,
+            4369
+          ],
+          "dev_half_fraud": [
+            59,
+            58
+          ],
+          "dev_half_expected": [
+            62.47791553919882,
+            58.109561059254034
+          ],
+          "dev_half_nominal_z": [
+            -0.5236854178636855,
+            -0.01777964974330509
+          ],
+          "same_direction": true,
+          "dev_share": 0.014642853541210758,
+          "test_share": 0.014950797375860046
+        },
+        {
+          "group": "[0.0,100.0) \u00d7 Mastercard",
+          "dev_half_rows": [
+            455,
+            489
+          ],
+          "dev_half_fraud": [
+            11,
+            11
+          ],
+          "dev_half_expected": [
+            11.880318952127803,
+            10.84145891622129
+          ],
+          "dev_half_nominal_z": [
+            -0.33552148558969563,
+            0.05834702780399743
+          ],
+          "same_direction": false,
+          "dev_share": 0.0015866452872937277,
+          "test_share": 0.0016334204490906182
+        },
+        {
+          "group": "[100.0,500.0) \u00d7 Discover",
+          "dev_half_rows": [
+            454,
+            419
+          ],
+          "dev_half_fraud": [
+            10,
+            6
+          ],
+          "dev_half_expected": [
+            9.193007222538192,
+            8.216368203927972
+          ],
+          "dev_half_nominal_z": [
+            0.35214438249440494,
+            -0.9529437180804589
+          ],
+          "same_direction": false,
+          "dev_share": 0.0014673107370841358,
+          "test_share": 0.0014700784041815564
+        },
+        {
+          "group": "[100.0,500.0) \u00d7 Visa",
+          "dev_half_rows": [
+            9039,
+            9042
+          ],
+          "dev_half_fraud": [
+            182,
+            194
+          ],
+          "dev_half_expected": [
+            162.44961244128228,
+            200.0393129888081
+          ],
+          "dev_half_nominal_z": [
+            1.8863236591547128,
+            -0.547458376289386
+          ],
+          "same_direction": false,
+          "dev_share": 0.030389971863938443,
+          "test_share": 0.030441623553256175
+        },
+        {
+          "group": "[500.0,2000.0) \u00d7 Mastercard",
+          "dev_half_rows": [
+            64721,
+            64618
+          ],
+          "dev_half_fraud": [
+            1022,
+            1015
+          ],
+          "dev_half_expected": [
+            985.9778152861523,
+            1043.862979295077
+          ],
+          "dev_half_nominal_z": [
+            1.4207678932370338,
+            -1.1069616372925974
+          ],
+          "same_direction": false,
+          "dev_share": 0.2173888928106816,
+          "test_share": 0.2168282308389781
+        },
+        {
+          "group": "[500.0,2000.0) \u00d7 RuPay",
+          "dev_half_rows": [
+            9318,
+            9440
+          ],
+          "dev_half_fraud": [
+            150,
+            146
+          ],
+          "dev_half_expected": [
+            142.5640778707452,
+            154.52732423129666
+          ],
+          "dev_half_nominal_z": [
+            0.7778224994251356,
+            -0.8681692132322636
+          ],
+          "same_direction": false,
+          "dev_share": 0.03152785201171159,
+          "test_share": 0.03131833697797216
+        },
+        {
+          "group": "[500.0,2000.0) \u00d7 Visa",
+          "dev_half_rows": [
+            87627,
+            87687
+          ],
+          "dev_half_fraud": [
+            1422,
+            1443
+          ],
+          "dev_half_expected": [
+            1388.8074893068704,
+            1465.7395713432263
+          ],
+          "dev_half_nominal_z": [
+            1.1147141343640863,
+            -0.7427990302554949
+          ],
+          "same_direction": false,
+          "dev_share": 0.29466221599217435,
+          "test_share": 0.29435236545949117
+        },
+        {
+          "group": "[2000.0,inf) \u00d7 Discover",
+          "dev_half_rows": [
+            2444,
+            2409
+          ],
+          "dev_half_fraud": [
+            36,
+            38
+          ],
+          "dev_half_expected": [
+            40.36473891521142,
+            35.44257670598125
+          ],
+          "dev_half_nominal_z": [
+            -0.8431339387890543,
+            0.5205214592907621
+          ],
+          "same_direction": false,
+          "dev_share": 0.008156768622072522,
+          "test_share": 0.008077097445197077
+        },
+        {
+          "group": "[2000.0,inf) \u00d7 Mastercard",
+          "dev_half_rows": [
+            35633,
+            35492
+          ],
+          "dev_half_fraud": [
+            580,
+            566
+          ],
+          "dev_half_expected": [
+            569.8373083064109,
+            585.3036619726312
+          ],
+          "dev_half_nominal_z": [
+            0.5315520198340482,
+            -0.9981662806670848
+          ],
+          "same_direction": false,
+          "dev_share": 0.11954464624869321,
+          "test_share": 0.11932303056162995
+        },
+        {
+          "group": "[2000.0,inf) \u00d7 RuPay",
+          "dev_half_rows": [
+            5157,
+            5196
+          ],
+          "dev_half_fraud": [
+            82,
+            95
+          ],
+          "dev_half_expected": [
+            83.38070610755348,
+            90.08799324863172
+          ],
+          "dev_half_nominal_z": [
+            -0.18851143423970973,
+            0.6529777827127072
+          ],
+          "same_direction": false,
+          "dev_share": 0.01740099434253386,
+          "test_share": 0.017174249293295644
+        },
+        {
+          "group": "[2000.0,inf) \u00d7 Visa",
+          "dev_half_rows": [
+            47739,
+            47368
+          ],
+          "dev_half_fraud": [
+            818,
+            786
+          ],
+          "dev_half_expected": [
+            811.1054962995414,
+            821.7941662874174
+          ],
+          "dev_half_nominal_z": [
+            0.3063124063205814,
+            -1.5475525540831443
+          ],
+          "same_direction": false,
+          "dev_share": 0.15985283192653024,
+          "test_share": 0.1615152808149768
+        }
+      ]
+    },
+    "spend_share_auth_address": {
+      "distribution": {
+        "dev_groups": 50,
+        "test_groups": 50,
+        "test_rows_unseen_share": 0.0,
+        "test_rows_low_support_share": 0.001260067203584191,
+        "total_variation": 0.004776996121931855,
+        "max_group_share_diff": 0.001362585341410004
+      },
+      "dev_halves": [
+        {
+          "base_auc": 0.9495904403707718,
+          "new_auc": 0.9494889302372232,
+          "delta_auc": -0.00010151013354853244,
+          "delta_ap": -0.0006633813510186215,
+          "logloss_gain_x1m": -42.092404727589276,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -67.9821502683539,
+            -16.202659186824658
+          ]
+        },
+        {
+          "base_auc": 0.9516441213372957,
+          "new_auc": 0.9514993175267749,
+          "delta_auc": -0.0001448038105208438,
+          "delta_ap": -0.0006127164075345748,
+          "logloss_gain_x1m": -40.32046489180641,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -65.99114175175721,
+            -14.649788031855602
+          ]
+        }
+      ],
+      "dev_pooled": {
+        "base_auc": 0.9505623976974853,
+        "new_auc": 0.9504347264229097,
+        "delta_auc": -0.00012767127457558036,
+        "delta_ap": -0.0006430922075417733,
+        "logloss_gain_x1m": -41.20643480969784,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -59.4359463274293,
+          -22.976923291966386
+        ]
+      },
+      "calibration_gate_passes": false,
+      "auc_gate_passes": false,
+      "supported_cells": [
+        {
+          "group": "[0.01,0.05) \u00d7 3D Secure \u00d7 address mismatch",
+          "dev_half_rows": [
+            631,
+            588
+          ],
+          "dev_half_fraud": [
+            72,
+            86
+          ],
+          "dev_half_expected": [
+            64.79240054602487,
+            75.85586167743493
+          ],
+          "dev_half_nominal_z": [
+            1.219483691347641,
+            1.717970158835581
+          ],
+          "same_direction": true,
+          "dev_share": 0.0020488565733167946,
+          "test_share": 0.0021967838284708517
+        },
+        {
+          "group": "[0.01,0.05) \u00d7 PIN \u00d7 address mismatch",
+          "dev_half_rows": [
+            427,
+            413
+          ],
+          "dev_half_fraud": [
+            33,
+            36
+          ],
+          "dev_half_expected": [
+            28.831389178845836,
+            30.240808438360173
+          ],
+          "dev_half_nominal_z": [
+            1.0298355014452267,
+            1.4578115155456906
+          ],
+          "same_direction": true,
+          "dev_share": 0.0014118453827613679,
+          "test_share": 0.001456744359699184
+        },
+        {
+          "group": "[-inf,0.01) \u00d7 3D Secure \u00d7 address match",
+          "dev_half_rows": [
+            25492,
+            25316
+          ],
+          "dev_half_fraud": [
+            305,
+            303
+          ],
+          "dev_half_expected": [
+            315.3180030549976,
+            308.8951130044995
+          ],
+          "dev_half_nominal_z": [
+            -0.6890240755320042,
+            -0.39041454353603083
+          ],
+          "same_direction": true,
+          "dev_share": 0.08539647643730902,
+          "test_share": 0.08644127686809963
+        },
+        {
+          "group": "[0.2,1.0) \u00d7 PIN \u00d7 address match",
+          "dev_half_rows": [
+            3653,
+            3666
+          ],
+          "dev_half_fraud": [
+            31,
+            46
+          ],
+          "dev_half_expected": [
+            43.11296835353141,
+            48.13096879557613
+          ],
+          "dev_half_nominal_z": [
+            -2.1017609666255805,
+            -0.3539546246502016
+          ],
+          "same_direction": true,
+          "dev_share": 0.012301543281464824,
+          "test_share": 0.012230652301456077
+        },
+        {
+          "group": "[0.2,1.0) \u00d7 Biometric \u00d7 address match",
+          "dev_half_rows": [
+            1892,
+            1841
+          ],
+          "dev_half_fraud": [
+            13,
+            16
+          ],
+          "dev_half_expected": [
+            11.986677422332907,
+            13.99093876796599
+          ],
+          "dev_half_nominal_z": [
+            0.3167765467173362,
+            0.5965444187134045
+          ],
+          "same_direction": true,
+          "dev_share": 0.006274308111724031,
+          "test_share": 0.006146994506373673
+        },
+        {
+          "group": "[0.2,1.0) \u00d7 No Authentication \u00d7 address match",
+          "dev_half_rows": [
+            1376,
+            1353
+          ],
+          "dev_half_fraud": [
+            113,
+            128
+          ],
+          "dev_half_expected": [
+            110.96557981767842,
+            124.85288722692343
+          ],
+          "dev_half_nominal_z": [
+            0.2641777741286965,
+            0.3985392933353996
+          ],
+          "same_direction": true,
+          "dev_share": 0.004586816725661635,
+          "test_share": 0.004590244813056696
+        },
+        {
+          "group": "[0.01,0.05) \u00d7 PIN \u00d7 address match",
+          "dev_half_rows": [
+            33849,
+            33647
+          ],
+          "dev_half_fraud": [
+            243,
+            244
+          ],
+          "dev_half_expected": [
+            240.7410620274114,
+            233.95952267974207
+          ],
+          "dev_half_nominal_z": [
+            0.16604651619032806,
+            0.7404647665228028
+          ],
+          "same_direction": true,
+          "dev_share": 0.11344513804150153,
+          "test_share": 0.11324603978878874
+        },
+        {
+          "group": "[0.05,0.2) \u00d7 3D Secure \u00d7 address match",
+          "dev_half_rows": [
+            11075,
+            10900
+          ],
+          "dev_half_fraud": [
+            167,
+            178
+          ],
+          "dev_half_expected": [
+            168.34452823505936,
+            191.88553864758566
+          ],
+          "dev_half_nominal_z": [
+            -0.12239931519336522,
+            -1.2072579245698483
+          ],
+          "same_direction": true,
+          "dev_share": 0.036934883674025074,
+          "test_share": 0.03708197770547762
+        },
+        {
+          "group": "[0.01,0.05) \u00d7 Biometric \u00d7 address mismatch",
+          "dev_half_rows": [
+            245,
+            234
+          ],
+          "dev_half_fraud": [
+            10,
+            14
+          ],
+          "dev_half_expected": [
+            11.527743256652409,
+            14.156171958095335
+          ],
+          "dev_half_nominal_z": [
+            -0.5962208248759995,
+            -0.061505736009850084
+          ],
+          "same_direction": true,
+          "dev_share": 0.0008050880218365419,
+          "test_share": 0.0008100432023041229
+        },
+        {
+          "group": "[0.01,0.05) \u00d7 OTP \u00d7 address match",
+          "dev_half_rows": [
+            38328,
+            38021
+          ],
+          "dev_half_fraud": [
+            464,
+            429
+          ],
+          "dev_half_expected": [
+            435.44707931813,
+            428.68887088038963
+          ],
+          "dev_half_nominal_z": [
+            1.6200882102622312,
+            0.017283590107490848
+          ],
+          "same_direction": true,
+          "dev_share": 0.12832497991481867,
+          "test_share": 0.12878353512187315
+        },
+        {
+          "group": "[-inf,0.01) \u00d7 3D Secure \u00d7 address mismatch",
+          "dev_half_rows": [
+            349,
+            371
+          ],
+          "dev_half_fraud": [
+            41,
+            45
+          ],
+          "dev_half_expected": [
+            44.25672846401842,
+            41.895993080602025
+          ],
+          "dev_half_nominal_z": [
+            -0.7656458816363282,
+            0.7047624855386748
+          ],
+          "same_direction": false,
+          "dev_share": 0.0012101531852240295,
+          "test_share": 0.0011767294255693637
+        },
+        {
+          "group": "[-inf,0.01) \u00d7 Biometric \u00d7 address match",
+          "dev_half_rows": [
+            11360,
+            11597
+          ],
+          "dev_half_fraud": [
+            45,
+            62
+          ],
+          "dev_half_expected": [
+            45.4996485332609,
+            50.59108927587904
+          ],
+          "dev_half_nominal_z": [
+            -0.08026315365196539,
+            1.7566295576112445
+          ],
+          "same_direction": false,
+          "dev_share": 0.03858539815720562,
+          "test_share": 0.03874539975465358
+        },
+        {
+          "group": "[-inf,0.01) \u00d7 No Authentication \u00d7 address match",
+          "dev_half_rows": [
+            8204,
+            8238
+          ],
+          "dev_half_fraud": [
+            451,
+            487
+          ],
+          "dev_half_expected": [
+            460.60045761542784,
+            479.52355068337107
+          ],
+          "dev_half_nominal_z": [
+            -0.6085394296281184,
+            0.46127267787030624
+          ],
+          "same_direction": false,
+          "dev_share": 0.027635192599240965,
+          "test_share": 0.02655141607552403
+        },
+        {
+          "group": "[-inf,0.01) \u00d7 OTP \u00d7 address match",
+          "dev_half_rows": [
+            21290,
+            21446
+          ],
+          "dev_half_fraud": [
+            254,
+            230
+          ],
+          "dev_half_expected": [
+            242.08347975530685,
+            250.29653354091067
+          ],
+          "dev_half_nominal_z": [
+            0.8917625551500706,
+            -1.4923705714696605
+          ],
+          "same_direction": false,
+          "dev_share": 0.07182931461629741,
+          "test_share": 0.07246719825057336
+        },
+        {
+          "group": "[-inf,0.01) \u00d7 OTP \u00d7 address mismatch",
+          "dev_half_rows": [
+            278,
+            284
+          ],
+          "dev_half_fraud": [
+            28,
+            39
+          ],
+          "dev_half_expected": [
+            29.939595463273633,
+            31.714596806539113
+          ],
+          "dev_half_nominal_z": [
+            -0.5097634026972058,
+            1.704865355069751
+          ],
+          "same_direction": false,
+          "dev_share": 0.0009445917917998676,
+          "test_share": 0.0009000480025601365
+        },
+        {
+          "group": "[-inf,0.01) \u00d7 PIN \u00d7 address match",
+          "dev_half_rows": [
+            18362,
+            18351
+          ],
+          "dev_half_fraud": [
+            127,
+            134
+          ],
+          "dev_half_expected": [
+            124.05417863190242,
+            137.2270496293337
+          ],
+          "dev_half_nominal_z": [
+            0.29829290050910096,
+            -0.31254236120410545
+          ],
+          "same_direction": false,
+          "dev_share": 0.061706047068235834,
+          "test_share": 0.061923302576137394
+        },
+        {
+          "group": "[-inf,0.01) \u00d7 PIN \u00d7 address mismatch",
+          "dev_half_rows": [
+            249,
+            253
+          ],
+          "dev_half_fraud": [
+            15,
+            20
+          ],
+          "dev_half_expected": [
+            18.4674535993496,
+            19.773173451193205
+          ],
+          "dev_half_nominal_z": [
+            -1.05217389638135,
+            0.06928436961540993
+          ],
+          "same_direction": false,
+          "dev_share": 0.0008437456930311984,
+          "test_share": 0.0008300442690276815
+        },
+        {
+          "group": "[0.01,0.05) \u00d7 3D Secure \u00d7 address match",
+          "dev_half_rows": [
+            45505,
+            45917
+          ],
+          "dev_half_fraud": [
+            549,
+            540
+          ],
+          "dev_half_expected": [
+            536.1243352925724,
+            569.0632558298906
+          ],
+          "dev_half_nominal_z": [
+            0.6508025944985353,
+            -1.4214215362694584
+          ],
+          "same_direction": false,
+          "dev_share": 0.15365920069382116,
+          "test_share": 0.1525248013227372
+        },
+        {
+          "group": "[0.01,0.05) \u00d7 Biometric \u00d7 address match",
+          "dev_half_rows": [
+            20925,
+            20694
+          ],
+          "dev_half_fraud": [
+            84,
+            86
+          ],
+          "dev_half_expected": [
+            79.38029280495526,
+            94.34795500345656
+          ],
+          "dev_half_nominal_z": [
+            0.564357966141097,
+            -0.9722626212465528
+          ],
+          "same_direction": false,
+          "dev_share": 0.06995189641088735,
+          "test_share": 0.06972371859832524
+        },
+        {
+          "group": "[0.01,0.05) \u00d7 No Authentication \u00d7 address match",
+          "dev_half_rows": [
+            14492,
+            14829
+          ],
+          "dev_half_fraud": [
+            791,
+            806
+          ],
+          "dev_half_expected": [
+            772.5929333104585,
+            830.5784827005085
+          ],
+          "dev_half_nominal_z": [
+            0.8757883794284803,
+            -1.1247400087806745
+          ],
+          "same_direction": false,
+          "dev_share": 0.049281807699935794,
+          "test_share": 0.04791922235852579
+        },
+        {
+          "group": "[0.01,0.05) \u00d7 No Authentication \u00d7 address mismatch",
+          "dev_half_rows": [
+            182,
+            178
+          ],
+          "dev_half_fraud": [
+            68,
+            60
+          ],
+          "dev_half_expected": [
+            66.03498990882996,
+            66.83655577860672
+          ],
+          "dev_half_nominal_z": [
+            0.457490495219509,
+            -1.5802967371823693
+          ],
+          "same_direction": false,
+          "dev_share": 0.0006050765926120148,
+          "test_share": 0.0006833697797215851
+        },
+        {
+          "group": "[0.01,0.05) \u00d7 OTP \u00d7 address mismatch",
+          "dev_half_rows": [
+            504,
+            442
+          ],
+          "dev_half_fraud": [
+            57,
+            46
+          ],
+          "dev_half_expected": [
+            51.30773909743209,
+            54.58318963652625
+          ],
+          "dev_half_nominal_z": [
+            1.1244759038423333,
+            -1.6817364022529093
+          ],
+          "same_direction": false,
+          "dev_share": 0.00159000682391935,
+          "test_share": 0.0016834231158995147
+        },
+        {
+          "group": "[0.05,0.2) \u00d7 Biometric \u00d7 address match",
+          "dev_half_rows": [
+            4830,
+            4920
+          ],
+          "dev_half_fraud": [
+            31,
+            20
+          ],
+          "dev_half_expected": [
+            24.1359867914579,
+            28.722477696354698
+          ],
+          "dev_half_nominal_z": [
+            1.5054812241252544,
+            -1.8549500099633816
+          ],
+          "same_direction": false,
+          "dev_share": 0.016387491049908734,
+          "test_share": 0.016740892847618538
+        },
+        {
+          "group": "[0.05,0.2) \u00d7 No Authentication \u00d7 address match",
+          "dev_half_rows": [
+            3588,
+            3679
+          ],
+          "dev_half_fraud": [
+            282,
+            280
+          ],
+          "dev_half_expected": [
+            268.09248661329053,
+            287.60872072820155
+          ],
+          "dev_half_nominal_z": [
+            1.1764504236306454,
+            -0.634768915522252
+          ],
+          "same_direction": false,
+          "dev_share": 0.012214143329198643,
+          "test_share": 0.012153981545682436
+        },
+        {
+          "group": "[0.05,0.2) \u00d7 OTP \u00d7 address match",
+          "dev_half_rows": [
+            9255,
+            9269
+          ],
+          "dev_half_fraud": [
+            165,
+            127
+          ],
+          "dev_half_expected": [
+            145.38692754956708,
+            144.2768479906407
+          ],
+          "dev_half_nominal_z": [
+            1.9861319874935848,
+            -1.6834836608713062
+          ],
+          "same_direction": false,
+          "dev_share": 0.031134552226513783,
+          "test_share": 0.031485012534001815
+        },
+        {
+          "group": "[0.05,0.2) \u00d7 PIN \u00d7 address match",
+          "dev_half_rows": [
+            8113,
+            8121
+          ],
+          "dev_half_fraud": [
+            73,
+            89
+          ],
+          "dev_half_expected": [
+            80.50614195744663,
+            87.60624935946639
+          ],
+          "dev_half_nominal_z": [
+            -0.9804033855000732,
+            0.1718926476259969
+          ],
+          "same_direction": false,
+          "dev_share": 0.027285592790176245,
+          "test_share": 0.02776814763454051
+        },
+        {
+          "group": "[0.2,1.0) \u00d7 3D Secure \u00d7 address match",
+          "dev_half_rows": [
+            4973,
+            4854
+          ],
+          "dev_half_fraud": [
+            130,
+            103
+          ],
+          "dev_half_expected": [
+            107.8965885826347,
+            108.50456107020614
+          ],
+          "dev_half_nominal_z": [
+            2.616080724809116,
+            -0.647961770008576
+          ],
+          "same_direction": false,
+          "dev_share": 0.016516910209995194,
+          "test_share": 0.016550882713744733
+        },
+        {
+          "group": "[0.2,1.0) \u00d7 OTP \u00d7 address match",
+          "dev_half_rows": [
+            3945,
+            3822
+          ],
+          "dev_half_fraud": [
+            82,
+            81
+          ],
+          "dev_half_expected": [
+            75.913852040562,
+            89.02509701925356
+          ],
+          "dev_half_nominal_z": [
+            0.8413458236598464,
+            -1.0782912603377728
+          ],
+          "same_direction": false,
+          "dev_share": 0.01305452748560422,
+          "test_share": 0.013194037015307483
+        },
+        {
+          "group": "[1.0,inf) \u00d7 3D Secure \u00d7 address match",
+          "dev_half_rows": [
+            915,
+            1015
+          ],
+          "dev_half_fraud": [
+            18,
+            18
+          ],
+          "dev_half_expected": [
+            17.928313182506763,
+            21.077856007431507
+          ],
+          "dev_half_nominal_z": [
+            0.02016762283695413,
+            -0.7703451741946754
+          ],
+          "same_direction": false,
+          "dev_share": 0.003243882843725524,
+          "test_share": 0.003393514320763774
+        },
+        {
+          "group": "[1.0,inf) \u00d7 No Authentication \u00d7 address match",
+          "dev_half_rows": [
+            290,
+            327
+          ],
+          "dev_half_fraud": [
+            22,
+            36
+          ],
+          "dev_half_expected": [
+            26.922339250930847,
+            34.55570508271115
+          ],
+          "dev_half_nominal_z": [
+            -1.3306367007998818,
+            0.3639455143343549
+          ],
+          "same_direction": false,
+          "dev_share": 0.0010370340490044809,
+          "test_share": 0.0009367166248866606
+        },
+        {
+          "group": "[1.0,inf) \u00d7 OTP \u00d7 address match",
+          "dev_half_rows": [
+            804,
+            775
+          ],
+          "dev_half_fraud": [
+            17,
+            13
+          ],
+          "dev_half_expected": [
+            16.224813089789663,
+            15.147371996570783
+          ],
+          "dev_half_nominal_z": [
+            0.22912912991636403,
+            -0.6250063367617512
+          ],
+          "same_direction": false,
+          "dev_share": 0.0026539331659288096,
+          "test_share": 0.0025634700517360924
+        },
+        {
+          "group": "[1.0,inf) \u00d7 PIN \u00d7 address match",
+          "dev_half_rows": [
+            739,
+            751
+          ],
+          "dev_half_fraud": [
+            7,
+            12
+          ],
+          "dev_half_expected": [
+            7.187337336589145,
+            10.636917909261655
+          ],
+          "dev_half_nominal_z": [
+            -0.08048792644697104,
+            0.4808831609980408
+          ],
+          "same_direction": false,
+          "dev_share": 0.002504344786088617,
+          "test_share": 0.0025668035628566856
+        }
+      ]
+    },
+    "short_gap_distance_channel": {
+      "distribution": {
+        "dev_groups": 45,
+        "test_groups": 45,
+        "test_rows_unseen_share": 0.0,
+        "test_rows_low_support_share": 0.0,
+        "total_variation": 0.005098274763052467,
+        "max_group_share_diff": 0.0010330887952327283
+      },
+      "dev_halves": [
+        {
+          "base_auc": 0.9495904403707718,
+          "new_auc": 0.9495182486891197,
+          "delta_auc": -7.219168165206735e-05,
+          "delta_ap": -0.0008183772784911003,
+          "logloss_gain_x1m": -37.12039272754376,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -61.23167289898055,
+            -13.009112556106968
+          ]
+        },
+        {
+          "base_auc": 0.9516441213372957,
+          "new_auc": 0.9515149201784744,
+          "delta_auc": -0.00012920115882131267,
+          "delta_ap": -0.0007418056918506721,
+          "logloss_gain_x1m": -44.29931854158941,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -72.0665903056991,
+            -16.532046777479714
+          ]
+        }
+      ],
+      "dev_pooled": {
+        "base_auc": 0.9505623976974853,
+        "new_auc": 0.9504602845903303,
+        "delta_auc": -0.00010211310715502186,
+        "delta_ap": -0.0007683698778644388,
+        "logloss_gain_x1m": -40.70985563456657,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -59.097169688424216,
+          -22.322541580708936
+        ]
+      },
+      "calibration_gate_passes": false,
+      "auc_gate_passes": false,
+      "supported_cells": [
+        {
+          "group": "[1.0,6.0) \u00d7 [-inf,5.0) \u00d7 POS",
+          "dev_half_rows": [
+            11796,
+            11708
+          ],
+          "dev_half_fraud": [
+            191,
+            199
+          ],
+          "dev_half_expected": [
+            163.26096211657796,
+            187.82692072205714
+          ],
+          "dev_half_nominal_z": [
+            2.613386354821476,
+            1.001880407412873
+          ],
+          "same_direction": true,
+          "dev_share": 0.039504778424313325,
+          "test_share": 0.03911875300016001
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [20.0,inf) \u00d7 ATM",
+          "dev_half_rows": [
+            359,
+            351
+          ],
+          "dev_half_fraud": [
+            5,
+            7
+          ],
+          "dev_half_expected": [
+            7.194894905709528,
+            9.2675675982162
+          ],
+          "dev_half_nominal_z": [
+            -0.9208233763963406,
+            -0.9385722060408214
+          ],
+          "same_direction": true,
+          "dev_share": 0.0011933455020959182,
+          "test_share": 0.0013934076484079152
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [20.0,inf) \u00d7 ATM",
+          "dev_half_rows": [
+            1318,
+            1284
+          ],
+          "dev_half_fraud": [
+            25,
+            19
+          ],
+          "dev_half_expected": [
+            17.8597372054007,
+            16.649671335574176
+          ],
+          "dev_half_nominal_z": [
+            1.9746462074414588,
+            0.6629239264296001
+          ],
+          "same_direction": true,
+          "dev_share": 0.004373359149934618,
+          "test_share": 0.004196890500826711
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [5.0,20.0) \u00d7 In-App",
+          "dev_half_rows": [
+            7768,
+            7900
+          ],
+          "dev_half_fraud": [
+            113,
+            136
+          ],
+          "dev_half_expected": [
+            118.69028119058444,
+            143.69660220810036
+          ],
+          "dev_half_nominal_z": [
+            -0.630114819140899,
+            -0.8085279428199945
+          ],
+          "same_direction": true,
+          "dev_share": 0.026334277925125132,
+          "test_share": 0.026471411808629795
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [-inf,5.0) \u00d7 Contactless",
+          "dev_half_rows": [
+            5282,
+            5257
+          ],
+          "dev_half_fraud": [
+            59,
+            65
+          ],
+          "dev_half_expected": [
+            64.28848419953864,
+            68.96854675894886
+          ],
+          "dev_half_nominal_z": [
+            -0.7783305873557539,
+            -0.5578851613157687
+          ],
+          "same_direction": true,
+          "dev_share": 0.017713617248716732,
+          "test_share": 0.018004293562323324
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [20.0,inf) \u00d7 Contactless",
+          "dev_half_rows": [
+            5304,
+            5265
+          ],
+          "dev_half_fraud": [
+            74,
+            74
+          ],
+          "dev_half_expected": [
+            77.9909739951889,
+            85.60454043049602
+          ],
+          "dev_half_nominal_z": [
+            -0.5406765658348879,
+            -1.5188885015690268
+          ],
+          "same_direction": true,
+          "dev_share": 0.017764040298101066,
+          "test_share": 0.01770761107259054
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [20.0,inf) \u00d7 POS",
+          "dev_half_rows": [
+            8817,
+            8708
+          ],
+          "dev_half_fraud": [
+            119,
+            135
+          ],
+          "dev_half_expected": [
+            113.54583436383484,
+            130.46624508327503
+          ],
+          "dev_half_nominal_z": [
+            0.6225270128494981,
+            0.5009144072197447
+          ],
+          "same_direction": true,
+          "dev_share": 0.02945546468201544,
+          "test_share": 0.03014494106352339
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [20.0,inf) \u00d7 In-App",
+          "dev_half_rows": [
+            1030,
+            1024
+          ],
+          "dev_half_fraud": [
+            38,
+            30
+          ],
+          "dev_half_expected": [
+            33.632762703345904,
+            27.990351339922373
+          ],
+          "dev_half_nominal_z": [
+            1.0176461543831918,
+            0.46778540228474685
+          ],
+          "same_direction": true,
+          "dev_share": 0.003452298114514107,
+          "test_share": 0.0033401781428342844
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [5.0,20.0) \u00d7 In-App",
+          "dev_half_rows": [
+            1876,
+            1795
+          ],
+          "dev_half_fraud": [
+            48,
+            44
+          ],
+          "dev_half_expected": [
+            50.231444165174246,
+            48.00582215010751
+          ],
+          "dev_half_nominal_z": [
+            -0.3887837907483307,
+            -0.7274279718951734
+          ],
+          "same_direction": true,
+          "dev_share": 0.00617010047632974,
+          "test_share": 0.006303669529041549
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [-inf,5.0) \u00d7 POS",
+          "dev_half_rows": [
+            10184,
+            10282
+          ],
+          "dev_half_fraud": [
+            143,
+            136
+          ],
+          "dev_half_expected": [
+            130.3668019262007,
+            132.59617165554178
+          ],
+          "dev_half_nominal_z": [
+            1.3464526599007085,
+            0.35356916484777384
+          ],
+          "same_direction": true,
+          "dev_share": 0.03439860428999304,
+          "test_share": 0.03473185236545949
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [5.0,20.0) \u00d7 ATM",
+          "dev_half_rows": [
+            678,
+            677
+          ],
+          "dev_half_fraud": [
+            18,
+            21
+          ],
+          "dev_half_expected": [
+            19.047627721238577,
+            24.079048942412047
+          ],
+          "dev_half_nominal_z": [
+            -0.303211327009167,
+            -0.8540475395384988
+          ],
+          "same_direction": true,
+          "dev_share": 0.0022774410638591114,
+          "test_share": 0.0023201237399327963
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [5.0,20.0) \u00d7 Online",
+          "dev_half_rows": [
+            22177,
+            22256
+          ],
+          "dev_half_fraud": [
+            311,
+            324
+          ],
+          "dev_half_expected": [
+            314.8504180990132,
+            339.2706624885548
+          ],
+          "dev_half_nominal_z": [
+            -0.2771396331988177,
+            -1.0550923225743096
+          ],
+          "same_direction": true,
+          "dev_share": 0.07468157844313793,
+          "test_share": 0.07412395327750813
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [20.0,inf) \u00d7 Contactless",
+          "dev_half_rows": [
+            4514,
+            4509
+          ],
+          "dev_half_fraud": [
+            50,
+            59
+          ],
+          "dev_half_expected": [
+            52.048921020533804,
+            60.64059450715474
+          ],
+          "dev_half_nominal_z": [
+            -0.3356441872145249,
+            -0.2505598642081587
+          ],
+          "same_direction": true,
+          "dev_share": 0.015165572486495027,
+          "test_share": 0.015280814976798762
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [5.0,20.0) \u00d7 In-App",
+          "dev_half_rows": [
+            6898,
+            6898
+          ],
+          "dev_half_fraud": [
+            77,
+            80
+          ],
+          "dev_half_expected": [
+            82.88439479385721,
+            81.94864219637424
+          ],
+          "dev_half_nominal_z": [
+            -0.7697308234781233,
+            -0.24886209954091312
+          ],
+          "same_direction": true,
+          "dev_share": 0.023187879643542655,
+          "test_share": 0.022484532508400448
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [-inf,5.0) \u00d7 In-App",
+          "dev_half_rows": [
+            4131,
+            4107
+          ],
+          "dev_half_fraud": [
+            69,
+            67
+          ],
+          "dev_half_expected": [
+            67.7644874999201,
+            61.51876051751953
+          ],
+          "dev_half_nominal_z": [
+            0.19285646791524988,
+            0.8694820528187939
+          ],
+          "same_direction": true,
+          "dev_share": 0.013846169360938273,
+          "test_share": 0.013877406795029069
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [-inf,5.0) \u00d7 POS",
+          "dev_half_rows": [
+            2799,
+            2844
+          ],
+          "dev_half_fraud": [
+            74,
+            87
+          ],
+          "dev_half_expected": [
+            72.96274236907487,
+            82.80231435888818
+          ],
+          "dev_half_nominal_z": [
+            0.15211728781836606,
+            0.5931717537900666
+          ],
+          "same_direction": true,
+          "dev_share": 0.009484575589193332,
+          "test_share": 0.009577177449463972
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [20.0,inf) \u00d7 In-App",
+          "dev_half_rows": [
+            4383,
+            4181
+          ],
+          "dev_half_fraud": [
+            73,
+            70
+          ],
+          "dev_half_expected": [
+            72.21091059241922,
+            67.41931937591383
+          ],
+          "dev_half_nominal_z": [
+            0.1141474896376705,
+            0.3902025137341046
+          ],
+          "same_direction": true,
+          "dev_share": 0.014394099830914707,
+          "test_share": 0.014140754173555923
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [5.0,20.0) \u00d7 POS",
+          "dev_half_rows": [
+            4677,
+            4675
+          ],
+          "dev_half_fraud": [
+            130,
+            145
+          ],
+          "dev_half_expected": [
+            129.49973759427024,
+            144.615660555127
+          ],
+          "dev_half_nominal_z": [
+            0.05599731773146048,
+            0.04218226562841092
+          ],
+          "same_direction": true,
+          "dev_share": 0.015718545261409894,
+          "test_share": 0.0162775348018561
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [-inf,5.0) \u00d7 ATM",
+          "dev_half_rows": [
+            407,
+            428
+          ],
+          "dev_half_fraud": [
+            13,
+            13
+          ],
+          "dev_half_expected": [
+            10.714927735992495,
+            14.837935943049784
+          ],
+          "dev_half_nominal_z": [
+            0.9316454877446916,
+            -0.6361962380000692
+          ],
+          "same_direction": false,
+          "dev_share": 0.001403441541197312,
+          "test_share": 0.0014367432929756254
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [-inf,5.0) \u00d7 Contactless",
+          "dev_half_rows": [
+            1460,
+            1509
+          ],
+          "dev_half_fraud": [
+            47,
+            34
+          ],
+          "dev_half_expected": [
+            44.173871254853296,
+            44.60475270279072
+          ],
+          "dev_half_nominal_z": [
+            0.5666248713460076,
+            -2.066298052076086
+          ],
+          "same_direction": false,
+          "dev_share": 0.004990201120736311,
+          "test_share": 0.004976932103045496
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [-inf,5.0) \u00d7 In-App",
+          "dev_half_rows": [
+            1136,
+            1114
+          ],
+          "dev_half_fraud": [
+            41,
+            30
+          ],
+          "dev_half_expected": [
+            32.78894404659701,
+            36.03769942348346
+          ],
+          "dev_half_nominal_z": [
+            1.9265319132536367,
+            -1.3332976311190847
+          ],
+          "same_direction": false,
+          "dev_share": 0.0037817287038250927,
+          "test_share": 0.0038502053442850286
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [-inf,5.0) \u00d7 Online",
+          "dev_half_rows": [
+            3765,
+            3766
+          ],
+          "dev_half_fraud": [
+            108,
+            122
+          ],
+          "dev_half_expected": [
+            110.42151587742879,
+            121.00749284130791
+          ],
+          "dev_half_nominal_z": [
+            -0.30418729687211193,
+            0.12175866061103145
+          ],
+          "same_direction": false,
+          "dev_share": 0.012657866163780788,
+          "test_share": 0.012844018347645208
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [5.0,20.0) \u00d7 Contactless",
+          "dev_half_rows": [
+            2483,
+            2325
+          ],
+          "dev_half_fraud": [
+            72,
+            67
+          ],
+          "dev_half_expected": [
+            71.33227227578685,
+            68.19300869958303
+          ],
+          "dev_half_nominal_z": [
+            0.09931479911130837,
+            -0.1870148339870896
+          ],
+          "same_direction": false,
+          "dev_share": 0.00808113404799602,
+          "test_share": 0.008010427222785214
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [5.0,20.0) \u00d7 Online",
+          "dev_half_rows": [
+            6196,
+            6143
+          ],
+          "dev_half_fraud": [
+            193,
+            190
+          ],
+          "dev_half_expected": [
+            179.38678001359108,
+            194.1693912792868
+          ],
+          "dev_half_nominal_z": [
+            1.332995957450045,
+            -0.39921552065999677
+          ],
+          "same_direction": false,
+          "dev_share": 0.02073900021177681,
+          "test_share": 0.02084111152594805
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [20.0,inf) \u00d7 Contactless",
+          "dev_half_rows": [
+            1311,
+            1268
+          ],
+          "dev_half_fraud": [
+            34,
+            35
+          ],
+          "dev_half_expected": [
+            35.30214192348401,
+            34.12232841870348
+          ],
+          "dev_half_nominal_z": [
+            -0.2842792288183799,
+            0.1872594934596639
+          ],
+          "same_direction": false,
+          "dev_share": 0.004334701478739962,
+          "test_share": 0.0043268974345298415
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [20.0,inf) \u00d7 Online",
+          "dev_half_rows": [
+            3332,
+            3348
+          ],
+          "dev_half_fraud": [
+            103,
+            97
+          ],
+          "dev_half_expected": [
+            112.63920125857571,
+            90.74663524445421
+          ],
+          "dev_half_nominal_z": [
+            -1.2595943122402589,
+            0.8288156985119755
+          ],
+          "same_direction": false,
+          "dev_share": 0.011227532329578497,
+          "test_share": 0.011333937810016534
+        },
+        {
+          "group": "[-inf,1.0) \u00d7 [20.0,inf) \u00d7 POS",
+          "dev_half_rows": [
+            2618,
+            2581
+          ],
+          "dev_half_fraud": [
+            75,
+            72
+          ],
+          "dev_half_expected": [
+            73.92890861416511,
+            81.67903912504087
+          ],
+          "dev_half_nominal_z": [
+            0.15891648970493674,
+            -1.3668271305320885
+          ],
+          "same_direction": false,
+          "dev_share": 0.00873831445830518,
+          "test_share": 0.00856379006880367
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [-inf,5.0) \u00d7 ATM",
+          "dev_half_rows": [
+            1835,
+            1805
+          ],
+          "dev_half_fraud": [
+            22,
+            34
+          ],
+          "dev_half_expected": [
+            26.886690370586255,
+            29.527532868164663
+          ],
+          "dev_half_nominal_z": [
+            -1.1992224776474218,
+            1.0059154180242469
+          ],
+          "same_direction": false,
+          "dev_share": 0.006117996658632594,
+          "test_share": 0.0056769694383700465
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [-inf,5.0) \u00d7 Contactless",
+          "dev_half_rows": [
+            6147,
+            5954
+          ],
+          "dev_half_fraud": [
+            93,
+            87
+          ],
+          "dev_half_expected": [
+            87.44637850957602,
+            102.57505693090671
+          ],
+          "dev_half_nominal_z": [
+            0.716982957456511,
+            -1.8960073341763282
+          ],
+          "same_direction": false,
+          "dev_share": 0.020338977353327754,
+          "test_share": 0.020617766280868314
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [-inf,5.0) \u00d7 In-App",
+          "dev_half_rows": [
+            4871,
+            4898
+          ],
+          "dev_half_fraud": [
+            74,
+            66
+          ],
+          "dev_half_expected": [
+            72.84427185310855,
+            79.86952500189703
+          ],
+          "dev_half_nominal_z": [
+            0.16378482230041091,
+            -1.9202191467542147
+          ],
+          "same_direction": false,
+          "dev_share": 0.016419425647852145,
+          "test_share": 0.016377540135473892
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [-inf,5.0) \u00d7 Online",
+          "dev_half_rows": [
+            15889,
+            15623
+          ],
+          "dev_half_fraud": [
+            252,
+            264
+          ],
+          "dev_half_expected": [
+            252.43300748603457,
+            263.99823661635645
+          ],
+          "dev_half_nominal_z": [
+            -0.03490414916036866,
+            0.00013432986582063647
+          ],
+          "same_direction": false,
+          "dev_share": 0.05296437107330503,
+          "test_share": 0.05300616032855086
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [5.0,20.0) \u00d7 ATM",
+          "dev_half_rows": [
+            2759,
+            2830
+          ],
+          "dev_half_fraud": [
+            36,
+            48
+          ],
+          "dev_half_expected": [
+            42.206924090365945,
+            42.95872109467976
+          ],
+          "dev_half_nominal_z": [
+            -1.1668184905161771,
+            0.909463572477401
+          ],
+          "same_direction": false,
+          "dev_share": 0.00939381410030153,
+          "test_share": 0.009623846605152276
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [5.0,20.0) \u00d7 Contactless",
+          "dev_half_rows": [
+            10052,
+            10013
+          ],
+          "dev_half_fraud": [
+            157,
+            157
+          ],
+          "dev_half_expected": [
+            151.7607820930324,
+            160.07960693238184
+          ],
+          "dev_half_nominal_z": [
+            0.5311741470857689,
+            -0.2962706390413085
+          ],
+          "same_direction": false,
+          "dev_share": 0.03372461619655577,
+          "test_share": 0.03363846071790495
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [5.0,20.0) \u00d7 Online",
+          "dev_half_rows": [
+            25723,
+            25820
+          ],
+          "dev_half_fraud": [
+            431,
+            435
+          ],
+          "dev_half_expected": [
+            423.6904219949029,
+            440.00173554611484
+          ],
+          "dev_half_nominal_z": [
+            0.4446650319692497,
+            -0.3007252839285524
+          ],
+          "same_direction": false,
+          "dev_share": 0.08663184114722522,
+          "test_share": 0.08689796789162088
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [5.0,20.0) \u00d7 POS",
+          "dev_half_rows": [
+            19558,
+            19734
+          ],
+          "dev_half_fraud": [
+            293,
+            311
+          ],
+          "dev_half_expected": [
+            301.0859746249091,
+            308.27780304630966
+          ],
+          "dev_half_nominal_z": [
+            -0.5720166085800067,
+            0.19097255386215134
+          ],
+          "same_direction": false,
+          "dev_share": 0.0660407485469758,
+          "test_share": 0.06561683289775455
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [20.0,inf) \u00d7 ATM",
+          "dev_half_rows": [
+            1473,
+            1516
+          ],
+          "dev_half_fraud": [
+            32,
+            19
+          ],
+          "dev_half_expected": [
+            24.014365087333957,
+            22.325877093028637
+          ],
+          "dev_half_nominal_z": [
+            1.9925237269147353,
+            -0.8276748007943491
+          ],
+          "same_direction": false,
+          "dev_share": 0.005023816486992534,
+          "test_share": 0.005223611925969385
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [20.0,inf) \u00d7 Online",
+          "dev_half_rows": [
+            13740,
+            13875
+          ],
+          "dev_half_fraud": [
+            264,
+            251
+          ],
+          "dev_half_expected": [
+            253.20994134003072,
+            257.0766204922744
+          ],
+          "dev_half_nominal_z": [
+            0.8728649164821605,
+            -0.49143377546057915
+          ],
+          "same_direction": false,
+          "dev_share": 0.04641441695827997,
+          "test_share": 0.04629246893167636
+        },
+        {
+          "group": "[1.0,6.0) \u00d7 [20.0,inf) \u00d7 POS",
+          "dev_half_rows": [
+            10268,
+            10287
+          ],
+          "dev_half_fraud": [
+            180,
+            166
+          ],
+          "dev_half_expected": [
+            168.41133624831153,
+            172.5905639739747
+          ],
+          "dev_half_nominal_z": [
+            1.1283701430835704,
+            -0.6173063433216964
+          ],
+          "same_direction": false,
+          "dev_share": 0.034548192669833236,
+          "test_share": 0.034628513520721105
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [-inf,5.0) \u00d7 ATM",
+          "dev_half_rows": [
+            1507,
+            1499
+          ],
+          "dev_half_fraud": [
+            25,
+            8
+          ],
+          "dev_half_expected": [
+            18.979191119258147,
+            18.401713538809926
+          ],
+          "dev_half_nominal_z": [
+            1.6894480431405414,
+            -2.8261831529007804
+          ],
+          "same_direction": false,
+          "dev_share": 0.005052389548310323,
+          "test_share": 0.0050569363699397305
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [-inf,5.0) \u00d7 Online",
+          "dev_half_rows": [
+            13711,
+            13863
+          ],
+          "dev_half_fraud": [
+            184,
+            188
+          ],
+          "dev_half_expected": [
+            181.73278397867162,
+            201.26139412719314
+          ],
+          "dev_half_nominal_z": [
+            0.20836725422105765,
+            -1.1659074538789393
+          ],
+          "same_direction": false,
+          "dev_share": 0.046345505457454715,
+          "test_share": 0.04531241666222199
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [5.0,20.0) \u00d7 ATM",
+          "dev_half_rows": [
+            2431,
+            2525
+          ],
+          "dev_half_fraud": [
+            22,
+            38
+          ],
+          "dev_half_expected": [
+            29.23106802222352,
+            33.19632947271353
+          ],
+          "dev_half_nominal_z": [
+            -1.5665160472008925,
+            0.9749919618656857
+          ],
+          "same_direction": false,
+          "dev_share": 0.00832988775829207,
+          "test_share": 0.008160435223211904
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [5.0,20.0) \u00d7 Contactless",
+          "dev_half_rows": [
+            8649,
+            8518
+          ],
+          "dev_half_fraud": [
+            131,
+            101
+          ],
+          "dev_half_expected": [
+            112.3293076610985,
+            112.59934124718839
+          ],
+          "dev_half_nominal_z": [
+            2.126459225165773,
+            -1.3165390851634002
+          ],
+          "same_direction": false,
+          "dev_share": 0.02885374962602905,
+          "test_share": 0.029658248439916796
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [5.0,20.0) \u00d7 POS",
+          "dev_half_rows": [
+            16965,
+            16995
+          ],
+          "dev_half_fraud": [
+            251,
+            214
+          ],
+          "dev_half_expected": [
+            220.44995381356918,
+            226.57358115796472
+          ],
+          "dev_half_nominal_z": [
+            2.4824359862955934,
+            -1.0047694741359603
+          ],
+          "same_direction": false,
+          "dev_share": 0.05707889190306673,
+          "test_share": 0.057123046562483334
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [20.0,inf) \u00d7 In-App",
+          "dev_half_rows": [
+            3564,
+            3629
+          ],
+          "dev_half_fraud": [
+            43,
+            67
+          ],
+          "dev_half_expected": [
+            48.71529085468592,
+            59.78289812432351
+          ],
+          "dev_half_nominal_z": [
+            -1.0135991140761038,
+            1.178023503717368
+          ],
+          "same_direction": false,
+          "dev_share": 0.012089766474050618,
+          "test_share": 0.011820630433623127
+        },
+        {
+          "group": "[6.0,inf) \u00d7 [20.0,inf) \u00d7 Online",
+          "dev_half_rows": [
+            11642,
+            11896
+          ],
+          "dev_half_fraud": [
+            175,
+            156
+          ],
+          "dev_half_expected": [
+            170.38836594932496,
+            168.7732622154568
+          ],
+          "dev_half_nominal_z": [
+            0.4486129984262643,
+            -1.228352697736674
+          ],
+          "same_direction": false,
+          "dev_share": 0.0395619245469489,
+          "test_share": 0.03958877806816363
+        }
+      ]
+    },
+    "spend_share_card_tenure": {
+      "distribution": {
+        "dev_groups": 20,
+        "test_groups": 20,
+        "test_rows_unseen_share": 0.0,
+        "test_rows_low_support_share": 0.00014000746706491012,
+        "total_variation": 0.0026295528142914523,
+        "max_group_share_diff": 0.0009386781300957381
+      },
+      "dev_halves": [
+        {
+          "base_auc": 0.9495904403707718,
+          "new_auc": 0.9495350968554869,
+          "delta_auc": -5.5343515284911327e-05,
+          "delta_ap": -0.0008031993601487208,
+          "logloss_gain_x1m": -37.63245728534284,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -62.202845792518225,
+            -13.062068778167454
+          ]
+        },
+        {
+          "base_auc": 0.9516441213372957,
+          "new_auc": 0.951613491310285,
+          "delta_auc": -3.063002701064743e-05,
+          "delta_ap": -0.0008471405644121521,
+          "logloss_gain_x1m": -36.56068788377276,
+          "descriptive_logloss_gain_ci95_x1m": [
+            -59.83596135686507,
+            -13.285414410680444
+          ]
+        }
+      ],
+      "dev_pooled": {
+        "base_auc": 0.9505623976974853,
+        "new_auc": 0.9505182048070921,
+        "delta_auc": -4.4192890393146556e-05,
+        "delta_ap": -0.000810183801468578,
+        "logloss_gain_x1m": -37.0965725845578,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -54.01875055335995,
+          -20.174394615755645
+        ]
+      },
+      "calibration_gate_passes": false,
+      "auc_gate_passes": false,
+      "supported_cells": [
+        {
+          "group": "[0.01,0.05) \u00d7 [-inf,40)",
+          "dev_half_rows": [
+            14070,
+            13838
+          ],
+          "dev_half_fraud": [
+            182,
+            192
+          ],
+          "dev_half_expected": [
+            193.50172705236605,
+            205.31353762177662
+          ],
+          "dev_half_nominal_z": [
+            -1.0089731785226292,
+            -1.1391152674738105
+          ],
+          "same_direction": true,
+          "dev_share": 0.046906882073933634,
+          "test_share": 0.046452477465464825
+        },
+        {
+          "group": "[1.0,inf) \u00d7 [50,60)",
+          "dev_half_rows": [
+            912,
+            962
+          ],
+          "dev_half_fraud": [
+            22,
+            18
+          ],
+          "dev_half_expected": [
+            27.157133692332554,
+            20.71980669112443
+          ],
+          "dev_half_nominal_z": [
+            -1.3950412651390398,
+            -0.7031844641171887
+          ],
+          "same_direction": true,
+          "dev_share": 0.003149759818208099,
+          "test_share": 0.003290175476025388
+        },
+        {
+          "group": "[1.0,inf) \u00d7 [-inf,40)",
+          "dev_half_rows": [
+            255,
+            296
+          ],
+          "dev_half_fraud": [
+            12,
+            15
+          ],
+          "dev_half_expected": [
+            9.380533313496555,
+            13.506145076782394
+          ],
+          "dev_half_nominal_z": [
+            1.1630748855441637,
+            0.589442601129637
+          ],
+          "same_direction": true,
+          "dev_share": 0.0009261033403589449,
+          "test_share": 0.000983385780574964
+        },
+        {
+          "group": "[-inf,0.01) \u00d7 [60,inf)",
+          "dev_half_rows": [
+            1180,
+            1223
+          ],
+          "dev_half_fraud": [
+            15,
+            15
+          ],
+          "dev_half_expected": [
+            16.865563936599766,
+            20.37018980485052
+          ],
+          "dev_half_nominal_z": [
+            -0.5529108073394848,
+            -1.5003132925848428
+          ],
+          "same_direction": true,
+          "dev_share": 0.004038886255685199,
+          "test_share": 0.004250226678756201
+        },
+        {
+          "group": "[0.2,1.0) \u00d7 [-inf,40)",
+          "dev_half_rows": [
+            1442,
+            1365
+          ],
+          "dev_half_fraud": [
+            40,
+            36
+          ],
+          "dev_half_expected": [
+            36.00448964933306,
+            33.74922050708185
+          ],
+          "dev_half_nominal_z": [
+            0.8531765226301973,
+            0.48281673193523433
+          ],
+          "same_direction": true,
+          "dev_share": 0.004717916654060904,
+          "test_share": 0.004600245346418476
+        },
+        {
+          "group": "[0.01,0.05) \u00d7 [50,60)",
+          "dev_half_rows": [
+            46001,
+            45965
+          ],
+          "dev_half_fraud": [
+            696,
+            720
+          ],
+          "dev_half_expected": [
+            682.729044296638,
+            710.2351535043217
+          ],
+          "dev_half_nominal_z": [
+            0.6231869845806893,
+            0.4485104239847221
+          ],
+          "same_direction": true,
+          "dev_share": 0.15457353865599044,
+          "test_share": 0.1536348605258947
+        },
+        {
+          "group": "[-inf,0.01) \u00d7 [50,60)",
+          "dev_half_rows": [
+            25252,
+            25495
+          ],
+          "dev_half_fraud": [
+            389,
+            386
+          ],
+          "dev_half_expected": [
+            395.81391327990895,
+            402.12861680542676
+          ],
+          "dev_half_nominal_z": [
+            -0.43054122742628703,
+            -0.9921079608650114
+          ],
+          "same_direction": true,
+          "dev_share": 0.08529394957022754,
+          "test_share": 0.08509120486425943
+        },
+        {
+          "group": "[1.0,inf) \u00d7 [40,50)",
+          "dev_half_rows": [
+            1919,
+            1968
+          ],
+          "dev_half_fraud": [
+            42,
+            51
+          ],
+          "dev_half_expected": [
+            42.92843299307689,
+            52.6051007387081
+          ],
+          "dev_half_nominal_z": [
+            -0.17347526915041217,
+            -0.28103062102389775
+          ],
+          "same_direction": true,
+          "dev_share": 0.006533146431896949,
+          "test_share": 0.006377006773694597
+        },
+        {
+          "group": "[-inf,0.01) \u00d7 [-inf,40)",
+          "dev_half_rows": [
+            7734,
+            7685
+          ],
+          "dev_half_fraud": [
+            103,
+            145
+          ],
+          "dev_half_expected": [
+            104.75857451470762,
+            133.38614368470726
+          ],
+          "dev_half_nominal_z": [
+            -0.20649622016326752,
+            1.3006492383456212
+          ],
+          "same_direction": false,
+          "dev_share": 0.025915766615235158,
+          "test_share": 0.02655141607552403
+        },
+        {
+          "group": "[-inf,0.01) \u00d7 [40,50)",
+          "dev_half_rows": [
+            51662,
+            51717
+          ],
+          "dev_half_fraud": [
+            813,
+            813
+          ],
+          "dev_half_expected": [
+            813.4002233965855,
+            807.1108080975195
+          ],
+          "dev_half_nominal_z": [
+            -0.017690450702773353,
+            0.2557728835933935
+          ],
+          "same_direction": false,
+          "dev_share": 0.17375614741010412,
+          "test_share": 0.17394261027254787
+        },
+        {
+          "group": "[0.01,0.05) \u00d7 [40,50)",
+          "dev_half_rows": [
+            92936,
+            93027
+          ],
+          "dev_half_fraud": [
+            1452,
+            1411
+          ],
+          "dev_half_expected": [
+            1377.9792210648816,
+            1448.0881309998736
+          ],
+          "dev_half_nominal_z": [
+            2.4757387420587067,
+            -1.2053830513623078
+          ],
+          "same_direction": false,
+          "dev_share": 0.3125607177553003,
+          "test_share": 0.3121166462211318
+        },
+        {
+          "group": "[0.01,0.05) \u00d7 [60,inf)",
+          "dev_half_rows": [
+            2081,
+            2133
+          ],
+          "dev_half_fraud": [
+            41,
+            24
+          ],
+          "dev_half_expected": [
+            32.569972327443175,
+            34.67385245702232
+          ],
+          "dev_half_nominal_z": [
+            1.8635765271996707,
+            -2.296819408486365
+          ],
+          "same_direction": false,
+          "dev_share": 0.007082757670186196,
+          "test_share": 0.006823697263854072
+        },
+        {
+          "group": "[0.05,0.2) \u00d7 [-inf,40)",
+          "dev_half_rows": [
+            3447,
+            3355
+          ],
+          "dev_half_fraud": [
+            84,
+            70
+          ],
+          "dev_half_expected": [
+            73.58340095987579,
+            72.1260044757539
+          ],
+          "dev_half_nominal_z": [
+            1.566456844965432,
+            -0.3261967576946291
+          ],
+          "same_direction": false,
+          "dev_share": 0.011432586063741458,
+          "test_share": 0.011400608032428396
+        },
+        {
+          "group": "[0.05,0.2) \u00d7 [40,50)",
+          "dev_half_rows": [
+            22237,
+            22459
+          ],
+          "dev_half_fraud": [
+            470,
+            446
+          ],
+          "dev_half_expected": [
+            445.39603871714564,
+            495.25594493771433
+          ],
+          "dev_half_nominal_z": [
+            1.472964320863361,
+            -2.8501121954024216
+          ],
+          "same_direction": false,
+          "dev_share": 0.07512362050940725,
+          "test_share": 0.07605738972745213
+        },
+        {
+          "group": "[0.05,0.2) \u00d7 [50,60)",
+          "dev_half_rows": [
+            11186,
+            11071
+          ],
+          "dev_half_fraud": [
+            229,
+            236
+          ],
+          "dev_half_expected": [
+            227.78442603003356,
+            251.99832523761816
+          ],
+          "dev_half_nominal_z": [
+            0.10398195119469406,
+            -1.3005501889618014
+          ],
+          "same_direction": false,
+          "dev_share": 0.037408860338237815,
+          "test_share": 0.03775868046295802
+        },
+        {
+          "group": "[0.05,0.2) \u00d7 [60,inf)",
+          "dev_half_rows": [
+            503,
+            537
+          ],
+          "dev_half_fraud": [
+            8,
+            11
+          ],
+          "dev_half_expected": [
+            8.665790802145464,
+            9.665642294563295
+          ],
+          "dev_half_nominal_z": [
+            -0.2867626549001864,
+            0.5073793369772474
+          ],
+          "same_direction": false,
+          "dev_share": 0.0017479990453235983,
+          "test_share": 0.0017400928049495974
+        },
+        {
+          "group": "[0.2,1.0) \u00d7 [40,50)",
+          "dev_half_rows": [
+            9502,
+            9280
+          ],
+          "dev_half_fraud": [
+            241,
+            257
+          ],
+          "dev_half_expected": [
+            236.24731594496424,
+            258.4643732567412
+          ],
+          "dev_half_nominal_z": [
+            0.3947936398139655,
+            -0.11834855827482185
+          ],
+          "same_direction": false,
+          "dev_share": 0.03156819045121906,
+          "test_share": 0.03162168648994613
+        },
+        {
+          "group": "[0.2,1.0) \u00d7 [50,60)",
+          "dev_half_rows": [
+            4922,
+            4848
+          ],
+          "dev_half_fraud": [
+            123,
+            114
+          ],
+          "dev_half_expected": [
+            113.6882538917874,
+            119.42342952015272
+          ],
+          "dev_half_nominal_z": [
+            1.0825145235013738,
+            -0.6438909038159661
+          ],
+          "same_direction": false,
+          "dev_share": 0.016421106416164958,
+          "test_share": 0.016404208224438638
+        },
+        {
+          "group": "[0.2,1.0) \u00d7 [60,inf)",
+          "dev_half_rows": [
+            208,
+            221
+          ],
+          "dev_half_fraud": [
+            6,
+            8
+          ],
+          "dev_half_expected": [
+            5.784818161749477,
+            9.391574061416238
+          ],
+          "dev_half_nominal_z": [
+            0.12237732464684613,
+            -0.6631881591713288
+          ],
+          "same_direction": false,
+          "dev_share": 0.0007210496061959843,
+          "test_share": 0.0007633740466158195
+        }
+      ]
+    }
+  },
+  "reused_holdout": {
+    "encoded_week_transition_channel": {
+      "grandmaster_risk_band_control": {
+        "base_auc": 0.9509495261981871,
+        "new_auc": 0.9508111142404061,
+        "delta_auc": -0.0001384119577809706,
+        "delta_ap": -0.0003984511040928673,
+        "logloss_gain_x1m": -29.755701944551788,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -66.13863778867476,
+          6.627233899571182
+        ],
+        "paired_delong": {
+          "roc_auc": 0.9508111142404061,
+          "average_precision": 0.537757611343692,
+          "log_loss": 0.043901939619943056,
+          "delta_auc": -0.0001384119577809706,
+          "ci95_low": -0.0003179539593553567,
+          "ci95_high": 4.1130043793415516e-05
+        }
+      },
+      "grandmaster_raw": {
+        "base_auc": 0.9509489294520218,
+        "new_auc": 0.9508197228563832,
+        "delta_auc": -0.00012920659563864234,
+        "delta_ap": -0.00039184552662496763,
+        "logloss_gain_x1m": -29.889284444185733,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -66.27414505689386,
+          6.495576168522403
+        ],
+        "paired_delong": {
+          "roc_auc": 0.9508197228563832,
+          "average_precision": 0.537793240108676,
+          "log_loss": 0.04390364992364676,
+          "delta_auc": -0.00012920659563875336,
+          "ci95_low": -0.00031051762403299337,
+          "ci95_high": 5.210443275548664e-05
+        }
+      },
+      "grandmaster_eda": {
+        "base_auc": 0.9512244493667037,
+        "new_auc": 0.9510866010025236,
+        "delta_auc": -0.00013784836418007096,
+        "delta_ap": -0.0004347021528399164,
+        "logloss_gain_x1m": -33.58589554368953,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -69.98907219880923,
+          2.8172811114301717
+        ],
+        "paired_delong": {
+          "roc_auc": 0.9510866010025236,
+          "average_precision": 0.5378005765545493,
+          "log_loss": 0.04386957382393715,
+          "delta_auc": -0.000137848364180293,
+          "ci95_low": -0.00031810637142585683,
+          "ci95_high": 4.2409643065270826e-05
+        }
+      },
+      "mixed_density": {
+        "base_auc": 0.9513122373581301,
+        "new_auc": 0.9511745879093382,
+        "delta_auc": -0.00013764944879191,
+        "delta_ap": -0.00037568041841617994,
+        "logloss_gain_x1m": -33.23633169250816,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -69.6386777762917,
+          3.166014391275372
+        ],
+        "paired_delong": {
+          "roc_auc": 0.9511745879093382,
+          "average_precision": 0.5379080459005168,
+          "log_loss": 0.04385915616461421,
+          "delta_auc": -0.00013764944879191,
+          "ci95_low": -0.0003188794895877308,
+          "ci95_high": 4.358059200391083e-05
+        }
+      },
+      "strongest_dev_cell_on_holdout": {
+        "group": "wrapped encoded week \u00d7 Contactless",
+        "rows": 612,
+        "fraud": 7,
+        "expected_grandmaster_band_control": 7.825373434608061,
+        "expected_grandmaster_eda": 7.793700326506657,
+        "expected_mixed_density": 7.788513321299493
+      }
+    },
+    "remaining_balance_card_type": {
+      "grandmaster_risk_band_control": {
+        "base_auc": 0.9509495261981871,
+        "new_auc": 0.9508538092183612,
+        "delta_auc": -9.571697982591054e-05,
+        "delta_ap": -4.83582260821791e-05,
+        "logloss_gain_x1m": -22.420554637490472,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -53.562472312856336,
+          8.721363037875387
+        ],
+        "paired_delong": {
+          "roc_auc": 0.9508538092183612,
+          "average_precision": 0.5381077042217027,
+          "log_loss": 0.043894604472636,
+          "delta_auc": -9.571697982591054e-05,
+          "ci95_low": -0.00020071563236241432,
+          "ci95_high": 9.281672710593239e-06
+        }
+      },
+      "grandmaster_raw": {
+        "base_auc": 0.9509489294520218,
+        "new_auc": 0.9508541794220008,
+        "delta_auc": -9.4750030021018e-05,
+        "delta_ap": -7.283023296067448e-05,
+        "logloss_gain_x1m": -21.95149458682432,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -53.09174524422764,
+          9.188756070578995
+        ],
+        "paired_delong": {
+          "roc_auc": 0.9508541794220008,
+          "average_precision": 0.5381122554023403,
+          "log_loss": 0.04389571213378939,
+          "delta_auc": -9.475003002112903e-05,
+          "ci95_low": -0.000200056276511937,
+          "ci95_high": 1.0556216469678918e-05
+        }
+      },
+      "grandmaster_eda": {
+        "base_auc": 0.9512244493667037,
+        "new_auc": 0.951124638045133,
+        "delta_auc": -9.981132157066419e-05,
+        "delta_ap": -0.00015322637335479783,
+        "logloss_gain_x1m": -22.107574890886006,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -53.259794354481734,
+          9.044644572709725
+        ],
+        "paired_delong": {
+          "roc_auc": 0.951124638045133,
+          "average_precision": 0.5380820523340344,
+          "log_loss": 0.04385809550328435,
+          "delta_auc": -9.981132157099726e-05,
+          "ci95_low": -0.00020524938321045188,
+          "ci95_high": 5.626740068457366e-06
+        }
+      },
+      "mixed_density": {
+        "base_auc": 0.9513122373581301,
+        "new_auc": 0.9512126415282298,
+        "delta_auc": -9.95958299002675e-05,
+        "delta_ap": -5.717196669952074e-05,
+        "logloss_gain_x1m": -22.4468498658717,
+        "descriptive_logloss_gain_ci95_x1m": [
+          -53.59226925543065,
+          8.698569523687247
+        ],
+        "paired_delong": {
+          "roc_auc": 0.9512126415282298,
+          "average_precision": 0.5382265543522334,
+          "log_loss": 0.04384836668278756,
+          "delta_auc": -9.959582990015647e-05,
+          "ci95_low": -0.000205278756629614,
+          "ci95_high": 6.087096829301058e-06
+        }
+      },
+      "strongest_dev_cell_on_holdout": {
+        "group": "[0.0,100.0) \u00d7 Visa",
+        "rows": 241,
+        "fraud": 6,
+        "expected_grandmaster_band_control": 7.253238091856379,
+        "expected_grandmaster_eda": 7.174193482031255,
+        "expected_mixed_density": 7.207076510161192
+      }
+    }
+  }
+}

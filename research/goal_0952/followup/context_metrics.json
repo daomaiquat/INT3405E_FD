@@ -1,0 +1,114 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "metrics": {
+    "targeted": {
+      "roc_auc": 0.9512192167869028,
+      "average_precision": 0.5382873123684372,
+      "log_loss": 0.0438399070425174,
+      "delta_auc": -5.232579801117687e-06,
+      "ci95_low": -0.0001633554799381481,
+      "ci95_high": 0.00015289032033591272,
+      "half_delta_auc": [
+        -5.769571496649917e-05,
+        5.535584353155709e-05
+      ]
+    },
+    "expanded": {
+      "roc_auc": 0.9513118063747884,
+      "average_precision": 0.5383438111775681,
+      "log_loss": 0.043829466219634294,
+      "delta_auc": 8.735700808448765e-05,
+      "ci95_low": -8.870484053514937e-05,
+      "ci95_high": 0.0002634188567041247,
+      "half_delta_auc": [
+        -8.425476198614668e-06,
+        0.00018117662755234853
+      ]
+    },
+    "expanded_half_density": {
+      "roc_auc": 0.9513122373581301,
+      "average_precision": 0.538283726318933,
+      "log_loss": 0.04382591983292169,
+      "delta_auc": 8.77879914260582e-05,
+      "ci95_low": -3.2299852814894506e-05,
+      "ci95_high": 0.0002078758356670109,
+      "half_delta_auc": [
+        3.122512438957781e-05,
+        0.00014185763254592754
+      ]
+    }
+  },
+  "contexts": [
+    [
+      "txn_count_last_24h",
+      [
+        "card_type"
+      ]
+    ],
+    [
+      "cvv_retry_count",
+      [
+        "card_type",
+        "auth_method"
+      ]
+    ],
+    [
+      "hours_since_last_txn",
+      [
+        "ip_country_mismatch",
+        "channel"
+      ]
+    ],
+    [
+      "hours_since_last_txn",
+      [
+        "txn_count_last_24h"
+      ]
+    ],
+    [
+      "velocity_score",
+      [
+        "txn_count_last_24h",
+        "auth_method"
+      ]
+    ],
+    [
+      "velocity_score",
+      [
+        "billing_shipping_mismatch"
+      ]
+    ],
+    [
+      "merchant_risk_score",
+      [
+        "merchant_category",
+        "billing_shipping_mismatch"
+      ]
+    ],
+    [
+      "amount_usd",
+      [
+        "merchant_category",
+        "channel"
+      ]
+    ],
+    [
+      "distance_from_home_km",
+      [
+        "channel",
+        "is_foreign_transaction"
+      ]
+    ],
+    [
+      "account_balance_usd",
+      [
+        "billing_shipping_mismatch",
+        "is_foreign_transaction"
+      ]
+    ]
+  ]
+}

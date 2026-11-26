@@ -1,0 +1,84 @@
+{
+  "name": "XGB-RANDOM",
+  "family": "xgb",
+  "groups": [
+    "raw",
+    "te13",
+    "cents",
+    "digits"
+  ],
+  "parent": "XGB-D03",
+  "smoothing": 20.0,
+  "model_seed": 42,
+  "encoder_seed": 2026,
+  "params": {
+    "learning_rate": 0.03,
+    "max_iterations": 6000,
+    "max_depth": 2,
+    "min_child_weight": 5,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 1.0,
+    "tree_method": "hist"
+  },
+  "boost": false,
+  "rounds_factor": 1.0,
+  "scale_pos_weight": 1,
+  "source": {
+    "baseline": "XGB-D03",
+    "baseline_path": "D:\\UET\\ML\\Predicting Credit Card Fraud\\s6e11_gpu\\plan_runs\\results\\full\\XGB-D03",
+    "config_sha256": "a5f5f143c41e298e52918df8cb5b9a0ed5b8107f37bab7f2a9815de8f18bfb12",
+    "metrics_sha256": "35159c8d9aebcc617788986f74524bbcf00d6e6f733de4fabbc3141de08b6870",
+    "predictions_sha256": "4ae9d89fd64dfb05eafb788039f321aa6db573adad65f69b0875ceec71f6e6e2",
+    "source_manifest_sha256": "022a61514a0bb4be423877f411fab50ca6425ad3b8da94abd671abe1d2adf759",
+    "inner_seed": 2026,
+    "inner_checkpoint_sha256_by_fold": [
+      [
+        "e3d5c846ea4b0d68b4c8434edcf066d2319e283142504c775c9cf2617eae37a8",
+        "ba028feda5d2887e5b47994c719ad5efa7f9b866be54c500099ce2c2e78d8e58",
+        "3eecc13d2d5f228cf2f7dd76c11323dadec7f4df4e9e496ee7a2fdde6d868d26",
+        "456103ab810a58205c88e18a90802aee345bbcfd1637d36b9068a3be325c7730",
+        "051552ab19a1269c66da08c34bfcfc4f07c7e1cb6c7407592d6c61cd88d1c65f"
+      ],
+      [
+        "a954c9cec4e1a4ddd35a470d460ad59f3e6ca03bba1667a7362d44006c89a516",
+        "667ea1674e84fcd483ab3afb506ac5f77ac1fcec4b1b8af398d125ee4b903b0d",
+        "f75ca78cd83bfe502bf34dc81354316a9f1b624c0953cd204be46c22d4d8a7bb",
+        "50878ddba36f45ed47ecb50d933c13ff0929ac538454ff6adedde662681a66fd",
+        "0d548add1612f6389e9103a370e3db5e4b279c3051fe15b9892d21e5e4678b74"
+      ],
+      [
+        "76e4fdcf37acf4a1eed134fb8df05e42e14fcb21d9c244ec75a2a06a3e34e568",
+        "7f9c904391422e0150b042956a387b6fdb9c1b6a0cf86fc86f3e65cd55d36615",
+        "19bd2b30cbac7b952d123fa8d4b696b454fe366dd2e778fdf1dd261fbd432ec6",
+        "228a4974625aef65db7a53f60a6e099fd141750f8e89fc1ed05fd5bf3908632d",
+        "b639e49d3c59189c98a38f36c1aae845017a8e57cdc8f58e36d4cb8290e45c74"
+      ],
+      [
+        "19fa41b39502cbecd0e5e5e0fbdd552dabc50dca619592d56406ad7e1abd4122",
+        "553f077fcfb7b0d12a96416d67da2a94a26a8098d614559e0c6dc08d2166f343",
+        "a8bc3039a2425d169059983774cb194fa0f8708e5c7625717517529efb88e12e",
+        "4b3c5e4b244d52b78c7310fa7c8c3bfb8f91a83f79178863e206ff8ca672bdc0",
+        "85b2a47a8a66dbb25f97a0e06658030fa6aaed531a18b67cd244218c844de658"
+      ],
+      [
+        "a171e95dc06b338386af589eb06ddfee7730c8640b60ee51e5f5411fd3fe7f07",
+        "3e79d199a8ccc492d7b11fcd1ccffd436a4a250f119654f635f043cf660a9756",
+        "ebe7c318f4dc376de77cc2071d8f3d1476437105cb3e1f9ac2adf3527cc39753",
+        "47e5ce1ad2fb0d9e14d60646be923057790e1b5fb6ebc8f0080edd5d56bc5365",
+        "76b2981b5e84bc8fa73e5376d597243507323ee46cac66e708e6690f2447ef85"
+      ]
+    ],
+    "baseline_oof_auc": 0.9501823034854605,
+    "fixed_rounds_by_fold": [
+      2194,
+      1536,
+      1771,
+      2306,
+      2131
+    ]
+  },
+  "negative_fraction": 0.1,
+  "negative_weight": 3.0,
+  "random_negative_seed": 42
+}

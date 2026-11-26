@@ -1,0 +1,328 @@
+{
+  "train_sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+  "notebook_sha256": "5b408b5f21688211083b3212e5c31ee86a060ac106011ae7cf3e06fa02170aad",
+  "parent_validation_sha256": "d8277daa87e9ad624d05d1e771e386814a54955cd3fee47686e7b7202c86a39d",
+  "holdout_ids_sha256": "ec98b2b0fb55468cc608ea97140cabb6b83752b7197226d076b35a2c18d2ad6d",
+  "folds": 10,
+  "cv_seed": 2026,
+  "environment": {
+    "python": "3.12.0",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "catboost": "1.2.10",
+    "interpret": "unavailable"
+  },
+  "branch_names": [
+    "hierarchical_glm",
+    "hierarchical_glm_interactions"
+  ],
+  "branch_solver": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 500,
+    "tol": 1e-05
+  },
+  "fit_implementation_sha256": {
+    "hierarchical_glm_design.py": "24cfc2e9ac837d8f54320ce20c255773971cfdf781259cd77748c5228527a3ad",
+    "run_hierarchical_glm_architecture.py": "cbf3afb1efffc94d8583fc78a08156152b9e460e313c668bd2a109430ff6184a"
+  },
+  "training_rows": 594966,
+  "holdout_rows": 104994,
+  "holdout_previously_used": true,
+  "checkpoint_signature": "6d2c973e9ffdbec7b7908a5c6b8f2fc31ba6944db620b80ff47cad3a5a168de9",
+  "evaluation_sha256": "9d39ea6ef08c3eed66eeb9b529b6ebaf06a63cdbc00eaaf1953a91de37608385",
+  "metrics": {
+    "current_hierarchy": {
+      "roc_auc": 0.9509489294520218,
+      "average_precision": 0.538185085635301,
+      "log_loss": 0.04387376063920258,
+      "delta_roc_auc": 0.0
+    },
+    "hierarchical_glm": {
+      "roc_auc": 0.9509489294520218,
+      "average_precision": 0.538185085635301,
+      "log_loss": 0.04387376063920258,
+      "delta_roc_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "p_value": 1.0
+    },
+    "hierarchical_glm_interactions": {
+      "roc_auc": 0.9509489294520218,
+      "average_precision": 0.538185085635301,
+      "log_loss": 0.04387376063920258,
+      "delta_roc_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "p_value": 1.0
+    }
+  },
+  "mean_added_logit_weights": {
+    "hierarchical_glm": 0.0,
+    "hierarchical_glm_interactions": 0.0
+  },
+  "interactions_vs_additive": {
+    "delta_roc_auc": 0.0,
+    "ci95_low": -1.9600000000000003e-09,
+    "ci95_high": 1.9600000000000003e-09,
+    "p_value": 1.0
+  },
+  "fold_screening": {
+    "screen_l2": 1e-05,
+    "folds": [
+      {
+        "fold": 1,
+        "rows": 59497,
+        "positive_negative_pairs": 58151982,
+        "roc_auc": {
+          "current_hierarchy": 0.9456194631508861,
+          "hierarchical_glm": 0.9456329966534933,
+          "hierarchical_glm_interactions": 0.945640442659375
+        },
+        "delta_roc_auc": {
+          "current_hierarchy": 0.0,
+          "hierarchical_glm": 1.353350260724362e-05,
+          "hierarchical_glm_interactions": 2.0979508488894183e-05
+        },
+        "standalone_roc_auc": {
+          "hierarchical_glm": 0.9402361212727022,
+          "hierarchical_glm_interactions": 0.9403361178643921
+        },
+        "added_logit_weights": {
+          "hierarchical_glm": 0.02714539029146417,
+          "hierarchical_glm_interactions": 0.05602882911554023
+        }
+      },
+      {
+        "fold": 2,
+        "rows": 59497,
+        "positive_negative_pairs": 58151982,
+        "roc_auc": {
+          "current_hierarchy": 0.9496176759719042,
+          "hierarchical_glm": 0.9495665685135203,
+          "hierarchical_glm_interactions": 0.9495159253557343
+        },
+        "delta_roc_auc": {
+          "current_hierarchy": 0.0,
+          "hierarchical_glm": -5.110745838388109e-05,
+          "hierarchical_glm_interactions": -0.00010175061616990444
+        },
+        "standalone_roc_auc": {
+          "hierarchical_glm": 0.9425269632254323,
+          "hierarchical_glm_interactions": 0.942290857773343
+        },
+        "added_logit_weights": {
+          "hierarchical_glm": 0.03802753975876629,
+          "hierarchical_glm_interactions": 0.04768184269485115
+        }
+      },
+      {
+        "fold": 3,
+        "rows": 59497,
+        "positive_negative_pairs": 58151982,
+        "roc_auc": {
+          "current_hierarchy": 0.9505159772542233,
+          "hierarchical_glm": 0.9505582286086138,
+          "hierarchical_glm_interactions": 0.9505909875952293
+        },
+        "delta_roc_auc": {
+          "current_hierarchy": 0.0,
+          "hierarchical_glm": 4.225135439051009e-05,
+          "hierarchical_glm_interactions": 7.501034100598769e-05
+        },
+        "standalone_roc_auc": {
+          "hierarchical_glm": 0.9462391840745857,
+          "hierarchical_glm_interactions": 0.9463598334447139
+        },
+        "added_logit_weights": {
+          "hierarchical_glm": 0.043063567718989774,
+          "hierarchical_glm_interactions": 0.0651777809044061
+        }
+      },
+      {
+        "fold": 4,
+        "rows": 59497,
+        "positive_negative_pairs": 58151982,
+        "roc_auc": {
+          "current_hierarchy": 0.9522948504145567,
+          "hierarchical_glm": 0.9522951943409254,
+          "hierarchical_glm_interactions": 0.9522830709364299
+        },
+        "delta_roc_auc": {
+          "current_hierarchy": 0.0,
+          "hierarchical_glm": 3.439263686066951e-07,
+          "hierarchical_glm_interactions": -1.1779478126805465e-05
+        },
+        "standalone_roc_auc": {
+          "hierarchical_glm": 0.9465093726298099,
+          "hierarchical_glm_interactions": 0.9462586675033707
+        },
+        "added_logit_weights": {
+          "hierarchical_glm": 0.030072274297096326,
+          "hierarchical_glm_interactions": 0.05009582198606232
+        }
+      },
+      {
+        "fold": 5,
+        "rows": 59497,
+        "positive_negative_pairs": 58151982,
+        "roc_auc": {
+          "current_hierarchy": 0.9525154275911009,
+          "hierarchical_glm": 0.952528015296194,
+          "hierarchical_glm_interactions": 0.9524622909671417
+        },
+        "delta_roc_auc": {
+          "current_hierarchy": 0.0,
+          "hierarchical_glm": 1.2587705093158874e-05,
+          "hierarchical_glm_interactions": -5.313662395911578e-05
+        },
+        "standalone_roc_auc": {
+          "hierarchical_glm": 0.9464142597925553,
+          "hierarchical_glm_interactions": 0.9457273012637816
+        },
+        "added_logit_weights": {
+          "hierarchical_glm": 0.006702461812542138,
+          "hierarchical_glm_interactions": 0.03830558752205215
+        }
+      },
+      {
+        "fold": 6,
+        "rows": 59497,
+        "positive_negative_pairs": 58151982,
+        "roc_auc": {
+          "current_hierarchy": 0.948538572597577,
+          "hierarchical_glm": 0.9485342563216503,
+          "hierarchical_glm_interactions": 0.9485098719421119
+        },
+        "delta_roc_auc": {
+          "current_hierarchy": 0.0,
+          "hierarchical_glm": -4.3162759266746065e-06,
+          "hierarchical_glm_interactions": -2.870065546511924e-05
+        },
+        "standalone_roc_auc": {
+          "hierarchical_glm": 0.9418851794251828,
+          "hierarchical_glm_interactions": 0.9416697439478504
+        },
+        "added_logit_weights": {
+          "hierarchical_glm": 0.0006119901333077102,
+          "hierarchical_glm_interactions": 0.02787753314898879
+        }
+      },
+      {
+        "fold": 7,
+        "rows": 59496,
+        "positive_negative_pairs": 58093479,
+        "roc_auc": {
+          "current_hierarchy": 0.947775188330518,
+          "hierarchical_glm": 0.9477448234766591,
+          "hierarchical_glm_interactions": 0.9477104478456179
+        },
+        "delta_roc_auc": {
+          "current_hierarchy": 0.0,
+          "hierarchical_glm": -3.036485385887744e-05,
+          "hierarchical_glm_interactions": -6.474048490012763e-05
+        },
+        "standalone_roc_auc": {
+          "hierarchical_glm": 0.9422593541006558,
+          "hierarchical_glm_interactions": 0.9420422040828369
+        },
+        "added_logit_weights": {
+          "hierarchical_glm": 0.035326328740094275,
+          "hierarchical_glm_interactions": 0.05325806655889842
+        }
+      },
+      {
+        "fold": 8,
+        "rows": 59496,
+        "positive_negative_pairs": 58093479,
+        "roc_auc": {
+          "current_hierarchy": 0.9545534189818446,
+          "hierarchical_glm": 0.9545618880907442,
+          "hierarchical_glm_interactions": 0.9545645562043202
+        },
+        "delta_roc_auc": {
+          "current_hierarchy": 0.0,
+          "hierarchical_glm": 8.469108899511468e-06,
+          "hierarchical_glm_interactions": 1.1137222475587905e-05
+        },
+        "standalone_roc_auc": {
+          "hierarchical_glm": 0.950214326120837,
+          "hierarchical_glm_interactions": 0.9502847643192448
+        },
+        "added_logit_weights": {
+          "hierarchical_glm": 0.014642085268481589,
+          "hierarchical_glm_interactions": 0.04012446502335593
+        }
+      },
+      {
+        "fold": 9,
+        "rows": 59496,
+        "positive_negative_pairs": 58093479,
+        "roc_auc": {
+          "current_hierarchy": 0.9510927035373454,
+          "hierarchical_glm": 0.9510899493555893,
+          "hierarchical_glm_interactions": 0.951090810037388
+        },
+        "delta_roc_auc": {
+          "current_hierarchy": 0.0,
+          "hierarchical_glm": -2.7541817561038684e-06,
+          "hierarchical_glm_interactions": -1.8934999573838596e-06
+        },
+        "standalone_roc_auc": {
+          "hierarchical_glm": 0.9452306858743991,
+          "hierarchical_glm_interactions": 0.9453536600898012
+        },
+        "added_logit_weights": {
+          "hierarchical_glm": 0.052281065455024006,
+          "hierarchical_glm_interactions": 0.07222574430577447
+        }
+      },
+      {
+        "fold": 10,
+        "rows": 59496,
+        "positive_negative_pairs": 58093479,
+        "roc_auc": {
+          "current_hierarchy": 0.9528882234785767,
+          "hierarchical_glm": 0.9528584783156127,
+          "hierarchical_glm_interactions": 0.9528307815753295
+        },
+        "delta_roc_auc": {
+          "current_hierarchy": 0.0,
+          "hierarchical_glm": -2.9745162964056604e-05,
+          "hierarchical_glm_interactions": -5.744190324719067e-05
+        },
+        "standalone_roc_auc": {
+          "hierarchical_glm": 0.9470485663287613,
+          "hierarchical_glm_interactions": 0.9468286449155507
+        },
+        "added_logit_weights": {
+          "hierarchical_glm": 0.053642173625344035,
+          "hierarchical_glm_interactions": 0.06873244905588098
+        }
+      }
+    ],
+    "pair_weighted_roc_auc": {
+      "current_hierarchy": 0.9505407329676282,
+      "hierarchical_glm": 0.9505366265539378,
+      "hierarchical_glm_interactions": 0.950519504167905
+    },
+    "pair_weighted_delta_roc_auc": {
+      "current_hierarchy": 0.0,
+      "hierarchical_glm": -4.106413690388482e-06,
+      "hierarchical_glm_interactions": -2.122879972327064e-05
+    },
+    "pair_weighted_standalone_roc_auc": {
+      "hierarchical_glm": 0.9448558651203127,
+      "hierarchical_glm_interactions": 0.944714611026595
+    }
+  },
+  "standalone_holdout_roc_auc": {
+    "hierarchical_glm": 0.9465039054025159,
+    "hierarchical_glm_interactions": 0.9465996886874715
+  },
+  "elapsed_seconds": 151.0281335999989
+}

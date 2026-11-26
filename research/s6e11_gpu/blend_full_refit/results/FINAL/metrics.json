@@ -1,0 +1,60 @@
+{
+  "name": "FINAL",
+  "input_manifest": {
+    "smoke": false,
+    "rows": 699960,
+    "test_rows": 299984,
+    "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+    "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+    "inputs": {
+      "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+      "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+      "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+    },
+    "models_use_llm": false
+  },
+  "members": [
+    {
+      "predictions": "blend_full_refit\\results\\base_models\\GLM-NEWTON\\predictions.npz",
+      "predictions_sha256": "966c051119c139445d3f3e0f3f2a7c83a3e277893747941b23cf95223e53db9a",
+      "model_sha256": "0dd31a1d9ef52063e21b760c6a8b86243b11ccb2a7b139b48266de3b33844e5a",
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "rounds": 0,
+      "name": "GLM-NEWTON"
+    },
+    {
+      "predictions": "single_full_refit\\results\\XGB-D03\\predictions.npz",
+      "predictions_sha256": "955d94e941a793afc63a8b4e00751fbf734bfec10dabc4623795d593a0ef9825",
+      "model_sha256": "e337f3aa7a01b64418cf5ea47a78fe929eefde844e12f194e9d78b7e3e075f70",
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "rounds": 2131,
+      "name": "XGB-D03"
+    }
+  ],
+  "blend": {
+    "meta_model_state": {
+      "coefficients": [
+        0.4372134325274793,
+        1.7125129832674721
+      ],
+      "intercept": -6.395628068329739,
+      "standardize_cols": [
+        0,
+        1
+      ],
+      "center": [
+        -6.389346490917665,
+        -6.2330836257699405
+      ],
+      "scale": [
+        2.181674607866595,
+        2.0483966583080675
+      ]
+    }
+  },
+  "reference_oof_auc": 0.9503452077073289,
+  "test_spearman_vs_fold_mean": 0.9981251669508072,
+  "test_mean_abs_delta_vs_fold_mean": 0.0010389065970362692,
+  "submission": "results\\FINAL\\FINAL_FULLREFIT_submission.csv",
+  "submission_sha256": "d4e52824286c9fa70ba4be29d6a1e35e22756e475500017d4c55f448434177c8"
+}

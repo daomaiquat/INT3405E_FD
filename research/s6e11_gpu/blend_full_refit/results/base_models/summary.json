@@ -1,0 +1,376 @@
+[
+  {
+    "protocol": {
+      "fit_protocol": "full_train_once_using_cv_median_rounds",
+      "input_manifest": {
+        "smoke": false,
+        "rows": 699960,
+        "test_rows": 299984,
+        "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+        "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+        "inputs": {
+          "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+          "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+          "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+        },
+        "models_use_llm": false
+      },
+      "name": "XGB-D03-S71",
+      "spec": {
+        "name": "XGB-D03-S71",
+        "family": "xgb",
+        "groups": [
+          "raw",
+          "te13",
+          "cents",
+          "digits"
+        ],
+        "parent": "XGB-D03",
+        "smoothing": 20.0,
+        "model_seed": 71,
+        "encoder_seed": 2026,
+        "params": {
+          "learning_rate": 0.03,
+          "max_iterations": 6000,
+          "max_depth": 2,
+          "min_child_weight": 5,
+          "subsample": 0.9,
+          "colsample_bytree": 0.9,
+          "reg_lambda": 1.0,
+          "tree_method": "hist"
+        },
+        "boost": false,
+        "rounds_factor": 1.0
+      },
+      "reference_metrics_sha256": "302448aae877df27af2ca3c914a13a6ea31e7e9c7f6fe6ed47f533a2cb34c694",
+      "reference_predictions_sha256": "8f203fe5787932517c5153a82cc543419b46324aca61d0f2f8fd2b03fb9ff5b8",
+      "reference_oof_auc": 0.9500741491784959,
+      "rounds_from_folds": [
+        2058,
+        1585,
+        1512,
+        1852,
+        2022
+      ],
+      "rounds": 1852,
+      "weighting": null
+    },
+    "fit": {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 9.763601200000267,
+      "rounds": 1852,
+      "early_auc": null,
+      "settings": {
+        "max_bin": 256,
+        "nthread": 4,
+        "learning_rate": 0.03,
+        "max_depth": 2,
+        "min_child_weight": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 1.0,
+        "tree_method": "hist",
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "device": "cuda:0",
+        "seed": 71
+      },
+      "version": "3.4.1"
+    },
+    "total_seconds": 21.690174799994566,
+    "model_sha256": "592b63c0056efbeb1142d40ed552b6eb90557f627d2b1c6d2333ddda4cf6f282",
+    "predictions_sha256": "6fde022dce0425dafc40b33a3fdf5ea8948eb00d326f8ad4fea7f6830c4a9767",
+    "replay_max_abs_delta": 4.76837158203125e-06,
+    "test_spearman_vs_fold_mean": 0.997600619301619,
+    "test_mean_abs_delta_vs_fold_mean": 0.001158837876998358,
+    "submission": "base_models\\XGB-D03-S71\\XGB-D03-S71_FULLREFIT_submission.csv"
+  },
+  {
+    "protocol": {
+      "fit_protocol": "full_train_once_using_cv_median_rounds",
+      "input_manifest": {
+        "smoke": false,
+        "rows": 699960,
+        "test_rows": 299984,
+        "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+        "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+        "inputs": {
+          "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+          "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+          "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+        },
+        "models_use_llm": false
+      },
+      "name": "XGB-D03-S93",
+      "spec": {
+        "name": "XGB-D03-S93",
+        "family": "xgb",
+        "groups": [
+          "raw",
+          "te13",
+          "cents",
+          "digits"
+        ],
+        "parent": "XGB-D03",
+        "smoothing": 20.0,
+        "model_seed": 42,
+        "encoder_seed": 2028,
+        "params": {
+          "learning_rate": 0.03,
+          "max_iterations": 6000,
+          "max_depth": 2,
+          "min_child_weight": 5,
+          "subsample": 0.9,
+          "colsample_bytree": 0.9,
+          "reg_lambda": 1.0,
+          "tree_method": "hist"
+        },
+        "boost": false,
+        "rounds_factor": 1.0
+      },
+      "reference_metrics_sha256": "8dcf571738648aa6adc8793c0b006331ab9e36b97ee76ab099d8df7a2e39415e",
+      "reference_predictions_sha256": "b8c696010cb0a706197761057d44a6f8c02593a1cce4083e6a5606a38d11ef51",
+      "reference_oof_auc": 0.9500914153750917,
+      "rounds_from_folds": [
+        2104,
+        1350,
+        2281,
+        2773,
+        1467
+      ],
+      "rounds": 2104,
+      "weighting": null
+    },
+    "fit": {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 10.300966000002518,
+      "rounds": 2104,
+      "early_auc": null,
+      "settings": {
+        "max_bin": 256,
+        "nthread": 4,
+        "learning_rate": 0.03,
+        "max_depth": 2,
+        "min_child_weight": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 1.0,
+        "tree_method": "hist",
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "device": "cuda:0",
+        "seed": 42
+      },
+      "version": "3.4.1"
+    },
+    "total_seconds": 21.21871739999915,
+    "model_sha256": "450aec2aa19396b6837de039d87e22b613ed83d46322383a87ccda953d094d1c",
+    "predictions_sha256": "855c20441c0fe3534221b648f91166eaaba16dd78459dd2f5c5117702c6d6afb",
+    "replay_max_abs_delta": 3.874301910400391e-06,
+    "test_spearman_vs_fold_mean": 0.9967018895411844,
+    "test_mean_abs_delta_vs_fold_mean": 0.0013057319114222201,
+    "submission": "base_models\\XGB-D03-S93\\XGB-D03-S93_FULLREFIT_submission.csv"
+  },
+  {
+    "protocol": {
+      "fit_protocol": "full_train_once_using_cv_median_rounds",
+      "input_manifest": {
+        "smoke": false,
+        "rows": 699960,
+        "test_rows": 299984,
+        "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+        "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+        "inputs": {
+          "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+          "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+          "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+        },
+        "models_use_llm": false
+      },
+      "name": "XGB-D03-S103-E2032",
+      "spec": {
+        "name": "XGB-D03-S103-E2032",
+        "family": "xgb",
+        "groups": [
+          "raw",
+          "te13",
+          "cents",
+          "digits"
+        ],
+        "parent": "SEED3-MEAN",
+        "smoothing": 20.0,
+        "model_seed": 103,
+        "encoder_seed": 2032,
+        "params": {
+          "learning_rate": 0.03,
+          "max_iterations": 6000,
+          "max_depth": 2,
+          "min_child_weight": 5,
+          "subsample": 0.9,
+          "colsample_bytree": 0.9,
+          "reg_lambda": 1.0,
+          "tree_method": "hist"
+        },
+        "boost": false,
+        "rounds_factor": 1.0
+      },
+      "reference_metrics_sha256": "553534da13c8c403090fb53aad563bdc31c42faa92d5180d395b541114020339",
+      "reference_predictions_sha256": "ff81ee0a7d1c92b251003c8a6ea468a048f8633547d4de31f14e1e170e526a25",
+      "reference_oof_auc": 0.9501214762198746,
+      "rounds_from_folds": [
+        2249,
+        1572,
+        1641,
+        3135,
+        1911
+      ],
+      "rounds": 1911,
+      "weighting": null
+    },
+    "fit": {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 9.80576260000089,
+      "rounds": 1911,
+      "early_auc": null,
+      "settings": {
+        "max_bin": 256,
+        "nthread": 4,
+        "learning_rate": 0.03,
+        "max_depth": 2,
+        "min_child_weight": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 1.0,
+        "tree_method": "hist",
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "device": "cuda:0",
+        "seed": 103
+      },
+      "version": "3.4.1"
+    },
+    "total_seconds": 15.398763099998177,
+    "model_sha256": "5576ca0cf2db7c530ead33545740441396020f98961c23e6f42025d33072f846",
+    "predictions_sha256": "420d14692b2bf79ecdbab4464951738450ea772b1967de67eb9dcb8f5afee920",
+    "replay_max_abs_delta": 2.7418136596679688e-06,
+    "test_spearman_vs_fold_mean": 0.9970039009589061,
+    "test_mean_abs_delta_vs_fold_mean": 0.001237881712276971,
+    "submission": "base_models\\XGB-D03-S103-E2032\\XGB-D03-S103-E2032_FULLREFIT_submission.csv"
+  },
+  {
+    "protocol": {
+      "fit_protocol": "full_train_once_using_cv_median_rounds",
+      "input_manifest": {
+        "smoke": false,
+        "rows": 699960,
+        "test_rows": 299984,
+        "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+        "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+        "inputs": {
+          "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+          "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+          "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+        },
+        "models_use_llm": false
+      },
+      "name": "GLM-NEWTON",
+      "spec": {
+        "name": "GLM-NEWTON",
+        "family": "glm",
+        "groups": [
+          "glm_raw",
+          "te13",
+          "p1",
+          "p2"
+        ],
+        "parent": "P1-P2",
+        "smoothing": 20.0,
+        "model_seed": 42,
+        "encoder_seed": 2026,
+        "params": {
+          "C": 1.0,
+          "max_iter": 2000,
+          "tol": 0.0001,
+          "solver": "newton-cholesky"
+        },
+        "boost": false,
+        "rounds_factor": 1.0
+      },
+      "reference_metrics_sha256": "2ce5e37b5ab3454cfb067a53a3a9e12c1ab33be0ac3f58ef82ab62ce3a8d8a40",
+      "reference_predictions_sha256": "08d78e08eb6b59b740cf332bfd226d0b88e1af5b1b3fae08fe621eec06565b55",
+      "reference_oof_auc": 0.9476564123068973,
+      "rounds_from_folds": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "rounds": 0,
+      "weighting": null
+    },
+    "fit": {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 1.8017456000015954,
+      "rounds": 0,
+      "iterations": 6,
+      "converged": true,
+      "gradient_inf_norm": 4.41339331466623e-05,
+      "objective": 0.04513177234669048,
+      "stop_reason": "gradient tolerance",
+      "settings": {
+        "C": 1.0,
+        "max_iter": 2000,
+        "tol": 0.0001,
+        "solver": "newton-cholesky",
+        "dtype": "float64",
+        "standardize_cols": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          19,
+          20,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76
+        ]
+      },
+      "version": "2.11.0+cu128"
+    },
+    "total_seconds": 5.701113099996292,
+    "model_sha256": "0dd31a1d9ef52063e21b760c6a8b86243b11ccb2a7b139b48266de3b33844e5a",
+    "predictions_sha256": "966c051119c139445d3f3e0f3f2a7c83a3e277893747941b23cf95223e53db9a",
+    "replay_max_abs_delta": 7.771561172376096e-16,
+    "test_spearman_vs_fold_mean": 0.999462262367741,
+    "test_mean_abs_delta_vs_fold_mean": 0.00047321783370218883,
+    "submission": "base_models\\GLM-NEWTON\\GLM-NEWTON_FULLREFIT_submission.csv"
+  }
+]

@@ -1,0 +1,128 @@
+{
+  "name": "XGB-HARD",
+  "status": "completed",
+  "config": {
+    "name": "XGB-HARD",
+    "family": "xgb",
+    "groups": [
+      "raw",
+      "te13",
+      "cents",
+      "digits"
+    ],
+    "parent": "XGB-D03",
+    "smoothing": 20.0,
+    "model_seed": 42,
+    "encoder_seed": 2026,
+    "params": {
+      "learning_rate": 0.03,
+      "max_iterations": 6000,
+      "max_depth": 2,
+      "min_child_weight": 5,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "tree_method": "hist"
+    },
+    "boost": false,
+    "rounds_factor": 1.0,
+    "scale_pos_weight": 1,
+    "source": {
+      "baseline": "XGB-D03",
+      "baseline_path": "D:\\UET\\ML\\Predicting Credit Card Fraud\\s6e11_gpu\\plan_runs\\results\\full\\XGB-D03",
+      "config_sha256": "a5f5f143c41e298e52918df8cb5b9a0ed5b8107f37bab7f2a9815de8f18bfb12",
+      "metrics_sha256": "35159c8d9aebcc617788986f74524bbcf00d6e6f733de4fabbc3141de08b6870",
+      "predictions_sha256": "4ae9d89fd64dfb05eafb788039f321aa6db573adad65f69b0875ceec71f6e6e2",
+      "source_manifest_sha256": "022a61514a0bb4be423877f411fab50ca6425ad3b8da94abd671abe1d2adf759",
+      "inner_seed": 2026,
+      "inner_checkpoint_sha256_by_fold": [
+        [],
+        []
+      ],
+      "baseline_oof_auc": null,
+      "fixed_rounds_by_fold": [
+        12,
+        12
+      ]
+    },
+    "negative_fraction": 0.1,
+    "negative_weight": 3.0
+  },
+  "smoke": true,
+  "rows": 20000,
+  "test_rows": 1000,
+  "fold_hash": "cd67af60425b68fa336439a7dc862b3c43b938d889e1668fd43d126a63e39684",
+  "early_stop_hash": "c2128f0d58f689f0ef296e99c82853080e25e9c67cdebcad6313ab4c3d974eec",
+  "inputs": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "models_use_llm": false,
+  "oof_auc": 0.8715532932913792,
+  "average_precision": 0.2363814629116266,
+  "log_loss": 0.07826115868856719,
+  "fold_mean": 0.8707569098556676,
+  "fold_std": 0.005695717280987667,
+  "folds": [
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "rounds": 12,
+      "fit_seconds": 0.0741931000011391,
+      "settings": {
+        "max_bin": 256,
+        "nthread": 4,
+        "learning_rate": 0.03,
+        "max_depth": 2,
+        "min_child_weight": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 1.0,
+        "tree_method": "hist",
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "device": "cuda:0",
+        "seed": 42
+      },
+      "version": "3.4.1",
+      "fold": 1,
+      "auc": 0.8650611925746798,
+      "seconds": 0.09343109999463195,
+      "train_rows": 10000,
+      "valid_rows": 10000,
+      "negatives_upweighted": 983,
+      "upweighted_id_sha256": "e04e61e2b469af73930408429fd686c0d1f1fd46bde345494a9a50f3e4ed4046",
+      "source_baseline": "XGB-D03"
+    },
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "rounds": 12,
+      "fit_seconds": 0.07522330000210786,
+      "settings": {
+        "max_bin": 256,
+        "nthread": 4,
+        "learning_rate": 0.03,
+        "max_depth": 2,
+        "min_child_weight": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 1.0,
+        "tree_method": "hist",
+        "objective": "binary:logistic",
+        "eval_metric": "auc",
+        "device": "cuda:0",
+        "seed": 42
+      },
+      "version": "3.4.1",
+      "fold": 2,
+      "auc": 0.8764526271366552,
+      "seconds": 0.09319010000035632,
+      "train_rows": 10000,
+      "valid_rows": 10000,
+      "negatives_upweighted": 983,
+      "upweighted_id_sha256": "abb1010e13eab4a4bed628797bbfe1a7ad26ad88256ec30602ba9a66f1fdce0f",
+      "source_baseline": "XGB-D03"
+    }
+  ],
+  "seconds": 0.18662119999498827
+}

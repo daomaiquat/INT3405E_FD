@@ -1,0 +1,63 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "relations_in_tier_order": [
+    [
+      "velocity_score",
+      "hours_since_last_txn",
+      [
+        "txn_count_last_24h",
+        "auth_method",
+        "channel"
+      ]
+    ],
+    [
+      "amount_usd",
+      "merchant_risk_score",
+      [
+        "merchant_category",
+        "is_new_merchant",
+        "billing_shipping_mismatch"
+      ]
+    ]
+  ],
+  "features_per_relation": [
+    "joint_distance",
+    "signed_residual",
+    "rank_product"
+  ],
+  "xgb_rounds": 224,
+  "xgb_settings": {
+    "objective": "binary:logistic",
+    "tree_method": "hist",
+    "max_depth": 3,
+    "min_child_weight": 35,
+    "max_bin": 512,
+    "eta": 0.025,
+    "reg_lambda": 40,
+    "reg_alpha": 1.5,
+    "subsample": 0.9,
+    "colsample_bytree": 0.85,
+    "nthread": 4,
+    "seed": 8337
+  },
+  "variants": {
+    "joint_context": {
+      "filename": "submission_grandmaster_eda_joint_context.csv",
+      "sha256": "c6eaf5035741a04f51ff02cb742ef5cc724ab51e7c61731b99f46750c353932f",
+      "rows": 299984,
+      "ensemble_log_odds_weight_of_new_branch": 0.85
+    },
+    "joint_context_half": {
+      "filename": "submission_grandmaster_eda_joint_context_half.csv",
+      "sha256": "cca911d50ffc5bee298b373ad49f2bd71a8519eb95d8a9dda5fcb68687afb719",
+      "rows": 299984,
+      "ensemble_log_odds_weight_of_new_branch": 0.425
+    }
+  },
+  "parent_sha256": "9aa21cdd324a0913c8f029dc4ebe1efcd3f51a8323c77ce93f13f283eba6f3d0",
+  "replay_max_margin_error": 1.9073486328125e-06
+}

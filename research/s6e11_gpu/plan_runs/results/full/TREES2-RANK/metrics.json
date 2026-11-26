@@ -1,0 +1,63 @@
+{
+  "name": "TREES2-RANK",
+  "status": "completed",
+  "config": {
+    "members": [
+      "D03",
+      "XGB-D03"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "parent": "XGB-D03",
+    "rank": true
+  },
+  "smoke": false,
+  "rows": 699960,
+  "test_rows": 299984,
+  "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+  "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+  "inputs": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "models_use_llm": false,
+  "oof_auc": 0.9502673111327395,
+  "average_precision": 0.5288926743513562,
+  "log_loss": 0.9312365607741018,
+  "fold_mean": 0.9503232691286563,
+  "fold_std": 0.0033828786513605894,
+  "folds": [
+    {
+      "fold": 1,
+      "auc": 0.9498450612649713
+    },
+    {
+      "fold": 2,
+      "auc": 0.9510507217840273
+    },
+    {
+      "fold": 3,
+      "auc": 0.9550043852898906
+    },
+    {
+      "fold": 4,
+      "auc": 0.951204309777917
+    },
+    {
+      "fold": 5,
+      "auc": 0.9445118675264745
+    }
+  ],
+  "seconds": 0.0,
+  "delta_oof_auc": 8.500764727903398e-05,
+  "delta_by_fold": [
+    -6.628852212142711e-06,
+    0.00016654028101315,
+    4.764552495040153e-05,
+    0.00021384867674401065,
+    -9.139464398666419e-05
+  ]
+}

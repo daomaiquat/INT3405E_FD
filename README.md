@@ -2,6 +2,8 @@
 
 Dự án phát hiện gian lận thẻ tín dụng trên Kaggle Playground Series S6E11. Đặt dữ liệu gốc trong `data/`. Kế hoạch đầy đủ ở [plan.md](plan.md).
 
+**Hồ sơ nghiên cứu đầy đủ** ghi các phase từ baseline đến Grandmaster EDA, EDA sâu và bản phát hành mới nhất. [Bộ tài liệu](research/docs/README.md) · [Mã xác minh và CSV](research/README.md)
+
 Kết quả GPU local mới nhất đạt **OOF ROC AUC 0.950345** với GLM-NEWTON và XGBoost D03 qua xác nhận lồng nhau 5×5. [Báo cáo kết quả GPU](s6e11_gpu/plan_runs/published/full/comparison.md)
 
 Mã và notebook được đặt tên theo vòng thử, mô hình và phương pháp. [Danh mục mã mô hình S6E11](s6e11_gpu/README.md)

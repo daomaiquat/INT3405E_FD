@@ -1,0 +1,260 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "rows": 594966,
+  "fit_reference_rows": 104994,
+  "variants": {
+    "current": {
+      "roc_auc": 0.9500268564960389,
+      "average_precision": 0.5299529131067189,
+      "log_loss": 0.0443941066679834,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "brier": 0.010743071410940589,
+      "pair_weighted_delta_auc": 0.0,
+      "auc_wins": 0,
+      "logloss_wins": 0
+    },
+    "shrink_only": {
+      "roc_auc": 0.9501470010084955,
+      "average_precision": 0.530483351015973,
+      "log_loss": 0.0443523708036616,
+      "delta_auc": 0.00012014451245634383,
+      "ci95_low": 9.495449545264348e-05,
+      "ci95_high": 0.00014533452946004417,
+      "brier": 0.010736089959259154,
+      "pair_weighted_delta_auc": 0.00011889160039492549,
+      "auc_wins": 10,
+      "logloss_wins": 10
+    },
+    "soft_targets": {
+      "roc_auc": 0.9501537447650881,
+      "average_precision": 0.5305148881036386,
+      "log_loss": 0.04435048238808843,
+      "delta_auc": 0.0001268882690491635,
+      "ci95_low": 9.856523155484966e-05,
+      "ci95_high": 0.00015521130654347733,
+      "brier": 0.010735773165152552,
+      "pair_weighted_delta_auc": 0.00012738053979805995,
+      "auc_wins": 10,
+      "logloss_wins": 10
+    }
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "pairs": 58151982,
+      "metrics": {
+        "current": {
+          "roc_auc": 0.9447009561944079,
+          "average_precision": 0.5151732414799183,
+          "log_loss": 0.046021678000389935
+        },
+        "shrink_only": {
+          "roc_auc": 0.9448634957962396,
+          "average_precision": 0.5156809688054594,
+          "log_loss": 0.04597562314474283
+        },
+        "soft_targets": {
+          "roc_auc": 0.944883753059354,
+          "average_precision": 0.5157415738305136,
+          "log_loss": 0.045972719628369206
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "pairs": 58151982,
+      "metrics": {
+        "current": {
+          "roc_auc": 0.9490414789301593,
+          "average_precision": 0.537105374956139,
+          "log_loss": 0.04408510338890473
+        },
+        "shrink_only": {
+          "roc_auc": 0.9491631600793934,
+          "average_precision": 0.5373661732375916,
+          "log_loss": 0.04405511184298174
+        },
+        "soft_targets": {
+          "roc_auc": 0.9491655073768596,
+          "average_precision": 0.5373538031410015,
+          "log_loss": 0.04405552326137788
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "pairs": 58151982,
+      "metrics": {
+        "current": {
+          "roc_auc": 0.9500596643464361,
+          "average_precision": 0.5269747094052075,
+          "log_loss": 0.04445232029042652
+        },
+        "shrink_only": {
+          "roc_auc": 0.950172996683071,
+          "average_precision": 0.5277666938558525,
+          "log_loss": 0.04440626386464181
+        },
+        "soft_targets": {
+          "roc_auc": 0.9501688179776916,
+          "average_precision": 0.5277592643335826,
+          "log_loss": 0.044406745418972667
+        }
+      }
+    },
+    {
+      "fold": 4,
+      "pairs": 58151982,
+      "metrics": {
+        "current": {
+          "roc_auc": 0.9519522911532062,
+          "average_precision": 0.5161070834696325,
+          "log_loss": 0.04467229834417152
+        },
+        "shrink_only": {
+          "roc_auc": 0.9520554604656467,
+          "average_precision": 0.5167087587467492,
+          "log_loss": 0.04462508083188417
+        },
+        "soft_targets": {
+          "roc_auc": 0.9520798448451854,
+          "average_precision": 0.5167677609691129,
+          "log_loss": 0.044624458702825026
+        }
+      }
+    },
+    {
+      "fold": 5,
+      "pairs": 58151982,
+      "metrics": {
+        "current": {
+          "roc_auc": 0.9520139313566303,
+          "average_precision": 0.5450218037100361,
+          "log_loss": 0.043474939982553765
+        },
+        "shrink_only": {
+          "roc_auc": 0.9521341508187975,
+          "average_precision": 0.5457510821864596,
+          "log_loss": 0.043428648611840086
+        },
+        "soft_targets": {
+          "roc_auc": 0.9521351138126297,
+          "average_precision": 0.5458013229607565,
+          "log_loss": 0.043427000318049705
+        }
+      }
+    },
+    {
+      "fold": 6,
+      "pairs": 58151982,
+      "metrics": {
+        "current": {
+          "roc_auc": 0.948650683995603,
+          "average_precision": 0.5299590888531107,
+          "log_loss": 0.04460921771296309
+        },
+        "shrink_only": {
+          "roc_auc": 0.9487078015672794,
+          "average_precision": 0.5305937753235448,
+          "log_loss": 0.04456729931093574
+        },
+        "soft_targets": {
+          "roc_auc": 0.9487102606408153,
+          "average_precision": 0.5307218971117874,
+          "log_loss": 0.04456110430607944
+        }
+      }
+    },
+    {
+      "fold": 7,
+      "pairs": 58093479,
+      "metrics": {
+        "current": {
+          "roc_auc": 0.9465183949475638,
+          "average_precision": 0.5239304677045328,
+          "log_loss": 0.045075869933126185
+        },
+        "shrink_only": {
+          "roc_auc": 0.9467133824090652,
+          "average_precision": 0.5243574443278067,
+          "log_loss": 0.04502610898843344
+        },
+        "soft_targets": {
+          "roc_auc": 0.9467291845268898,
+          "average_precision": 0.5243549551913483,
+          "log_loss": 0.04502920125364918
+        }
+      }
+    },
+    {
+      "fold": 8,
+      "pairs": 58093479,
+      "metrics": {
+        "current": {
+          "roc_auc": 0.9541793322448463,
+          "average_precision": 0.5475523074573723,
+          "log_loss": 0.04291538959913905
+        },
+        "shrink_only": {
+          "roc_auc": 0.9542750400608645,
+          "average_precision": 0.5479108899165632,
+          "log_loss": 0.04287867115958741
+        },
+        "soft_targets": {
+          "roc_auc": 0.9542920299195715,
+          "average_precision": 0.5480981279462732,
+          "log_loss": 0.042869804742981764
+        }
+      }
+    },
+    {
+      "fold": 9,
+      "pairs": 58093479,
+      "metrics": {
+        "current": {
+          "roc_auc": 0.9507544383768101,
+          "average_precision": 0.5277220612678589,
+          "log_loss": 0.044521659761496704
+        },
+        "shrink_only": {
+          "roc_auc": 0.9508634179061646,
+          "average_precision": 0.5281946994501051,
+          "log_loss": 0.04449063954546131
+        },
+        "soft_targets": {
+          "roc_auc": 0.9508634006925285,
+          "average_precision": 0.5282023749614185,
+          "log_loss": 0.04449317469482842
+        }
+      }
+    },
+    {
+      "fold": 10,
+      "pairs": 58093479,
+      "metrics": {
+        "current": {
+          "roc_auc": 0.9525218140232228,
+          "average_precision": 0.5323715178375853,
+          "log_loss": 0.044112573683777724
+        },
+        "shrink_only": {
+          "roc_auc": 0.9526330313252541,
+          "average_precision": 0.5329486465234946,
+          "log_loss": 0.0440702448728093
+        },
+        "soft_targets": {
+          "roc_auc": 0.9526389183887576,
+          "average_precision": 0.5330800699500169,
+          "log_loss": 0.04406507567609023
+        }
+      }
+    }
+  ],
+  "seconds": 97.88963639999929
+}

@@ -1,0 +1,50 @@
+{
+  "name": "SEED3-RANK",
+  "status": "completed",
+  "config": {
+    "members": [
+      "GLM-C0.3",
+      "GLM-C0.3-S71",
+      "GLM-C0.3-S93"
+    ],
+    "weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "parent": "GLM-C0.3",
+    "rank": true
+  },
+  "smoke": true,
+  "rows": 20000,
+  "test_rows": 1000,
+  "fold_hash": "cd67af60425b68fa336439a7dc862b3c43b938d889e1668fd43d126a63e39684",
+  "early_stop_hash": "c2128f0d58f689f0ef296e99c82853080e25e9c67cdebcad6313ab4c3d974eec",
+  "inputs": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "models_use_llm": false,
+  "oof_auc": 0.9401372684306968,
+  "average_precision": 0.48408156549018155,
+  "log_loss": 0.931278873819973,
+  "fold_mean": 0.9404050639694881,
+  "fold_std": 0.0027418974722171474,
+  "folds": [
+    {
+      "fold": 1,
+      "auc": 0.9376631664972709
+    },
+    {
+      "fold": 2,
+      "auc": 0.9431469614417052
+    }
+  ],
+  "seconds": 0.0,
+  "delta_oof_auc": 0.00035746669987590796,
+  "delta_by_fold": [
+    0.00048778675741156796,
+    7.55125567029058e-05
+  ]
+}

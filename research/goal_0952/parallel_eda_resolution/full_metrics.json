@@ -1,0 +1,53 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "rows": 299984,
+  "fit_rows": 699960,
+  "pairs": [
+    [
+      "hours_since_last_txn",
+      "ip_country_mismatch"
+    ],
+    [
+      "merchant_risk_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "velocity_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "customer_age",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "account_balance_usd",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "account_balance_usd",
+      "is_foreign_transaction"
+    ]
+  ],
+  "control_replay_max_abs_logit": 1.9073486328125e-06,
+  "linear_coefficients": [
+    0.03312917446423213,
+    0.0,
+    0.021060996913363238,
+    0.03272947383490035,
+    0.0,
+    0.03500126150592542
+  ],
+  "rms_oof_features": [
+    0.009957883507013321,
+    0.009118665009737015,
+    0.011694611050188541,
+    0.008207456208765507,
+    0.007777080871164799,
+    0.010119877755641937
+  ],
+  "seconds": 85.94111100000009
+}

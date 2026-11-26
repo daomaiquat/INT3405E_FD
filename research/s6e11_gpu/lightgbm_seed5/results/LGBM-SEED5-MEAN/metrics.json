@@ -1,0 +1,220 @@
+{
+  "name": "LGBM-SEED5-MEAN",
+  "input_manifest": {
+    "smoke": false,
+    "rows": 699960,
+    "test_rows": 299984,
+    "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+    "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+    "inputs": {
+      "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+      "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+      "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+    },
+    "models_use_llm": false
+  },
+  "base_config": {
+    "name": "D03",
+    "family": "lgb",
+    "groups": [
+      "raw",
+      "te24",
+      "cents",
+      "digits"
+    ],
+    "parent": "T04",
+    "smoothing": 20.0,
+    "model_seed": 42,
+    "encoder_seed": 2026,
+    "params": {
+      "learning_rate": 0.03,
+      "max_iterations": 6000,
+      "num_leaves": 4,
+      "min_child_samples": 50,
+      "subsample": 0.9,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "metric": "auc"
+    },
+    "boost": false,
+    "rounds_factor": 1.0
+  },
+  "num_boost_rounds_per_member": 1563,
+  "rounds_source": "median of D03's original five fold refits",
+  "members": [
+    {
+      "predictions": "single_full_refit\\results\\D03\\predictions.npz",
+      "predictions_sha256": "e8da6be8e42d030584258a3c15a5a17fce503bc8745506b32f4d4e9c8c62458a",
+      "model_sha256": "5f3da51a7fd12cc8037aa2a3d5d1ef5671020e2c56ea10a4c5b47c2d6fe92271",
+      "device": "OpenCL 0:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "rounds": 1563,
+      "name": "D03",
+      "model_seed": 42,
+      "encoder_seed": 2026,
+      "training_rows": 699960,
+      "reused_full_refit": true
+    },
+    {
+      "name": "LGB-D03-S71-E2026",
+      "model_seed": 71,
+      "encoder_seed": 2026,
+      "training_rows": 699960,
+      "fit": {
+        "device": "OpenCL 0:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+        "fit_seconds": 17.454876899995725,
+        "rounds": 1563,
+        "early_auc": null,
+        "settings": {
+          "max_bin": 255,
+          "num_threads": 4,
+          "learning_rate": 0.03,
+          "num_leaves": 4,
+          "min_child_samples": 50,
+          "subsample": 0.9,
+          "subsample_freq": 1,
+          "colsample_bytree": 0.9,
+          "reg_lambda": 1.0,
+          "metric": "auc",
+          "objective": "binary",
+          "device_type": "gpu",
+          "gpu_platform_id": 0,
+          "gpu_device_id": 0,
+          "verbosity": 1,
+          "seed": 71
+        },
+        "version": "4.6.0"
+      },
+      "replay_max_abs_delta": 0.0,
+      "model_sha256": "a7ade46927dd807f099cbeb653c09929bcf73a6e66a6caa6fab1cb8843ae985a",
+      "predictions_sha256": "e3e96cf6c16af886b5cf595e9216370d132fc5e08d351ea523cf6a5ac46d9460",
+      "predictions": "lightgbm_seed5\\results\\LGB-D03-S71-E2026\\predictions.npz",
+      "seconds": 24.395896699999867
+    },
+    {
+      "name": "LGB-D03-S42-E2028",
+      "model_seed": 42,
+      "encoder_seed": 2028,
+      "training_rows": 699960,
+      "fit": {
+        "device": "OpenCL 0:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+        "fit_seconds": 25.881673200005025,
+        "rounds": 1563,
+        "early_auc": null,
+        "settings": {
+          "max_bin": 255,
+          "num_threads": 4,
+          "learning_rate": 0.03,
+          "num_leaves": 4,
+          "min_child_samples": 50,
+          "subsample": 0.9,
+          "subsample_freq": 1,
+          "colsample_bytree": 0.9,
+          "reg_lambda": 1.0,
+          "metric": "auc",
+          "objective": "binary",
+          "device_type": "gpu",
+          "gpu_platform_id": 0,
+          "gpu_device_id": 0,
+          "verbosity": 1,
+          "seed": 42
+        },
+        "version": "4.6.0"
+      },
+      "replay_max_abs_delta": 0.0,
+      "model_sha256": "e8766c3b4733f115240db17c075fcb699552ebe4ddfeafac69b5b83475ae1c7a",
+      "predictions_sha256": "0b9653238b14efd378b7d0fd207bb54dfb9e2c36920d940f68dfb0671fe80cd2",
+      "predictions": "lightgbm_seed5\\results\\LGB-D03-S42-E2028\\predictions.npz",
+      "seconds": 38.20337290000316
+    },
+    {
+      "name": "LGB-D03-S71-E2028",
+      "model_seed": 71,
+      "encoder_seed": 2028,
+      "training_rows": 699960,
+      "fit": {
+        "device": "OpenCL 0:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+        "fit_seconds": 18.493495599999733,
+        "rounds": 1563,
+        "early_auc": null,
+        "settings": {
+          "max_bin": 255,
+          "num_threads": 4,
+          "learning_rate": 0.03,
+          "num_leaves": 4,
+          "min_child_samples": 50,
+          "subsample": 0.9,
+          "subsample_freq": 1,
+          "colsample_bytree": 0.9,
+          "reg_lambda": 1.0,
+          "metric": "auc",
+          "objective": "binary",
+          "device_type": "gpu",
+          "gpu_platform_id": 0,
+          "gpu_device_id": 0,
+          "verbosity": 1,
+          "seed": 71
+        },
+        "version": "4.6.0"
+      },
+      "replay_max_abs_delta": 0.0,
+      "model_sha256": "a579d52d208cb14689de859dd4dd51f50cf1da0ea516d48ec3a6028f911ea62d",
+      "predictions_sha256": "11fa8cbe2db20b94e29dbbecf8168db98a6973ac4a3c1806f329c804a3258a50",
+      "predictions": "lightgbm_seed5\\results\\LGB-D03-S71-E2028\\predictions.npz",
+      "seconds": 23.52299309999944
+    },
+    {
+      "name": "LGB-D03-S103-E2032",
+      "model_seed": 103,
+      "encoder_seed": 2032,
+      "training_rows": 699960,
+      "fit": {
+        "device": "OpenCL 0:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+        "fit_seconds": 15.014990700001363,
+        "rounds": 1563,
+        "early_auc": null,
+        "settings": {
+          "max_bin": 255,
+          "num_threads": 4,
+          "learning_rate": 0.03,
+          "num_leaves": 4,
+          "min_child_samples": 50,
+          "subsample": 0.9,
+          "subsample_freq": 1,
+          "colsample_bytree": 0.9,
+          "reg_lambda": 1.0,
+          "metric": "auc",
+          "objective": "binary",
+          "device_type": "gpu",
+          "gpu_platform_id": 0,
+          "gpu_device_id": 0,
+          "verbosity": 1,
+          "seed": 103
+        },
+        "version": "4.6.0"
+      },
+      "replay_max_abs_delta": 0.0,
+      "model_sha256": "7f729920b1db4a29ebb32aa5e0b2469dbf4eb412262fc0618b05c35469587e9f",
+      "predictions_sha256": "9e0e05fa4a4812c837766a228b6eecb43bde10355db6e8d1bea06deeffe9ac8f",
+      "predictions": "lightgbm_seed5\\results\\LGB-D03-S103-E2032\\predictions.npz",
+      "seconds": 19.974779500000295
+    }
+  ],
+  "weights": [
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2
+  ],
+  "test_vs_D03_full": {
+    "spearman": 0.9991196387075512,
+    "mean_abs_probability_delta": 0.0007446669560785825
+  },
+  "test_vs_XGB_SEED5_full": {
+    "spearman": 0.9969242242203219,
+    "mean_abs_probability_delta": 0.0011638531041343054
+  },
+  "submission": "results\\LGBM-SEED5-MEAN\\LGBM-SEED5-MEAN_FULLREFIT_submission.csv",
+  "submission_sha256": "74d35d6f0c2c380d2335b33b212c4870b847543dc83ad011823bcb8112e5290f"
+}

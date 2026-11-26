@@ -1,0 +1,57 @@
+{
+  "model": "lightgbm-te",
+  "status": "completed",
+  "smoke": false,
+  "models_use_llm": false,
+  "rows": 699960,
+  "positives": 11689,
+  "train_sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+  "split_sha256": "e3629fd42119a82d148901274763f3b2291e4fe1ab53755f81de2dcfc9614f43",
+  "roc_auc": 0.9483225014267666,
+  "average_precision": 0.5164239001379847,
+  "fit_seconds": 82.4790800000003,
+  "wall_seconds": 103.24795969999991,
+  "folds": [
+    {
+      "device": "OpenCL 1:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 17.189942599999995,
+      "fold": 1,
+      "validation_rows": 139992,
+      "roc_auc": 0.9469531331755681
+    },
+    {
+      "device": "OpenCL 1:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 16.801394100000152,
+      "fold": 2,
+      "validation_rows": 139992,
+      "roc_auc": 0.9496916016469208
+    },
+    {
+      "device": "OpenCL 1:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 15.826985600000171,
+      "fold": 3,
+      "validation_rows": 139992,
+      "roc_auc": 0.9534714664952032
+    },
+    {
+      "device": "OpenCL 1:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 16.486945399999968,
+      "fold": 4,
+      "validation_rows": 139992,
+      "roc_auc": 0.9488521529966848
+    },
+    {
+      "device": "OpenCL 1:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 16.17381230000001,
+      "fold": 5,
+      "validation_rows": 139992,
+      "roc_auc": 0.9428252364506275
+    }
+  ],
+  "versions": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1",
+    "lightgbm": "4.6.0"
+  }
+}

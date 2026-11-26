@@ -1,0 +1,900 @@
+{
+  "scope": {
+    "train": "all rows and columns",
+    "test": "all rows and columns",
+    "sample_submission": "ID order and schema"
+  },
+  "schema": {
+    "train": {
+      "rows": 699960,
+      "column_count": 26,
+      "missing_cells": 0,
+      "non_finite_cells": 0
+    },
+    "test": {
+      "rows": 299984,
+      "column_count": 25,
+      "missing_cells": 0,
+      "non_finite_cells": 0
+    },
+    "sample": {
+      "rows": 299984,
+      "column_count": 2,
+      "missing_cells": 0,
+      "non_finite_cells": 0
+    }
+  },
+  "feature_counts": {
+    "numeric": 13,
+    "categorical": 5,
+    "flags": 6,
+    "total": 24
+  },
+  "test_has_label": false,
+  "train_labels": {
+    "raw_dtype": "float64",
+    "values": [
+      0.0,
+      1.0
+    ],
+    "class_counts": {
+      "0.0": 688271,
+      "1.0": 11689
+    },
+    "positive_rows": 11689,
+    "positive_rate": 0.016699525687182123,
+    "both_classes_present": true,
+    "cast_applied_by_runner": "int8"
+  },
+  "id_checks": {
+    "dtype": "int64",
+    "unique": {
+      "train": true,
+      "test": true,
+      "sample": true
+    },
+    "train_test_overlap": 0,
+    "sample_matches_test_order": true
+  },
+  "duplicate_features": {
+    "train_rows_in_duplicate_groups": 0,
+    "test_rows_in_duplicate_groups": 0,
+    "train_groups_with_conflicting_labels": 0,
+    "test_rows_identical_to_train": 0
+  },
+  "numeric": {
+    "amount_usd": {
+      "ks": 0.001533853221014514,
+      "standardized_mean_difference_test_minus_train": 0.00013820444773582206,
+      "train_mean": 79.89306786102063,
+      "test_mean": 79.92119527041443,
+      "train_min": 1.0,
+      "train_median": 27.25,
+      "train_max": 6872.69,
+      "test_min": 1.0,
+      "test_max": 6098.42,
+      "train_zero_rows": 0,
+      "test_zero_rows": 0,
+      "key_support": {
+        "train_distinct": 13387,
+        "test_distinct": 10509,
+        "train_rows_singletons": 3780,
+        "train_values_with_support_under_5": 6546,
+        "test_distinct_unseen": 1412,
+        "test_rows_unseen": 1617,
+        "test_rows_seen_once": 1151,
+        "test_rows_with_train_support_under_5": 5743,
+        "test_train_support_median": 240.0
+      },
+      "precision": {
+        "decimals": 2,
+        "test_cells_off_grid": 1,
+        "integer_fraction_train": 0.009370535459169096,
+        "integer_fraction_test": 0.00940383487119313,
+        "most_common_fraction_train": [
+          {
+            "fraction_key": "21",
+            "share": 0.01600520029715984
+          },
+          {
+            "fraction_key": "47",
+            "share": 0.014590833761929253
+          },
+          {
+            "fraction_key": "19",
+            "share": 0.014456540373735642
+          }
+        ]
+      }
+    },
+    "hours_since_last_txn": {
+      "ks": 0.0013774436752938546,
+      "standardized_mean_difference_test_minus_train": 0.001045200009826414,
+      "train_mean": 6.633734041945255,
+      "test_mean": 6.640316816896902,
+      "train_min": 0.01,
+      "train_median": 4.73,
+      "train_max": 51.98,
+      "test_min": 0.01,
+      "test_max": 51.87,
+      "train_zero_rows": 0,
+      "test_zero_rows": 0,
+      "key_support": {
+        "train_distinct": 3633,
+        "test_distinct": 3331,
+        "train_rows_singletons": 349,
+        "train_values_with_support_under_5": 808,
+        "test_distinct_unseen": 122,
+        "test_rows_unseen": 159,
+        "test_rows_seen_once": 170,
+        "test_rows_with_train_support_under_5": 928,
+        "test_train_support_median": 773.0
+      },
+      "precision": {
+        "decimals": 2,
+        "test_cells_off_grid": 0,
+        "integer_fraction_train": 0.004145951197211269,
+        "integer_fraction_test": 0.004383567123579925,
+        "most_common_fraction_train": [
+          {
+            "fraction_key": "59",
+            "share": 0.016785244871135495
+          },
+          {
+            "fraction_key": "44",
+            "share": 0.01663237899308532
+          },
+          {
+            "fraction_key": "63",
+            "share": 0.01635522029830276
+          }
+        ]
+      }
+    },
+    "txn_count_last_24h": {
+      "ks": 0.0006527631223174901,
+      "standardized_mean_difference_test_minus_train": -0.00019096520746474864,
+      "train_mean": 2.984091948111321,
+      "test_mean": 2.9838058029761587,
+      "train_min": 0.0,
+      "train_median": 3.0,
+      "train_max": 11.0,
+      "test_min": 0.0,
+      "test_max": 10.0,
+      "train_zero_rows": 18462,
+      "test_zero_rows": 7806,
+      "key_support": {
+        "train_distinct": 12,
+        "test_distinct": 11,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 131869.0
+      },
+      "precision": {
+        "decimals": 0,
+        "test_cells_off_grid": 0
+      }
+    },
+    "distance_from_home_km": {
+      "ks": 0.001969062938095012,
+      "standardized_mean_difference_test_minus_train": 0.0013186554425886022,
+      "train_mean": 13.587575147151265,
+      "test_mean": 13.602889920795777,
+      "train_min": 0.0,
+      "train_median": 10.22,
+      "train_max": 57.93,
+      "test_min": 0.0,
+      "test_max": 60.47,
+      "train_zero_rows": 12,
+      "test_zero_rows": 4,
+      "key_support": {
+        "train_distinct": 4365,
+        "test_distinct": 4108,
+        "train_rows_singletons": 272,
+        "train_values_with_support_under_5": 675,
+        "test_distinct_unseen": 100,
+        "test_rows_unseen": 129,
+        "test_rows_seen_once": 131,
+        "test_rows_with_train_support_under_5": 772,
+        "test_train_support_median": 417.0
+      },
+      "precision": {
+        "decimals": 2,
+        "test_cells_off_grid": 0,
+        "integer_fraction_train": 0.007264700840048002,
+        "integer_fraction_test": 0.006880366952904155,
+        "most_common_fraction_train": [
+          {
+            "fraction_key": "79",
+            "share": 0.016782387565003713
+          },
+          {
+            "fraction_key": "07",
+            "share": 0.015468026744385393
+          },
+          {
+            "fraction_key": "44",
+            "share": 0.014905137436424938
+          }
+        ]
+      }
+    },
+    "card_age_months": {
+      "ks": 0.002663803231095885,
+      "standardized_mean_difference_test_minus_train": -0.003981514146993322,
+      "train_mean": 46.86298217040974,
+      "test_mean": 46.84074817323591,
+      "train_min": 25.0,
+      "train_median": 47.0,
+      "train_max": 73.0,
+      "test_min": 24.0,
+      "test_max": 72.0,
+      "train_zero_rows": 0,
+      "test_zero_rows": 0,
+      "key_support": {
+        "train_distinct": 49,
+        "test_distinct": 49,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 2,
+        "test_distinct_unseen": 1,
+        "test_rows_unseen": 1,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 5,
+        "test_train_support_median": 40158.0
+      },
+      "precision": {
+        "decimals": 0,
+        "test_cells_off_grid": 0
+      }
+    },
+    "customer_age": {
+      "ks": 0.0007998577723257183,
+      "standardized_mean_difference_test_minus_train": -0.00033677422985683287,
+      "train_mean": 51.43028601634379,
+      "test_mean": 51.424259293829,
+      "train_min": 18.0,
+      "train_median": 52.0,
+      "train_max": 81.0,
+      "test_min": 18.0,
+      "test_max": 81.0,
+      "train_zero_rows": 0,
+      "test_zero_rows": 0,
+      "key_support": {
+        "train_distinct": 64,
+        "test_distinct": 64,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 12853.0
+      },
+      "precision": {
+        "decimals": 0,
+        "test_cells_off_grid": 0
+      }
+    },
+    "account_balance_usd": {
+      "ks": 0.0018576344377622123,
+      "standardized_mean_difference_test_minus_train": 0.001894505477937795,
+      "train_mean": 2064.9980703183037,
+      "test_mean": 2071.4679983932474,
+      "train_min": 58.25,
+      "train_median": 1382.74,
+      "train_max": 99701.39,
+      "test_min": 58.18,
+      "test_max": 88577.93,
+      "train_zero_rows": 0,
+      "test_zero_rows": 0,
+      "key_support": {
+        "train_distinct": 43317,
+        "test_distinct": 31803,
+        "train_rows_singletons": 15279,
+        "train_values_with_support_under_5": 26410,
+        "test_distinct_unseen": 5806,
+        "test_rows_unseen": 6668,
+        "test_rows_seen_once": 4788,
+        "test_rows_with_train_support_under_5": 22722,
+        "test_train_support_median": 74.0
+      },
+      "precision": {
+        "decimals": 2,
+        "test_cells_off_grid": 0,
+        "integer_fraction_train": 0.01704383107606149,
+        "integer_fraction_test": 0.016810896581150994,
+        "most_common_fraction_train": [
+          {
+            "fraction_key": "00",
+            "share": 0.01704383107606149
+          },
+          {
+            "fraction_key": "50",
+            "share": 0.015453740213726499
+          },
+          {
+            "fraction_key": "05",
+            "share": 0.01448654208811932
+          }
+        ]
+      }
+    },
+    "cvv_retry_count": {
+      "ks": 7.71574762098437e-05,
+      "standardized_mean_difference_test_minus_train": -0.00035996516678897327,
+      "train_mean": 0.08547202697296988,
+      "test_mean": 0.08536788628726866,
+      "train_min": 0.0,
+      "train_median": 0.0,
+      "train_max": 3.0,
+      "test_min": 0.0,
+      "test_max": 3.0,
+      "train_zero_rows": 642088,
+      "test_zero_rows": 275189,
+      "key_support": {
+        "train_distinct": 4,
+        "test_distinct": 4,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 642088.0
+      },
+      "precision": {
+        "decimals": 0,
+        "test_cells_off_grid": 0
+      }
+    },
+    "velocity_score": {
+      "ks": 0.0013851334009924443,
+      "standardized_mean_difference_test_minus_train": 0.0008296104963234873,
+      "train_mean": 18.92944511114921,
+      "test_mean": 18.938460417888955,
+      "train_min": 0.0,
+      "train_median": 18.6,
+      "train_max": 72.9,
+      "test_min": 0.0,
+      "test_max": 73.6,
+      "train_zero_rows": 48499,
+      "test_zero_rows": 20927,
+      "key_support": {
+        "train_distinct": 666,
+        "test_distinct": 643,
+        "train_rows_singletons": 31,
+        "train_values_with_support_under_5": 52,
+        "test_distinct_unseen": 7,
+        "test_rows_unseen": 11,
+        "test_rows_seen_once": 12,
+        "test_rows_with_train_support_under_5": 55,
+        "test_train_support_median": 2121.0
+      },
+      "precision": {
+        "decimals": 1,
+        "test_cells_off_grid": 1,
+        "integer_fraction_train": 0.15956768958226183,
+        "integer_fraction_test": 0.16058856472345193,
+        "most_common_fraction_train": [
+          {
+            "fraction_key": "0",
+            "share": 0.15956768958226183
+          },
+          {
+            "fraction_key": "3",
+            "share": 0.09915566603805932
+          },
+          {
+            "fraction_key": "7",
+            "share": 0.09762700725755757
+          }
+        ]
+      }
+    },
+    "time_of_day_hour": {
+      "ks": 0.0015683861788361175,
+      "standardized_mean_difference_test_minus_train": -0.0021797482679752696,
+      "train_mean": 11.761914966569519,
+      "test_mean": 11.746939836791295,
+      "train_min": 0.0,
+      "train_median": 12.0,
+      "train_max": 23.0,
+      "test_min": 0.0,
+      "test_max": 23.0,
+      "train_zero_rows": 25806,
+      "test_zero_rows": 11062,
+      "key_support": {
+        "train_distinct": 24,
+        "test_distinct": 24,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 29056.0
+      },
+      "precision": {
+        "decimals": 0,
+        "test_cells_off_grid": 0
+      }
+    },
+    "day_of_week": {
+      "ks": 0.0038251613585496003,
+      "standardized_mean_difference_test_minus_train": -0.005198844875222343,
+      "train_mean": 2.981733241899537,
+      "test_mean": 2.9713384713851405,
+      "train_min": 0.0,
+      "train_median": 3.0,
+      "train_max": 6.0,
+      "test_min": 0.0,
+      "test_max": 6.0,
+      "train_zero_rows": 100548,
+      "test_zero_rows": 42994,
+      "key_support": {
+        "train_distinct": 7,
+        "test_distinct": 7,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 100617.0
+      },
+      "precision": {
+        "decimals": 0,
+        "test_cells_off_grid": 0
+      }
+    },
+    "merchant_risk_score": {
+      "ks": 0.002152346766987945,
+      "standardized_mean_difference_test_minus_train": -2.0986615452992855e-05,
+      "train_mean": 35.21764789416538,
+      "test_mean": 35.217382927089446,
+      "train_min": 0.0,
+      "train_median": 34.2,
+      "train_max": 100.0,
+      "test_min": 0.0,
+      "test_max": 100.0,
+      "train_zero_rows": 1631,
+      "test_zero_rows": 671,
+      "key_support": {
+        "train_distinct": 950,
+        "test_distinct": 917,
+        "train_rows_singletons": 26,
+        "train_values_with_support_under_5": 91,
+        "test_distinct_unseen": 9,
+        "test_rows_unseen": 13,
+        "test_rows_seen_once": 12,
+        "test_rows_with_train_support_under_5": 115,
+        "test_train_support_median": 1784.0
+      },
+      "precision": {
+        "decimals": 2,
+        "test_cells_off_grid": 0,
+        "integer_fraction_train": 0.1035844905423167,
+        "integer_fraction_test": 0.10184209824523975,
+        "most_common_fraction_train": [
+          {
+            "fraction_key": "00",
+            "share": 0.1035844905423167
+          },
+          {
+            "fraction_key": "20",
+            "share": 0.10334447682724728
+          },
+          {
+            "fraction_key": "30",
+            "share": 0.10206726098634207
+          }
+        ]
+      }
+    },
+    "prior_disputes": {
+      "ks": 0.0008247293199636907,
+      "standardized_mean_difference_test_minus_train": 0.0030167685328842822,
+      "train_mean": 0.1527687296416938,
+      "test_mean": 0.15392154248226572,
+      "train_min": 0.0,
+      "train_median": 0.0,
+      "train_max": 4.0,
+      "test_min": 0.0,
+      "test_max": 4.0,
+      "train_zero_rows": 598396,
+      "test_zero_rows": 256209,
+      "key_support": {
+        "train_distinct": 5,
+        "test_distinct": 5,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 1,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 2,
+        "test_train_support_median": 598396.0
+      },
+      "precision": {
+        "decimals": 0,
+        "test_cells_off_grid": 0
+      }
+    }
+  },
+  "categorical": {
+    "merchant_category": {
+      "total_variation": 0.0023081415019315936,
+      "key_support": {
+        "train_distinct": 12,
+        "test_distinct": 12,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 101360.0
+      },
+      "shares_by_value": {
+        "Online Retail": {
+          "train": 0.22157980456026058,
+          "test": 0.2220385087204651
+        },
+        "Groceries": {
+          "train": 0.2036944968283902,
+          "test": 0.20447090511493946
+        },
+        "Restaurants": {
+          "train": 0.14480827475855762,
+          "test": 0.14377433463118033
+        },
+        "Fuel": {
+          "train": 0.08554774558546202,
+          "test": 0.08622793215638168
+        },
+        "Electronics": {
+          "train": 0.06956540373735642,
+          "test": 0.06957037708677796
+        },
+        "Streaming": {
+          "train": 0.06742671009771987,
+          "test": 0.06648021227798816
+        },
+        "Utilities": {
+          "train": 0.06004200240013715,
+          "test": 0.059843191636887304
+        },
+        "Healthcare": {
+          "train": 0.05127292988170753,
+          "test": 0.05152274787988693
+        },
+        "Travel": {
+          "train": 0.0410237727870164,
+          "test": 0.04091884900528028
+        },
+        "Gaming": {
+          "train": 0.033979084519115375,
+          "test": 0.03397181182996426
+        },
+        "Gift Cards": {
+          "train": 0.013509343391050917,
+          "test": 0.013647394527708145
+        },
+        "Crypto Exchange": {
+          "train": 0.0075504314532258985,
+          "test": 0.007533735132540402
+        }
+      }
+    },
+    "card_type": {
+      "total_variation": 0.0011280886996945638,
+      "key_support": {
+        "train_distinct": 5,
+        "test_distinct": 5,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 254857.0
+      },
+      "shares_by_value": {
+        "Visa": {
+          "train": 0.4928867363849363,
+          "test": 0.49375633367112914
+        },
+        "Mastercard": {
+          "train": 0.36410223441339507,
+          "test": 0.3636360605898981
+        },
+        "Amex": {
+          "train": 0.06542802445854048,
+          "test": 0.06514014080750974
+        },
+        "RuPay": {
+          "train": 0.052960169152523,
+          "test": 0.05258613792735613
+        },
+        "Discover": {
+          "train": 0.02462283559060518,
+          "test": 0.024881327004106887
+        }
+      }
+    },
+    "auth_method": {
+      "total_variation": 0.00231048819927384,
+      "key_support": {
+        "train_distinct": 5,
+        "test_distinct": 5,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 175178.0
+      },
+      "shares_by_value": {
+        "3D Secure": {
+          "train": 0.3000685753471627,
+          "test": 0.30015600832044376
+        },
+        "OTP": {
+          "train": 0.25026858677638725,
+          "test": 0.25165342151581416
+        },
+        "PIN": {
+          "train": 0.22004114520829762,
+          "test": 0.22061509947197183
+        },
+        "Biometric": {
+          "train": 0.13381621806960398,
+          "test": 0.1340804842924956
+        },
+        "No Authentication": {
+          "train": 0.09580547459854849,
+          "test": 0.09349498639927463
+        }
+      }
+    },
+    "channel": {
+      "total_variation": 0.00214270147287067,
+      "key_support": {
+        "train_distinct": 5,
+        "test_distinct": 5,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 206465.0
+      },
+      "shares_by_value": {
+        "Online": {
+          "train": 0.3913637922166981,
+          "test": 0.39024081284335166
+        },
+        "POS": {
+          "train": 0.29496685524887134,
+          "test": 0.2957824417302256
+        },
+        "Contactless": {
+          "train": 0.15089433681924683,
+          "test": 0.15222145181076324
+        },
+        "In-App": {
+          "train": 0.11960112006400365,
+          "test": 0.11866632887087311
+        },
+        "ATM": {
+          "train": 0.043173895651180065,
+          "test": 0.043088964744786386
+        }
+      }
+    },
+    "device_type": {
+      "total_variation": 0.0015489022359075223,
+      "key_support": {
+        "train_distinct": 8,
+        "test_distinct": 8,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 164691.0
+      },
+      "shares_by_value": {
+        "Android Phone": {
+          "train": 0.33923938510772045,
+          "test": 0.338281375006667
+        },
+        "iPhone": {
+          "train": 0.23528630207440426,
+          "test": 0.23475252013440717
+        },
+        "POS Terminal": {
+          "train": 0.16177638722212698,
+          "test": 0.16234865859512507
+        },
+        "Windows PC": {
+          "train": 0.11562660723469913,
+          "test": 0.11556949703984212
+        },
+        "Mac": {
+          "train": 0.048535630607463284,
+          "test": 0.048692596938503384
+        },
+        "Tablet": {
+          "train": 0.0395565460883479,
+          "test": 0.0397021174462638
+        },
+        "Smart Watch": {
+          "train": 0.030153151608663352,
+          "test": 0.030701637420662436
+        },
+        "ATM Machine": {
+          "train": 0.029825990056574662,
+          "test": 0.02995159741852899
+        }
+      }
+    }
+  },
+  "flags": {
+    "is_foreign_transaction": {
+      "total_variation": 0.00011041623612391069,
+      "key_support": {
+        "train_distinct": 2,
+        "test_distinct": 2,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 687862.0
+      },
+      "shares_by_value": {
+        "False": {
+          "train": 0.9827161552088691,
+          "test": 0.9826057389727452
+        },
+        "True": {
+          "train": 0.01728384479113092,
+          "test": 0.017394261027254786
+        }
+      }
+    },
+    "is_new_merchant": {
+      "total_variation": 0.0003622956429858992,
+      "key_support": {
+        "train_distinct": 2,
+        "test_distinct": 2,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 593240.0
+      },
+      "shares_by_value": {
+        "False": {
+          "train": 0.8475341448082747,
+          "test": 0.8471718491652889
+        },
+        "True": {
+          "train": 0.15246585519172523,
+          "test": 0.15282815083471119
+        }
+      }
+    },
+    "used_vpn": {
+      "total_variation": 0.0008406498216087972,
+      "key_support": {
+        "train_distinct": 2,
+        "test_distinct": 2,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 676295.0
+      },
+      "shares_by_value": {
+        "False": {
+          "train": 0.9661909251957255,
+          "test": 0.9670315750173343
+        },
+        "True": {
+          "train": 0.03380907480427453,
+          "test": 0.032968424982665744
+        }
+      }
+    },
+    "ip_country_mismatch": {
+      "total_variation": 0.0001267349912890004,
+      "key_support": {
+        "train_distinct": 2,
+        "test_distinct": 2,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 688648.0
+      },
+      "shares_by_value": {
+        "False": {
+          "train": 0.9838390765186582,
+          "test": 0.9839658115099472
+        },
+        "True": {
+          "train": 0.01616092348134179,
+          "test": 0.0160341884900528
+        }
+      }
+    },
+    "billing_shipping_mismatch": {
+      "total_variation": 0.00015233980088514686,
+      "key_support": {
+        "train_distinct": 2,
+        "test_distinct": 2,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 690906.0
+      },
+      "shares_by_value": {
+        "False": {
+          "train": 0.9870649751414367,
+          "test": 0.9869126353405515
+        },
+        "True": {
+          "train": 0.012935024858563347,
+          "test": 0.013087364659448503
+        }
+      }
+    },
+    "is_ai_generated_scam_attempt": {
+      "total_variation": 0.0001457095446103678,
+      "key_support": {
+        "train_distinct": 2,
+        "test_distinct": 2,
+        "train_rows_singletons": 0,
+        "train_values_with_support_under_5": 0,
+        "test_distinct_unseen": 0,
+        "test_rows_unseen": 0,
+        "test_rows_seen_once": 0,
+        "test_rows_with_train_support_under_5": 0,
+        "test_train_support_median": 697661.0
+      },
+      "shares_by_value": {
+        "False": {
+          "train": 0.9967155266015201,
+          "test": 0.9965698170569097
+        },
+        "True": {
+          "train": 0.003284473398479913,
+          "test": 0.003430182943090298
+        }
+      }
+    }
+  },
+  "sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  }
+}

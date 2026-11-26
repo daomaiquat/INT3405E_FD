@@ -1,0 +1,183 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "fit_rows": 699960,
+  "rows": 299984,
+  "pairs": [
+    [
+      "txn_count_last_24h",
+      "card_type"
+    ],
+    [
+      "hours_since_last_txn",
+      "ip_country_mismatch"
+    ],
+    [
+      "cvv_retry_count",
+      "card_type"
+    ],
+    [
+      "device_type",
+      "is_new_merchant"
+    ],
+    [
+      "merchant_risk_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "velocity_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "customer_age",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "channel",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "account_balance_usd",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "device_type",
+      "used_vpn"
+    ],
+    [
+      "prior_disputes",
+      "is_new_merchant"
+    ],
+    [
+      "account_balance_usd",
+      "is_foreign_transaction"
+    ]
+  ],
+  "maximum_control_logit_replay_error": 1.9073486328125e-06,
+  "slope_diagnostics": [
+    {
+      "pair": [
+        "txn_count_last_24h",
+        "card_type"
+      ],
+      "coefficient": -0.15490657441444883,
+      "nonzero_train": 0.9999942853877365,
+      "nonzero_query": 1.0,
+      "rms_train": 0.04740362614393234
+    },
+    {
+      "pair": [
+        "hours_since_last_txn",
+        "ip_country_mismatch"
+      ],
+      "coefficient": 0.22656180305763882,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.01850900612771511
+    },
+    {
+      "pair": [
+        "cvv_retry_count",
+        "card_type"
+      ],
+      "coefficient": -0.1268540450473394,
+      "nonzero_train": 0.9999985713469342,
+      "nonzero_query": 0.9999966664888794,
+      "rms_train": 0.01680746302008629
+    },
+    {
+      "pair": [
+        "device_type",
+        "is_new_merchant"
+      ],
+      "coefficient": -0.1415628346914614,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.022197294980287552
+    },
+    {
+      "pair": [
+        "merchant_risk_score",
+        "billing_shipping_mismatch"
+      ],
+      "coefficient": 0.004300635373799079,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.011783121153712273
+    },
+    {
+      "pair": [
+        "velocity_score",
+        "billing_shipping_mismatch"
+      ],
+      "coefficient": 0.04101939957362983,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.010964946821331978
+    },
+    {
+      "pair": [
+        "customer_age",
+        "billing_shipping_mismatch"
+      ],
+      "coefficient": 0.008923936848777278,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.012045363895595074
+    },
+    {
+      "pair": [
+        "channel",
+        "billing_shipping_mismatch"
+      ],
+      "coefficient": -0.05650715532705423,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.005390574689954519
+    },
+    {
+      "pair": [
+        "account_balance_usd",
+        "billing_shipping_mismatch"
+      ],
+      "coefficient": 0.00016671528343772124,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.009181693196296692
+    },
+    {
+      "pair": [
+        "device_type",
+        "used_vpn"
+      ],
+      "coefficient": -0.13726871234279622,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.01811974309384823
+    },
+    {
+      "pair": [
+        "prior_disputes",
+        "is_new_merchant"
+      ],
+      "coefficient": 0.0030557946863506613,
+      "nonzero_train": 0.9999971426938682,
+      "nonzero_query": 1.0,
+      "rms_train": 0.013815358281135559
+    },
+    {
+      "pair": [
+        "account_balance_usd",
+        "is_foreign_transaction"
+      ],
+      "coefficient": 0.15640185687896951,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.022284062579274178
+    }
+  ],
+  "seconds": 104.97609870000088
+}

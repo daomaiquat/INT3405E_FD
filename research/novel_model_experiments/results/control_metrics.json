@@ -1,0 +1,49 @@
+{
+  "model": "control",
+  "complete_5_fold_oof": true,
+  "outer_seed": 42,
+  "inner_seed": 2026,
+  "rounds": 1650,
+  "device": "cuda",
+  "elapsed_seconds": 366.3494225999966,
+  "folds_ran": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "fold_metrics": [
+    {
+      "roc_auc": 0.9496539762458927,
+      "average_precision": 0.5188206138136271,
+      "log_loss": 0.04499499107410065
+    },
+    {
+      "roc_auc": 0.9508716657749262,
+      "average_precision": 0.5341982517970261,
+      "log_loss": 0.044279379944552825
+    },
+    {
+      "roc_auc": 0.9551384539680283,
+      "average_precision": 0.5503938153126686,
+      "log_loss": 0.042797115816443534
+    },
+    {
+      "roc_auc": 0.950884108484243,
+      "average_precision": 0.5336576954824206,
+      "log_loss": 0.04409255574748117
+    },
+    {
+      "roc_auc": 0.9445063165462785,
+      "average_precision": 0.5105196304632393,
+      "log_loss": 0.04581742794523582
+    }
+  ],
+  "oof": {
+    "roc_auc": 0.950172963630314,
+    "average_precision": 0.5292256092651287,
+    "log_loss": 0.0443962941055628
+  },
+  "oof_rows": 699960
+}

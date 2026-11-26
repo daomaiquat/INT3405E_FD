@@ -1,0 +1,45 @@
+{
+  "name": "XGB-W2",
+  "family": "xgb",
+  "groups": [
+    "raw",
+    "te13",
+    "cents",
+    "digits"
+  ],
+  "parent": "XGB-D03",
+  "smoothing": 20.0,
+  "model_seed": 42,
+  "encoder_seed": 2026,
+  "params": {
+    "learning_rate": 0.03,
+    "max_iterations": 6000,
+    "max_depth": 2,
+    "min_child_weight": 5,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 1.0,
+    "tree_method": "hist"
+  },
+  "boost": false,
+  "rounds_factor": 1.0,
+  "scale_pos_weight": 2,
+  "source": {
+    "baseline": "XGB-D03",
+    "baseline_path": "D:\\UET\\ML\\Predicting Credit Card Fraud\\s6e11_gpu\\plan_runs\\results\\full\\XGB-D03",
+    "config_sha256": "a5f5f143c41e298e52918df8cb5b9a0ed5b8107f37bab7f2a9815de8f18bfb12",
+    "metrics_sha256": "35159c8d9aebcc617788986f74524bbcf00d6e6f733de4fabbc3141de08b6870",
+    "predictions_sha256": "4ae9d89fd64dfb05eafb788039f321aa6db573adad65f69b0875ceec71f6e6e2",
+    "source_manifest_sha256": "022a61514a0bb4be423877f411fab50ca6425ad3b8da94abd671abe1d2adf759",
+    "inner_seed": 2026,
+    "inner_checkpoint_sha256_by_fold": [
+      [],
+      []
+    ],
+    "baseline_oof_auc": null,
+    "fixed_rounds_by_fold": [
+      12,
+      12
+    ]
+  }
+}

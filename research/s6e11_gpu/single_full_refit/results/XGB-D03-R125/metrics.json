@@ -1,0 +1,85 @@
+{
+  "protocol": {
+    "fit_protocol": "full_train_once_using_cv_median_rounds",
+    "input_manifest": {
+      "smoke": false,
+      "rows": 699960,
+      "test_rows": 299984,
+      "fold_hash": "8947ed79a30033f822bb026ad6b556a180dbc649ab945d8587560473b044922a",
+      "early_stop_hash": "c0fb6c92110c67b44eaeb99841213ec3717e30f26be5dfc7a6cc2a87f883267c",
+      "inputs": {
+        "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+        "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+        "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+      },
+      "models_use_llm": false
+    },
+    "name": "XGB-D03-R125",
+    "spec": {
+      "name": "XGB-D03-R125",
+      "family": "xgb",
+      "groups": [
+        "raw",
+        "te13",
+        "cents",
+        "digits"
+      ],
+      "parent": "XGB-D03",
+      "smoothing": 20.0,
+      "model_seed": 42,
+      "encoder_seed": 2026,
+      "params": {
+        "learning_rate": 0.03,
+        "max_iterations": 6000,
+        "max_depth": 2,
+        "min_child_weight": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 1.0,
+        "tree_method": "hist"
+      },
+      "boost": false,
+      "rounds_factor": 1.25
+    },
+    "reference_metrics_sha256": "737b55228a5362cd4f2c3ac793221e5ddb06d52ee63fc8b49fa778de587b7bd9",
+    "reference_predictions_sha256": "efa7b68f8e4dcd53cc0b23b5c14e00ae8c343006e32e3dad67be0ed3b770eca1",
+    "reference_oof_auc": 0.9501462524226989,
+    "rounds_from_folds": [
+      2742,
+      1920,
+      2214,
+      2882,
+      2664
+    ],
+    "rounds": 2664,
+    "weighting": null
+  },
+  "fit": {
+    "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+    "fit_seconds": 13.314377000002423,
+    "rounds": 2664,
+    "early_auc": null,
+    "settings": {
+      "max_bin": 256,
+      "nthread": 4,
+      "learning_rate": 0.03,
+      "max_depth": 2,
+      "min_child_weight": 5,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "tree_method": "hist",
+      "objective": "binary:logistic",
+      "eval_metric": "auc",
+      "device": "cuda:0",
+      "seed": 42
+    },
+    "version": "3.4.1"
+  },
+  "total_seconds": 15.775468599997112,
+  "model_sha256": "05ff3193a799ab1fec69e9da2383c374da01bce6a50878f52ce6d364e6e13e6c",
+  "predictions_sha256": "c0da2efb12b7065f934a645293987176d1cf68a54bb5dd1dff0731e48cefcc94",
+  "replay_max_abs_delta": 5.185604095458984e-06,
+  "test_spearman_vs_fold_mean": 0.9965666813446911,
+  "test_mean_abs_delta_vs_fold_mean": 0.0013800973207472899
+}

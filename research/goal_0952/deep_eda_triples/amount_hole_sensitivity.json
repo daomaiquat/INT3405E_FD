@@ -1,0 +1,177 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "definition": {
+    "selected_values": 404,
+    "examples": [
+      9.84,
+      10.06,
+      31.32,
+      22.15,
+      11.19,
+      12.32
+    ],
+    "neighborhood_tick_widths": [
+      5,
+      25
+    ]
+  },
+  "frozen_dev_shift": 0.27198693761597204,
+  "neighbor_density_transfer": {
+    "development": {
+      "5": {
+        "observed_counts": 8681,
+        "neighbor_expected_counts": 51826.5,
+        "ratio": 0.1675011818278294,
+        "points_below_their_neighbor_mean": 404
+      },
+      "25": {
+        "observed_counts": 8681,
+        "neighbor_expected_counts": 48536.16,
+        "ratio": 0.17885634133396625,
+        "points_below_their_neighbor_mean": 404
+      }
+    },
+    "holdout": {
+      "5": {
+        "observed_counts": 1644,
+        "neighbor_expected_counts": 9144.5,
+        "ratio": 0.17978019574607687,
+        "points_below_their_neighbor_mean": 404
+      },
+      "25": {
+        "observed_counts": 1644,
+        "neighbor_expected_counts": 8554.18,
+        "ratio": 0.19218674379075493,
+        "points_below_their_neighbor_mean": 404
+      }
+    },
+    "test": {
+      "5": {
+        "observed_counts": 4448,
+        "neighbor_expected_counts": 26156.6,
+        "ratio": 0.17005268268811696,
+        "points_below_their_neighbor_mean": 404
+      },
+      "25": {
+        "observed_counts": 4448,
+        "neighbor_expected_counts": 24458.520000000004,
+        "ratio": 0.18185891869172785,
+        "points_below_their_neighbor_mean": 404
+      }
+    }
+  },
+  "holdout_matched_price_and_risk_permutation": {
+    "seed": 27482,
+    "draws": 2999,
+    "match_last_digit": false,
+    "movable_strata": 58,
+    "movable_rows": 1644,
+    "observed_residual_fraud": 14.142711483468709,
+    "null_residual_fraud_mean": 0.6800954980038001,
+    "null_residual_fraud_ci95": [
+      -7.225247209540333,
+      9.320425381893218
+    ],
+    "conditional_one_sided_p": 0.0016666666666666668
+  },
+  "holdout_matched_price_risk_and_last_digit_permutation": {
+    "seed": 27482,
+    "draws": 2999,
+    "match_last_digit": true,
+    "movable_strata": 455,
+    "movable_rows": 1644,
+    "observed_residual_fraud": 14.142711483468709,
+    "null_residual_fraud_mean": 0.20084185893021983,
+    "null_residual_fraud_ci95": [
+      -7.695377464478146,
+      8.847004092241596
+    ],
+    "conditional_one_sided_p": 0.002
+  },
+  "holdout_auc_contribution_by_baseline_band": [
+    {
+      "quantile_lower": 0,
+      "quantile_upper": 0.5,
+      "rows": 52497,
+      "fraud": 21,
+      "contribution_to_auc_delta": 2.2112760680205075e-05
+    },
+    {
+      "quantile_lower": 0.5,
+      "quantile_upper": 0.75,
+      "rows": 26248,
+      "fraud": 78,
+      "contribution_to_auc_delta": -1.2575872890591521e-05
+    },
+    {
+      "quantile_lower": 0.75,
+      "quantile_upper": 0.9,
+      "rows": 15749,
+      "fraud": 183,
+      "contribution_to_auc_delta": 6.345953433587099e-05
+    },
+    {
+      "quantile_lower": 0.9,
+      "quantile_upper": 0.95,
+      "rows": 5250,
+      "fraud": 190,
+      "contribution_to_auc_delta": 1.387434834282725e-05
+    },
+    {
+      "quantile_lower": 0.95,
+      "quantile_upper": 0.99,
+      "rows": 4200,
+      "fraud": 577,
+      "contribution_to_auc_delta": 4.27115542373721e-06
+    },
+    {
+      "quantile_lower": 0.99,
+      "quantile_upper": 1,
+      "rows": 1050,
+      "fraud": 704,
+      "contribution_to_auc_delta": 2.5416966299111124e-07
+    }
+  ],
+  "holdout_amount_level_sensitivity": {
+    "observed_price_levels": 376,
+    "bootstrap_draws": 9999,
+    "cluster_bootstrap_gain_logloss_ci95_x1m": [
+      1.6116996616823913,
+      60.083729268202646
+    ],
+    "leave_one_price_out_min_gain_logloss_x1m": 23.175483664317476,
+    "leave_one_price_out_max_gain_logloss_x1m": 32.66743714095902,
+    "most_influential_prices": [
+      {
+        "usd": 13.97,
+        "fraud_residual": 2.6561206259037236,
+        "gain_logloss_x1m": 6.7907583633395845
+      },
+      {
+        "usd": 20.81,
+        "fraud_residual": 1.9316024314340354,
+        "gain_logloss_x1m": 4.978467794326093
+      },
+      {
+        "usd": 16.07,
+        "fraud_residual": 1.3339619230774538,
+        "gain_logloss_x1m": 3.3243633827248886
+      },
+      {
+        "usd": 44.54,
+        "fraud_residual": 0.9711023059566174,
+        "gain_logloss_x1m": 2.5045707372629953
+      },
+      {
+        "usd": 13.95,
+        "fraud_residual": 0.9633857729529068,
+        "gain_logloss_x1m": 2.4819347803660468
+      }
+    ]
+  },
+  "holdout_previously_used": true
+}

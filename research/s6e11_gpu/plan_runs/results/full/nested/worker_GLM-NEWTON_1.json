@@ -1,0 +1,34 @@
+{
+  "spec": {
+    "name": "GLM-NEWTON",
+    "family": "glm",
+    "groups": [
+      "glm_raw",
+      "te13",
+      "p1",
+      "p2"
+    ],
+    "parent": "P1-P2",
+    "smoothing": 20.0,
+    "model_seed": 42,
+    "encoder_seed": 2026,
+    "params": {
+      "C": 1.0,
+      "max_iter": 2000,
+      "tol": 0.0001,
+      "solver": "newton-cholesky"
+    },
+    "boost": false,
+    "rounds_factor": 1.0
+  },
+  "outer_folds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "seed": 2026,
+  "results": "D:\\UET\\ML\\Predicting Credit Card Fraud\\s6e11_gpu\\plan_runs\\results\\full",
+  "directory": "D:\\UET\\ML\\Predicting Credit Card Fraud\\s6e11_gpu\\plan_runs\\results\\full\\nested"
+}

@@ -1,0 +1,397 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "fit_rows": 594966,
+  "rows": 104994,
+  "pairs": [
+    [
+      "txn_count_last_24h",
+      "card_type"
+    ],
+    [
+      "hours_since_last_txn",
+      "ip_country_mismatch"
+    ],
+    [
+      "cvv_retry_count",
+      "card_type"
+    ],
+    [
+      "device_type",
+      "is_new_merchant"
+    ],
+    [
+      "merchant_risk_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "velocity_score",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "customer_age",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "channel",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "account_balance_usd",
+      "billing_shipping_mismatch"
+    ],
+    [
+      "device_type",
+      "used_vpn"
+    ],
+    [
+      "prior_disputes",
+      "is_new_merchant"
+    ],
+    [
+      "account_balance_usd",
+      "is_foreign_transaction"
+    ]
+  ],
+  "maximum_control_logit_replay_error": 1.9073486328125e-06,
+  "slope_diagnostics": [
+    {
+      "pair": [
+        "txn_count_last_24h",
+        "card_type"
+      ],
+      "coefficient": -0.13120034788263993,
+      "nonzero_train": 0.9999949576950615,
+      "nonzero_query": 0.9999809512924548,
+      "rms_train": 0.043479323387145996
+    },
+    {
+      "pair": [
+        "hours_since_last_txn",
+        "ip_country_mismatch"
+      ],
+      "coefficient": 0.15914966682036152,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.017648523673415184
+    },
+    {
+      "pair": [
+        "cvv_retry_count",
+        "card_type"
+      ],
+      "coefficient": 0.034270281023447285,
+      "nonzero_train": 0.9999983192316871,
+      "nonzero_query": 1.0,
+      "rms_train": 0.015512531623244286
+    },
+    {
+      "pair": [
+        "device_type",
+        "is_new_merchant"
+      ],
+      "coefficient": -0.09004521615337163,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.03669270873069763
+    },
+    {
+      "pair": [
+        "merchant_risk_score",
+        "billing_shipping_mismatch"
+      ],
+      "coefficient": -0.028349790330625232,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.014286588877439499
+    },
+    {
+      "pair": [
+        "velocity_score",
+        "billing_shipping_mismatch"
+      ],
+      "coefficient": 0.04072459188151286,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.010815461166203022
+    },
+    {
+      "pair": [
+        "customer_age",
+        "billing_shipping_mismatch"
+      ],
+      "coefficient": -0.024827155180586043,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.01276887021958828
+    },
+    {
+      "pair": [
+        "channel",
+        "billing_shipping_mismatch"
+      ],
+      "coefficient": -0.07608155334275538,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.007116388063877821
+    },
+    {
+      "pair": [
+        "account_balance_usd",
+        "billing_shipping_mismatch"
+      ],
+      "coefficient": -0.02910812556303082,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.010808015242218971
+    },
+    {
+      "pair": [
+        "device_type",
+        "used_vpn"
+      ],
+      "coefficient": -0.030673533603174617,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.013569392263889313
+    },
+    {
+      "pair": [
+        "prior_disputes",
+        "is_new_merchant"
+      ],
+      "coefficient": -0.0084265352053797,
+      "nonzero_train": 0.9999966384633744,
+      "nonzero_query": 1.0,
+      "rms_train": 0.0204670038074255
+    },
+    {
+      "pair": [
+        "account_balance_usd",
+        "is_foreign_transaction"
+      ],
+      "coefficient": 0.11832647540958623,
+      "nonzero_train": 1.0,
+      "nonzero_query": 1.0,
+      "rms_train": 0.022088509052991867
+    }
+  ],
+  "variants": {
+    "grandmaster_eda": {
+      "roc_auc": 0.9512244493667037,
+      "average_precision": 0.5382352787073892,
+      "log_loss": 0.04383598792839346,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "brier": 0.010631731932020941,
+      "score_band_contribution": [
+        {
+          "quantile_lower": 0,
+          "quantile_upper": 0.5,
+          "rows": 52497,
+          "fraud": 21,
+          "contribution_to_auc_delta": 0.0
+        },
+        {
+          "quantile_lower": 0.5,
+          "quantile_upper": 0.75,
+          "rows": 26248,
+          "fraud": 78,
+          "contribution_to_auc_delta": 0.0
+        },
+        {
+          "quantile_lower": 0.75,
+          "quantile_upper": 0.9,
+          "rows": 15749,
+          "fraud": 183,
+          "contribution_to_auc_delta": 0.0
+        },
+        {
+          "quantile_lower": 0.9,
+          "quantile_upper": 0.95,
+          "rows": 5250,
+          "fraud": 190,
+          "contribution_to_auc_delta": 0.0
+        },
+        {
+          "quantile_lower": 0.95,
+          "quantile_upper": 0.99,
+          "rows": 4200,
+          "fraud": 577,
+          "contribution_to_auc_delta": 0.0
+        },
+        {
+          "quantile_lower": 0.99,
+          "quantile_upper": 1,
+          "rows": 1050,
+          "fraud": 704,
+          "contribution_to_auc_delta": 0.0
+        }
+      ]
+    },
+    "risk_conditioned_tree": {
+      "roc_auc": 0.9511221737044874,
+      "average_precision": 0.5380446598782825,
+      "log_loss": 0.043853797567721176,
+      "delta_auc": -0.00010227566221654438,
+      "ci95_low": -0.00020253116873382126,
+      "ci95_high": -2.020155699267509e-06,
+      "brier": 0.010632828623039077,
+      "score_band_contribution": [
+        {
+          "quantile_lower": 0,
+          "quantile_upper": 0.5,
+          "rows": 52497,
+          "fraud": 21,
+          "contribution_to_auc_delta": 1.2929500247796084e-06
+        },
+        {
+          "quantile_lower": 0.5,
+          "quantile_upper": 0.75,
+          "rows": 26248,
+          "fraud": 78,
+          "contribution_to_auc_delta": -6.778594403417196e-05
+        },
+        {
+          "quantile_lower": 0.75,
+          "quantile_upper": 0.9,
+          "rows": 15749,
+          "fraud": 183,
+          "contribution_to_auc_delta": -3.406978569568844e-05
+        },
+        {
+          "quantile_lower": 0.9,
+          "quantile_upper": 0.95,
+          "rows": 5250,
+          "fraud": 190,
+          "contribution_to_auc_delta": 6.630512947591536e-07
+        },
+        {
+          "quantile_lower": 0.95,
+          "quantile_upper": 0.99,
+          "rows": 4200,
+          "fraud": 577,
+          "contribution_to_auc_delta": -3.044510528434476e-06
+        },
+        {
+          "quantile_lower": 0.99,
+          "quantile_upper": 1,
+          "rows": 1050,
+          "fraud": 704,
+          "contribution_to_auc_delta": 6.685767222147827e-07
+        }
+      ]
+    },
+    "risk_conditioned_half": {
+      "roc_auc": 0.9511776379452939,
+      "average_precision": 0.5381594585574435,
+      "log_loss": 0.0438430355740124,
+      "delta_auc": -4.681142140994243e-05,
+      "ci95_low": -9.708581762293673e-05,
+      "ci95_high": 3.4629748030518586e-06,
+      "brier": 0.010631883804961016,
+      "score_band_contribution": [
+        {
+          "quantile_lower": 0,
+          "quantile_upper": 0.5,
+          "rows": 52497,
+          "fraud": 21,
+          "contribution_to_auc_delta": 9.558989499438722e-07
+        },
+        {
+          "quantile_lower": 0.5,
+          "quantile_upper": 0.75,
+          "rows": 26248,
+          "fraud": 78,
+          "contribution_to_auc_delta": -3.411951454279543e-05
+        },
+        {
+          "quantile_lower": 0.75,
+          "quantile_upper": 0.9,
+          "rows": 15749,
+          "fraud": 183,
+          "contribution_to_auc_delta": -1.5355162901121474e-05
+        },
+        {
+          "quantile_lower": 0.9,
+          "quantile_upper": 0.95,
+          "rows": 5250,
+          "fraud": 190,
+          "contribution_to_auc_delta": 1.4531874210132928e-06
+        },
+        {
+          "quantile_lower": 0.95,
+          "quantile_upper": 0.99,
+          "rows": 4200,
+          "fraud": 577,
+          "contribution_to_auc_delta": -2.1549167079714766e-07
+        },
+        {
+          "quantile_lower": 0.99,
+          "quantile_upper": 1,
+          "rows": 1050,
+          "fraud": 704,
+          "contribution_to_auc_delta": 4.6966133378775224e-07
+        }
+      ]
+    },
+    "risk_conditioned_linear": {
+      "roc_auc": 0.9512215761444268,
+      "average_precision": 0.5382334086873312,
+      "log_loss": 0.04383548770354032,
+      "delta_auc": -2.873222277210985e-06,
+      "ci95_low": -1.1828407516987282e-05,
+      "ci95_high": 6.081962962565312e-06,
+      "brier": 0.010631532310966347,
+      "score_band_contribution": [
+        {
+          "quantile_lower": 0,
+          "quantile_upper": 0.5,
+          "rows": 52497,
+          "fraud": 21,
+          "contribution_to_auc_delta": -1.5857976799648178e-06
+        },
+        {
+          "quantile_lower": 0.5,
+          "quantile_upper": 0.75,
+          "rows": 26248,
+          "fraud": 78,
+          "contribution_to_auc_delta": -2.1880692727040476e-06
+        },
+        {
+          "quantile_lower": 0.75,
+          "quantile_upper": 0.9,
+          "rows": 15749,
+          "fraud": 183,
+          "contribution_to_auc_delta": -7.293564242343026e-07
+        },
+        {
+          "quantile_lower": 0.9,
+          "quantile_upper": 0.95,
+          "rows": 5250,
+          "fraud": 190,
+          "contribution_to_auc_delta": 1.3316280169738728e-06
+        },
+        {
+          "quantile_lower": 0.95,
+          "quantile_upper": 0.99,
+          "rows": 4200,
+          "fraud": 577,
+          "contribution_to_auc_delta": 3.2047479246714696e-07
+        },
+        {
+          "quantile_lower": 0.99,
+          "quantile_upper": 1,
+          "rows": 1050,
+          "fraud": 704,
+          "contribution_to_auc_delta": -2.2101709825239674e-08
+        }
+      ]
+    }
+  },
+  "seconds": 80.00005969999984
+}

@@ -1,0 +1,29 @@
+{
+  "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+  "rounds": 2131,
+  "fit_seconds": 8.565997999998217,
+  "settings": {
+    "max_bin": 256,
+    "nthread": 4,
+    "learning_rate": 0.03,
+    "max_depth": 2,
+    "min_child_weight": 5,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 1.0,
+    "tree_method": "hist",
+    "objective": "binary:logistic",
+    "eval_metric": "auc",
+    "device": "cuda:0",
+    "seed": 42
+  },
+  "version": "3.4.1",
+  "fold": 5,
+  "auc": 0.9445146189359137,
+  "seconds": 9.636406199999328,
+  "train_rows": 559968,
+  "valid_rows": 139992,
+  "negatives_upweighted": 55061,
+  "upweighted_id_sha256": "0093da3a1c551753e5ad2afc13ddb100fc5f844c35470733b5b2f67fef65aeb4",
+  "source_baseline": "XGB-D03"
+}

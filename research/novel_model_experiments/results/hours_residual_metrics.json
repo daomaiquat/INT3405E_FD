@@ -1,0 +1,23 @@
+{
+  "roc_auc": 0.9503524665700099,
+  "average_precision": 0.5293453395711496,
+  "log_loss": 0.04434682352632648,
+  "baseline": {
+    "roc_auc": 0.9503452077073289,
+    "average_precision": 0.529376204636088,
+    "log_loss": 0.04434664759038209
+  },
+  "radius_in_centihours": 20,
+  "ridge_strength": 12,
+  "shrinkage": 0.5,
+  "unshrunk_step_cap": 0.35,
+  "max_final_replay_errors": [
+    3.3306690738754696e-16,
+    3.3306690738754696e-16,
+    3.3306690738754696e-16,
+    3.3306690738754696e-16,
+    3.3306690738754696e-16
+  ],
+  "test_rows": 299984,
+  "max_test_adjustment": 0.043660233824986294
+}

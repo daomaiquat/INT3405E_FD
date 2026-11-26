@@ -1,0 +1,25 @@
+{
+  "name": "GLM-BOOST-LGB-R125",
+  "family": "lgb",
+  "groups": [
+    "raw",
+    "te13"
+  ],
+  "parent": "GLM-BOOST-LGB",
+  "smoothing": 20.0,
+  "model_seed": 42,
+  "encoder_seed": 2026,
+  "params": {
+    "learning_rate": 0.03,
+    "max_iterations": 6000,
+    "num_leaves": 4,
+    "min_child_samples": 50,
+    "subsample": 0.9,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 1.0,
+    "metric": "auc"
+  },
+  "boost": true,
+  "rounds_factor": 1.25
+}

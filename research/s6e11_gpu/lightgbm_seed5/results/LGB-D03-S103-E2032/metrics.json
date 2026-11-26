@@ -1,0 +1,36 @@
+{
+  "name": "LGB-D03-S103-E2032",
+  "model_seed": 103,
+  "encoder_seed": 2032,
+  "training_rows": 699960,
+  "fit": {
+    "device": "OpenCL 0:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+    "fit_seconds": 15.014990700001363,
+    "rounds": 1563,
+    "early_auc": null,
+    "settings": {
+      "max_bin": 255,
+      "num_threads": 4,
+      "learning_rate": 0.03,
+      "num_leaves": 4,
+      "min_child_samples": 50,
+      "subsample": 0.9,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "metric": "auc",
+      "objective": "binary",
+      "device_type": "gpu",
+      "gpu_platform_id": 0,
+      "gpu_device_id": 0,
+      "verbosity": 1,
+      "seed": 103
+    },
+    "version": "4.6.0"
+  },
+  "replay_max_abs_delta": 0.0,
+  "model_sha256": "7f729920b1db4a29ebb32aa5e0b2469dbf4eb412262fc0618b05c35469587e9f",
+  "predictions_sha256": "9e0e05fa4a4812c837766a228b6eecb43bde10355db6e8d1bea06deeffe9ac8f",
+  "predictions": "lightgbm_seed5\\results\\LGB-D03-S103-E2032\\predictions.npz",
+  "seconds": 19.974779500000295
+}

@@ -1,0 +1,86 @@
+{
+  "variant": "xgb-d03-mlp-masked-embeddings",
+  "status": "completed",
+  "smoke": true,
+  "rows": 20000,
+  "test_rows": 1000,
+  "fold_hash": "cd67af60425b68fa336439a7dc862b3c43b938d889e1668fd43d126a63e39684",
+  "early_stop_hash": "c2128f0d58f689f0ef296e99c82853080e25e9c67cdebcad6313ab4c3d974eec",
+  "inputs": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "models_use_llm": false,
+  "oof_auc": 0.8876137179520752,
+  "average_precision": 0.27706689499315484,
+  "log_loss": 0.06945279240608215,
+  "folds": [
+    {
+      "fold": 1,
+      "auc": 0.8852805930902358,
+      "rounds": 20,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "extra_columns": 64,
+      "pretrain_seconds": 0.0,
+      "finetune_seconds": 0.696114000005764
+    },
+    {
+      "fold": 2,
+      "auc": 0.8913690974605248,
+      "rounds": 20,
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "extra_columns": 64,
+      "pretrain_seconds": 0.0,
+      "finetune_seconds": 0.2103519000011147
+    }
+  ],
+  "config": {
+    "architecture": "xgb",
+    "objective": "binary:logistic",
+    "parent": "XGB-D03",
+    "original_groups": [
+      "raw",
+      "te13",
+      "cents",
+      "digits"
+    ],
+    "embedding_source": "mlp-masked",
+    "encoder_before_supervised_finetune": true,
+    "encoder_config_sha256": "51f22c816db1e5dc5693d3f92c4f533422a8f984b6d3a5ada7ce480634f0278e",
+    "encoder_states_sha256": [
+      "ed1f424852b5ccb6d63e288eda05eda846c73516943b896fcb165606712c3be8",
+      "4efe441079ae7b9a8d39195b4dc6c1de8672bcb01df02793ffbdfe88ccc54a72"
+    ],
+    "rounds_by_fold": [
+      20,
+      20
+    ],
+    "base_config": {
+      "name": "XGB-D03",
+      "family": "xgb",
+      "groups": [
+        "raw",
+        "te13",
+        "cents",
+        "digits"
+      ],
+      "parent": "T03",
+      "smoothing": 20.0,
+      "model_seed": 42,
+      "encoder_seed": 2026,
+      "params": {
+        "learning_rate": 0.03,
+        "max_iterations": 6000,
+        "max_depth": 2,
+        "min_child_weight": 5,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "reg_lambda": 1.0,
+        "tree_method": "hist"
+      },
+      "boost": false,
+      "rounds_factor": 1.0
+    }
+  }
+}

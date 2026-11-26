@@ -1,0 +1,2 @@
+# Preserve the archived bytes used by the research digests across checkouts.
+/research/** -text

@@ -1,0 +1,2145 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "discovery_rows": 594966,
+  "discovery_fraud": 9936,
+  "discovery_meta_oof_auc": 0.9506068338417099,
+  "raw_id_block_prevalence": [
+    0.016886679238813648,
+    0.01651522944168238,
+    0.015858049031373223,
+    0.01588662209269101,
+    0.016086633521915538,
+    0.018143893936796388,
+    0.016772386993542488,
+    0.017915309446254073,
+    0.017086690668038175,
+    0.017172409851991543,
+    0.016800960054860276,
+    0.016915252300131436,
+    0.016772386993542488,
+    0.01668666780958912,
+    0.015629464540830904,
+    0.016886679238813648,
+    0.016829533116178068,
+    0.017086690668038175,
+    0.016200925767186698,
+    0.015858049031373223
+  ],
+  "discovery_seed": 731,
+  "risk_blocks": [
+    {
+      "min_score": 9.799400817380427e-09,
+      "max_score": 0.0014140334478815702,
+      "rows": 297483,
+      "actual_fraud": 115,
+      "expected_fraud": 134.15627209579586,
+      "fraction_of_all_pairs_misordered": 0.0073445135615628175
+    },
+    {
+      "min_score": 0.0014140334478815702,
+      "max_score": 0.005772653149119097,
+      "rows": 148741,
+      "actual_fraud": 441,
+      "expected_fraud": 446.0897451736705,
+      "fraction_of_all_pairs_misordered": 0.015173446828758633
+    },
+    {
+      "min_score": 0.005772653149119097,
+      "max_score": 0.023108637845887785,
+      "rows": 89245,
+      "actual_fraud": 1038,
+      "expected_fraud": 1029.5300308912492,
+      "fraction_of_all_pairs_misordered": 0.015240029049530828
+    },
+    {
+      "min_score": 0.023108637845887785,
+      "max_score": 0.057345438493802664,
+      "rows": 29748,
+      "actual_fraud": 1099,
+      "expected_fraud": 1068.7829790999322,
+      "fraction_of_all_pairs_misordered": 0.006495092341906961
+    },
+    {
+      "min_score": 0.057345438493802664,
+      "max_score": 0.3776628119363195,
+      "rows": 23799,
+      "actual_fraud": 3266,
+      "expected_fraud": 3255.8397131377933,
+      "fraction_of_all_pairs_misordered": 0.004821253437517263
+    },
+    {
+      "min_score": 0.3776628119363195,
+      "max_score": 0.9998008919171558,
+      "rows": 5950,
+      "actual_fraud": 3977,
+      "expected_fraud": 4003.436115506721,
+      "fraction_of_all_pairs_misordered": 0.000318830939013739
+    }
+  ],
+  "pair_results": [
+    {
+      "left": "txn_count_last_24h",
+      "right": "card_type",
+      "supported_cells": 37,
+      "spearman": 0.512565196775723,
+      "cross_delta_logloss_x1m": 11.420921117723111
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "ip_country_mismatch",
+      "supported_cells": 24,
+      "spearman": 0.4539130434782608,
+      "cross_delta_logloss_x1m": 6.6229860347279175
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "card_type",
+      "supported_cells": 14,
+      "spearman": 0.8681318681318682,
+      "cross_delta_logloss_x1m": 5.716339468132844
+    },
+    {
+      "left": "device_type",
+      "right": "is_new_merchant",
+      "supported_cells": 16,
+      "spearman": 0.34705882352941175,
+      "cross_delta_logloss_x1m": 4.603156748864993
+    },
+    {
+      "left": "merchant_risk_score",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 20,
+      "spearman": 0.3383458646616541,
+      "cross_delta_logloss_x1m": 4.193954633490393
+    },
+    {
+      "left": "velocity_score",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 20,
+      "spearman": 0.44360902255639095,
+      "cross_delta_logloss_x1m": 3.1978400081914264
+    },
+    {
+      "left": "customer_age",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 21,
+      "spearman": 0.28441558441558445,
+      "cross_delta_logloss_x1m": 3.124095294170374
+    },
+    {
+      "left": "channel",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 9,
+      "spearman": 0.9833333333333333,
+      "cross_delta_logloss_x1m": 2.673528983538631
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 22,
+      "spearman": 0.5358554488989272,
+      "cross_delta_logloss_x1m": 2.4426343247665696
+    },
+    {
+      "left": "device_type",
+      "right": "used_vpn",
+      "supported_cells": 16,
+      "spearman": 0.17058823529411765,
+      "cross_delta_logloss_x1m": 2.3632972546123336
+    },
+    {
+      "left": "prior_disputes",
+      "right": "is_new_merchant",
+      "supported_cells": 6,
+      "spearman": 0.942857142857143,
+      "cross_delta_logloss_x1m": 2.2079686434726007
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "is_foreign_transaction",
+      "supported_cells": 23,
+      "spearman": 0.4911067193675889,
+      "cross_delta_logloss_x1m": 2.1086903172231257
+    },
+    {
+      "left": "prior_disputes",
+      "right": "ip_country_mismatch",
+      "supported_cells": 5,
+      "spearman": 0.7999999999999999,
+      "cross_delta_logloss_x1m": 2.0589148597583193
+    },
+    {
+      "left": "channel",
+      "right": "used_vpn",
+      "supported_cells": 10,
+      "spearman": 0.8545454545454544,
+      "cross_delta_logloss_x1m": 2.0135705218603706
+    },
+    {
+      "left": "card_type",
+      "right": "is_foreign_transaction",
+      "supported_cells": 10,
+      "spearman": 0.43030303030303024,
+      "cross_delta_logloss_x1m": 1.8879908684644673
+    },
+    {
+      "left": "customer_age",
+      "right": "used_vpn",
+      "supported_cells": 21,
+      "spearman": 0.37532467532467534,
+      "cross_delta_logloss_x1m": 1.8680847269630152
+    },
+    {
+      "left": "velocity_score",
+      "right": "is_foreign_transaction",
+      "supported_cells": 20,
+      "spearman": 0.33082706766917286,
+      "cross_delta_logloss_x1m": 1.7973247863236745
+    },
+    {
+      "left": "day_of_week",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 14,
+      "spearman": 0.3626373626373627,
+      "cross_delta_logloss_x1m": 1.4920995412192584
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 23,
+      "spearman": 0.06620553359683795,
+      "cross_delta_logloss_x1m": 1.4185316029116715
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "ip_country_mismatch",
+      "supported_cells": 5,
+      "spearman": 0.8999999999999998,
+      "cross_delta_logloss_x1m": 1.2657045460634087
+    },
+    {
+      "left": "merchant_category",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 16,
+      "spearman": 0.3147058823529411,
+      "cross_delta_logloss_x1m": 1.139299495361585
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 5,
+      "spearman": 0.9999999999999999,
+      "cross_delta_logloss_x1m": 1.0591928990840445
+    },
+    {
+      "left": "auth_method",
+      "right": "is_new_merchant",
+      "supported_cells": 10,
+      "spearman": 0.5636363636363636,
+      "cross_delta_logloss_x1m": 0.938720129843256
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "used_vpn",
+      "supported_cells": 17,
+      "spearman": 0.37009803921568635,
+      "cross_delta_logloss_x1m": 0.5501847588823141
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "ip_country_mismatch",
+      "supported_cells": 17,
+      "spearman": 0.20098039215686278,
+      "cross_delta_logloss_x1m": 0.505201063037765
+    },
+    {
+      "left": "card_type",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 7,
+      "spearman": 0.5714285714285715,
+      "cross_delta_logloss_x1m": 0.4455208306411031
+    },
+    {
+      "left": "prior_disputes",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 5,
+      "spearman": 0.7999999999999999,
+      "cross_delta_logloss_x1m": 0.3604732152898038
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 16,
+      "spearman": 0.19411764705882353,
+      "cross_delta_logloss_x1m": 0.32827067664803933
+    },
+    {
+      "left": "card_age_months",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 17,
+      "spearman": 0.14950980392156862,
+      "cross_delta_logloss_x1m": 0.2564600814336743
+    },
+    {
+      "left": "merchant_risk_score",
+      "right": "prior_disputes",
+      "supported_cells": 25,
+      "spearman": 0.2784615384615384,
+      "cross_delta_logloss_x1m": 0.2393464108901762
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 14,
+      "spearman": 0.054945054945054944,
+      "cross_delta_logloss_x1m": 0.13997408607640147
+    },
+    {
+      "left": "prior_disputes",
+      "right": "used_vpn",
+      "supported_cells": 5,
+      "spearman": 0.8999999999999998,
+      "cross_delta_logloss_x1m": 0.07690370298063579
+    },
+    {
+      "left": "card_age_months",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 23,
+      "spearman": 0.07411067193675888,
+      "cross_delta_logloss_x1m": -0.13392790240848423
+    },
+    {
+      "left": "merchant_risk_score",
+      "right": "is_new_merchant",
+      "supported_cells": 21,
+      "spearman": 0.4168831168831169,
+      "cross_delta_logloss_x1m": -0.1465345612277411
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 17,
+      "spearman": 0.10049019607843139,
+      "cross_delta_logloss_x1m": -0.18474205380362912
+    },
+    {
+      "left": "merchant_category",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 23,
+      "spearman": 0.20454545454545459,
+      "cross_delta_logloss_x1m": -0.19765420714563664
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "used_vpn",
+      "supported_cells": 6,
+      "spearman": 0.7714285714285715,
+      "cross_delta_logloss_x1m": -0.3813935847406892
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "cvv_retry_count",
+      "supported_cells": 30,
+      "spearman": 0.29699666295884314,
+      "cross_delta_logloss_x1m": -0.39229284104266027
+    },
+    {
+      "left": "channel",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 7,
+      "spearman": -0.8214285714285715,
+      "cross_delta_logloss_x1m": -0.4711962962678275
+    },
+    {
+      "left": "prior_disputes",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 5,
+      "spearman": 0.6,
+      "cross_delta_logloss_x1m": -0.49144805178029943
+    },
+    {
+      "left": "velocity_score",
+      "right": "prior_disputes",
+      "supported_cells": 25,
+      "spearman": 0.2676923076923077,
+      "cross_delta_logloss_x1m": -0.5271751475691281
+    },
+    {
+      "left": "channel",
+      "right": "ip_country_mismatch",
+      "supported_cells": 10,
+      "spearman": 0.07878787878787878,
+      "cross_delta_logloss_x1m": -0.5414319790103377
+    },
+    {
+      "left": "device_type",
+      "right": "ip_country_mismatch",
+      "supported_cells": 16,
+      "spearman": 0.10588235294117648,
+      "cross_delta_logloss_x1m": -0.5966579518361044
+    },
+    {
+      "left": "merchant_risk_score",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 16,
+      "spearman": -0.3558823529411765,
+      "cross_delta_logloss_x1m": -0.6647472678019454
+    },
+    {
+      "left": "prior_disputes",
+      "right": "is_foreign_transaction",
+      "supported_cells": 5,
+      "spearman": -0.7,
+      "cross_delta_logloss_x1m": -0.7494860452363058
+    },
+    {
+      "left": "device_type",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 12,
+      "spearman": -0.37762237762237766,
+      "cross_delta_logloss_x1m": -0.7503162872460696
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 24,
+      "spearman": -0.19391304347826085,
+      "cross_delta_logloss_x1m": -0.8295219448858879
+    },
+    {
+      "left": "amount_usd",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 18,
+      "spearman": 0.21775025799793604,
+      "cross_delta_logloss_x1m": -0.8583099645793654
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 17,
+      "spearman": 0.09068627450980393,
+      "cross_delta_logloss_x1m": -1.0939703821673392
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 18,
+      "spearman": -0.3973168214654283,
+      "cross_delta_logloss_x1m": -1.1416799235433905
+    },
+    {
+      "left": "prior_disputes",
+      "right": "device_type",
+      "supported_cells": 20,
+      "spearman": 0.10375939849624059,
+      "cross_delta_logloss_x1m": -1.2108337818794548
+    },
+    {
+      "left": "auth_method",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 9,
+      "spearman": -0.43333333333333335,
+      "cross_delta_logloss_x1m": -1.311439810907363
+    },
+    {
+      "left": "card_type",
+      "right": "is_new_merchant",
+      "supported_cells": 10,
+      "spearman": 0.16363636363636364,
+      "cross_delta_logloss_x1m": -1.3186643054774192
+    },
+    {
+      "left": "velocity_score",
+      "right": "used_vpn",
+      "supported_cells": 20,
+      "spearman": 0.17293233082706763,
+      "cross_delta_logloss_x1m": -1.4165840828540093
+    },
+    {
+      "left": "prior_disputes",
+      "right": "card_type",
+      "supported_cells": 12,
+      "spearman": 0.2657342657342658,
+      "cross_delta_logloss_x1m": -1.5369340000895493
+    },
+    {
+      "left": "day_of_week",
+      "right": "used_vpn",
+      "supported_cells": 14,
+      "spearman": -0.01098901098901099,
+      "cross_delta_logloss_x1m": -1.5375473993157718
+    },
+    {
+      "left": "card_type",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 10,
+      "spearman": 0.17575757575757575,
+      "cross_delta_logloss_x1m": -1.5543393567010617
+    },
+    {
+      "left": "customer_age",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 18,
+      "spearman": -0.2982456140350877,
+      "cross_delta_logloss_x1m": -1.585619218222635
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "used_vpn",
+      "supported_cells": 24,
+      "spearman": 0.33826086956521734,
+      "cross_delta_logloss_x1m": -1.615975639560936
+    },
+    {
+      "left": "day_of_week",
+      "right": "is_foreign_transaction",
+      "supported_cells": 14,
+      "spearman": 0.21318681318681318,
+      "cross_delta_logloss_x1m": -1.7237328186893743
+    },
+    {
+      "left": "velocity_score",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 17,
+      "spearman": -0.21078431372549022,
+      "cross_delta_logloss_x1m": -1.9043138066264602
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "prior_disputes",
+      "supported_cells": 28,
+      "spearman": 0.2868089764641488,
+      "cross_delta_logloss_x1m": -2.267686653919798
+    },
+    {
+      "left": "card_type",
+      "right": "ip_country_mismatch",
+      "supported_cells": 10,
+      "spearman": 0.11515151515151514,
+      "cross_delta_logloss_x1m": -2.285919014429188
+    },
+    {
+      "left": "day_of_week",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 14,
+      "spearman": 0.0989010989010989,
+      "cross_delta_logloss_x1m": -2.2908153408640297
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "is_new_merchant",
+      "supported_cells": 6,
+      "spearman": 0.5428571428571429,
+      "cross_delta_logloss_x1m": -2.364000738506072
+    },
+    {
+      "left": "amount_usd",
+      "right": "prior_disputes",
+      "supported_cells": 28,
+      "spearman": 0.270935960591133,
+      "cross_delta_logloss_x1m": -2.3939856367707817
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 22,
+      "spearman": -0.14624505928853757,
+      "cross_delta_logloss_x1m": -2.603114025726788
+    },
+    {
+      "left": "card_type",
+      "right": "used_vpn",
+      "supported_cells": 10,
+      "spearman": -0.22424242424242422,
+      "cross_delta_logloss_x1m": -2.8182375438741922
+    },
+    {
+      "left": "day_of_week",
+      "right": "card_type",
+      "supported_cells": 35,
+      "spearman": 0.19971988795518206,
+      "cross_delta_logloss_x1m": -2.900628155202443
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 5,
+      "spearman": -0.7999999999999999,
+      "cross_delta_logloss_x1m": -3.1124888131050357
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "is_foreign_transaction",
+      "supported_cells": 24,
+      "spearman": -0.04347826086956521,
+      "cross_delta_logloss_x1m": -3.2146832983360922
+    },
+    {
+      "left": "customer_age",
+      "right": "card_type",
+      "supported_cells": 45,
+      "spearman": 0.33030303030303027,
+      "cross_delta_logloss_x1m": -3.4659764108956543
+    },
+    {
+      "left": "card_age_months",
+      "right": "ip_country_mismatch",
+      "supported_cells": 23,
+      "spearman": -0.08399209486166008,
+      "cross_delta_logloss_x1m": -3.5568162127799874
+    },
+    {
+      "left": "auth_method",
+      "right": "is_foreign_transaction",
+      "supported_cells": 10,
+      "spearman": -0.5636363636363636,
+      "cross_delta_logloss_x1m": -3.820673119509877
+    },
+    {
+      "left": "amount_usd",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 24,
+      "spearman": 0.013043478260869565,
+      "cross_delta_logloss_x1m": -3.8647988538488725
+    },
+    {
+      "left": "device_type",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 15,
+      "spearman": -0.175,
+      "cross_delta_logloss_x1m": -4.125152165541732
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "is_foreign_transaction",
+      "supported_cells": 48,
+      "spearman": 0.1374294398610508,
+      "cross_delta_logloss_x1m": -4.172986175469376
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "is_new_merchant",
+      "supported_cells": 18,
+      "spearman": 0.03611971104231166,
+      "cross_delta_logloss_x1m": -4.627516121227671
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "is_new_merchant",
+      "supported_cells": 48,
+      "spearman": 0.25987841945288753,
+      "cross_delta_logloss_x1m": -4.633746145004945
+    },
+    {
+      "left": "velocity_score",
+      "right": "ip_country_mismatch",
+      "supported_cells": 20,
+      "spearman": -0.3383458646616541,
+      "cross_delta_logloss_x1m": -4.834420148182712
+    },
+    {
+      "left": "customer_age",
+      "right": "ip_country_mismatch",
+      "supported_cells": 21,
+      "spearman": -0.2857142857142857,
+      "cross_delta_logloss_x1m": -4.914119940921823
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "is_foreign_transaction",
+      "supported_cells": 24,
+      "spearman": -0.16695652173913042,
+      "cross_delta_logloss_x1m": -5.014502249886192
+    },
+    {
+      "left": "device_type",
+      "right": "is_foreign_transaction",
+      "supported_cells": 16,
+      "spearman": 0.25588235294117645,
+      "cross_delta_logloss_x1m": -5.03135675994193
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "prior_disputes",
+      "supported_cells": 8,
+      "spearman": -0.9523809523809524,
+      "cross_delta_logloss_x1m": -5.049302879247875
+    },
+    {
+      "left": "amount_usd",
+      "right": "ip_country_mismatch",
+      "supported_cells": 24,
+      "spearman": -0.09478260869565217,
+      "cross_delta_logloss_x1m": -5.295965524148902
+    },
+    {
+      "left": "card_age_months",
+      "right": "prior_disputes",
+      "supported_cells": 28,
+      "spearman": 0.058018609742747675,
+      "cross_delta_logloss_x1m": -5.310714469876507
+    },
+    {
+      "left": "auth_method",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 10,
+      "spearman": 0.17575757575757575,
+      "cross_delta_logloss_x1m": -5.365296606596695
+    },
+    {
+      "left": "day_of_week",
+      "right": "ip_country_mismatch",
+      "supported_cells": 14,
+      "spearman": 0.07692307692307693,
+      "cross_delta_logloss_x1m": -5.388768003653384
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "ip_country_mismatch",
+      "supported_cells": 24,
+      "spearman": -0.14782608695652172,
+      "cross_delta_logloss_x1m": -5.422263442917151
+    },
+    {
+      "left": "merchant_risk_score",
+      "right": "used_vpn",
+      "supported_cells": 20,
+      "spearman": -0.24060150375939846,
+      "cross_delta_logloss_x1m": -5.445465420147993
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "channel",
+      "supported_cells": 14,
+      "spearman": 0.03736263736263736,
+      "cross_delta_logloss_x1m": -5.608658272857341
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "velocity_score",
+      "supported_cells": 104,
+      "spearman": 0.21184252640563325,
+      "cross_delta_logloss_x1m": -5.981796410841053
+    },
+    {
+      "left": "merchant_risk_score",
+      "right": "ip_country_mismatch",
+      "supported_cells": 20,
+      "spearman": -0.5654135338345864,
+      "cross_delta_logloss_x1m": -5.997512157289082
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "card_type",
+      "supported_cells": 54,
+      "spearman": 0.05538402896893462,
+      "cross_delta_logloss_x1m": -6.039063859099663
+    },
+    {
+      "left": "channel",
+      "right": "is_foreign_transaction",
+      "supported_cells": 10,
+      "spearman": 0.07878787878787878,
+      "cross_delta_logloss_x1m": -6.141040824860199
+    },
+    {
+      "left": "auth_method",
+      "right": "used_vpn",
+      "supported_cells": 10,
+      "spearman": -0.2606060606060606,
+      "cross_delta_logloss_x1m": -6.515413043619297
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "cvv_retry_count",
+      "supported_cells": 24,
+      "spearman": 0.27999999999999997,
+      "cross_delta_logloss_x1m": -6.533401019147455
+    },
+    {
+      "left": "amount_usd",
+      "right": "is_foreign_transaction",
+      "supported_cells": 24,
+      "spearman": -0.05826086956521739,
+      "cross_delta_logloss_x1m": -6.545410999799537
+    },
+    {
+      "left": "auth_method",
+      "right": "ip_country_mismatch",
+      "supported_cells": 10,
+      "spearman": -0.7939393939393938,
+      "cross_delta_logloss_x1m": -6.587939405613195
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "time_of_day_hour",
+      "supported_cells": 49,
+      "spearman": 0.22489795918367345,
+      "cross_delta_logloss_x1m": -6.685799862865672
+    },
+    {
+      "left": "card_type",
+      "right": "channel",
+      "supported_cells": 24,
+      "spearman": -0.027826086956521737,
+      "cross_delta_logloss_x1m": -6.800813867599955
+    },
+    {
+      "left": "merchant_category",
+      "right": "used_vpn",
+      "supported_cells": 24,
+      "spearman": -0.04869565217391304,
+      "cross_delta_logloss_x1m": -6.807293194096074
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "ip_country_mismatch",
+      "supported_cells": 48,
+      "spearman": 0.01107251411202779,
+      "cross_delta_logloss_x1m": -6.8189177111458665
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "is_new_merchant",
+      "supported_cells": 24,
+      "spearman": -0.06,
+      "cross_delta_logloss_x1m": -7.017008271838479
+    },
+    {
+      "left": "merchant_risk_score",
+      "right": "is_foreign_transaction",
+      "supported_cells": 20,
+      "spearman": -0.0631578947368421,
+      "cross_delta_logloss_x1m": -7.164013143281538
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "auth_method",
+      "supported_cells": 15,
+      "spearman": -0.18928571428571428,
+      "cross_delta_logloss_x1m": -7.361873359507782
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "used_vpn",
+      "supported_cells": 24,
+      "spearman": 0.07739130434782608,
+      "cross_delta_logloss_x1m": -7.4325791594655986
+    },
+    {
+      "left": "merchant_category",
+      "right": "is_new_merchant",
+      "supported_cells": 24,
+      "spearman": 0.07826086956521738,
+      "cross_delta_logloss_x1m": -7.587908910158969
+    },
+    {
+      "left": "card_age_months",
+      "right": "customer_age",
+      "supported_cells": 100,
+      "spearman": 0.20078007800780076,
+      "cross_delta_logloss_x1m": -7.666577171619378
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "used_vpn",
+      "supported_cells": 24,
+      "spearman": -0.08869565217391304,
+      "cross_delta_logloss_x1m": -8.345597772952917
+    },
+    {
+      "left": "card_age_months",
+      "right": "used_vpn",
+      "supported_cells": 24,
+      "spearman": -0.09217391304347824,
+      "cross_delta_logloss_x1m": -8.463771514923636
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "merchant_category",
+      "supported_cells": 264,
+      "spearman": 0.08368084315426304,
+      "cross_delta_logloss_x1m": -8.760139850628102
+    },
+    {
+      "left": "card_age_months",
+      "right": "is_foreign_transaction",
+      "supported_cells": 23,
+      "spearman": -0.37154150197628455,
+      "cross_delta_logloss_x1m": -8.791329970179948
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "cvv_retry_count",
+      "supported_cells": 31,
+      "spearman": 0.06935483870967743,
+      "cross_delta_logloss_x1m": -8.908686830266005
+    },
+    {
+      "left": "card_type",
+      "right": "auth_method",
+      "supported_cells": 24,
+      "spearman": 0.12956521739130433,
+      "cross_delta_logloss_x1m": -9.148437165790153
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "is_new_merchant",
+      "supported_cells": 24,
+      "spearman": -0.15043478260869564,
+      "cross_delta_logloss_x1m": -9.220327269772726
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 48,
+      "spearman": -0.2357794181502388,
+      "cross_delta_logloss_x1m": -9.409977798631461
+    },
+    {
+      "left": "day_of_week",
+      "right": "prior_disputes",
+      "supported_cells": 21,
+      "spearman": -0.10259740259740259,
+      "cross_delta_logloss_x1m": -9.451165078706289
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "prior_disputes",
+      "supported_cells": 20,
+      "spearman": -0.4481203007518797,
+      "cross_delta_logloss_x1m": -9.616383782173248
+    },
+    {
+      "left": "amount_usd",
+      "right": "used_vpn",
+      "supported_cells": 24,
+      "spearman": -0.05739130434782608,
+      "cross_delta_logloss_x1m": -10.321658652584714
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "is_foreign_transaction",
+      "supported_cells": 17,
+      "spearman": -0.17401960784313728,
+      "cross_delta_logloss_x1m": -10.528073683826868
+    },
+    {
+      "left": "card_age_months",
+      "right": "channel",
+      "supported_cells": 57,
+      "spearman": 0.36446720248898107,
+      "cross_delta_logloss_x1m": -10.55557080394316
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "prior_disputes",
+      "supported_cells": 48,
+      "spearman": 0.07197134172818064,
+      "cross_delta_logloss_x1m": -10.565747209462224
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "day_of_week",
+      "supported_cells": 21,
+      "spearman": -0.2636363636363636,
+      "cross_delta_logloss_x1m": -10.68075998334571
+    },
+    {
+      "left": "merchant_category",
+      "right": "is_foreign_transaction",
+      "supported_cells": 24,
+      "spearman": -0.328695652173913,
+      "cross_delta_logloss_x1m": -10.789217440941867
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "velocity_score",
+      "supported_cells": 56,
+      "spearman": 0.1639781271360219,
+      "cross_delta_logloss_x1m": -10.823308998689175
+    },
+    {
+      "left": "prior_disputes",
+      "right": "channel",
+      "supported_cells": 13,
+      "spearman": -0.46703296703296704,
+      "cross_delta_logloss_x1m": -10.88896861778349
+    },
+    {
+      "left": "prior_disputes",
+      "right": "merchant_category",
+      "supported_cells": 26,
+      "spearman": 0.18974358974358974,
+      "cross_delta_logloss_x1m": -11.333307776698463
+    },
+    {
+      "left": "customer_age",
+      "right": "is_foreign_transaction",
+      "supported_cells": 20,
+      "spearman": -0.23458646616541348,
+      "cross_delta_logloss_x1m": -11.367363602210222
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "prior_disputes",
+      "supported_cells": 29,
+      "spearman": -0.27339901477832507,
+      "cross_delta_logloss_x1m": -11.699704830939634
+    },
+    {
+      "left": "merchant_risk_score",
+      "right": "channel",
+      "supported_cells": 46,
+      "spearman": 0.15757015109466543,
+      "cross_delta_logloss_x1m": -11.836670195353111
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "device_type",
+      "supported_cells": 155,
+      "spearman": 0.08604621185266345,
+      "cross_delta_logloss_x1m": -12.363583943486866
+    },
+    {
+      "left": "merchant_category",
+      "right": "ip_country_mismatch",
+      "supported_cells": 23,
+      "spearman": -0.191699604743083,
+      "cross_delta_logloss_x1m": -12.417199302360046
+    },
+    {
+      "left": "card_type",
+      "right": "device_type",
+      "supported_cells": 36,
+      "spearman": 0.08494208494208495,
+      "cross_delta_logloss_x1m": -12.450205047433416
+    },
+    {
+      "left": "customer_age",
+      "right": "velocity_score",
+      "supported_cells": 86,
+      "spearman": 0.1293928958913156,
+      "cross_delta_logloss_x1m": -12.490505334501938
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "card_type",
+      "supported_cells": 52,
+      "spearman": 0.024417314095449498,
+      "cross_delta_logloss_x1m": -12.935724347106069
+    },
+    {
+      "left": "auth_method",
+      "right": "channel",
+      "supported_cells": 25,
+      "spearman": 0.12461538461538461,
+      "cross_delta_logloss_x1m": -12.940813695373254
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "device_type",
+      "supported_cells": 20,
+      "spearman": -0.3969924812030075,
+      "cross_delta_logloss_x1m": -13.219024252901468
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "cvv_retry_count",
+      "supported_cells": 31,
+      "spearman": -0.09193548387096774,
+      "cross_delta_logloss_x1m": -13.472711695947844
+    },
+    {
+      "left": "day_of_week",
+      "right": "is_new_merchant",
+      "supported_cells": 14,
+      "spearman": -0.4593406593406593,
+      "cross_delta_logloss_x1m": -13.851826167548488
+    },
+    {
+      "left": "prior_disputes",
+      "right": "auth_method",
+      "supported_cells": 14,
+      "spearman": -0.2967032967032967,
+      "cross_delta_logloss_x1m": -13.875567581575952
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "used_vpn",
+      "supported_cells": 48,
+      "spearman": -0.4377985236647851,
+      "cross_delta_logloss_x1m": -13.97150476058938
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "merchant_risk_score",
+      "supported_cells": 103,
+      "spearman": 0.06608311733954224,
+      "cross_delta_logloss_x1m": -14.28259665530415
+    },
+    {
+      "left": "amount_usd",
+      "right": "distance_from_home_km",
+      "supported_cells": 121,
+      "spearman": 0.06044573905974799,
+      "cross_delta_logloss_x1m": -14.73149545093955
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "day_of_week",
+      "supported_cells": 84,
+      "spearman": 0.14152070466740915,
+      "cross_delta_logloss_x1m": -15.07819226816908
+    },
+    {
+      "left": "auth_method",
+      "right": "device_type",
+      "supported_cells": 40,
+      "spearman": 0.09249530956848032,
+      "cross_delta_logloss_x1m": -15.30886643048886
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "account_balance_usd",
+      "supported_cells": 123,
+      "spearman": 0.16507590512182224,
+      "cross_delta_logloss_x1m": -15.4081961777056
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "is_foreign_transaction",
+      "supported_cells": 5,
+      "spearman": -0.9999999999999999,
+      "cross_delta_logloss_x1m": -15.417763788587568
+    },
+    {
+      "left": "day_of_week",
+      "right": "merchant_category",
+      "supported_cells": 84,
+      "spearman": 0.2142755897539739,
+      "cross_delta_logloss_x1m": -15.628868025635917
+    },
+    {
+      "left": "card_age_months",
+      "right": "merchant_risk_score",
+      "supported_cells": 101,
+      "spearman": 0.03266161910308677,
+      "cross_delta_logloss_x1m": -15.678543606068086
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "merchant_risk_score",
+      "supported_cells": 66,
+      "spearman": 0.03162509132658387,
+      "cross_delta_logloss_x1m": -15.683332313393686
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "channel",
+      "supported_cells": 38,
+      "spearman": -0.024182076813655765,
+      "cross_delta_logloss_x1m": -15.861552887679961
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "ip_country_mismatch",
+      "supported_cells": 24,
+      "spearman": -0.34956521739130436,
+      "cross_delta_logloss_x1m": -16.136052272222567
+    },
+    {
+      "left": "merchant_risk_score",
+      "right": "auth_method",
+      "supported_cells": 47,
+      "spearman": 0.01006012950971323,
+      "cross_delta_logloss_x1m": -16.326302958586837
+    },
+    {
+      "left": "customer_age",
+      "right": "is_new_merchant",
+      "supported_cells": 24,
+      "spearman": -0.29739130434782607,
+      "cross_delta_logloss_x1m": -16.762552807607232
+    },
+    {
+      "left": "card_age_months",
+      "right": "device_type",
+      "supported_cells": 80,
+      "spearman": 0.005649320206282232,
+      "cross_delta_logloss_x1m": -17.204042167205483
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "is_new_merchant",
+      "supported_cells": 24,
+      "spearman": -0.2826086956521739,
+      "cross_delta_logloss_x1m": -17.293373314887607
+    },
+    {
+      "left": "card_age_months",
+      "right": "cvv_retry_count",
+      "supported_cells": 31,
+      "spearman": -0.21814516129032258,
+      "cross_delta_logloss_x1m": -17.38136230639194
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "merchant_risk_score",
+      "supported_cells": 28,
+      "spearman": -0.3371647509578544,
+      "cross_delta_logloss_x1m": -17.49689054168854
+    },
+    {
+      "left": "velocity_score",
+      "right": "card_type",
+      "supported_cells": 47,
+      "spearman": -0.015494912118408883,
+      "cross_delta_logloss_x1m": -18.047108919118028
+    },
+    {
+      "left": "velocity_score",
+      "right": "device_type",
+      "supported_cells": 73,
+      "spearman": 0.011847463902258425,
+      "cross_delta_logloss_x1m": -18.22356784850509
+    },
+    {
+      "left": "card_age_months",
+      "right": "card_type",
+      "supported_cells": 52,
+      "spearman": -0.08546059933407325,
+      "cross_delta_logloss_x1m": -18.327893237382156
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "prior_disputes",
+      "supported_cells": 28,
+      "spearman": -0.2583470169677066,
+      "cross_delta_logloss_x1m": -18.62435923422493
+    },
+    {
+      "left": "velocity_score",
+      "right": "is_new_merchant",
+      "supported_cells": 21,
+      "spearman": -0.00909090909090909,
+      "cross_delta_logloss_x1m": -18.80617566302105
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "velocity_score",
+      "supported_cells": 29,
+      "spearman": -0.08719211822660097,
+      "cross_delta_logloss_x1m": -18.921533962905144
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "device_type",
+      "supported_cells": 85,
+      "spearman": 0.160328317373461,
+      "cross_delta_logloss_x1m": -19.223120192909466
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "card_age_months",
+      "supported_cells": 76,
+      "spearman": 0.03972658920027341,
+      "cross_delta_logloss_x1m": -19.407860174863657
+    },
+    {
+      "left": "customer_age",
+      "right": "prior_disputes",
+      "supported_cells": 28,
+      "spearman": -0.07772304324028462,
+      "cross_delta_logloss_x1m": -19.55228700290583
+    },
+    {
+      "left": "amount_usd",
+      "right": "hours_since_last_txn",
+      "supported_cells": 127,
+      "spearman": 0.1385217472815898,
+      "cross_delta_logloss_x1m": -19.710747439144775
+    },
+    {
+      "left": "channel",
+      "right": "is_new_merchant",
+      "supported_cells": 10,
+      "spearman": -0.9030303030303028,
+      "cross_delta_logloss_x1m": -19.942104397576976
+    },
+    {
+      "left": "merchant_risk_score",
+      "right": "card_type",
+      "supported_cells": 45,
+      "spearman": 0.08563899868247693,
+      "cross_delta_logloss_x1m": -20.03541731827634
+    },
+    {
+      "left": "card_age_months",
+      "right": "velocity_score",
+      "supported_cells": 103,
+      "spearman": 0.12698238369283488,
+      "cross_delta_logloss_x1m": -20.407173382559986
+    },
+    {
+      "left": "amount_usd",
+      "right": "card_type",
+      "supported_cells": 54,
+      "spearman": 0.01940156279778921,
+      "cross_delta_logloss_x1m": -20.552975741158836
+    },
+    {
+      "left": "card_age_months",
+      "right": "auth_method",
+      "supported_cells": 58,
+      "spearman": 0.1467593589467532,
+      "cross_delta_logloss_x1m": -20.701840235396837
+    },
+    {
+      "left": "day_of_week",
+      "right": "channel",
+      "supported_cells": 35,
+      "spearman": 0.0380952380952381,
+      "cross_delta_logloss_x1m": -20.77770690686094
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "auth_method",
+      "supported_cells": 58,
+      "spearman": 0.005260081823495033,
+      "cross_delta_logloss_x1m": -21.209291465281968
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "day_of_week",
+      "supported_cells": 49,
+      "spearman": 0.06479591836734692,
+      "cross_delta_logloss_x1m": -21.233194237687655
+    },
+    {
+      "left": "customer_age",
+      "right": "channel",
+      "supported_cells": 52,
+      "spearman": 0.022709809613250236,
+      "cross_delta_logloss_x1m": -21.615251722406427
+    },
+    {
+      "left": "amount_usd",
+      "right": "card_age_months",
+      "supported_cells": 122,
+      "spearman": 0.17893338532355652,
+      "cross_delta_logloss_x1m": -22.009037249781205
+    },
+    {
+      "left": "amount_usd",
+      "right": "channel",
+      "supported_cells": 58,
+      "spearman": -0.08800639822818297,
+      "cross_delta_logloss_x1m": -22.719212068697978
+    },
+    {
+      "left": "merchant_category",
+      "right": "channel",
+      "supported_cells": 59,
+      "spearman": -0.019812974868497958,
+      "cross_delta_logloss_x1m": -22.86104147574012
+    },
+    {
+      "left": "customer_age",
+      "right": "account_balance_usd",
+      "supported_cells": 106,
+      "spearman": 0.09378542459127893,
+      "cross_delta_logloss_x1m": -23.10115310069699
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "merchant_category",
+      "supported_cells": 81,
+      "spearman": 0.053319783197831976,
+      "cross_delta_logloss_x1m": -23.356365593026567
+    },
+    {
+      "left": "amount_usd",
+      "right": "day_of_week",
+      "supported_cells": 84,
+      "spearman": 0.047504302925989665,
+      "cross_delta_logloss_x1m": -23.50538982201155
+    },
+    {
+      "left": "card_age_months",
+      "right": "time_of_day_hour",
+      "supported_cells": 216,
+      "spearman": 0.04778694673668417,
+      "cross_delta_logloss_x1m": -23.684524271319574
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "card_type",
+      "supported_cells": 54,
+      "spearman": -0.02732990280160091,
+      "cross_delta_logloss_x1m": -24.080909759603145
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "merchant_category",
+      "supported_cells": 126,
+      "spearman": -0.004250468691413573,
+      "cross_delta_logloss_x1m": -24.49405158123323
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "time_of_day_hour",
+      "supported_cells": 145,
+      "spearman": 0.0651236025822705,
+      "cross_delta_logloss_x1m": -24.857277014596868
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "velocity_score",
+      "supported_cells": 104,
+      "spearman": -0.024837298623706393,
+      "cross_delta_logloss_x1m": -24.95881205619907
+    },
+    {
+      "left": "card_age_months",
+      "right": "merchant_category",
+      "supported_cells": 126,
+      "spearman": 0.17676490438695164,
+      "cross_delta_logloss_x1m": -24.967674240303175
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "customer_age",
+      "supported_cells": 105,
+      "spearman": -0.016835994194484758,
+      "cross_delta_logloss_x1m": -25.01229607937064
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "card_age_months",
+      "supported_cells": 120,
+      "spearman": 0.05478852698104034,
+      "cross_delta_logloss_x1m": -25.02463626336547
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "txn_count_last_24h",
+      "supported_cells": 78,
+      "spearman": 0.10094968322816424,
+      "cross_delta_logloss_x1m": -25.770132168814484
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "day_of_week",
+      "supported_cells": 84,
+      "spearman": -0.03282373190239951,
+      "cross_delta_logloss_x1m": -26.027917380945937
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "day_of_week",
+      "supported_cells": 84,
+      "spearman": -0.01810266275184773,
+      "cross_delta_logloss_x1m": -26.050215940525074
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "account_balance_usd",
+      "supported_cells": 79,
+      "spearman": -0.03658714703018501,
+      "cross_delta_logloss_x1m": -26.104762974663526
+    },
+    {
+      "left": "amount_usd",
+      "right": "time_of_day_hour",
+      "supported_cells": 230,
+      "spearman": -0.004376675157005515,
+      "cross_delta_logloss_x1m": -26.936580947579152
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "distance_from_home_km",
+      "supported_cells": 78,
+      "spearman": 0.02153542659871774,
+      "cross_delta_logloss_x1m": -27.060757519307906
+    },
+    {
+      "left": "customer_age",
+      "right": "merchant_risk_score",
+      "supported_cells": 89,
+      "spearman": 0.03888321416411305,
+      "cross_delta_logloss_x1m": -27.153742843616975
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "device_type",
+      "supported_cells": 56,
+      "spearman": -0.0924812030075188,
+      "cross_delta_logloss_x1m": -27.17421025130891
+    },
+    {
+      "left": "amount_usd",
+      "right": "cvv_retry_count",
+      "supported_cells": 31,
+      "spearman": -0.16330645161290325,
+      "cross_delta_logloss_x1m": -27.21646135166228
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "channel",
+      "supported_cells": 57,
+      "spearman": -0.014065335753176046,
+      "cross_delta_logloss_x1m": -27.254917811243764
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "auth_method",
+      "supported_cells": 58,
+      "spearman": -0.07797840597988251,
+      "cross_delta_logloss_x1m": -27.726867510405185
+    },
+    {
+      "left": "card_age_months",
+      "right": "is_new_merchant",
+      "supported_cells": 24,
+      "spearman": -0.5095652173913043,
+      "cross_delta_logloss_x1m": -27.85220319752898
+    },
+    {
+      "left": "cvv_retry_count",
+      "right": "merchant_category",
+      "supported_cells": 33,
+      "spearman": -0.25501336898395727,
+      "cross_delta_logloss_x1m": -28.00716791612812
+    },
+    {
+      "left": "velocity_score",
+      "right": "auth_method",
+      "supported_cells": 48,
+      "spearman": 0.1173469387755102,
+      "cross_delta_logloss_x1m": -28.47111126770306
+    },
+    {
+      "left": "amount_usd",
+      "right": "merchant_category",
+      "supported_cells": 87,
+      "spearman": 0.040078005394765616,
+      "cross_delta_logloss_x1m": -28.484966622594474
+    },
+    {
+      "left": "customer_age",
+      "right": "day_of_week",
+      "supported_cells": 77,
+      "spearman": 0.04721594195278405,
+      "cross_delta_logloss_x1m": -28.591580181440918
+    },
+    {
+      "left": "merchant_risk_score",
+      "right": "device_type",
+      "supported_cells": 71,
+      "spearman": -0.06425217974513749,
+      "cross_delta_logloss_x1m": -28.809771174191884
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "merchant_risk_score",
+      "supported_cells": 100,
+      "spearman": -0.035811581158115814,
+      "cross_delta_logloss_x1m": -29.11723953218672
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "device_type",
+      "supported_cells": 82,
+      "spearman": -0.0919994340505654,
+      "cross_delta_logloss_x1m": -30.524592444781074
+    },
+    {
+      "left": "velocity_score",
+      "right": "channel",
+      "supported_cells": 47,
+      "spearman": -0.06648936170212766,
+      "cross_delta_logloss_x1m": -30.765429733572073
+    },
+    {
+      "left": "card_age_months",
+      "right": "day_of_week",
+      "supported_cells": 84,
+      "spearman": -0.01261516654854713,
+      "cross_delta_logloss_x1m": -31.14700318344742
+    },
+    {
+      "left": "merchant_category",
+      "right": "device_type",
+      "supported_cells": 89,
+      "spearman": 0.059754851889683366,
+      "cross_delta_logloss_x1m": -31.169810525028915
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "channel",
+      "supported_cells": 57,
+      "spearman": 0.02151931553020482,
+      "cross_delta_logloss_x1m": -31.82385587748895
+    },
+    {
+      "left": "channel",
+      "right": "device_type",
+      "supported_cells": 39,
+      "spearman": -0.17064777327935224,
+      "cross_delta_logloss_x1m": -31.995699275259526
+    },
+    {
+      "left": "merchant_category",
+      "right": "card_type",
+      "supported_cells": 54,
+      "spearman": -0.09616923956546597,
+      "cross_delta_logloss_x1m": -32.00728349307835
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "card_type",
+      "supported_cells": 96,
+      "spearman": -0.07567824199674443,
+      "cross_delta_logloss_x1m": -32.22650857179023
+    },
+    {
+      "left": "velocity_score",
+      "right": "merchant_risk_score",
+      "supported_cells": 81,
+      "spearman": 0.04735772357723578,
+      "cross_delta_logloss_x1m": -32.29035231562996
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "channel",
+      "supported_cells": 58,
+      "spearman": -0.08197729859423546,
+      "cross_delta_logloss_x1m": -32.63054062746487
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "auth_method",
+      "supported_cells": 38,
+      "spearman": -0.14191924718240506,
+      "cross_delta_logloss_x1m": -32.94547168581607
+    },
+    {
+      "left": "day_of_week",
+      "right": "device_type",
+      "supported_cells": 56,
+      "spearman": -0.22262474367737528,
+      "cross_delta_logloss_x1m": -32.94578912824501
+    },
+    {
+      "left": "amount_usd",
+      "right": "txn_count_last_24h",
+      "supported_cells": 79,
+      "spearman": -0.11652872444011685,
+      "cross_delta_logloss_x1m": -32.95779068823312
+    },
+    {
+      "left": "customer_age",
+      "right": "cvv_retry_count",
+      "supported_cells": 30,
+      "spearman": -0.4197997775305895,
+      "cross_delta_logloss_x1m": -33.10006087651638
+    },
+    {
+      "left": "amount_usd",
+      "right": "auth_method",
+      "supported_cells": 58,
+      "spearman": -0.11489126088160204,
+      "cross_delta_logloss_x1m": -34.57901387073839
+    },
+    {
+      "left": "day_of_week",
+      "right": "merchant_risk_score",
+      "supported_cells": 64,
+      "spearman": 0.011904761904761902,
+      "cross_delta_logloss_x1m": -35.27220396443221
+    },
+    {
+      "left": "customer_age",
+      "right": "time_of_day_hour",
+      "supported_cells": 168,
+      "spearman": 0.009703332135391096,
+      "cross_delta_logloss_x1m": -36.25664951537637
+    },
+    {
+      "left": "account_balance_usd",
+      "right": "time_of_day_hour",
+      "supported_cells": 206,
+      "spearman": 0.007030512685878231,
+      "cross_delta_logloss_x1m": -36.60979967306405
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "merchant_category",
+      "supported_cells": 123,
+      "spearman": 0.019301956636700156,
+      "cross_delta_logloss_x1m": -36.9356505018344
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "merchant_risk_score",
+      "supported_cells": 103,
+      "spearman": -0.04066906822475069,
+      "cross_delta_logloss_x1m": -37.42053153999477
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "auth_method",
+      "supported_cells": 120,
+      "spearman": -0.013493992638377661,
+      "cross_delta_logloss_x1m": -37.608254311197044
+    },
+    {
+      "left": "merchant_category",
+      "right": "auth_method",
+      "supported_cells": 60,
+      "spearman": -0.10191719922200614,
+      "cross_delta_logloss_x1m": -38.15631317425244
+    },
+    {
+      "left": "customer_age",
+      "right": "auth_method",
+      "supported_cells": 52,
+      "spearman": -0.16835994194484757,
+      "cross_delta_logloss_x1m": -38.72773053114632
+    },
+    {
+      "left": "velocity_score",
+      "right": "day_of_week",
+      "supported_cells": 63,
+      "spearman": -0.09931835637480799,
+      "cross_delta_logloss_x1m": -38.87144652336233
+    },
+    {
+      "left": "card_age_months",
+      "right": "account_balance_usd",
+      "supported_cells": 119,
+      "spearman": -0.008510183734510754,
+      "cross_delta_logloss_x1m": -39.41150621759317
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "auth_method",
+      "supported_cells": 58,
+      "spearman": -0.22975176105078596,
+      "cross_delta_logloss_x1m": -39.73103024441767
+    },
+    {
+      "left": "amount_usd",
+      "right": "velocity_score",
+      "supported_cells": 104,
+      "spearman": -0.0635655606529393,
+      "cross_delta_logloss_x1m": -40.287762758189906
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "customer_age",
+      "supported_cells": 100,
+      "spearman": -0.03747974797479747,
+      "cross_delta_logloss_x1m": -40.57189446972184
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "device_type",
+      "supported_cells": 81,
+      "spearman": -0.12439024390243902,
+      "cross_delta_logloss_x1m": -40.68673048754777
+    },
+    {
+      "left": "amount_usd",
+      "right": "is_new_merchant",
+      "supported_cells": 24,
+      "spearman": -0.37130434782608696,
+      "cross_delta_logloss_x1m": -42.3657888388727
+    },
+    {
+      "left": "merchant_risk_score",
+      "right": "merchant_category",
+      "supported_cells": 81,
+      "spearman": -0.05282294489611563,
+      "cross_delta_logloss_x1m": -43.15550875428418
+    },
+    {
+      "left": "day_of_week",
+      "right": "auth_method",
+      "supported_cells": 35,
+      "spearman": -0.3795518207282913,
+      "cross_delta_logloss_x1m": -43.183004832166425
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "card_age_months",
+      "supported_cells": 118,
+      "spearman": -0.15107424977813813,
+      "cross_delta_logloss_x1m": -43.33226316905842
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "time_of_day_hour",
+      "supported_cells": 238,
+      "spearman": 0.02803360632426267,
+      "cross_delta_logloss_x1m": -43.50106670933254
+    },
+    {
+      "left": "amount_usd",
+      "right": "customer_age",
+      "supported_cells": 103,
+      "spearman": -0.04891710231516057,
+      "cross_delta_logloss_x1m": -43.66426492760025
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "channel",
+      "supported_cells": 120,
+      "spearman": -0.08315855267726924,
+      "cross_delta_logloss_x1m": -43.9998313689922
+    },
+    {
+      "left": "amount_usd",
+      "right": "device_type",
+      "supported_cells": 82,
+      "spearman": -0.052056464339743806,
+      "cross_delta_logloss_x1m": -45.41232385428296
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "time_of_day_hour",
+      "supported_cells": 205,
+      "spearman": 0.005075845161649788,
+      "cross_delta_logloss_x1m": -46.274525962996634
+    },
+    {
+      "left": "customer_age",
+      "right": "device_type",
+      "supported_cells": 70,
+      "spearman": -0.003936663459014959,
+      "cross_delta_logloss_x1m": -47.147511339570194
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "day_of_week",
+      "supported_cells": 168,
+      "spearman": -0.033055613203010724,
+      "cross_delta_logloss_x1m": -47.15728396096082
+    },
+    {
+      "left": "customer_age",
+      "right": "merchant_category",
+      "supported_cells": 105,
+      "spearman": -0.11950031100974497,
+      "cross_delta_logloss_x1m": -47.31675253675549
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "velocity_score",
+      "supported_cells": 88,
+      "spearman": -0.007379099010249729,
+      "cross_delta_logloss_x1m": -48.63088938545384
+    },
+    {
+      "left": "time_of_day_hour",
+      "right": "merchant_risk_score",
+      "supported_cells": 192,
+      "spearman": -0.06518053332609935,
+      "cross_delta_logloss_x1m": -48.748407844553824
+    },
+    {
+      "left": "velocity_score",
+      "right": "merchant_category",
+      "supported_cells": 106,
+      "spearman": -0.18083482379021085,
+      "cross_delta_logloss_x1m": -53.27772597569487
+    },
+    {
+      "left": "distance_from_home_km",
+      "right": "account_balance_usd",
+      "supported_cells": 120,
+      "spearman": -0.1753177303979443,
+      "cross_delta_logloss_x1m": -55.18312860152657
+    },
+    {
+      "left": "txn_count_last_24h",
+      "right": "customer_age",
+      "supported_cells": 67,
+      "spearman": -0.21996967036475382,
+      "cross_delta_logloss_x1m": -55.687502019802984
+    },
+    {
+      "left": "amount_usd",
+      "right": "merchant_risk_score",
+      "supported_cells": 99,
+      "spearman": -0.09940630797773654,
+      "cross_delta_logloss_x1m": -56.935686594276795
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "distance_from_home_km",
+      "supported_cells": 123,
+      "spearman": -0.1496562665256478,
+      "cross_delta_logloss_x1m": -63.23539994395987
+    },
+    {
+      "left": "velocity_score",
+      "right": "time_of_day_hour",
+      "supported_cells": 214,
+      "spearman": -0.06639401722222052,
+      "cross_delta_logloss_x1m": -63.58210862455274
+    },
+    {
+      "left": "hours_since_last_txn",
+      "right": "merchant_category",
+      "supported_cells": 131,
+      "spearman": -0.17985907222548447,
+      "cross_delta_logloss_x1m": -65.86378384683331
+    },
+    {
+      "left": "amount_usd",
+      "right": "account_balance_usd",
+      "supported_cells": 128,
+      "spearman": -0.2746177440029298,
+      "cross_delta_logloss_x1m": -77.15231629769143
+    },
+    {
+      "left": "is_foreign_transaction",
+      "right": "is_new_merchant",
+      "supported_cells": 4,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "is_foreign_transaction",
+      "right": "used_vpn",
+      "supported_cells": 4,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "is_foreign_transaction",
+      "right": "ip_country_mismatch",
+      "supported_cells": 4,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "is_foreign_transaction",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 4,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "is_foreign_transaction",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 3,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "is_new_merchant",
+      "right": "used_vpn",
+      "supported_cells": 4,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "is_new_merchant",
+      "right": "ip_country_mismatch",
+      "supported_cells": 4,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "is_new_merchant",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 4,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "is_new_merchant",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 4,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "used_vpn",
+      "right": "ip_country_mismatch",
+      "supported_cells": 4,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "used_vpn",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 4,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "used_vpn",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 3,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "ip_country_mismatch",
+      "right": "billing_shipping_mismatch",
+      "supported_cells": 4,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "ip_country_mismatch",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 3,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "left": "billing_shipping_mismatch",
+      "right": "is_ai_generated_scam_attempt",
+      "supported_cells": 3,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    }
+  ],
+  "exact_value_results": [
+    {
+      "feature": "amount_usd",
+      "key": "exact",
+      "supported_cells": 7,
+      "spearman": -0.07142857142857144,
+      "cross_delta_logloss_x1m": -0.4424712617954521
+    },
+    {
+      "feature": "amount_usd",
+      "key": "last_digit",
+      "supported_cells": 10,
+      "spearman": -0.3939393939393939,
+      "cross_delta_logloss_x1m": -15.60057799526654
+    },
+    {
+      "feature": "amount_usd",
+      "key": "fraction",
+      "supported_cells": 100,
+      "spearman": -0.21960996099609958,
+      "cross_delta_logloss_x1m": -70.9673125480657
+    },
+    {
+      "feature": "hours_since_last_txn",
+      "key": "exact",
+      "supported_cells": 199,
+      "spearman": -0.26586264656616415,
+      "cross_delta_logloss_x1m": -53.64499196806767
+    },
+    {
+      "feature": "hours_since_last_txn",
+      "key": "last_digit",
+      "supported_cells": 10,
+      "spearman": -0.22424242424242422,
+      "cross_delta_logloss_x1m": -10.442093804075185
+    },
+    {
+      "feature": "hours_since_last_txn",
+      "key": "fraction",
+      "supported_cells": 100,
+      "spearman": -0.37038103810381034,
+      "cross_delta_logloss_x1m": -114.65065763262852
+    },
+    {
+      "feature": "distance_from_home_km",
+      "key": "exact",
+      "supported_cells": 50,
+      "spearman": 0.04768307322929172,
+      "cross_delta_logloss_x1m": -0.6034053306688436
+    },
+    {
+      "feature": "distance_from_home_km",
+      "key": "last_digit",
+      "supported_cells": 10,
+      "spearman": 0.6848484848484848,
+      "cross_delta_logloss_x1m": 9.964623893270216
+    },
+    {
+      "feature": "distance_from_home_km",
+      "key": "fraction",
+      "supported_cells": 100,
+      "spearman": 0.2742274227422742,
+      "cross_delta_logloss_x1m": 5.891619111466155
+    },
+    {
+      "feature": "account_balance_usd",
+      "key": "exact",
+      "supported_cells": 3,
+      "spearman": null,
+      "cross_delta_logloss_x1m": null
+    },
+    {
+      "feature": "account_balance_usd",
+      "key": "last_digit",
+      "supported_cells": 10,
+      "spearman": -0.2727272727272727,
+      "cross_delta_logloss_x1m": -16.531478621047526
+    },
+    {
+      "feature": "account_balance_usd",
+      "key": "fraction",
+      "supported_cells": 100,
+      "spearman": -0.2636183618361836,
+      "cross_delta_logloss_x1m": -99.56721453654876
+    },
+    {
+      "feature": "velocity_score",
+      "key": "exact",
+      "supported_cells": 291,
+      "spearman": -0.11984134327413332,
+      "cross_delta_logloss_x1m": -64.76512864277645
+    },
+    {
+      "feature": "velocity_score",
+      "key": "last_digit",
+      "supported_cells": 10,
+      "spearman": 0.2606060606060606,
+      "cross_delta_logloss_x1m": -3.934209686895956
+    },
+    {
+      "feature": "velocity_score",
+      "key": "fraction",
+      "supported_cells": 10,
+      "spearman": 0.2606060606060606,
+      "cross_delta_logloss_x1m": -3.934209686895956
+    },
+    {
+      "feature": "merchant_risk_score",
+      "key": "exact",
+      "supported_cells": 312,
+      "spearman": -0.08576374264199789,
+      "cross_delta_logloss_x1m": -48.44944883859676
+    },
+    {
+      "feature": "merchant_risk_score",
+      "key": "last_digit",
+      "supported_cells": 10,
+      "spearman": -0.5878787878787878,
+      "cross_delta_logloss_x1m": -13.656679054664368
+    },
+    {
+      "feature": "merchant_risk_score",
+      "key": "fraction",
+      "supported_cells": 10,
+      "spearman": -0.5878787878787878,
+      "cross_delta_logloss_x1m": -13.656679054664368
+    }
+  ]
+}

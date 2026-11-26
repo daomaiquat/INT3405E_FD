@@ -1,0 +1,5808 @@
+{
+  "train_rows": 699960,
+  "test_rows": 299984,
+  "positive_rows": 11689,
+  "parameters": {
+    "ridge": 50.0,
+    "min_rows": 500,
+    "min_expected": 5.0,
+    "max_abs_offset": 0.5,
+    "inner_oof_files_verified": 25
+  },
+  "xgb": {
+    "auc": 0.9501823034854605,
+    "ap": 0.5287626474741451,
+    "log_loss": 0.04442176986748997,
+    "reviewed": 7000,
+    "fraud_found": 4648,
+    "precision": 0.664,
+    "recall": 0.39763880571477456,
+    "expected_fraud": 11727.516734799527
+  },
+  "final": {
+    "auc": 0.9503452077073289,
+    "ap": 0.529376204636088,
+    "log_loss": 0.04434664759038209,
+    "reviewed": 7000,
+    "fraud_found": 4641,
+    "precision": 0.663,
+    "recall": 0.39703995209171017,
+    "expected_fraud": 11703.966465002995
+  },
+  "cohorts": {
+    "no_flags": {
+      "rows": 549155,
+      "fraud": 3870,
+      "xgb_expected": 4052.1402745061573,
+      "final_expected": 3884.7967488338622,
+      "xgb_found": 622,
+      "final_found": 608
+    },
+    "some_flags": {
+      "rows": 150805,
+      "fraud": 7819,
+      "xgb_expected": 7675.376460293371,
+      "final_expected": 7819.169716169135,
+      "xgb_found": 4026,
+      "final_found": 4033
+    },
+    "cvv0": {
+      "rows": 642088,
+      "fraud": 5990,
+      "xgb_expected": 6089.996476840847,
+      "final_expected": 5927.8848793779525,
+      "xgb_found": 1205,
+      "final_found": 1202
+    },
+    "cvv1": {
+      "rows": 55942,
+      "fraud": 4895,
+      "xgb_expected": 4858.715192275373,
+      "final_expected": 4970.6617005903845,
+      "xgb_found": 2751,
+      "final_found": 2746
+    },
+    "cvv2plus": {
+      "rows": 1930,
+      "fraud": 804,
+      "xgb_expected": 778.8050656833075,
+      "final_expected": 805.4198850346605,
+      "xgb_found": 692,
+      "final_found": 693
+    }
+  },
+  "candidates": {
+    "cvv_auth": {
+      "auc": 0.9501177880578605,
+      "ap": 0.5287155067991307,
+      "log_loss": 0.04441610649901971,
+      "reviewed": 7000,
+      "fraud_found": 4650,
+      "precision": 0.6642857142857143,
+      "recall": 0.3978099067499358,
+      "expected_fraud": 11683.3785444005,
+      "delta_auc": -6.451542759999818e-05,
+      "delta_ap": -4.714067501443431e-05,
+      "delta_log_loss": -5.6633684702572795e-06,
+      "fold_delta_auc": [
+        -2.415762014862377e-05,
+        -5.947456587174216e-05,
+        -5.545853346011764e-05,
+        -6.79494040940476e-05,
+        -9.795545825141971e-05
+      ],
+      "fold_wins": 0,
+      "affected_share": [
+        0.9973355620321162,
+        0.99728555917481,
+        0.9971784101948683,
+        0.9971998399908566,
+        0.9972141265215155
+      ]
+    },
+    "cvv_channel": {
+      "auc": 0.9501489240779406,
+      "ap": 0.5285089579938744,
+      "log_loss": 0.04443076894537198,
+      "reviewed": 7000,
+      "fraud_found": 4649,
+      "precision": 0.6641428571428571,
+      "recall": 0.3977243562323552,
+      "expected_fraud": 11668.947932904082,
+      "delta_auc": -3.3379407519906756e-05,
+      "delta_ap": -0.0002536894802707135,
+      "delta_log_loss": 8.999077882008988e-06,
+      "fold_delta_auc": [
+        2.7701297298232674e-05,
+        2.354933048120955e-05,
+        -0.00013675328316953284,
+        -3.2345762013274992e-06,
+        -7.033727326877237e-05
+      ],
+      "fold_wins": 2,
+      "affected_share": [
+        0.9984070518315332,
+        0.9983213326475798,
+        0.9983141893822504,
+        0.9982927595862621,
+        0.9982713297902738
+      ]
+    },
+    "network_new": {
+      "auc": 0.9501910754243141,
+      "ap": 0.5288472182979429,
+      "log_loss": 0.044408163128283745,
+      "reviewed": 7000,
+      "fraud_found": 4645,
+      "precision": 0.6635714285714286,
+      "recall": 0.3973821541620327,
+      "expected_fraud": 11673.663283531561,
+      "delta_auc": 8.771938853624484e-06,
+      "delta_ap": 8.457082379775827e-05,
+      "delta_log_loss": -1.360673920622335e-05,
+      "fold_delta_auc": [
+        -3.9888127355891534e-05,
+        8.967481888821904e-05,
+        1.493156189824596e-05,
+        -2.827535392491143e-07,
+        -7.592398605482664e-06
+      ],
+      "fold_wins": 2,
+      "affected_share": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "merchant_new": {
+      "auc": 0.9501346909943629,
+      "ap": 0.5288788963591434,
+      "log_loss": 0.04441375143805852,
+      "reviewed": 7000,
+      "fraud_found": 4647,
+      "precision": 0.6638571428571428,
+      "recall": 0.3975532551971939,
+      "expected_fraud": 11695.22788702644,
+      "delta_auc": -4.761249109763721e-05,
+      "delta_ap": 0.00011624888499828234,
+      "delta_log_loss": -8.01842943144726e-06,
+      "fold_delta_auc": [
+        -2.9844600276218713e-05,
+        6.849160730959536e-05,
+        -9.04609358708397e-05,
+        -8.264171299765533e-05,
+        -9.342363366937612e-05
+      ],
+      "fold_wins": 1,
+      "affected_share": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "channel_device": {
+      "auc": 0.9501791471933998,
+      "ap": 0.5285698556303505,
+      "log_loss": 0.044429688800328014,
+      "reviewed": 7000,
+      "fraud_found": 4645,
+      "precision": 0.6635714285714286,
+      "recall": 0.3973821541620327,
+      "expected_fraud": 11688.473476196858,
+      "delta_auc": -3.156292060713106e-06,
+      "delta_ap": -0.00019279184379461523,
+      "delta_log_loss": 7.918932838045512e-06,
+      "fold_delta_auc": [
+        -8.06839334202003e-05,
+        -2.0320968643350312e-06,
+        7.311198656823059e-06,
+        5.813537053644957e-06,
+        6.446625335276845e-05
+      ],
+      "fold_wins": 3,
+      "affected_share": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "channel_hour": {
+      "auc": 0.9502035979847874,
+      "ap": 0.5287280910765304,
+      "log_loss": 0.04442175730856794,
+      "reviewed": 7000,
+      "fraud_found": 4646,
+      "precision": 0.6637142857142857,
+      "recall": 0.3974677046796133,
+      "expected_fraud": 11701.270852391543,
+      "delta_auc": 2.129449932686267e-05,
+      "delta_ap": -3.455639761473783e-05,
+      "delta_log_loss": -1.2558922027339214e-08,
+      "fold_delta_auc": [
+        8.797333948673547e-05,
+        6.230676203655694e-05,
+        7.603273741496608e-06,
+        -8.145943034187919e-05,
+        4.22763148869576e-05
+      ],
+      "fold_wins": 4,
+      "affected_share": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "cvv_flag_count": {
+      "auc": 0.950155503404974,
+      "ap": 0.5286442997712785,
+      "log_loss": 0.044411567379437085,
+      "reviewed": 7000,
+      "fraud_found": 4636,
+      "precision": 0.6622857142857143,
+      "recall": 0.396612199503807,
+      "expected_fraud": 11658.011345662788,
+      "delta_auc": -2.6800080486499844e-05,
+      "delta_ap": -0.0001183477028666724,
+      "delta_log_loss": -1.0202488052883651e-05,
+      "fold_delta_auc": [
+        -7.760497533515487e-05,
+        5.585314554246157e-05,
+        -5.668120947865951e-05,
+        -3.4944919548363096e-05,
+        -1.7487218887723976e-05
+      ],
+      "fold_wins": 1,
+      "affected_share": [
+        0.9984070518315332,
+        0.9982641865249443,
+        0.9982356134636265,
+        0.9983356191782388,
+        0.998307046116921
+      ]
+    },
+    "cvv_amount": {
+      "auc": 0.9501491128240318,
+      "ap": 0.5287254396494778,
+      "log_loss": 0.04442336476114619,
+      "reviewed": 7000,
+      "fraud_found": 4647,
+      "precision": 0.6638571428571428,
+      "recall": 0.3975532551971939,
+      "expected_fraud": 11693.783135964835,
+      "delta_auc": -3.319066142870586e-05,
+      "delta_ap": -3.720782466731798e-05,
+      "delta_log_loss": 1.5948936562190652e-06,
+      "fold_delta_auc": [
+        -2.0873501809237638e-06,
+        -3.347988335344887e-05,
+        -5.146114413911995e-05,
+        -2.687712213456095e-06,
+        -6.179096986613786e-05
+      ],
+      "fold_wins": 0,
+      "affected_share": [
+        0.9988285044859706,
+        0.9989642265272302,
+        0.9989927995885479,
+        0.9989570832619007,
+        0.9989927995885479
+      ]
+    },
+    "amount_cents_scale": {
+      "auc": 0.9501838286185122,
+      "ap": 0.52888968999778,
+      "log_loss": 0.04441874536870078,
+      "reviewed": 7000,
+      "fraud_found": 4652,
+      "precision": 0.6645714285714286,
+      "recall": 0.3979810077850971,
+      "expected_fraud": 11708.226174976986,
+      "delta_auc": 1.5251330517385142e-06,
+      "delta_ap": 0.00012704252363482382,
+      "delta_log_loss": -3.0244987891878128e-06,
+      "fold_delta_auc": [
+        6.983064502663616e-05,
+        -1.3590812973252042e-05,
+        -1.5338602707526405e-05,
+        -5.742227232596875e-05,
+        4.291328714556286e-05
+      ],
+      "fold_wins": 2,
+      "affected_share": [
+        0.9993142465283731,
+        0.9993499628550203,
+        0.9993356763243614,
+        0.9993713926510086,
+        0.9994142522429853
+      ]
+    },
+    "amount_balance_ratio": {
+      "auc": 0.9501671768877065,
+      "ap": 0.5286296218788398,
+      "log_loss": 0.044429747506893866,
+      "reviewed": 7000,
+      "fraud_found": 4644,
+      "precision": 0.6634285714285715,
+      "recall": 0.3972966036444521,
+      "expected_fraud": 11700.613028623951,
+      "delta_auc": -1.5126597754044901e-05,
+      "delta_ap": -0.0001330255953053694,
+      "delta_log_loss": 7.977639403897174e-06,
+      "fold_delta_auc": [
+        7.482132367786498e-06,
+        -9.912531218003728e-05,
+        1.7426628843408842e-05,
+        -6.840460622048461e-06,
+        1.1344320568373867e-05
+      ],
+      "fold_wins": 3,
+      "affected_share": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "amount_context": {
+      "auc": 0.9501833332299405,
+      "ap": 0.5287240789938438,
+      "log_loss": 0.0444223667414787,
+      "reviewed": 7000,
+      "fraud_found": 4648,
+      "precision": 0.664,
+      "recall": 0.39763880571477456,
+      "expected_fraud": 11705.930126469233,
+      "delta_auc": 1.0297444800189126e-06,
+      "delta_ap": -3.856848030137083e-05,
+      "delta_log_loss": 5.968739887340924e-07,
+      "fold_delta_auc": [
+        4.825773325556337e-05,
+        -2.2177509738763312e-05,
+        1.1619306153121123e-05,
+        -3.2325565333390927e-05,
+        9.352617066693547e-06
+      ],
+      "fold_wins": 3,
+      "affected_share": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "velocity_context": {
+      "auc": 0.950198334722037,
+      "ap": 0.5288772176589248,
+      "log_loss": 0.04440590561894519,
+      "reviewed": 7000,
+      "fraud_found": 4645,
+      "precision": 0.6635714285714286,
+      "recall": 0.3973821541620327,
+      "expected_fraud": 11723.967217245852,
+      "delta_auc": 1.6031236576452557e-05,
+      "delta_ap": 0.00011457018477967207,
+      "delta_log_loss": -1.5864248544779358e-05,
+      "fold_delta_auc": [
+        -4.971561446909245e-05,
+        1.7036677533943667e-05,
+        -1.6878211264725884e-05,
+        1.6940354899519505e-05,
+        0.00012771915223186436
+      ],
+      "fold_wins": 3,
+      "affected_share": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "distance_context": {
+      "auc": 0.950147125924942,
+      "ap": 0.5286508368473309,
+      "log_loss": 0.04443026674776627,
+      "reviewed": 7000,
+      "fraud_found": 4650,
+      "precision": 0.6642857142857143,
+      "recall": 0.3978099067499358,
+      "expected_fraud": 11701.812706655495,
+      "delta_auc": -3.5177560518517836e-05,
+      "delta_ap": -0.00011181062681420162,
+      "delta_log_loss": 8.496880276299967e-06,
+      "fold_delta_auc": [
+        -7.776972523776404e-05,
+        -3.540478244723477e-05,
+        -2.2756999135120637e-05,
+        -4.554662367850515e-05,
+        1.8750288268698512e-05
+      ],
+      "fold_wins": 1,
+      "affected_share": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "velocity_network": {
+      "auc": 0.9501844843511461,
+      "ap": 0.5286728681129309,
+      "log_loss": 0.044410901136551946,
+      "reviewed": 7000,
+      "fraud_found": 4633,
+      "precision": 0.6618571428571428,
+      "recall": 0.3963555479510651,
+      "expected_fraud": 11687.259418498732,
+      "delta_auc": 2.1808656855970554e-06,
+      "delta_ap": -8.977936121423724e-05,
+      "delta_log_loss": -1.0868730938022597e-05,
+      "fold_delta_auc": [
+        -3.958971243800402e-05,
+        4.3346738999749945e-05,
+        -4.687183669482842e-05,
+        -5.558592791177208e-05,
+        0.00011611848916937006
+      ],
+      "fold_wins": 2,
+      "affected_share": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "groups": {
+    "cvv_auth": [
+      {
+        "group": "0 / PIN",
+        "test_rows": 60993,
+        "discovery": {
+          "rows": 85308,
+          "fraud": 402,
+          "xgb_expected": 450.0134516705276,
+          "final_expected": 420.3286768284782
+        },
+        "confirmation": [
+          {
+            "rows": 28420,
+            "fraud": 126,
+            "xgb_expected": 151.9357404028366,
+            "final_expected": 142.77062764731934
+          },
+          {
+            "rows": 28234,
+            "fraud": 156,
+            "xgb_expected": 144.54705332010354,
+            "final_expected": 136.38207875608987
+          }
+        ],
+        "all_train": {
+          "rows": 141962,
+          "fraud": 684,
+          "xgb_expected": 746.4962453934677,
+          "final_expected": 699.4813832318873
+        }
+      },
+      {
+        "group": "0 / Biometric",
+        "test_rows": 37094,
+        "discovery": {
+          "rows": 51666,
+          "fraud": 127,
+          "xgb_expected": 158.9660117257593,
+          "final_expected": 144.49131925508823
+        },
+        "confirmation": [
+          {
+            "rows": 17296,
+            "fraud": 45,
+            "xgb_expected": 49.308589728380525,
+            "final_expected": 44.8036699030757
+          },
+          {
+            "rows": 17497,
+            "fraud": 47,
+            "xgb_expected": 47.2265723751442,
+            "final_expected": 42.484991799491006
+          }
+        ],
+        "all_train": {
+          "rows": 86459,
+          "fraud": 219,
+          "xgb_expected": 255.50117382928403,
+          "final_expected": 231.77998095765494
+        }
+      },
+      {
+        "group": "0 / 3D Secure",
+        "test_rows": 82608,
+        "discovery": {
+          "rows": 115804,
+          "fraud": 959,
+          "xgb_expected": 986.7095743142982,
+          "final_expected": 945.572497883441
+        },
+        "confirmation": [
+          {
+            "rows": 38432,
+            "fraud": 335,
+            "xgb_expected": 332.7305935488987,
+            "final_expected": 319.7574200722071
+          },
+          {
+            "rows": 38454,
+            "fraud": 335,
+            "xgb_expected": 322.32942162180194,
+            "final_expected": 310.9606408956024
+          }
+        ],
+        "all_train": {
+          "rows": 192690,
+          "fraud": 1629,
+          "xgb_expected": 1641.7695894849987,
+          "final_expected": 1576.2905588512504
+        }
+      },
+      {
+        "group": "0 / No Authentication",
+        "test_rows": 25141,
+        "discovery": {
+          "rows": 36027,
+          "fraud": 1316,
+          "xgb_expected": 1291.045162818582,
+          "final_expected": 1309.6042516311138
+        },
+        "confirmation": [
+          {
+            "rows": 11980,
+            "fraud": 457,
+            "xgb_expected": 438.0374813193339,
+            "final_expected": 445.173229028213
+          },
+          {
+            "rows": 12153,
+            "fraud": 416,
+            "xgb_expected": 420.98253111713166,
+            "final_expected": 425.2201851434909
+          }
+        ],
+        "all_train": {
+          "rows": 60160,
+          "fraud": 2189,
+          "xgb_expected": 2150.0651752550475,
+          "final_expected": 2179.9976658028177
+        }
+      },
+      {
+        "group": "1 / No Authentication",
+        "test_rows": 2755,
+        "discovery": {
+          "rows": 3837,
+          "fraud": 1112,
+          "xgb_expected": 1092.8034601116415,
+          "final_expected": 1123.0145839043548
+        },
+        "confirmation": [
+          {
+            "rows": 1351,
+            "fraud": 364,
+            "xgb_expected": 367.818745607874,
+            "final_expected": 376.89665035345075
+          },
+          {
+            "rows": 1308,
+            "fraud": 364,
+            "xgb_expected": 362.55757948273094,
+            "final_expected": 373.61057551097156
+          }
+        ],
+        "all_train": {
+          "rows": 6496,
+          "fraud": 1840,
+          "xgb_expected": 1823.1797852022464,
+          "final_expected": 1873.5218097687775
+        }
+      },
+      {
+        "group": "0 / OTP",
+        "test_rows": 69353,
+        "discovery": {
+          "rows": 96377,
+          "fraud": 759,
+          "xgb_expected": 775.309516298279,
+          "final_expected": 740.4048745930222
+        },
+        "confirmation": [
+          {
+            "rows": 32385,
+            "fraud": 236,
+            "xgb_expected": 260.180812286879,
+            "final_expected": 249.9319351645351
+          },
+          {
+            "rows": 32055,
+            "fraud": 274,
+            "xgb_expected": 260.6739642928916,
+            "final_expected": 249.9984807767845
+          }
+        ],
+        "all_train": {
+          "rows": 160817,
+          "fraud": 1269,
+          "xgb_expected": 1296.1642928780498,
+          "final_expected": 1240.3352905343418
+        }
+      },
+      {
+        "group": "1 / PIN",
+        "test_rows": 5040,
+        "discovery": {
+          "rows": 7136,
+          "fraud": 359,
+          "xgb_expected": 343.6858158560426,
+          "final_expected": 345.83959137912166
+        },
+        "confirmation": [
+          {
+            "rows": 2204,
+            "fraud": 103,
+            "xgb_expected": 99.86003674091171,
+            "final_expected": 100.62363839443248
+          },
+          {
+            "rows": 2381,
+            "fraud": 115,
+            "xgb_expected": 121.88287820071491,
+            "final_expected": 122.93961391306244
+          }
+        ],
+        "all_train": {
+          "rows": 11721,
+          "fraud": 577,
+          "xgb_expected": 565.4287307976692,
+          "final_expected": 569.4028436866165
+        }
+      },
+      {
+        "group": "1 / Biometric",
+        "test_rows": 3041,
+        "discovery": {
+          "rows": 4200,
+          "fraud": 119,
+          "xgb_expected": 132.59680147419022,
+          "final_expected": 130.07642067959657
+        },
+        "confirmation": [
+          {
+            "rows": 1436,
+            "fraud": 49,
+            "xgb_expected": 41.49040300478737,
+            "final_expected": 41.55920080092521
+          },
+          {
+            "rows": 1378,
+            "fraud": 42,
+            "xgb_expected": 38.622139877666996,
+            "final_expected": 38.36879174659485
+          }
+        ],
+        "all_train": {
+          "rows": 7014,
+          "fraud": 210,
+          "xgb_expected": 212.70934435664458,
+          "final_expected": 210.00441322711663
+        }
+      },
+      {
+        "group": "1 / 3D Secure",
+        "test_rows": 7208,
+        "discovery": {
+          "rows": 10138,
+          "fraud": 756,
+          "xgb_expected": 746.5113060853346,
+          "final_expected": 768.3579974246169
+        },
+        "confirmation": [
+          {
+            "rows": 3360,
+            "fraud": 262,
+            "xgb_expected": 269.36261220651977,
+            "final_expected": 275.35365924476775
+          },
+          {
+            "rows": 3316,
+            "fraud": 236,
+            "xgb_expected": 235.353054632963,
+            "final_expected": 242.6614331777563
+          }
+        ],
+        "all_train": {
+          "rows": 16814,
+          "fraud": 1254,
+          "xgb_expected": 1251.2269729248173,
+          "final_expected": 1286.3730898471408
+        }
+      },
+      {
+        "group": "1 / OTP",
+        "test_rows": 5947,
+        "discovery": {
+          "rows": 8335,
+          "fraud": 612,
+          "xgb_expected": 605.5349724849639,
+          "final_expected": 621.4353088348419
+        },
+        "confirmation": [
+          {
+            "rows": 2736,
+            "fraud": 213,
+            "xgb_expected": 199.49632900696088,
+            "final_expected": 203.61085839358273
+          },
+          {
+            "rows": 2826,
+            "fraud": 189,
+            "xgb_expected": 201.1390575020705,
+            "final_expected": 206.3133768323084
+          }
+        ],
+        "all_train": {
+          "rows": 13897,
+          "fraud": 1014,
+          "xgb_expected": 1006.1703589939953,
+          "final_expected": 1031.359544060733
+        }
+      }
+    ],
+    "cvv_channel": [
+      {
+        "group": "0 / Online",
+        "test_rows": 107460,
+        "discovery": {
+          "rows": 150564,
+          "fraud": 1431,
+          "xgb_expected": 1520.6665567647956,
+          "final_expected": 1478.3653222899175
+        },
+        "confirmation": [
+          {
+            "rows": 50229,
+            "fraud": 506,
+            "xgb_expected": 501.01191285537277,
+            "final_expected": 488.3486533081257
+          },
+          {
+            "rows": 50289,
+            "fraud": 519,
+            "xgb_expected": 488.0987854660332,
+            "final_expected": 475.64041538726775
+          }
+        ],
+        "all_train": {
+          "rows": 251082,
+          "fraud": 2456,
+          "xgb_expected": 2509.7772550862014,
+          "final_expected": 2442.3543909853106
+        }
+      },
+      {
+        "group": "0 / ATM",
+        "test_rows": 11884,
+        "discovery": {
+          "rows": 16657,
+          "fraud": 170,
+          "xgb_expected": 141.26689810598066,
+          "final_expected": 138.0413834403779
+        },
+        "confirmation": [
+          {
+            "rows": 5587,
+            "fraud": 39,
+            "xgb_expected": 51.345504201696485,
+            "final_expected": 50.52686552416137
+          },
+          {
+            "rows": 5552,
+            "fraud": 44,
+            "xgb_expected": 49.66485559855886,
+            "final_expected": 49.429083992789586
+          }
+        ],
+        "all_train": {
+          "rows": 27796,
+          "fraud": 253,
+          "xgb_expected": 242.277257906236,
+          "final_expected": 237.99733295732884
+        }
+      },
+      {
+        "group": "0 / Contactless",
+        "test_rows": 41864,
+        "discovery": {
+          "rows": 58044,
+          "fraud": 474,
+          "xgb_expected": 500.68195058200047,
+          "final_expected": 486.1330507444655
+        },
+        "confirmation": [
+          {
+            "rows": 19389,
+            "fraud": 170,
+            "xgb_expected": 176.0919668333754,
+            "final_expected": 170.48372372358642
+          },
+          {
+            "rows": 19526,
+            "fraud": 175,
+            "xgb_expected": 175.18969197567276,
+            "final_expected": 169.40390015986918
+          }
+        ],
+        "all_train": {
+          "rows": 96959,
+          "fraud": 819,
+          "xgb_expected": 851.9636093910486,
+          "final_expected": 826.0206746279212
+        }
+      },
+      {
+        "group": "1 / Online",
+        "test_rows": 9274,
+        "discovery": {
+          "rows": 13336,
+          "fraud": 1204,
+          "xgb_expected": 1225.1151541451509,
+          "final_expected": 1250.8785128302693
+        },
+        "confirmation": [
+          {
+            "rows": 4373,
+            "fraud": 384,
+            "xgb_expected": 401.11457565820456,
+            "final_expected": 408.3076460369936
+          },
+          {
+            "rows": 4393,
+            "fraud": 426,
+            "xgb_expected": 421.4451401124106,
+            "final_expected": 430.90284113925816
+          }
+        ],
+        "all_train": {
+          "rows": 22102,
+          "fraud": 2014,
+          "xgb_expected": 2047.674869915766,
+          "final_expected": 2090.089000006521
+        }
+      },
+      {
+        "group": "1 / Contactless",
+        "test_rows": 3671,
+        "discovery": {
+          "rows": 5041,
+          "fraud": 430,
+          "xgb_expected": 410.4487914274032,
+          "final_expected": 420.76722995272087
+        },
+        "confirmation": [
+          {
+            "rows": 1629,
+            "fraud": 138,
+            "xgb_expected": 136.57670130530823,
+            "final_expected": 139.46641808540886
+          },
+          {
+            "rows": 1712,
+            "fraud": 124,
+            "xgb_expected": 123.717796766623,
+            "final_expected": 126.7074379324422
+          }
+        ],
+        "all_train": {
+          "rows": 8382,
+          "fraud": 692,
+          "xgb_expected": 670.7432894993344,
+          "final_expected": 686.941085970572
+        }
+      },
+      {
+        "group": "1 / POS",
+        "test_rows": 7123,
+        "discovery": {
+          "rows": 9802,
+          "fraud": 855,
+          "xgb_expected": 838.3255937717277,
+          "final_expected": 860.8267106305613
+        },
+        "confirmation": [
+          {
+            "rows": 3307,
+            "fraud": 321,
+            "xgb_expected": 288.1537896961472,
+            "final_expected": 295.52898537192823
+          },
+          {
+            "rows": 3246,
+            "fraud": 248,
+            "xgb_expected": 259.7258965746132,
+            "final_expected": 266.98889292271303
+          }
+        ],
+        "all_train": {
+          "rows": 16355,
+          "fraud": 1424,
+          "xgb_expected": 1386.205280042488,
+          "final_expected": 1423.3445889252025
+        }
+      },
+      {
+        "group": "1 / ATM",
+        "test_rows": 1015,
+        "discovery": {
+          "rows": 1386,
+          "fraud": 121,
+          "xgb_expected": 106.73298751245238,
+          "final_expected": 109.52266662365517
+        },
+        "confirmation": [
+          {
+            "rows": 478,
+            "fraud": 34,
+            "xgb_expected": 39.47087110662869,
+            "final_expected": 40.55309691017336
+          },
+          {
+            "rows": 476,
+            "fraud": 31,
+            "xgb_expected": 35.08686765373932,
+            "final_expected": 36.65308708048904
+          }
+        ],
+        "all_train": {
+          "rows": 2340,
+          "fraud": 186,
+          "xgb_expected": 181.2907262728204,
+          "final_expected": 186.72885061431757
+        }
+      },
+      {
+        "group": "0 / POS",
+        "test_rows": 81381,
+        "discovery": {
+          "rows": 113738,
+          "fraud": 1048,
+          "xgb_expected": 1056.7073980691198,
+          "final_expected": 1029.326208230219
+        },
+        "confirmation": [
+          {
+            "rows": 37974,
+            "fraud": 347,
+            "xgb_expected": 357.2511267433847,
+            "final_expected": 350.52621995079215
+          },
+          {
+            "rows": 37820,
+            "fraud": 367,
+            "xgb_expected": 339.29883651205563,
+            "final_expected": 331.3480863500138
+          }
+        ],
+        "all_train": {
+          "rows": 189532,
+          "fraud": 1762,
+          "xgb_expected": 1753.2573613245602,
+          "final_expected": 1711.2005145310247
+        }
+      },
+      {
+        "group": "1 / In-App",
+        "test_rows": 2908,
+        "discovery": {
+          "rows": 4081,
+          "fraud": 348,
+          "xgb_expected": 340.50982915543864,
+          "final_expected": 346.7287821853254
+        },
+        "confirmation": [
+          {
+            "rows": 1300,
+            "fraud": 114,
+            "xgb_expected": 112.71218880076503,
+            "final_expected": 114.18786078265484
+          },
+          {
+            "rows": 1382,
+            "fraud": 117,
+            "xgb_expected": 119.57900858876019,
+            "final_expected": 122.64153210579111
+          }
+        ],
+        "all_train": {
+          "rows": 6763,
+          "fraud": 579,
+          "xgb_expected": 572.8010265449639,
+          "final_expected": 583.5581750737713
+        }
+      },
+      {
+        "group": "0 / In-App",
+        "test_rows": 32600,
+        "discovery": {
+          "rows": 46179,
+          "fraud": 440,
+          "xgb_expected": 442.7209133055493,
+          "final_expected": 428.5356554861638
+        },
+        "confirmation": [
+          {
+            "rows": 15334,
+            "fraud": 137,
+            "xgb_expected": 146.49270665249935,
+            "final_expected": 142.55141930868456
+          },
+          {
+            "rows": 15206,
+            "fraud": 123,
+            "xgb_expected": 143.5073731747525,
+            "final_expected": 139.22489148151843
+          }
+        ],
+        "all_train": {
+          "rows": 76719,
+          "fraud": 700,
+          "xgb_expected": 732.7209931328011,
+          "final_expected": 710.3119662763668
+        }
+      }
+    ],
+    "network_new": [
+      {
+        "group": "0 / 0 / 0",
+        "test_rows": 247183,
+        "discovery": {
+          "rows": 346222,
+          "fraud": 3122,
+          "xgb_expected": 3231.871929739212,
+          "final_expected": 3138.772532777587
+        },
+        "confirmation": [
+          {
+            "rows": 115381,
+            "fraud": 1040,
+            "xgb_expected": 1085.544168301171,
+            "final_expected": 1060.1256757352517
+          },
+          {
+            "rows": 115410,
+            "fraud": 1055,
+            "xgb_expected": 1052.3209511256678,
+            "final_expected": 1025.0005483170962
+          }
+        ],
+        "all_train": {
+          "rows": 577013,
+          "fraud": 5217,
+          "xgb_expected": 5369.737049166051,
+          "final_expected": 5223.898756829934
+        }
+      },
+      {
+        "group": "1 / 0 / 1",
+        "test_rows": 669,
+        "discovery": {
+          "rows": 882,
+          "fraud": 175,
+          "xgb_expected": 153.79701215675232,
+          "final_expected": 161.09699595368053
+        },
+        "confirmation": [
+          {
+            "rows": 300,
+            "fraud": 46,
+            "xgb_expected": 45.507410118523694,
+            "final_expected": 47.44680635282228
+          },
+          {
+            "rows": 277,
+            "fraud": 42,
+            "xgb_expected": 50.28917136916425,
+            "final_expected": 52.26156458023123
+          }
+        ],
+        "all_train": {
+          "rows": 1459,
+          "fraud": 263,
+          "xgb_expected": 249.59359364444026,
+          "final_expected": 260.8053668867341
+        }
+      },
+      {
+        "group": "0 / 1 / 1",
+        "test_rows": 627,
+        "discovery": {
+          "rows": 871,
+          "fraud": 243,
+          "xgb_expected": 229.25298913288862,
+          "final_expected": 238.48447904696562
+        },
+        "confirmation": [
+          {
+            "rows": 271,
+            "fraud": 78,
+            "xgb_expected": 70.56002121447818,
+            "final_expected": 73.23231496703066
+          },
+          {
+            "rows": 284,
+            "fraud": 81,
+            "xgb_expected": 74.92904073439422,
+            "final_expected": 77.916894632426
+          }
+        ],
+        "all_train": {
+          "rows": 1426,
+          "fraud": 402,
+          "xgb_expected": 374.742051081761,
+          "final_expected": 389.6336886464223
+        }
+      },
+      {
+        "group": "1 / 0 / 0",
+        "test_rows": 3103,
+        "discovery": {
+          "rows": 4300,
+          "fraud": 194,
+          "xgb_expected": 182.24643920896233,
+          "final_expected": 188.01236945434744
+        },
+        "confirmation": [
+          {
+            "rows": 1415,
+            "fraud": 80,
+            "xgb_expected": 65.75656649792063,
+            "final_expected": 67.96250095458177
+          },
+          {
+            "rows": 1393,
+            "fraud": 70,
+            "xgb_expected": 59.363947549855766,
+            "final_expected": 61.5371112705887
+          }
+        ],
+        "all_train": {
+          "rows": 7108,
+          "fraud": 344,
+          "xgb_expected": 307.3669532567387,
+          "final_expected": 317.51198167951793
+        }
+      },
+      {
+        "group": "0 / 0 / 1",
+        "test_rows": 44219,
+        "discovery": {
+          "rows": 61802,
+          "fraud": 2399,
+          "xgb_expected": 2389.2983356320537,
+          "final_expected": 2418.2478429929806
+        },
+        "confirmation": [
+          {
+            "rows": 20697,
+            "fraud": 815,
+            "xgb_expected": 805.4723127249858,
+            "final_expected": 813.2767873278168
+          },
+          {
+            "rows": 20569,
+            "fraud": 785,
+            "xgb_expected": 784.9071789353709,
+            "final_expected": 795.1948833030424
+          }
+        ],
+        "all_train": {
+          "rows": 103068,
+          "fraud": 3999,
+          "xgb_expected": 3979.6778272924103,
+          "final_expected": 4026.7195136238392
+        }
+      },
+      {
+        "group": "0 / 1 / 0",
+        "test_rows": 2737,
+        "discovery": {
+          "rows": 3807,
+          "fraud": 332,
+          "xgb_expected": 322.61382613819296,
+          "final_expected": 333.97707649691824
+        },
+        "confirmation": [
+          {
+            "rows": 1236,
+            "fraud": 110,
+            "xgb_expected": 104.39092750170676,
+            "final_expected": 107.84365308593812
+          },
+          {
+            "rows": 1312,
+            "fraud": 108,
+            "xgb_expected": 93.29176670661582,
+            "final_expected": 97.44825512380984
+          }
+        ],
+        "all_train": {
+          "rows": 6355,
+          "fraud": 550,
+          "xgb_expected": 520.2965203465155,
+          "final_expected": 539.2689847066662
+        }
+      },
+      {
+        "group": "1 / 1 / 0",
+        "test_rows": 1115,
+        "discovery": {
+          "rows": 1650,
+          "fraud": 327,
+          "xgb_expected": 332.44161288942996,
+          "final_expected": 339.139096695
+        },
+        "confirmation": [
+          {
+            "rows": 547,
+            "fraud": 88,
+            "xgb_expected": 107.86604766297387,
+            "final_expected": 109.42427653118918
+          },
+          {
+            "rows": 567,
+            "fraud": 111,
+            "xgb_expected": 104.50635093091478,
+            "final_expected": 106.48922475682853
+          }
+        ],
+        "all_train": {
+          "rows": 2764,
+          "fraud": 526,
+          "xgb_expected": 544.8140114833186,
+          "final_expected": 555.0525979830177
+        }
+      }
+    ],
+    "merchant_new": [
+      {
+        "group": "Online Retail / 0",
+        "test_rows": 56637,
+        "discovery": {
+          "rows": 78902,
+          "fraud": 556,
+          "xgb_expected": 608.4092937628527,
+          "final_expected": 586.3369334641882
+        },
+        "confirmation": [
+          {
+            "rows": 26475,
+            "fraud": 207,
+            "xgb_expected": 212.67972375317584,
+            "final_expected": 206.3778941781838
+          },
+          {
+            "rows": 26464,
+            "fraud": 209,
+            "xgb_expected": 194.4966116589972,
+            "final_expected": 187.58290634014878
+          }
+        ],
+        "all_train": {
+          "rows": 131841,
+          "fraud": 972,
+          "xgb_expected": 1015.5856291750258,
+          "final_expected": 980.2977339825208
+        }
+      },
+      {
+        "group": "Groceries / 0",
+        "test_rows": 51641,
+        "discovery": {
+          "rows": 72295,
+          "fraud": 545,
+          "xgb_expected": 576.6637930366359,
+          "final_expected": 555.9937983222673
+        },
+        "confirmation": [
+          {
+            "rows": 23934,
+            "fraud": 176,
+            "xgb_expected": 175.7990055109032,
+            "final_expected": 170.57311011896132
+          },
+          {
+            "rows": 23964,
+            "fraud": 158,
+            "xgb_expected": 177.80931052428411,
+            "final_expected": 172.45886663769306
+          }
+        ],
+        "all_train": {
+          "rows": 120193,
+          "fraud": 879,
+          "xgb_expected": 930.2721090718233,
+          "final_expected": 899.0257750789217
+        }
+      },
+      {
+        "group": "Electronics / 1",
+        "test_rows": 3341,
+        "discovery": {
+          "rows": 4557,
+          "fraud": 373,
+          "xgb_expected": 395.9423135122179,
+          "final_expected": 402.62930975123027
+        },
+        "confirmation": [
+          {
+            "rows": 1541,
+            "fraud": 126,
+            "xgb_expected": 126.64194918310386,
+            "final_expected": 128.02376591741233
+          },
+          {
+            "rows": 1494,
+            "fraud": 114,
+            "xgb_expected": 117.70055825179406,
+            "final_expected": 119.72955746878719
+          }
+        ],
+        "all_train": {
+          "rows": 7592,
+          "fraud": 613,
+          "xgb_expected": 640.2848209471158,
+          "final_expected": 650.3826331374298
+        }
+      },
+      {
+        "group": "Streaming / 0",
+        "test_rows": 16840,
+        "discovery": {
+          "rows": 23883,
+          "fraud": 376,
+          "xgb_expected": 353.671677591489,
+          "final_expected": 353.64519326427614
+        },
+        "confirmation": [
+          {
+            "rows": 7832,
+            "fraud": 109,
+            "xgb_expected": 112.31386658263295,
+            "final_expected": 112.27368614664348
+          },
+          {
+            "rows": 7961,
+            "fraud": 116,
+            "xgb_expected": 105.52343678922693,
+            "final_expected": 105.47224854911329
+          }
+        ],
+        "all_train": {
+          "rows": 39676,
+          "fraud": 601,
+          "xgb_expected": 571.5089809633489,
+          "final_expected": 571.3911279600329
+        }
+      },
+      {
+        "group": "Restaurants / 1",
+        "test_rows": 6516,
+        "discovery": {
+          "rows": 9083,
+          "fraud": 324,
+          "xgb_expected": 301.9513489866865,
+          "final_expected": 304.7598441328764
+        },
+        "confirmation": [
+          {
+            "rows": 3129,
+            "fraud": 116,
+            "xgb_expected": 116.0405166854373,
+            "final_expected": 117.17459022552319
+          },
+          {
+            "rows": 3035,
+            "fraud": 88,
+            "xgb_expected": 99.41282197903956,
+            "final_expected": 100.95237873125828
+          }
+        ],
+        "all_train": {
+          "rows": 15247,
+          "fraud": 528,
+          "xgb_expected": 517.4046876511634,
+          "final_expected": 522.8868130896578
+        }
+      },
+      {
+        "group": "Utilities / 1",
+        "test_rows": 2690,
+        "discovery": {
+          "rows": 3746,
+          "fraud": 161,
+          "xgb_expected": 140.82416224066856,
+          "final_expected": 144.77128646659435
+        },
+        "confirmation": [
+          {
+            "rows": 1271,
+            "fraud": 53,
+            "xgb_expected": 44.70013222080888,
+            "final_expected": 45.398332853942335
+          },
+          {
+            "rows": 1239,
+            "fraud": 54,
+            "xgb_expected": 51.62716670782629,
+            "final_expected": 52.874957270347714
+          }
+        ],
+        "all_train": {
+          "rows": 6256,
+          "fraud": 268,
+          "xgb_expected": 237.15146116930373,
+          "final_expected": 243.04457659088445
+        }
+      },
+      {
+        "group": "Crypto Exchange / 0",
+        "test_rows": 1925,
+        "discovery": {
+          "rows": 2675,
+          "fraud": 111,
+          "xgb_expected": 130.16128092258805,
+          "final_expected": 127.55790531431468
+        },
+        "confirmation": [
+          {
+            "rows": 843,
+            "fraud": 35,
+            "xgb_expected": 41.67355885026336,
+            "final_expected": 40.904112229893386
+          },
+          {
+            "rows": 939,
+            "fraud": 41,
+            "xgb_expected": 49.39850559614024,
+            "final_expected": 47.60025743808488
+          }
+        ],
+        "all_train": {
+          "rows": 4457,
+          "fraud": 187,
+          "xgb_expected": 221.23334536899165,
+          "final_expected": 216.06227498229296
+        }
+      },
+      {
+        "group": "Fuel / 1",
+        "test_rows": 3809,
+        "discovery": {
+          "rows": 5336,
+          "fraud": 203,
+          "xgb_expected": 187.49073202534407,
+          "final_expected": 191.0577935651009
+        },
+        "confirmation": [
+          {
+            "rows": 1731,
+            "fraud": 59,
+            "xgb_expected": 58.724285987501844,
+            "final_expected": 59.86191915656023
+          },
+          {
+            "rows": 1835,
+            "fraud": 70,
+            "xgb_expected": 58.90323712487998,
+            "final_expected": 59.742687989274074
+          }
+        ],
+        "all_train": {
+          "rows": 8902,
+          "fraud": 332,
+          "xgb_expected": 305.1182551377259,
+          "final_expected": 310.66240071093523
+        }
+      },
+      {
+        "group": "Gift Cards / 0",
+        "test_rows": 3467,
+        "discovery": {
+          "rows": 4812,
+          "fraud": 243,
+          "xgb_expected": 227.73849883244839,
+          "final_expected": 232.50485830508651
+        },
+        "confirmation": [
+          {
+            "rows": 1590,
+            "fraud": 84,
+            "xgb_expected": 87.0984306488499,
+            "final_expected": 87.6939677513453
+          },
+          {
+            "rows": 1528,
+            "fraud": 84,
+            "xgb_expected": 78.77332627291617,
+            "final_expected": 80.36147246019021
+          }
+        ],
+        "all_train": {
+          "rows": 7930,
+          "fraud": 411,
+          "xgb_expected": 393.61025575421445,
+          "final_expected": 400.560298516622
+        }
+      },
+      {
+        "group": "Gift Cards / 1",
+        "test_rows": 627,
+        "discovery": {
+          "rows": 888,
+          "fraud": 177,
+          "xgb_expected": 162.80844634586538,
+          "final_expected": 169.2526306997696
+        },
+        "confirmation": [
+          {
+            "rows": 319,
+            "fraud": 53,
+            "xgb_expected": 55.731428817947744,
+            "final_expected": 57.794515213734044
+          },
+          {
+            "rows": 319,
+            "fraud": 49,
+            "xgb_expected": 55.486532279188395,
+            "final_expected": 57.88996098263191
+          }
+        ],
+        "all_train": {
+          "rows": 1526,
+          "fraud": 279,
+          "xgb_expected": 274.0264074430015,
+          "final_expected": 284.93710689613556
+        }
+      },
+      {
+        "group": "Online Retail / 1",
+        "test_rows": 9971,
+        "discovery": {
+          "rows": 13882,
+          "fraud": 432,
+          "xgb_expected": 445.6986139997533,
+          "final_expected": 448.3889157078627
+        },
+        "confirmation": [
+          {
+            "rows": 4725,
+            "fraud": 147,
+            "xgb_expected": 151.50985594328995,
+            "final_expected": 151.27982854301342
+          },
+          {
+            "rows": 4649,
+            "fraud": 168,
+            "xgb_expected": 153.27487737277306,
+            "final_expected": 154.04819388578676
+          }
+        ],
+        "all_train": {
+          "rows": 23256,
+          "fraud": 747,
+          "xgb_expected": 750.4833473158163,
+          "final_expected": 753.7169381366629
+        }
+      },
+      {
+        "group": "Gaming / 1",
+        "test_rows": 1655,
+        "discovery": {
+          "rows": 2216,
+          "fraud": 329,
+          "xgb_expected": 316.64985319323387,
+          "final_expected": 327.67373081065546
+        },
+        "confirmation": [
+          {
+            "rows": 749,
+            "fraud": 113,
+            "xgb_expected": 100.24481734923029,
+            "final_expected": 103.29525364412433
+          },
+          {
+            "rows": 723,
+            "fraud": 103,
+            "xgb_expected": 108.28137079202861,
+            "final_expected": 112.093922606038
+          }
+        ],
+        "all_train": {
+          "rows": 3688,
+          "fraud": 545,
+          "xgb_expected": 525.1760413344928,
+          "final_expected": 543.0629070608178
+        }
+      },
+      {
+        "group": "Fuel / 0",
+        "test_rows": 22058,
+        "discovery": {
+          "rows": 30649,
+          "fraud": 234,
+          "xgb_expected": 244.79419224476223,
+          "final_expected": 240.83855138394443
+        },
+        "confirmation": [
+          {
+            "rows": 10161,
+            "fraud": 72,
+            "xgb_expected": 79.81221259261588,
+            "final_expected": 78.67723955160238
+          },
+          {
+            "rows": 10168,
+            "fraud": 103,
+            "xgb_expected": 84.63567392426057,
+            "final_expected": 83.41443262980725
+          }
+        ],
+        "all_train": {
+          "rows": 50978,
+          "fraud": 409,
+          "xgb_expected": 409.2420787616387,
+          "final_expected": 402.9302235653541
+        }
+      },
+      {
+        "group": "Gaming / 0",
+        "test_rows": 8536,
+        "discovery": {
+          "rows": 12085,
+          "fraud": 431,
+          "xgb_expected": 441.74225339710756,
+          "final_expected": 446.99946712782537
+        },
+        "confirmation": [
+          {
+            "rows": 4065,
+            "fraud": 184,
+            "xgb_expected": 167.30177622155952,
+            "final_expected": 169.00934231571156
+          },
+          {
+            "rows": 3946,
+            "fraud": 151,
+            "xgb_expected": 144.0548503468235,
+            "final_expected": 146.2186986392831
+          }
+        ],
+        "all_train": {
+          "rows": 20096,
+          "fraud": 766,
+          "xgb_expected": 753.0988799654906,
+          "final_expected": 762.22750808282
+        }
+      },
+      {
+        "group": "Electronics / 0",
+        "test_rows": 17529,
+        "discovery": {
+          "rows": 24679,
+          "fraud": 552,
+          "xgb_expected": 562.5534173926144,
+          "final_expected": 552.7693583522992
+        },
+        "confirmation": [
+          {
+            "rows": 8219,
+            "fraud": 174,
+            "xgb_expected": 182.82516794576395,
+            "final_expected": 180.04990982530362
+          },
+          {
+            "rows": 8203,
+            "fraud": 162,
+            "xgb_expected": 175.88241686217953,
+            "final_expected": 173.05724838877475
+          }
+        ],
+        "all_train": {
+          "rows": 41101,
+          "fraud": 888,
+          "xgb_expected": 921.2610022005579,
+          "final_expected": 905.8765165663774
+        }
+      },
+      {
+        "group": "Travel / 1",
+        "test_rows": 1763,
+        "discovery": {
+          "rows": 2474,
+          "fraud": 137,
+          "xgb_expected": 128.1585103719308,
+          "final_expected": 132.31097566723946
+        },
+        "confirmation": [
+          {
+            "rows": 809,
+            "fraud": 50,
+            "xgb_expected": 49.82219707901095,
+            "final_expected": 50.903869026203374
+          },
+          {
+            "rows": 845,
+            "fraud": 30,
+            "xgb_expected": 33.77509178688615,
+            "final_expected": 34.98550027904485
+          }
+        ],
+        "all_train": {
+          "rows": 4128,
+          "fraud": 217,
+          "xgb_expected": 211.7557992378279,
+          "final_expected": 218.2003449724877
+        }
+      },
+      {
+        "group": "Healthcare / 0",
+        "test_rows": 13117,
+        "discovery": {
+          "rows": 18230,
+          "fraud": 174,
+          "xgb_expected": 165.37383324059238,
+          "final_expected": 159.68350930430688
+        },
+        "confirmation": [
+          {
+            "rows": 6187,
+            "fraud": 33,
+            "xgb_expected": 48.657953740314724,
+            "final_expected": 47.484356425465116
+          },
+          {
+            "rows": 6080,
+            "fraud": 56,
+            "xgb_expected": 55.941609179529905,
+            "final_expected": 54.75390256865525
+          }
+        ],
+        "all_train": {
+          "rows": 30497,
+          "fraud": 263,
+          "xgb_expected": 269.973396160437,
+          "final_expected": 261.9217682984273
+        }
+      },
+      {
+        "group": "Utilities / 0",
+        "test_rows": 15262,
+        "discovery": {
+          "rows": 21408,
+          "fraud": 183,
+          "xgb_expected": 190.56243827998424,
+          "final_expected": 189.63366301591998
+        },
+        "confirmation": [
+          {
+            "rows": 7117,
+            "fraud": 58,
+            "xgb_expected": 61.815950557998804,
+            "final_expected": 61.546823229370716
+          },
+          {
+            "rows": 7246,
+            "fraud": 72,
+            "xgb_expected": 57.49799180246538,
+            "final_expected": 57.25875535739961
+          }
+        ],
+        "all_train": {
+          "rows": 35771,
+          "fraud": 313,
+          "xgb_expected": 309.8763806404484,
+          "final_expected": 308.43924160269034
+        }
+      },
+      {
+        "group": "Streaming / 1",
+        "test_rows": 3103,
+        "discovery": {
+          "rows": 4591,
+          "fraud": 256,
+          "xgb_expected": 262.6084080235414,
+          "final_expected": 270.47806864517554
+        },
+        "confirmation": [
+          {
+            "rows": 1440,
+            "fraud": 106,
+            "xgb_expected": 92.231305472018,
+            "final_expected": 95.05575502273969
+          },
+          {
+            "rows": 1489,
+            "fraud": 98,
+            "xgb_expected": 91.91558313690439,
+            "final_expected": 94.20694232327092
+          }
+        ],
+        "all_train": {
+          "rows": 7520,
+          "fraud": 460,
+          "xgb_expected": 446.7552966324638,
+          "final_expected": 459.74076599118615
+        }
+      },
+      {
+        "group": "Travel / 0",
+        "test_rows": 10512,
+        "discovery": {
+          "rows": 14793,
+          "fraud": 176,
+          "xgb_expected": 171.7533582498677,
+          "final_expected": 170.9629653582425
+        },
+        "confirmation": [
+          {
+            "rows": 4901,
+            "fraud": 62,
+            "xgb_expected": 58.44065928204009,
+            "final_expected": 58.68085125227016
+          },
+          {
+            "rows": 4893,
+            "fraud": 79,
+            "xgb_expected": 64.1709202903096,
+            "final_expected": 63.77360946331093
+          }
+        ],
+        "all_train": {
+          "rows": 24587,
+          "fraud": 317,
+          "xgb_expected": 294.36493782221737,
+          "final_expected": 293.4174260738236
+        }
+      },
+      {
+        "group": "Healthcare / 1",
+        "test_rows": 2339,
+        "discovery": {
+          "rows": 3266,
+          "fraud": 125,
+          "xgb_expected": 126.95468597058152,
+          "final_expected": 127.57945828145347
+        },
+        "confirmation": [
+          {
+            "rows": 1085,
+            "fraud": 33,
+            "xgb_expected": 37.56349069469525,
+            "final_expected": 38.25846851684802
+          },
+          {
+            "rows": 1041,
+            "fraud": 41,
+            "xgb_expected": 40.756123342165665,
+            "final_expected": 40.89358774549432
+          }
+        ],
+        "all_train": {
+          "rows": 5392,
+          "fraud": 199,
+          "xgb_expected": 205.27430000744243,
+          "final_expected": 206.7315145437958
+        }
+      },
+      {
+        "group": "Restaurants / 0",
+        "test_rows": 36614,
+        "discovery": {
+          "rows": 51568,
+          "fraud": 394,
+          "xgb_expected": 395.74977102485474,
+          "final_expected": 382.9748722111815
+        },
+        "confirmation": [
+          {
+            "rows": 17255,
+            "fraud": 124,
+            "xgb_expected": 135.13940427765414,
+            "final_expected": 132.08481328220995
+          },
+          {
+            "rows": 17290,
+            "fraud": 113,
+            "xgb_expected": 121.29836306592108,
+            "final_expected": 118.52274099586226
+          }
+        ],
+        "all_train": {
+          "rows": 86113,
+          "fraud": 631,
+          "xgb_expected": 652.18753836843,
+          "final_expected": 633.5824264892537
+        }
+      },
+      {
+        "group": "Groceries / 1",
+        "test_rows": 9697,
+        "discovery": {
+          "rows": 13470,
+          "fraud": 423,
+          "xgb_expected": 422.35298531791295,
+          "final_expected": 422.5074242881211
+        },
+        "confirmation": [
+          {
+            "rows": 4454,
+            "fraud": 134,
+            "xgb_expected": 139.11127934535284,
+            "final_expected": 139.72917329172296
+          },
+          {
+            "rows": 4461,
+            "fraud": 149,
+            "xgb_expected": 152.20761612324827,
+            "final_expected": 152.92224441276662
+          }
+        ],
+        "all_train": {
+          "rows": 22385,
+          "fraud": 706,
+          "xgb_expected": 713.6718807865141,
+          "final_expected": 715.1588419926106
+        }
+      }
+    ],
+    "channel_device": [
+      {
+        "group": "Online / Android Phone",
+        "test_rows": 39358,
+        "discovery": {
+          "rows": 55382,
+          "fraud": 953,
+          "xgb_expected": 987.2039049168404,
+          "final_expected": 979.8778007735725
+        },
+        "confirmation": [
+          {
+            "rows": 18342,
+            "fraud": 302,
+            "xgb_expected": 319.2619889563719,
+            "final_expected": 316.2924133693084
+          },
+          {
+            "rows": 18516,
+            "fraud": 338,
+            "xgb_expected": 323.8510708399916,
+            "final_expected": 321.7231282837093
+          }
+        ],
+        "all_train": {
+          "rows": 92240,
+          "fraud": 1593,
+          "xgb_expected": 1630.3169647132038,
+          "final_expected": 1617.8933424265902
+        }
+      },
+      {
+        "group": "Online / iPhone",
+        "test_rows": 27348,
+        "discovery": {
+          "rows": 38394,
+          "fraud": 665,
+          "xgb_expected": 697.7675471674521,
+          "final_expected": 699.229456765728
+        },
+        "confirmation": [
+          {
+            "rows": 12789,
+            "fraud": 223,
+            "xgb_expected": 218.8068016138169,
+            "final_expected": 219.01734212735562
+          },
+          {
+            "rows": 12887,
+            "fraud": 231,
+            "xgb_expected": 225.24786303657038,
+            "final_expected": 225.6394035724769
+          }
+        ],
+        "all_train": {
+          "rows": 64070,
+          "fraud": 1119,
+          "xgb_expected": 1141.8222118178394,
+          "final_expected": 1143.8862024655605
+        }
+      },
+      {
+        "group": "POS / iPhone",
+        "test_rows": 21154,
+        "discovery": {
+          "rows": 29853,
+          "fraud": 512,
+          "xgb_expected": 489.5861604276046,
+          "final_expected": 491.8146291667975
+        },
+        "confirmation": [
+          {
+            "rows": 9955,
+            "fraud": 174,
+            "xgb_expected": 166.46671954044587,
+            "final_expected": 167.343992322693
+          },
+          {
+            "rows": 9842,
+            "fraud": 170,
+            "xgb_expected": 153.25136354350553,
+            "final_expected": 154.41314963114692
+          }
+        ],
+        "all_train": {
+          "rows": 49650,
+          "fraud": 856,
+          "xgb_expected": 809.304243511556,
+          "final_expected": 813.5717711206374
+        }
+      },
+      {
+        "group": "Online / Windows PC",
+        "test_rows": 13557,
+        "discovery": {
+          "rows": 18839,
+          "fraud": 302,
+          "xgb_expected": 323.5625455386099,
+          "final_expected": 318.80799071197197
+        },
+        "confirmation": [
+          {
+            "rows": 6334,
+            "fraud": 108,
+            "xgb_expected": 118.04476238439224,
+            "final_expected": 116.93255315799848
+          },
+          {
+            "rows": 6421,
+            "fraud": 121,
+            "xgb_expected": 116.3640430076382,
+            "final_expected": 115.33241282822132
+          }
+        ],
+        "all_train": {
+          "rows": 31594,
+          "fraud": 531,
+          "xgb_expected": 557.9713509306404,
+          "final_expected": 551.0729566981918
+        }
+      },
+      {
+        "group": "In-App / iPhone",
+        "test_rows": 8222,
+        "discovery": {
+          "rows": 11687,
+          "fraud": 224,
+          "xgb_expected": 206.3793884326774,
+          "final_expected": 206.17610829924143
+        },
+        "confirmation": [
+          {
+            "rows": 3873,
+            "fraud": 58,
+            "xgb_expected": 63.81169754384791,
+            "final_expected": 63.25887937784567
+          },
+          {
+            "rows": 3892,
+            "fraud": 52,
+            "xgb_expected": 65.14886091432334,
+            "final_expected": 65.41204966226046
+          }
+        ],
+        "all_train": {
+          "rows": 19452,
+          "fraud": 334,
+          "xgb_expected": 335.33994689084864,
+          "final_expected": 334.8470373393476
+        }
+      },
+      {
+        "group": "POS / POS Terminal",
+        "test_rows": 13640,
+        "discovery": {
+          "rows": 18831,
+          "fraud": 294,
+          "xgb_expected": 309.2863113017205,
+          "final_expected": 310.31967041886844
+        },
+        "confirmation": [
+          {
+            "rows": 6245,
+            "fraud": 101,
+            "xgb_expected": 103.18827567516985,
+            "final_expected": 103.34179926354581
+          },
+          {
+            "rows": 6258,
+            "fraud": 113,
+            "xgb_expected": 102.54362910768168,
+            "final_expected": 102.7215385045694
+          }
+        ],
+        "all_train": {
+          "rows": 31334,
+          "fraud": 508,
+          "xgb_expected": 515.018216084572,
+          "final_expected": 516.3830081869837
+        }
+      },
+      {
+        "group": "ATM / iPhone",
+        "test_rows": 2990,
+        "discovery": {
+          "rows": 4311,
+          "fraud": 79,
+          "xgb_expected": 65.41937732864005,
+          "final_expected": 65.96848248421713
+        },
+        "confirmation": [
+          {
+            "rows": 1408,
+            "fraud": 17,
+            "xgb_expected": 23.220980728495533,
+            "final_expected": 23.266177158176845
+          },
+          {
+            "rows": 1401,
+            "fraud": 27,
+            "xgb_expected": 21.586579379291834,
+            "final_expected": 22.226605664164154
+          }
+        ],
+        "all_train": {
+          "rows": 7120,
+          "fraud": 123,
+          "xgb_expected": 110.22693743642742,
+          "final_expected": 111.46126530655813
+        }
+      },
+      {
+        "group": "In-App / Windows PC",
+        "test_rows": 4095,
+        "discovery": {
+          "rows": 5741,
+          "fraud": 84,
+          "xgb_expected": 97.09429325504993,
+          "final_expected": 95.43574593194641
+        },
+        "confirmation": [
+          {
+            "rows": 1991,
+            "fraud": 30,
+            "xgb_expected": 31.349879070654424,
+            "final_expected": 31.439065447343566
+          },
+          {
+            "rows": 1900,
+            "fraud": 28,
+            "xgb_expected": 32.42588124687768,
+            "final_expected": 32.37029842255081
+          }
+        ],
+        "all_train": {
+          "rows": 9632,
+          "fraud": 142,
+          "xgb_expected": 160.87005357258204,
+          "final_expected": 159.24510980184078
+        }
+      },
+      {
+        "group": "ATM / Android Phone",
+        "test_rows": 4466,
+        "discovery": {
+          "rows": 6247,
+          "fraud": 101,
+          "xgb_expected": 87.90717926356001,
+          "final_expected": 87.17775507996191
+        },
+        "confirmation": [
+          {
+            "rows": 2102,
+            "fraud": 31,
+            "xgb_expected": 33.3945310140482,
+            "final_expected": 33.621511806863886
+          },
+          {
+            "rows": 2124,
+            "fraud": 23,
+            "xgb_expected": 29.673962696301714,
+            "final_expected": 29.901873770118094
+          }
+        ],
+        "all_train": {
+          "rows": 10473,
+          "fraud": 155,
+          "xgb_expected": 150.97567297390992,
+          "final_expected": 150.7011406569439
+        }
+      },
+      {
+        "group": "POS / Android Phone",
+        "test_rows": 30558,
+        "discovery": {
+          "rows": 42800,
+          "fraud": 715,
+          "xgb_expected": 702.3183947526197,
+          "final_expected": 698.886742473135
+        },
+        "confirmation": [
+          {
+            "rows": 14250,
+            "fraud": 239,
+            "xgb_expected": 237.1675238128372,
+            "final_expected": 237.80812737846605
+          },
+          {
+            "rows": 14269,
+            "fraud": 198,
+            "xgb_expected": 217.65062812407757,
+            "final_expected": 216.60702658980148
+          }
+        ],
+        "all_train": {
+          "rows": 71319,
+          "fraud": 1152,
+          "xgb_expected": 1157.1365466895345,
+          "final_expected": 1153.3018964414027
+        }
+      },
+      {
+        "group": "Online / POS Terminal",
+        "test_rows": 19315,
+        "discovery": {
+          "rows": 27251,
+          "fraud": 485,
+          "xgb_expected": 496.883756344882,
+          "final_expected": 496.9924794147097
+        },
+        "confirmation": [
+          {
+            "rows": 8993,
+            "fraud": 172,
+            "xgb_expected": 168.4668037700244,
+            "final_expected": 168.3326513711301
+          },
+          {
+            "rows": 9026,
+            "fraud": 167,
+            "xgb_expected": 161.4377055074591,
+            "final_expected": 162.09761502041158
+          }
+        ],
+        "all_train": {
+          "rows": 45270,
+          "fraud": 824,
+          "xgb_expected": 826.7882656223655,
+          "final_expected": 827.4227458062513
+        }
+      },
+      {
+        "group": "Online / Tablet",
+        "test_rows": 4765,
+        "discovery": {
+          "rows": 6493,
+          "fraud": 107,
+          "xgb_expected": 117.0711605717537,
+          "final_expected": 117.17752820970114
+        },
+        "confirmation": [
+          {
+            "rows": 2272,
+            "fraud": 40,
+            "xgb_expected": 38.435066561893905,
+            "final_expected": 38.658382230171064
+          },
+          {
+            "rows": 2117,
+            "fraud": 40,
+            "xgb_expected": 41.43097108916368,
+            "final_expected": 41.45554266551387
+          }
+        ],
+        "all_train": {
+          "rows": 10882,
+          "fraud": 187,
+          "xgb_expected": 196.93719822281128,
+          "final_expected": 197.29145310538604
+        }
+      },
+      {
+        "group": "Contactless / Android Phone",
+        "test_rows": 15366,
+        "discovery": {
+          "rows": 21207,
+          "fraud": 306,
+          "xgb_expected": 316.0086998031444,
+          "final_expected": 313.9985114748929
+        },
+        "confirmation": [
+          {
+            "rows": 7074,
+            "fraud": 104,
+            "xgb_expected": 112.62271538680216,
+            "final_expected": 111.67800027292856
+          },
+          {
+            "rows": 7196,
+            "fraud": 90,
+            "xgb_expected": 99.24355576862195,
+            "final_expected": 97.81044512914372
+          }
+        ],
+        "all_train": {
+          "rows": 35477,
+          "fraud": 500,
+          "xgb_expected": 527.8749709585685,
+          "final_expected": 523.4869568769652
+        }
+      },
+      {
+        "group": "Online / Mac",
+        "test_rows": 5752,
+        "discovery": {
+          "rows": 8072,
+          "fraud": 135,
+          "xgb_expected": 143.32230504487643,
+          "final_expected": 142.9056209265401
+        },
+        "confirmation": [
+          {
+            "rows": 2735,
+            "fraud": 37,
+            "xgb_expected": 41.89588539623219,
+            "final_expected": 41.63701559326908
+          },
+          {
+            "rows": 2663,
+            "fraud": 51,
+            "xgb_expected": 46.27663007576257,
+            "final_expected": 46.560661493805284
+          }
+        ],
+        "all_train": {
+          "rows": 13470,
+          "fraud": 223,
+          "xgb_expected": 231.4948205168712,
+          "final_expected": 231.10329801361448
+        }
+      },
+      {
+        "group": "Online / ATM Machine",
+        "test_rows": 3495,
+        "discovery": {
+          "rows": 4987,
+          "fraud": 89,
+          "xgb_expected": 82.1757023518644,
+          "final_expected": 82.38387520207615
+        },
+        "confirmation": [
+          {
+            "rows": 1631,
+            "fraud": 23,
+            "xgb_expected": 23.990250401672768,
+            "final_expected": 23.90484047369477
+          },
+          {
+            "rows": 1606,
+            "fraud": 29,
+            "xgb_expected": 28.23281625535833,
+            "final_expected": 28.816715008253503
+          }
+        ],
+        "all_train": {
+          "rows": 8224,
+          "fraud": 141,
+          "xgb_expected": 134.3987690088955,
+          "final_expected": 135.1054306840244
+        }
+      },
+      {
+        "group": "POS / Tablet",
+        "test_rows": 3452,
+        "discovery": {
+          "rows": 4812,
+          "fraud": 87,
+          "xgb_expected": 80.36857638058314,
+          "final_expected": 80.56918433639724
+        },
+        "confirmation": [
+          {
+            "rows": 1584,
+            "fraud": 21,
+            "xgb_expected": 23.302050673589065,
+            "final_expected": 23.57268359612227
+          },
+          {
+            "rows": 1647,
+            "fraud": 33,
+            "xgb_expected": 25.532797429931406,
+            "final_expected": 25.58720436491418
+          }
+        ],
+        "all_train": {
+          "rows": 8043,
+          "fraud": 141,
+          "xgb_expected": 129.2034244841036,
+          "final_expected": 129.72907229743367
+        }
+      },
+      {
+        "group": "Online / Smart Watch",
+        "test_rows": 3476,
+        "discovery": {
+          "rows": 4936,
+          "fraud": 91,
+          "xgb_expected": 84.52683612695523,
+          "final_expected": 84.82005562484673
+        },
+        "confirmation": [
+          {
+            "rows": 1659,
+            "fraud": 33,
+            "xgb_expected": 28.865749271663617,
+            "final_expected": 29.16881702160878
+          },
+          {
+            "rows": 1594,
+            "fraud": 31,
+            "xgb_expected": 24.2954808656134,
+            "final_expected": 24.225230733161027
+          }
+        ],
+        "all_train": {
+          "rows": 8189,
+          "fraud": 155,
+          "xgb_expected": 137.68806626423225,
+          "final_expected": 138.21410337961652
+        }
+      },
+      {
+        "group": "In-App / Mac",
+        "test_rows": 1754,
+        "discovery": {
+          "rows": 2408,
+          "fraud": 49,
+          "xgb_expected": 42.92017758785528,
+          "final_expected": 42.901410738009005
+        },
+        "confirmation": [
+          {
+            "rows": 745,
+            "fraud": 12,
+            "xgb_expected": 14.232656982378103,
+            "final_expected": 14.15782329247459
+          },
+          {
+            "rows": 809,
+            "fraud": 12,
+            "xgb_expected": 11.247469199973466,
+            "final_expected": 11.047339445597924
+          }
+        ],
+        "all_train": {
+          "rows": 3962,
+          "fraud": 73,
+          "xgb_expected": 68.40030377020685,
+          "final_expected": 68.10657347608151
+        }
+      },
+      {
+        "group": "In-App / Android Phone",
+        "test_rows": 11731,
+        "discovery": {
+          "rows": 16888,
+          "fraud": 256,
+          "xgb_expected": 261.74873005339623,
+          "final_expected": 257.79388602481663
+        },
+        "confirmation": [
+          {
+            "rows": 5563,
+            "fraud": 89,
+            "xgb_expected": 92.15693787356167,
+            "final_expected": 91.31278081069465
+          },
+          {
+            "rows": 5494,
+            "fraud": 79,
+            "xgb_expected": 90.53341584511645,
+            "final_expected": 89.81030016587633
+          }
+        ],
+        "all_train": {
+          "rows": 27945,
+          "fraud": 424,
+          "xgb_expected": 444.43908377207435,
+          "final_expected": 438.9169670013876
+        }
+      },
+      {
+        "group": "POS / Smart Watch",
+        "test_rows": 2831,
+        "discovery": {
+          "rows": 3826,
+          "fraud": 57,
+          "xgb_expected": 62.38490206366032,
+          "final_expected": 62.890128436508476
+        },
+        "confirmation": [
+          {
+            "rows": 1344,
+            "fraud": 24,
+            "xgb_expected": 17.965018949932528,
+            "final_expected": 18.15433259093708
+          },
+          {
+            "rows": 1289,
+            "fraud": 18,
+            "xgb_expected": 18.806542215118043,
+            "final_expected": 18.983824644717046
+          }
+        ],
+        "all_train": {
+          "rows": 6459,
+          "fraud": 99,
+          "xgb_expected": 99.15646322871089,
+          "final_expected": 100.02828567216261
+        }
+      },
+      {
+        "group": "Contactless / Windows PC",
+        "test_rows": 5253,
+        "discovery": {
+          "rows": 7557,
+          "fraud": 122,
+          "xgb_expected": 117.09794679947771,
+          "final_expected": 115.245255232603
+        },
+        "confirmation": [
+          {
+            "rows": 2486,
+            "fraud": 40,
+            "xgb_expected": 36.84177388917624,
+            "final_expected": 36.32974734472978
+          },
+          {
+            "rows": 2521,
+            "fraud": 34,
+            "xgb_expected": 38.27044587885621,
+            "final_expected": 37.435374821015216
+          }
+        ],
+        "all_train": {
+          "rows": 12564,
+          "fraud": 196,
+          "xgb_expected": 192.21016656751016,
+          "final_expected": 189.010377398348
+        }
+      },
+      {
+        "group": "Contactless / iPhone",
+        "test_rows": 10708,
+        "discovery": {
+          "rows": 14597,
+          "fraud": 236,
+          "xgb_expected": 231.73999372207936,
+          "final_expected": 232.96034391829824
+        },
+        "confirmation": [
+          {
+            "rows": 4907,
+            "fraud": 76,
+            "xgb_expected": 73.98413393726173,
+            "final_expected": 73.64843792175112
+          },
+          {
+            "rows": 4895,
+            "fraud": 92,
+            "xgb_expected": 84.36952498879668,
+            "final_expected": 84.46417056761823
+          }
+        ],
+        "all_train": {
+          "rows": 24399,
+          "fraud": 404,
+          "xgb_expected": 390.0936526481378,
+          "final_expected": 391.0729524076676
+        }
+      },
+      {
+        "group": "Contactless / Mac",
+        "test_rows": 2245,
+        "discovery": {
+          "rows": 3093,
+          "fraud": 45,
+          "xgb_expected": 41.11412894935097,
+          "final_expected": 40.836510198594425
+        },
+        "confirmation": [
+          {
+            "rows": 999,
+            "fraud": 20,
+            "xgb_expected": 20.602084895335565,
+            "final_expected": 20.81257190303444
+          },
+          {
+            "rows": 1032,
+            "fraud": 14,
+            "xgb_expected": 15.652758718236328,
+            "final_expected": 15.673086596599667
+          }
+        ],
+        "all_train": {
+          "rows": 5124,
+          "fraud": 79,
+          "xgb_expected": 77.36897256292286,
+          "final_expected": 77.32216869822852
+        }
+      },
+      {
+        "group": "Contactless / Tablet",
+        "test_rows": 1818,
+        "discovery": {
+          "rows": 2510,
+          "fraud": 43,
+          "xgb_expected": 39.41332197554868,
+          "final_expected": 39.83793780638239
+        },
+        "confirmation": [
+          {
+            "rows": 801,
+            "fraud": 15,
+            "xgb_expected": 16.146412971500013,
+            "final_expected": 16.152121855185
+          },
+          {
+            "rows": 832,
+            "fraud": 8,
+            "xgb_expected": 10.687642609340173,
+            "final_expected": 10.57544782763774
+          }
+        ],
+        "all_train": {
+          "rows": 4143,
+          "fraud": 66,
+          "xgb_expected": 66.24737755638887,
+          "final_expected": 66.56550748920513
+        }
+      },
+      {
+        "group": "POS / Windows PC",
+        "test_rows": 10260,
+        "discovery": {
+          "rows": 14149,
+          "fraud": 223,
+          "xgb_expected": 226.38928010936442,
+          "final_expected": 224.67721880585805
+        },
+        "confirmation": [
+          {
+            "rows": 4765,
+            "fraud": 78,
+            "xgb_expected": 79.84819855872092,
+            "final_expected": 79.05687955125661
+          },
+          {
+            "rows": 4700,
+            "fraud": 80,
+            "xgb_expected": 79.67983762099561,
+            "final_expected": 79.36904985250203
+          }
+        ],
+        "all_train": {
+          "rows": 23614,
+          "fraud": 381,
+          "xgb_expected": 385.917316289081,
+          "final_expected": 383.10314820961673
+        }
+      },
+      {
+        "group": "POS / Mac",
+        "test_rows": 4226,
+        "discovery": {
+          "rows": 5954,
+          "fraud": 102,
+          "xgb_expected": 104.1681199960899,
+          "final_expected": 104.44880209359994
+        },
+        "confirmation": [
+          {
+            "rows": 2010,
+            "fraud": 44,
+            "xgb_expected": 40.355617704875385,
+            "final_expected": 40.8856661612968
+          },
+          {
+            "rows": 1995,
+            "fraud": 29,
+            "xgb_expected": 31.13602512387115,
+            "final_expected": 31.469185953632078
+          }
+        ],
+        "all_train": {
+          "rows": 9959,
+          "fraud": 175,
+          "xgb_expected": 175.65976282483643,
+          "final_expected": 176.80365420852883
+        }
+      },
+      {
+        "group": "Contactless / POS Terminal",
+        "test_rows": 7487,
+        "discovery": {
+          "rows": 10512,
+          "fraud": 176,
+          "xgb_expected": 174.50184030203303,
+          "final_expected": 175.23488744746666
+        },
+        "confirmation": [
+          {
+            "rows": 3524,
+            "fraud": 59,
+            "xgb_expected": 56.09684760552432,
+            "final_expected": 55.68849292928357
+          },
+          {
+            "rows": 3513,
+            "fraud": 69,
+            "xgb_expected": 54.82521844703001,
+            "final_expected": 55.040441194556315
+          }
+        ],
+        "all_train": {
+          "rows": 17549,
+          "fraud": 304,
+          "xgb_expected": 285.42390635458736,
+          "final_expected": 285.96382157130654
+        }
+      },
+      {
+        "group": "POS / ATM Machine",
+        "test_rows": 2609,
+        "discovery": {
+          "rows": 3657,
+          "fraud": 62,
+          "xgb_expected": 61.06373863313968,
+          "final_expected": 62.18918895207757
+        },
+        "confirmation": [
+          {
+            "rows": 1238,
+            "fraud": 30,
+            "xgb_expected": 22.85852488236037,
+            "final_expected": 23.518380703289093
+          },
+          {
+            "rows": 1192,
+            "fraud": 24,
+            "xgb_expected": 19.039852194543982,
+            "final_expected": 19.33515294869246
+          }
+        ],
+        "all_train": {
+          "rows": 6087,
+          "fraud": 116,
+          "xgb_expected": 102.96211571004403,
+          "final_expected": 105.04272260405912
+        }
+      },
+      {
+        "group": "In-App / POS Terminal",
+        "test_rows": 6221,
+        "discovery": {
+          "rows": 8712,
+          "fraud": 149,
+          "xgb_expected": 149.18768655686483,
+          "final_expected": 149.05541731069286
+        },
+        "confirmation": [
+          {
+            "rows": 2857,
+            "fraud": 59,
+            "xgb_expected": 52.6868263266922,
+            "final_expected": 52.58244530080026
+          },
+          {
+            "rows": 2890,
+            "fraud": 55,
+            "xgb_expected": 52.93432002977181,
+            "final_expected": 52.58292253595312
+          }
+        ],
+        "all_train": {
+          "rows": 14459,
+          "fraud": 263,
+          "xgb_expected": 254.80883291332884,
+          "final_expected": 254.2207851474462
+        }
+      }
+    ],
+    "channel_hour": [
+      {
+        "group": "Online / 3",
+        "test_rows": 30256,
+        "discovery": {
+          "rows": 42343,
+          "fraud": 722,
+          "xgb_expected": 775.8378117571701,
+          "final_expected": 772.7514522383317
+        },
+        "confirmation": [
+          {
+            "rows": 14035,
+            "fraud": 243,
+            "xgb_expected": 238.778824038766,
+            "final_expected": 236.56351661738665
+          },
+          {
+            "rows": 14228,
+            "fraud": 252,
+            "xgb_expected": 248.22923119122447,
+            "final_expected": 248.34600781552749
+          }
+        ],
+        "all_train": {
+          "rows": 70606,
+          "fraud": 1217,
+          "xgb_expected": 1262.8458669871607,
+          "final_expected": 1257.6609766712459
+        }
+      },
+      {
+        "group": "POS / 0",
+        "test_rows": 20809,
+        "discovery": {
+          "rows": 28803,
+          "fraud": 498,
+          "xgb_expected": 463.83075732766474,
+          "final_expected": 464.8953824617645
+        },
+        "confirmation": [
+          {
+            "rows": 9792,
+            "fraud": 184,
+            "xgb_expected": 172.69019402089634,
+            "final_expected": 173.51473877844637
+          },
+          {
+            "rows": 9632,
+            "fraud": 174,
+            "xgb_expected": 150.12339379032687,
+            "final_expected": 150.08756892448437
+          }
+        ],
+        "all_train": {
+          "rows": 48227,
+          "fraud": 856,
+          "xgb_expected": 786.644345138888,
+          "final_expected": 788.4976901646952
+        }
+      },
+      {
+        "group": "Online / 1",
+        "test_rows": 28200,
+        "discovery": {
+          "rows": 40092,
+          "fraud": 695,
+          "xgb_expected": 721.3248932031219,
+          "final_expected": 719.4072313321458
+        },
+        "confirmation": [
+          {
+            "rows": 13244,
+            "fraud": 228,
+            "xgb_expected": 229.7992623934727,
+            "final_expected": 229.5433818363184
+          },
+          {
+            "rows": 13389,
+            "fraud": 270,
+            "xgb_expected": 250.37781260299187,
+            "final_expected": 250.3070776633119
+          }
+        ],
+        "all_train": {
+          "rows": 66725,
+          "fraud": 1193,
+          "xgb_expected": 1201.5019681995864,
+          "final_expected": 1199.2576908317762
+        }
+      },
+      {
+        "group": "In-App / 0",
+        "test_rows": 8576,
+        "discovery": {
+          "rows": 11889,
+          "fraud": 172,
+          "xgb_expected": 197.16430744212323,
+          "final_expected": 196.34731898349017
+        },
+        "confirmation": [
+          {
+            "rows": 3947,
+            "fraud": 70,
+            "xgb_expected": 70.53666538673065,
+            "final_expected": 70.30319510849935
+          },
+          {
+            "rows": 3900,
+            "fraud": 56,
+            "xgb_expected": 60.48643545130119,
+            "final_expected": 60.55222446560485
+          }
+        ],
+        "all_train": {
+          "rows": 19736,
+          "fraud": 298,
+          "xgb_expected": 328.18740828015507,
+          "final_expected": 327.20273855759433
+        }
+      },
+      {
+        "group": "Online / 0",
+        "test_rows": 27582,
+        "discovery": {
+          "rows": 38790,
+          "fraud": 653,
+          "xgb_expected": 678.1630548354709,
+          "final_expected": 677.4322952063442
+        },
+        "confirmation": [
+          {
+            "rows": 12987,
+            "fraud": 218,
+            "xgb_expected": 231.86195768496373,
+            "final_expected": 232.0404166251498
+          },
+          {
+            "rows": 12807,
+            "fraud": 231,
+            "xgb_expected": 219.90883477104228,
+            "final_expected": 219.57469646177069
+          }
+        ],
+        "all_train": {
+          "rows": 64584,
+          "fraud": 1102,
+          "xgb_expected": 1129.933847291477,
+          "final_expected": 1129.0474082932647
+        }
+      },
+      {
+        "group": "ATM / 0",
+        "test_rows": 3039,
+        "discovery": {
+          "rows": 4282,
+          "fraud": 80,
+          "xgb_expected": 61.80365268920798,
+          "final_expected": 62.15549738300517
+        },
+        "confirmation": [
+          {
+            "rows": 1461,
+            "fraud": 21,
+            "xgb_expected": 26.337747796590747,
+            "final_expected": 26.285595812733078
+          },
+          {
+            "rows": 1397,
+            "fraud": 17,
+            "xgb_expected": 18.19561230210661,
+            "final_expected": 18.476968419796012
+          }
+        ],
+        "all_train": {
+          "rows": 7140,
+          "fraud": 118,
+          "xgb_expected": 106.33701278790534,
+          "final_expected": 106.91806161553426
+        }
+      },
+      {
+        "group": "In-App / 3",
+        "test_rows": 9091,
+        "discovery": {
+          "rows": 12823,
+          "fraud": 224,
+          "xgb_expected": 207.35260799644004,
+          "final_expected": 205.6097725151334
+        },
+        "confirmation": [
+          {
+            "rows": 4306,
+            "fraud": 67,
+            "xgb_expected": 72.07545725475575,
+            "final_expected": 71.53418046201755
+          },
+          {
+            "rows": 4290,
+            "fraud": 74,
+            "xgb_expected": 78.07089932854922,
+            "final_expected": 77.92853346834744
+          }
+        ],
+        "all_train": {
+          "rows": 21419,
+          "fraud": 365,
+          "xgb_expected": 357.498964579745,
+          "final_expected": 355.0724864454984
+        }
+      },
+      {
+        "group": "ATM / 3",
+        "test_rows": 3317,
+        "discovery": {
+          "rows": 4613,
+          "fraud": 84,
+          "xgb_expected": 68.17002408460712,
+          "final_expected": 68.01649644990025
+        },
+        "confirmation": [
+          {
+            "rows": 1609,
+            "fraud": 20,
+            "xgb_expected": 26.680246778811124,
+            "final_expected": 26.878192585607593
+          },
+          {
+            "rows": 1642,
+            "fraud": 22,
+            "xgb_expected": 24.32693499692408,
+            "final_expected": 24.986058484751446
+          }
+        ],
+        "all_train": {
+          "rows": 7864,
+          "fraud": 126,
+          "xgb_expected": 119.17720586034233,
+          "final_expected": 119.88074752025929
+        }
+      },
+      {
+        "group": "In-App / 2",
+        "test_rows": 9330,
+        "discovery": {
+          "rows": 13270,
+          "fraud": 239,
+          "xgb_expected": 223.52970020891155,
+          "final_expected": 221.29071244301468
+        },
+        "confirmation": [
+          {
+            "rows": 4420,
+            "fraud": 69,
+            "xgb_expected": 73.49955934485354,
+            "final_expected": 73.0317549381696
+          },
+          {
+            "rows": 4445,
+            "fraud": 70,
+            "xgb_expected": 71.0294851299077,
+            "final_expected": 70.74172205742815
+          }
+        ],
+        "all_train": {
+          "rows": 22135,
+          "fraud": 378,
+          "xgb_expected": 368.0587446836728,
+          "final_expected": 365.06418943861246
+        }
+      },
+      {
+        "group": "POS / 2",
+        "test_rows": 23496,
+        "discovery": {
+          "rows": 32605,
+          "fraud": 520,
+          "xgb_expected": 534.078535475729,
+          "final_expected": 533.6415023093034
+        },
+        "confirmation": [
+          {
+            "rows": 10786,
+            "fraud": 166,
+            "xgb_expected": 173.00601163804583,
+            "final_expected": 172.77861855484286
+          },
+          {
+            "rows": 10966,
+            "fraud": 175,
+            "xgb_expected": 182.65115549656275,
+            "final_expected": 183.59269460453032
+          }
+        ],
+        "all_train": {
+          "rows": 54357,
+          "fraud": 861,
+          "xgb_expected": 889.7357026103377,
+          "final_expected": 890.0128154686765
+        }
+      },
+      {
+        "group": "Contactless / 0",
+        "test_rows": 10724,
+        "discovery": {
+          "rows": 14724,
+          "fraud": 193,
+          "xgb_expected": 205.3048975571462,
+          "final_expected": 205.09120176865693
+        },
+        "confirmation": [
+          {
+            "rows": 4878,
+            "fraud": 77,
+            "xgb_expected": 79.90224932011688,
+            "final_expected": 79.78353212451799
+          },
+          {
+            "rows": 5025,
+            "fraud": 82,
+            "xgb_expected": 70.86063939540031,
+            "final_expected": 70.24308264428686
+          }
+        ],
+        "all_train": {
+          "rows": 24627,
+          "fraud": 352,
+          "xgb_expected": 356.0677862726634,
+          "final_expected": 355.11781653746175
+        }
+      },
+      {
+        "group": "POS / 3",
+        "test_rows": 22680,
+        "discovery": {
+          "rows": 32147,
+          "fraud": 512,
+          "xgb_expected": 521.7245443830543,
+          "final_expected": 521.1460690553048
+        },
+        "confirmation": [
+          {
+            "rows": 10559,
+            "fraud": 196,
+            "xgb_expected": 180.3447288140036,
+            "final_expected": 181.57784428436116
+          },
+          {
+            "rows": 10678,
+            "fraud": 162,
+            "xgb_expected": 162.597384538442,
+            "final_expected": 162.65307638116417
+          }
+        ],
+        "all_train": {
+          "rows": 53384,
+          "fraud": 870,
+          "xgb_expected": 864.6666577354998,
+          "final_expected": 865.3769897208301
+        }
+      },
+      {
+        "group": "ATM / 2",
+        "test_rows": 3443,
+        "discovery": {
+          "rows": 4750,
+          "fraud": 80,
+          "xgb_expected": 72.01025449218355,
+          "final_expected": 72.02532220580471
+        },
+        "confirmation": [
+          {
+            "rows": 1575,
+            "fraud": 20,
+            "xgb_expected": 25.977177955531033,
+            "final_expected": 26.211374884394537
+          },
+          {
+            "rows": 1598,
+            "fraud": 27,
+            "xgb_expected": 26.724485828370234,
+            "final_expected": 26.995566956896425
+          }
+        ],
+        "all_train": {
+          "rows": 7923,
+          "fraud": 127,
+          "xgb_expected": 124.71191827608482,
+          "final_expected": 125.23226404709567
+        }
+      },
+      {
+        "group": "POS / 1",
+        "test_rows": 21745,
+        "discovery": {
+          "rows": 30327,
+          "fraud": 522,
+          "xgb_expected": 515.9316464783343,
+          "final_expected": 516.1126108568695
+        },
+        "confirmation": [
+          {
+            "rows": 10254,
+            "fraud": 165,
+            "xgb_expected": 165.11099532498542,
+            "final_expected": 165.8106599499563
+          },
+          {
+            "rows": 9916,
+            "fraud": 154,
+            "xgb_expected": 152.26874153439337,
+            "final_expected": 152.1527925797967
+          }
+        ],
+        "all_train": {
+          "rows": 50497,
+          "fraud": 841,
+          "xgb_expected": 833.3113833377131,
+          "final_expected": 834.0760633866225
+        }
+      },
+      {
+        "group": "Contactless / 2",
+        "test_rows": 11880,
+        "discovery": {
+          "rows": 16949,
+          "fraud": 271,
+          "xgb_expected": 264.9555938809526,
+          "final_expected": 263.95637518234497
+        },
+        "confirmation": [
+          {
+            "rows": 5679,
+            "fraud": 89,
+            "xgb_expected": 86.57413822487501,
+            "final_expected": 85.44141323171533
+          },
+          {
+            "rows": 5511,
+            "fraud": 88,
+            "xgb_expected": 83.672442051492,
+            "final_expected": 83.13758178673336
+          }
+        ],
+        "all_train": {
+          "rows": 28139,
+          "fraud": 448,
+          "xgb_expected": 435.20217415731963,
+          "final_expected": 432.5353702007937
+        }
+      },
+      {
+        "group": "Contactless / 3",
+        "test_rows": 11911,
+        "discovery": {
+          "rows": 16164,
+          "fraud": 260,
+          "xgb_expected": 254.0477022568855,
+          "final_expected": 254.27153890140661
+        },
+        "confirmation": [
+          {
+            "rows": 5445,
+            "fraud": 82,
+            "xgb_expected": 88.79614568997636,
+            "final_expected": 88.65632822839672
+          },
+          {
+            "rows": 5556,
+            "fraud": 76,
+            "xgb_expected": 82.71248998705641,
+            "final_expected": 82.12952623824245
+          }
+        ],
+        "all_train": {
+          "rows": 27165,
+          "fraud": 418,
+          "xgb_expected": 425.55633793391826,
+          "final_expected": 425.05739336804584
+        }
+      },
+      {
+        "group": "In-App / 1",
+        "test_rows": 8601,
+        "discovery": {
+          "rows": 12427,
+          "fraud": 211,
+          "xgb_expected": 214.19703309505257,
+          "final_expected": 212.57856882947925
+        },
+        "confirmation": [
+          {
+            "rows": 4011,
+            "fraud": 63,
+            "xgb_expected": 63.259705716857525,
+            "final_expected": 62.936955122809735
+          },
+          {
+            "rows": 3988,
+            "fraud": 52,
+            "xgb_expected": 65.23554407879828,
+            "final_expected": 64.63999568535498
+          }
+        ],
+        "all_train": {
+          "rows": 20426,
+          "fraud": 326,
+          "xgb_expected": 342.6922828907084,
+          "final_expected": 340.1555196376439
+        }
+      },
+      {
+        "group": "ATM / 1",
+        "test_rows": 3127,
+        "discovery": {
+          "rows": 4447,
+          "fraud": 71,
+          "xgb_expected": 68.6660387087461,
+          "final_expected": 68.62231648059827
+        },
+        "confirmation": [
+          {
+            "rows": 1439,
+            "fraud": 23,
+            "xgb_expected": 21.921091941717123,
+            "final_expected": 22.15073894936225
+          },
+          {
+            "rows": 1407,
+            "fraud": 15,
+            "xgb_expected": 20.997776650601963,
+            "final_expected": 21.30008010991697
+          }
+        ],
+        "all_train": {
+          "rows": 7293,
+          "fraud": 109,
+          "xgb_expected": 111.58490730106519,
+          "final_expected": 112.07313553987748
+        }
+      },
+      {
+        "group": "Contactless / 1",
+        "test_rows": 11149,
+        "discovery": {
+          "rows": 15402,
+          "fraud": 249,
+          "xgb_expected": 250.06667582686316,
+          "final_expected": 249.75448047788007
+        },
+        "confirmation": [
+          {
+            "rows": 5076,
+            "fraud": 88,
+            "xgb_expected": 81.47966287454165,
+            "final_expected": 81.20842907995628
+          },
+          {
+            "rows": 5211,
+            "fraud": 86,
+            "xgb_expected": 89.11991715524505,
+            "final_expected": 88.74074121668372
+          }
+        ],
+        "all_train": {
+          "rows": 25689,
+          "fraud": 423,
+          "xgb_expected": 420.66625585664985,
+          "final_expected": 419.7036507745201
+        }
+      },
+      {
+        "group": "Online / 2",
+        "test_rows": 31028,
+        "discovery": {
+          "rows": 43129,
+          "fraud": 757,
+          "xgb_expected": 757.1879982674714,
+          "final_expected": 752.6038288523246
+        },
+        "confirmation": [
+          {
+            "rows": 14489,
+            "fraud": 249,
+            "xgb_expected": 257.3272642388655,
+            "final_expected": 255.79670026568152
+          },
+          {
+            "rows": 14406,
+            "fraud": 255,
+            "xgb_expected": 248.62070211229866,
+            "final_expected": 247.62292766494272
+          }
+        ],
+        "all_train": {
+          "rows": 72024,
+          "fraud": 1261,
+          "xgb_expected": 1263.1359646186356,
+          "final_expected": 1256.0234567829489
+        }
+      }
+    ],
+    "cvv_flag_count": [
+      {
+        "group": "0 / 0",
+        "test_rows": 216969,
+        "discovery": {
+          "rows": 303578,
+          "fraud": 1186,
+          "xgb_expected": 1295.1449074188852,
+          "final_expected": 1180.024560583136
+        },
+        "confirmation": [
+          {
+            "rows": 101272,
+            "fraud": 387,
+            "xgb_expected": 425.7046930205013,
+            "final_expected": 393.53350537239567
+          },
+          {
+            "rows": 101095,
+            "fraud": 425,
+            "xgb_expected": 424.47490513445484,
+            "final_expected": 389.24717562394505
+          }
+        ],
+        "all_train": {
+          "rows": 505945,
+          "fraud": 1998,
+          "xgb_expected": 2145.324505573841,
+          "final_expected": 1962.8052415794768
+        }
+      },
+      {
+        "group": "1 / 1",
+        "test_rows": 5160,
+        "discovery": {
+          "rows": 7207,
+          "fraud": 1264,
+          "xgb_expected": 1239.283480072736,
+          "final_expected": 1282.9451827472767
+        },
+        "confirmation": [
+          {
+            "rows": 2404,
+            "fraud": 412,
+            "xgb_expected": 413.3699432839494,
+            "final_expected": 425.49748592780253
+          },
+          {
+            "rows": 2362,
+            "fraud": 410,
+            "xgb_expected": 397.13027707847505,
+            "final_expected": 411.9697111341451
+          }
+        ],
+        "all_train": {
+          "rows": 11973,
+          "fraud": 2086,
+          "xgb_expected": 2049.7837004351604,
+          "final_expected": 2120.4123798092246
+        }
+      },
+      {
+        "group": "0 / 1",
+        "test_rows": 53631,
+        "discovery": {
+          "rows": 75180,
+          "fraud": 1495,
+          "xgb_expected": 1514.8971033177577,
+          "final_expected": 1493.7912283089845
+        },
+        "confirmation": [
+          {
+            "rows": 25083,
+            "fraud": 530,
+            "xgb_expected": 525.4404295571194,
+            "final_expected": 518.2076796346004
+          },
+          {
+            "rows": 25131,
+            "fraud": 501,
+            "xgb_expected": 502.03482614551626,
+            "final_expected": 496.9238147847887
+          }
+        ],
+        "all_train": {
+          "rows": 125394,
+          "fraud": 2526,
+          "xgb_expected": 2542.372359020393,
+          "final_expected": 2508.9227227283736
+        }
+      },
+      {
+        "group": "0 / 2",
+        "test_rows": 4187,
+        "discovery": {
+          "rows": 5864,
+          "fraud": 659,
+          "xgb_expected": 639.8947119309778,
+          "final_expected": 664.0901612342684
+        },
+        "confirmation": [
+          {
+            "rows": 1991,
+            "fraud": 217,
+            "xgb_expected": 215.43658010365016,
+            "final_expected": 222.87745107477926
+          },
+          {
+            "rows": 1953,
+            "fraud": 220,
+            "xgb_expected": 192.13293502799206,
+            "final_expected": 198.9131566167698
+          }
+        ],
+        "all_train": {
+          "rows": 9808,
+          "fraud": 1096,
+          "xgb_expected": 1047.46422706262,
+          "final_expected": 1085.8807689258174
+        }
+      },
+      {
+        "group": "1 / 2",
+        "test_rows": 682,
+        "discovery": {
+          "rows": 913,
+          "fraud": 507,
+          "xgb_expected": 492.13121921400307,
+          "final_expected": 510.4761805756762
+        },
+        "confirmation": [
+          {
+            "rows": 285,
+            "fraud": 172,
+            "xgb_expected": 155.9973438876914,
+            "final_expected": 161.38109836591013
+          },
+          {
+            "rows": 308,
+            "fraud": 177,
+            "xgb_expected": 176.83417093369644,
+            "final_expected": 183.11706751138925
+          }
+        ],
+        "all_train": {
+          "rows": 1506,
+          "fraud": 856,
+          "xgb_expected": 824.9627340353909,
+          "final_expected": 854.9743464529756
+        }
+      },
+      {
+        "group": "0 / 3",
+        "test_rows": 402,
+        "discovery": {
+          "rows": 560,
+          "fraud": 223,
+          "xgb_expected": 212.10699415982526,
+          "final_expected": 222.4956700647548
+        },
+        "confirmation": [
+          {
+            "rows": 167,
+            "fraud": 65,
+            "xgb_expected": 65.61151460505789,
+            "final_expected": 67.81824573357493
+          },
+          {
+            "rows": 214,
+            "fraud": 82,
+            "xgb_expected": 77.11687641910976,
+            "final_expected": 79.96223034595508
+          }
+        ],
+        "all_train": {
+          "rows": 941,
+          "fraud": 370,
+          "xgb_expected": 354.8353851839929,
+          "final_expected": 370.2761461442848
+        }
+      },
+      {
+        "group": "1 / 0",
+        "test_rows": 17984,
+        "discovery": {
+          "rows": 25295,
+          "fraud": 983,
+          "xgb_expected": 990.9931046444672,
+          "final_expected": 992.9370888352236
+        },
+        "confirmation": [
+          {
+            "rows": 8319,
+            "fraud": 339,
+            "xgb_expected": 341.16299614478066,
+            "final_expected": 341.9366054968002
+          },
+          {
+            "rows": 8462,
+            "fraud": 300,
+            "xgb_expected": 321.7735284875971,
+            "final_expected": 323.7631242048568
+          }
+        ],
+        "all_train": {
+          "rows": 42076,
+          "fraud": 1622,
+          "xgb_expected": 1653.929629276845,
+          "final_expected": 1658.6368185368806
+        }
+      },
+      {
+        "group": "2 / 0",
+        "test_rows": 481,
+        "discovery": {
+          "rows": 666,
+          "fraud": 155,
+          "xgb_expected": 152.9573805725231,
+          "final_expected": 159.18146493485193
+        },
+        "confirmation": [
+          {
+            "rows": 238,
+            "fraud": 44,
+            "xgb_expected": 51.6522761938686,
+            "final_expected": 54.25963082490756
+          },
+          {
+            "rows": 230,
+            "fraud": 51,
+            "xgb_expected": 48.27648288907949,
+            "final_expected": 49.91359295774554
+          }
+        ],
+        "all_train": {
+          "rows": 1134,
+          "fraud": 250,
+          "xgb_expected": 252.8861396554712,
+          "final_expected": 263.35468871750504
+        }
+      }
+    ],
+    "cvv_amount": [
+      {
+        "group": "0 / 0",
+        "test_rows": 125490,
+        "discovery": {
+          "rows": 176211,
+          "fraud": 1428,
+          "xgb_expected": 1499.3028110788532,
+          "final_expected": 1457.120464128247
+        },
+        "confirmation": [
+          {
+            "rows": 58361,
+            "fraud": 489,
+            "xgb_expected": 498.267450929605,
+            "final_expected": 487.17682268514903
+          },
+          {
+            "rows": 58293,
+            "fraud": 539,
+            "xgb_expected": 496.2243675675698,
+            "final_expected": 484.7072496111656
+          }
+        ],
+        "all_train": {
+          "rows": 292865,
+          "fraud": 2456,
+          "xgb_expected": 2493.794629576028,
+          "final_expected": 2429.0045364245616
+        }
+      },
+      {
+        "group": "1 / 1",
+        "test_rows": 10749,
+        "discovery": {
+          "rows": 14898,
+          "fraud": 1242,
+          "xgb_expected": 1194.0296538506136,
+          "final_expected": 1220.3772744034402
+        },
+        "confirmation": [
+          {
+            "rows": 4875,
+            "fraud": 395,
+            "xgb_expected": 392.41123669460376,
+            "final_expected": 399.6549953151913
+          },
+          {
+            "rows": 4982,
+            "fraud": 402,
+            "xgb_expected": 414.6887674181262,
+            "final_expected": 424.9586206823733
+          }
+        ],
+        "all_train": {
+          "rows": 24755,
+          "fraud": 2039,
+          "xgb_expected": 2001.1296579633436,
+          "final_expected": 2044.9908904010044
+        }
+      },
+      {
+        "group": "0 / 1",
+        "test_rows": 122926,
+        "discovery": {
+          "rows": 171777,
+          "fraud": 1534,
+          "xgb_expected": 1550.4999986151906,
+          "final_expected": 1505.761917338571
+        },
+        "confirmation": [
+          {
+            "rows": 57874,
+            "fraud": 520,
+            "xgb_expected": 542.1785164270614,
+            "final_expected": 527.9630021423702
+          },
+          {
+            "rows": 57720,
+            "fraud": 495,
+            "xgb_expected": 491.26943903568036,
+            "final_expected": 477.4650356447173
+          }
+        ],
+        "all_train": {
+          "rows": 287371,
+          "fraud": 2549,
+          "xgb_expected": 2583.947954077932,
+          "final_expected": 2511.189955125659
+        }
+      },
+      {
+        "group": "0 / 2",
+        "test_rows": 6210,
+        "discovery": {
+          "rows": 8622,
+          "fraud": 183,
+          "xgb_expected": 198.50364237003942,
+          "final_expected": 190.5834296318001
+        },
+        "confirmation": [
+          {
+            "rows": 2807,
+            "fraud": 60,
+            "xgb_expected": 62.49685108991207,
+            "final_expected": 60.93807771229614
+          },
+          {
+            "rows": 2893,
+            "fraud": 63,
+            "xgb_expected": 69.63848717170549,
+            "final_expected": 66.76832662785667
+          }
+        ],
+        "all_train": {
+          "rows": 14322,
+          "fraud": 306,
+          "xgb_expected": 330.638980631657,
+          "final_expected": 318.28983397195293
+        }
+      },
+      {
+        "group": "1 / 3",
+        "test_rows": 1710,
+        "discovery": {
+          "rows": 2457,
+          "fraud": 304,
+          "xgb_expected": 318.7768594727604,
+          "final_expected": 328.6318068094145
+        },
+        "confirmation": [
+          {
+            "rows": 825,
+            "fraud": 103,
+            "xgb_expected": 112.15134335970652,
+            "final_expected": 115.30125140638236
+          },
+          {
+            "rows": 804,
+            "fraud": 103,
+            "xgb_expected": 92.32511182358576,
+            "final_expected": 95.48817480185959
+          }
+        ],
+        "all_train": {
+          "rows": 4086,
+          "fraud": 510,
+          "xgb_expected": 523.2533146560527,
+          "final_expected": 539.4212330176565
+        }
+      },
+      {
+        "group": "0 / 3",
+        "test_rows": 18409,
+        "discovery": {
+          "rows": 25607,
+          "fraud": 388,
+          "xgb_expected": 377.3294923896233,
+          "final_expected": 372.3461134542491
+        },
+        "confirmation": [
+          {
+            "rows": 8477,
+            "fraud": 113,
+            "xgb_expected": 117.35235987011038,
+            "final_expected": 115.06948035098827
+          },
+          {
+            "rows": 8487,
+            "fraud": 116,
+            "xgb_expected": 125.19152047245757,
+            "final_expected": 123.40678033450091
+          }
+        ],
+        "all_train": {
+          "rows": 42571,
+          "fraud": 617,
+          "xgb_expected": 619.8733727321912,
+          "final_expected": 610.8223741397383
+        }
+      },
+      {
+        "group": "2 / 0",
+        "test_rows": 370,
+        "discovery": {
+          "rows": 538,
+          "fraud": 222,
+          "xgb_expected": 217.21352660316916,
+          "final_expected": 224.51668424507113
+        },
+        "confirmation": [
+          {
+            "rows": 162,
+            "fraud": 51,
+            "xgb_expected": 60.16114477944211,
+            "final_expected": 62.640513269313644
+          },
+          {
+            "rows": 167,
+            "fraud": 64,
+            "xgb_expected": 61.80030132061802,
+            "final_expected": 63.60946635896761
+          }
+        ],
+        "all_train": {
+          "rows": 867,
+          "fraud": 337,
+          "xgb_expected": 339.1749727032293,
+          "final_expected": 350.7666638733524
+        }
+      },
+      {
+        "group": "1 / 0",
+        "test_rows": 10773,
+        "discovery": {
+          "rows": 15088,
+          "fraud": 1198,
+          "xgb_expected": 1193.27779921014,
+          "final_expected": 1220.523945636442
+        },
+        "confirmation": [
+          {
+            "rows": 5023,
+            "fraud": 431,
+            "xgb_expected": 407.57246904919157,
+            "final_expected": 416.2796610902159
+          },
+          {
+            "rows": 5056,
+            "fraud": 393,
+            "xgb_expected": 392.3719217658745,
+            "final_expected": 401.6682583173491
+          }
+        ],
+        "all_train": {
+          "rows": 25167,
+          "fraud": 2022,
+          "xgb_expected": 1993.2221900252061,
+          "final_expected": 2038.4718650440072
+        }
+      },
+      {
+        "group": "1 / 2",
+        "test_rows": 578,
+        "discovery": {
+          "rows": 901,
+          "fraud": 170,
+          "xgb_expected": 174.04485900314467,
+          "final_expected": 177.4149287695162
+        },
+        "confirmation": [
+          {
+            "rows": 281,
+            "fraud": 51,
+            "xgb_expected": 53.97139010645333,
+            "final_expected": 54.67064784616933
+          },
+          {
+            "rows": 278,
+            "fraud": 38,
+            "xgb_expected": 48.40780982552678,
+            "final_expected": 49.788295286015156
+          }
+        ],
+        "all_train": {
+          "rows": 1460,
+          "fraud": 259,
+          "xgb_expected": 276.4240589351248,
+          "final_expected": 281.8738719017007
+        }
+      }
+    ],
+    "amount_cents_scale": [
+      {
+        "group": "0 / 0",
+        "test_rows": 127105,
+        "discovery": {
+          "rows": 178382,
+          "fraud": 2650,
+          "xgb_expected": 2695.836441615293,
+          "final_expected": 2689.947567791226
+        },
+        "confirmation": [
+          {
+            "rows": 59053,
+            "fraud": 902,
+            "xgb_expected": 894.9229244206604,
+            "final_expected": 895.5438064877762
+          },
+          {
+            "rows": 59146,
+            "fraud": 926,
+            "xgb_expected": 877.7315725295757,
+            "final_expected": 877.6741803606033
+          }
+        ],
+        "all_train": {
+          "rows": 296581,
+          "fraud": 4478,
+          "xgb_expected": 4468.49093856553,
+          "final_expected": 4463.165554639606
+        }
+      },
+      {
+        "group": "1 / 1",
+        "test_rows": 11925,
+        "discovery": {
+          "rows": 16737,
+          "fraud": 316,
+          "xgb_expected": 294.21465331068777,
+          "final_expected": 294.82128789051933
+        },
+        "confirmation": [
+          {
+            "rows": 5398,
+            "fraud": 89,
+            "xgb_expected": 91.5456598054925,
+            "final_expected": 90.95872135317214
+          },
+          {
+            "rows": 5611,
+            "fraud": 95,
+            "xgb_expected": 89.2061124480565,
+            "final_expected": 88.88066857865113
+          }
+        ],
+        "all_train": {
+          "rows": 27746,
+          "fraud": 500,
+          "xgb_expected": 474.9664255642368,
+          "final_expected": 474.6606778223425
+        }
+      },
+      {
+        "group": "2 / 0",
+        "test_rows": 6390,
+        "discovery": {
+          "rows": 8934,
+          "fraud": 350,
+          "xgb_expected": 370.24873320020106,
+          "final_expected": 367.4528813944661
+        },
+        "confirmation": [
+          {
+            "rows": 2886,
+            "fraud": 111,
+            "xgb_expected": 115.16089480446271,
+            "final_expected": 114.78757199672438
+          },
+          {
+            "rows": 2971,
+            "fraud": 107,
+            "xgb_expected": 122.57916079305414,
+            "final_expected": 121.74617084787677
+          }
+        ],
+        "all_train": {
+          "rows": 14791,
+          "fraud": 568,
+          "xgb_expected": 607.9887887977179,
+          "final_expected": 603.9866242390672
+        }
+      },
+      {
+        "group": "1 / 0",
+        "test_rows": 122086,
+        "discovery": {
+          "rows": 170400,
+          "fraud": 2648,
+          "xgb_expected": 2628.0401759565266,
+          "final_expected": 2615.565679400755
+        },
+        "confirmation": [
+          {
+            "rows": 57518,
+            "fraud": 887,
+            "xgb_expected": 905.4534518786086,
+            "final_expected": 901.2315213856546
+          },
+          {
+            "rows": 57262,
+            "fraud": 870,
+            "xgb_expected": 875.5370943000805,
+            "final_expected": 874.2984514455526
+          }
+        ],
+        "all_train": {
+          "rows": 285180,
+          "fraud": 4405,
+          "xgb_expected": 4409.030722135216,
+          "final_expected": 4391.095652231963
+        }
+      },
+      {
+        "group": "0 / 1",
+        "test_rows": 9528,
+        "discovery": {
+          "rows": 13455,
+          "fraud": 198,
+          "xgb_expected": 213.95769527686912,
+          "final_expected": 212.21352621853396
+        },
+        "confirmation": [
+          {
+            "rows": 4493,
+            "fraud": 69,
+            "xgb_expected": 71.0781403375783,
+            "final_expected": 70.5531905569024
+          },
+          {
+            "rows": 4370,
+            "fraud": 70,
+            "xgb_expected": 72.66501812448655,
+            "final_expected": 72.31079392687914
+          }
+        ],
+        "all_train": {
+          "rows": 22318,
+          "fraud": 337,
+          "xgb_expected": 357.700853738934,
+          "final_expected": 355.0775107023155
+        }
+      },
+      {
+        "group": "4 / 0",
+        "test_rows": 2153,
+        "discovery": {
+          "rows": 3000,
+          "fraud": 69,
+          "xgb_expected": 75.40206022025495,
+          "final_expected": 74.37731320752496
+        },
+        "confirmation": [
+          {
+            "rows": 992,
+            "fraud": 28,
+            "xgb_expected": 24.368366366731607,
+            "final_expected": 24.09514189172014
+          },
+          {
+            "rows": 1009,
+            "fraud": 24,
+            "xgb_expected": 24.949392651043127,
+            "final_expected": 24.3893778842561
+          }
+        ],
+        "all_train": {
+          "rows": 5001,
+          "fraud": 121,
+          "xgb_expected": 124.71981923802969,
+          "final_expected": 122.8618329835012
+        }
+      },
+      {
+        "group": "3 / 0",
+        "test_rows": 17921,
+        "discovery": {
+          "rows": 24987,
+          "fraud": 665,
+          "xgb_expected": 659.714604551328,
+          "final_expected": 664.9404475568168
+        },
+        "confirmation": [
+          {
+            "rows": 8334,
+            "fraud": 220,
+            "xgb_expected": 229.02875332226267,
+            "final_expected": 230.44295518931403
+          },
+          {
+            "rows": 8248,
+            "fraud": 212,
+            "xgb_expected": 206.11191456391134,
+            "final_expected": 207.68605908579434
+          }
+        ],
+        "all_train": {
+          "rows": 41569,
+          "fraud": 1097,
+          "xgb_expected": 1094.855272437502,
+          "final_expected": 1103.0694618319253
+        }
+      },
+      {
+        "group": "3 / 1",
+        "test_rows": 2257,
+        "discovery": {
+          "rows": 3172,
+          "fraud": 78,
+          "xgb_expected": 82.0864101570985,
+          "final_expected": 83.39753226212352
+        },
+        "confirmation": [
+          {
+            "rows": 1014,
+            "fraud": 20,
+            "xgb_expected": 23.473181887572537,
+            "final_expected": 23.62597942800733
+          },
+          {
+            "rows": 1072,
+            "fraud": 24,
+            "xgb_expected": 26.567011775825677,
+            "final_expected": 26.63684940733305
+          }
+        ],
+        "all_train": {
+          "rows": 5258,
+          "fraud": 122,
+          "xgb_expected": 132.1266038204967,
+          "final_expected": 133.6603610974639
+        }
+      }
+    ],
+    "amount_balance_ratio": [
+      {
+        "group": "3",
+        "test_rows": 29762,
+        "discovery": {
+          "rows": 41998,
+          "fraud": 607,
+          "xgb_expected": 650.8553537506606,
+          "final_expected": 649.678837466552
+        },
+        "confirmation": [
+          {
+            "rows": 13709,
+            "fraud": 218,
+            "xgb_expected": 210.759695232975,
+            "final_expected": 211.14421972090855
+          },
+          {
+            "rows": 13929,
+            "fraud": 226,
+            "xgb_expected": 206.6981639638161,
+            "final_expected": 206.36731133171352
+          }
+        ],
+        "all_train": {
+          "rows": 69636,
+          "fraud": 1051,
+          "xgb_expected": 1068.3132129474518,
+          "final_expected": 1067.1903685191742
+        }
+      },
+      {
+        "group": "4",
+        "test_rows": 29880,
+        "discovery": {
+          "rows": 41997,
+          "fraud": 655,
+          "xgb_expected": 629.7097548758372,
+          "final_expected": 629.1335356933671
+        },
+        "confirmation": [
+          {
+            "rows": 14242,
+            "fraud": 228,
+            "xgb_expected": 220.4610710555633,
+            "final_expected": 219.94971467188884
+          },
+          {
+            "rows": 13759,
+            "fraud": 202,
+            "xgb_expected": 203.51758239966932,
+            "final_expected": 204.08937332564886
+          }
+        ],
+        "all_train": {
+          "rows": 69998,
+          "fraud": 1085,
+          "xgb_expected": 1053.6884083310697,
+          "final_expected": 1053.1726236909049
+        }
+      },
+      {
+        "group": "7",
+        "test_rows": 29911,
+        "discovery": {
+          "rows": 41998,
+          "fraud": 615,
+          "xgb_expected": 636.8330338891872,
+          "final_expected": 634.1920489847364
+        },
+        "confirmation": [
+          {
+            "rows": 13848,
+            "fraud": 233,
+            "xgb_expected": 220.0187881362031,
+            "final_expected": 219.72236888019202
+          },
+          {
+            "rows": 13977,
+            "fraud": 214,
+            "xgb_expected": 210.96073998785198,
+            "final_expected": 211.47555322554416
+          }
+        ],
+        "all_train": {
+          "rows": 69823,
+          "fraud": 1062,
+          "xgb_expected": 1067.8125620132423,
+          "final_expected": 1065.3899710904725
+        }
+      },
+      {
+        "group": "8",
+        "test_rows": 29976,
+        "discovery": {
+          "rows": 41997,
+          "fraud": 673,
+          "xgb_expected": 654.18448530534,
+          "final_expected": 651.2475179463831
+        },
+        "confirmation": [
+          {
+            "rows": 14175,
+            "fraud": 214,
+            "xgb_expected": 213.3301316428017,
+            "final_expected": 211.8389410476348
+          },
+          {
+            "rows": 14167,
+            "fraud": 233,
+            "xgb_expected": 228.67258718588562,
+            "final_expected": 228.11095076556137
+          }
+        ],
+        "all_train": {
+          "rows": 70339,
+          "fraud": 1120,
+          "xgb_expected": 1096.1872041340273,
+          "final_expected": 1091.1974097595794
+        }
+      },
+      {
+        "group": "2",
+        "test_rows": 30116,
+        "discovery": {
+          "rows": 41997,
+          "fraud": 631,
+          "xgb_expected": 641.1687765281147,
+          "final_expected": 639.5882974219588
+        },
+        "confirmation": [
+          {
+            "rows": 14066,
+            "fraud": 231,
+            "xgb_expected": 223.11356727654902,
+            "final_expected": 223.40541756397909
+          },
+          {
+            "rows": 14029,
+            "fraud": 234,
+            "xgb_expected": 216.6320668641124,
+            "final_expected": 216.1582953132375
+          }
+        ],
+        "all_train": {
+          "rows": 70092,
+          "fraud": 1096,
+          "xgb_expected": 1080.914410668776,
+          "final_expected": 1079.1520102991753
+        }
+      },
+      {
+        "group": "5",
+        "test_rows": 30177,
+        "discovery": {
+          "rows": 41998,
+          "fraud": 620,
+          "xgb_expected": 627.3306460614564,
+          "final_expected": 624.4154351772729
+        },
+        "confirmation": [
+          {
+            "rows": 14129,
+            "fraud": 192,
+            "xgb_expected": 208.33981475666315,
+            "final_expected": 207.46414655179152
+          },
+          {
+            "rows": 14120,
+            "fraud": 219,
+            "xgb_expected": 212.18719233396882,
+            "final_expected": 212.39411868196345
+          }
+        ],
+        "all_train": {
+          "rows": 70247,
+          "fraud": 1031,
+          "xgb_expected": 1047.8576531520885,
+          "final_expected": 1044.2737004110281
+        }
+      },
+      {
+        "group": "10",
+        "test_rows": 30241,
+        "discovery": {
+          "rows": 41998,
+          "fraud": 1139,
+          "xgb_expected": 1145.7183149174814,
+          "final_expected": 1147.2085408144007
+        },
+        "confirmation": [
+          {
+            "rows": 13822,
+            "fraud": 373,
+            "xgb_expected": 378.55012136276287,
+            "final_expected": 378.8779828846502
+          },
+          {
+            "rows": 13921,
+            "fraud": 360,
+            "xgb_expected": 365.68828820568046,
+            "final_expected": 366.11491260066924
+          }
+        ],
+        "all_train": {
+          "rows": 69741,
+          "fraud": 1872,
+          "xgb_expected": 1889.9567244859247,
+          "final_expected": 1892.2014362997202
+        }
+      },
+      {
+        "group": "9",
+        "test_rows": 30115,
+        "discovery": {
+          "rows": 41998,
+          "fraud": 757,
+          "xgb_expected": 750.7700122586873,
+          "final_expected": 747.8833577088018
+        },
+        "confirmation": [
+          {
+            "rows": 14084,
+            "fraud": 246,
+            "xgb_expected": 257.32673192187065,
+            "final_expected": 256.6218473299846
+          },
+          {
+            "rows": 14313,
+            "fraud": 232,
+            "xgb_expected": 251.46999555050593,
+            "final_expected": 251.5768129881574
+          }
+        ],
+        "all_train": {
+          "rows": 70395,
+          "fraud": 1235,
+          "xgb_expected": 1259.566739731064,
+          "final_expected": 1256.0820180269438
+        }
+      },
+      {
+        "group": "1",
+        "test_rows": 30104,
+        "discovery": {
+          "rows": 41998,
+          "fraud": 705,
+          "xgb_expected": 706.6227695363701,
+          "final_expected": 703.783554787796
+        },
+        "confirmation": [
+          {
+            "rows": 13946,
+            "fraud": 198,
+            "xgb_expected": 219.44335745339265,
+            "final_expected": 219.1422522832508
+          },
+          {
+            "rows": 13858,
+            "fraud": 227,
+            "xgb_expected": 219.20992242541638,
+            "final_expected": 217.82677182296453
+          }
+        ],
+        "all_train": {
+          "rows": 69802,
+          "fraud": 1130,
+          "xgb_expected": 1145.2760494151792,
+          "final_expected": 1140.7525788940113
+        }
+      },
+      {
+        "group": "6",
+        "test_rows": 29702,
+        "discovery": {
+          "rows": 41997,
+          "fraud": 611,
+          "xgb_expected": 612.1545828440012,
+          "final_expected": 610.5788479318342
+        },
+        "confirmation": [
+          {
+            "rows": 13971,
+            "fraud": 205,
+            "xgb_expected": 214.61580760057507,
+            "final_expected": 213.8806765060427
+          },
+          {
+            "rows": 13919,
+            "fraud": 191,
+            "xgb_expected": 191.17337947612828,
+            "final_expected": 190.09482357411105
+          }
+        ],
+        "all_train": {
+          "rows": 69887,
+          "fraud": 1007,
+          "xgb_expected": 1017.9437699207045,
+          "final_expected": 1014.5543480119879
+        }
+      }
+    ],
+    "amount_context": [
+      {
+        "group": "9",
+        "test_rows": 30080,
+        "discovery": {
+          "rows": 42002,
+          "fraud": 874,
+          "xgb_expected": 820.4018231422023,
+          "final_expected": 817.5445144266866
+        },
+        "confirmation": [
+          {
+            "rows": 14048,
+            "fraud": 269,
+            "xgb_expected": 254.83642498717631,
+            "final_expected": 252.13365328726803
+          },
+          {
+            "rows": 14135,
+            "fraud": 274,
+            "xgb_expected": 263.46454386331015,
+            "final_expected": 263.48990491357944
+          }
+        ],
+        "all_train": {
+          "rows": 70185,
+          "fraud": 1417,
+          "xgb_expected": 1338.7027919926886,
+          "final_expected": 1333.168072627534
+        }
+      },
+      {
+        "group": "3",
+        "test_rows": 29948,
+        "discovery": {
+          "rows": 41999,
+          "fraud": 654,
+          "xgb_expected": 688.8767784008342,
+          "final_expected": 687.3262353742625
+        },
+        "confirmation": [
+          {
+            "rows": 13777,
+            "fraud": 220,
+            "xgb_expected": 223.92376351066508,
+            "final_expected": 225.86845530380197
+          },
+          {
+            "rows": 13714,
+            "fraud": 236,
+            "xgb_expected": 218.3362392276636,
+            "final_expected": 218.60328533736094
+          }
+        ],
+        "all_train": {
+          "rows": 69490,
+          "fraud": 1110,
+          "xgb_expected": 1131.1367811391628,
+          "final_expected": 1131.7979760154253
+        }
+      },
+      {
+        "group": "5",
+        "test_rows": 29817,
+        "discovery": {
+          "rows": 41773,
+          "fraud": 603,
+          "xgb_expected": 632.670918912844,
+          "final_expected": 630.9222013277566
+        },
+        "confirmation": [
+          {
+            "rows": 13739,
+            "fraud": 221,
+            "xgb_expected": 208.90881839101576,
+            "final_expected": 208.7844896988182
+          },
+          {
+            "rows": 14020,
+            "fraud": 231,
+            "xgb_expected": 219.24668950761793,
+            "final_expected": 220.2465770319942
+          }
+        ],
+        "all_train": {
+          "rows": 69532,
+          "fraud": 1055,
+          "xgb_expected": 1060.8264268114776,
+          "final_expected": 1059.9532680585692
+        }
+      },
+      {
+        "group": "8",
+        "test_rows": 29875,
+        "discovery": {
+          "rows": 41993,
+          "fraud": 669,
+          "xgb_expected": 639.3751487616702,
+          "final_expected": 639.098004744094
+        },
+        "confirmation": [
+          {
+            "rows": 14321,
+            "fraud": 216,
+            "xgb_expected": 217.77952855965935,
+            "final_expected": 217.9940636986448
+          },
+          {
+            "rows": 13979,
+            "fraud": 214,
+            "xgb_expected": 231.41817370960302,
+            "final_expected": 232.5177657590657
+          }
+        ],
+        "all_train": {
+          "rows": 70293,
+          "fraud": 1099,
+          "xgb_expected": 1088.5728510309327,
+          "final_expected": 1089.6098342018047
+        }
+      },
+      {
+        "group": "2",
+        "test_rows": 30174,
+        "discovery": {
+          "rows": 41998,
+          "fraud": 689,
+          "xgb_expected": 717.1051665013574,
+          "final_expected": 710.629901793272
+        },
+        "confirmation": [
+          {
+            "rows": 14118,
+            "fraud": 219,
+            "xgb_expected": 235.72300849570206,
+            "final_expected": 234.02021808993553
+          },
+          {
+            "rows": 13930,
+            "fraud": 237,
+            "xgb_expected": 222.87011292941463,
+            "final_expected": 220.67840645914936
+          }
+        ],
+        "all_train": {
+          "rows": 70046,
+          "fraud": 1145,
+          "xgb_expected": 1175.6982879264742,
+          "final_expected": 1165.3285263423568
+        }
+      },
+      {
+        "group": "1",
+        "test_rows": 30025,
+        "discovery": {
+          "rows": 41990,
+          "fraud": 852,
+          "xgb_expected": 866.9787226205817,
+          "final_expected": 858.5857034208387
+        },
+        "confirmation": [
+          {
+            "rows": 14009,
+            "fraud": 290,
+            "xgb_expected": 288.92875921299105,
+            "final_expected": 285.89085073517884
+          },
+          {
+            "rows": 14059,
+            "fraud": 265,
+            "xgb_expected": 281.3604504193909,
+            "final_expected": 278.0744805633964
+          }
+        ],
+        "all_train": {
+          "rows": 70058,
+          "fraud": 1407,
+          "xgb_expected": 1437.2679322529634,
+          "final_expected": 1422.5510347194138
+        }
+      },
+      {
+        "group": "6",
+        "test_rows": 30213,
+        "discovery": {
+          "rows": 42250,
+          "fraud": 582,
+          "xgb_expected": 595.4640451447945,
+          "final_expected": 594.270675713041
+        },
+        "confirmation": [
+          {
+            "rows": 14356,
+            "fraud": 203,
+            "xgb_expected": 201.66621304037267,
+            "final_expected": 201.1122081366463
+          },
+          {
+            "rows": 14464,
+            "fraud": 199,
+            "xgb_expected": 182.16922471360976,
+            "final_expected": 181.39970997662232
+          }
+        ],
+        "all_train": {
+          "rows": 71070,
+          "fraud": 984,
+          "xgb_expected": 979.2994828987769,
+          "final_expected": 976.7825938263095
+        }
+      },
+      {
+        "group": "7",
+        "test_rows": 30037,
+        "discovery": {
+          "rows": 41999,
+          "fraud": 633,
+          "xgb_expected": 646.2665011824818,
+          "final_expected": 644.8198087722426
+        },
+        "confirmation": [
+          {
+            "rows": 13816,
+            "fraud": 195,
+            "xgb_expected": 218.83609057094884,
+            "final_expected": 218.8017889553798
+          },
+          {
+            "rows": 13923,
+            "fraud": 210,
+            "xgb_expected": 207.13153718390737,
+            "final_expected": 207.17216610287764
+          }
+        ],
+        "all_train": {
+          "rows": 69738,
+          "fraud": 1038,
+          "xgb_expected": 1072.234128937338,
+          "final_expected": 1070.7937638305
+        }
+      },
+      {
+        "group": "10",
+        "test_rows": 30355,
+        "discovery": {
+          "rows": 41998,
+          "fraud": 849,
+          "xgb_expected": 838.0345443081901,
+          "final_expected": 843.9316761990376
+        },
+        "confirmation": [
+          {
+            "rows": 13924,
+            "fraud": 308,
+            "xgb_expected": 307.5603396104525,
+            "final_expected": 309.2970927740273
+          },
+          {
+            "rows": 14002,
+            "fraud": 278,
+            "xgb_expected": 276.807070568178,
+            "final_expected": 278.69990148652766
+          }
+        ],
+        "all_train": {
+          "rows": 69924,
+          "fraud": 1435,
+          "xgb_expected": 1422.4019544868206,
+          "final_expected": 1431.9286704595925
+        }
+      },
+      {
+        "group": "4",
+        "test_rows": 29460,
+        "discovery": {
+          "rows": 41974,
+          "fraud": 608,
+          "xgb_expected": 610.17408099218,
+          "final_expected": 610.5812521618716
+        },
+        "confirmation": [
+          {
+            "rows": 13884,
+            "fraud": 197,
+            "xgb_expected": 207.79614006037286,
+            "final_expected": 208.1447467606223
+          },
+          {
+            "rows": 13766,
+            "fraud": 194,
+            "xgb_expected": 203.40587627033995,
+            "final_expected": 203.32672599899732
+          }
+        ],
+        "all_train": {
+          "rows": 69624,
+          "fraud": 999,
+          "xgb_expected": 1021.3760973228929,
+          "final_expected": 1022.0527249214911
+        }
+      }
+    ],
+    "velocity_context": [
+      {
+        "group": "10",
+        "test_rows": 29913,
+        "discovery": {
+          "rows": 42017,
+          "fraud": 1725,
+          "xgb_expected": 1642.8578371978128,
+          "final_expected": 1656.6270456188652
+        },
+        "confirmation": [
+          {
+            "rows": 13918,
+            "fraud": 578,
+            "xgb_expected": 552.2541687330586,
+            "final_expected": 556.9821233545478
+          },
+          {
+            "rows": 13815,
+            "fraud": 608,
+            "xgb_expected": 547.9301200355239,
+            "final_expected": 552.2222812828018
+          }
+        ],
+        "all_train": {
+          "rows": 69750,
+          "fraud": 2911,
+          "xgb_expected": 2743.0421259663954,
+          "final_expected": 2765.831450256215
+        }
+      },
+      {
+        "group": "3",
+        "test_rows": 30108,
+        "discovery": {
+          "rows": 42029,
+          "fraud": 423,
+          "xgb_expected": 466.02670596082936,
+          "final_expected": 457.57029176095995
+        },
+        "confirmation": [
+          {
+            "rows": 14350,
+            "fraud": 157,
+            "xgb_expected": 158.0647913632463,
+            "final_expected": 156.01742632180924
+          },
+          {
+            "rows": 14203,
+            "fraud": 142,
+            "xgb_expected": 147.49279658716318,
+            "final_expected": 144.63365191000042
+          }
+        ],
+        "all_train": {
+          "rows": 70582,
+          "fraud": 722,
+          "xgb_expected": 771.5842939112388,
+          "final_expected": 758.2213699927696
+        }
+      },
+      {
+        "group": "6",
+        "test_rows": 30880,
+        "discovery": {
+          "rows": 43353,
+          "fraud": 676,
+          "xgb_expected": 708.6414834430539,
+          "final_expected": 705.8033512637539
+        },
+        "confirmation": [
+          {
+            "rows": 14646,
+            "fraud": 243,
+            "xgb_expected": 239.16392943077994,
+            "final_expected": 238.0028437383313
+          },
+          {
+            "rows": 14254,
+            "fraud": 216,
+            "xgb_expected": 218.58120311675748,
+            "final_expected": 218.71422207540638
+          }
+        ],
+        "all_train": {
+          "rows": 72253,
+          "fraud": 1135,
+          "xgb_expected": 1166.3866159905913,
+          "final_expected": 1162.5204170774916
+        }
+      },
+      {
+        "group": "7",
+        "test_rows": 30261,
+        "discovery": {
+          "rows": 41890,
+          "fraud": 762,
+          "xgb_expected": 787.2560943568844,
+          "final_expected": 786.9982801064632
+        },
+        "confirmation": [
+          {
+            "rows": 14041,
+            "fraud": 244,
+            "xgb_expected": 256.97068307564587,
+            "final_expected": 256.02618153592624
+          },
+          {
+            "rows": 14053,
+            "fraud": 274,
+            "xgb_expected": 262.3868682513403,
+            "final_expected": 263.32690794617866
+          }
+        ],
+        "all_train": {
+          "rows": 69984,
+          "fraud": 1280,
+          "xgb_expected": 1306.6136456838706,
+          "final_expected": 1306.351369588568
+        }
+      },
+      {
+        "group": "1",
+        "test_rows": 29821,
+        "discovery": {
+          "rows": 41897,
+          "fraud": 189,
+          "xgb_expected": 210.46033235173448,
+          "final_expected": 202.34408060597278
+        },
+        "confirmation": [
+          {
+            "rows": 13808,
+            "fraud": 77,
+            "xgb_expected": 77.86490290411928,
+            "final_expected": 76.48607107687971
+          },
+          {
+            "rows": 13924,
+            "fraud": 71,
+            "xgb_expected": 68.05934636407795,
+            "final_expected": 65.97968776518468
+          }
+        ],
+        "all_train": {
+          "rows": 69629,
+          "fraud": 337,
+          "xgb_expected": 356.38458161993174,
+          "final_expected": 344.80983944803717
+        }
+      },
+      {
+        "group": "8",
+        "test_rows": 29745,
+        "discovery": {
+          "rows": 41664,
+          "fraud": 902,
+          "xgb_expected": 881.937618525315,
+          "final_expected": 881.2830973357345
+        },
+        "confirmation": [
+          {
+            "rows": 13700,
+            "fraud": 270,
+            "xgb_expected": 283.9873285562353,
+            "final_expected": 282.7598884064163
+          },
+          {
+            "rows": 13986,
+            "fraud": 292,
+            "xgb_expected": 292.3225587668585,
+            "final_expected": 293.0708353353378
+          }
+        ],
+        "all_train": {
+          "rows": 69350,
+          "fraud": 1464,
+          "xgb_expected": 1458.2475058484088,
+          "final_expected": 1457.1138210774886
+        }
+      },
+      {
+        "group": "5",
+        "test_rows": 29350,
+        "discovery": {
+          "rows": 41257,
+          "fraud": 581,
+          "xgb_expected": 591.5741077872419,
+          "final_expected": 585.0286714261842
+        },
+        "confirmation": [
+          {
+            "rows": 13685,
+            "fraud": 206,
+            "xgb_expected": 203.5516922225654,
+            "final_expected": 202.4304180541779
+          },
+          {
+            "rows": 13824,
+            "fraud": 189,
+            "xgb_expected": 184.33829939126872,
+            "final_expected": 182.2569797799405
+          }
+        ],
+        "all_train": {
+          "rows": 68766,
+          "fraud": 976,
+          "xgb_expected": 979.464099401076,
+          "final_expected": 969.7160692603027
+        }
+      },
+      {
+        "group": "2",
+        "test_rows": 29615,
+        "discovery": {
+          "rows": 41388,
+          "fraud": 198,
+          "xgb_expected": 204.68391749456325,
+          "final_expected": 198.5259827316882
+        },
+        "confirmation": [
+          {
+            "rows": 13752,
+            "fraud": 73,
+            "xgb_expected": 78.69779876454879,
+            "final_expected": 77.05877940491033
+          },
+          {
+            "rows": 13723,
+            "fraud": 59,
+            "xgb_expected": 70.62077216327901,
+            "final_expected": 69.23715127641867
+          }
+        ],
+        "all_train": {
+          "rows": 68863,
+          "fraud": 330,
+          "xgb_expected": 354.002488422391,
+          "final_expected": 344.8219134130172
+        }
+      },
+      {
+        "group": "4",
+        "test_rows": 30023,
+        "discovery": {
+          "rows": 42038,
+          "fraud": 484,
+          "xgb_expected": 487.600541188591,
+          "final_expected": 482.1730879241949
+        },
+        "confirmation": [
+          {
+            "rows": 13960,
+            "fraud": 153,
+            "xgb_expected": 164.94651662180513,
+            "final_expected": 164.43699279755225
+          },
+          {
+            "rows": 14034,
+            "fraud": 145,
+            "xgb_expected": 162.50465923741626,
+            "final_expected": 161.02642384428867
+          }
+        ],
+        "all_train": {
+          "rows": 70032,
+          "fraud": 782,
+          "xgb_expected": 815.0517170478124,
+          "final_expected": 807.6365045660358
+        }
+      },
+      {
+        "group": "9",
+        "test_rows": 30268,
+        "discovery": {
+          "rows": 42443,
+          "fraud": 1073,
+          "xgb_expected": 1074.30909166111,
+          "final_expected": 1081.3560851592863
+        },
+        "confirmation": [
+          {
+            "rows": 14132,
+            "fraud": 337,
+            "xgb_expected": 350.4572747673519,
+            "final_expected": 351.84684274977207
+          },
+          {
+            "rows": 14176,
+            "fraud": 342,
+            "xgb_expected": 351.97329447935,
+            "final_expected": 353.7407824140135
+          }
+        ],
+        "all_train": {
+          "rows": 70751,
+          "fraud": 1752,
+          "xgb_expected": 1776.7396609078119,
+          "final_expected": 1786.9437103230719
+        }
+      }
+    ],
+    "distance_context": [
+      {
+        "group": "4",
+        "test_rows": 29839,
+        "discovery": {
+          "rows": 42188,
+          "fraud": 667,
+          "xgb_expected": 704.8917314661232,
+          "final_expected": 701.0019944455885
+        },
+        "confirmation": [
+          {
+            "rows": 13995,
+            "fraud": 230,
+            "xgb_expected": 229.89946065618358,
+            "final_expected": 229.06074455425167
+          },
+          {
+            "rows": 14112,
+            "fraud": 234,
+            "xgb_expected": 242.6286247848334,
+            "final_expected": 242.15333269144776
+          }
+        ],
+        "all_train": {
+          "rows": 70295,
+          "fraud": 1131,
+          "xgb_expected": 1177.41981690714,
+          "final_expected": 1172.2160716912879
+        }
+      },
+      {
+        "group": "5",
+        "test_rows": 30143,
+        "discovery": {
+          "rows": 41816,
+          "fraud": 762,
+          "xgb_expected": 732.3609731725181,
+          "final_expected": 730.7594667602327
+        },
+        "confirmation": [
+          {
+            "rows": 14175,
+            "fraud": 231,
+            "xgb_expected": 240.73450429370337,
+            "final_expected": 240.96603657657425
+          },
+          {
+            "rows": 13901,
+            "fraud": 206,
+            "xgb_expected": 220.76316380079334,
+            "final_expected": 221.04780910418847
+          }
+        ],
+        "all_train": {
+          "rows": 69892,
+          "fraud": 1199,
+          "xgb_expected": 1193.8586412670147,
+          "final_expected": 1192.7733124409956
+        }
+      },
+      {
+        "group": "10",
+        "test_rows": 29978,
+        "discovery": {
+          "rows": 42002,
+          "fraud": 699,
+          "xgb_expected": 721.5848476633068,
+          "final_expected": 721.9593435484732
+        },
+        "confirmation": [
+          {
+            "rows": 13968,
+            "fraud": 229,
+            "xgb_expected": 236.07711100273514,
+            "final_expected": 233.95533491273687
+          },
+          {
+            "rows": 13806,
+            "fraud": 271,
+            "xgb_expected": 243.6445754930278,
+            "final_expected": 243.0003551060836
+          }
+        ],
+        "all_train": {
+          "rows": 69776,
+          "fraud": 1199,
+          "xgb_expected": 1201.3065341590698,
+          "final_expected": 1198.9150335672934
+        }
+      },
+      {
+        "group": "9",
+        "test_rows": 30176,
+        "discovery": {
+          "rows": 42041,
+          "fraud": 729,
+          "xgb_expected": 708.9336777948037,
+          "final_expected": 708.4236203209377
+        },
+        "confirmation": [
+          {
+            "rows": 13981,
+            "fraud": 212,
+            "xgb_expected": 232.490596765646,
+            "final_expected": 231.77436244429032
+          },
+          {
+            "rows": 14040,
+            "fraud": 236,
+            "xgb_expected": 219.5256362145259,
+            "final_expected": 219.87652747876115
+          }
+        ],
+        "all_train": {
+          "rows": 70062,
+          "fraud": 1177,
+          "xgb_expected": 1160.9499107749757,
+          "final_expected": 1160.0745102439892
+        }
+      },
+      {
+        "group": "1",
+        "test_rows": 29992,
+        "discovery": {
+          "rows": 41881,
+          "fraud": 641,
+          "xgb_expected": 658.0632610256396,
+          "final_expected": 655.6134304094277
+        },
+        "confirmation": [
+          {
+            "rows": 13938,
+            "fraud": 236,
+            "xgb_expected": 240.8059527621699,
+            "final_expected": 241.854754770671
+          },
+          {
+            "rows": 14093,
+            "fraud": 223,
+            "xgb_expected": 224.25638754890088,
+            "final_expected": 223.5391356019573
+          }
+        ],
+        "all_train": {
+          "rows": 69912,
+          "fraud": 1100,
+          "xgb_expected": 1123.1256013367104,
+          "final_expected": 1121.0073207820558
+        }
+      },
+      {
+        "group": "3",
+        "test_rows": 29874,
+        "discovery": {
+          "rows": 41847,
+          "fraud": 730,
+          "xgb_expected": 713.4458663165702,
+          "final_expected": 710.4529790102802
+        },
+        "confirmation": [
+          {
+            "rows": 14061,
+            "fraud": 258,
+            "xgb_expected": 247.14684216312025,
+            "final_expected": 246.66798981437427
+          },
+          {
+            "rows": 13992,
+            "fraud": 235,
+            "xgb_expected": 229.66153345122098,
+            "final_expected": 229.56014967645407
+          }
+        ],
+        "all_train": {
+          "rows": 69900,
+          "fraud": 1223,
+          "xgb_expected": 1190.2542419309116,
+          "final_expected": 1186.6811185011084
+        }
+      },
+      {
+        "group": "7",
+        "test_rows": 30189,
+        "discovery": {
+          "rows": 42111,
+          "fraud": 693,
+          "xgb_expected": 706.3035500987762,
+          "final_expected": 706.1158521606418
+        },
+        "confirmation": [
+          {
+            "rows": 14145,
+            "fraud": 235,
+            "xgb_expected": 227.94505973474304,
+            "final_expected": 226.90926163297405
+          },
+          {
+            "rows": 14110,
+            "fraud": 238,
+            "xgb_expected": 233.69703690851395,
+            "final_expected": 232.78777400111352
+          }
+        ],
+        "all_train": {
+          "rows": 70366,
+          "fraud": 1166,
+          "xgb_expected": 1167.9456467420332,
+          "final_expected": 1165.8128877947292
+        }
+      },
+      {
+        "group": "6",
+        "test_rows": 30024,
+        "discovery": {
+          "rows": 42063,
+          "fraud": 694,
+          "xgb_expected": 701.7781498479958,
+          "final_expected": 701.7029356803997
+        },
+        "confirmation": [
+          {
+            "rows": 13655,
+            "fraud": 225,
+            "xgb_expected": 226.3729134285344,
+            "final_expected": 227.12026276478923
+          },
+          {
+            "rows": 13845,
+            "fraud": 217,
+            "xgb_expected": 224.25309598466106,
+            "final_expected": 223.73447634102
+          }
+        ],
+        "all_train": {
+          "rows": 69563,
+          "fraud": 1136,
+          "xgb_expected": 1152.4041592611911,
+          "final_expected": 1152.557674786209
+        }
+      },
+      {
+        "group": "8",
+        "test_rows": 29879,
+        "discovery": {
+          "rows": 41954,
+          "fraud": 703,
+          "xgb_expected": 710.2509769781061,
+          "final_expected": 708.9277767175641
+        },
+        "confirmation": [
+          {
+            "rows": 14069,
+            "fraud": 244,
+            "xgb_expected": 252.12025155214974,
+            "final_expected": 251.55603595659196
+          },
+          {
+            "rows": 14065,
+            "fraud": 242,
+            "xgb_expected": 238.71461922549872,
+            "final_expected": 239.6976280287517
+          }
+        ],
+        "all_train": {
+          "rows": 70088,
+          "fraud": 1189,
+          "xgb_expected": 1201.0858477557545,
+          "final_expected": 1200.1814407029078
+        }
+      },
+      {
+        "group": "2",
+        "test_rows": 29890,
+        "discovery": {
+          "rows": 42073,
+          "fraud": 695,
+          "xgb_expected": 697.7346956032965,
+          "final_expected": 692.7525748795576
+        },
+        "confirmation": [
+          {
+            "rows": 14005,
+            "fraud": 238,
+            "xgb_expected": 232.3663940803711,
+            "final_expected": 232.18278401306955
+          },
+          {
+            "rows": 14028,
+            "fraud": 236,
+            "xgb_expected": 229.06524498105932,
+            "final_expected": 228.81173559979356
+          }
+        ],
+        "all_train": {
+          "rows": 70106,
+          "fraud": 1169,
+          "xgb_expected": 1159.166334664727,
+          "final_expected": 1153.7470944924207
+        }
+      }
+    ],
+    "velocity_network": [
+      {
+        "group": "3 / 0",
+        "test_rows": 56197,
+        "discovery": {
+          "rows": 78655,
+          "fraud": 729,
+          "xgb_expected": 776.2983047271555,
+          "final_expected": 747.0064286621385
+        },
+        "confirmation": [
+          {
+            "rows": 26091,
+            "fraud": 248,
+            "xgb_expected": 250.85492102019816,
+            "final_expected": 241.3767451725752
+          },
+          {
+            "rows": 26200,
+            "fraud": 227,
+            "xgb_expected": 241.6693178697783,
+            "final_expected": 232.23795532416307
+          }
+        ],
+        "all_train": {
+          "rows": 130946,
+          "fraud": 1204,
+          "xgb_expected": 1268.822543617132,
+          "final_expected": 1220.6211291588768
+        }
+      },
+      {
+        "group": "2 / 0",
+        "test_rows": 55278,
+        "discovery": {
+          "rows": 77450,
+          "fraud": 396,
+          "xgb_expected": 437.0071595445986,
+          "final_expected": 410.9012659878472
+        },
+        "confirmation": [
+          {
+            "rows": 25928,
+            "fraud": 145,
+            "xgb_expected": 156.57022694157035,
+            "final_expected": 148.43504178979808
+          },
+          {
+            "rows": 25928,
+            "fraud": 137,
+            "xgb_expected": 147.7581528149392,
+            "final_expected": 139.40684931903365
+          }
+        ],
+        "all_train": {
+          "rows": 129306,
+          "fraud": 678,
+          "xgb_expected": 741.3355393011082,
+          "final_expected": 698.7431570966789
+        }
+      },
+      {
+        "group": "3 / 1",
+        "test_rows": 3926,
+        "discovery": {
+          "rows": 5563,
+          "fraud": 323,
+          "xgb_expected": 305.75201772453875,
+          "final_expected": 309.52710653691435
+        },
+        "confirmation": [
+          {
+            "rows": 1884,
+            "fraud": 117,
+            "xgb_expected": 105.93314796820414,
+            "final_expected": 106.94070382645225
+          },
+          {
+            "rows": 1858,
+            "fraud": 108,
+            "xgb_expected": 105.20191275306934,
+            "final_expected": 106.98455725070396
+          }
+        ],
+        "all_train": {
+          "rows": 9305,
+          "fraud": 548,
+          "xgb_expected": 516.8870784458122,
+          "final_expected": 523.4523676140706
+        }
+      },
+      {
+        "group": "5 / 2",
+        "test_rows": 478,
+        "discovery": {
+          "rows": 791,
+          "fraud": 369,
+          "xgb_expected": 355.97640733397566,
+          "final_expected": 368.695321642777
+        },
+        "confirmation": [
+          {
+            "rows": 248,
+            "fraud": 108,
+            "xgb_expected": 114.41898340545595,
+            "final_expected": 117.91860706503218
+          },
+          {
+            "rows": 239,
+            "fraud": 117,
+            "xgb_expected": 111.74531447980553,
+            "final_expected": 115.14627186300433
+          }
+        ],
+        "all_train": {
+          "rows": 1278,
+          "fraud": 594,
+          "xgb_expected": 582.1407052192371,
+          "final_expected": 601.7602005708136
+        }
+      },
+      {
+        "group": "4 / 0",
+        "test_rows": 55608,
+        "discovery": {
+          "rows": 77951,
+          "fraud": 1009,
+          "xgb_expected": 1021.6936973652823,
+          "final_expected": 993.7097367154323
+        },
+        "confirmation": [
+          {
+            "rows": 26231,
+            "fraud": 341,
+            "xgb_expected": 353.3314691520204,
+            "final_expected": 345.48576575141954
+          },
+          {
+            "rows": 25761,
+            "fraud": 316,
+            "xgb_expected": 337.02342943878807,
+            "final_expected": 329.0590173017181
+          }
+        ],
+        "all_train": {
+          "rows": 129943,
+          "fraud": 1666,
+          "xgb_expected": 1712.0485959560908,
+          "final_expected": 1668.25451976857
+        }
+      },
+      {
+        "group": "4 / 1",
+        "test_rows": 4011,
+        "discovery": {
+          "rows": 5641,
+          "fraud": 458,
+          "xgb_expected": 446.265888680442,
+          "final_expected": 457.5447896454647
+        },
+        "confirmation": [
+          {
+            "rows": 1870,
+            "fraud": 141,
+            "xgb_expected": 139.77266922282797,
+            "final_expected": 142.24113133549804
+          },
+          {
+            "rows": 1934,
+            "fraud": 172,
+            "xgb_expected": 144.85918945497178,
+            "final_expected": 148.5426033130822
+          }
+        ],
+        "all_train": {
+          "rows": 9445,
+          "fraud": 771,
+          "xgb_expected": 730.8977473582418,
+          "final_expected": 748.3285242940449
+        }
+      },
+      {
+        "group": "5 / 1",
+        "test_rows": 4286,
+        "discovery": {
+          "rows": 5975,
+          "fraud": 827,
+          "xgb_expected": 819.7006006751126,
+          "final_expected": 854.7079766651403
+        },
+        "confirmation": [
+          {
+            "rows": 1915,
+            "fraud": 285,
+            "xgb_expected": 272.8300992174045,
+            "final_expected": 284.1494328887453
+          },
+          {
+            "rows": 1961,
+            "fraud": 276,
+            "xgb_expected": 269.8932515140623,
+            "final_expected": 281.01391614315037
+          }
+        ],
+        "all_train": {
+          "rows": 9851,
+          "fraud": 1388,
+          "xgb_expected": 1362.4239514065794,
+          "final_expected": 1419.8713256970361
+        }
+      },
+      {
+        "group": "2 / 1",
+        "test_rows": 3835,
+        "discovery": {
+          "rows": 5265,
+          "fraud": 189,
+          "xgb_expected": 182.62113538821723,
+          "final_expected": 183.52842506713995
+        },
+        "confirmation": [
+          {
+            "rows": 1751,
+            "fraud": 68,
+            "xgb_expected": 62.10669883222363,
+            "final_expected": 62.61061848586796
+          },
+          {
+            "rows": 1768,
+            "fraud": 78,
+            "xgb_expected": 63.847033829051725,
+            "final_expected": 64.68003721737111
+          }
+        ],
+        "all_train": {
+          "rows": 8784,
+          "fraud": 335,
+          "xgb_expected": 308.5748680494926,
+          "final_expected": 310.81908077037906
+        }
+      },
+      {
+        "group": "1 / 0",
+        "test_rows": 55180,
+        "discovery": {
+          "rows": 77378,
+          "fraud": 182,
+          "xgb_expected": 187.9659924189355,
+          "final_expected": 170.91353991148196
+        },
+        "confirmation": [
+          {
+            "rows": 25737,
+            "fraud": 51,
+            "xgb_expected": 61.4782091678635,
+            "final_expected": 56.357506725250204
+          },
+          {
+            "rows": 25761,
+            "fraud": 53,
+            "xgb_expected": 60.477967824045095,
+            "final_expected": 56.664954244884214
+          }
+        ],
+        "all_train": {
+          "rows": 128876,
+          "fraud": 286,
+          "xgb_expected": 309.9221694108441,
+          "final_expected": 283.9360008816164
+        }
+      },
+      {
+        "group": "5 / 0",
+        "test_rows": 55996,
+        "discovery": {
+          "rows": 78010,
+          "fraud": 1999,
+          "xgb_expected": 1993.070687289005,
+          "final_expected": 2000.9822045204805
+        },
+        "confirmation": [
+          {
+            "rows": 25876,
+            "fraud": 644,
+            "xgb_expected": 661.0327818868136,
+            "final_expected": 665.2801587158178
+          },
+          {
+            "rows": 26027,
+            "fraud": 668,
+            "xgb_expected": 649.1277735358162,
+            "final_expected": 651.9807482164232
+          }
+        ],
+        "all_train": {
+          "rows": 129913,
+          "fraud": 3311,
+          "xgb_expected": 3303.231242711635,
+          "final_expected": 3318.2431114527217
+        }
+      },
+      {
+        "group": "4 / 2",
+        "test_rows": 430,
+        "discovery": {
+          "rows": 606,
+          "fraud": 201,
+          "xgb_expected": 196.5671248777653,
+          "final_expected": 201.53347718548792
+        },
+        "confirmation": [
+          {
+            "rows": 206,
+            "fraud": 66,
+            "xgb_expected": 67.63508880860172,
+            "final_expected": 68.99950272266932
+          },
+          {
+            "rows": 229,
+            "fraud": 68,
+            "xgb_expected": 70.99421765655279,
+            "final_expected": 72.93469674438721
+          }
+        ],
+        "all_train": {
+          "rows": 1041,
+          "fraud": 335,
+          "xgb_expected": 335.1964313429198,
+          "final_expected": 343.46767665254447
+        }
+      },
+      {
+        "group": "3 / 2",
+        "test_rows": 400,
+        "discovery": {
+          "rows": 541,
+          "fraud": 133,
+          "xgb_expected": 136.24120810528984,
+          "final_expected": 139.385226194739
+        },
+        "confirmation": [
+          {
+            "rows": 182,
+            "fraud": 54,
+            "xgb_expected": 54.28689224211848,
+            "final_expected": 55.2400118554535
+          },
+          {
+            "rows": 209,
+            "fraud": 54,
+            "xgb_expected": 47.9478714793222,
+            "final_expected": 48.85786838071414
+          }
+        ],
+        "all_train": {
+          "rows": 932,
+          "fraud": 241,
+          "xgb_expected": 238.47597182673053,
+          "final_expected": 243.48310643090662
+        }
+      },
+      {
+        "group": "1 / 1",
+        "test_rows": 3688,
+        "discovery": {
+          "rows": 5210,
+          "fraud": 78,
+          "xgb_expected": 75.98212147285176,
+          "final_expected": 75.22201970245393
+        },
+        "confirmation": [
+          {
+            "rows": 1743,
+            "fraud": 28,
+            "xgb_expected": 26.225623282300603,
+            "final_expected": 26.354329254588556
+          },
+          {
+            "rows": 1800,
+            "fraud": 28,
+            "xgb_expected": 25.688932429864508,
+            "final_expected": 25.846838733390936
+          }
+        ],
+        "all_train": {
+          "rows": 8753,
+          "fraud": 134,
+          "xgb_expected": 127.89667718501687,
+          "final_expected": 127.42318769043344
+        }
+      }
+    ]
+  }
+}

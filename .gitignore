@@ -26,3 +26,22 @@ venv/
 # Local GPU predictions, model states and compiled kernels.
 /s6e11_gpu/plan_runs/results/
 /s6e11_gpu/plan_runs/.opencl-cache-*/
+
+# Research runner inputs live in data/. Keep mutable model caches and runs local.
+/research/*.csv
+/research/**/*.log
+/research/**/artifacts/
+/research/**/checkpoints/
+/research/**/notebook_runtime/
+/research/**/model_bundle/
+/research/**/model.json
+/research/**/model.txt
+/research/**/.refit-env/
+/research/**/.build/
+/research/**/.joblib-scratch/
+/research/**/*.npz
+!/research/goal_0952/selected_predictions.npz
+!/research/goal_0952/deep_eda_measurement/amount_hole_frozen_margin.npz
+/research/**/*submission*.csv
+!/research/goal_0952/submission_grandmaster_eda.csv
+!/research/goal_0952/deep_eda_measurement/submission_grandmaster_eda_amount_hole.csv

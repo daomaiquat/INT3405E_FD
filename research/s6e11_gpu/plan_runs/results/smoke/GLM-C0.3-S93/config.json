@@ -1,0 +1,20 @@
+{
+  "name": "GLM-C0.3-S93",
+  "family": "glm",
+  "groups": [
+    "glm_raw",
+    "te13"
+  ],
+  "parent": "GLM-C0.3",
+  "smoothing": 20.0,
+  "model_seed": 93,
+  "encoder_seed": 2028,
+  "params": {
+    "C": 0.3,
+    "max_iter": 2000,
+    "tol": 0.0001,
+    "solver": "lbfgs"
+  },
+  "boost": false,
+  "rounds_factor": 1.0
+}

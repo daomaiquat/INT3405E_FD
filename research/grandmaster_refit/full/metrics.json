@@ -1,0 +1,76 @@
+{
+  "train_sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+  "test_sha256": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+  "notebook_sha256": "5b408b5f21688211083b3212e5c31ee86a060ac106011ae7cf3e06fa02170aad",
+  "run_mode": "full",
+  "train_rows": 699960,
+  "test_rows": 299984,
+  "folds": 10,
+  "seed": 2026,
+  "environment": {
+    "python": "3.12.0",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "catboost": "1.2.10",
+    "interpret": "unavailable"
+  },
+  "interpret_core": "0.7.8",
+  "xgb_device": "cuda",
+  "catboost_task_type": "GPU",
+  "full_base_train_rows": 699960,
+  "full_meta_oof_rows": 699960,
+  "baseline_oof": {
+    "oof_auc": 0.9512804488775675,
+    "delong_se": 0.0009496839279352334,
+    "ci95_low": 0.9494191025821179,
+    "ci95_high": 0.953141795173017,
+    "fold_aucs": [
+      0.9526166726109396,
+      0.951098875333194,
+      0.9505605001657805,
+      0.9495119008976064,
+      0.954711172976895,
+      0.9518864961918443,
+      0.95236224300391,
+      0.9470045419415657,
+      0.9522631860497284,
+      0.9508806393158195
+    ],
+    "fold_mean": 0.9512896228487284,
+    "fold_std": 0.002059669584893035,
+    "pr_auc": 0.5356121566931376,
+    "logloss": 0.043955692729056105,
+    "brier": 0.01066763657521681
+  },
+  "baseline_test_mean_probability": 0.016603639915290146,
+  "refit_base_only": {
+    "mean_probability": 0.016704831135103664,
+    "median_probability": 0.0013697215089977788,
+    "spearman_vs_fold_ensemble": 0.9995282138240338,
+    "mean_absolute_probability_change": 0.0005848320848273748,
+    "top_1_percent_overlap_fraction": 0.9803333333333333
+  },
+  "refit_base_and_meta": {
+    "mean_probability": 0.016704342267504186,
+    "median_probability": 0.001370739796943211,
+    "spearman_vs_fold_ensemble": 0.9995309169758559,
+    "mean_absolute_probability_change": 0.000580712342782033,
+    "top_1_percent_overlap_fraction": 0.9803333333333333
+  },
+  "full_meta_l2": 1e-05,
+  "full_meta_intercept": 0.03865478650415447,
+  "full_meta_weights": {
+    "02e_SpGLM": 0.280450973127355,
+    "02f_DeGLM": 0.30266051146653705,
+    "delta_03a_OffLGB": 0.4559051194372005,
+    "delta_03b_OffXGB": 0.4281315711670844,
+    "delta_03c_OffCAT": 0.6182716301817007,
+    "03d_StXGB": 0.20407293028550008,
+    "04_EBM": 0.22359449276305315
+  },
+  "elapsed_seconds": 4797.339345700006
+}

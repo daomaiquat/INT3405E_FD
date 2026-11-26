@@ -1,0 +1,108 @@
+{
+  "mode": "validation",
+  "train_sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+  "notebook_sha256": "5b408b5f21688211083b3212e5c31ee86a060ac106011ae7cf3e06fa02170aad",
+  "experiment_sha256": {
+    "run_ablation.py": "34ff93deabdb0c3fb020306aa2501792ad70e4d80d23a3086f5089f97aac5ba2",
+    "branch_runner.py": "40cab79e101ca2ce5b7c3740fdac6c498869a4df9a6dad25fc2ed058047f4f2a",
+    "improvement_features.py": "4bd2d11ee8e5a311ae6c937acc6b03397b9ed97680a76947d7d58d5af0895ac7"
+  },
+  "develop_rows": 594966,
+  "develop_frauds": 9936,
+  "holdout_rows": 104994,
+  "holdout_frauds": 1753,
+  "holdout_ids_sha256": "ec98b2b0fb55468cc608ea97140cabb6b83752b7197226d076b35a2c18d2ad6d",
+  "holdout_fraction": 0.15,
+  "holdout_seed": 4242,
+  "cv_folds": 10,
+  "cv_seed": 2026,
+  "packages": {
+    "python": "3.12.0",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "xgboost": "3.4.1",
+    "catboost": "1.2.10",
+    "interpret": "unavailable"
+  },
+  "interpret_core": "0.7.8",
+  "xgb_device": "cuda",
+  "catboost_task_type": "GPU",
+  "baseline": {
+    "roc_auc": 0.9509466585013374,
+    "average_precision": 0.5381488606933845,
+    "log_loss": 0.04387461343907907,
+    "brier": 0.01062825578377029,
+    "otp": {
+      "n": 1625,
+      "fraud": 25,
+      "predicted_fraud": 21.552744259413053,
+      "log_loss": 0.048715216760013114
+    }
+  },
+  "variants": {
+    "residual_te": {
+      "roc_auc": 0.9509445312117666,
+      "average_precision": 0.5381791805416408,
+      "log_loss": 0.04387453356940114,
+      "brier": 0.010628177650749927,
+      "otp": {
+        "n": 1625,
+        "fraud": 25,
+        "predicted_fraud": 21.558388584309853,
+        "log_loss": 0.04871776616778173
+      },
+      "delta_roc_auc": -2.127289570719171e-06,
+      "ci95_low": -5.8048818370560365e-06,
+      "ci95_high": 1.5503026956176953e-06,
+      "p_value": 0.25689745289613675
+    },
+    "hierarchical_amount": {
+      "roc_auc": 0.9509489294520218,
+      "average_precision": 0.538185085635301,
+      "log_loss": 0.04387376063920314,
+      "brier": 0.010628048815508448,
+      "otp": {
+        "n": 1625,
+        "fraud": 25,
+        "predicted_fraud": 21.558043174228207,
+        "log_loss": 0.048719238266820536
+      },
+      "delta_roc_auc": 2.2709506846130267e-06,
+      "ci95_low": -2.712651379998664e-06,
+      "ci95_high": 7.254552749224717e-06,
+      "p_value": 0.3717812381369552
+    },
+    "aligned_offset": {
+      "roc_auc": 0.9509456473481129,
+      "average_precision": 0.5381931666552009,
+      "log_loss": 0.043873715510180294,
+      "brier": 0.010627917721908586,
+      "otp": {
+        "n": 1625,
+        "fraud": 25,
+        "predicted_fraud": 21.55736368501036,
+        "log_loss": 0.048712012478983824
+      },
+      "delta_roc_auc": -1.0111532244838628e-06,
+      "ci95_low": -6.109063909209586e-06,
+      "ci95_high": 4.086757460241861e-06,
+      "p_value": 0.6974541919945968
+    }
+  },
+  "baseline_meta_l2_by_fold": [
+    1e-06,
+    1e-05,
+    1e-05,
+    1e-05,
+    1e-05,
+    1e-05,
+    1e-05,
+    1e-05,
+    1e-05,
+    1e-05
+  ],
+  "elapsed_seconds": 9395.125542400001
+}

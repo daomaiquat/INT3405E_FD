@@ -1,0 +1,79 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "rows": 104994,
+  "shuffle_seed": 2026,
+  "risk_bands": 20,
+  "placebo_vs_control": {
+    "roc_auc": 0.95120692823624,
+    "average_precision": 0.5382536755855336,
+    "log_loss": 0.04383927955068635,
+    "delta_auc": -1.7521130463937773e-05,
+    "ci95_low": -4.3037379913899075e-05,
+    "ci95_high": 7.995118986023532e-06
+  },
+  "real_vs_placebo": {
+    "roc_auc": 0.9512313174730321,
+    "average_precision": 0.5384713963788208,
+    "log_loss": 0.04382905878811599,
+    "delta_auc": 2.438923679215499e-05,
+    "ci95_low": -1.7759722745638915e-05,
+    "ci95_high": 6.65381963299489e-05
+  },
+  "real_vs_control": {
+    "roc_auc": 0.9512313174730321,
+    "average_precision": 0.5384713963788208,
+    "log_loss": 0.04382905878811599,
+    "delta_auc": 6.868106328217216e-06,
+    "ci95_low": -3.383077851568079e-05,
+    "ci95_high": 4.756699117211522e-05,
+    "brier": 0.010629914065294099,
+    "score_band_contribution": [
+      {
+        "quantile_lower": 0,
+        "quantile_upper": 0.5,
+        "rows": 52497,
+        "fraud": 21,
+        "contribution_to_auc_delta": -1.4918654132073275e-06
+      },
+      {
+        "quantile_lower": 0.5,
+        "quantile_upper": 0.75,
+        "rows": 26248,
+        "fraud": 78,
+        "contribution_to_auc_delta": 1.4310857111876731e-05
+      },
+      {
+        "quantile_lower": 0.75,
+        "quantile_upper": 0.9,
+        "rows": 15749,
+        "fraud": 183,
+        "contribution_to_auc_delta": -1.546014602279141e-05
+      },
+      {
+        "quantile_lower": 0.9,
+        "quantile_upper": 0.95,
+        "rows": 5250,
+        "fraud": 190,
+        "contribution_to_auc_delta": 7.9013612625419e-06
+      },
+      {
+        "quantile_lower": 0.95,
+        "quantile_upper": 0.99,
+        "rows": 4200,
+        "fraud": 577,
+        "contribution_to_auc_delta": 1.2432211776729142e-06
+      },
+      {
+        "quantile_lower": 0.99,
+        "quantile_upper": 1,
+        "rows": 1050,
+        "fraud": 704,
+        "contribution_to_auc_delta": 3.646782121174996e-07
+      }
+    ]
+  }
+}

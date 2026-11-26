@@ -1,0 +1,41 @@
+{
+  "name": "MLP-BCE",
+  "family": "mlp",
+  "parent": "",
+  "feature_source": "XGB-D03",
+  "feature_config_sha256": "a5f5f143c41e298e52918df8cb5b9a0ed5b8107f37bab7f2a9815de8f18bfb12",
+  "groups": [
+    "raw",
+    "te13",
+    "cents",
+    "digits"
+  ],
+  "encoder_seed": 2026,
+  "smoothing": 20.0,
+  "model_seed": 42,
+  "scaler": "StandardScaler fitted on outer training matrix",
+  "hidden_widths": [
+    128,
+    64
+  ],
+  "activation": "GELU",
+  "normalization": "LayerNorm",
+  "dropout": 0.1,
+  "optimizer": "AdamW fused",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "epochs": 12,
+  "batch_size": 4096,
+  "sampling": "ordinary random shuffle without replacement in each epoch",
+  "class_weights": null,
+  "target_prevalence": "unchanged in outer validation and test",
+  "objective": "bce",
+  "focal_gamma": null,
+  "focal_alpha": null,
+  "pair_sampling": null,
+  "negatives_per_positive": null,
+  "score_kind": "sigmoid_probability",
+  "calibration_evaluated": false,
+  "log_loss_note": "recorded by the shared evaluator; use AUC/AP for the loss comparison",
+  "torch_version": "2.11.0+cu128"
+}

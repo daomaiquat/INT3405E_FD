@@ -1,0 +1,17 @@
+{
+  "architecture": "tabnet",
+  "objective": null,
+  "batch": 256,
+  "pretrain_batch": 256,
+  "finetune_epochs": 1,
+  "pretrain_epochs": 0,
+  "schema": 1,
+  "seed": 42,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "architecture_source_sha256": "4a66b1cb110029f953128422bd262bbc70bdaba7e33a17a3c4f2d7fb7da27315",
+  "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch_version": "2.11.0+cu128",
+  "amp": false,
+  "smoke": true
+}

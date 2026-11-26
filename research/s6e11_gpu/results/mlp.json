@@ -1,0 +1,72 @@
+{
+  "model": "mlp",
+  "status": "completed",
+  "smoke": false,
+  "models_use_llm": false,
+  "rows": 699960,
+  "positives": 11689,
+  "train_sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+  "split_sha256": "e3629fd42119a82d148901274763f3b2291e4fe1ab53755f81de2dcfc9614f43",
+  "roc_auc": 0.9414561720092955,
+  "average_precision": 0.4868737706206712,
+  "fit_seconds": 16.997596000008343,
+  "wall_seconds": 20.630737600004068,
+  "folds": [
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 4.295074300003762,
+      "epochs": 5,
+      "batch_size": 2048,
+      "precision": "bfloat16 AMP",
+      "fold": 1,
+      "validation_rows": 139992,
+      "roc_auc": 0.9412034439506143
+    },
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 3.1905316000047605,
+      "epochs": 5,
+      "batch_size": 2048,
+      "precision": "bfloat16 AMP",
+      "fold": 2,
+      "validation_rows": 139992,
+      "roc_auc": 0.9430952256872257
+    },
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 3.1804039999988163,
+      "epochs": 5,
+      "batch_size": 2048,
+      "precision": "bfloat16 AMP",
+      "fold": 3,
+      "validation_rows": 139992,
+      "roc_auc": 0.9466569694838584
+    },
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 3.0985287000003154,
+      "epochs": 5,
+      "batch_size": 2048,
+      "precision": "bfloat16 AMP",
+      "fold": 4,
+      "validation_rows": 139992,
+      "roc_auc": 0.9420882346898622
+    },
+    {
+      "device": "cuda:0: NVIDIA GeForce RTX 4060 Laptop GPU (PyTorch CUDA)",
+      "fit_seconds": 3.233057400000689,
+      "epochs": 5,
+      "batch_size": 2048,
+      "precision": "bfloat16 AMP",
+      "fold": 5,
+      "validation_rows": 139992,
+      "roc_auc": 0.937009128203972
+    }
+  ],
+  "versions": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1",
+    "torch": "2.11.0+cu128"
+  }
+}

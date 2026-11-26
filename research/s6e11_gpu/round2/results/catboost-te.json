@@ -1,0 +1,86 @@
+{
+  "model": "catboost-te",
+  "status": "completed",
+  "smoke": false,
+  "models_use_llm": false,
+  "rows": 699960,
+  "positives": 11689,
+  "train_sha256": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+  "split_sha256": "e3629fd42119a82d148901274763f3b2291e4fe1ab53755f81de2dcfc9614f43",
+  "roc_auc": 0.9471563298800438,
+  "average_precision": 0.5174279386834675,
+  "fit_seconds": 138.54050240000015,
+  "wall_seconds": 165.33262420000005,
+  "folds": [
+    {
+      "device": "CUDA 0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 28.150278300000082,
+      "version": "1.2.10",
+      "task_type": "GPU",
+      "cuda_device": "0",
+      "visible_gpu_count": 1,
+      "iterations": 900,
+      "depth": 4,
+      "fold": 1,
+      "validation_rows": 139992,
+      "roc_auc": 0.9454380899629898
+    },
+    {
+      "device": "CUDA 0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 24.07177180000008,
+      "version": "1.2.10",
+      "task_type": "GPU",
+      "cuda_device": "0",
+      "visible_gpu_count": 1,
+      "iterations": 900,
+      "depth": 4,
+      "fold": 2,
+      "validation_rows": 139992,
+      "roc_auc": 0.9484471846776963
+    },
+    {
+      "device": "CUDA 0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 28.456911499999933,
+      "version": "1.2.10",
+      "task_type": "GPU",
+      "cuda_device": "0",
+      "visible_gpu_count": 1,
+      "iterations": 900,
+      "depth": 4,
+      "fold": 3,
+      "validation_rows": 139992,
+      "roc_auc": 0.9528268412478575
+    },
+    {
+      "device": "CUDA 0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 28.207833100000016,
+      "version": "1.2.10",
+      "task_type": "GPU",
+      "cuda_device": "0",
+      "visible_gpu_count": 1,
+      "iterations": 900,
+      "depth": 4,
+      "fold": 4,
+      "validation_rows": 139992,
+      "roc_auc": 0.9476854186783857
+    },
+    {
+      "device": "CUDA 0: NVIDIA GeForce RTX 4060 Laptop GPU",
+      "fit_seconds": 29.65370770000004,
+      "version": "1.2.10",
+      "task_type": "GPU",
+      "cuda_device": "0",
+      "visible_gpu_count": 1,
+      "iterations": 900,
+      "depth": 4,
+      "fold": 5,
+      "validation_rows": 139992,
+      "roc_auc": 0.9416464928748656
+    }
+  ],
+  "versions": {
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "sklearn": "1.9.1"
+  }
+}
