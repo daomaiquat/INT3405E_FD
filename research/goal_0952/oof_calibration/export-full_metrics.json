@@ -1,0 +1,123 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "calibration_rows": 699960,
+  "scored_rows": 299984,
+  "calibration_bank_sha256": "9bbad6e6598f8a5fc658c10af0fdc1d5e6bd777f43476b36a44bb576e10eeb6e",
+  "recipes": {
+    "refit_amount_hole": {
+      "feature_coefficients": [
+        0.2996875162275053
+      ],
+      "step": 1.0,
+      "ridge": [
+        25.0
+      ],
+      "cap": 0.3,
+      "nz_rows": 4448,
+      "rms_adjustment": 0.03649236380028505
+    },
+    "smooth_amount": {
+      "feature_coefficients": [
+        0.13535942846974652,
+        0.12949203799870707
+      ],
+      "step": 1.0,
+      "ridge": [
+        40.0,
+        40.0
+      ],
+      "cap": 0.3,
+      "nz_rows": 25039,
+      "rms_adjustment": 0.04010427988114202
+    },
+    "smooth_amount_distance": {
+      "feature_coefficients": [
+        0.13481211056500275,
+        0.12828227910193807,
+        0.15965570297699186,
+        0.044740276753830084
+      ],
+      "step": 1.0,
+      "ridge": [
+        40.0,
+        40.0,
+        60.0,
+        60.0
+      ],
+      "cap": 0.3,
+      "nz_rows": 50280,
+      "rms_adjustment": 0.05680850699798083
+    },
+    "linear_branch_adjustment": {
+      "feature_coefficients": [
+        0.37950126625448904,
+        0.12458624127724216,
+        -0.05330460215523329
+      ],
+      "step": 0.5,
+      "ridge": [
+        120.0,
+        120.0,
+        120.0
+      ],
+      "cap": 0.15,
+      "nz_rows": 299984,
+      "rms_adjustment": 0.03655511806537119
+    },
+    "risk_branch_adjustment": {
+      "feature_coefficients": [
+        0.3768763055500892,
+        0.13102238177034464,
+        -0.05524917324149258,
+        0.051589888740448224,
+        -0.025663829035113186,
+        0.009327926211051333
+      ],
+      "step": 0.5,
+      "ridge": [
+        120.0,
+        120.0,
+        120.0,
+        120.0,
+        120.0,
+        120.0
+      ],
+      "cap": 0.15,
+      "nz_rows": 299984,
+      "rms_adjustment": 0.042795838870110445
+    }
+  },
+  "files": {
+    "refit_amount_hole": {
+      "file": "submission_grandmaster_eda_refit_amount_hole.csv",
+      "rows": 299984,
+      "sha256": "7edacce43b549032492012a9743a1533d8b935a9bb80292d1cc748999d09f2e4"
+    },
+    "smooth_amount": {
+      "file": "submission_grandmaster_eda_smooth_amount.csv",
+      "rows": 299984,
+      "sha256": "a19058c91f23a28ca00b8dbd1384e947408f3f3a4e0ed16c23449f5c78ba8014"
+    },
+    "smooth_amount_distance": {
+      "file": "submission_grandmaster_eda_smooth_amount_distance.csv",
+      "rows": 299984,
+      "sha256": "a813bc7f03ce4e228e1fc58a3ac489925315c937956356f81d7680677e1224d4"
+    },
+    "linear_branch_adjustment": {
+      "file": "submission_grandmaster_eda_linear_branch_adjustment.csv",
+      "rows": 299984,
+      "sha256": "9423d26d40224ed9f92d0c7b8f484fb466474d42c4a70dcc3d48a9a2d9618d14"
+    },
+    "risk_branch_adjustment": {
+      "file": "submission_grandmaster_eda_risk_branch_adjustment.csv",
+      "rows": 299984,
+      "sha256": "d0c634e60718e80d359f1a5dbada546cf855a421e641a2a884da0427e2b6fed5"
+    }
+  },
+  "calibration_reference": "full",
+  "parent_sha256": "9aa21cdd324a0913c8f029dc4ebe1efcd3f51a8323c77ce93f13f283eba6f3d0"
+}

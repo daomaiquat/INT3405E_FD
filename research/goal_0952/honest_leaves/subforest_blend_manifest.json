@@ -1,0 +1,11 @@
+{
+  "file": "submission_grandmaster_eda_subforest_blend.csv",
+  "rows": 299984,
+  "sha256": "426a6ca9e1bf3215de7ae002107d0714e33b4b5ffc9a621840b69aad3c9d8e71",
+  "parent_sha256": "9aa21cdd324a0913c8f029dc4ebe1efcd3f51a8323c77ce93f13f283eba6f3d0",
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  }
+}

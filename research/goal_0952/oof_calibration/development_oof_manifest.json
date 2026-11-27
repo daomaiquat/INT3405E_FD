@@ -1,0 +1,44 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "sha256": "b14e37e8fdec9c2d89729ade044cb7d4e7ff63f75d4f3416b30cb3c896490e23",
+  "branch_order": [
+    "hierarchical",
+    "xgb",
+    "lightgbm",
+    "spline"
+  ],
+  "weights": [
+    0.0,
+    0.85,
+    0.1,
+    0.05
+  ],
+  "seed": 6271,
+  "folds": [
+    {
+      "fold": 1,
+      "fit_rows": 396644,
+      "scored_rows": 198322,
+      "seconds": 58.69286819999979
+    },
+    {
+      "fold": 2,
+      "fit_rows": 396644,
+      "scored_rows": 198322,
+      "seconds": 77.71394009999949
+    },
+    {
+      "fold": 3,
+      "fit_rows": 396644,
+      "scored_rows": 198322,
+      "seconds": 95.46511859999919
+    }
+  ],
+  "rows": 594966,
+  "seconds": 239.6635049000006,
+  "scope": "Second-stage branch predictions, using cached Grandmaster base inputs and fixed EDA pairs"
+}

@@ -2,6 +2,7 @@
 
 from hashlib import file_digest, sha256
 import json
+import os
 from pathlib import Path
 import sys
 
@@ -13,8 +14,11 @@ from sklearn.model_selection import StratifiedKFold, StratifiedShuffleSplit
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parent
 DATA_DIR = PROJECT.parent / 'data'
-ABLATION = PROJECT / 'grandmaster_10fold_ablation'
-FULL = PROJECT / 'grandmaster_refit' / 'full'
+CACHE_PROJECT = Path(os.environ.get('GRANDMASTER_CACHE_PROJECT', PROJECT)).resolve()
+GOAL_CACHE = CACHE_PROJECT / 'goal_0952'
+ABLATION_CODE = PROJECT / 'grandmaster_10fold_ablation'
+ABLATION = CACHE_PROJECT / 'grandmaster_10fold_ablation'
+FULL = CACHE_PROJECT / 'grandmaster_refit' / 'full'
 HIERARCHY = ABLATION / 'submission_hierarchical_amount'
 TARGET = 'is_fraud'
 
@@ -46,7 +50,7 @@ def official_data():
 
 
 def archive_functions():
-    sys.path.insert(0, str(ABLATION))
+    sys.path.insert(0, str(ABLATION_CODE))
     from run_ablation import load_archive
 
     namespace, _ = load_archive(HERE / 'notebook_runtime', False)

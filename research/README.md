@@ -4,6 +4,25 @@
 
 Gói nghiên cứu lưu tám chương Markdown, mã các thí nghiệm, các báo cáo và số liệu nguồn. Bản phát hành gồm **Grandmaster EDA gốc** và **Grandmaster EDA hiệu chỉnh mức tiền thưa**. Trên tập giữ lại 104.994 dòng, AUC tăng từ 0.95122445 lên 0.95131585, log loss giảm từ 0.04383599 xuống 0.04380602. Holdout đã được sử dụng trong các lượt trước và khoảng tin cậy mức tăng AUC chứa 0. [Báo cáo EDA sâu](goal_0952/BAO_CAO_EDA_SAU.md) · [Đối chứng](goal_0952/submission_grandmaster_eda.csv) · [CSV ứng viên](goal_0952/deep_eda_measurement/submission_grandmaster_eda_amount_hole.csv)
 
+## Mã các phiên bản gần đây
+
+| Phiên bản | Mã và kết quả |
+|---|---|
+| Baseline, đặc trưng và các thử nghiệm đã lưu | [Bảng điểm theo phase](docs/05_BANG_DIEM_VA_ARTEFACT.md) · [Lịch sử thử nghiệm](docs/07_LICH_SU_CHAT_VA_PHASE.md) |
+| FINAL trộn LightGBM 20%, trộn MLP 10% và hiệu chỉnh nhóm không bật cờ | [Huấn luyện và đánh giá theo seed](s6e11_gpu/followup/run_followup.py) · [Xuất ba submission](s6e11_gpu/followup/export_submissions.py) |
+| Grandmaster EDA gốc 85/10/5 | [Báo cáo kỹ thuật](goal_0952/BAO_CAO_GRANDMASTER_EDA_GOC.md) · [Notebook](goal_0952/grandmaster_eda.ipynb) |
+| Trộn cây, hiệu chỉnh lá và ghép số tiền | [Các phiên bản, mã chạy và kết quả](goal_0952/honest_leaves/BAO_CAO.md) |
+| Năm bản hiệu chỉnh học ngoài fold | [Các phiên bản, mã chạy và kết quả](goal_0952/oof_calibration/BAO_CAO.md) |
+| EDA về độ thưa và độ lặp lại | [Báo cáo và mã kiểm tra](goal_0952/oof_calibration/detailed_eda/BAO_CAO_EDA.md) |
+
+Mã các thí nghiệm Grandmaster gần đây nạp dữ liệu chính thức từ `data/` và mặc định tìm cache trong `research/`. Nếu đã có cache ở nơi khác, đặt `GRANDMASTER_CACHE_PROJECT` tới thư mục chứa `goal_0952/`, `grandmaster_10fold_ablation/` và `grandmaster_refit/`. Mã Python luôn nạp từ repo. Các lệnh trong báo cáo tạo CSV thí nghiệm, điểm dự đoán trung gian và checkpoint ở máy chạy.
+
+Để tái tạo ba CSV của lượt FINAL từ điểm seed 42 đã lưu, chạy lệnh sau từ gốc repo. Tham số `--gpu-results` trỏ tới thư mục chứa `plan_runs/results/full/` và `imbalance/results/mlp/`. [Mã xuất CSV](s6e11_gpu/followup/export_submissions.py)
+
+```powershell
+python -B research/s6e11_gpu/followup/export_submissions.py --gpu-results ../s6e11_gpu
+```
+
 ## Kiểm tra bản phát hành
 
 Chạy từ thư mục gốc của repo với Python 3.11 trở lên.

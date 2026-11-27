@@ -15,7 +15,7 @@ import xgboost as xgb
 HERE = Path(__file__).resolve().parent
 PARENT = HERE.parent
 sys.path.insert(0, str(PARENT))
-from grandmaster_inputs import (HIERARCHY, PROJECT, archive_functions, design, development_caches,
+from grandmaster_inputs import (GOAL_CACHE, HIERARCHY, PROJECT, archive_functions, design, development_caches,
                                 digest, full_caches, meta_predictions, official_data, read_json, write_json)
 from residual_models import auc_metrics, nested_residual_train
 from evaluate_and_export import assess, auc_by_base_score_band, read_scores
@@ -128,13 +128,13 @@ def build_inputs(mode):
 
     ns = archive_functions()
     dest_ids = frame.id.to_numpy()[query]
-    old = read_scores(PARENT / f'residual_{mode}.npz', dest_ids, 'ids', ('offset_xgb_224', 'grandmaster_hierarchical'))
+    old = read_scores(GOAL_CACHE / f'residual_{mode}.npz', dest_ids, 'ids', ('offset_xgb_224', 'grandmaster_hierarchical'))
     xfit, xquery = design(ns, raw, dense), design(ns, raw_query, dense_query)
     with threadpool_limits(limits=4):
         offset, query_offset, _ = meta_predictions(ns, labels[fit], xfit, xquery, folds, penalties)
     np.testing.assert_allclose(query_offset, old['grandmaster_hierarchical'], atol=2e-8, rtol=0)
-    lgbm = read_scores(PARENT / f'lightgbm_{mode}.npz', dest_ids, 'query_ids', ('query_logits',))['query_logits']
-    spline = read_scores(PARENT / f'spline_{mode}.npz', dest_ids, 'query_ids', ('query_logits',))['query_logits']
+    lgbm = read_scores(GOAL_CACHE / f'lightgbm_{mode}.npz', dest_ids, 'query_ids', ('query_logits',))['query_logits']
+    spline = read_scores(GOAL_CACHE / f'spline_{mode}.npz', dest_ids, 'query_ids', ('query_logits',))['query_logits']
     original = old['offset_xgb_224']
     incumbent = .85 * original + .10 * lgbm + .05 * spline
     saved_name = 'holdout' if mode == 'development' else 'test'

@@ -18,12 +18,13 @@ PARENT = HERE.parent
 FOLLOWUP = PARENT / 'followup'
 sys.path[:0] = [str(PARENT), str(FOLLOWUP)]
 from context_expansion import CONTEXTS, new_features
-from grandmaster_inputs import ABLATION, PROJECT, archive_functions, design, development_caches, digest, official_data, read_json, write_json
+from grandmaster_inputs import (ABLATION, ABLATION_CODE, PROJECT, archive_functions, design, development_caches,
+                                digest, official_data, read_json, write_json)
 from run_followup import ROUNDS, XGB_SETTINGS, build_training_view, crossfit_extra, fit_xgb
 from evaluate_and_export import assess, read_scores
 from residual_models import auc_metrics, fit_codes
 
-sys.path.insert(0, str(ABLATION))
+sys.path.insert(0, str(ABLATION_CODE))
 from class_conditional_density import ClassConditionalDensity
 
 

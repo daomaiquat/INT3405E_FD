@@ -1,0 +1,345 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "holdout": {
+    "grandmaster_eda": {
+      "roc_auc": 0.9512244493667037,
+      "average_precision": 0.5382352787073892,
+      "log_loss": 0.04383598792839346,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "brier": 0.010631731932020941
+    },
+    "subforest_blend": {
+      "roc_auc": 0.9512467831444825,
+      "average_precision": 0.5383952594804525,
+      "log_loss": 0.043828076812316874,
+      "delta_auc": 2.233377777849377e-05,
+      "ci95_low": -2.1292603437533935e-05,
+      "ci95_high": 6.596015899452147e-05,
+      "brier": 0.010629661485012513
+    },
+    "honest_leaf_blend": {
+      "roc_auc": 0.9512470041615807,
+      "average_precision": 0.5383985826542395,
+      "log_loss": 0.043828193359103484,
+      "delta_auc": 2.2554794876783468e-05,
+      "ci95_low": -2.066049724798106e-05,
+      "ci95_high": 6.577008700154799e-05,
+      "brier": 0.010629701352807532
+    },
+    "honest_leaf_overlay": {
+      "roc_auc": 0.9512236702814326,
+      "average_precision": 0.5382342078345519,
+      "log_loss": 0.0438365844254667,
+      "delta_auc": -7.790852712963314e-07,
+      "ci95_low": -5.383315158364361e-06,
+      "ci95_high": 3.8251446157716984e-06,
+      "brier": 0.010631915334413475
+    },
+    "shrink_toward_grandmaster": {
+      "roc_auc": 0.9512061325746862,
+      "average_precision": 0.538340125124232,
+      "log_loss": 0.04383334726475876,
+      "delta_auc": -1.8316792017691874e-05,
+      "ci95_low": -6.971452572146754e-05,
+      "ci95_high": 3.3080941686083795e-05,
+      "brier": 0.010629265650043731
+    }
+  },
+  "reverse": {
+    "grandmaster_eda": {
+      "roc_auc": 0.950189701345676,
+      "average_precision": 0.5307983000384707,
+      "log_loss": 0.04433165226010671,
+      "delta_auc": 0.0,
+      "ci95_low": -1.9600000000000003e-09,
+      "ci95_high": 1.9600000000000003e-09,
+      "brier": 0.010735547123782002,
+      "fold_weighted_delta_auc": 0.0,
+      "fold_auc_wins": 0,
+      "fold_logloss_wins": 0
+    },
+    "subforest_blend": {
+      "roc_auc": 0.950333899946169,
+      "average_precision": 0.5314764105536817,
+      "log_loss": 0.0442793352478242,
+      "delta_auc": 0.00014419860049297295,
+      "ci95_low": 9.529678103089778e-05,
+      "ci95_high": 0.00019310041995504812,
+      "brier": 0.01072545539711916,
+      "fold_weighted_delta_auc": 0.00014656989526910344,
+      "fold_auc_wins": 9,
+      "fold_logloss_wins": 10
+    },
+    "honest_leaf_blend": {
+      "roc_auc": 0.9503346801131605,
+      "average_precision": 0.5314745136843085,
+      "log_loss": 0.04427921295792126,
+      "delta_auc": 0.00014497876748442717,
+      "ci95_low": 9.62714363598579e-05,
+      "ci95_high": 0.00019368609860899644,
+      "brier": 0.010725473702794492,
+      "fold_weighted_delta_auc": 0.00014726060540599681,
+      "fold_auc_wins": 9,
+      "fold_logloss_wins": 10
+    },
+    "honest_leaf_overlay": {
+      "roc_auc": 0.9501915787353954,
+      "average_precision": 0.5307957065870968,
+      "log_loss": 0.044331636005873754,
+      "delta_auc": 1.8773897194623856e-06,
+      "ci95_low": -1.5862228715484532e-06,
+      "ci95_high": 5.341002310473224e-06,
+      "brier": 0.010735724137750022,
+      "fold_weighted_delta_auc": 1.4080852976151427e-06,
+      "fold_auc_wins": 5,
+      "fold_logloss_wins": 5
+    },
+    "shrink_toward_grandmaster": {
+      "roc_auc": 0.9503970874513421,
+      "average_precision": 0.5316196883999924,
+      "log_loss": 0.044262381316382486,
+      "delta_auc": 0.00020738610566595206,
+      "ci95_low": 0.0001484363927260187,
+      "ci95_high": 0.0002663358186058854,
+      "brier": 0.010723671645220818,
+      "fold_weighted_delta_auc": 0.00020698681843613097,
+      "fold_auc_wins": 10,
+      "fold_logloss_wins": 10
+    }
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "pairs": 58151982,
+      "auc": {
+        "grandmaster_eda": 0.9443713801534744,
+        "subforest_blend": 0.9447022287219721,
+        "honest_leaf_blend": 0.9447043954580946,
+        "honest_leaf_overlay": 0.9443773386778115,
+        "shrink_toward_grandmaster": 0.9448167905953747
+      },
+      "loss": {
+        "grandmaster_eda": 0.04603205935094858,
+        "subforest_blend": 0.04594004635560735,
+        "honest_leaf_blend": 0.04593990348932618,
+        "honest_leaf_overlay": 0.04603205689461556,
+        "shrink_toward_grandmaster": 0.045933224921852846
+      }
+    },
+    {
+      "fold": 2,
+      "pairs": 58151982,
+      "auc": {
+        "grandmaster_eda": 0.9497723052672564,
+        "subforest_blend": 0.949814281480552,
+        "honest_leaf_blend": 0.9498161730755799,
+        "honest_leaf_overlay": 0.9497715314329267,
+        "shrink_toward_grandmaster": 0.9498638928592322
+      },
+      "loss": {
+        "grandmaster_eda": 0.043983700265901156,
+        "subforest_blend": 0.04395313885747956,
+        "honest_leaf_blend": 0.04395285275894776,
+        "honest_leaf_overlay": 0.04398291397721852,
+        "shrink_toward_grandmaster": 0.04395114595077572
+      }
+    },
+    {
+      "fold": 3,
+      "pairs": 58151982,
+      "auc": {
+        "grandmaster_eda": 0.9504687561638054,
+        "subforest_blend": 0.9505467070752637,
+        "honest_leaf_blend": 0.950547910817554,
+        "honest_leaf_overlay": 0.9504743105746593,
+        "shrink_toward_grandmaster": 0.9506135147723771
+      },
+      "loss": {
+        "grandmaster_eda": 0.04430462449344466,
+        "subforest_blend": 0.04426837514635915,
+        "honest_leaf_blend": 0.04426798177478167,
+        "honest_leaf_overlay": 0.044303446604140394,
+        "shrink_toward_grandmaster": 0.04424502588752189
+      }
+    },
+    {
+      "fold": 4,
+      "pairs": 58151982,
+      "auc": {
+        "grandmaster_eda": 0.9521110991539378,
+        "subforest_blend": 0.9522825722431955,
+        "honest_leaf_blend": 0.9522826410284693,
+        "honest_leaf_overlay": 0.952112105138566,
+        "shrink_toward_grandmaster": 0.9522845842124521
+      },
+      "loss": {
+        "grandmaster_eda": 0.04455076719781293,
+        "subforest_blend": 0.044495098889555953,
+        "honest_leaf_blend": 0.04449489903473089,
+        "honest_leaf_overlay": 0.04455041092429055,
+        "shrink_toward_grandmaster": 0.04448210010061902
+      }
+    },
+    {
+      "fold": 5,
+      "pairs": 58151982,
+      "auc": {
+        "grandmaster_eda": 0.9526174705446842,
+        "subforest_blend": 0.9527120159034305,
+        "honest_leaf_blend": 0.9527129788972627,
+        "honest_leaf_overlay": 0.9526140312809975,
+        "shrink_toward_grandmaster": 0.9527068570079005
+      },
+      "loss": {
+        "grandmaster_eda": 0.04333030585723898,
+        "subforest_blend": 0.04327832704731823,
+        "honest_leaf_blend": 0.043278344585599156,
+        "honest_leaf_overlay": 0.043330859681167636,
+        "shrink_toward_grandmaster": 0.043269862813074315
+      }
+    },
+    {
+      "fold": 6,
+      "pairs": 58151982,
+      "auc": {
+        "grandmaster_eda": 0.9486294809349749,
+        "subforest_blend": 0.9487822444297771,
+        "honest_leaf_blend": 0.9487801808715651,
+        "honest_leaf_overlay": 0.948624966901386,
+        "shrink_toward_grandmaster": 0.9487256169531761
+      },
+      "loss": {
+        "grandmaster_eda": 0.044515674563196626,
+        "subforest_blend": 0.044457044539235366,
+        "honest_leaf_blend": 0.04445733555251765,
+        "honest_leaf_overlay": 0.04451741606275381,
+        "shrink_toward_grandmaster": 0.04445546992708516
+      }
+    },
+    {
+      "fold": 7,
+      "pairs": 58093479,
+      "auc": {
+        "grandmaster_eda": 0.9464526474649589,
+        "subforest_blend": 0.9467584821353185,
+        "honest_leaf_blend": 0.9467579657262393,
+        "honest_leaf_overlay": 0.9464489809604963,
+        "shrink_toward_grandmaster": 0.9468984806366993
+      },
+      "loss": {
+        "grandmaster_eda": 0.0450665414595981,
+        "subforest_blend": 0.04498317055279041,
+        "honest_leaf_blend": 0.044983374824818276,
+        "honest_leaf_overlay": 0.04506783392695404,
+        "shrink_toward_grandmaster": 0.04496309590643746
+      }
+    },
+    {
+      "fold": 8,
+      "pairs": 58093479,
+      "auc": {
+        "grandmaster_eda": 0.9546102411941967,
+        "subforest_blend": 0.954596453071781,
+        "honest_leaf_blend": 0.9545975547444835,
+        "honest_leaf_overlay": 0.9546163864622397,
+        "shrink_toward_grandmaster": 0.9547110098191915
+      },
+      "loss": {
+        "grandmaster_eda": 0.04289526161123182,
+        "subforest_blend": 0.042862877109565635,
+        "honest_leaf_blend": 0.042862779902643665,
+        "honest_leaf_overlay": 0.04289536235256934,
+        "shrink_toward_grandmaster": 0.04282693744777698
+      }
+    },
+    {
+      "fold": 9,
+      "pairs": 58093479,
+      "auc": {
+        "grandmaster_eda": 0.9507844073170416,
+        "subforest_blend": 0.9508750715377192,
+        "honest_leaf_blend": 0.9508774125922119,
+        "honest_leaf_overlay": 0.9507922395214099,
+        "shrink_toward_grandmaster": 0.9509820714989372
+      },
+      "loss": {
+        "grandmaster_eda": 0.044497281451550644,
+        "subforest_blend": 0.04447441356431021,
+        "honest_leaf_blend": 0.04447379470457483,
+        "honest_leaf_overlay": 0.044495278098776736,
+        "shrink_toward_grandmaster": 0.04444608130211302
+      }
+    },
+    {
+      "fold": 10,
+      "pairs": 58093479,
+      "auc": {
+        "grandmaster_eda": 0.9521835144354154,
+        "subforest_blend": 0.9523969549146816,
+        "honest_leaf_blend": 0.9523967053169599,
+        "honest_leaf_overlay": 0.9521834972217794,
+        "shrink_toward_grandmaster": 0.9524685550335177
+      },
+      "loss": {
+        "grandmaster_eda": 0.04414029412716783,
+        "subforest_blend": 0.04408084838127243,
+        "honest_leaf_blend": 0.04408085091618704,
+        "honest_leaf_overlay": 0.04414076931209958,
+        "shrink_toward_grandmaster": 0.044050856089879964
+      }
+    }
+  ],
+  "holdout_subforest_vs_shrink_delta_auc": 4.0650569796296665e-05,
+  "reverse_subforest_vs_shrink_delta_weighted_auc": -6.0416923167027535e-05,
+  "reverse_subforest_vs_shrink_fold_auc_wins": 2,
+  "holdout_subforest_auc_contribution_by_original_score_band": [
+    {
+      "quantile_lower": 0,
+      "quantile_upper": 0.5,
+      "rows": 52497,
+      "fraud": 21,
+      "contribution_to_auc_delta": 1.310631392639843e-05
+    },
+    {
+      "quantile_lower": 0.5,
+      "quantile_upper": 0.75,
+      "rows": 26248,
+      "fraud": 78,
+      "contribution_to_auc_delta": 1.2399059211988844e-05
+    },
+    {
+      "quantile_lower": 0.75,
+      "quantile_upper": 0.9,
+      "rows": 15749,
+      "fraud": 183,
+      "contribution_to_auc_delta": -1.2691906867174299e-05
+    },
+    {
+      "quantile_lower": 0.9,
+      "quantile_upper": 0.95,
+      "rows": 5250,
+      "fraud": 190,
+      "contribution_to_auc_delta": -2.4311880807852306e-07
+    },
+    {
+      "quantile_lower": 0.95,
+      "quantile_upper": 0.99,
+      "rows": 4200,
+      "fraud": 577,
+      "contribution_to_auc_delta": 9.349023256098929e-06
+    },
+    {
+      "quantile_lower": 0.99,
+      "quantile_upper": 1,
+      "rows": 1050,
+      "fraud": 704,
+      "contribution_to_auc_delta": 4.144070592244314e-07
+    }
+  ]
+}

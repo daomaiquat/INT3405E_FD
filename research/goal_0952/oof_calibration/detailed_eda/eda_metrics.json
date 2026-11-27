@@ -1,0 +1,3093 @@
+{
+  "input_sha256": {
+    "train.csv": "87eaa10b8d17a7e4f657b8da1c66242431338bdd8b6ad45861521ac0c0e9fbd5",
+    "test.csv": "10f516959020357b565abaaa4fd25baae97fc2f536d0805695bb7cc15c1660f0",
+    "sample_submission.csv": "13fc6ed8b73de5329884ec490f2a0b750cf29a7cda772b78cfa0cf486f6f35fa"
+  },
+  "raw_data": {
+    "predictors": 24,
+    "train_rows": 699960,
+    "test_rows": 299984,
+    "train_fraud": 11689,
+    "train_duplicate_predictors_excess_rows": 0,
+    "test_duplicate_predictors_excess_rows": 0,
+    "test_rows_matching_train_hash": 0,
+    "fields": {
+      "amount_usd": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 13387,
+        "test_unique": 10510,
+        "kind": "numeric",
+        "ks": 0.001533853221014514,
+        "standardized_mean_delta": 0.00013820428427110598,
+        "train_q": [
+          4.08,
+          27.25,
+          1121.02
+        ],
+        "test_q": [
+          4.1,
+          27.28,
+          1113.15
+        ]
+      },
+      "hours_since_last_txn": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 3633,
+        "test_unique": 3331,
+        "kind": "numeric",
+        "ks": 0.0013774436752938546,
+        "standardized_mean_delta": 0.0010451987642123143,
+        "train_q": [
+          0.04,
+          4.73,
+          33.4
+        ],
+        "test_q": [
+          0.04,
+          4.72,
+          33.51
+        ]
+      },
+      "txn_count_last_24h": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 12,
+        "test_unique": 11,
+        "kind": "numeric",
+        "ks": 0.0006527631223174901,
+        "standardized_mean_delta": -0.0001909649801832263,
+        "train_q": [
+          0.0,
+          3.0,
+          7.0
+        ],
+        "test_q": [
+          0.0,
+          3.0,
+          7.0
+        ]
+      },
+      "distance_from_home_km": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 4365,
+        "test_unique": 4108,
+        "kind": "numeric",
+        "ks": 0.001969062938095012,
+        "standardized_mean_delta": 0.0013186538730398274,
+        "train_q": [
+          0.05,
+          10.22,
+          49.44
+        ],
+        "test_q": [
+          0.05,
+          10.27,
+          49.34
+        ]
+      },
+      "card_age_months": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 49,
+        "test_unique": 49,
+        "kind": "numeric",
+        "ks": 0.002663803231095885,
+        "standardized_mean_delta": -0.0039815094033569375,
+        "train_q": [
+          33.0,
+          47.0,
+          62.0
+        ],
+        "test_q": [
+          33.0,
+          47.0,
+          62.0
+        ]
+      },
+      "customer_age": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 64,
+        "test_unique": 64,
+        "kind": "numeric",
+        "ks": 0.0007998577723257183,
+        "standardized_mean_delta": -0.00033677382897919666,
+        "train_q": [
+          18.0,
+          52.0,
+          81.0
+        ],
+        "test_q": [
+          18.0,
+          52.0,
+          81.0
+        ]
+      },
+      "account_balance_usd": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 43317,
+        "test_unique": 31803,
+        "kind": "numeric",
+        "ks": 0.0018576344377622123,
+        "standardized_mean_delta": 0.0018945032145565152,
+        "train_q": [
+          434.91,
+          1382.74,
+          12761.16
+        ],
+        "test_q": [
+          434.91,
+          1388.54,
+          12761.16
+        ]
+      },
+      "cvv_retry_count": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 4,
+        "test_unique": 4,
+        "kind": "discrete",
+        "total_variation": 7.715747620984394e-05
+      },
+      "velocity_score": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 666,
+        "test_unique": 644,
+        "kind": "numeric",
+        "ks": 0.0013851334009924443,
+        "standardized_mean_delta": 0.0008296095084526686,
+        "train_q": [
+          0.0,
+          18.6,
+          48.9
+        ],
+        "test_q": [
+          0.0,
+          18.7,
+          48.8
+        ]
+      },
+      "time_of_day_hour": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 24,
+        "test_unique": 24,
+        "kind": "numeric",
+        "ks": 0.0015683861788361175,
+        "standardized_mean_delta": -0.002179745672603053,
+        "train_q": [
+          0.0,
+          12.0,
+          23.0
+        ],
+        "test_q": [
+          0.0,
+          12.0,
+          23.0
+        ]
+      },
+      "day_of_week": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 7,
+        "test_unique": 7,
+        "kind": "discrete",
+        "total_variation": 0.004152392708825281
+      },
+      "merchant_risk_score": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 950,
+        "test_unique": 917,
+        "kind": "numeric",
+        "ks": 0.002152346766987945,
+        "standardized_mean_delta": -2.0986590472013812e-05,
+        "train_q": [
+          9.4,
+          34.2,
+          77.5
+        ],
+        "test_q": [
+          9.4,
+          34.2,
+          77.4
+        ]
+      },
+      "prior_disputes": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 5,
+        "test_unique": 5,
+        "kind": "discrete",
+        "total_variation": 0.0008247293199637956
+      },
+      "merchant_category": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 12,
+        "test_unique": 12,
+        "kind": "discrete",
+        "total_variation": 0.0023081415019315936
+      },
+      "card_type": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 5,
+        "test_unique": 5,
+        "kind": "discrete",
+        "total_variation": 0.0011280886996945638
+      },
+      "auth_method": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 5,
+        "test_unique": 5,
+        "kind": "discrete",
+        "total_variation": 0.00231048819927384
+      },
+      "channel": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 5,
+        "test_unique": 5,
+        "kind": "discrete",
+        "total_variation": 0.00214270147287067
+      },
+      "device_type": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 8,
+        "test_unique": 8,
+        "kind": "discrete",
+        "total_variation": 0.0015489022359075223
+      },
+      "is_foreign_transaction": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 2,
+        "test_unique": 2,
+        "kind": "discrete",
+        "total_variation": 0.00011041623612391069
+      },
+      "is_new_merchant": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 2,
+        "test_unique": 2,
+        "kind": "discrete",
+        "total_variation": 0.0003622956429858992
+      },
+      "used_vpn": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 2,
+        "test_unique": 2,
+        "kind": "discrete",
+        "total_variation": 0.0008406498216087972
+      },
+      "ip_country_mismatch": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 2,
+        "test_unique": 2,
+        "kind": "discrete",
+        "total_variation": 0.0001267349912890004
+      },
+      "billing_shipping_mismatch": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 2,
+        "test_unique": 2,
+        "kind": "discrete",
+        "total_variation": 0.00015233980088514686
+      },
+      "is_ai_generated_scam_attempt": {
+        "train_missing": 0,
+        "test_missing": 0,
+        "train_unique": 2,
+        "test_unique": 2,
+        "kind": "discrete",
+        "total_variation": 0.0001457095446103678
+      }
+    }
+  },
+  "fields": {
+    "amount_usd": {
+      "splits": {
+        "development": {
+          "rows": 594966,
+          "active": 49789,
+          "strong": 17615,
+          "reference_votes": {
+            "0": 532488,
+            "1": 22201,
+            "2": 40277
+          },
+          "active_residual": {
+            "rows": 49789,
+            "fraud": 923,
+            "expected": 842.8178139063939,
+            "raw_excess": 80.18218609360602,
+            "matched_rows": 29679,
+            "matched_excess": 83.59652446945819,
+            "matched_per_1000": 2.816689392144553,
+            "z": 3.4567713503836566,
+            "ci95_matched_excess": [
+              36.197037679001845,
+              130.99601125991452
+            ],
+            "p_value": 0.000546688496971916,
+            "p_value_holm_6_columns": 0.00273344248485958
+          },
+          "information_balanced_residual": {
+            "rows": 49789,
+            "fraud": 923,
+            "expected": 842.8178139063939,
+            "raw_excess": 80.18218609360602,
+            "matched_rows": 49789,
+            "matched_excess": 83.87515092057319,
+            "matched_per_1000": 1.6846120813949503,
+            "z": 3.4472404681822253,
+            "ci95_matched_excess": [
+              36.18619585008134,
+              131.56410599106505
+            ],
+            "p_value": 0.0005663442511438322,
+            "p_value_holm_6_columns": 0.003131743759272559
+          },
+          "by_strength": {
+            "weak_0_to_0.2": {
+              "rows": 15172,
+              "fraud": 233,
+              "expected": 239.6996288218872,
+              "raw_excess": -6.699628821887199,
+              "matched_rows": 8904,
+              "matched_excess": -6.168789481880372,
+              "matched_per_1000": -0.6928110379470319,
+              "z": -0.49076189358625827,
+              "ci95_matched_excess": [
+                -30.805639943376924,
+                18.468060979616183
+              ],
+              "p_value": 0.6235948647597724
+            },
+            "mid_0.2_to_0.6": {
+              "rows": 17002,
+              "fraud": 349,
+              "expected": 300.3210303243561,
+              "raw_excess": 48.67896967564391,
+              "matched_rows": 10147,
+              "matched_excess": 50.684108776788385,
+              "matched_per_1000": 4.994984604000038,
+              "z": 3.636875840308879,
+              "ci95_matched_excess": [
+                23.369221614165795,
+                77.99899593941097
+              ],
+              "p_value": 0.00027596486790921207
+            },
+            "strong_over_0.6": {
+              "rows": 17615,
+              "fraud": 341,
+              "expected": 302.7971547601507,
+              "raw_excess": 38.20284523984931,
+              "matched_rows": 10628,
+              "matched_excess": 39.081205174550185,
+              "matched_per_1000": 3.6771928090468746,
+              "z": 2.8026163238226784,
+              "ci95_matched_excess": [
+                11.749899961270199,
+                66.41251038783017
+              ],
+              "p_value": 0.005068993279853817
+            }
+          },
+          "by_replication": {
+            "1": {
+              "rows": 22201,
+              "fraud": 332,
+              "expected": 332.91322696002845,
+              "raw_excess": -0.9132269600284395,
+              "matched_rows": 12988,
+              "matched_excess": 0.6858899087964381,
+              "matched_per_1000": 0.052809509454607176,
+              "z": 0.04583521448622036,
+              "ci95_matched_excess": [
+                -28.644052937771338,
+                30.01583275536421
+              ],
+              "p_value": 0.9634415911934046
+            },
+            "2": {
+              "rows": 40277,
+              "fraud": 775,
+              "expected": 691.9151073288847,
+              "raw_excess": 83.08489267111534,
+              "matched_rows": 24045,
+              "matched_excess": 86.89438102876598,
+              "matched_per_1000": 3.61382329086155,
+              "z": 4.014486397970111,
+              "ci95_matched_excess": [
+                44.469779240976,
+                129.31898281655594
+              ],
+              "p_value": 5.9575379055475875e-05
+            }
+          },
+          "information_balanced_replication": {
+            "1": {
+              "rows": 22201,
+              "fraud": 332,
+              "expected": 332.91322696002845,
+              "raw_excess": -0.9132269600284395,
+              "matched_rows": 22201,
+              "matched_excess": 0.10846307875912653,
+              "matched_per_1000": 0.004885504200672336,
+              "z": 0.007201071688722323,
+              "ci95_matched_excess": [
+                -29.413203078352435,
+                29.630129235870687
+              ],
+              "p_value": 0.9942544257349174
+            },
+            "2": {
+              "rows": 40277,
+              "fraud": 775,
+              "expected": 691.9151073288847,
+              "raw_excess": 83.08489267111534,
+              "matched_rows": 40277,
+              "matched_excess": 85.64669451266055,
+              "matched_per_1000": 2.126441753672333,
+              "z": 3.93285034162058,
+              "ci95_matched_excess": [
+                42.96326985540731,
+                128.3301191699138
+              ],
+              "p_value": 8.394450492097722e-05
+            }
+          },
+          "folds": [
+            {
+              "rows": 16635,
+              "fraud": 310,
+              "expected": 274.80601090938717,
+              "raw_excess": 35.19398909061282,
+              "matched_rows": 6680,
+              "matched_excess": 43.57725623468794,
+              "matched_per_1000": 6.523541352498194,
+              "z": 3.1393945058210697,
+              "ci95_matched_excess": [
+                16.37092008877879,
+                70.78359238059709
+              ],
+              "p_value": 0.0016929735948484198
+            },
+            {
+              "rows": 16474,
+              "fraud": 311,
+              "expected": 283.07113806986314,
+              "raw_excess": 27.92886193013684,
+              "matched_rows": 6636,
+              "matched_excess": 23.754316269516707,
+              "matched_per_1000": 3.5796136632785878,
+              "z": 1.7275544845021193,
+              "ci95_matched_excess": [
+                -3.1961853244581278,
+                50.70481786349154
+              ],
+              "p_value": 0.08406812899164105
+            },
+            {
+              "rows": 16680,
+              "fraud": 302,
+              "expected": 284.9406649271436,
+              "raw_excess": 17.059335072856364,
+              "matched_rows": 6465,
+              "matched_excess": 19.975797112065056,
+              "matched_per_1000": 3.0898371403039526,
+              "z": 1.4600689052194236,
+              "ci95_matched_excess": [
+                -6.839760838443823,
+                46.791355062573935
+              ],
+              "p_value": 0.14427113745075548
+            }
+          ],
+          "frozen_404": {
+            "rows": 8681,
+            "fraud": 191,
+            "expected": 154.0862805285992,
+            "raw_excess": 36.913719471400825,
+            "matched_rows": 5492,
+            "matched_excess": 35.467055452595694,
+            "matched_per_1000": 6.457948917078605,
+            "z": 3.60154525375277,
+            "ci95_matched_excess": [
+              16.16549909573658,
+              54.76861180945481
+            ],
+            "p_value": 0.0003163313437949266
+          },
+          "frozen_404_information_balanced": {
+            "rows": 8681,
+            "fraud": 191,
+            "expected": 154.0862805285992,
+            "raw_excess": 36.913719471400825,
+            "matched_rows": 8681,
+            "matched_excess": 36.84604653940192,
+            "matched_per_1000": 4.244447245640124,
+            "z": 3.7206576549474963,
+            "ci95_matched_excess": [
+              17.435969635068492,
+              56.25612344373535
+            ],
+            "p_value": 0.00019870465049722603
+          }
+        },
+        "holdout": {
+          "rows": 104994,
+          "active": 8655,
+          "strong": 3201,
+          "reference_votes": {
+            "0": 92966,
+            "1": 3266,
+            "2": 2369,
+            "3": 6393
+          },
+          "active_residual": {
+            "rows": 8655,
+            "fraud": 155,
+            "expected": 139.79310241142912,
+            "raw_excess": 15.206897588570882,
+            "matched_rows": 2570,
+            "matched_excess": 14.849534199963122,
+            "matched_per_1000": 5.7780288715809816,
+            "z": 1.5434210634701906,
+            "ci95_matched_excess": [
+              -4.007981562124863,
+              33.70704996205111
+            ],
+            "p_value": 0.122728646290934,
+            "p_value_holm_6_columns": 0.736371877745604
+          },
+          "information_balanced_residual": {
+            "rows": 8655,
+            "fraud": 155,
+            "expected": 139.79310241142912,
+            "raw_excess": 15.206897588570882,
+            "matched_rows": 8655,
+            "matched_excess": 14.164345939114535,
+            "matched_per_1000": 1.636550657321148,
+            "z": 1.4166751404794127,
+            "ci95_matched_excess": [
+              -5.432326048275316,
+              33.76101792650439
+            ],
+            "p_value": 0.15657792844726848,
+            "p_value_holm_6_columns": 0.789370851941723
+          },
+          "by_strength": {
+            "weak_0_to_0.2": {
+              "rows": 2417,
+              "fraud": 31,
+              "expected": 32.48680220753249,
+              "raw_excess": -1.486802207532497,
+              "matched_rows": 685,
+              "matched_excess": -0.673528747241802,
+              "matched_per_1000": -0.9832536456084701,
+              "z": -0.15033252506448264,
+              "ci95_matched_excess": [
+                -9.454837675750055,
+                8.10778018126645
+              ],
+              "p_value": 0.880502273277156
+            },
+            "mid_0.2_to_0.6": {
+              "rows": 3037,
+              "fraud": 55,
+              "expected": 53.320714049510556,
+              "raw_excess": 1.6792859504894415,
+              "matched_rows": 945,
+              "matched_excess": 1.5224223761895663,
+              "matched_per_1000": 1.6110289695127686,
+              "z": 0.26155662286408965,
+              "ci95_matched_excess": [
+                -9.88599781465405,
+                12.930842567033185
+              ],
+              "p_value": 0.7936632899272013
+            },
+            "strong_over_0.6": {
+              "rows": 3201,
+              "fraud": 69,
+              "expected": 53.98558615438606,
+              "raw_excess": 15.01441384561394,
+              "matched_rows": 940,
+              "matched_excess": 14.000640571015357,
+              "matched_per_1000": 14.89429847980357,
+              "z": 2.4424075137660846,
+              "ci95_matched_excess": [
+                2.7653101175494257,
+                25.235971024481287
+              ],
+              "p_value": 0.014589667344716251
+            }
+          },
+          "by_replication": {
+            "1": {
+              "rows": 3266,
+              "fraud": 36,
+              "expected": 46.21023642025318,
+              "raw_excess": -10.210236420253189,
+              "matched_rows": 906,
+              "matched_excess": -11.847813047118994,
+              "matched_per_1000": -13.077056343398448,
+              "z": -2.2687324761358623,
+              "ci95_matched_excess": [
+                -22.083358144046763,
+                -1.6122679501912227
+              ],
+              "p_value": 0.02328459940843716
+            },
+            "2": {
+              "rows": 2369,
+              "fraud": 46,
+              "expected": 38.79966414301428,
+              "raw_excess": 7.200335856985719,
+              "matched_rows": 676,
+              "matched_excess": 8.585271924617192,
+              "matched_per_1000": 12.700106397362712,
+              "z": 1.8291884755222028,
+              "ci95_matched_excess": [
+                -0.6139621605668566,
+                17.78450600980124
+              ],
+              "p_value": 0.06737137828195058
+            },
+            "3": {
+              "rows": 6393,
+              "fraud": 116,
+              "expected": 105.41222601916186,
+              "raw_excess": 10.58777398083815,
+              "matched_rows": 1928,
+              "matched_excess": 8.49282513443233,
+              "matched_per_1000": 4.404992289643325,
+              "z": 1.0194887654052165,
+              "ci95_matched_excess": [
+                -7.8349048301750805,
+                24.82055509903974
+              ],
+              "p_value": 0.30797098407723467
+            }
+          },
+          "information_balanced_replication": {
+            "1": {
+              "rows": 3266,
+              "fraud": 36,
+              "expected": 46.21023642025318,
+              "raw_excess": -10.210236420253189,
+              "matched_rows": 3266,
+              "matched_excess": -10.57395696594248,
+              "matched_per_1000": -3.2375863337239688,
+              "z": -1.9294863634897272,
+              "ci95_matched_excess": [
+                -21.315134538072858,
+                0.1672206061878967
+              ],
+              "p_value": 0.05367051136088536
+            },
+            "2": {
+              "rows": 2369,
+              "fraud": 46,
+              "expected": 38.79966414301428,
+              "raw_excess": 7.200335856985719,
+              "matched_rows": 2369,
+              "matched_excess": 6.461040490335694,
+              "matched_per_1000": 2.727328193472222,
+              "z": 1.3220432455708808,
+              "ci95_matched_excess": [
+                -3.117798479935347,
+                16.039879460606734
+              ],
+              "p_value": 0.18615375084936225
+            },
+            "3": {
+              "rows": 6393,
+              "fraud": 116,
+              "expected": 105.41222601916186,
+              "raw_excess": 10.58777398083815,
+              "matched_rows": 6393,
+              "matched_excess": 9.04830986909081,
+              "matched_per_1000": 1.415346452227563,
+              "z": 1.0459345601429044,
+              "ci95_matched_excess": [
+                -7.907518936293462,
+                26.00413867447508
+              ],
+              "p_value": 0.2955912467220969
+            }
+          },
+          "frozen_404": {
+            "rows": 1644,
+            "fraud": 46,
+            "expected": 31.85728851653129,
+            "raw_excess": 14.142711483468709,
+            "matched_rows": 497,
+            "matched_excess": 13.881041792008487,
+            "matched_per_1000": 27.929661553336995,
+            "z": 3.356074480091696,
+            "ci95_matched_excess": [
+              5.774296225505662,
+              21.987787358511312
+            ],
+            "p_value": 0.00079057274930287
+          },
+          "frozen_404_information_balanced": {
+            "rows": 1644,
+            "fraud": 46,
+            "expected": 31.85728851653129,
+            "raw_excess": 14.142711483468709,
+            "matched_rows": 1644,
+            "matched_excess": 13.634430264921969,
+            "matched_per_1000": 8.293449066254238,
+            "z": 3.1731555104964033,
+            "ci95_matched_excess": [
+              5.212692587443161,
+              22.056167942400776
+            ],
+            "p_value": 0.0015079173221944915
+          }
+        },
+        "test": {
+          "rows": 299984,
+          "active": 24792,
+          "strong": 8957,
+          "reference_votes": {
+            "0": 265237,
+            "1": 9715,
+            "2": 7088,
+            "3": 17944
+          }
+        }
+      },
+      "independent_train_test_maps": {
+        "any": {
+          "dev_ticks": 1820,
+          "test_ticks": 1624,
+          "shared_ticks": 1448,
+          "jaccard": 0.7254509018036072,
+          "test_rows_at_shared_ticks": 21598,
+          "test_rows_at_dev_ticks": 24792,
+          "test_rows_at_test_ticks": 25012
+        },
+        "strong": {
+          "dev_ticks": 698,
+          "test_ticks": 673,
+          "shared_ticks": 553,
+          "jaccard": 0.676039119804401,
+          "test_rows_at_shared_ticks": 7139,
+          "test_rows_at_dev_ticks": 8957,
+          "test_rows_at_test_ticks": 8541
+        }
+      }
+    },
+    "distance_from_home_km": {
+      "splits": {
+        "development": {
+          "rows": 594966,
+          "active": 55474,
+          "strong": 25405,
+          "reference_votes": {
+            "0": 530751,
+            "1": 15485,
+            "2": 48730
+          },
+          "active_residual": {
+            "rows": 55474,
+            "fraud": 1040,
+            "expected": 955.0073305278161,
+            "raw_excess": 84.99266947218393,
+            "matched_rows": 33532,
+            "matched_excess": 91.2202050325082,
+            "matched_per_1000": 2.720392611013605,
+            "z": 3.5490880280636183,
+            "ci95_matched_excess": [
+              40.84343205591209,
+              141.5969780091043
+            ],
+            "p_value": 0.00038656782857915124,
+            "p_value_holm_6_columns": 0.0023194069714749074
+          },
+          "information_balanced_residual": {
+            "rows": 55474,
+            "fraud": 1040,
+            "expected": 955.0073305278161,
+            "raw_excess": 84.99266947218393,
+            "matched_rows": 55474,
+            "matched_excess": 89.71071108358325,
+            "matched_per_1000": 1.6171668003674378,
+            "z": 3.469227485125438,
+            "ci95_matched_excess": [
+              39.02709506885958,
+              140.39432709830692
+            ],
+            "p_value": 0.0005219572932120931,
+            "p_value_holm_6_columns": 0.003131743759272559
+          },
+          "by_strength": {
+            "weak_0_to_0.2": {
+              "rows": 15107,
+              "fraud": 231,
+              "expected": 248.61298034956954,
+              "raw_excess": -17.61298034956954,
+              "matched_rows": 9123,
+              "matched_excess": -15.670968531684377,
+              "matched_per_1000": -1.7177429060270062,
+              "z": -1.2204392448896892,
+              "ci95_matched_excess": [
+                -40.8382174961157,
+                9.496280432746946
+              ],
+              "p_value": 0.22229840778096788
+            },
+            "mid_0.2_to_0.6": {
+              "rows": 14962,
+              "fraud": 293,
+              "expected": 257.4292173276009,
+              "raw_excess": 35.57078267239913,
+              "matched_rows": 9070,
+              "matched_excess": 35.05903260239123,
+              "matched_per_1000": 3.865383969392638,
+              "z": 2.709536344029482,
+              "ci95_matched_excess": [
+                9.698345320191365,
+                60.41971988459109
+              ],
+              "p_value": 0.006737732289054186
+            },
+            "strong_over_0.6": {
+              "rows": 25405,
+              "fraud": 516,
+              "expected": 448.96513285064566,
+              "raw_excess": 67.03486714935434,
+              "matched_rows": 15339,
+              "matched_excess": 71.83214096180134,
+              "matched_per_1000": 4.682974180963645,
+              "z": 4.2332321724546755,
+              "ci95_matched_excess": [
+                38.5736305495336,
+                105.0906513740691
+              ],
+              "p_value": 2.3035647581762708e-05
+            }
+          },
+          "by_replication": {
+            "1": {
+              "rows": 15485,
+              "fraud": 279,
+              "expected": 273.61312537646916,
+              "raw_excess": 5.386874623530861,
+              "matched_rows": 9496,
+              "matched_excess": 4.107040282284084,
+              "matched_per_1000": 0.43250213587658837,
+              "z": 0.3104018032687388,
+              "ci95_matched_excess": [
+                -21.82643970561235,
+                30.040520270180522
+              ],
+              "p_value": 0.7562554230086447
+            },
+            "2": {
+              "rows": 48730,
+              "fraud": 929,
+              "expected": 836.9459740508621,
+              "raw_excess": 92.05402594913781,
+              "matched_rows": 29404,
+              "matched_excess": 99.55220950191776,
+              "matched_per_1000": 3.3856689396652757,
+              "z": 4.148717813054645,
+              "ci95_matched_excess": [
+                52.520249408181506,
+                146.584169595654
+              ],
+              "p_value": 3.34342638262441e-05
+            }
+          },
+          "information_balanced_replication": {
+            "1": {
+              "rows": 15485,
+              "fraud": 279,
+              "expected": 273.61312537646916,
+              "raw_excess": 5.386874623530861,
+              "matched_rows": 15485,
+              "matched_excess": 5.501809059664996,
+              "matched_per_1000": 0.35529926119890193,
+              "z": 0.41340091121762235,
+              "ci95_matched_excess": [
+                -20.58314978859144,
+                31.586767907921434
+              ],
+              "p_value": 0.6793129071305493
+            },
+            "2": {
+              "rows": 48730,
+              "fraud": 929,
+              "expected": 836.9459740508621,
+              "raw_excess": 92.05402594913781,
+              "matched_rows": 48730,
+              "matched_excess": 97.78085006194979,
+              "matched_per_1000": 2.0065842409593637,
+              "z": 4.050348972095875,
+              "ci95_matched_excess": [
+                50.463824432365335,
+                145.09787569153426
+              ],
+              "p_value": 5.114130804374434e-05
+            }
+          },
+          "folds": [
+            {
+              "rows": 18511,
+              "fraud": 371,
+              "expected": 325.6965282643615,
+              "raw_excess": 45.30347173563845,
+              "matched_rows": 7367,
+              "matched_excess": 51.17750727836033,
+              "matched_per_1000": 6.9468585962210305,
+              "z": 3.4602026818484664,
+              "ci95_matched_excess": [
+                22.18847874781165,
+                80.166535808909
+              ],
+              "p_value": 0.0005397689420398443
+            },
+            {
+              "rows": 18238,
+              "fraud": 341,
+              "expected": 312.8378573310545,
+              "raw_excess": 28.16214266894548,
+              "matched_rows": 7428,
+              "matched_excess": 21.85810448195582,
+              "matched_per_1000": 2.942663500532555,
+              "z": 1.500205259123919,
+              "ci95_matched_excess": [
+                -6.699244270208904,
+                50.41545323412055
+              ],
+              "p_value": 0.13356124138593103
+            },
+            {
+              "rows": 18725,
+              "fraud": 328,
+              "expected": 316.47294493239997,
+              "raw_excess": 11.527055067599992,
+              "matched_rows": 7535,
+              "matched_excess": 7.950527908068409,
+              "matched_per_1000": 1.0551463713428544,
+              "z": 0.5466769975525482,
+              "ci95_matched_excess": [
+                -20.554484685435117,
+                36.45554050157193
+              ],
+              "p_value": 0.5846006599823562
+            }
+          ]
+        },
+        "holdout": {
+          "rows": 104994,
+          "active": 9835,
+          "strong": 4681,
+          "reference_votes": {
+            "0": 92695,
+            "1": 2522,
+            "2": 1576,
+            "3": 8201
+          },
+          "active_residual": {
+            "rows": 9835,
+            "fraud": 180,
+            "expected": 168.35558056298487,
+            "raw_excess": 11.644419437015145,
+            "matched_rows": 3041,
+            "matched_excess": 9.41498206331936,
+            "matched_per_1000": 3.096015147424979,
+            "z": 0.9022859575180675,
+            "ci95_matched_excess": [
+              -11.036810065714672,
+              29.866774192353393
+            ],
+            "p_value": 0.3669049831487251,
+            "p_value_holm_6_columns": 1.0
+          },
+          "information_balanced_residual": {
+            "rows": 9835,
+            "fraud": 180,
+            "expected": 168.35558056298487,
+            "raw_excess": 11.644419437015145,
+            "matched_rows": 9835,
+            "matched_excess": 10.130214993638345,
+            "matched_per_1000": 1.0300167761706502,
+            "z": 0.9354833122648626,
+            "ci95_matched_excess": [
+              -11.094344682857054,
+              31.354774670133743
+            ],
+            "p_value": 0.34953927944890917,
+            "p_value_holm_6_columns": 1.0
+          },
+          "by_strength": {
+            "weak_0_to_0.2": {
+              "rows": 2585,
+              "fraud": 46,
+              "expected": 44.21157610392112,
+              "raw_excess": 1.7884238960788839,
+              "matched_rows": 792,
+              "matched_excess": 2.5648324350614935,
+              "matched_per_1000": 3.23842479174431,
+              "z": 0.5121921586501743,
+              "ci95_matched_excess": [
+                -7.2499831333158475,
+                12.379648003438835
+              ],
+              "p_value": 0.6085165304684677
+            },
+            "mid_0.2_to_0.6": {
+              "rows": 2569,
+              "fraud": 45,
+              "expected": 42.19569095890826,
+              "raw_excess": 2.8043090410917424,
+              "matched_rows": 771,
+              "matched_excess": 2.657534183462861,
+              "matched_per_1000": 3.446866645217719,
+              "z": 0.5344339498199824,
+              "ci95_matched_excess": [
+                -7.088790879422305,
+                12.403859246348027
+              ],
+              "p_value": 0.5930413356479864
+            },
+            "strong_over_0.6": {
+              "rows": 4681,
+              "fraud": 89,
+              "expected": 81.94831350015548,
+              "raw_excess": 7.05168649984452,
+              "matched_rows": 1478,
+              "matched_excess": 4.1926154447950115,
+              "matched_per_1000": 2.836681627060224,
+              "z": 0.5775567203669059,
+              "ci95_matched_excess": [
+                -10.03546983586427,
+                18.420700725454292
+              ],
+              "p_value": 0.5635634339306497
+            }
+          },
+          "by_replication": {
+            "1": {
+              "rows": 2522,
+              "fraud": 41,
+              "expected": 43.4039511763779,
+              "raw_excess": -2.403951176377905,
+              "matched_rows": 754,
+              "matched_excess": 0.3397763724587859,
+              "matched_per_1000": 0.45063179371191764,
+              "z": 0.06578551341616617,
+              "ci95_matched_excess": [
+                -9.78345069436177,
+                10.463003439279342
+              ],
+              "p_value": 0.9475485898696822
+            },
+            "2": {
+              "rows": 1576,
+              "fraud": 23,
+              "expected": 22.49374307675378,
+              "raw_excess": 0.5062569232462171,
+              "matched_rows": 504,
+              "matched_excess": -0.21218624799822627,
+              "matched_per_1000": -0.421004460313941,
+              "z": -0.05491408771259209,
+              "ci95_matched_excess": [
+                -7.785562468926664,
+                7.3611899729302115
+              ],
+              "p_value": 0.9562069084430663
+            },
+            "3": {
+              "rows": 8201,
+              "fraud": 157,
+              "expected": 145.08956683369416,
+              "raw_excess": 11.91043316630584,
+              "matched_rows": 2545,
+              "matched_excess": 9.022819520772213,
+              "matched_per_1000": 3.5453121889085315,
+              "z": 0.9394069556241778,
+              "ci95_matched_excess": [
+                -9.802595976564753,
+                27.84823501810918
+              ],
+              "p_value": 0.3475218431818966
+            }
+          },
+          "information_balanced_replication": {
+            "1": {
+              "rows": 2522,
+              "fraud": 41,
+              "expected": 43.4039511763779,
+              "raw_excess": -2.403951176377905,
+              "matched_rows": 2522,
+              "matched_excess": -1.792631678415863,
+              "matched_per_1000": -0.7107976520284944,
+              "z": -0.3350463744976451,
+              "ci95_matched_excess": [
+                -12.279413082820483,
+                8.694149725988758
+              ],
+              "p_value": 0.7375901040628023
+            },
+            "2": {
+              "rows": 1576,
+              "fraud": 23,
+              "expected": 22.49374307675378,
+              "raw_excess": 0.5062569232462171,
+              "matched_rows": 1576,
+              "matched_excess": 0.5845354763299225,
+              "matched_per_1000": 0.37089814487939243,
+              "z": 0.1455633256231698,
+              "ci95_matched_excess": [
+                -7.286193834791868,
+                8.455264787451714
+              ],
+              "p_value": 0.884266121452336
+            },
+            "3": {
+              "rows": 8201,
+              "fraud": 157,
+              "expected": 145.08956683369416,
+              "raw_excess": 11.91043316630584,
+              "matched_rows": 8201,
+              "matched_excess": 9.749681784373088,
+              "matched_per_1000": 1.1888406028988034,
+              "z": 0.9786778375938419,
+              "ci95_matched_excess": [
+                -9.776024799882656,
+                29.275388368628832
+              ],
+              "p_value": 0.3277391859295158
+            }
+          }
+        },
+        "test": {
+          "rows": 299984,
+          "active": 27919,
+          "strong": 13112,
+          "reference_votes": {
+            "0": 264861,
+            "1": 7242,
+            "2": 4502,
+            "3": 23379
+          }
+        }
+      },
+      "independent_train_test_maps": {
+        "any": {
+          "dev_ticks": 1637,
+          "test_ticks": 1507,
+          "shared_ticks": 1363,
+          "jaccard": 0.7653003930376193,
+          "test_rows_at_shared_ticks": 24836,
+          "test_rows_at_dev_ticks": 27919,
+          "test_rows_at_test_ticks": 27275
+        },
+        "strong": {
+          "dev_ticks": 711,
+          "test_ticks": 662,
+          "shared_ticks": 575,
+          "jaccard": 0.7205513784461153,
+          "test_rows_at_shared_ticks": 11271,
+          "test_rows_at_dev_ticks": 13112,
+          "test_rows_at_test_ticks": 12294
+        }
+      }
+    },
+    "hours_since_last_txn": {
+      "splits": {
+        "development": {
+          "rows": 594966,
+          "active": 79714,
+          "strong": 38672,
+          "reference_votes": {
+            "0": 508194,
+            "1": 13879,
+            "2": 72893
+          },
+          "active_residual": {
+            "rows": 79714,
+            "fraud": 1469,
+            "expected": 1404.8370186970092,
+            "raw_excess": 64.1629813029908,
+            "matched_rows": 48157,
+            "matched_excess": 63.545427342347374,
+            "matched_per_1000": 1.3195470511524259,
+            "z": 1.9897212291161066,
+            "ci95_matched_excess": [
+              0.9492024197589757,
+              126.14165226493577
+            ],
+            "p_value": 0.04662165280810991,
+            "p_value_holm_6_columns": 0.18648661123243965
+          },
+          "information_balanced_residual": {
+            "rows": 79714,
+            "fraud": 1469,
+            "expected": 1404.8370186970092,
+            "raw_excess": 64.1629813029908,
+            "matched_rows": 79714,
+            "matched_excess": 64.27397968801216,
+            "matched_per_1000": 0.8063072946786282,
+            "z": 2.0009019586562697,
+            "ci95_matched_excess": [
+              1.3138733002383063,
+              127.23408607578602
+            ],
+            "p_value": 0.045402956464012614,
+            "p_value_holm_6_columns": 0.18161182585605046
+          },
+          "by_strength": {
+            "weak_0_to_0.2": {
+              "rows": 18603,
+              "fraud": 289,
+              "expected": 298.81544110538636,
+              "raw_excess": -9.815441105386348,
+              "matched_rows": 11053,
+              "matched_excess": -11.6404735028151,
+              "matched_per_1000": -1.0531505928539853,
+              "z": -0.8315915140401945,
+              "ci95_matched_excess": [
+                -39.07621290168399,
+                15.79526589605379
+              ],
+              "p_value": 0.4056395536140349
+            },
+            "mid_0.2_to_0.6": {
+              "rows": 22439,
+              "fraud": 450,
+              "expected": 419.83780999341127,
+              "raw_excess": 30.162190006588727,
+              "matched_rows": 13795,
+              "matched_excess": 30.32345994160871,
+              "matched_per_1000": 2.1981486003340858,
+              "z": 1.8512687690306955,
+              "ci95_matched_excess": [
+                -1.7809986220562877,
+                62.42791850527371
+              ],
+              "p_value": 0.06413089672607969
+            },
+            "strong_over_0.6": {
+              "rows": 38672,
+              "fraud": 730,
+              "expected": 686.1837675982116,
+              "raw_excess": 43.81623240178841,
+              "matched_rows": 23309,
+              "matched_excess": 44.86244090355378,
+              "matched_per_1000": 1.924683208355304,
+              "z": 2.0766646063967,
+              "ci95_matched_excess": [
+                2.520319840713128,
+                87.20456196639444
+              ],
+              "p_value": 0.037832525449947745
+            }
+          },
+          "by_replication": {
+            "1": {
+              "rows": 13879,
+              "fraud": 199,
+              "expected": 210.47088976078274,
+              "raw_excess": -11.47088976078272,
+              "matched_rows": 7939,
+              "matched_excess": -14.838697643821654,
+              "matched_per_1000": -1.8690890091726482,
+              "z": -1.256983234490846,
+              "ci95_matched_excess": [
+                -37.97651411093719,
+                8.299118823293878
+              ],
+              "p_value": 0.20875970655289844
+            },
+            "2": {
+              "rows": 72893,
+              "fraud": 1374,
+              "expected": 1300.736416058207,
+              "raw_excess": 73.26358394179317,
+              "matched_rows": 44324,
+              "matched_excess": 73.87372498556596,
+              "matched_per_1000": 1.666675502787789,
+              "z": 2.4140536014840315,
+              "ci95_matched_excess": [
+                13.894733266948542,
+                133.85271670418336
+              ],
+              "p_value": 0.015776141303891118
+            }
+          },
+          "information_balanced_replication": {
+            "1": {
+              "rows": 13879,
+              "fraud": 199,
+              "expected": 210.47088976078274,
+              "raw_excess": -11.47088976078272,
+              "matched_rows": 13879,
+              "matched_excess": -11.6479557306382,
+              "matched_per_1000": -0.8392503588614597,
+              "z": -0.980253361095877,
+              "ci95_matched_excess": [
+                -34.93784601627621,
+                11.641934554999809
+              ],
+              "p_value": 0.3269610703357251
+            },
+            "2": {
+              "rows": 72893,
+              "fraud": 1374,
+              "expected": 1300.736416058207,
+              "raw_excess": 73.26358394179317,
+              "matched_rows": 72893,
+              "matched_excess": 72.92302534599914,
+              "matched_per_1000": 1.0004119098678768,
+              "z": 2.3694349333139275,
+              "ci95_matched_excess": [
+                12.600993426660686,
+                133.24505726533758
+              ],
+              "p_value": 0.017815289478420322
+            }
+          },
+          "replicated_time_by_txn_count": {
+            "at_most_3": {
+              "rows": 47859,
+              "fraud": 699,
+              "expected": 643.5550758307888,
+              "raw_excess": 55.44492416921116,
+              "matched_rows": 47859,
+              "matched_excess": 52.970262116878665,
+              "matched_per_1000": 1.1067983475809913,
+              "z": 2.400181208564911,
+              "ci95_matched_excess": [
+                9.714480687293154,
+                96.22604354646418
+              ],
+              "p_value": 0.01638695745244921
+            },
+            "above_3": {
+              "rows": 25034,
+              "fraud": 675,
+              "expected": 657.181340227418,
+              "raw_excess": 17.818659772582013,
+              "matched_rows": 25034,
+              "matched_excess": 20.015726543229437,
+              "matched_per_1000": 0.7995416850375264,
+              "z": 0.9316733815851328,
+              "ci95_matched_excess": [
+                -22.0921889560661,
+                62.12364204252498
+              ],
+              "p_value": 0.35150534684003343
+            }
+          },
+          "folds": [
+            {
+              "rows": 25735,
+              "fraud": 490,
+              "expected": 472.3287005686757,
+              "raw_excess": 17.67129943132428,
+              "matched_rows": 10441,
+              "matched_excess": 24.809738755863666,
+              "matched_per_1000": 2.3761841543782842,
+              "z": 1.360533008275314,
+              "ci95_matched_excess": [
+                -10.931465364670789,
+                60.550942876398125
+              ],
+              "p_value": 0.1736613147759215
+            },
+            {
+              "rows": 27049,
+              "fraud": 482,
+              "expected": 458.0564171781392,
+              "raw_excess": 23.943582821860783,
+              "matched_rows": 10904,
+              "matched_excess": 21.252902217037324,
+              "matched_per_1000": 1.94909227962558,
+              "z": 1.18504599854526,
+              "ci95_matched_excess": [
+                -13.898212926618605,
+                56.40401736069325
+              ],
+              "p_value": 0.2359992604238288
+            },
+            {
+              "rows": 26930,
+              "fraud": 497,
+              "expected": 474.4519009501943,
+              "raw_excess": 22.548099049805746,
+              "matched_rows": 10819,
+              "matched_excess": 14.856081553518331,
+              "matched_per_1000": 1.373147384556644,
+              "z": 0.8070848421293592,
+              "ci95_matched_excess": [
+                -21.22181054029567,
+                50.93397364733233
+              ],
+              "p_value": 0.41961760443069573
+            }
+          ]
+        },
+        "holdout": {
+          "rows": 104994,
+          "active": 14011,
+          "strong": 6995,
+          "reference_votes": {
+            "0": 88926,
+            "1": 2128,
+            "2": 1585,
+            "3": 12355
+          },
+          "active_residual": {
+            "rows": 14011,
+            "fraud": 270,
+            "expected": 249.20027844255748,
+            "raw_excess": 20.79972155744254,
+            "matched_rows": 4355,
+            "matched_excess": 20.19519143191837,
+            "matched_per_1000": 4.637242579085734,
+            "z": 1.5403432048433974,
+            "ci95_matched_excess": [
+              -5.502052586231638,
+              45.892435450068376
+            ],
+            "p_value": 0.12347671760743836,
+            "p_value_holm_6_columns": 0.736371877745604
+          },
+          "information_balanced_residual": {
+            "rows": 14011,
+            "fraud": 270,
+            "expected": 249.20027844255748,
+            "raw_excess": 20.79972155744254,
+            "matched_rows": 14011,
+            "matched_excess": 20.479775189472207,
+            "matched_per_1000": 1.4616926121955753,
+            "z": 1.5079715497178328,
+            "ci95_matched_excess": [
+              -6.1390024518410335,
+              47.09855283078545
+            ],
+            "p_value": 0.13156180865695383,
+            "p_value_holm_6_columns": 0.789370851941723
+          },
+          "by_strength": {
+            "weak_0_to_0.2": {
+              "rows": 2945,
+              "fraud": 51,
+              "expected": 50.195686235715534,
+              "raw_excess": 0.8043137642844655,
+              "matched_rows": 900,
+              "matched_excess": -0.49432283994541054,
+              "matched_per_1000": -0.549247599939345,
+              "z": -0.09076571838329789,
+              "ci95_matched_excess": [
+                -11.168757897039503,
+                10.18011221714868
+              ],
+              "p_value": 0.9276787503428723
+            },
+            "mid_0.2_to_0.6": {
+              "rows": 4071,
+              "fraud": 82,
+              "expected": 75.68037187748529,
+              "raw_excess": 6.319628122514709,
+              "matched_rows": 1304,
+              "matched_excess": 8.045051294523766,
+              "matched_per_1000": 6.1695178638985935,
+              "z": 1.1888362724626347,
+              "ci95_matched_excess": [
+                -5.218592238662746,
+                21.308694827710276
+              ],
+              "p_value": 0.23450410142832234
+            },
+            "strong_over_0.6": {
+              "rows": 6995,
+              "fraud": 137,
+              "expected": 123.32422032935663,
+              "raw_excess": 13.675779670643374,
+              "matched_rows": 2151,
+              "matched_excess": 12.644462977340009,
+              "matched_per_1000": 5.878411426006513,
+              "z": 1.4010868464887116,
+              "ci95_matched_excess": [
+                -5.044053261104381,
+                30.3329792157844
+              ],
+              "p_value": 0.16118810447413834
+            }
+          },
+          "by_replication": {
+            "1": {
+              "rows": 2128,
+              "fraud": 44,
+              "expected": 32.81995517631812,
+              "raw_excess": 11.18004482368188,
+              "matched_rows": 624,
+              "matched_excess": 9.565550193770715,
+              "matched_per_1000": 15.329407361812045,
+              "z": 2.2341129774691377,
+              "ci95_matched_excess": [
+                1.173638697410592,
+                17.957461690130838
+              ],
+              "p_value": 0.025475640333624643
+            },
+            "2": {
+              "rows": 1585,
+              "fraud": 22,
+              "expected": 27.752048683050795,
+              "raw_excess": -5.752048683050792,
+              "matched_rows": 448,
+              "matched_excess": -5.648812863531608,
+              "matched_per_1000": -12.608957284668767,
+              "z": -1.4073576611676688,
+              "ci95_matched_excess": [
+                -13.515806107690956,
+                2.2181803806277403
+              ],
+              "p_value": 0.15932135914339718
+            },
+            "3": {
+              "rows": 12355,
+              "fraud": 247,
+              "expected": 221.9982242384425,
+              "raw_excess": 25.001775761557518,
+              "matched_rows": 3886,
+              "matched_excess": 26.493330471138545,
+              "matched_per_1000": 6.817635221600243,
+              "z": 2.1356765603387298,
+              "ci95_matched_excess": [
+                2.1792893434896747,
+                50.80737159878741
+              ],
+              "p_value": 0.03270578623620053
+            }
+          },
+          "information_balanced_replication": {
+            "1": {
+              "rows": 2128,
+              "fraud": 44,
+              "expected": 32.81995517631812,
+              "raw_excess": 11.18004482368188,
+              "matched_rows": 2128,
+              "matched_excess": 11.02027163419304,
+              "matched_per_1000": 5.1786990762185345,
+              "z": 2.4679872383635164,
+              "ci95_matched_excess": [
+                2.268308873907131,
+                19.77223439447895
+              ],
+              "p_value": 0.013587516363585576
+            },
+            "2": {
+              "rows": 1585,
+              "fraud": 22,
+              "expected": 27.752048683050795,
+              "raw_excess": -5.752048683050792,
+              "matched_rows": 1585,
+              "matched_excess": -5.864738498254949,
+              "matched_per_1000": -3.7001504720851415,
+              "z": -1.4035855295833777,
+              "ci95_matched_excess": [
+                -14.05439792000155,
+                2.3249209234916517
+              ],
+              "p_value": 0.16044230660052505
+            },
+            "3": {
+              "rows": 12355,
+              "fraud": 247,
+              "expected": 221.9982242384425,
+              "raw_excess": 25.001775761557518,
+              "matched_rows": 12355,
+              "matched_excess": 26.192605064738366,
+              "matched_per_1000": 2.1200004099343075,
+              "z": 2.0391371922667223,
+              "ci95_matched_excess": [
+                1.0165128814458875,
+                51.36869724803084
+              ],
+              "p_value": 0.041436337196482625
+            }
+          },
+          "replicated_time_by_txn_count": {
+            "at_most_3": {
+              "rows": 8148,
+              "fraud": 111,
+              "expected": 108.32745002009275,
+              "raw_excess": 2.6725499799072376,
+              "matched_rows": 8005,
+              "matched_excess": 2.2543647217122187,
+              "matched_per_1000": 0.28161957797779125,
+              "z": 0.2742362651688203,
+              "ci95_matched_excess": [
+                -13.857854615274007,
+                18.366584058698443
+              ],
+              "p_value": 0.7839030604115353
+            },
+            "above_3": {
+              "rows": 4207,
+              "fraud": 136,
+              "expected": 113.67077421834972,
+              "raw_excess": 22.32922578165028,
+              "matched_rows": 722,
+              "matched_excess": 13.34396756822367,
+              "matched_per_1000": 18.481949540476,
+              "z": 1.9131114749881746,
+              "ci95_matched_excess": [
+                -0.3270478303327877,
+                27.014982966780128
+              ],
+              "p_value": 0.05573378304640514
+            }
+          }
+        },
+        "test": {
+          "rows": 299984,
+          "active": 39983,
+          "strong": 19767,
+          "reference_votes": {
+            "0": 254253,
+            "1": 5957,
+            "2": 4380,
+            "3": 35394
+          }
+        }
+      },
+      "independent_train_test_maps": {
+        "any": {
+          "dev_ticks": 1088,
+          "test_ticks": 1042,
+          "shared_ticks": 970,
+          "jaccard": 0.8362068965517241,
+          "test_rows_at_shared_ticks": 37146,
+          "test_rows_at_dev_ticks": 39983,
+          "test_rows_at_test_ticks": 40380
+        },
+        "strong": {
+          "dev_ticks": 569,
+          "test_ticks": 544,
+          "shared_ticks": 500,
+          "jaccard": 0.8156606851549756,
+          "test_rows_at_shared_ticks": 18623,
+          "test_rows_at_dev_ticks": 19767,
+          "test_rows_at_test_ticks": 19761
+        }
+      }
+    },
+    "account_balance_usd": {
+      "splits": {
+        "development": {
+          "rows": 594966,
+          "active": 745,
+          "strong": 3,
+          "reference_votes": {
+            "0": 594046,
+            "1": 444,
+            "2": 476
+          },
+          "active_residual": {
+            "rows": 745,
+            "fraud": 13,
+            "expected": 11.837126107490247,
+            "raw_excess": 1.1628738925097526,
+            "matched_rows": 438,
+            "matched_excess": 1.070997332535234,
+            "matched_per_1000": 2.445199389349849,
+            "z": 0.39477581172964654,
+            "ci95_matched_excess": [
+              -4.24633647920959,
+              6.388331144280058
+            ],
+            "p_value": 0.6930083474984112,
+            "p_value_holm_6_columns": 1.0
+          },
+          "information_balanced_residual": {
+            "rows": 745,
+            "fraud": 13,
+            "expected": 11.837126107490247,
+            "raw_excess": 1.1628738925097526,
+            "matched_rows": 745,
+            "matched_excess": 0.9905965501374304,
+            "matched_per_1000": 1.3296597988421885,
+            "z": 0.3628675166083528,
+            "ci95_matched_excess": [
+              -4.360031845638547,
+              6.3412249459134085
+            ],
+            "p_value": 0.7167038532110185,
+            "p_value_holm_6_columns": 1.0
+          },
+          "by_strength": {
+            "weak_0_to_0.2": {
+              "rows": 656,
+              "fraud": 10,
+              "expected": 9.614616135895707,
+              "raw_excess": 0.38538386410429426,
+              "matched_rows": 384,
+              "matched_excess": 0.31592435538831604,
+              "matched_per_1000": 0.8227196754904064,
+              "z": 0.127321606666071,
+              "ci95_matched_excess": [
+                -4.547442929829179,
+                5.179291640605811
+              ],
+              "p_value": 0.898685859827879
+            },
+            "mid_0.2_to_0.6": {
+              "rows": 86,
+              "fraud": 3,
+              "expected": 2.2202889702188773,
+              "raw_excess": 0.7797110297811229,
+              "matched_rows": 53,
+              "matched_excess": 0.7564083053554784,
+              "matched_per_1000": 14.271854818027895,
+              "z": 0.691848186425748,
+              "ci95_matched_excess": [
+                -1.386489959878107,
+                2.899306570589064
+              ],
+              "p_value": 0.48903267213714496
+            },
+            "strong_over_0.6": {
+              "rows": 3,
+              "fraud": 0,
+              "expected": 0.0022210013756639333,
+              "raw_excess": -0.0022210013756639333,
+              "matched_rows": 1,
+              "matched_excess": -0.0013353282085600523,
+              "matched_per_1000": -1.3353282085600522,
+              "z": -0.032196191878695365,
+              "ci95_matched_excess": [
+                -0.08262578947300438,
+                0.07995513305588427
+              ],
+              "p_value": 0.9743155930469771
+            }
+          },
+          "by_replication": {
+            "1": {
+              "rows": 444,
+              "fraud": 8,
+              "expected": 7.125376728318914,
+              "raw_excess": 0.8746232716810854,
+              "matched_rows": 260,
+              "matched_excess": 0.8052845119469039,
+              "matched_per_1000": 3.097248122872707,
+              "z": 0.36858389012346615,
+              "ci95_matched_excess": [
+                -3.4769364035880157,
+                5.087505427481823
+              ],
+              "p_value": 0.7124379052290098
+            },
+            "2": {
+              "rows": 476,
+              "fraud": 8,
+              "expected": 6.672576455622648,
+              "raw_excess": 1.3274235443773514,
+              "matched_rows": 284,
+              "matched_excess": 1.2891910643674065,
+              "matched_per_1000": 4.539405156223262,
+              "z": 0.6274792035740202,
+              "ci95_matched_excess": [
+                -2.7377383888603495,
+                5.316120517595162
+              ],
+              "p_value": 0.5303451640599877
+            }
+          },
+          "information_balanced_replication": {
+            "1": {
+              "rows": 444,
+              "fraud": 8,
+              "expected": 7.125376728318914,
+              "raw_excess": 0.8746232716810854,
+              "matched_rows": 444,
+              "matched_excess": 0.7558756735323319,
+              "matched_per_1000": 1.7024226881358826,
+              "z": 0.3439760287857272,
+              "ci95_matched_excess": [
+                -3.551157945505844,
+                5.062909292570508
+              ],
+              "p_value": 0.7308643135936528
+            },
+            "2": {
+              "rows": 476,
+              "fraud": 8,
+              "expected": 6.672576455622648,
+              "raw_excess": 1.3274235443773514,
+              "matched_rows": 476,
+              "matched_excess": 1.2440232206329016,
+              "matched_per_1000": 2.613494160993491,
+              "z": 0.6013538155777854,
+              "ci95_matched_excess": [
+                -2.8106371960433663,
+                5.2986836373091695
+              ],
+              "p_value": 0.547604352803551
+            }
+          },
+          "folds": [
+            {
+              "rows": 232,
+              "fraud": 3,
+              "expected": 4.436527545847628,
+              "raw_excess": -1.4365275458476285,
+              "matched_rows": 96,
+              "matched_excess": -1.2403899105611662,
+              "matched_per_1000": -12.920728235012149,
+              "z": -0.7952227014823687,
+              "ci95_matched_excess": [
+                -4.297601708172038,
+                1.816821887049705
+              ],
+              "p_value": 0.4264839686111569
+            },
+            {
+              "rows": 253,
+              "fraud": 2,
+              "expected": 3.8342823317166146,
+              "raw_excess": -1.8342823317166148,
+              "matched_rows": 97,
+              "matched_excess": -1.8430557763656663,
+              "matched_per_1000": -19.000575014079036,
+              "z": -1.2483343464513843,
+              "ci95_matched_excess": [
+                -4.736823244949363,
+                1.0507116922180308
+              ],
+              "p_value": 0.21190864111364593
+            },
+            {
+              "rows": 260,
+              "fraud": 8,
+              "expected": 3.5663162299260036,
+              "raw_excess": 4.433683770073996,
+              "matched_rows": 98,
+              "matched_excess": 4.3005178525314856,
+              "matched_per_1000": 43.88283522991312,
+              "z": 2.708304613033539,
+              "ci95_matched_excess": [
+                1.1882331595919884,
+                7.412802545470983
+              ],
+              "p_value": 0.0067627919580603825
+            }
+          ]
+        },
+        "holdout": {
+          "rows": 104994,
+          "active": 143,
+          "strong": 0,
+          "reference_votes": {
+            "0": 104801,
+            "1": 71,
+            "2": 64,
+            "3": 58
+          },
+          "active_residual": {
+            "rows": 143,
+            "fraud": 2,
+            "expected": 2.4477497880219947,
+            "raw_excess": -0.447749788021995,
+            "matched_rows": 41,
+            "matched_excess": -0.20823510781104354,
+            "matched_per_1000": -5.078905068562038,
+            "z": -0.15500023930172913,
+            "ci95_matched_excess": [
+              -2.8413975670969513,
+              2.4249273514748646
+            ],
+            "p_value": 0.8768211286502423,
+            "p_value_holm_6_columns": 1.0
+          },
+          "information_balanced_residual": {
+            "rows": 143,
+            "fraud": 2,
+            "expected": 2.4477497880219947,
+            "raw_excess": -0.447749788021995,
+            "matched_rows": 143,
+            "matched_excess": -0.19671301054789908,
+            "matched_per_1000": -1.3756154583769167,
+            "z": -0.1419394334983661,
+            "ci95_matched_excess": [
+              -2.9130652684869895,
+              2.5196392473911917
+            ],
+            "p_value": 0.8871278462030651,
+            "p_value_holm_6_columns": 1.0
+          },
+          "by_strength": {
+            "weak_0_to_0.2": {
+              "rows": 122,
+              "fraud": 2,
+              "expected": 1.3738041767672415,
+              "raw_excess": 0.6261958232327584,
+              "matched_rows": 33,
+              "matched_excess": 0.7771615116279492,
+              "matched_per_1000": 23.550348837210585,
+              "z": 0.7359915265822904,
+              "ci95_matched_excess": [
+                -1.2924772107962132,
+                2.846800234052112
+              ],
+              "p_value": 0.46173585449337196
+            },
+            "mid_0.2_to_0.6": {
+              "rows": 21,
+              "fraud": 0,
+              "expected": 1.0739456112547534,
+              "raw_excess": -1.0739456112547534,
+              "matched_rows": 8,
+              "matched_excess": -0.9853966194389925,
+              "matched_per_1000": -123.17457742987406,
+              "z": -1.1880886622542868,
+              "ci95_matched_excess": [
+                -2.6110138275317096,
+                0.6402205886537249
+              ],
+              "p_value": 0.23479848066863174
+            },
+            "strong_over_0.6": {
+              "rows": 0,
+              "fraud": 0,
+              "expected": 0.0,
+              "raw_excess": 0.0
+            }
+          },
+          "by_replication": {
+            "1": {
+              "rows": 71,
+              "fraud": 0,
+              "expected": 0.9874739803701355,
+              "raw_excess": -0.9874739803701355,
+              "matched_rows": 18,
+              "matched_excess": -0.8666483762473717,
+              "matched_per_1000": -48.14713201374287,
+              "z": -0.9722070458413838,
+              "ci95_matched_excess": [
+                -2.6138387763897515,
+                0.8805420238950082
+              ],
+              "p_value": 0.33094755605158865
+            },
+            "2": {
+              "rows": 64,
+              "fraud": 0,
+              "expected": 0.7085890356198553,
+              "raw_excess": -0.7085890356198553,
+              "matched_rows": 17,
+              "matched_excess": -0.6363848273598106,
+              "matched_per_1000": -37.434401609400624,
+              "z": -0.8432548454067028,
+              "ci95_matched_excess": [
+                -2.1155512601641755,
+                0.8427816054445542
+              ],
+              "p_value": 0.3990859307072073
+            },
+            "3": {
+              "rows": 58,
+              "fraud": 2,
+              "expected": 1.4503667697225495,
+              "raw_excess": 0.5496332302774504,
+              "matched_rows": 20,
+              "matched_excess": 0.6838649927133479,
+              "matched_per_1000": 34.19324963566739,
+              "z": 0.6868442390680219,
+              "ci95_matched_excess": [
+                -1.2676333375877338,
+                2.6353633230144298
+              ],
+              "p_value": 0.4921808885420831
+            }
+          },
+          "information_balanced_replication": {
+            "1": {
+              "rows": 71,
+              "fraud": 0,
+              "expected": 0.9874739803701355,
+              "raw_excess": -0.9874739803701355,
+              "matched_rows": 71,
+              "matched_excess": -0.9562003782194123,
+              "matched_per_1000": -13.467610960836794,
+              "z": -1.0324806091095455,
+              "ci95_matched_excess": [
+                -2.771394508525061,
+                0.8589937520862364
+              ],
+              "p_value": 0.3018470269222784
+            },
+            "2": {
+              "rows": 64,
+              "fraud": 0,
+              "expected": 0.7085890356198553,
+              "raw_excess": -0.7085890356198553,
+              "matched_rows": 64,
+              "matched_excess": -0.6827632178137373,
+              "matched_per_1000": -10.668175278339644,
+              "z": -0.877610283662585,
+              "ci95_matched_excess": [
+                -2.207603949317095,
+                0.8420775136896201
+              ],
+              "p_value": 0.3801552466059197
+            },
+            "3": {
+              "rows": 58,
+              "fraud": 2,
+              "expected": 1.4503667697225495,
+              "raw_excess": 0.5496332302774504,
+              "matched_rows": 58,
+              "matched_excess": 0.7202117465062119,
+              "matched_per_1000": 12.417443905279514,
+              "z": 0.7035276852665976,
+              "ci95_matched_excess": [
+                -1.2862693809809773,
+                2.726692873993401
+              ],
+              "p_value": 0.48172695967378887
+            }
+          }
+        },
+        "test": {
+          "rows": 299984,
+          "active": 378,
+          "strong": 0,
+          "reference_votes": {
+            "0": 299455,
+            "1": 196,
+            "2": 137,
+            "3": 196
+          }
+        }
+      },
+      "independent_train_test_maps": {
+        "any": {
+          "dev_ticks": 128,
+          "test_ticks": 82,
+          "shared_ticks": 65,
+          "jaccard": 0.4482758620689655,
+          "test_rows_at_shared_ticks": 248,
+          "test_rows_at_dev_ticks": 378,
+          "test_rows_at_test_ticks": 290
+        },
+        "strong": {
+          "dev_ticks": 0,
+          "test_ticks": 0,
+          "shared_ticks": 0,
+          "jaccard": 0.0,
+          "test_rows_at_shared_ticks": 0,
+          "test_rows_at_dev_ticks": 0,
+          "test_rows_at_test_ticks": 0
+        }
+      }
+    },
+    "velocity_score": {
+      "splits": {
+        "development": {
+          "rows": 594966,
+          "active": 214491,
+          "strong": 4064,
+          "reference_votes": {
+            "0": 344428,
+            "1": 70180,
+            "2": 180358
+          },
+          "active_residual": {
+            "rows": 214491,
+            "fraud": 3968,
+            "expected": 3882.2379846643344,
+            "raw_excess": 85.76201533566582,
+            "matched_rows": 126731,
+            "matched_excess": 103.1649486705213,
+            "matched_per_1000": 0.814046671063286,
+            "z": 1.6054768466893896,
+            "ci95_matched_excess": [
+              -22.780996804294915,
+              229.1108941453375
+            ],
+            "p_value": 0.10838890456877379,
+            "p_value_holm_6_columns": 0.32516671370632133
+          },
+          "information_balanced_residual": {
+            "rows": 214491,
+            "fraud": 3968,
+            "expected": 3882.2379846643344,
+            "raw_excess": 85.76201533566582,
+            "matched_rows": 214491,
+            "matched_excess": 105.3597698777596,
+            "matched_per_1000": 0.4912083484983501,
+            "z": 1.6260511830111066,
+            "ci95_matched_excess": [
+              -21.638169128074438,
+              232.35770888359366
+            ],
+            "p_value": 0.1039387676280805,
+            "p_value_holm_6_columns": 0.3118163028842415
+          },
+          "by_strength": {
+            "weak_0_to_0.2": {
+              "rows": 151723,
+              "fraud": 2674,
+              "expected": 2604.5748414406053,
+              "raw_excess": 69.42515855939443,
+              "matched_rows": 88685,
+              "matched_excess": 81.99943980318665,
+              "matched_per_1000": 0.9246145323694722,
+              "z": 1.6445632819807376,
+              "ci95_matched_excess": [
+                -15.727965262475209,
+                179.7268448688485
+              ],
+              "p_value": 0.10005990413135003
+            },
+            "mid_0.2_to_0.6": {
+              "rows": 58704,
+              "fraud": 1226,
+              "expected": 1199.5015405480108,
+              "raw_excess": 26.498459451989262,
+              "matched_rows": 35894,
+              "matched_excess": 31.30255978627081,
+              "matched_per_1000": 0.8720833505953867,
+              "z": 1.0452792429857123,
+              "ci95_matched_excess": [
+                -27.392776979284196,
+                89.99789655182582
+              ],
+              "p_value": 0.29589392821697535
+            },
+            "strong_over_0.6": {
+              "rows": 4064,
+              "fraud": 68,
+              "expected": 78.16160267571786,
+              "raw_excess": -10.161602675717862,
+              "matched_rows": 2152,
+              "matched_excess": -10.137050918936122,
+              "matched_per_1000": -4.710525519951729,
+              "z": -1.4451958801937916,
+              "ci95_matched_excess": [
+                -23.885097168867684,
+                3.61099533099544
+              ],
+              "p_value": 0.1484028732801503
+            }
+          },
+          "by_replication": {
+            "1": {
+              "rows": 70180,
+              "fraud": 1467,
+              "expected": 1405.6673592142931,
+              "raw_excess": 61.33264078570684,
+              "matched_rows": 43020,
+              "matched_excess": 77.74848408405651,
+              "matched_per_1000": 1.807263693260263,
+              "z": 2.3232241039233092,
+              "ci95_matched_excess": [
+                12.15557440848562,
+                143.3413937596274
+              ],
+              "p_value": 0.020167116539979053
+            },
+            "2": {
+              "rows": 180358,
+              "fraud": 3332,
+              "expected": 3275.1125045184326,
+              "raw_excess": 56.88749548156722,
+              "matched_rows": 106640,
+              "matched_excess": 94.65413696840355,
+              "matched_per_1000": 0.8876044351875801,
+              "z": 1.6148742624330579,
+              "ci95_matched_excess": [
+                -20.22917795826646,
+                209.53745189507356
+              ],
+              "p_value": 0.10633792692249681
+            }
+          },
+          "information_balanced_replication": {
+            "1": {
+              "rows": 70180,
+              "fraud": 1467,
+              "expected": 1405.6673592142931,
+              "raw_excess": 61.33264078570684,
+              "matched_rows": 70174,
+              "matched_excess": 78.05423035820004,
+              "matched_per_1000": 1.1122955846638363,
+              "z": 2.316814477489813,
+              "ci95_matched_excess": [
+                12.021195348928458,
+                144.08726536747162
+              ],
+              "p_value": 0.020513840051018785
+            },
+            "2": {
+              "rows": 180358,
+              "fraud": 3332,
+              "expected": 3275.1125045184326,
+              "raw_excess": 56.88749548156722,
+              "matched_rows": 180336,
+              "matched_excess": 97.50797302215605,
+              "matched_per_1000": 0.540701651484762,
+              "z": 1.6512286963735208,
+              "ci95_matched_excess": [
+                -18.23349122392922,
+                213.2494372682413
+              ],
+              "p_value": 0.0986918856160267
+            }
+          },
+          "folds": [
+            {
+              "rows": 70861,
+              "fraud": 1382,
+              "expected": 1329.4766625130605,
+              "raw_excess": 52.523337486939624,
+              "matched_rows": 30144,
+              "matched_excess": 88.5622235259862,
+              "matched_per_1000": 2.9379718526402,
+              "z": 2.380331083094114,
+              "ci95_matched_excess": [
+                15.638772102035759,
+                161.48567494993665
+              ],
+              "p_value": 0.017297089241947304
+            },
+            {
+              "rows": 72833,
+              "fraud": 1298,
+              "expected": 1300.511912529535,
+              "raw_excess": -2.5119125295350457,
+              "matched_rows": 30544,
+              "matched_excess": -37.49117228674014,
+              "matched_per_1000": -1.2274480188167936,
+              "z": -1.017467676541963,
+              "ci95_matched_excess": [
+                -109.71233407514616,
+                34.729989501665884
+              ],
+              "p_value": 0.30893100146522134
+            },
+            {
+              "rows": 70797,
+              "fraud": 1288,
+              "expected": 1252.2494096217388,
+              "raw_excess": 35.75059037826125,
+              "matched_rows": 27859,
+              "matched_excess": 30.56767870651999,
+              "matched_per_1000": 1.0972281383581606,
+              "z": 0.8554335255856106,
+              "ci95_matched_excess": [
+                -39.470083986687904,
+                100.60544139972788
+              ],
+              "p_value": 0.39231119030170225
+            }
+          ]
+        },
+        "holdout": {
+          "rows": 104994,
+          "active": 37656,
+          "strong": 723,
+          "reference_votes": {
+            "0": 57591,
+            "1": 9126,
+            "2": 9410,
+            "3": 28867
+          },
+          "active_residual": {
+            "rows": 37656,
+            "fraud": 665,
+            "expected": 658.8016810158929,
+            "raw_excess": 6.198318984107196,
+            "matched_rows": 11276,
+            "matched_excess": -14.484417019141912,
+            "matched_per_1000": -1.2845350318501163,
+            "z": -0.5737204223065681,
+            "ci95_matched_excess": [
+              -63.967503647611636,
+              34.99866960932782
+            ],
+            "p_value": 0.5661570062771869,
+            "p_value_holm_6_columns": 1.0
+          },
+          "information_balanced_residual": {
+            "rows": 37656,
+            "fraud": 665,
+            "expected": 658.8016810158929,
+            "raw_excess": 6.198318984107196,
+            "matched_rows": 37014,
+            "matched_excess": -17.344906991446482,
+            "matched_per_1000": -0.468603960432444,
+            "z": -0.6740193031297091,
+            "ci95_matched_excess": [
+              -67.78265787688791,
+              33.09284389399495
+            ],
+            "p_value": 0.5002990415439175,
+            "p_value_holm_6_columns": 1.0
+          },
+          "by_strength": {
+            "weak_0_to_0.2": {
+              "rows": 26168,
+              "fraud": 428,
+              "expected": 445.830841014414,
+              "raw_excess": -17.830841014413927,
+              "matched_rows": 7625,
+              "matched_excess": -37.46531757391766,
+              "matched_per_1000": -4.913484271989201,
+              "z": -1.9288813844629875,
+              "ci95_matched_excess": [
+                -75.53506257553815,
+                0.6044274277028236
+              ],
+              "p_value": 0.0537455893381239
+            },
+            "mid_0.2_to_0.6": {
+              "rows": 10765,
+              "fraud": 216,
+              "expected": 196.9137356673395,
+              "raw_excess": 19.086264332660505,
+              "matched_rows": 3464,
+              "matched_excess": 18.533595265245147,
+              "matched_per_1000": 5.350345053477236,
+              "z": 1.5466574625751819,
+              "ci95_matched_excess": [
+                -4.953083329637796,
+                42.020273860128086
+              ],
+              "p_value": 0.12194586550180708
+            },
+            "strong_over_0.6": {
+              "rows": 723,
+              "fraud": 21,
+              "expected": 16.057104334139378,
+              "raw_excess": 4.942895665860624,
+              "matched_rows": 187,
+              "matched_excess": 4.447305289530605,
+              "matched_per_1000": 23.78238122743639,
+              "z": 1.5636672406731316,
+              "ci95_matched_excess": [
+                -1.1272300980161658,
+                10.021840677077375
+              ],
+              "p_value": 0.11789573485502639
+            }
+          },
+          "by_replication": {
+            "1": {
+              "rows": 9126,
+              "fraud": 195,
+              "expected": 195.88836299574,
+              "raw_excess": -0.8883629957400325,
+              "matched_rows": 2467,
+              "matched_excess": -6.353034216527077,
+              "matched_per_1000": -2.575206411239188,
+              "z": -0.5402010552588865,
+              "ci95_matched_excess": [
+                -29.403613150375303,
+                16.697544717321147
+              ],
+              "p_value": 0.5890583850138341
+            },
+            "2": {
+              "rows": 9410,
+              "fraud": 188,
+              "expected": 183.1581530681129,
+              "raw_excess": 4.841846931887078,
+              "matched_rows": 2422,
+              "matched_excess": -0.3693893863617239,
+              "matched_per_1000": -0.15251419750690498,
+              "z": -0.033301443967103675,
+              "ci95_matched_excess": [
+                -22.110284405333708,
+                21.37150563261026
+              ],
+              "p_value": 0.9734342022806476
+            },
+            "3": {
+              "rows": 28867,
+              "fraud": 495,
+              "expected": 491.0634990290613,
+              "raw_excess": 3.936500970938689,
+              "matched_rows": 7042,
+              "matched_excess": -12.951367662178551,
+              "matched_per_1000": -1.8391604178043952,
+              "z": -0.6034053908779117,
+              "ci95_matched_excess": [
+                -55.02039952968816,
+                29.117664205331064
+              ],
+              "p_value": 0.5462390368364718
+            }
+          },
+          "information_balanced_replication": {
+            "1": {
+              "rows": 9126,
+              "fraud": 195,
+              "expected": 195.88836299574,
+              "raw_excess": -0.8883629957400325,
+              "matched_rows": 7960,
+              "matched_excess": -7.298491476634378,
+              "matched_per_1000": -0.9168959141500473,
+              "z": -0.628969094716732,
+              "ci95_matched_excess": [
+                -30.04212612317599,
+                15.445143169907233
+              ],
+              "p_value": 0.5293692894173234
+            },
+            "2": {
+              "rows": 9410,
+              "fraud": 188,
+              "expected": 183.1581530681129,
+              "raw_excess": 4.841846931887078,
+              "matched_rows": 8713,
+              "matched_excess": 2.6016187102223243,
+              "matched_per_1000": 0.2985904637004848,
+              "z": 0.22844688654989612,
+              "ci95_matched_excess": [
+                -19.71942382638507,
+                24.922661246829723
+              ],
+              "p_value": 0.8192988427540855
+            },
+            "3": {
+              "rows": 28867,
+              "fraud": 495,
+              "expected": 491.0634990290613,
+              "raw_excess": 3.936500970938689,
+              "matched_rows": 24638,
+              "matched_excess": -19.83068445666602,
+              "matched_per_1000": -0.8048820706496478,
+              "z": -0.9100267690194473,
+              "ci95_matched_excess": [
+                -62.54167149383392,
+                22.880302580501876
+              ],
+              "p_value": 0.36280839261488784
+            }
+          }
+        },
+        "test": {
+          "rows": 299984,
+          "active": 106845,
+          "strong": 2234,
+          "reference_votes": {
+            "0": 164959,
+            "1": 26254,
+            "2": 26710,
+            "3": 82061
+          }
+        }
+      },
+      "independent_train_test_maps": {
+        "any": {
+          "dev_ticks": 246,
+          "test_ticks": 250,
+          "shared_ticks": 217,
+          "jaccard": 0.7777777777777778,
+          "test_rows_at_shared_ticks": 96296,
+          "test_rows_at_dev_ticks": 106845,
+          "test_rows_at_test_ticks": 106669
+        },
+        "strong": {
+          "dev_ticks": 17,
+          "test_ticks": 14,
+          "shared_ticks": 11,
+          "jaccard": 0.55,
+          "test_rows_at_shared_ticks": 1496,
+          "test_rows_at_dev_ticks": 2234,
+          "test_rows_at_test_ticks": 1694
+        }
+      }
+    },
+    "merchant_risk_score": {
+      "splits": {
+        "development": {
+          "rows": 594966,
+          "active": 241658,
+          "strong": 3331,
+          "reference_votes": {
+            "0": 323832,
+            "1": 57247,
+            "2": 213887
+          },
+          "active_residual": {
+            "rows": 241658,
+            "fraud": 3782,
+            "expected": 3770.7680345907374,
+            "raw_excess": 11.231965409262322,
+            "matched_rows": 133691,
+            "matched_excess": -17.39707513237455,
+            "matched_per_1000": -0.130128992470507,
+            "z": -0.2781125605284168,
+            "ci95_matched_excess": [
+              -140.00307032607256,
+              105.20892006132345
+            ],
+            "p_value": 0.780925954049941,
+            "p_value_holm_6_columns": 1.0
+          },
+          "information_balanced_residual": {
+            "rows": 241658,
+            "fraud": 3782,
+            "expected": 3770.7680345907374,
+            "raw_excess": 11.231965409262322,
+            "matched_rows": 241552,
+            "matched_excess": -27.14832308312147,
+            "matched_per_1000": -0.11239121631417445,
+            "z": -0.43096629283617544,
+            "ci95_matched_excess": [
+              -150.61671058215316,
+              96.32006441591022
+            ],
+            "p_value": 0.6664928796182767,
+            "p_value_holm_6_columns": 1.0
+          },
+          "by_strength": {
+            "weak_0_to_0.2": {
+              "rows": 163655,
+              "fraud": 2429,
+              "expected": 2418.403054086769,
+              "raw_excess": 10.596945913231227,
+              "matched_rows": 91010,
+              "matched_excess": -7.309822216235091,
+              "matched_per_1000": -0.08031889041023063,
+              "z": -0.15457203414205498,
+              "ci95_matched_excess": [
+                -99.99962618590874,
+                85.37998175343856
+              ],
+              "p_value": 0.8771587184983853
+            },
+            "mid_0.2_to_0.6": {
+              "rows": 74672,
+              "fraud": 1213,
+              "expected": 1205.5812011583898,
+              "raw_excess": 7.418798841610114,
+              "matched_rows": 40585,
+              "matched_excess": -1.622669532443549,
+              "matched_per_1000": -0.03998200153858689,
+              "z": -0.054100549514262804,
+              "ci95_matched_excess": [
+                -60.41009982926303,
+                57.16476076437594
+              ],
+              "p_value": 0.9568550544414114
+            },
+            "strong_over_0.6": {
+              "rows": 3331,
+              "fraud": 140,
+              "expected": 146.78377934557903,
+              "raw_excess": -6.783779345579025,
+              "matched_rows": 2096,
+              "matched_excess": -8.464583383695967,
+              "matched_per_1000": -4.038446270847312,
+              "z": -0.9771394093208133,
+              "ci95_matched_excess": [
+                -25.443310547689713,
+                8.514143780297779
+              ],
+              "p_value": 0.3285001396770202
+            }
+          },
+          "by_replication": {
+            "1": {
+              "rows": 57247,
+              "fraud": 1091,
+              "expected": 1076.8585616266028,
+              "raw_excess": 14.14143837339737,
+              "matched_rows": 31141,
+              "matched_excess": 2.7981137835841032,
+              "matched_per_1000": 0.0898530485078868,
+              "z": 0.09913740868555376,
+              "ci95_matched_excess": [
+                -52.5221037663831,
+                58.118331333551296
+              ],
+              "p_value": 0.9210291705370645
+            },
+            "2": {
+              "rows": 213887,
+              "fraud": 3293,
+              "expected": 3282.179178636715,
+              "raw_excess": 10.820821363284963,
+              "matched_rows": 119216,
+              "matched_excess": -8.914473133627062,
+              "matched_per_1000": -0.07477581141480222,
+              "z": -0.15300407265287344,
+              "ci95_matched_excess": [
+                -123.10991276450088,
+                105.28096649724677
+              ],
+              "p_value": 0.8783950635966891
+            }
+          },
+          "information_balanced_replication": {
+            "1": {
+              "rows": 57247,
+              "fraud": 1091,
+              "expected": 1076.8585616266028,
+              "raw_excess": 14.14143837339737,
+              "matched_rows": 57222,
+              "matched_excess": 5.93687784285509,
+              "matched_per_1000": 0.10375166619228775,
+              "z": 0.20897712247362854,
+              "ci95_matched_excess": [
+                -49.74520081847969,
+                61.61895650418987
+              ],
+              "p_value": 0.834466097938198
+            },
+            "2": {
+              "rows": 213887,
+              "fraud": 3293,
+              "expected": 3282.179178636715,
+              "raw_excess": 10.820821363284963,
+              "matched_rows": 213795,
+              "matched_excess": -18.155896974641568,
+              "matched_per_1000": -0.08492199057340709,
+              "z": -0.309524351439035,
+              "ci95_matched_excess": [
+                -133.12442176066807,
+                96.81262781138493
+              ],
+              "p_value": 0.756922691247719
+            }
+          },
+          "folds": [
+            {
+              "rows": 81587,
+              "fraud": 1223,
+              "expected": 1253.3077441566581,
+              "raw_excess": -30.307744156658067,
+              "matched_rows": 26084,
+              "matched_excess": -14.483168274526244,
+              "matched_per_1000": -0.5552510456420121,
+              "z": -0.4103762653701603,
+              "ci95_matched_excess": [
+                -83.65629599541501,
+                54.689959446362515
+              ],
+              "p_value": 0.6815299543643039
+            },
+            {
+              "rows": 80700,
+              "fraud": 1291,
+              "expected": 1265.3413812302406,
+              "raw_excess": 25.658618769759546,
+              "matched_rows": 28285,
+              "matched_excess": 6.38779435901407,
+              "matched_per_1000": 0.22583681665243308,
+              "z": 0.1811952875804413,
+              "ci95_matched_excess": [
+                -62.70935000302853,
+                75.48493872105666
+              ],
+              "p_value": 0.8562142933475836
+            },
+            {
+              "rows": 79371,
+              "fraud": 1268,
+              "expected": 1252.1189092038392,
+              "raw_excess": 15.881090796160827,
+              "matched_rows": 26104,
+              "matched_excess": -1.2242339197767436,
+              "matched_per_1000": -0.046898326684674516,
+              "z": -0.034941937487052495,
+              "ci95_matched_excess": [
+                -69.89525376953566,
+                67.44678592998218
+              ],
+              "p_value": 0.9721260397374324
+            }
+          ]
+        },
+        "holdout": {
+          "rows": 104994,
+          "active": 42914,
+          "strong": 635,
+          "reference_votes": {
+            "0": 54563,
+            "1": 7502,
+            "2": 7602,
+            "3": 35327
+          },
+          "active_residual": {
+            "rows": 42914,
+            "fraud": 639,
+            "expected": 628.9922015930896,
+            "raw_excess": 10.007798406910384,
+            "matched_rows": 9965,
+            "matched_excess": -1.5258027241669332,
+            "matched_per_1000": -0.153116179043345,
+            "z": -0.06256967350535693,
+            "ci95_matched_excess": [
+              -49.3216944369653,
+              46.27008898863144
+            ],
+            "p_value": 0.9501091791191495,
+            "p_value_holm_6_columns": 1.0
+          },
+          "information_balanced_residual": {
+            "rows": 42914,
+            "fraud": 639,
+            "expected": 628.9922015930896,
+            "raw_excess": 10.007798406910384,
+            "matched_rows": 33662,
+            "matched_excess": 0.46684515806750326,
+            "matched_per_1000": 0.013868610245009304,
+            "z": 0.019669854159830472,
+            "ci95_matched_excess": [
+              -46.05187848762894,
+              46.985568803763954
+            ],
+            "p_value": 0.984306739021203,
+            "p_value_holm_6_columns": 1.0
+          },
+          "by_strength": {
+            "weak_0_to_0.2": {
+              "rows": 29770,
+              "fraud": 432,
+              "expected": 420.32409964105545,
+              "raw_excess": 11.675900358944558,
+              "matched_rows": 6738,
+              "matched_excess": 5.037532156141257,
+              "matched_per_1000": 0.7476301804899461,
+              "z": 0.2669547500052113,
+              "ci95_matched_excess": [
+                -31.948372855266552,
+                42.02343716754906
+              ],
+              "p_value": 0.7895040013199729
+            },
+            "mid_0.2_to_0.6": {
+              "rows": 12509,
+              "fraud": 190,
+              "expected": 191.54461285246197,
+              "raw_excess": -1.5446128524619613,
+              "matched_rows": 2996,
+              "matched_excess": -7.037214241226888,
+              "matched_per_1000": -2.3488699069515646,
+              "z": -0.619653787550016,
+              "ci95_matched_excess": [
+                -29.29632116501276,
+                15.221892682558984
+              ],
+              "p_value": 0.5354857465696081
+            },
+            "strong_over_0.6": {
+              "rows": 635,
+              "fraud": 17,
+              "expected": 17.123489099572215,
+              "raw_excess": -0.12348909957221554,
+              "matched_rows": 231,
+              "matched_excess": 0.4738793609186845,
+              "matched_per_1000": 2.05142580484279,
+              "z": 0.14905080015767294,
+              "ci95_matched_excess": [
+                -5.757576937323858,
+                6.705335659161227
+              ],
+              "p_value": 0.8815135478996954
+            }
+          },
+          "by_replication": {
+            "1": {
+              "rows": 7502,
+              "fraud": 152,
+              "expected": 148.32450921817997,
+              "raw_excess": 3.675490781820051,
+              "matched_rows": 2129,
+              "matched_excess": 5.2396046655105,
+              "matched_per_1000": 2.4610637226446688,
+              "z": 0.5219121773277245,
+              "ci95_matched_excess": [
+                -14.437317220050277,
+                24.91652655107128
+              ],
+              "p_value": 0.6017314793249777
+            },
+            "2": {
+              "rows": 7602,
+              "fraud": 153,
+              "expected": 141.23290243858088,
+              "raw_excess": 11.767097561419126,
+              "matched_rows": 1985,
+              "matched_excess": 12.191842408901076,
+              "matched_per_1000": 6.141986100202054,
+              "z": 1.2448882732853963,
+              "ci95_matched_excess": [
+                -7.003463414313019,
+                31.387148232115173
+              ],
+              "p_value": 0.2131728220263006
+            },
+            "3": {
+              "rows": 35327,
+              "fraud": 494,
+              "expected": 499.23391011036676,
+              "raw_excess": -5.233910110366762,
+              "matched_rows": 8250,
+              "matched_excess": -15.492587888308735,
+              "matched_per_1000": -1.8778894410071194,
+              "z": -0.7183993525002502,
+              "ci95_matched_excess": [
+                -57.760822339528595,
+                26.775646562911128
+              ],
+              "p_value": 0.47251108594706226
+            }
+          },
+          "information_balanced_replication": {
+            "1": {
+              "rows": 7502,
+              "fraud": 152,
+              "expected": 148.32450921817997,
+              "raw_excess": 3.675490781820051,
+              "matched_rows": 5601,
+              "matched_excess": 8.95572082355289,
+              "matched_per_1000": 1.5989503345032832,
+              "z": 0.8967849003172762,
+              "ci95_matched_excess": [
+                -10.617772003939477,
+                28.529213651045254
+              ],
+              "p_value": 0.36983370677264704
+            },
+            "2": {
+              "rows": 7602,
+              "fraud": 153,
+              "expected": 141.23290243858088,
+              "raw_excess": 11.767097561419126,
+              "matched_rows": 5587,
+              "matched_excess": 14.98805508926285,
+              "matched_per_1000": 2.682666026358126,
+              "z": 1.5623562736534358,
+              "ci95_matched_excess": [
+                -3.814690782688981,
+                33.790800961214686
+              ],
+              "p_value": 0.11820408198725582
+            },
+            "3": {
+              "rows": 35327,
+              "fraud": 494,
+              "expected": 499.23391011036676,
+              "raw_excess": -5.233910110366762,
+              "matched_rows": 28264,
+              "matched_excess": -12.361486211560901,
+              "matched_per_1000": -0.4373579893702555,
+              "z": -0.591240746424023,
+              "ci95_matched_excess": [
+                -53.34058503247214,
+                28.61761260935034
+              ],
+              "p_value": 0.5543591249551315
+            }
+          }
+        },
+        "test": {
+          "rows": 299984,
+          "active": 122519,
+          "strong": 1800,
+          "reference_votes": {
+            "0": 156112,
+            "1": 21301,
+            "2": 21686,
+            "3": 100885
+          }
+        }
+      },
+      "independent_train_test_maps": {
+        "any": {
+          "dev_ticks": 367,
+          "test_ticks": 374,
+          "shared_ticks": 329,
+          "jaccard": 0.7985436893203883,
+          "test_rows_at_shared_ticks": 113713,
+          "test_rows_at_dev_ticks": 122519,
+          "test_rows_at_test_ticks": 126574
+        },
+        "strong": {
+          "dev_ticks": 33,
+          "test_ticks": 26,
+          "shared_ticks": 18,
+          "jaccard": 0.43902439024390244,
+          "test_rows_at_shared_ticks": 1187,
+          "test_rows_at_dev_ticks": 1800,
+          "test_rows_at_test_ticks": 1317
+        }
+      }
+    }
+  },
+  "joint_score_audit": {
+    "components": {
+      "grandmaster_eda": {
+        "roc_auc": 0.9512244493667037,
+        "average_precision": 0.5382352787073892,
+        "log_loss": 0.04383598792839346,
+        "delta_auc": 0.0,
+        "ci95_low": -1.9600000000000003e-09,
+        "ci95_high": 1.9600000000000003e-09,
+        "brier": 0.010631731932020941
+      },
+      "amount_only_joint_coefficients": {
+        "roc_auc": 0.9513377261549861,
+        "average_precision": 0.5384095546371352,
+        "log_loss": 0.043806156119337074,
+        "delta_auc": 0.00011327678828210175,
+        "ci95_low": -1.6433166154858288e-05,
+        "ci95_high": 0.00024298674271906178,
+        "brier": 0.010626825223283128
+      },
+      "distance_only_joint_coefficients": {
+        "roc_auc": 0.9512841460849422,
+        "average_precision": 0.5380420176458244,
+        "log_loss": 0.04383098941075673,
+        "delta_auc": 5.9696718238133606e-05,
+        "ci95_low": -7.156738965256821e-05,
+        "ci95_high": 0.00019096082612883543,
+        "brier": 0.010635710979667137
+      },
+      "smooth_amount_distance": {
+        "roc_auc": 0.9513877312734658,
+        "average_precision": 0.5382156882530291,
+        "log_loss": 0.043805248198523904,
+        "delta_auc": 0.0001632819067618474,
+        "ci95_low": -1.8436955017533572e-05,
+        "ci95_high": 0.00034500076854122836,
+        "brier": 0.01063138373612271
+      }
+    },
+    "cooccurrence": {
+      "neither": {
+        "rows": 87325,
+        "fraud": 1435,
+        "expected": 1421.9927040589178,
+        "delta_log_loss": 0.0,
+        "ci95_delta_log_loss": [
+          0.0,
+          0.0
+        ],
+        "contribution_to_total_delta_loss": 0.0
+      },
+      "amount_only": {
+        "rows": 7834,
+        "fraud": 138,
+        "expected": 127.6711526513468,
+        "delta_log_loss": -0.00031428392719651065,
+        "ci95_delta_log_loss": [
+          -0.000684820985477212,
+          5.6253131084190735e-05
+        ],
+        "contribution_to_total_delta_loss": -2.3449914144212664e-05
+      },
+      "distance_only": {
+        "rows": 9014,
+        "fraud": 163,
+        "expected": 156.23363080290255,
+        "delta_log_loss": 7.039473377660577e-05,
+        "ci95_delta_log_loss": [
+          -0.00025957164166032345,
+          0.000400361109213535
+        ],
+        "contribution_to_total_delta_loss": 6.043565634820317e-06
+      },
+      "both": {
+        "rows": 821,
+        "fraud": 17,
+        "expected": 12.121949760082309,
+        "delta_log_loss": -0.0017051462150167913,
+        "ci95_delta_log_loss": [
+          -0.003985001047305126,
+          0.0005747086172715437
+        ],
+        "contribution_to_total_delta_loss": -1.3333381360161397e-05
+      }
+    },
+    "all_rows_loss": {
+      "rows": 104994,
+      "fraud": 1753,
+      "expected": 1718.0194372732494,
+      "delta_log_loss": -3.073972986955375e-05,
+      "ci95_delta_log_loss": [
+        -7.415869912410876e-05,
+        1.2679239385001261e-05
+      ],
+      "contribution_to_total_delta_loss": -3.073972986955375e-05
+    },
+    "rank_bands": [
+      {
+        "quantile_lower": 0,
+        "quantile_upper": 0.5,
+        "rows": 52497,
+        "fraud": 21,
+        "contribution_to_auc_delta": 1.2857669690863913e-05
+      },
+      {
+        "quantile_lower": 0.5,
+        "quantile_upper": 0.75,
+        "rows": 26248,
+        "fraud": 78,
+        "contribution_to_auc_delta": 4.8353015670283155e-05
+      },
+      {
+        "quantile_lower": 0.75,
+        "quantile_upper": 0.9,
+        "rows": 15749,
+        "fraud": 183,
+        "contribution_to_auc_delta": 6.505085744329185e-05
+      },
+      {
+        "quantile_lower": 0.9,
+        "quantile_upper": 0.95,
+        "rows": 5250,
+        "fraud": 190,
+        "contribution_to_auc_delta": 3.572741393258452e-05
+      },
+      {
+        "quantile_lower": 0.95,
+        "quantile_upper": 0.99,
+        "rows": 4200,
+        "fraud": 577,
+        "contribution_to_auc_delta": 3.226849634492086e-06
+      },
+      {
+        "quantile_lower": 0.99,
+        "quantile_upper": 1,
+        "rows": 1050,
+        "fraud": 704,
+        "contribution_to_auc_delta": -1.9338996097135067e-06
+      }
+    ],
+    "rows_with_capped_combined_shift": 187
+  }
+}
